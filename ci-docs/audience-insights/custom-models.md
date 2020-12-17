@@ -1,0 +1,114 @@
+---
+title: Benutzerdefinierte Maschinelles Lernen Modelle | Microsoft Docs
+description: Arbeiten Sie mit benutzerdefinierten Modellen aus Azure Machine Learning in Dynamics 365 Customer Insights.
+ms.date: 11/19/2020
+ms.reviewer: zacook
+ms.service: dynamics-365-ai
+ms.topic: article
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
+ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4668902"
+---
+# <a name="custom-machine-learning-models"></a><span data-ttu-id="34ff0-103">Benutzerdefinierte Maschinelles Lernen Modelle</span><span class="sxs-lookup"><span data-stu-id="34ff0-103">Custom machine learning models</span></span>
+
+<span data-ttu-id="34ff0-104">**Intelligenz** > **Benutzerdefinierte Modelle** ermöglicht die Verwaltung von Workflows auf Basis von Azure Machine Learning-Modellen.</span><span class="sxs-lookup"><span data-stu-id="34ff0-104">**Intelligence** > **Custom models** lets you manage workflows based on Azure Machine Learning models.</span></span> <span data-ttu-id="34ff0-105">Workflows helfen Ihnen bei der Auswahl der Daten, aus denen Sie Insights generieren möchten, und bei der Zuordnung der Ergebnisse zu Ihren vereinheitlichten Kundendaten.</span><span class="sxs-lookup"><span data-stu-id="34ff0-105">Workflows help you choose the data you want to generate insights from and map the results to your unified customer data.</span></span> <span data-ttu-id="34ff0-106">Weitere Informationen zum Erstellen von benutzerdefinierten ML-Modellen finden Sie unter [Verwenden von Azure Machine Learning-basierten Modellen](azure-machine-learning-experiments.md).</span><span class="sxs-lookup"><span data-stu-id="34ff0-106">For more information about building custom ML models, see [Use Azure Machine Learning-based models](azure-machine-learning-experiments.md).</span></span>
+
+## <a name="responsible-ai"></a><span data-ttu-id="34ff0-107">Verantwortliche KI</span><span class="sxs-lookup"><span data-stu-id="34ff0-107">Responsible AI</span></span>
+
+<span data-ttu-id="34ff0-108">Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, Geschäftsfunktionen zu verbessern und Umsatzströme zu steigern.</span><span class="sxs-lookup"><span data-stu-id="34ff0-108">Predictions offer capabilities to create better customer experiences, improve business capabilities, and revenue streams.</span></span> <span data-ttu-id="34ff0-109">Wir empfehlen Ihnen dringend, den Wert Ihrer Vorhersage gegen die Auswirkungen und Verzerrungen abzuwägen, die auf ethische Art und Weise eingeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="34ff0-109">We strongly recommend you balance the value of your prediction against the impact it has and biases that may be introduced in an ethical manner.</span></span> <span data-ttu-id="34ff0-110">Erfahren Sie mehr darüber, wie Microsoft [verantwortungsvolle KI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6) berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="34ff0-110">Learn more about how Microsoft is [addressing Responsible AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6).</span></span> <span data-ttu-id="34ff0-111">Sie können sich auch über [Techniken und Prozesse für verantwortungsvolles maschinelles Lernen](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) speziell für Azure Machine Learning informieren.</span><span class="sxs-lookup"><span data-stu-id="34ff0-111">You can also learn about [techniques and processes for responsible machine learning](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) specific to Azure Machine Learning.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="34ff0-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="34ff0-112">Prerequisites</span></span>
+
+- <span data-ttu-id="34ff0-113">Derzeit unterstützt diese Funktion Webdienste, die über [Machine Learning Studio (Classic)](https://studio.azureml.net) und [Azure Machine Learning Batch Pipelines](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines) veröffentlicht werden.</span><span class="sxs-lookup"><span data-stu-id="34ff0-113">Currently, this feature supports web services published through [Machine Learning Studio (classic)](https://studio.azureml.net) and [Azure Machine Learning batch pipelines](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).</span></span>
+
+- <span data-ttu-id="34ff0-114">Sie benötigen ein Azure Data Lake Gen2-Speicherkonto, das mit Ihrer Azure Studio-Instanz verbunden ist, um diese Funktion zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="34ff0-114">You need an Azure Data Lake Gen2 storage account associated with your Azure Studio instance to use this feature.</span></span> <span data-ttu-id="34ff0-115">Weitere Informationen finden Sie unter [Erstellen eines Azure Data Lake Storage Gen2-Speicherkontos](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)</span><span class="sxs-lookup"><span data-stu-id="34ff0-115">For more information, see [Create an Azure Data Lake Storage Gen2 storage account](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)</span></span>
+
+## <a name="add-a-new-workflow"></a><span data-ttu-id="34ff0-116">Einen neuen Workflow hinzufügen</span><span class="sxs-lookup"><span data-stu-id="34ff0-116">Add a new workflow</span></span>
+
+1. <span data-ttu-id="34ff0-117">Gehen Sie zu **Intelligenz** > **Benutzerdefinierte Modelle** und wählen Sie **Neuer Workflow**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-117">Go to **Intelligence** > **Custom models** and select **New workflow**.</span></span>
+
+1. <span data-ttu-id="34ff0-118">Ihr benutzerdefiniertes Modell wird im Feld **Name** mit einem erkennbaren Namen benannt.</span><span class="sxs-lookup"><span data-stu-id="34ff0-118">Give your custom model a recognizable name in the **Name** field.</span></span>
+
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="34ff0-119">![Screenshot des Fensters Neuer Workflow](media/new-workflowv2.png "Screenshot des Fensters Neuer Workflow")</span><span class="sxs-lookup"><span data-stu-id="34ff0-119">![Screenshot of the New workflow pane](media/new-workflowv2.png "Screenshot of the New workflow pane")</span></span>
+
+1. <span data-ttu-id="34ff0-120">Wählen Sie die Organisation, die den Webdienst enthält, unter **Mandant, der Ihren Webdienst enthält**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-120">Select the organization that contains the web service in **Tenant that contains your web service**.</span></span>
+
+1. <span data-ttu-id="34ff0-121">Wenn Ihr Azure Machine Learning-Abonnement einen anderen Mandant als Customer Insights hat, wählen Sie **Anmelden** mit Ihren Anmeldedaten für die ausgewählte Organisation.</span><span class="sxs-lookup"><span data-stu-id="34ff0-121">If your Azure Machine Learning subscription is in a different tenant than Customer Insights, select **Sign in** with your credentials for the selected organization.</span></span>
+
+1. <span data-ttu-id="34ff0-122">Wählen Sie die **Arbeitsbereiche**, die mit Ihrem Webdienst verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="34ff0-122">Select the **Workspaces** associated with your web service.</span></span> <span data-ttu-id="34ff0-123">Es sind zwei Bereiche aufgeführt, einer für Azure Machine Learning v1 (Machine Learning Studio (Classic)) und Azure Machine Learning v2 (Azure Machine Learning).</span><span class="sxs-lookup"><span data-stu-id="34ff0-123">There are two sections listed, one for Azure Machine Learning v1 (Machine Learning Studio (classic)) and Azure Machine Learning v2 (Azure Machine Learning).</span></span> <span data-ttu-id="34ff0-124">Wenn Sie sich nicht sicher sind, welcher Arbeitsbereich der richtige für Ihren Machine Learning Studio (Classic) Webservice ist, wählen Sie **Beliebig**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-124">If you're not sure which workspace is the right one for your Machine Learning Studio (classic) web service, select **Any**.</span></span>
+
+1. <span data-ttu-id="34ff0-125">Wählen Sie den Machine Learning Studio (Classic)-Webdienst oder die Azure Machine Learning-Pipeline in der Dropdown-Liste **Webdienst, der Ihr Modell enthält**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-125">Choose the Machine Learning Studio (classic) web service or Azure Machine Learning pipeline in the **Web service that contains your model** dropdown.</span></span> <span data-ttu-id="34ff0-126">Wählen Sie anschließend **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="34ff0-126">Then, select **Next**.</span></span>
+   - <span data-ttu-id="34ff0-127">Erfahren Sie mehr über [das Veröffentlichen eines Webdienstes in Machine Learning Studio (Classic)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)</span><span class="sxs-lookup"><span data-stu-id="34ff0-127">Learn more about [publishing a web service in Machine Learning Studio (classic)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)</span></span>
+   - <span data-ttu-id="34ff0-128">Erfahren Sie mehr über [Veröffentlichen einer Pipeline in Azure Machine Learning mithilfe des Designers](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) oder [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk).</span><span class="sxs-lookup"><span data-stu-id="34ff0-128">Learn more about [publishing a pipeline in Azure Machine Learning using the designer](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) or [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk).</span></span> 
+     > [!NOTE]
+     > <span data-ttu-id="34ff0-129">Ihre Pipeline muss unter einem [Pipeline-Endpunkt](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) veröffentlicht werden.</span><span class="sxs-lookup"><span data-stu-id="34ff0-129">Your pipeline must be published under a [pipeline endpoint](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).</span></span>
+
+1. <span data-ttu-id="34ff0-130">Wählen Sie für jede **Webdienst-Eingabe** die passende **Entität** aus Zielgruppen-Insights und wählen Sie **Weiter**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-130">For each **Web service input**, select the matching **Entity** from audience insights and select **Next**.</span></span>
+
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="34ff0-131">![Workflow konfigurieren](media/intelligence-screen2-updated.png "Workflow konfigurieren")</span><span class="sxs-lookup"><span data-stu-id="34ff0-131">![Configure a workflow](media/intelligence-screen2-updated.png "Configure a workflow")</span></span>
+
+1. <span data-ttu-id="34ff0-132">Legen Sie im Schritt **Modellausgabeparameter** die folgenden Eigenschaften fest:</span><span class="sxs-lookup"><span data-stu-id="34ff0-132">In the **Model Output Parameters** step, set the following properties:</span></span>
+   - <span data-ttu-id="34ff0-133">Machine Learning Studio (Classic)</span><span class="sxs-lookup"><span data-stu-id="34ff0-133">Machine Learning Studio (classic)</span></span>
+      1. <span data-ttu-id="34ff0-134">Geben Sie den Ausgang **Entitätsname** ein, in den die Ergebnisse der Web-Service-Ausgabe fließen sollen.</span><span class="sxs-lookup"><span data-stu-id="34ff0-134">Enter the output **Entity name** you want web service output results to flow into.</span></span>
+   - <span data-ttu-id="34ff0-135">Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="34ff0-135">Azure Machine Learning</span></span>
+      1. <span data-ttu-id="34ff0-136">Geben Sie den Ausgabe-**Entitätsnamen** ein, in den die Ergebnisse der Pipeline-Ausgabe fließen sollen.</span><span class="sxs-lookup"><span data-stu-id="34ff0-136">Enter the output **Entity name** you want pipeline output results to flow into.</span></span>
+      1. <span data-ttu-id="34ff0-137">Wählen Sie den **Output-Datenspeicher-Parameternamen** Ihrer Batch-Pipeline aus dem Dropdown-Menü.</span><span class="sxs-lookup"><span data-stu-id="34ff0-137">Select the **Output data store parameter name** of your batch pipeline from the dropdown.</span></span>
+      1. <span data-ttu-id="34ff0-138">Wählen Sie den **Output Path-Parameternamen** Ihrer Batch-Pipeline aus der Auswahlliste.</span><span class="sxs-lookup"><span data-stu-id="34ff0-138">Select the **Output Path parameter name** of your batch pipeline from the dropdown.</span></span>
+      
+      > [!div class="mx-imgBorder"]
+      > <span data-ttu-id="34ff0-139">![Modellausgabe-Parameterbereich](media/intelligence-screen3-outputparameters.png "Modellausgabe-Parameterbereich")</span><span class="sxs-lookup"><span data-stu-id="34ff0-139">![Model Output Parameter Pane](media/intelligence-screen3-outputparameters.png "Model Output Parameter Pane")</span></span>
+
+1. <span data-ttu-id="34ff0-140">Wählen Sie das passende Attribut aus der Dropdown-Liste **Kunden-ID in Ergebnissen**, das den Kunden identifiziert, und wählen Sie **Speichern**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-140">Select the matching attribute from the **Customer ID in results** drop-down list that identifies customers and select **Save**.</span></span>
+   
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="34ff0-141">![Ergebnisse in den Kundendatenbereich überführen](media/intelligence-screen4-relatetocustomer.png "Ergebnisse mit dem Bereich Kundendaten in Beziehung setzen")</span><span class="sxs-lookup"><span data-stu-id="34ff0-141">![Relate results to Customer data pane](media/intelligence-screen4-relatetocustomer.png "Relate results to Customer data pane")</span></span>
+
+1. <span data-ttu-id="34ff0-142">Sie sehen dann das Bild **Workflow Gespeichert** mit Einzelheiten zum Workflow.</span><span class="sxs-lookup"><span data-stu-id="34ff0-142">You'll see the **Workflow Saved** screen with details about the workflow.</span></span>    
+   <span data-ttu-id="34ff0-143">Wenn Sie einen Workflow für eine Azure Machine Learning-Pipeline konfiguriert haben, wird Zielgruppen-Insights an den Arbeitsbereich angehängt, der die Pipeline enthält.</span><span class="sxs-lookup"><span data-stu-id="34ff0-143">If you configured a workflow for an Azure Machine Learning pipeline, audience insights will attach to the workspace that contains the pipeline.</span></span> <span data-ttu-id="34ff0-144">Zielgruppen-Insights erhalten eine **Beitragender**-Rolle auf dem Azure-Arbeitsbereich.</span><span class="sxs-lookup"><span data-stu-id="34ff0-144">Audience insights will get a **Contributor** role on the Azure workspace.</span></span>
+
+1. <span data-ttu-id="34ff0-145">Wählen Sie **Fertig** aus.</span><span class="sxs-lookup"><span data-stu-id="34ff0-145">Select **Done**.</span></span>
+
+1. <span data-ttu-id="34ff0-146">Sie können jetzt den Workflow von der Seite **Benutzerdefinierte Modelle** aus starten.</span><span class="sxs-lookup"><span data-stu-id="34ff0-146">You can now run the workflow from the **Custom Models** page.</span></span>
+
+## <a name="edit-a-workflow"></a><span data-ttu-id="34ff0-147">Einen Workflow bearbeiten</span><span class="sxs-lookup"><span data-stu-id="34ff0-147">Edit a workflow</span></span>
+
+1. <span data-ttu-id="34ff0-148">Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben und wählen **Bearbeiten**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-148">On the **Custom Models** page, select the vertical ellipsis in the **Actions** column next to a workflow you've previously created and select **Edit**.</span></span>
+
+1. <span data-ttu-id="34ff0-149">Sie können den erkennbaren Namen Ihres Workflows im Feld **Anzeigename** aktualisieren, aber Sie können den konfigurierten Webdienst oder die Pipeline nicht ändern.</span><span class="sxs-lookup"><span data-stu-id="34ff0-149">You can update your workflow's recognizable name in the **Display name** field, but you can't change the configured web service or pipeline.</span></span> <span data-ttu-id="34ff0-150">Klicken Sie auf **Weiter**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-150">Select **Next**.</span></span>
+
+1. <span data-ttu-id="34ff0-151">Für jede **Web-Service-Eingabe** können Sie die passende **Entität** aus den Zielgruppen-Insights aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="34ff0-151">For each **Web service input**, you can update the matching **Entity** from audience insights.</span></span> <span data-ttu-id="34ff0-152">Wählen Sie anschließend **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="34ff0-152">Then, select **Next**.</span></span>
+
+1. <span data-ttu-id="34ff0-153">Legen Sie im Schritt **Modellausgabeparameter** die folgenden Eigenschaften fest:</span><span class="sxs-lookup"><span data-stu-id="34ff0-153">In the **Model Output Parameters** step, set the following properties:</span></span>
+   - <span data-ttu-id="34ff0-154">Machine Learning Studio (Classic)</span><span class="sxs-lookup"><span data-stu-id="34ff0-154">Machine Learning Studio (classic)</span></span>
+      1. <span data-ttu-id="34ff0-155">Geben Sie den Ausgang **Entitätsname** ein, in den die Ergebnisse der Web-Service-Ausgabe fließen sollen.</span><span class="sxs-lookup"><span data-stu-id="34ff0-155">Enter the output **Entity name** you want web service output results to flow into.</span></span>
+   - <span data-ttu-id="34ff0-156">Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="34ff0-156">Azure Machine Learning</span></span>
+      1. <span data-ttu-id="34ff0-157">Geben Sie den Ausgabe-**Entitätsnamen** ein, in den die Ergebnisse der Pipeline-Ausgabe fließen sollen.</span><span class="sxs-lookup"><span data-stu-id="34ff0-157">Enter the output **Entity name** you want pipeline output results to flow into.</span></span>
+      1. <span data-ttu-id="34ff0-158">Wählen Sie den **Parameternamen des Ausgabedatenspeichers** für Ihre Test-Pipeline.</span><span class="sxs-lookup"><span data-stu-id="34ff0-158">Select the **Output data store parameter name** for your test pipeline.</span></span>
+      1. <span data-ttu-id="34ff0-159">Wählen Sie den **Output Path-Parameternamen** für Ihre Test-Pipeline.</span><span class="sxs-lookup"><span data-stu-id="34ff0-159">Select the **Output Path parameter name** for your test pipeline.</span></span>
+
+1. <span data-ttu-id="34ff0-160">Wählen Sie das passende Attribut aus der Dropdown-Liste **Kunden-ID in Ergebnissen**, das den Kunden identifiziert, und wählen Sie **Speichern**.</span><span class="sxs-lookup"><span data-stu-id="34ff0-160">Select the matching attribute from the **Customer ID in results** drop-down list that identifies customers and select **Save**.</span></span>
+   <span data-ttu-id="34ff0-161">Sie müssen ein Attribut aus der Inferenzausgabe auswählen, dessen Werte der Spalte Kunden-ID der Entität Kunde ähneln.</span><span class="sxs-lookup"><span data-stu-id="34ff0-161">You need to choose an attribute from the inference output with values similar to the Customer ID column of the Customer entity.</span></span> <span data-ttu-id="34ff0-162">Wenn Sie eine solche Spalte nicht in Ihrem Datensatz haben, wählen Sie ein Attribut, das die Zeile eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="34ff0-162">If don't have such a column in your data set, choose an attribute that uniquely identifies the row.</span></span>
+
+## <a name="run-a-workflow"></a><span data-ttu-id="34ff0-163">Ausführen eines Workflows</span><span class="sxs-lookup"><span data-stu-id="34ff0-163">Run a workflow</span></span>
+
+1. <span data-ttu-id="34ff0-164">Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="34ff0-164">On the **Custom Models** page, select the vertical ellipsis in the **Actions** column next to a workflow you've previously created.</span></span>
+
+1. <span data-ttu-id="34ff0-165">**Ausführen** auswählen.</span><span class="sxs-lookup"><span data-stu-id="34ff0-165">Select **Run**.</span></span>
+
+<span data-ttu-id="34ff0-166">Ihr Workflow läuft auch automatisch bei jeder geplanten Aktualisierung.</span><span class="sxs-lookup"><span data-stu-id="34ff0-166">Your workflow also runs automatically with every scheduled refresh.</span></span> <span data-ttu-id="34ff0-167">Mehr erfahren zum [Einrichten geplanter Aktualisierungen](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="34ff0-167">Learn more about [setting up scheduled refreshes](system.md#schedule-tab).</span></span>
+
+## <a name="delete-a-workflow"></a><span data-ttu-id="34ff0-168">Löschen eines Workflows</span><span class="sxs-lookup"><span data-stu-id="34ff0-168">Delete a workflow</span></span>
+
+1. <span data-ttu-id="34ff0-169">Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="34ff0-169">On the **Custom Models** page, select the vertical ellipsis in the **Actions** column next to a workflow you've previously created.</span></span>
+
+1. <span data-ttu-id="34ff0-170">Wählen Sie **Löschen** und bestätigen Sie Ihre Löschung.</span><span class="sxs-lookup"><span data-stu-id="34ff0-170">Select **Delete** and confirm your deletion.</span></span>
+
+<span data-ttu-id="34ff0-171">Ihr Workflow wird gelöscht.</span><span class="sxs-lookup"><span data-stu-id="34ff0-171">Your workflow will be deleted.</span></span> <span data-ttu-id="34ff0-172">Die [Entität](entities.md), die beim Anlegen des Workflows angelegt wurde, bleibt bestehen und kann auf der Seite **Entitäten** eingesehen werden.</span><span class="sxs-lookup"><span data-stu-id="34ff0-172">The [entity](entities.md) that was created when you created the workflow persists, and can be viewed from the **Entities** page.</span></span>
