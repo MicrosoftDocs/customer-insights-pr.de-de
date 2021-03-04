@@ -1,7 +1,7 @@
 ---
 title: Neue und kommende Funktionen
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650003"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270431"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
@@ -30,6 +30,77 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365  Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="january-2021-updates"></a>Updates Januar 2021
+
+Die Updates im Januar 2021 enthalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
+
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Erweiterte Funktionalität und verbesserte Leistung für den SFTP-Export** Sie können jetzt alle Ausgabeentitäten aus Customer Insights auf einen SFTP-Host exportieren. Bisher war der Export auf Segmenteinheiten beschränkt. Darüber hinaus ermöglicht die Leistung des SFTP-Exports je nach Leistung Ihres SFTP-Hosts mehr Datenvolumen in kürzerer Zeit.    
+  Weitere Informationen finden Sie unter [Konnektor für SFTP (Vorschau)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmente
+
+- **Maschinelles Lernen unterstützte vorgeschlagene Segmente, um die Metriken zu verbessern** Es gibt eine neue Möglichkeit, Segmente zu entdecken und zu erstellen. Das System verwendet ein KI-Modell, um Segmente vorzuschlagen, die dazu beitragen können, einen KPI (Kennzahl) zu verbessern, den Sie bereits verfolgen. Wir zeigen das Ausmaß des Einflusses von Attributen, die Sie auf eine Kennzahl oder ein anderes primäres Attribut auswählen. Diese Informationen helfen bei der Suche nach potenziellen Segmenten, die Chancen bieten.    
+  Weitere Informationen finden Sie unter [Vorgeschlagene Segmente (Vorschau)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Datenvereinigung
+
+- **Verbessertes Übereinstimmungserlebnis** Im Bereich der Datenvereinigung wurde die Übereinstimmungserfahrung aktualisiert. Hier können Sie die Übereinstimmungsregeln konfigurieren und anzeigen, einschließlich detaillierter Statistiken, um die Funktionsweise der Übereinstimmung weiter zu erläutern. Es gibt Optionen zum Deaktivieren einer Übereinstimmungsregel, sodass diese nicht mehr aktiv ist, während die Konfiguration beibehalten wird, Übereinstimmungsregeln per Drag & Drop verschoben werden und vieles mehr.
+  Weitere Informationen finden Sie unter [Entitäten abgleichen](match-entities.md).
+
+- **Die Deduplizierungsausgabe des Übereinstimmungsprozesses ist als Entität verfügbar** Die vom Übereinstimmungsprozess ausgegebenen Deduplizierungsprozesse werden jetzt zur weiteren Analyse in eine separate Entität geschrieben. Diese Entität besteht aus den Feldern, die im Deduplizierungsprozess verwendet werden, und dem Gewinnerdatensatz sowie den entsprechenden alternativen Datensätzen, die mit dem Gewinnerdatensatz zusammengeführt werden.
+  Weitere Informationen finden Sie unter [Deduplizierungsausgabe als Entität](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Systemverwaltung
+
+- **Daten nahtlos in Microsoft Dataverse teilen** Sie können jetzt die Ausgabe von Customer Insights in Microsoft Dataverse-Anwendungen mit dem Microsoft Dataverse Managed Data Lake teilen. Sobald Sie eine Dataverse-Umgebung zu Customer Insights zuordnen, erhalten Sie die Option, die Datenfreigabe zu aktivieren.
+  Weitere Informationen finden Sie unter [Umgebungen verwalten](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Updates für Dezember 2020
+
+Die Updates im Dezember 2020 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Neue und aktualisierte Funktionen im Dezember 2020
+
+#### <a name="data-enrichment"></a>Datenanreicherung
+
+- **Verbesserte Anreicherung der Marken- und Interessenaffinität**
+  
+  Wir haben unsere Affinitätswerte vereinfacht, um sie verständlicher und benutzerfreundlicher zu machen. Sie können Kunden jetzt schnell anhand ihrer Affinität zu einer bestimmten Marke oder einem bestimmten Interesse identifizieren.
+
+  Darüber hinaus haben wir neue Konfigurationsoptionen hinzugefügt, um besser steuern zu können, wie Ihre Kundenprofile angereichert werden sollen. 
+
+  Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft-graph.md).
+
+- **Steuern Sie, welche Profile angereichert werden sollen**
+
+  Sie können jetzt nur eine Teilmenge Ihrer Kundenprofile mit der Option anreichern, eine Segmententität anstelle der Standardkundenentität auszuwählen. Erstellen Sie ein Segment mit den Kundenprofilen, die Sie anreichern möchten, und wählen Sie es in der Anreicherungskonfiguration für Ihren Kundendatensatz aus.
+  Diese Funktion ist derzeit nur für Anreicherungen verfügbar, die von Experian und HERE Technologies bereitgestellt werden. Wir werden diese Funktion bald zu weiteren Anreicherungen befähigen.
+
+  Weitere Informationen finden Sie unter [Bereichern Sie Kundenprofile mit demografischen Daten von Experian](enrichment-experian.md) oder [Anreicherung von Kundenprofilen mit HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Aktivieren Sie Ihre Segmente über Autopilot**
+
+  Exportieren Sie Segmente zu Autopilot und nutzen Sie diese für Marketingzwecke. Weitere Informationen finden Sie unter [Konnektor für Autopilot (Vorschau)](export-autopilot.md).
+
+- **Aktivieren Sie Ihre Segmente über SendGrid**
+
+  Exportieren Sie Segmente zu SendGrid und nutzen Sie diese für Marketingzwecke. Für weitere Informationen, siehe [Konnektor für SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Systemverwaltung
+
+- **Aktualisierte Erfahrung im Umgebungsmanagement**
+  
+  Sie können jetzt Umgebungen direkt über die Umgebungsauswahl im App-Header erstellen, bearbeiten, löschen und zurücksetzen. 
+  
+  Darüber hinaus wird die von Ihnen verwendete Umgebung oben im Umgebungsfenster angeheftet, sodass Sie nicht mehr danach suchen müssen.
+
+  Weitere Informationen finden Sie unter [Umgebungen verwalten](manage-environments.md).
 
 ## <a name="november-2020-updates"></a>Aktualisierungen im November 2020
 
@@ -165,7 +236,7 @@ Weitere Informationen finden Sie unter [Anreichern der Kundenprofile mit demogra
 Im Bereich Aufgabendetails können Sie Details zu den vom System ausgeführten Aufgaben anzeigen. Dies ist eine praktische Möglichkeit, Probleme mit der Konfiguration zu identifizieren und Lösungen zu finden.
 Überprüfen Sie die Fehlermeldungen, um festzustellen, wie Sie potenzielle Probleme beheben.
  
-- **Verarbeitungsinformationen wurden zusätzlichen Seiten hinzugefügt**
+- **Verarbeitungsinformationen zu weiteren Seiten hinzugefügt**
 
 Diese Verbesserung fügt Informationen zum Status Ihrer Entitäten auf den Seiten **Entitäten** und **Kunden** hinzu.
  
@@ -202,9 +273,9 @@ Die Updates im August 2020 beinhalten verschiedene Funktionen, Leistungsverbesse
 
 #### <a name="enrichment"></a>Anreicherung
 
-- **Anreicherung der Interessenaffinitäten in weiteren Märkten verfügbar**
+- **Bereicherung der Zinsaffinitäten in mehr Märkten**
 
-  Wir erweitern die Verfügbarkeit der Anreicherung von Interessenaffinitäten über die USA hinaus auf fünf weitere Märkte: Kanada, Australien, Vereinigtes Köngirch, Frankreich und Deutschland. Mit dieser Erweiterung können Sie Ihre Kundendaten mit zusätzlichen Interessen anreichern, die für diese Märkte gelten. Wir reichern auch Ihre Kundenprofile an, die sich in diesen Märkten befinden, indem wir lokale proprietäre Daten von Microsoft Graph verwenden.
+  Wir erweitern die Verfügbarkeit der Bereicherung von Zinsaffinitäten über die USA hinaus auf fünf weitere Märkte: Kanada, Australien, Vereinigtes Königreich, Frankreich und Deutschland. Mit dieser Erweiterung können Sie Ihre Kundendaten mit mehr Interessen bereichern, die für diese Märkte gelten. Wir reichern auch Ihre Kundenprofile an, die sich in diesen Märkten befinden, indem wir lokale proprietäre Daten von Microsoft Graph verwenden.
   Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft-graph.md).
 
 
@@ -223,9 +294,9 @@ Die Updates im Juli 2020 enthalten verschiedene Funktionen, Leistungsverbesserun
 
 #### <a name="enrichment"></a>Anreicherung
 
-- **Anreicherung der Markenaffinität in weiteren Märkten**
+- **Bereicherung der Markenaffinitäten in mehr Märkten**
 
-  Wir weiten die Verfügbarkeit der Anreicherung der Markenaffinität über die USA hinaus auf fünf weitere Märkte aus: Kanada, Australien, Großbritannien, Frankreich und Deutschland. Mit dieser Erweiterung können Sie Ihre Kundendaten mit lokalen Marken in diesen Märkten anreichern. Wir reichern auch Ihre Kundenprofile an, die sich in diesen Märkten befinden, indem wir lokale proprietäre Daten von Microsoft Graph verwenden.
+  Wir erweitern die Verfügbarkeit der Bereicherung von Markenaffinitäten über die USA hinaus auf fünf weitere Märkte: Kanada, Australien, Vereinigtes Königreich, Frankreich und Deutschland. Mit dieser Erweiterung können Sie Ihre Kundendaten mit lokalen Marken in diesen Märkten anreichern. Wir reichern auch Ihre Kundenprofile an, die sich in diesen Märkten befinden, indem wir lokale proprietäre Daten von Microsoft Graph verwenden.
   Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft-graph.md).
 
 ## <a name="june-2020-updates"></a>Updates Juni 2020
@@ -238,7 +309,7 @@ Die Updates im Juni 2020 enthalten mehrere Funktionen, Leistungsverbesserungen u
 
 - **Anreicherung mit Unternehmensdaten aus Leadspace**
   
-  Definieren Sie Felder in einheitlichen Kundenprofilen, mit denen verwandte Unternehmensdaten aus Leadspace abgerufen werden. Nach dem Ausführen des Anreicherungsprozesses werden B2B-Profile mit zusätzlichen Attributen wie Unternehmensgröße, Standort, Branche und mehr angereichert.    
+  Definieren Sie Felder in einheitlichen Kundenprofilen, mit denen verwandte Unternehmensdaten aus Leadspace abgerufen werden. Nach dem Ausführen des Anreicherungsprozesses werden B2B-Profile mit weiteren Attributen wie Unternehmensgröße, Standort, Branche und mehr angereichert.    
   Diese Zusammenarbeit ermöglicht es Ihnen, die Qualität Ihrer Daten durch zusätzliche Informationen aus Drittanbieterdiensten zu verbessern. Um diese Anreicherung nutzen zu können, benötigen Sie eine Leadspace-Lizenz, um auf die B2B-Unternehmensdaten zugreifen zu können. Das System wird diese Lizenz verwenden, um Ihre Daten kontinuierlich anzureichern.    
   Weitere Informationen finden Sie unter [Anreicherung von Unternehmensprofilen mit Leadspace](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Die Updates im Juni 2020 enthalten mehrere Funktionen, Leistungsverbesserungen u
   Mit einem neuen Steuerelement im Dynamics 365-Kundenkarten-Add-In können Sie Marken- und Interessenanreicherungen für Ihre Kontakte in Kundenbindungs-Apps in Dynamics 365 anzeigen.    
   Weitere Informationen finden Sie unter [Kundenkontaktverlauf-Einblicke](customer-card-add-in.md).
 
-- **Zusätzliche Power Automate-Trigger**
+- **Mehr Power Automate-Trigger**
 
   Wir haben unser Triggerangebot für Power Automate erweitert und die folgenden Trigger hinzugefügt:
   - Erhalten Sie eine Benachrichtigung oder führen Sie eine Aktion aus, wenn eine automatische vollständige Aktualisierung (Datenquellen, Vereinheitlichung, Segmente, Kennzahlen, Exporte) abgeschlossen wird.
@@ -295,7 +366,7 @@ Die Updates im Juni 2020 enthalten mehrere Funktionen, Leistungsverbesserungen u
   
   Finden Sie mithilfe künstlicher Intelligenz ähnliche Kunden in Ihrem Kundenstamm. Ein mit Binärklassifizierung arbeitendes Machine Learning-Modell weist Kunden im erweiterten Segment eine Ähnlichkeitsbewertung zu. Die Bewertung basiert auf der Ähnlichkeit mit Kunden im Quellensegment. Abhängig von der Ähnlichkeitsbewertung werden Kundenprofile zu einem neu erstellten Segment hinzugefügt.
 
-  Dieser Vorgang, der im digitalen Marketing manchmal als Lookalike-Modellierung bezeichnet wir, verwendet ein KI-Modell, um Kunden zu finden, die einem anderen Segment Ihrer Kunden ähneln, indem zusätzliche Attribute berücksichtigt werden. Sie können nicht nur die Attribute auswählen, sondern auch die maximale Anzahl von Kunden angeben, die in diesem neuen Segment enthalten sein sollen. Das KI-Modell berechnet dann Ähnlichkeitsbewertungen für jeden Kunden basierend auf Ihren ausgewählten Attributen und findet Kunden mit der höheren durchschnittlichen Ähnlichkeitsbewertung. Das resultierende Segment umfasst Kunden, die Ähnlichkeit mit dem Kunden in Ihrem ursprünglichen Segment aufweisen.    
+  Manchmal als Lookalike-Modellierung im digitalen Marketing bezeichnet, verwendet es ein KI-Modell, um Kunden zu finden, die einem anderen Segment Ihrer Kunden ähnlich sind, indem mehr Attribute berücksichtigt werden. Sie können nicht nur die Attribute auswählen, sondern auch die maximale Anzahl von Kunden angeben, die in diesem neuen Segment enthalten sein sollen. Das KI-Modell berechnet dann Ähnlichkeitsbewertungen für jeden Kunden basierend auf Ihren ausgewählten Attributen und findet Kunden mit der höheren durchschnittlichen Ähnlichkeitsbewertung. Das resultierende Segment umfasst Kunden, die Ähnlichkeit mit dem Kunden in Ihrem ursprünglichen Segment aufweisen.    
   Weitere Informationen finden Sie unter [Ähnliche Kunden](find-similar-customer-segments.md).
 
 - **Segmentüberlappung und Unterscheidungsmerkmale**
@@ -333,7 +404,7 @@ Die Updates im Mai 2020 enthalten mehrere Funktionen, Leistungsverbesserungen un
 
 - **Aktualisierte Zeitleiste und Paginierung im Kundenkarten-Add-In**
 
-  Die Zeitleiste der Kundenkarten-Add-In-Lösung entspricht der Aktivitäts-Zeitleiste. Die Paginierung der Zeitleiste verbesserte sich und zeigte bis zu 50 Aktivitäten gleichzeitig an. Außerdem können zusätzliche Aktivitäten in die Zeitskala geladen werden.    
+  Die Zeitleiste der Kundenkarten-Add-In-Lösung entspricht der Aktivitäts-Zeitleiste. Die Paginierung der Zeitleiste verbesserte sich und zeigte bis zu 50 Aktivitäten gleichzeitig an. Außerdem können weitere Aktivitäten in die Zeitleiste geladen werden.    
   Weitere Informationen finden Sie unter [Kundenkontaktverlauf-Einblicke](customer-card-add-in.md).
 
 - **Power Automate Auslöser für Segmentwechsel**
@@ -412,7 +483,7 @@ Die Updates im April 2020 beinhalten verschiedene Funktionen, Leistungsverbesser
 
 - **Exportieren nach LiveRamp**
 
-  Aktivieren Sie Ihre Daten in LiveRamp ®, um eine Verbindung mit über 500 Plattformen in digitalen, sozialen und TV-Ökosystemen herzustellen. Nutzen Sie Ihre Daten in LiveRamp, um Werbekampagnen auszurichten, zu unterdrücken und zu personalisieren.    
+  Aktivieren Sie Ihre Daten in LiveRamp ®, um eine Verbindung mit über 500 Plattformen in digitalen, sozialen und TV-Ökosystemen herzustellen. Nutzen Sie Ihre Daten in LiveRamp für das Targeting, die Unterdrückung und die Personalisierung von Werbekampagnen.    
   Weitere Informationen finden Sie unter [Live Ramp&reg; Connector](export-liveramp.md).
 
 - **Add-In für Customer Insights-Teams**
@@ -433,7 +504,7 @@ Die Updates im April 2020 beinhalten verschiedene Funktionen, Leistungsverbesser
 
 #### <a name="segments"></a>Segmente
 
-- **Weitere Operator**
+- **Ein anderer Betreiber**
   
   Der In-Set-Operator ermöglicht Kunden die Segmentierung nach mehreren möglichen Zeichenfolgenwerten. Bevor dieser Operator hinzugefügt wurde, mussten Sie solche Segmente mit mehreren ODER-Bedingungen erstellen. Mit dem Operator In-Set können Sie dies mit einer einzigen Bedingung tun.    
   Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
@@ -444,3 +515,6 @@ Die Updates im April 2020 beinhalten verschiedene Funktionen, Leistungsverbesser
   
   Kopieren Sie Ihre Konfiguration von einer Umgebung in eine andere. Während Sie eine neue Umgebung erstellen, können Sie eine vorhandene Umgebung auswählen, aus der Sie die Konfiguration kopieren möchten. Wir unterstützen derzeit Datenquellen, Datenvereinigung, Beziehungen, zu kopierende Kennzahlen und Segmente. Anmeldeinformationen und tatsächliche Daten von Datenquelle werden nicht kopiert.    
   Weitere Informationen finden Sie unter [Umgebungen verwalten](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

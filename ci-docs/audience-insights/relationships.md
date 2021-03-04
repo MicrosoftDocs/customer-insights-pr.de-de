@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405796"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269875"
 ---
 # <a name="relationships-between-entities"></a>Beziehungen zwischen Entitäten
 
@@ -28,8 +28,8 @@ Während der Abgleich- und Zusammenführungsprozesse werden hinter den Kulissen 
 > ![Beziehungserstellung](media/relationships-entities-merge.png "Erstellung von Beziehungen")
 
 - ***CustomerToContact*-Beziehung** wurde zwischen der Entität Kunde und der Entität Kontakt erstellt. Die Entität Kunde erhält das Schlüsselfeld **Contact_contactId**, das sich auf das Schlüsselfeld Kontakt-Entität **contactId** bezieht.
-- **_CustomerToAccount_-Beziehung** wurde zwischen der Entität Kunde und der Entität Konto erstellt. Die Entität Kunde erhält das Schlüsselfeld **Account_accountId**, das sich auf das Schlüsselfeld Kontoentität **AccountId** bezieht.
-- **_CustomerToWebAccount_-Beziehung** wurde zwischen der Entität Kunde und der Entität WebAccount angelegt. Die Entität Kunde erhält das Schlüsselfeld **WebAccount_webaccountId**, das sich auf das Schlüsselfeld der Entität WebAccount **webaccountId** bezieht.
+- ***CustomerToAccount*-Beziehung** wurde zwischen der Entität Kunde und der Entität Konto erstellt. Die Entität Kunde erhält das Schlüsselfeld **Account_accountId**, das sich auf das Schlüsselfeld Kontoentität **AccountId** bezieht.
+- ***CustomerToWebAccount*-Beziehung** wurde zwischen der Entität Kunde und der Entität WebAccount angelegt. Die Entität Kunde erhält das Schlüsselfeld **WebAccount_webaccountId**, das sich auf das Schlüsselfeld der Entität WebAccount **webaccountId** bezieht.
 
 ## <a name="create-a-relationship"></a>Erstellen einer Beziehung
 
@@ -69,3 +69,6 @@ Definieren Sie benutzerdefinierte Beziehungen auf der Seite **Beziehungen**. Jed
 ## <a name="next-step"></a>Nächster Schritt
 
 System- und benutzerdefinierte Beziehungen werden verwendet, um Segmente auf der Grundlage mehrerer Datenquellen zu erstellen, die nicht mehr in einem Silo gespeichert sind. Weitere Informationen finden Sie unter [Segmente](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

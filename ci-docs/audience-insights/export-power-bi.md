@@ -1,20 +1,20 @@
 ---
-title: Power BI-Connector
+title: Power BI-Connector
 description: Lernen Sie, wie der Dynamics 365 Customer Insights-Connector in Power BI verwendet wird.
 ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405755"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477087"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector für Power BI (Vorschau)
 
@@ -31,7 +31,7 @@ Erstellen Sie Visualisierungen für Ihre Daten mit dem Power BI Desktop. Generie
 
 1. Wählen Sie **Mehr anzeigen** aus und suchen Sie nach **Dynamics 365 Customer Insights**.
 
-1. Wählen Sie das Ergebnis und dann **Verbinden** aus.
+1. Wählen Sie **Verbinden** aus.
 
 1. **Melden Sie sich** mit demselben Organisationskonto an, das Sie für Customer Insights verwenden, und wählen Sie **Verbinden** aus.
    > [!NOTE]
@@ -52,3 +52,22 @@ Der Customer Insights-Konnektor für Power BI wurde für Datasets entwickelt, di
 ### <a name="work-with-a-subset-of-data"></a>Arbeiten mit einer Teilmenge von Daten
 
 Erwägen Sie die Arbeit mit einer Teilmenge Ihrer Daten. Sie können z. B. [Segmente](segments.md) erstellen, anstatt alle Kundendatensätze nach Power BI zu exportieren.
+
+## <a name="troubleshooting"></a>Problembehandlung
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Die Customer Insights-Umgebung wird nicht in Power BI angezeigt
+
+Umgebungen mit mehr als einer definierten [Beziehung](relationships.md) zwischen zwei identischen Entitäten in Zielgruppenerkenntnissen sind im Power BI-Konnektor nicht verfügbar.
+
+Sie können das duplizierte Beziehungen identifizieren und entfernen.
+
+1. Gehen Sie in Zielgruppenerkenntnissen zu **Daten** > **Beziehungen** in der Umgebung, die in Power BI fehlt.
+2. Identifizieren Sie duplizierte Beziehungen:
+   - Überprüfen Sie, ob zwischen denselben beiden Entitäten mehr als eine Beziehung definiert ist.
+   - Überprüfen Sie, ob eine Beziehung zwischen zwei Entitäten erstellt wurde, die beide im Vereinigungsprozess enthalten sind. Zwischen allen am Vereinigungsprozess beteiligten Entitäten ist eine implizite Beziehung definiert.
+3. Entfernen Sie alle identifizierten doppelten Beziehungen.
+
+Versuchen Sie nach dem Entfernen des duplizierten Beziehungen, den Power BI-Konnektor wieder zu konfigurieren. Die Umgebung sollte jetzt verfügbar sein.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

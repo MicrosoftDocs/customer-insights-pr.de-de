@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667228"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267431"
 ---
 # <a name="customer-activities"></a>Kundenaktivitäten
 
@@ -44,13 +44,13 @@ Ihre Datenquellen umfassen Entitäten mit Transaktions- und Aktivitätsdaten aus
 
 1. Konfigurieren Sie im Abschnitt **Beziehung einrichten** die Details, die zum Verbinden Ihrer Aktivitätsdaten mit dem entsprechenden Kunden verwendet werden.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definieren der Entitätsbeziehung](media/activities-entities-define.png "Definieren Sie die Entitätsbeziehung")
-
     - **Aktivitätsentitätsfeld**: Wählen Sie das Feld in Ihrer Aktivitätsentität aus, das zum Herstellen einer Beziehung mit einer anderen Entität verwendet werden soll.
     - **Kundenentität**: Wählen Sie die entsprechende Quellkundenentität aus, mit der Ihre Aktivitätsentität in Beziehung steht. Sie können sich nur auf die Quellkundenentitäten beziehen, die im Datenvereinigungsprozess verwendet werden.
     - **Kundenentitätsfeld**: In diesem Feld wird der im Map-Prozess ausgewählte Primärschlüssel der Quellkundenentität angezeigt. Dieses Primärschlüsselfeld in der Quellkundenentität wird verwendet, um eine Beziehung zur Aktivitätsentität herzustellen.
     - **Name**: Wenn bereits eine Beziehung zwischen dieser Aktivitätsentität und der ausgewählten Quellkundenentität besteht, ist der Beziehungsname schreibgeschützt. Wenn keine solche Beziehung besteht, wird eine neue Beziehung mit dem hier angegebenen Namen erstellt.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definieren der Entitätsbeziehung](media/activities-entities-define.png "Definieren Sie die Entitätsbeziehung")
 
 1. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
@@ -82,3 +82,6 @@ Ihre Datenquellen umfassen Entitäten mit Transaktions- und Aktivitätsdaten aus
 3. Wählen Sie das Symbol **Löschen** aus.
 
 4. Bestätigen Sie den Löschvorgang.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Customer Insights-Daten nach Dynamics 365 Sales exportieren
 description: Erfahren Sie, wie Sie die Verbindung zu Dynamics 365 Sales konfigurieren.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643817"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269007"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Connector für Dynamics 365 Sales (Vorschau)
 
@@ -24,7 +24,10 @@ Verwenden Sie Ihre Kundendaten, um Marketinglisten zu erstellen, Workflows zu ve
 
 ## <a name="prerequisite"></a>Voraussetzung
 
-Kontaktdatensätze [aus Dynamics 365 Sales übernommen mit Common Data Service](connect-power-query.md).
+1. Kontaktdatensätze müssen in Dynamics 365 Sales vorhanden sein, bevor Sie ein Segment von Customer Insights nach Sales exportieren können. Lesen Sie mehr darüber, wie Sie Kontakte in [Dynamics 365 Sales mit Common Data Services](connect-power-query.md) erfassen können.
+
+   > [!NOTE]
+   > Durch das Exportieren von Segmenten aus Zielgruppenerkenntnissen nach Sales werden keine neuen Kontaktdatensätze in den Sales-Instanzen erstellt. Die Kontaktdatensätze von Sales müssen in Zielgruppenerkenntnissen aufgenommen und als Datenquelle verwendet werden. Sie müssen auch in die einheitliche Kundenentität aufgenommen werden, um Kunden-IDs Kontakt-IDs zuzuordnen, bevor Segmente exportiert werden können.
 
 ## <a name="configure-the-connector-for-sales"></a>Konfigurieren Sie den Connector für Vertrieb
 
@@ -49,3 +52,6 @@ Kontaktdatensätze [aus Dynamics 365 Sales übernommen mit Common Data Service](
 ## <a name="export-the-data"></a>Exportieren der Daten
 
 Sie könenn [Daten nach Bedarf exportieren](export-destinations.md). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md#schedule-tab) durchgeführt.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

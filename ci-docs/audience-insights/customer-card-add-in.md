@@ -1,7 +1,7 @@
 ---
 title: Installieren und konfigurieren Sie das Customer Card Add-in
 description: Installieren und konfigurieren Sie das Kundenkarten-Add-in für Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644042"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268043"
 ---
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
 
@@ -92,10 +92,26 @@ Es kann einige Zeit dauern, bis die Lösung in Ihrer Umgebung installiert ist.
 
 1. Deaktivieren Sie im Dialogfeld **Feldeigenschaften** das Kontrollkästchen **Anzeigebeschriftung auf dem Formular**.
 
-1. Wählen Sie die Option **Web** für das Steuerelement aus. Wählen Sie für das Anreicherungs-Steuerelement den Anreicherungstyp aus, den Sie anzeigen möchten, indem Sie das Feld **Anreicherungstyp** konfigurieren. Sie müssen für jeden Anreicherungstyp eine separate Anreicherungssteuerung hinzufügen.
+1. Wählen Sie die Option **Web** für das Steuerelement aus. Wählen Sie für das Anreicherungs-Steuerelement den Anreicherungstyp aus, den Sie anzeigen möchten, indem Sie das Feld **Anreicherungstyp** konfigurieren. Fügen Sie für jeden Anreicherungstyp ein separates Anreicherungssteuerelement hinzu.
 
 1. Wählen Sie **Speichern** und **Veröffentlichen** aus, um das aktualisierte Kontaktformular zu veröffentlichen.
 
 1. Gehen Sie zum veröffentlichten Kontaktformular. Sie sehen das neu hinzugefügte Steuerelement. Möglicherweise müssen Sie sich bei der ersten Verwendung anmelden.
 
 1. Um anzupassen, was Sie auf dem benutzerdefinierten Steuerelement anzeigen möchten, wählen Sie die Schaltfläche „Bearbeiten“ in der oberen rechten Ecke aus.
+
+## <a name="upgrade-customer-card-add-in"></a>Upgrade des Kundenkarten-Add-Ins
+Das Kundenkarten-Add-In wird nicht automatisch aktualisiert. Befolgen Sie dieses Verfahren in der Dynamics 365-App, in der das Add-In installiert ist, um ein Upgrade auf die neueste Version durchzuführen.
+
+1. Gehen Sie in der Dynamics 365-App zu **Einstellungen** > **Anpassung** und wählen Sie **Lösungen** aus.
+
+1. Suchen Sie in der Tabelle der Add-Ins nach **CustomerInsightsCustomerCard** und wählen Sie die Zeile aus.
+
+1. Wählen Sie **Upgrade auf Lösung anwenden** in der Aktionsleiste aus.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Aktualisieren Sie die Lösung im Bereich „Anpassung“ von Dynamics 365-Apps":::
+
+1. Nach dem Start des Upgradevorgangs wird eine Ladeanzeige angezeigt, bis das Upgrade abgeschlossen ist. Wenn es keine neuere Version gibt, wird beim Upgrade eine Fehlermeldung angezeigt.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

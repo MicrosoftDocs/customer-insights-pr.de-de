@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405774"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267768"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Mit einer Power Query-Datenquelle verbinden
 
@@ -28,7 +28,10 @@ Power Query bietet eine breite Palette von Connectos zum Erfassen von Daten. Die
 
 1. Wählen Sie die Methode **Daten importieren** und wählen Sie **Weiter**.
 
-1. Geben Sie einen **Namen** für die Datenquelle und wählen Sie **Weiter**, um die Datenquelle zu erstellen.
+1. Geben Sie einen **Namen** für die Datenquelle und wählen Sie **Weiter**, um die Datenquelle zu erstellen. Namensrichtlinien: 
+   - Beginnen Sie mit einem Buchstaben.
+   - Verwenden Sie nur Buchstaben und Zahlen. Leerzeichen und Sonderzeichen sind nicht zulässig.
+   - Verwenden Sie zwischen 3 und 64 Zeichen.
 
 1. Wählen Sie einen der [verfügbaren Konnektoren](#available-power-query-data-sources) aus. Für dieses Beispiel wählen wir den Connector **Text/CSV**.
 
@@ -77,3 +80,6 @@ Connectors mit einem Häkchen in der Spalte **Customer Insights (Datenflows)** s
 3. Übernehmen Sie Ihre Änderungen und Transformationen in das Dialogfeld **Power Query – Abfragen bearbeiten** wie im Abschnitt [Eine neue Datenquelle erstellen](#create-a-new-data-source) beschrieben ein.
 
 4. Wählen Sie in Power Query nach Abschluss Ihrer Änderungen **Speichern** aus, um Ihre Änderungen zu speichern.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

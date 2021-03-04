@@ -1,20 +1,20 @@
 ---
 title: Anreicherung mit der Drittanbieter-Anreicherung Experian
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668811"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269559"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kundenprofile mit demografischen Daten aus Experian anreichern (Vorschau)
 
@@ -41,7 +41,9 @@ Für das Konfigurieren von Experian an müssen folgende Voraussetzungen erfüllt
 
 ## <a name="map-your-fields"></a>Ihre Felder zuordnen
 
-1. Wählen Sie **Daten hinzufügen** und wählen Sie Ihre Schlüsselbezeichner aus **Name und Adresse**, **E-Mail**, oder **Telefon** aus, um sie zur Identitätsauflösung an Experian zu senden.
+1.  Wählen Sie **Daten hinzufügen** und dann den **Kundendatensatz**, den Sie mit demografischen Daten von Experian anreichern möchten. Sie können die **Kundenentität** auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
+
+1. Wählen Sie Ihre Schlüsselkennungen **Name und Adresse**, **E-Mail**, oder **Telefon** aus, um sie zur Identitätsauflösung an Experian zu senden.
 
    > [!TIP]
    > Weitere an Experian gesendete Schlüsselbezeichnerattribute führen wahrscheinlich zu einer höheren Übereinstimmungsrate.
@@ -52,8 +54,8 @@ Für das Konfigurieren von Experian an müssen folgende Voraussetzungen erfüllt
 
 1.  Wählen Sie **Speichern** aus, um die Feldzuordnung abzuschließen.
 
-   > [!div class="mx-imgBorder"]
-   > ![Experian-Feldzuordnung](media/experian-field-mapping.png "Experian-Feldzuordnung")
+    > [!div class="mx-imgBorder"]
+    > ![Experian-Feldzuordnung](media/experian-field-mapping.png "Experian-Feldzuordnung")
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
@@ -71,3 +73,6 @@ Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](seg
 
 Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten an Experian aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird diese Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, sicherzustellen, dass Experian alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
 Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

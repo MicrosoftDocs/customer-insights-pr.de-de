@@ -4,16 +4,16 @@ description: Arbeiten Sie mit benutzerdefinierten Modellen aus Azure Machine Lea
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668902"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267233"
 ---
 # <a name="custom-machine-learning-models"></a>Benutzerdefinierte Maschinelles Lernen Modelle
 
@@ -46,15 +46,15 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 
 1. Wählen Sie den Machine Learning Studio (Classic)-Webdienst oder die Azure Machine Learning-Pipeline in der Dropdown-Liste **Webdienst, der Ihr Modell enthält**. Wählen Sie anschließend **Weiter** aus.
    - Erfahren Sie mehr über [das Veröffentlichen eines Webdienstes in Machine Learning Studio (Classic)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Erfahren Sie mehr über [Veröffentlichen einer Pipeline in Azure Machine Learning mithilfe des Designers](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) oder [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Ihre Pipeline muss unter einem [Pipeline-Endpunkt](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) veröffentlicht werden.
+   - Erfahren Sie mehr über [Veröffentlichen einer Pipeline in Azure Machine Learning mithilfe des Designers](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) oder [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Ihre Pipeline muss unter einem [Pipeline-Endpunkt](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) veröffentlicht werden.
 
 1. Wählen Sie für jede **Webdienst-Eingabe** die passende **Entität** aus Zielgruppen-Insights und wählen Sie **Weiter**.
+   > [!NOTE]
+   > Der benutzerdefinierte Modellworkflow wendet Heuristiken an, um die Webdienst-Eingabefelder den Entitätsattributen basierend auf dem Namen und dem Datentyp des Felds zuzuordnen. Es wird ein Fehler angezeigt, wenn ein Webdienstfeld keiner Entität zugeordnet werden kann.
 
    > [!div class="mx-imgBorder"]
    > ![Workflow konfigurieren](media/intelligence-screen2-updated.png "Workflow konfigurieren")
-
+   
 1. Legen Sie im Schritt **Modellausgabeparameter** die folgenden Eigenschaften fest:
    - Machine Learning Studio (Classic)
       1. Geben Sie den Ausgang **Entitätsname** ein, in den die Ergebnisse der Web-Service-Ausgabe fließen sollen.
@@ -112,3 +112,6 @@ Ihr Workflow läuft auch automatisch bei jeder geplanten Aktualisierung. Mehr er
 1. Wählen Sie **Löschen** und bestätigen Sie Ihre Löschung.
 
 Ihr Workflow wird gelöscht. Die [Entität](entities.md), die beim Anlegen des Workflows angelegt wurde, bleibt bestehen und kann auf der Seite **Entitäten** eingesehen werden.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

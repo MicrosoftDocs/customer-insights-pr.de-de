@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 24321e9e11f9fd4e800526673726e5146ed33674
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 44f97696ec91dc488dd6a7528e186abb99c8288b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405758"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269651"
 ---
-# <a name="data-unification"></a>Datenvereinigung
+# <a name="data-unification-overview"></a>Datenvereinheitlichungsübersicht
 
 Nachdem [Sie die Datenquellen eingerichtet haben](data-sources.md), können Sie die Daten vereinheitlichen. Die Datenvereinheitlichung umfasst drei Schritte: **Karte**, **Übereinstimmung**, und **Zusammenführung**.
 
@@ -31,3 +31,6 @@ Nachdem Sie die Datenvereinigung abgeschlossen haben, können Sie optional
 - [Beziehungen zwischen Entitäten einrichten](relationships.md), um anspruchsvolle Segmente zu erstellen
 - [Ihre Daten anreichern](enrichment-hub.md), um eine breitere Palette von Einblicken über Ihre Kunden zu erhalten
 - [Aktivitäten definieren](activities.md) aus einigen der eingelesenen Attribute
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

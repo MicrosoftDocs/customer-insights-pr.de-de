@@ -1,20 +1,20 @@
 ---
 title: Verbinden Sie sich mit einem Azure Data Lake Storage Gen2-Konto mit einem Service-Prinzipal
-description: Verwenden Sie ein Azure Service Prinzipal für Zielgruppen-Insights, um eine Verbindung zu Ihrem eigenen Data Lake herzustellen, wenn Sie diesen mit Zielgruppen-Insights verbinden.
-ms.date: 11/24/2020
+description: Verwenden Sie ein Azure Service Prinzipal für Zielgruppenerkenntnisse, um eine Verbindung zu Ihrem eigenen Data Lake herzustellen, wenn Sie diesen mit Zielgruppenerkenntnisse verbinden.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644087"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267721"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure Service Prinzipal für Insights der Zielgruppe
 
@@ -22,7 +22,9 @@ Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Be
 
 Sie können das Dienstprinzipal verwenden, um auf sichere Weise [einen Common Data Model-Ordner als Datenquelle hinzuzufügen oder zu bearbeiten](connect-common-data-model.md) oder [eine neue Umgebung zu erstellen oder eine bestehende zu aktualisieren](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Sie benötigen Admin-Berechtigungen für Ihr Azure-Abonnement, um das Service-Prinzipal zu erstellen.
+> [!IMPORTANT]
+> - Für das Azure Data Lake Gen2-Speicherkonto, das den Dienstprinzipal verwenden soll, muss der [Hierarchischer Namensraum (HNS) aktiviert](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace) sein.
+> - Sie benötigen Admin-Berechtigungen für Ihr Azure-Abonnement, um das Service-Prinzipal zu erstellen.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Erstellen eines Azure Service Prinzipals für Zielgruppen-Insights
 
@@ -83,7 +85,7 @@ Anhängen eines Azure Data Lake-Speicherkontos in Zielgruppen-Insights, um [Ausg
 
 Führen Sie die folgenden Schritte aus, um die erforderlichen Informationen für den gewählten Ansatz bereitzustellen.
 
-### <a name="resounce-based-storage-account-connection"></a>Rücksetzen einer Speicherkonto-Verbindung
+### <a name="resource-based-storage-account-connection"></a>Ressourcen-basierte Speicherkonto-Verbindung
 
 1. Gehen Sie zum [Azure Admin-Portal](https://portal.azure.com), melden Sie sich bei Ihrem Abonnement an und öffnen Sie das Speicherkonto.
 
@@ -108,7 +110,8 @@ Führen Sie die folgenden Schritte aus, um die erforderlichen Informationen für
 1. Überprüfen Sie das **Abonnement**, die **Ressourcengruppe** und den **Name** des Speicherkontos, um sicherzustellen, dass Sie die richtigen Werte in Zielgruppen-Insights auswählen.
 
 1. Wählen Sie in Zielgruppen-Insights die Werte oder für die entsprechenden Felder beim Anhängen des Speicherkontos.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Geben Sie die Ressource-ID des Speicherkontos ein.":::
    
 1. Fahren Sie mit den restlichen Schritten in Zielgruppen-Insights fort, um das Speicherkonto anzuhängen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

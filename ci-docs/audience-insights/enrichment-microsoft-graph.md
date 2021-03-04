@@ -1,26 +1,26 @@
 ---
 title: Anreichern von Kundenprofilen mit Microsoft Graph
 description: Verwenden Sie proprietäre Daten aus Microsoft Graph, um Ihre Kundendaten mit Marken- und Interessenbeziehungen anzureichern.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405762"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269329"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Anreichern von Kundenprofilen mit Marken- und Interessenbeziehungen (Vorschau)
 
 Verwenden Sie proprietäre Daten aus Microsoft Graph, um Ihre Kundendaten mit Marken- und Interessenbeziehungen anzureichern. Diese Affinitäten werden basierend auf Daten von Personen mit ähnlichen demografischen Merkmalen wie Ihre Kunden ermittelt. Diese Informationen helfen Ihnen dabei, Ihre Kunden anhand ihrer Affinität zu bestimmten Marken und Interessen besser zu verstehen und zu segmentieren.
 
-Gehen Sie in Zielgruppen-Insights auf **Daten** > **Anreicherung**, um [Anreicherungen zu konfigurieren und anzuzeigen](enrichment-hub.md).
+Gehen Sie in Zielgruppenerkenntnisse auf **Daten** > **Anreicherung**, um [Anreicherungen zu konfigurieren und anzuzeigen](enrichment-hub.md).
 
 Um die Anreicherung von Markenaffinitäten zu konfigurieren, gehen Sie zur Registerkarte **Entdecken** und wählen Sie **Anreicherung meiner Daten** auf der Kachel **Marken**.
 
@@ -35,16 +35,21 @@ Wir verwenden Onlinesuchdaten aus Microsoft Graph, um Affinitäten für Marken u
 
 [Weitere Informationen zu Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Affinitätswert und Selbstvertrauen
+## <a name="affinity-level-and-score"></a>Affinitätsstufe und Punktzahl
 
-Die **Affinitätsbewertung** wird auf einer 100-Punkte-Skala berechnet, wobei 100 das Segment darstellt, das die höchste Affinität für eine Marke oder ein Interesse aufweist.
+Für jedes erweiterte Kundenprofil geben wir zwei verwandte Werte an – Affinitätsstufe und Affinitätsbewertung. Mithilfe dieser Werte können Sie bestimmen, wie stark die Affinität für das demografische Segment dieses Profils, für eine Marke oder ein Interesse im Vergleich zu anderen demografischen Segmenten ist.
 
-Das **Affinitätsvertrauen** wird auch auf einer 100-Punkte-Skala berechnet. Es zeigt das Vertrauensniveau des Systems an, dass ein Segment eine Affinität zur Marke oder zum Interesse hat. Das Konfidenzniveau basiert auf der Segmentgröße und der Segmentgranularität. Die Segmentgröße wird durch die Datenmenge bestimmt, die wir für ein bestimmtes Segment haben. Die Segmentgranularität wird dadurch bestimmt, wie viele Attribute (Alter, Geschlecht, Standort) in einem Profil verfügbar sind.
+*Affinitätsstufe* besteht aus vier Ebenen und *Affinitätsbewertung* wird auf einer 100-Punkte-Skala berechnet, die den Affinitätsstufen zugeordnet ist.
 
-Wir normalisieren die Ergebnisse für Ihr DataSet nicht. Infolgedessen werden möglicherweise nicht alle möglichen Affinitätswertwerte für Ihr DataSet angezeigt. Beispielsweise enthalten Ihre Daten möglicherweise kein angereichertes Kundenprofil mit einem Affinitätswert von 100. Dies ist möglich, wenn im demografischen Segment keine Kunden existieren, die für eine bestimmte Marke oder ein bestimmtes Interesse 100 Punkte erzielt haben.
 
-> [!TIP]
-> Wenn [Segmente erstellen](segments.md) Affinitätswerte verwendet, überprüfen Sie die Verteilung der Affinitätswerte für Ihr DataSet, bevor Sie sich für die entsprechenden Bewertungsschwellen entscheiden. Beispielsweise kann ein Affinitätswert von 10 in einem DataSet als signifikant angesehen werden, der einen höchsten Affinitätswert von nur 25 für eine bestimmte Marke oder ein bestimmtes Interesse aufweist.
+|Affinitätsstufe |Affinitätsbewertung  |
+|---------|---------|
+|Sehr hoch     | 85-100       |
+|Hoch     | 70-84        |
+|Mittel     | 35-69        |
+|Niedrig     | 1-34        |
+
+Abhängig von der Granularität, die Sie zum Messen der Affinität wünschen, können Sie entweder die Affinitätsstufe oder die Punktzahl verwenden. Der Affinitätswert gibt Ihnen eine genauere Kontrolle.
 
 ## <a name="supported-countriesregions"></a>Unterstützte Länder/Regionen
 
@@ -54,17 +59,13 @@ Um ein Land auszuwählen, öffnen Sie die **Markenanreicherung** oder **Zinsanre
 
 ### <a name="implications-related-to-country-selection"></a>Auswirkungen auf die Länderauswahl
 
-- Wenn Sie [Ihre eigenen Marken auswählen](#define-your-brands-or-interests) werden wir Vorschläge basierend auf dem ausgewählten Land/der ausgewählten Region machen.
+- Wenn Sie [Ihre eigenen Marken auswählen](#define-your-brands-or-interests), liefert das System Vorschläge basierend auf dem ausgewählten Land oder der ausgewählten Region.
 
-- Wenn Sie [eine Branche auswählen](#define-your-brands-or-interests), identifizieren wir die relevantesten Marken oder Interessen basierend auf dem ausgewählten Land/der ausgewählten Region.
+- Wenn Sie [eine Branche auswählen](#define-your-brands-or-interests), erhalten Sie die relevantesten Marken oder Interessen basierend auf dem ausgewählten Land oder der ausgewählten Region.
 
-- Wenn [Ihre Felder zugeordnet werden](#map-your-fields), wenn das Feld Land/Region nicht zugeordnet ist, verwenden wir Microsoft Graph-Daten aus dem ausgewählten Land/der ausgewählten Region, um Ihre Kundenprofile zu erweitern. Wir werden diese Auswahl auch verwenden, um Ihre Kundenprofile zu bereichern, für die keine Länder-/Regionsdaten verfügbar sind.
-
-- Wann [Profile angereichert werden](#refresh-enrichment), reichern wir alle Kundenprofile an, für die Microsoft Graph-Daten für die ausgewählten Marken und Interessen verfügbar sind, einschließlich Profile, die sich nicht in dem ausgewählten Land/der ausgewählten Region befinden. Wenn Sie beispielsweise Deutschland ausgewählt haben, bereichern wir Profile in den USA, wenn Microsoft Graph-Daten für die ausgewählten Marken und Interessen in den USA verfügbar sind.
+- Wenn Sie [Profile anreichern](#refresh-enrichment), reichern wir alle Kundenprofile, für die wir Daten für die ausgewählten Marken und Interessen erhalten, an. Dies bezieht Profile ein, die sich nicht im ausgewählten Land oder in der ausgewählten Region befinden. Wenn Sie beispielsweise Deutschland ausgewählt haben, bereichern wir Profile in den USA, wenn Microsoft Graph-Daten für die ausgewählten Marken und Interessen in den USA verfügbar sind.
 
 ## <a name="configure-enrichment"></a>Anreicherung konfigurieren
-
-Die Konfiguration der Anreicherung von Marken oder Interessen besteht aus zwei Schritten:
 
 ### <a name="define-your-brands-or-interests"></a>Definieren Sie Ihre Marken oder Interessen
 
@@ -75,9 +76,19 @@ Wählen Sie eine der folgenden Optionen aus:
 
 Um eine Marke oder ein Interesse hinzuzufügen, geben Sie es in den Eingabebereich ein, um Vorschläge basierend auf übereinstimmenden Begriffen zu erhalten. Wenn wir keine Marke oder kein Interesse auflisten, nach dem Sie suchen, senden Sie uns Feedback über den Link **Vorschlagen**.
 
+### <a name="review-enrichment-preferences"></a>Anreicherungseinstellungen überprüfen
+
+Überprüfen Sie Ihre Standardeinstellungen für die Anreicherung und aktualisieren Sie sie nach Bedarf.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Screenshot des Fensters „Anreicherungseinstellungen“.":::
+
+### <a name="select-entity-to-enrich"></a>Anzureichernde Entität auswählen
+
+Wählen Sie **Angereicherte Einheit** aus, und wählen Sie das Dataset aus, das Sie mit Unternehmensdaten aus Microsoft Graph anreichern möchten. Sie können die Kundenentität auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
+
 ### <a name="map-your-fields"></a>Ihre Felder zuordnen
 
-Ordnen Sie Felder Ihrer einheitlichen Kundenentität zu mindestens zwei Attributen, um das demografische Segment zu definieren, das wir zur Anreicherung Ihrer Kundendaten verwenden sollen. Wählen Sie **Bearbeiten**, um die Zuordnung der Felder zu definieren und wählen Sie dann **Anwenden**, wenn Sie fertig sind. Wählen Sie **Speichern** aus, um die Feldzuordnung abzuschließen.
+Ordnen Sie Felder Ihrer einheitlichen Kundenentität zu, um das demografische Segment zu definieren, das das System zur Anreicherung Ihrer Kundendaten verwenden soll. Ordnen Sie Land/Region und mindestens Geburtsdatum oder Geschlechtsattribute zu. Sie müssen außerdem mindestens einen Ort (und ein Bundesland/Kanton) bzw. eine Postleitzahl zuordnen. Wählen Sie **Bearbeiten**, um die Zuordnung der Felder zu definieren und wählen Sie dann **Anwenden**, wenn Sie fertig sind. Wählen Sie **Speichern** aus, um die Feldzuordnung abzuschließen.
 
 Die folgenden Formate und Werte werden unterstützt. Bei Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden:
 
@@ -120,3 +131,6 @@ Marken- und Interessenbeziehungen können auch auf einzelnen Kundenkarten einges
 ## <a name="next-steps"></a>Nächste Schritte
 
 Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](segments.md), [Maße](measures.md), und selbst [Exportdaten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

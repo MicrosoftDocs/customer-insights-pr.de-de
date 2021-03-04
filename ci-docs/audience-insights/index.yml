@@ -6,16 +6,16 @@ metadata:
   description: Hilfe-Hub mit wichtigen Links für Zielgruppen-Insights.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4405786"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745720"
 landingContent:
 - title: Über Zielgruppen-Insights
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Community-Seite
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Datenquellen aufnehmen
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Datenquellen hinzufügen
-      url: data-sources.md
-    - text: Inkrementelle Aktualisierung
-      url: incremental-refresh-data-sources.md
-    - text: Entitäten verstehen
-      url: entities.md
 - title: Daten vereinheitlichen
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Zuordnung
-      url: map-entities.md
-    - text: Abgleichen
-      url: match-entities.md
-    - text: Mergen
-      url: merge-entities.md
-- title: Kundenprofile werden verfeinert
+    - text: Übersicht über Datenquellen
+      url: data-sources.md
+    - text: Vereinheitlichungs-Übersicht
+      url: data-unification.md
+    - text: Entitäten verstehen
+      url: entities.md
+- title: Anreichern und Verfeinern von Daten
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Kundenprofile bereichern
+      url: enrichment-hub.md
     - text: Konfigurieren von Beziehungen
       url: relationships.md
     - text: Kundenaktivitäten aufführen
       url: activities.md
-    - text: Bringen Sie Ihre eigenen Machine-Learning-Modelle mit
-      url: custom-models.md
+- title: Erkenntnisse gewinnen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Segmente erstellen
+      url: segments.md
+    - text: Measures erstellen
+      url: measures.md
+    - text: Vollständige Daten mit Vorhersagen
+      url: predictions.md
 - title: Kundendaten exportieren
   linkLists:
   - linkListType: how-to-guide
@@ -65,7 +65,7 @@ landingContent:
       url: export-destinations.md
     - text: Kundenkarten in Dynamics 365 Apps
       url: customer-card-add-in.md
-    - text: Power BI-Connector
+    - text: Power BI-Connector
       url: export-power-bi.md
 - title: Verwalten Sie die App
   linkLists:

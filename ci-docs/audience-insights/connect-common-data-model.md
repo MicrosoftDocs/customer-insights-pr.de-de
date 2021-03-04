@@ -4,17 +4,17 @@ description: Arbeiten Sie mit Common Data Model-Daten unter Verwendung von Azure
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643457"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267859"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
 
@@ -38,17 +38,25 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
 
 1. Wählen Sie **Datenquelle hinzufügen**.
 
-1. Wählen Sie **Verbinden mit einem gemeinsamen Datenmodell-Ordner**, geben Sie einen **Name** für die Datenquelle ein und wählen Sie **Weiter**.
+1. Wählen Sie **Verbinden mit einem gemeinsamen Datenmodell-Ordner**, geben Sie einen **Name** für die Datenquelle ein und wählen Sie **Weiter**. Namensrichtlinien: 
+   - Beginnen Sie mit einem Buchstaben.
+   - Verwenden Sie nur Buchstaben und Zahlen. Leerzeichen und Sonderzeichen sind nicht zulässig.
+   - Verwenden Sie zwischen 3 und 64 Zeichen.
 
 1. Sie können zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Geben Sie die **Container**-Informationen ein und wählen Sie **Weiter**.
    > [!div class="mx-imgBorder"]
-   > ![Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake](media/enter-new-storage-details.png)
-
-1. Wählen Sie im Dialog **Wählen Sie einen gemeinsamen Datenmodell-Ordner** die Datei model.json aus, aus der Daten importiert werden sollen, und wählen Sie **Weiter**.
+   > ![Dialogfeld zum Eingeben neuer Verbindungsdetails für Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Jede model.json-Datei, die mit einer anderen Datenquelle in der Umgebung verbunden ist, wird nicht in der Liste angezeigt.
+   > Sie benötigen eine der folgenden Rollen entweder für den Container oder das oben genannte Speicherkonto, um eine Verbindung zu einem Datenquelle herstellen und einen solchen erstellen zu können:
+   >  - Speicher-Blob-Datenleser
+   >  - Speicher-Blob-Datenbesitzer
+   >  - Storage-Blob-Daten-Mitwirkender
 
-1. Sie erhalten eine Liste der verfügbaren Entitäten in der ausgewählten model.json-Datei. Sie können aus der Liste der verfügbaren Entitäten prüfen und auswählen und **Speichern** wählen. Alle ausgewählten Entitäten werden von der neuen Datenquelle aufgenommen.
+1. Wählen Sie im Dialog **Wählen Sie einen gemeinsamen Datenmodell-Ordner** die Datei manifest.json aus, aus der Daten importiert werden sollen, und wählen Sie **Weiter**.
+   > [!NOTE]
+   > Jede model.json- oder manifest.json-Datei, die mit einer anderen Datenquelle in der Umgebung verbunden ist, wird nicht in der Liste angezeigt.
+
+1. Sie erhalten eine Liste der verfügbaren Entitäten in der ausgewählten model.json- oder manifest.json-Datei. Sie können aus der Liste der verfügbaren Entitäten prüfen und auswählen und **Speichern** wählen. Alle ausgewählten Entitäten werden von der neuen Datenquelle aufgenommen.
    > [!div class="mx-imgBorder"]
    > ![Dialogfeld mit einer Liste von Entitäten aus einer model.json-Datei](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
 9. Nachdem Sie Ihre Auswahl gespeichert haben, wird die Seite **Datenquellen** geöffnet. Sie sollten nun die Ordnerverbindung Common Data Model als Datenquelle sehen.
 
 > [!NOTE]
-> Eine model.json-Datei kann nur mit einer Datenquelle in derselben Umgebung verknüpft werden. Allerdings kann dieselbe model.json-Datei für Datenquellen in mehreren Umgebungen verwendet werden.
+> Eine model.json- oder manifest.json-Datei kann nur mit einer Datenquelle in derselben Umgebung verknüpft werden. Allerdings kann dieselbe model.json- oder manifest.json-Datei für Datenquellen in mehreren Umgebungen verwendet werden.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Bearbeiten eines allgemeinen Datenmodellordners Datenquelle
 
-Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den Ordner Common Data Model enthält. Sie können auch die Datei model.json ändern. Um eine Verbindung zu einem anderen Container als Ihrem Speicherkonto herzustellen oder den Kontonamen zu ändern, [erstellen Sie eine neue Datenquellenverbindung](#connect-to-a-common-data-model-folder).
+Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den Ordner Common Data Model enthält. Sie können auch die model.json- oder manifest.json-Datei ändern. Um eine Verbindung zu einem anderen Container als Ihrem Speicherkonto herzustellen oder den Kontonamen zu ändern, [erstellen Sie eine neue Datenquellenverbindung](#connect-to-a-common-data-model-folder).
 
 1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Datenquellen**.
 
@@ -77,13 +85,24 @@ Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den
 
 5. Optional können Sie von einer Kontoschlüssel-Verbindung zu einer ressourcenbasierten oder abonnementbasierten Verbindung aktualisieren. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
    > [!div class="mx-imgBorder"]
-   > ![Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Wählen Sie optional eine andere model.json-Datei mit einem anderen Satz von Entitäten aus dem Container aus.
+   > ![Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake zu einem vorhandenen Speicherkonto](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Sie benötigen eine der folgenden Rollen entweder für den Container oder das oben genannte Speicherkonto, um eine Verbindung zu einem Datenquelle herstellen und einen solchen erstellen zu können:
+   >  - Speicher-Blob-Datenleser
+   >  - Speicher-Blob-Datenbesitzer
+   >  - Storage-Blob-Daten-Mitwirkender
+
+
+6. Wählen Sie optional eine andere model.json- oder manifest.json-Datei mit einer anderen Gruppe von Entitäten aus dem Container.
 
 7. Optional können Sie zusätzliche Entitäten zum Einlesen auswählen. Sie können auch bereits ausgewählte Entitäten entfernen, wenn es keine Abhängigkeiten gibt.
 
    > [!IMPORTANT]
-   > Wenn Abhängigkeiten von der vorhandenen model.json-Datei und dem Satz von Entitäten vorhanden sind, wird eine Fehlermeldung angezeigt und sie können keine andere Datei model.json auswählen. Entfernen Sie diese Abhängigkeiten, bevor Sie die Datei model.json ändern, oder erstellen Sie eine neue Datenquelle mit der Datei model.json, die Sie verwenden möchten, um das Entfernen der Abhängigkeiten zu vermeiden.
+   > Wenn Abhängigkeiten von der vorhandenen model.json- oder manifest.json-Datei und der Gruppe von Entitäten bestehen, wird eine Fehlermeldung angezeigt und Sie können keine andere model.json- oder manifest.json-Datei auswählen. Entfernen Sie diese Abhängigkeiten, bevor Sie die model.json- oder manifest.json-Datei ändern, oder erstellen Sie eine neue Datenquelle mit der model.json- oder manifest.json-Datei, die Sie verwenden möchten, um das Entfernen der Abhängigkeiten zu vermeiden.
 
 8. Optional können Sie zusätzliche Attribute oder Entitäten auswählen, um die Datenprofilierung zu aktivieren oder bereits ausgewählte zu deaktivieren.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

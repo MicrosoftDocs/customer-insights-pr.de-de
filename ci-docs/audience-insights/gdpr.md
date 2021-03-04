@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405781"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268685"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Daten-abhängige Rechteanforderungen unter DSGVO
 
@@ -75,3 +75,6 @@ Ein Mandanten-Administrator kann diese Schritte befolgen, um Daten zu exportiere
 1. Senden Sie eine E-Mail an D365CI@microsoft.com, wobei Sie die E-Mail-Adresse des Benutzers in der Anfrage angeben. Das Customer Insights-Team sendet eine E-Mail an die registrierte Admin-E-Mail-Adresse des Mandanten und bittet um eine Bestätigung für den Datenexport.
 2. Bestätigen Sie die Meldung, um die Daten für den angeforderten Benutzer zu exportieren.
 3. Erhalten Sie die exportierten Daten über die E-Mail-Adresse des Mandantenverwalters.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

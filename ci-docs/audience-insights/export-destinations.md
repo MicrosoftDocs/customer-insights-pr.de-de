@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643862"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477132"
 ---
-# <a name="export-destinations-preview"></a>Exportziele (Vorschau)
+# <a name="export-destinations-preview-overview"></a>Exportziele (Vorschau) – Übersicht
 
 Die Seite **Exportziele** zeigt Ihnen die Orte, die Sie für den Export von Daten eingerichtet haben. Sie können auch neue Ziele für den Export hinzufügen. Zusätzlich zeigt es die aktuell verfügbaren Exportoptionen an. Verschaffen Sie sich einen schnellen Überblick und eine Beschreibung und finden Sie heraus, was Sie mit den einzelnen Erweiterungsoptionen tun können. Exportieren Sie vereinheitlichte Profile, Messgrößen und Segmente in unterstützte Anwendungen, die für Ihr Unternehmen relevant sind.
 
@@ -27,10 +27,13 @@ Gehen Sie zu **Admin** > **Exportziele**, um die folgenden Erweiterungsoptionen 
 - [Power AutomateConnector](export-power-automate.md)
 - [Power AppsConnector](export-power-apps.md)
 - [Power BIConnector](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
-- [Dynamics 365 for Sales](export-dynamics365-sales.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob Storage](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp&reg; Connector](export-liveramp.md)
 - [Bot für Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Um ein Exportziel zu entfernen, beginnen Sie auf der Hauptseite **Exportziele**.
 2. Klicken Sie im Dropdown-Menü auf **Entfernen**.
 
 3. Bestätigen Sie das Entfernen, indem Sie **Entfernen** auf dem Bestätigungsbildschirm wählen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

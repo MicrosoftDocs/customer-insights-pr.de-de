@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689174"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270279"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Datenerfassung in Echtzeit (Vorschau)
 
@@ -44,7 +44,7 @@ Da Echtzeitvorgänge nach der Datenvereinheitlichung stattfinden, gelten sie nur
 
 ## <a name="real-time-creation-of-activities"></a>Erstellung von Aktivitäten in Echtzeit
 
-Mit der Echtzeit-API können Sie eine neue Aktivität aus Ihrem Quellsystem (einen einzelnen Quelldatensatz) in einem einheitlichen Kundenprofil veröffentlichen. Die neue Aktivität ist innerhalb von Sekunden als vereinheitlichte Aktivität in der Zeitleiste dieses vereinheitlichten Kundenprofils verfügbar. Sie können die Zeitleiste in der Kundenkartenansicht oder einer anderen von Ihnen konfigurierten Zeitleistenintegration sehen.
+Mit der Echtzeit-API können Sie eine neue Aktivität aus Ihrem Quellsystem (einen einzelnen Quelldatensatz) in einem einheitlichen Kundenprofil veröffentlichen. Die neue Aktivität wird innerhalb von Sekunden als vereinheitlichte Aktivität in der Zeitleiste dieses vereinheitlichten Kundenprofils verfügbar sein. Sie können die Zeitleiste in der Kundenkartenansicht oder einer anderen von Ihnen konfigurierten Zeitleistenintegration sehen.
 
 > [!NOTE]
 >
@@ -83,6 +83,7 @@ Details zu dieser API, einschließlich Parameter und Antworten, finden Sie im Ab
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Verstehen Sie Ihre Echtzeit-Nutzung mit Telemetrie
 
-Erhalten Sie einen Überblick über das Volumen der Anfragen an die Echtzeit-API und Informationen über mögliche Probleme des Systems. Sie können [auf die Echtzeit-Telemetrie zugreifen](system.md#api-usage-tab), indem Sie zu **Admin** > **System** > **API-Nutzung** gehen. In der Tabelle **Operationen** enthalten die Zeilen für API-Operationen, die die Echtzeit-Methoden verwenden, eine Schaltfläche zum Anzeigen der Echtzeit-API-Nutzung. Die Schaltfläche wird mit einem Fernglas-Symbol visualisiert. Wählen Sie die Schaltfläche, um einen Seitenbereich mit Nutzungsdetails für die Echtzeit-API-Nutzung in der aktuellen Umgebung zu öffnen.
+Erhalten Sie einen Überblick über das Volumen der Anfragen an die Echtzeit-API und Informationen über mögliche Probleme des Systems. Sie können [auf die Echtzeit-Telemetrie zugreifen](system.md#api-usage-tab). 
 
-Verwenden Sie den Selektor **Gruppieren nach**, um auszuwählen, wie Sie Ihre Echtzeit-Interaktionen auf einer Zeitachse von den letzten 24 Stunden bis zu den letzten 30 Tagen am besten darstellen. Sie können die Daten nach API-Methode, qualifiziertem Namen der Entität (aufgenommene Entität), erstellt von (Quelle des Ereignisses), Ergebnis (Erfolg oder Misserfolg) oder Fehlercodes gruppieren. Die Daten stehen als Historiendiagramm und als Tabelle zur Verfügung.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643952"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269697"
 ---
-# <a name="overview-about-data-sources"></a>Übersicht über Datenquellen
+# <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -46,10 +46,10 @@ Sie sehen den Namen jeder aufgenommenen Datenquelle, ihren Status und das letzte
 |---------|---------|
 |Erfolgreich   |Die Datenquelle wurde erfolgreich aufgenommen, wenn in der Spalte **Aufgefrischt** ein Zeitpunkt genannt wird.
 |Nicht gestartet   |Die Datenquelle hat noch keine Datenerfassung oder ist noch im Entwurfsmodus.         |
-|Wird aktualisiert    |Die Datenaufnahme ist im Gange. Sie können diesen Vorgang abbrechen, indem Sie **Aktualisierung beenden** in der Spalte **Aktionen** wählen. Wenn Sie die Aktualisierung einer Datenquelle stoppen, wird diese in ihren letzten Aktualisierungszustand zurückgesetzt.       |
+|Wird aktualisiert    |Die Datenaufnahme ist im Gange. Sie können diesen Vorgang abbrechen, indem Sie **Aktualisierung beenden** in der Spalte **Aktionen** wählen. Wenn Sie die Aktualisierung einer Datenquelle stoppen, wird der letzte Aktualisierungsstatus wiederhergestellt.       |
 |Fehlerhaft     |Bei der Dateneingabe sind Fehler aufgetreten.         |
 
-Wählen Sie **Auffrischungsstatus**, um weitere Details zum Auffrischungsstatus zu prüfen, einschließlich Fehlerdetails und nachgelagerte Prozessaktualisierungen.
+Wählen Sie den Wert in der **Status**-Spalte einer beliebigen Datenquelle, um weitere Details zu überprüfen. Im **Fortschrittsdetails**-Bereich erweitern Sie **Datenquellen**. Wählen Sie **Details anzeigen**, um weitere Informationen zum Auffrischungsstatus zu prüfen, einschließlich Fehlerdetails und nachgelagerte Prozessaktualisierungen.
 
 Das Laden von Daten kann einige Zeit dauern. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite **Entitäten** überprüft werden. Weitere Informationen finden Sie unter [Entitäten](entities.md).
 
@@ -76,3 +76,6 @@ Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
 2. Wählen Sie die vertikalen Auslassungspunkte neben der Datenquelle aus, die Sie entfernen möchten, und wählen Sie **Löschen** aus dem Dropdownmenü aus.
 
 3. Bestätigen Sie den Löschvorgang.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

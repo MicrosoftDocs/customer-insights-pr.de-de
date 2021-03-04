@@ -1,20 +1,20 @@
 ---
 title: Erstellen und Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644132"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270111"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
 
@@ -46,9 +46,9 @@ Beim Erstellen einer neuen Umgebung, gibt es zwei Möglichkeiten. Sie können en
 
 So erstellen Sie eine Umgebung:
 
-1. Wählen Sie das Symbol **Einstellungen** in der Kopfzeile der App aus.
+1. Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus.
 
-1. Wählen Sie **Neue Umgebung** aus.
+1. Wählen Sie **Neu**.
 
    > [!div class="mx-imgBorder"]
    > ![Umgebungseinstellungen](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ So erstellen Sie eine Umgebung:
 
    - Für die Option Azure Data Lake Storage Gen2 können Sie zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Der **Container**-Name kann nicht geändert werden und wird „customerinsights“ lauten.
    
-   - Wenn Sie [Vorhersagen](predictions.md) verwenden wollen, geben Sie die Common Data Service Instanz-URL im Feld **Serveradresse** unter **Vorhersagen verwenden** ein.
+   - Wenn Sie [Vorhersagen](predictions.md) verwenden möchten oder die Datenfreigabe mit Anwendungen und Lösungen basierend auf Microsoft Dataverse konfigurieren, stellen Sie die Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereit. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
+
+     > [!NOTE]
+     > - Datenaustausch mit verwaltetem Microsoft Dataverse Data Lake wird derzeit nicht unterstützt, wenn Sie alle Daten in Ihrem eigenen Azure Data Lake Storage speichern.
+     > - [Vorhersage fehlenden Werte in einer Entität](predictions.md) wird derzeit nicht unterstützt, wenn Sie die Datenfreigabe mit verwaltetem Microsoft Dataverse Data Lake aktivieren.
+
+     > [!div class="mx-imgBorder"]
+     > ![Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Wenn Sie Prozesse ausführen, wie z.B. die Datenerfassung oder die Segmenterstellung, werden entsprechende Ordner in dem oben angegebenen Speicherkonto erstellt. Datendateien und model.json-Dateien werden basierend auf dem von Ihnen ausgeführten Prozess erstellt und den jeweiligen Unterordnern hinzugefügt.
 
@@ -86,7 +93,7 @@ So erstellen Sie eine Umgebung:
 Folgende Konfigurationseinstellungen werden kopiert:
 
 - Konfigurationen von Funktionen
-- Inegistrierte/importierte Datenquellen
+- Aufgenommene/importierte Datenquellen
 - Datenvereinheitlichung (Map, Match, Merge) Konfiguration
 - Segmente
 - Kennzahlen
@@ -120,11 +127,11 @@ Wenn die Datenvereinheitlichung abgeschlossen ist, gehen Sie zu **Maßnahmen** u
 
 Sie können einige Details vorhandener Umgebungen bearbeiten.
 
-1. Wechseln Sie zu **Admin** > **System** > **Info**.
+1.  Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus.
 
-2. Wählen Sie **Bearbeiten**.
+2.  Wählen Sie das Symbol **Bearbeiten** aus.
 
-3. Sie können den **Anzeigename** der Umgebung aktualisieren, aber Sie können die **Region** oder **Typ** nicht ändern.
+3. Im Feld **Umgebung bearbeiten** können Sie den **Anzeigename** der Umgebung aktualisieren, Sie können jedoch nicht die **Region** oder den **Art** ändern.
 
 4. Wenn eine Umgebung zum Speichern von Daten in Azure Data Lake Storage Gen2 konfiguriert ist, können Sie den **Kontoschlüssel** aktualisieren. Sie können jedoch nicht den Namen **Kontoname** oder **Container** ändern.
 
@@ -132,19 +139,27 @@ Sie können einige Details vorhandener Umgebungen bearbeiten.
 
 ## <a name="reset-an-existing-environment"></a>Zurücksetzen einer bestehenden Umgebung
 
-Sie können eine Umgebung auf einen leeren Zustand zurücksetzen, wenn Sie alle Konfigurationen löschen und die aufgenommenen Daten entfernen möchten.
+Als Administrator können Sie eine Umgebung auf einen leeren Zustand zurücksetzen, wenn Sie alle Konfigurationen löschen und die aufgenommenen Daten entfernen möchten.
 
-1.  Wechseln Sie zu **Admin** > **System** > **Info**.
+1.  Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus. 
 
-2.  Wählen Sie **Zurücksetzen**. 
+2.  Wählen Sie die Umgebung aus, die Sie zurücksetzen möchten, und wählen Sie die Auslassungspunkte **...** aus. 
 
-3.  Um das Löschen zu bestätigen, geben Sie den Namen der Umgebung ein und wählen Sie **Zurücksetzen**.
+3. Wählen Sie die Option **Zurücksetzen** aus. 
+
+4.  Um das Löschen zu bestätigen, geben Sie den Namen der Umgebung ein und wählen Sie **Zurücksetzen**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Löschen Sie eine vorhandene Umgebung (nur für Administratoren verfügbar).
+
+Als Administrator können Sie eine von Ihnen verwaltete Umgebung löschen.
+
+1.  Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus.
+
+2.  Wählen Sie die Umgebung aus, die Sie zurücksetzen möchten, und wählen Sie die Auslassungspunkte **...** aus. 
+
+3. Wählen Sie die Option **Löschen** aus. 
+
+4.  Um das Löschen zu bestätigen, geben Sie den Namen der Umgebung ein und wählen Sie **Löschen**.
 
 
-## <a name="delete-an-existing-environment"></a>Löschen Sie eine vorhandene Umgebung
-
-1. Wechseln Sie zu **Admin** > **System** > **Info**.
-
-1. Klicken Sie auf **Löschen**.
-
-1. Um das Löschen zu bestätigen, geben Sie den Namen der Umgebung ein und wählen Sie **Löschen**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

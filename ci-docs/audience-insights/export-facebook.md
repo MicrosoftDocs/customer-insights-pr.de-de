@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643682"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269973"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Konnektor für Facebook Anzeigenmanager (Vorschau)
 
@@ -62,7 +62,16 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in den Facebook Anzeigenman
 
 Sie könenn [Daten nach Bedarf exportieren](export-destinations.md). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md#schedule-tab) durchgeführt.
 
+## <a name="known-limitations"></a>Bekannte Einschränkungen
+
+- Bis zu 10 Millionen Kundenprofile pro Export zum Facebook-Anzeigenmanager 
+- Der Export zum Facebook-Anzeigenmanager ist auf Segmente beschränkt
+- Das Exportieren von Segmenten mit insgesamt 10 Million Profilen kann bis zu 90 Minuten dauern.
+
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 
 Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an Facebook Ads Manager zu übertragen, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie persönlicher Daten. Microsoft wird solche Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass die Facebook-Anzeigen alle Ihre Datenschutz- oder Sicherheitsverpflichtungen erfüllen. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
 Ihr Dynamics 365 Customer Insights-Administrator kann dieses Exportziel jederzeit entfernen, um die Verwendung dieser Funktionalität einzustellen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

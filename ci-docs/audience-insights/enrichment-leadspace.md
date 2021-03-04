@@ -5,16 +5,16 @@ ms.date: 11/24/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668722"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269421"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Anreicherung von Firmenprofilen mit Leadspace (Vorschau)
 
@@ -38,7 +38,11 @@ Um Leadspace zu konfigurieren, müssen die folgenden Voraussetzungen erfüllt se
 
 1. Wählen Sie **Starten** und geben Sie einen aktiven **Leadspace-Token** (unbefristeter Schlüssel) ein. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren. Bestätigen Sie beide Eingaben, indem Sie **Verbinden mit Leadspace** wählen.
 
-1. Wählen Sie **Daten zuordnen** und legen Sie fest, welche Felder aus Ihren Unified Profiles verwendet werden sollen, um nach passenden Firmendaten von Leadspace zu suchen. Das Feld **Firmenname** ist erforderlich. Für eine höhere Abgleichsgenauigkeit können bis zu zwei weitere Felder, **Firmen-Website** und **Firmenstandort**, hinzugefügt werden.
+1. Wählen Sie **Daten zuordnen** und dann den Datensatz, den Sie mit Unternehmensdaten von Leadspace anreichern möchten. Sie können die *Kundenentität* auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
+
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Wählen Sie zwischen Kundenprofil und Segmentanreicherung.":::
+
+1. Wählen Sie **Weiter** und legen Sie fest, welche Felder aus Ihren Unified Profiles verwendet werden sollen, um nach passenden Firmendaten von Leadspace zu suchen. Das Feld **Firmenname** ist erforderlich. Für eine höhere Abgleichsgenauigkeit können bis zu zwei weitere Felder, **Firmen-Website** und **Firmenstandort**, hinzugefügt werden.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace-Feld-Zuordnungsbereich.":::
    
@@ -62,3 +66,6 @@ Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](seg
 
 Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten an Leadspace aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird diese Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass Leadspace alle Datenschutz- oder Sicherheitsverpflichtungen einhält, die Sie haben können. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
 Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643592"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269789"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Anleitung zur Vorhersage der Transaktionsabwanderung (Vorschau)
 
@@ -49,7 +49,7 @@ Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [
    [!div class="mx-imgBorder"]
    ![DoB in Datum umwandeln](media/ecommerce-dob-date.PNG "Geburtsdatum in Datum umwandeln")
 
-1. Benennen Sie im Feld 'Name' im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommerceContacts** um
+1. Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommerceContacts** um
 
 1. Speichern Sie die Datenquelle.
 
@@ -66,7 +66,7 @@ Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [
    - **Gekauft am**: Datum/Uhrzeit
    - **GesamtPreis**: Währung
    
-1. Benennen Sie im Feld „Name“ im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommercePurchases** um.
+1. Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommercePurchases** um.
 
 1. Speichern Sie die Datenquelle.
 
@@ -84,7 +84,7 @@ Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [
    - **RewardsPoints**: Ganze Zahl
    - **CreatedOn**: Datum/Uhrzeit
 
-1. Benennen Sie im Feld „Name“ im rechten Fensterbereich Ihre Datenquelle von **Query** in **loyCustomers** um.
+1. Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Query** in **loyCustomers** um.
 
 1. Speichern Sie die Datenquelle.
 
@@ -204,3 +204,6 @@ Sie können ein neues Segment basierend auf der vom Modell erstellten Entität e
 Sie haben jetzt ein Segment, das dynamisch aktualisiert wird und Kunden mit hohem Abwanderungsrisiko für dieses Abo-Geschäft identifiziert.
 
 Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

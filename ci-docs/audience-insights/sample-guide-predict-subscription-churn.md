@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653979"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269835"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Anleitung zur Vorhersage von Abonnement-Abwanderung (Vorschau)
 
@@ -46,10 +46,9 @@ Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [
    - **DateOfBirth**: Datum
    - **CreatedOn**: Datum/Uhrzeit/Zone
 
-   [!div class="mx-imgBorder"]
-   ![DoB in Datum umwandeln](media/ecommerce-dob-date.PNG "Geburtsdatum in Datum umwandeln")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Geburtsdatum in Datum umwandeln":::
 
-1. Benennen Sie im Feld 'Name' im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommerceContacts** um
+1. Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommerceContacts** um
 
 1. Speichern Sie die Datenquelle.
 
@@ -67,7 +66,7 @@ Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [
    - **RewardsPoints**: Ganze Zahl
    - **CreatedOn**: Datum/Uhrzeit
 
-1. Benennen Sie im Feld „Name“ im rechten Fensterbereich Ihre Datenquelle von **Query** in **loyCustomers** um.
+1. Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Query** in **loyCustomers** um.
 
 1. Speichern Sie die Datenquelle.
 
@@ -90,7 +89,7 @@ Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [
    - **Is_auto_renew**: Wahr/Falsch
    - **RecurringFrequencyInMonths**: Ganze Zahl
 
-1. Benennen Sie im Feld „Name“ im rechten Fensterbereich Ihre Datenquelle von **Query** in **SubscriptionHistory** um.
+1. Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Query** in **SubscriptionHistory** um.
 
 1. Speichern Sie die Datenquelle.
 
@@ -230,3 +229,6 @@ Sie können ein neues Segment basierend auf der vom Modell erstellten Entität e
 Sie haben jetzt ein Segment, das dynamisch aktualisiert wird und Kunden mit hohem Abwanderungsrisiko für dieses Abo-Geschäft identifiziert.
 
 Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

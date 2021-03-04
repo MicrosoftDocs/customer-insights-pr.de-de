@@ -1,20 +1,20 @@
 ---
 title: Anreicherung von mit der Drittanbieter-Anreicherung HERE Technologies
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668677"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269513"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Anreicherung von Kundenprofilen mit HERE Technologies (Vorschau)
 
@@ -43,7 +43,11 @@ Um HERE Technologies Enrichments zu konfigurieren, müssen die folgenden Vorauss
 
 1. Bestätigen Sie beide Eingaben, indem Sie **Verbinden mit HERE** wählen.
 
-1. Wählen Sie **Daten hinzufügen** und wählen Sie, ob Sie Felder der primären und/oder sekundären Adresse zuordnen wollen. Sie können eine Feldzuordnung für beide Adressen angeben (z. B. eine Privat- und eine Geschäftsadresse) und die Profile für beide Adressen getrennt anreichern. Klicken Sie auf **Weiter**.
+1.  Wählen Sie **Daten hinzufügen** und dann den **Kundendatensatz**, den Sie mit Standortdaten von HERE Technologies anreichern möchten. Sie können die **Kundenentität** auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Screenshot bei Auswahl des Kundendatensatzes.":::
+
+1. Wählen Sie, ob Sie Felder der primären und/oder sekundären Adresse zuordnen wollen. Sie können eine Feldzuordnung für beide Adressen angeben (z. B. eine Privat- und eine Geschäftsadresse) und die Profile für beide Adressen getrennt anreichern. Klicken Sie auf **Weiter**.
 
 1. Definieren Sie, welche Felder aus Ihren einheitlichen Profilen verwendet werden sollen, um nach übereinstimmenden Standortdaten von HERE Technologies zu suchen. Die Felder **Straße 1** und **Postleitzahl** sind für die ausgewählte primäre und/oder sekundäre Adresse erforderlich. Für eine höhere Abgleichsgenauigkeit können weitere Felder hinzugefügt werden.
 
@@ -68,3 +72,6 @@ Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](seg
 
 Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten an HERE Technologies aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird solche Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass HERE Technologies alle Datenschutz- oder Sicherheitsverpflichtungen einhält, die Sie haben können. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
 Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

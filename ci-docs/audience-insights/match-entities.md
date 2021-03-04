@@ -4,17 +4,17 @@ description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu er
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405791"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267477"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
@@ -22,7 +22,7 @@ Nach Abschluss der Zurordnungsphase sind Sie bereit, Ihre Entitäten abzugleiche
 
 ## <a name="specify-the-match-order"></a>Geben Sie die Reihenfolge der Übereinstimmung an
 
-Gehen Sie zu **Vereinigen** > **Abgleichen** und wählen Sie **Reihenfolge festlegen**, um die Matchphase zu beginnen.
+Gehen Sie zu **Daten** > **Zusammenführen** > **Abgleichen** und wählen Sie **Reihenfolge einrichten**, um die Abgleichungsphase zu starten.
 
 Jede Übereinstimmung vereinigt zwei oder mehr Entitäten zu einer einzigen Entität, wobei jeder eindeutige Kundendatensatz erhalten bleibt. Im folgenden Beispiel haben wir drei Entitäten ausgewählt: **KontaktCSV: TestData** als **Primary** Entität, **WebAccountCSV: TestData** als **Entität 2** und **CallRecordSmall: TestData** als **Entität 3**. Das Diagramm über den Auswahlen veranschaulicht, wie der Übereinstimmungsauftrag ausgeführt wird.
 
@@ -136,7 +136,7 @@ Nachdem ein deduplizierter Datensatz identifiziert wurde, wird dieser Datensatz 
 
 1. Das Ausführen des Abgleichsprozesses gruppiert nun die Datensätze basierend auf den in den Deduplizierungsregeln definierten Bedingungen. Nach der Gruppierung der Datensätze wird die Richtlinie für die Zusammenführung angewendet, um den Gewinner-Datensatz zu identifizieren.
 
-1. Dieser Gewinner-Datensatz wird dann an den entitätsübergreifenden Abgleich weitergegeben.
+1. Dieser Gewinnerdatensatz wird dann zusammen mit den Nicht-Gewinnerdatensätzen (z. B. alternativen IDs) an den entitätsübergreifenden Abgleich weitergeleitet, um die Übereinstimmungsqualität zu verbessern.
 
 1. Alle benutzerdefinierten Übereinstimmungsregeln, die für „Immer übereinstimmen“ und „Nie übereinstimmen“ definiert sind, setzen die Deduplizierungsregeln außer Kraft. Wenn eine Deduplizierungsregel übereinstimmende Datensätze identifiziert und eine benutzerdefinierte Abgleichsregel so eingestellt ist, dass diese Datensätze nie abgeglichen werden, dann werden diese beiden Datensätze nicht abgeglichen.
 
@@ -157,6 +157,17 @@ Der erste Abgleichvorgang führt zur Erstellung einer einheitlichen Master-Entit
 
 > [!TIP]
 > Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
+
+## <a name="deduplication-output-as-an-entity"></a>Deduplizierungsausgabe als Entität
+Zusätzlich zu der einheitlichen Master-Entität, die im Rahmen des entitätsübergreifenden Abgleichs erstellt wurde, generiert der Deduplizierungsprozess für jede Entität aus der Übereinstimmungsreihenfolge eine neue Entität, um die deduplizierten Datensätze zu identifizieren. Diese Entitäten können zusammen mit **ConflationMatchPairs: CustomerInsights** gefunden werden im **System**-Abschnitt auf der **Entitäten**-Seite mit dem Namen **Deduplication_Datasource_Entity** gefunden werden.
+
+Eine Deduplizierungsausgabeentität enthält die folgenden Informationen:
+- IDs/Schlüssel
+  - Primärschlüsselfeld und sein alternatives ID-Feld. Das Feld „Alternative IDs“ besteht aus allen alternativen IDs, die für einen Datensatz identifiziert wurden.
+  - Das Feld „Deduplication_GroupId“ zeigt die Gruppe oder den Cluster an, die bzw. der innerhalb einer Entität identifiziert wurde, die alle ähnlichen Datensätze basierend auf den angegebenen Deduplizierungsfeldern gruppiert. Dies wird für Systemverarbeitungszwecke verwendet. Wenn keine manuellen Deduplizierungsregeln angegeben sind und systemdefinierte Deduplizierungsregeln gelten, finden Sie dieses Feld möglicherweise nicht in der Deduplizierungsausgabeentität.
+  - Deduplication_WinnerId: Dieses Feld enthält die Gewinner-ID der identifizierten Gruppen oder Cluster. Wenn „Deduplication_WinnerId“ mit dem Primärschlüsselwert für einen Datensatz identisch ist, bedeutet dies, dass der Datensatz der Gewinnerdatensatz ist.
+- Felder zum Definieren der Deduplizierungsregeln.
+- Regel- und Bewertungsfelder geben an, welche der Deduplizierungsregeln angewendet und welche Bewertung vom Übereinstimmungsalgorithmus zurückgegeben wurde.
 
 ## <a name="review-and-validate-your-matches"></a>Überprüfen und validieren Sie Ihre Übereinstimmungen
 
@@ -200,6 +211,11 @@ Erhöhen Sie die Qualität, indem Sie einige Ihrer Abgleichsparameter neu konfig
   > [!div class="mx-imgBorder"]
   > ![Regel duplizieren](media/configure-data-duplicate-rule.png "Eine Regel duplizieren")
 
+- **Regel deaktivieren**, um eine Übereinstimmungsregel beizubehalten und sie gleichzeitig vom Übereinstimmungsprozess auszuschließen.
+
+  > [!div class="mx-imgBorder"]
+  > ![Eine Regel deaktivieren](media/configure-data-deactivate-rule.png "Eine Regel deaktivieren")
+
 - **Bearbeiten Sie Ihre Regeln** durch Auswahl des Symbols **Bearbeiten**. Sie können die folgenden Änderungen vornehmen:
 
   - Attribute für eine Bedingung ändern: Wählen Sie neue Attribute innerhalb der spezifischen Bedingungszeile aus.
@@ -229,6 +245,8 @@ Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie üb
     - Entity2Key: 34567
 
    Dieselbe Vorlagendatei kann benutzerdefinierte Match-Datensätze von mehreren Entitäten angeben.
+   
+   Wenn Sie eine benutzerdefinierte Übereinstimmung für die Deduplizierung einer Entität angeben möchten, geben Sie dieselbe Entität wie Entität1 und Entität2 an und legen Sie die verschiedenen Primärschlüsselwerte fest.
 
 5. Nachdem Sie alle Überschreibungen hinzugefügt haben, die Sie anwenden möchten, speichern Sie die Vorlagendatei.
 
@@ -250,3 +268,6 @@ Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie üb
 ## <a name="next-step"></a>Nächster Schritt
 
 Nachdem Sie den Abgleichsprozess für mindestens ein Abgleichspaar abgeschlossen haben, können Sie mögliche Widersprüche in Ihren Daten auflösen, indem Sie das Thema [**Zusammenführen**](merge-entities.md) durchlaufen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

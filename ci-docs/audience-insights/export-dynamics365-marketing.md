@@ -1,20 +1,20 @@
 ---
 title: Customer Insights-Daten nach Dynamics 365 Marketing exportieren
 description: Erfahren Sie, wie Sie die Verbindung zu Dynamics 365 Marketing konfigurieren.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643772"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269053"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Connector für Dynamics 365 Marketing (Vorschau)
 
@@ -24,7 +24,10 @@ Verwenden Sie [Segmente](segments.md), um mit Dynamics 365 Marketing Kampagnen z
 
 ## <a name="prerequisite"></a>Voraussetzung
 
-Kontaktdatensätze [aus Dynamics 365 Marketing übernommen mit Common Data Service](connect-power-query.md).
+- Kontaktdatensätze müssen in Dynamics 365 Marketing vorhanden sein, bevor Sie ein Segment von Customer Insights nach Marketing exportieren können. Lesen Sie mehr darüber, wie Sie Kontakte in [Dynamics 365 Marketing mit Common Data Services](connect-power-query.md) erfassen können.
+
+  > [!NOTE]
+  > Durch das Exportieren von Segmenten aus Zielgruppenerkenntnissen nach Marketing werden keine neuen Kontaktdatensätze in den Marketinginstanzen erstellt. Die Kontaktdatensätze von Marketing müssen in Zielgruppenerkenntnissen aufgenommen und als Datenquelle verwendet werden. Sie müssen auch in die einheitliche Kundenentität aufgenommen werden, um Kunden-IDs Kontakt-IDs zuzuordnen, bevor Segmente exportiert werden können.
 
 ## <a name="configure-the-connector-for-marketing"></a>Konfigurieren Sie den Connector für Marketing
 
@@ -49,3 +52,6 @@ Kontaktdatensätze [aus Dynamics 365 Marketing übernommen mit Common Data Servi
 ## <a name="export-the-data"></a>Exportieren der Daten
 
 Sie könenn [Daten nach Bedarf exportieren](export-destinations.md). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md#schedule-tab) durchgeführt.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
