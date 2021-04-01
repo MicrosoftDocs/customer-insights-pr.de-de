@@ -2,19 +2,19 @@
 title: Anreicherung mit dem benutzerdefinierten SFTP-Import
 description: Allgemeine Informationen über das SFTP Custom Import Enrichment.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269605"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595854"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Anreichern von Kundenprofilen mit benutzerdefinierten Daten (Vorschau)
 
@@ -50,7 +50,7 @@ Um den benutzerdefinierten SFTP-Import zu konfigurieren, müssen die folgenden V
 
 ## <a name="defining-field-mappings"></a>Definieren von Feldzuordnungen 
 
-Das Verzeichnis, das die zu importierende Datei auf dem SFTP-Server enthält, muss auch eine *model.json*-Datei enthalten. Diese Datei definiert das Schema, das zum Importieren der Daten verwendet werden soll. Das Schema muss [das Common Data Model](https://docs.microsoft.com/common-data-model/) verwenden, um die Zuordnung der Felder zu spezifizieren. Ein einfaches Beispiel für eine model.json-Datei sieht wie folgt aus:
+Das Verzeichnis, das die zu importierende Datei auf dem SFTP-Server enthält, muss auch eine *model.json*-Datei enthalten. Diese Datei definiert das Schema, das zum Importieren der Daten verwendet werden soll. Das Schema muss [das Common Data Model](/common-data-model/) verwenden, um die Zuordnung der Felder zu spezifizieren. Ein einfaches Beispiel für eine model.json-Datei sieht wie folgt aus:
 
 ```
 {

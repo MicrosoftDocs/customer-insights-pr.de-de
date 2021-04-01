@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270203"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598338"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Verwenden Sie Modelle, die auf Azure Machine Learning Studio (Classic) basieren
 
@@ -37,7 +37,7 @@ In einem ersten Schritt müssen wir einen Arbeitsbereich für das Machine Learni
 
 1. Suche nach **Machine Learning Studio Arbeitsbereich** und **Erstellen** wählen.
 
-1. Geben Sie die erforderlichen Details ein für [Arbeitsbereich erstellen](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Wählen Sie die **Preisstufe des Webservice-Plans** basierend auf der Datenmenge, die Sie importieren wollen. Für eine optimale Leistung wählen Sie den **Standort**, der Ihnen geografisch am nächsten liegt.
+1. Geben Sie die erforderlichen Details ein für [Arbeitsbereich erstellen](/azure/machine-learning/studio/create-workspace). Wählen Sie die **Preisstufe des Webservice-Plans** basierend auf der Datenmenge, die Sie importieren wollen. Für eine optimale Leistung wählen Sie den **Standort**, der Ihnen geografisch am nächsten liegt.
 
 1. Nach dem Erstellen der Ressource wird das Dashboard Machine Learning Studio Arbeitsbereich angezeigt. Wählen Sie **Machine Learning Studio starten**.
 
@@ -65,7 +65,7 @@ Sie können jetzt ein neues Experiment erstellen oder eine vorhandene Experiment
 
    ![Richten Sie einen Vorhersage-Webdienst ein](media/predictive-webservice-control.png)
 
-1. Sobald das Vorhersage-Webdienst-Experiment erfolgreich ist, können Sie es für die automatische Planung bereitstellen. Wählen Sie aus, damit der Webdienst mit Customer Insights funktioniert **Stellen Sie den Webdienst bereit** > **Vorschau Webdienst [Neu] bereitstellen**. [Weitere Informationen zum Bereitstellen eines Webdienstes](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Sobald das Vorhersage-Webdienst-Experiment erfolgreich ist, können Sie es für die automatische Planung bereitstellen. Wählen Sie aus, damit der Webdienst mit Customer Insights funktioniert **Stellen Sie den Webdienst bereit** > **Vorschau Webdienst [Neu] bereitstellen**. [Weitere Informationen zum Bereitstellen eines Webdienstes](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Vorhersage-Webdienst bereitstellen](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Das folgende Bild zeigt die Modellschulungs- und Evaluierungspipeline von Azure 
 
 ![Abwanderungsmodell in Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-Wir wenden auch eine Technik namens **Wichtigkeit der Permutationsfunktion** an, ein wichtiger Aspekt der Modelloptimierung. Eingebaute Modelle haben wenig bis gar keinen Einblick in die Auswirkungen bestimmter Funktionen auf die endgültige Vorhersage. Der Rechner für die Wichtigkeit der Funktionen verwendet einen benutzerdefinierten Algorithmus, um den Einfluss der einzelnen Funktionen auf das Ergebnis für ein bestimmtes Modell zu berechnen. Die Merkmalsbedeutung wird zwischen +1 und -1 normalisiert. Ein negativer Einfluss bedeutet, dass das entsprechende Merkmal einen kontra-intuitiven Einfluss auf das Ergebnis hat und aus dem Modell entfernt werden sollte. Ein positiver Einfluss zeigt an, dass die Funktion einen großen Beitrag zur Vorhersage leistet. Diese Werte sind keine Korrelationskoeffizienten, da es sich um unterschiedliche Metriken handelt. Weitere Informationen finden Sie unter [Permutation Funktion Wichtigkeit](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Wir wenden auch eine Technik namens **Wichtigkeit der Permutationsfunktion** an, ein wichtiger Aspekt der Modelloptimierung. Eingebaute Modelle haben wenig bis gar keinen Einblick in die Auswirkungen bestimmter Funktionen auf die endgültige Vorhersage. Der Rechner für die Wichtigkeit der Funktionen verwendet einen benutzerdefinierten Algorithmus, um den Einfluss der einzelnen Funktionen auf das Ergebnis für ein bestimmtes Modell zu berechnen. Die Merkmalsbedeutung wird zwischen +1 und -1 normalisiert. Ein negativer Einfluss bedeutet, dass das entsprechende Merkmal einen kontra-intuitiven Einfluss auf das Ergebnis hat und aus dem Modell entfernt werden sollte. Ein positiver Einfluss zeigt an, dass die Funktion einen großen Beitrag zur Vorhersage leistet. Diese Werte sind keine Korrelationskoeffizienten, da es sich um unterschiedliche Metriken handelt. Weitere Informationen finden Sie unter [Permutation Funktion Wichtigkeit](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Das gesamte [Kundenabwanderungs-Experiment ist im Azure AI Katalog](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp) verfügbar.
 
@@ -168,7 +168,7 @@ Auf das gesamte [Produktempfehlungs-Experiment kann in der Azure AI Gallery zuge
 
 ## <a name="integrate-custom-models"></a>Integrieren Sie benutzerdefinierte Modelle
 
-Um diese Vorhersagen in Customer Insights zu verwenden, müssen Sie die Vorhersagen zusammen mit den Kunden-IDs **exportieren**. [Exportieren Sie sie an denselben Azure Blob-Speicherort](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), an den Sie die Quelldaten exportieren. Der Predictive Web Service kann so geplant werden, dass er regelmäßig ausgeführt wird und die Ergebnisse aktualisiert werden.
+Um diese Vorhersagen in Customer Insights zu verwenden, müssen Sie die Vorhersagen zusammen mit den Kunden-IDs **exportieren**. [Exportieren Sie sie an denselben Azure Blob-Speicherort](/azure/storage/common/storage-import-export-data-from-blobs), an den Sie die Quelldaten exportieren. Der Predictive Web Service kann so geplant werden, dass er regelmäßig ausgeführt wird und die Ergebnisse aktualisiert werden.
 
 Die vom benutzerdefinierten Modell generierten Daten können verwendet werden, um Ihre Kundendaten weiter anzureichern. Weitere Informationen finden Sie unter [Benutzerdefinierte Machine Learning Modelle](custom-models.md).
 

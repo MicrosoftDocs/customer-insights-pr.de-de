@@ -1,133 +1,137 @@
 ---
 title: Entitäten für die Datenvereinheitlichung abgleichen
 description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267477"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595563"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
-Nach Abschluss der Zurordnungsphase sind Sie bereit, Ihre Entitäten abzugleichen. Die Abgleichsphase gibt an, wie Ihre Datensätze zu einem einheitlichen Kundenprofil-Datensatz kombiniert werden können. Die Abgleichsphase erfordert mindestens [zwei zugeordnete Entitäten](map-entities.md).
+Die Abgleichsphase gibt an, wie Ihre Datensätze zu einem einheitlichen Kundenprofil-Datensatz kombiniert werden können. Nach Abschluss des [Kartenschritts](map-entities.md) während des Datenvereinigungsprozesses sind Sie bereit, Ihre Entitäten abzugleichen. Die Abgleichsphase erfordert mindestens zwei zugeordnete Entitäten.
+
+Die Match-Seite besteht aus drei Abschnitten: 
+- Wichtige Metriken, die die Anzahl der übereinstimmenden Datensätze zusammenfassen
+- Übereinstimmungsreihenfolge und Regeln für den entitätsübergreifenden Abgleich
+- Regeln für die Deduplizierung von Übereinstimmungsentitäten
 
 ## <a name="specify-the-match-order"></a>Geben Sie die Reihenfolge der Übereinstimmung an
 
 Gehen Sie zu **Daten** > **Zusammenführen** > **Abgleichen** und wählen Sie **Reihenfolge einrichten**, um die Abgleichungsphase zu starten.
 
-Jede Übereinstimmung vereinigt zwei oder mehr Entitäten zu einer einzigen Entität, wobei jeder eindeutige Kundendatensatz erhalten bleibt. Im folgenden Beispiel haben wir drei Entitäten ausgewählt: **KontaktCSV: TestData** als **Primary** Entität, **WebAccountCSV: TestData** als **Entität 2** und **CallRecordSmall: TestData** als **Entität 3**. Das Diagramm über den Auswahlen veranschaulicht, wie der Übereinstimmungsauftrag ausgeführt wird.
+Jede Übereinstimmung vereint zwei oder mehr Entitäten zu einer einzigen konsolidierten Entität. Gleichzeitig werden die eindeutigen Kundendatensätze geführt. Zum Beispiel haben wir zwei Entitäten ausgewählt: **eCommerce:eCommerceContacts** als primäre Einheit und **LoyaltyScheme:loyCustomers** als zweite Einheit. Die Reihenfolge der Entitäten gibt an, in welcher Reihenfolge das System versucht, die Datensätze abzugleichen.
 
-> [!div class="mx-imgBorder"]
-> ![Reihenfolge der Datenabgleiche bearbeiten](media/configure-data-match-order-edit-page.png "Bearbeiten der Datenabgleichsreihenfolge")
+:::image type="content" source="media/match-page.png" alt-text="Screenshot der Seite „Übereinstimmung” im Bereich „Vereinheitlichen” des Datenvereinigungsprozesses.":::
   
-Die Seite **Primär** wird mit **Entität 2** abgeglichen. Der Datensatz, der sich aus dem ersten Abgleich ergibt, wird mit **Entität3** abgeglichen.
-In diesem Beispiel haben wir nur zwei Übereinstimmungen ausgewählt, aber das System kann mehr unterstützen.
+Die primäre Entität *eCommerce:eCommerceContacts* wird mit der nächsten Entität *LoyaltyScheme:loyCustomers* abgeglichen. Das DataSet, das sich aus dem ersten Übereinstimmungsschritt ergibt, wird mit der folgenden Entität abgeglichen, wenn Sie mehr als zwei Entitäten haben.
 
 > [!IMPORTANT]
-> Die Entität, die Sie als Ihre **Primäre** Entität wählen, dient als Grundlage für Ihren einheitlichen Stammdatensatz. Zusätzliche Entitäten, die während der Übereinstimmungsphase ausgewählt werden, werden zu dieser Entität hinzugefügt. Gleichzeitig bedeutet dies nicht, dass die vereinheitlichte Entität *alle* der in dieser Entität enthaltenen Daten enthält.
+> Die Entität, die Sie als Ihre primäre Entität wählen, dient als Grundlage für Ihren einheitlichen Profildatensatz. Zusätzliche Entitäten, die während der Übereinstimmungsphase ausgewählt werden, werden zu dieser Entität hinzugefügt. Dass bedeutet nicht, dass der vereinheitlichte Entität *alle* Daten dieser Entität enthält
 >
 > Es gibt zwei Überlegungen, die Ihnen bei der Auswahl der Hierarchie Ihrer Entitäten helfen können:
 >
-> - Welche Einheit verfügt Ihrer Meinung nach über die vollständigsten und zuverlässigsten Daten über Ihre Kunden?
-> - Verfügt die gerade identifizierte Entität über Attribute, die auch von anderen Entitäten genutzt werden (z. B. Name, Telefonnummer oder E-Mail-Adresse)? Wenn nicht, wählen Sie Ihre zweitverlässigste Entität.
+> - Wählen Sie die Entität mit den vollständigsten und zuverlässigsten Profildaten Ihrer Kunden als primäre Entität aus.
+> - Wählen Sie als primäre Entität die Entität aus, die mehrere Attribute mit anderen Entitäten gemeinsam hat (z. B. Name, Telefonnummer oder E-Mail-Adresse).
 
-Wählen Sie **Abgeschlossen**, um die Übereinstimmungsreihenfolge zu speichern.
+Nachdem Sie die Übereinstimmungsreihenfolge angegeben haben, sehen Sie die definierten Übereinstimmungspaare im Abschnitt **Übereinstimmende Datensatzdetails** über **Daten** > **Vereinheitlichen** > **Spiel**. Die Schlüsselmetriken bleiben leer, bis der Übereinstimmungsprozess abgeschlossen ist.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Definieren Sie Regeln für Ihr erstes Übereinstimmungspaar
+## <a name="define-rules-for-match-pairs"></a>Regeln für das abgeglichene Paar definieren
 
-Nachdem Sie die Reihenfolge der Übereinstimmungen festgelegt haben, sehen Sie die definierten Übereinstimmungen auf der Seite **Übereinstimmung**. Die Kacheln am oberen Bildschirmrand sind leer, bis Sie Ihren Abgleichsauftrag ausführen.
+Übereinstimmungsregeln legen die Logik fest, nach der ein bestimmtes Paar von Entitäten abgeglichen wird.
 
-> [!div class="mx-imgBorder"]
-> ![Regeln definieren](media/configure-data-match-need-rules.png "Definieren Sie Regeln")
+Die Warnung **Benötigt Regeln** neben einem Entitätsnamen weist darauf hin, dass für ein Übereinstimmungspaar keine Übereinstimmungsregel definiert ist. 
 
-Die Warnung **Benötigt Regeln** deutet darauf hin, dass für ein Match-Paar keine Match-Regel definiert ist. Übereinstimmungsregeln legen die Logik fest, nach der ein bestimmtes Paar von Entitäten abgeglichen wird.
+:::image type="content" source="media/match-rule-add.png" alt-text="Screenshot des Abschnitts „Details zu übereinstimmenden Datensätzen” mit Steuerelement zum Hinzufügen hervorgehobener Regeln.":::
 
-1. Um Ihre erste Regel zu definieren, öffnen Sie den Bereich **Regeldefinition**, indem Sie die entsprechende Übereinstimmungsreihe in der Übereinstimmungstabelle (1) auswählen und dann **Neue Regel erstellen** (2) wählen.
+1. Wählen Sie **Regeln hinzufügen** unter einer Entität im Abschnitt **Übereinstimmende Datensatzdetails** zum Definieren von Übereinstimmungsregeln.
 
-   > [!div class="mx-imgBorder"]
-   > ![Neue Regel erstellen](media/configure-data-match-new-rule2.png "Neue Regel erstellen")
+1. Konfigurieren Sie im Bereich **Regel erstellen** die Bedingungen für die Regel.
 
-2. Im Bereich **Regel bearbeiten** konfigurieren Sie die Bedingungen für diese Regel. Jede Bedingung wird durch zwei Zeilen dargestellt, die obligatorische Auswahlen enthalten.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Screenshot einer geöffneten Match-Regel mit hinzugefügten Bedingungen.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Neuer Regelbereich](media/configure-data-match-new-rule-condition.png "Neues Regelfenster")
+   - **Entität/Feld (erste Zeile)**: Wählen Sie eine verwandte Entität und ein Attribut aus, um eine Datensatzeigenschaft anzugeben, die für einen Kunden wahrscheinlich eindeutig ist. Zum Beispiel eine Telefonnummer oder eine E-Mail-Adresse. Vermeiden Sie Übereinstimmungen nach Attributen des Aktivitätstyps. Beispielsweise findet eine Kauf-ID wahrscheinlich keine Übereinstimmung in anderen Datensatztypen.
 
-   Entität/Feld (erste) - Ein Attribut, das für den Abgleich von der ersten Übereinstimmung aus der ersten übereinstimmenden Paar-Entität verwendet wird. Beispiele könnten eine Telefonnummer oder E-Mail-Adresse sein. Wählen Sie ein Attribut, das wahrscheinlich für den Kunden eindeutig ist.
+   - **Entität/Feld (zweite Reihe)**: Wählen Sie ein Attribut aus, das sich auf das Attribut der in der ersten Zeile angegebenen Entität bezieht.
 
-   > [!TIP]
-   > Vermeiden Sie eine Zuordnung auf der Grundlage von Aktivitätsattributen. Mit anderen Worten, wenn ein Attribut eine Aktivität zu sein scheint, dann könnte es ein schlechtes Kriterium sein, dem man entsprechen muss.  
+   - **Normalisieren**: Wählen Sie aus den folgenden Normalisierungsoptionen für die ausgewählten Attribute. 
+     - Leerzeichen: Entfernt alle Leerzeichen. *Hallo   Welt* wird *Hallo Welt*.
+     - Symbole: Entfernt alle Symbole und Sonderzeichen. *Head&Shoulder* wird *HeadShoulder*.
+     - Text in Kleinbuchstaben: Konvertiert alle Zeichen in Kleinbuchstaben. *ALL CAPS und Erster Buchstabe groß* wird *all caps und erster buchstabe groß*.
+     - Unicode in ASCII: Konvertiert die Unicode-Notation in ASCII-Zeichen. */u00B2* wird *2*.
+     - Ziffern: Konvertiert andere Zahlensysteme, z. B. römische Ziffern, in arabische Ziffern. *VIII* wird *8*.
+     - Semantische Typen: Standardisiert Namen, Titel, Telefonnummern, Adressen usw. 
 
-   Entität/Feld (zweite) - Ein Attribut, das für den Abgleich von der zweiten übereinstimmenden Paar-Entität verwendet wird.
+   - **Präzision**: Legen Sie die Genauigkeit fest, die für diese Bedingung gelten soll. 
+     - **Basic** : Wählen Sie *Niedrig*, *Mittel*, *Hoch*, und *Genau*. Wählen Sie **Exakt**, um nur Datensätze abzugleichen, die zu 100 Prozent übereinstimmen. Wählen Sie eine der anderen Ebenen aus, um Datensätze abzugleichen, die nicht 100 Prozent identisch sind.
+     - **Benutzerdefiniert**: Legen Sie einen Prozentsatz fest, mit dem Datensätze übereinstimmen müssen. Das System stimmt nur mit Datensätzen überein, die diesen Schwellenwert überschreiten.
 
-   Normalisieren - **Normalisierungsmethode**: Für die ausgewählten Attribute stehen verschiedene Normierungsoptionen zur Verfügung. Zum Beispiel: Entfernen von Satzzeichen oder Leerzeichen
+1. Geben Sie einen **Namen** für die Regel an.
 
-   Für die Normalisierung des Organisationsnamens (Vorschau) können Sie auch **Typ (Telefon, Name, Organisation)** wählen
+1. [Fügen Sie weitere Bedingungen hinzu](#add-conditions-to-a-rule) oder wählen Sie **Fertig**, um die Regel abzuschließen.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalisierung-B2B](media/match-normalization-b2b.png "Normalisierung-B2B")
+1. Optional [weitere Regeln hinzufügen](#add-rules-to-a-match-pair).
 
-   Präzisionsniveau - Das Präzisionsniveau, das für diese Bedingung verwendet wird. Das Einstellen einer Präzisionsstufe für eine Übereinstimmungsbedingung kann zwei Arten haben: **Grundlegend** und **Anpassende Bedingung**.  
-   - Basis: Bietet Ihnen vier Optionen zur Auswahl: Niedrig, Mittel, Hoch und Exakt. Wählen Sie **Exakt**, um nur Datensätze abzugleichen, die zu 100 Prozent übereinstimmen. Wählen Sie eine der anderen Ebenen aus, um Datensätze abzugleichen, die nicht 100 Prozent identisch sind.
-   - Benutzerdefiniert: Verwenden Sie den Schieberegler, um den benutzerdefinierten Prozentsatz zu definieren, mit dem die Datensätze übereinstimmen müssen, oder geben Sie einen Wert in das Feld **Benutzerdefiniert** ein. Das System gleicht nur Datensätze, die diesen Schwellenwert überschreiten, als zusammengeführte Übereinstimmungspaare ab. Die Werte auf dem Schieberegler liegen zwischen 0 und 1. 0,64 entspricht also 64 Prozent.
+1. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
-3. Wählen Sie **Abgeschlossen**, um die Regel zu speichern.
+### <a name="add-conditions-to-a-rule"></a>Bedingungen zu einer Regel hinzufügen
 
-### <a name="add-multiple-conditions"></a>Mehrere Bedingungen hinzufügen
+Fügen Sie einer Übereinstimmungsregel weitere Bedingungen hinzu, um Entitäten nur dann abzugleichen, wenn Attribute mehrere Bedingungen erfüllen. Bedingungen sind mit einem logischen UND-Operator verbunden und werden daher nur ausgeführt, wenn alle Bedingungen erfüllt sind.
 
-Um Ihre Entitäten nur dann anzupassen, wenn mehrere Bedingungen erfüllt sind, fügen Sie weitere Bedingungen hinzu, die durch einen UND-Operator verknüpft sind.
+1. Gehe zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie **Bearbeiten** zu der Regel, zu der Sie Bedingungen hinzufügen möchten.
 
-1. Wählen Sie im Bereich **Regel bearbeiten** die Option **Bedingung hinzufügen**. Sie können auch Bedingungen löschen, indem Sie die Schaltfläche Entfernen neben einer vorhandenen Bedingung wählen.
+1. Wählen Sie im Bereich **Regel bearbeiten** die Option **Bedingung hinzufügen**.
 
-2. Wählen Sie **Abgeschlossen** und speichern Sie die Regel.
+1. Wählen Sie **Abgeschlossen** und speichern Sie die Regel.
 
-## <a name="add-multiple-rules"></a>Mehrere Regeln hinzufügen
+### <a name="add-rules-to-a-match-pair"></a>Fügen Sie einem abgeglichenen Paar Regeln hinzu
 
-Jede Bedingung gilt für ein einzelnes Paar von Attributen, während Regeln Sätze von Bedingungen darstellen. Um Ihre Entitäten durch verschiedene Sätze von Attributen abzugleichen, können Sie weitere Regeln hinzufügen.
+Übereinstimmungsregeln repräsentieren Sätze von Bedingungen. Um Entitäten nach Bedingungen abzugleichen, die auf verschiedenen Attributen basieren, fügen Sie weitere Regeln hinzu.
 
-1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Vereinheitlichen** > **Zuordnen**.
+1.  Gehe zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie **Regel hinzufügen** zu der Entität, zu der Sie Regeln hinzufügen möchten.
 
-2. Wählen Sie die Entität, die Sie aktualisieren möchten, und wählen Sie **Regeln hinzufügen**.
-
-3. Befolgen Sie das Verfahren wie unter [Regeln für Ihr erstes Match-Paar definieren](#define-rules-for-your-first-match-pair) beschrieben.
+2. Befolgen Sie die Schritte in [Definieren Sie Regeln für Übereinstimmungspaare](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Die Reihenfolge der Regeln ist wichtig. Der Matching-Algorithmus versucht, auf der Grundlage Ihrer ersten Regel einen Abgleich durchzuführen und fährt nur dann mit der zweiten Regel fort, wenn unter der ersten Regel keine Übereinstimmungen identifiziert wurden.
+> Die Reihenfolge der Regeln ist wichtig. Der Abgleichalgorithmus versucht, basierend auf der ersten Regel eine Übereinstimmung zu finden, und fährt mit der zweiten Regel fort, wenn unter der ersten Regel keine Übereinstimmungen identifiziert wurden.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definieren Sie die Deduplizierung auf einer Match-Entität
 
-Neben der Angabe von Regeln für den Abgleich von Entitäten wie in den obigen Abschnitten beschrieben, können Sie auch Regeln für die Deduplizierung angeben. *Deduplizierung* ist ein Prozess. Es identifiziert doppelte Datensätze, fasst sie zu einem Datensatz zusammen und verknüpft alle Quelldatensätze mit diesem zusammengeführten Datensatz mit alternativen IDs zum zusammengeführten Datensatz.
+Zusätzlich zu [entitätsübergreifenden Übereinstimmungsregeln](#define-rules-for-match-pairs) können Sie auch Deduplizierungsregeln angeben. *Deduplizierung* ist ein weiterer Prozess beim Abgleichen von Datensätzen. Es identifiziert doppelte Datensätze und führt sie zu einem Datensatz zusammen. Quelldatensätze werden mit alternativen IDs mit dem zusammengeführten Datensatz verknüpft.
 
-Nachdem ein deduplizierter Datensatz identifiziert wurde, wird dieser Datensatz im Cross-Entity-Matching-Prozess verwendet. Die Deduplizierung wird auf der Ebene der Entitäten implementiert und kann auf jede Entität angewendet werden, die im Match-Prozess verwendet wird.
+Deduplizierte Datensätze werden dann im entitätsübergreifenden Abgleichprozess verwendet. Die Deduplizierung erfolgt für einzelne Entitäten und kann für jede Entität konfiguriert werden, die in Übereinstimmungspaaren verwendet wird.
+
+Die Angabe von Deduplizierungsregeln ist nicht zwingend erforderlich. Wenn keine solchen Regeln konfiguriert sind, werden die systemdefinierten Regeln angewendet. Sie kombinieren alle Datensätze zu einem einzigen Datensatz, bevor sie die Entitätsdaten an einen entitätsübergreifenden Abgleich übergeben, um die Leistung zu verbessern.
 
 ### <a name="add-deduplication-rules"></a>Deduplizierungsregeln hinzufügen
 
-1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Vereinheitlichen** > **Zuordnen**.
+1. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen**.
 
-1. Wählen Sie im Abschnitt **Zusammengeführte Duplikate** die Option **Entitäten einrichten**.
+1. Wählen Sie im Abschnitt **Zusammengeführte Duplikate** die Option **Entitäten einrichten**. Falls bereits Deduplizierungsregeln erstellt wurden, wählen Sie **Bearbeiten**.
 
 1. Wählen Sie im Bereich **Zusammenführungseinstellungen** die Entitäten aus, auf die Sie die Deduplizierung anwenden wollen.
 
-1. Geben Sie an, wie die doppelten Datensätze zusammengeführt werden sollen und wählen Sie eine von drei Zusammenführungsoptionen:
-   - *Am häufigsten*: Identifiziert den Datensatz mit den meisten ausgefüllten Attributen als Gewinner-Datensatz. Dies ist die Standard-Zusammenführungsoption.
-   - *Aktuell*: Identifiziert den Gewinner-Datensatz auf der Basis der größten Aktualität. Benötigt ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
-   - *Letzer*: Identifiziert den Gewinner-Datensatz basierend auf der besten Aktualität. Benötigt ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
+1. Geben Sie an, wie die doppelten Datensätze kombiniert werden sollen und wählen Sie eine von drei Optionen:
+   - **Am häufigsten**: Identifiziert den Datensatz mit den meisten ausgefüllten Attributfeldern als Gewinner-Datensatz. Dies ist die Standard-Zusammenführungsoption.
+   - **Aktuell**: Identifiziert den Gewinner-Datensatz auf der Basis der größten Aktualität. Benötigt ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
+   - **Letzer**: Identifiziert den Gewinner-Datensatz basierend auf der besten Aktualität. Benötigt ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
  
    > [!div class="mx-imgBorder"]
    > ![Deduplizierungsregeln Schritt 1](media/match-selfconflation.png "Deduplizierungsregeln Schritt 1")
  
-1. Sobald die Entitäten ausgewählt sind und ihre Zusammenführungspräferenz eingestellt ist, wählen Sie **Neue Regel erstellen**, um die Deduplizierungsregeln auf Entitätsebene zu definieren.
-   - **Feld auswählen** listet alle verfügbaren Felder der Entität auf, für die Sie Quelldaten deduplizieren möchten.
-   - Geben Sie die Normalisierungs- und Genauigkeitseinstellungen in ähnlicher Weise wie beim Cross-Entity-Abgleich an.
-   - Sie können zusätzliche Bedingungen definieren, indem Sie **Bedingung hinzufügen** wählen.
+1. Sobald die Entitäten ausgewählt sind und ihre Zusammenführungspräferenz eingestellt ist, wählen Sie **Regel hinzufügen**, um die Deduplizierungsregeln auf Entitätsebene zu definieren.
+   - **Feld auswählen** listet alle verfügbaren Felder dieser Entität auf. Wählen Sie das Feld aus, das Sie auf Duplikate prüfen möchten. Wählen Sie Felder aus, die wahrscheinlich für jeden einzelnen Kunden eindeutig sind. Zum Beispiel eine E-Mail-Adresse oder die Kombination aus Name, Stadt und Telefonnummer.
+   - Geben Sie die Normalisierungs- und Genauigkeitseinstellungen an.
+   - Definieren Sie zusätzliche Bedingungen, indem Sie **Bedingung hinzufügen** wählen.
  
    > [!div class="mx-imgBorder"]
    > ![Deduplizierungsregeln Schritt 2](media/match-selfconflation-rules.png "Deduplizierungsregeln Schritt 2")
@@ -138,28 +142,13 @@ Nachdem ein deduplizierter Datensatz identifiziert wurde, wird dieser Datensatz 
 
 1. Dieser Gewinnerdatensatz wird dann zusammen mit den Nicht-Gewinnerdatensätzen (z. B. alternativen IDs) an den entitätsübergreifenden Abgleich weitergeleitet, um die Übereinstimmungsqualität zu verbessern.
 
-1. Alle benutzerdefinierten Übereinstimmungsregeln, die für „Immer übereinstimmen“ und „Nie übereinstimmen“ definiert sind, setzen die Deduplizierungsregeln außer Kraft. Wenn eine Deduplizierungsregel übereinstimmende Datensätze identifiziert und eine benutzerdefinierte Abgleichsregel so eingestellt ist, dass diese Datensätze nie abgeglichen werden, dann werden diese beiden Datensätze nicht abgeglichen.
+1. Alle benutzerdefinierten Übereinstimmungsregeln, die definiert wurden, überschreiben Deduplizierungsregeln. Wenn eine Deduplizierungsregel übereinstimmende Datensätze identifiziert und eine benutzerdefinierte Abgleichsregel so eingestellt ist, dass diese Datensätze nie abgeglichen werden, dann werden diese beiden Datensätze nicht abgeglichen.
 
-1. Nach dem Ausführen des Abgleichs sehen Sie die Deduplizierungsstatistiken.
-   
-> [!NOTE]
-> Die Angabe von Deduplizierungsregeln ist nicht zwingend erforderlich. Wenn keine solchen Regeln konfiguriert sind, werden die systemdefinierten Regeln angewendet. Sie fassen alle Datensätze, die dieselbe Wertekombination (exakte Übereinstimmung) aus dem Primärschlüssel und den Feldern in den Abgleichsregeln haben, in einem einzigen Datensatz zusammen, bevor sie die Daten der Entitäten an den entitätsübergreifenden Abgleich weitergeben, um die Leistung und die Systemsauberkeit zu verbessern.
+1. Nach dem [Ausführen des Abgleichs](#run-the-match-process) sehen Sie die Deduplizierungsstatistiken auf den Kacheln für wichtige Metriken.
 
-## <a name="run-your-match-order"></a>Führen Sie Ihre Übereinstimmungsreihenfolge aus
+### <a name="deduplication-output-as-an-entity"></a>Deduplizierungsausgabe als Entität
 
-Nachdem Sie die Abgleichsregeln definiert haben, einschließlich der Regeln für den entitätsübergreifenden Abgleich und die Deduplizierung, können Sie die Abgleichsreihenfolge ausführen. Wählen Sie auf der Seite **Übereinstimmung** die Option **Ausführen**, um den Prozess zu starten. Der Matching-Algorithmus kann einige Zeit in Anspruch nehmen. Sie können die Eigenschaften auf der Seite **Abgleich** nicht ändern, bis der Abgleich-Prozess abgeschlossen ist. Sie finden die einheitliche Kundenprofil-Entität, die auf der Seite **Entitäten** erstellt wurde. Ihre vereinheitlichte Kundeneinheit heißt **ConflationMatchPairs : CustomerInsights**.
-
-Um weitere Änderungen vorzunehmen und den Schritt erneut auszuführen, können Sie einen laufenden Abgleich abbrechen. Wählen Sie den Text **Wird aktualisiert ...** und **Auftrag abbrechen** am unteren Rand des angezeigten Seitenbereichs aus.
-
-Wenn der Abgleichvorgang abgeschlossen ist, wird der Text **Wird aktualisiert ...** zu **Erfolgreich** geändert und Sie können alle Funktionen der Seite wieder verwenden.
-
-Der erste Abgleichvorgang führt zur Erstellung einer einheitlichen Master-Entität. Alle nachfolgenden Abgleichsläufe führen zu einer Erweiterung dieser Entität.
-
-> [!TIP]
-> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
-
-## <a name="deduplication-output-as-an-entity"></a>Deduplizierungsausgabe als Entität
-Zusätzlich zu der einheitlichen Master-Entität, die im Rahmen des entitätsübergreifenden Abgleichs erstellt wurde, generiert der Deduplizierungsprozess für jede Entität aus der Übereinstimmungsreihenfolge eine neue Entität, um die deduplizierten Datensätze zu identifizieren. Diese Entitäten können zusammen mit **ConflationMatchPairs: CustomerInsights** gefunden werden im **System**-Abschnitt auf der **Entitäten**-Seite mit dem Namen **Deduplication_Datasource_Entity** gefunden werden.
+Der Deduplizierungsprozess erstellt für jede Entität aus den Übereinstimmungspaaren eine neue Entität, um die deduplizierten Datensätze zu identifizieren. Diese Entitäten können zusammen mit **ConflationMatchPairs: CustomerInsights** gefunden werden im **System**-Abschnitt auf der **Entitäten**-Seite mit dem Namen **Deduplication_DataSource_Entity** gefunden werden.
 
 Eine Deduplizierungsausgabeentität enthält die folgenden Informationen:
 - IDs/Schlüssel
@@ -168,77 +157,71 @@ Eine Deduplizierungsausgabeentität enthält die folgenden Informationen:
   - Deduplication_WinnerId: Dieses Feld enthält die Gewinner-ID der identifizierten Gruppen oder Cluster. Wenn „Deduplication_WinnerId“ mit dem Primärschlüsselwert für einen Datensatz identisch ist, bedeutet dies, dass der Datensatz der Gewinnerdatensatz ist.
 - Felder zum Definieren der Deduplizierungsregeln.
 - Regel- und Bewertungsfelder geben an, welche der Deduplizierungsregeln angewendet und welche Bewertung vom Übereinstimmungsalgorithmus zurückgegeben wurde.
+   
+## <a name="run-the-match-process"></a>Den Abgleichprozess ausführen
+
+Nachdem Sie die Abgleichsregeln konfiguriert haben, einschließlich der Regeln für den entitätsübergreifenden Abgleich und die Deduplizierung, können Sie den Abgleichprozess ausführen. 
+
+Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie **Ausführen**, um den Prozess zu starten. Der Übereinstimmungsalgorithmus dauert einige Zeit und Sie können die Konfiguration erst ändern, wenn sie abgeschlossen ist. Um Änderungen vorzunehmen, können Sie die Ausführung abbrechen. Wählen Sie den Status des Jobs und wählen Sie **Auftrag abbrechen** im Bereich **Fortschrittsdetails**.
+
+Das Ergebnis einer erfolgreichen Ausführung, die einheitliche Kundenprofilentität, finden Sie auf der Seite **Entitäten** Seite. Ihre einheitliche Kundenentität lautet **Kunden** im Abschnitt **Profile**. Die erste erfolgreiche Übereinstimmungsausführung erstellt die Entität einheitlicher *Kunde*. Alle nachfolgenden Übereinstimmungsausführungen erweitern diese Entität.
+
+> [!TIP]
+> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
 
 ## <a name="review-and-validate-your-matches"></a>Überprüfen und validieren Sie Ihre Übereinstimmungen
 
-Bewerten Sie die Qualität Ihrer Übereinstimmungspaarungen und verfeinern Sie sie:
+Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen**, um die Qualität Ihrer abgeglichenen Paare zu bewerten und gegebenenfalls zu verfeinern.
 
-- Auf der Seite **Übereinstimmung** finden Sie zwei Kacheln, die erste Erkenntnisse über Ihre Daten zeigen.
+Die Kacheln oben auf der Seite zeigen wichtige Metriken, in denen die Anzahl der übereinstimmenden Datensätze und Duplikate zusammengefasst ist.
 
-  - **Vereinigen**: zeigt die Anzahl der eindeutigen Profile, die das System identifiziert hat.
-  - **Abgleichsätze**: zeigt die Anzahl der Übereinstimmungen über alle Ihre Übereinstimmungspaare an.
+:::image type="content" source="media/match-KPIs.png" alt-text="Beschnittener Screenshot der wichtigsten Metriken auf der Match-Seite mit Zahlen und Details.":::
 
-- In der Tabelle **Abgleichsreihenfolge** können Sie die Ergebnisse jedes Abgleichspaares bewerten, indem Sie die Anzahl der Datensätze, die von dieser Abgleichspaar-Einheit stammen, mit dem Prozentsatz der erfolgreich abgeglichenen Datensätze vergleichen.
+- **Einzigartige Quelldatensätze** zeigt die Anzahl der einzelnen Quelldatensätze an, die im letzten Übereinstimmungslauf verarbeitet wurden.
+- **Übereinstimmende und nicht übereinstimmende Datensätze** hebt hervor, wie viele eindeutige Datensätze nach der Verarbeitung der Übereinstimmungsregeln verbleiben.
+- **Nur übereinstimmende Datensätze** zeigt die Anzahl der Übereinstimmungen über alle Ihre Übereinstimmungspaare hinweg an.
 
-- Im Bereich **Regeln** einer Entität in der Tabelle **Abgleichsreihenfolge** finden Sie den Prozentsatz der erfolgreich abgeglichenen Datensätze auf Regelebene. Wenn Sie das Tabellensymbol neben einer Regel auswählen, können Sie alle diese Datensätze auf Regelebene anzeigen. Wir empfehlen, dass Sie eine Teilmenge der Datensätze überprüfen, um zu überprüfen, ob sie korrekt zugeordnet wurden.
+Sie können die Ergebnisse jedes abgeglichenen Paares und seine Regeln in der Tabelle **Übereinstimmende Datensatzdetails** bewerten. Vergleichen Sie die Anzahl der Datensätze, die von einem Übereinstimmungspaar stammen, mit dem Prozentsatz der erfolgreich übereinstimmenden Datensätze.
 
-- Experimentieren Sie mit verschiedenen Präzisionsschwellenwerten um Ihre Bedingungen herum, um den optimalen Wert zu ermitteln.
+Überprüfen Sie die Regeln eines Übereinstimmungspaars, um den Prozentsatz der erfolgreich übereinstimmenden Datensätze auf Regelebene zu ermitteln. Wählen Sie die Auslassungspunkte (...) und dann **Vorschau für Übereinstimmung** aus, um alle diese Datensätze auf Regelebene anzuzeigen. Wir empfehlen, dass Sie sich einige Datensätze ansehen, um zu überprüfen, ob sie korrekt übereinstimmen.
 
-  1. Wählen Sie die Auslassungspunkte (...) für die Match-Pair-Regel, mit der Sie experimentieren möchten, und wählen Sie **Bearbeiten**.
+Probieren Sie verschiedene Präzisionsschwellenwerte für Bedingungen aus, um den optimalen Wert zu finden.
 
-  2. Wählen Sie die Bedingung, mit der Sie experimentieren möchten. Jedes Kriterium wird durch eine Zeile im Bereich **Übereinstimmungsregel** repräsentiert.
+  1. Wählen Sie die Auslassungspunkte (...) für die Regel aus, mit der Sie experimentieren möchten, und wählen Sie **Bearbeiten** aus.
 
-  3. Was Sie auf der Seite **Kriterienvorschau** sehen, hängt von der Genauigkeitsstufe ab, die Sie für eine Bedingung gewählt haben. Suchen Sie die Anzahl der übereinstimmenden und nicht übereinstimmenden Datensätze für die ausgewählte Bedingung.
+  2. Ändern Sie die Präzisionsbedingungen in den Bedingungen, die Sie überarbeiten möchten.
 
-     Erhalten Sie ein umfassendes Verständnis der Auswirkungen verschiedener Schwellenwerte. Sie können vergleichen, wie viele Datensätze unter jeder der Schwellenwertebenen abgeglichen werden, und die Datensätze unter jeder Option anzeigen. Wählen Sie jede der Kacheln aus und überprüfen Sie die Daten im Tabellenbereich.
+  3. Wählen Sie **Vorschau**, um sich die Anzahl der übereinstimmenden und nicht übereinstimmenden Datensätze für die ausgewählte Bedingung anzusehen.
 
-## <a name="optimize-your-matches"></a>Optimieren Sie Ihre Übereinstimmungen
+## <a name="manage-match-rules"></a>Abgleichregeln verwalten
 
-Erhöhen Sie die Qualität, indem Sie einige Ihrer Abgleichsparameter neu konfigurieren:
+Sie können die meisten Übereinstimmungsparameter neu konfigurieren und optimieren.
 
-- **Ändern Sie die Übereinstimmungsreihenfolge** durch Auswahl von **Bearbeiten** und ändern Sie die Felder der Übereinstimmungsreihenfolge.
+:::image type="content" source="media/match-rules-management.png" alt-text="Screenshot des Dropdownmenüs mit Optionen für Übereinstimmungsregeln.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Datenabgleichsreihenfolge bearbeiten](media/configure-data-match-order-edit.png "Reihenfolge des Datenabgleichs bearbeiten")
+- **Ändern Sie die Reihenfolge Ihrer Regeln**, wenn Sie mehrere Regeln definiert haben. Sie können die Spielregeln neu anordnen, indem Sie die Optionen **Nach oben** und **Nach unten** wählen oder per Drag & Drop.
 
-- **Ändern Sie die Reihenfolge Ihrer Regeln**, wenn Sie mehrere Regeln definiert haben. Sie können die Ablgeichsregeln neu anordnen, indem Sie die Optionen **Nach oben** und **Nach unten** im Abgleichsregelraster auswählen.
-
-  > [!div class="mx-imgBorder"]
-  > ![Regelreihenfolge ändern](media/configure-data-change-rule-order.png "Reihenfolge der Regeln ändern")
-
-- **Duplizieren Sie Ihre Regeln** wenn Sie eine Übereinstimmungsregel definiert haben und eine ähnliche Regel mit Änderungen erstellen möchten. Wählen Sie dazu **Duplizieren**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Regel duplizieren](media/configure-data-duplicate-rule.png "Eine Regel duplizieren")
+- **Regelbedingungen ändern** durch die Auswahl von **Bearbeiten** und wählen Sie verschiedene Felder.
 
 - **Regel deaktivieren**, um eine Übereinstimmungsregel beizubehalten und sie gleichzeitig vom Übereinstimmungsprozess auszuschließen.
 
-  > [!div class="mx-imgBorder"]
-  > ![Eine Regel deaktivieren](media/configure-data-deactivate-rule.png "Eine Regel deaktivieren")
+- **Duplizieren Sie Ihre Regeln**, wenn Sie eine Übereinstimmungsregel definiert haben und eine ähnliche Regel mit Änderungen erstellen möchten, wählen Sie **Duplizieren**.
 
-- **Bearbeiten Sie Ihre Regeln** durch Auswahl des Symbols **Bearbeiten**. Sie können die folgenden Änderungen vornehmen:
+- **Regel löschen** durch Auswahl des Symbols **Löschen**.
 
-  - Attribute für eine Bedingung ändern: Wählen Sie neue Attribute innerhalb der spezifischen Bedingungszeile aus.
-  - Ändern Sie den Schwellenwert für eine Bedingung: Passen Sie den Präzisionsschieberegler an.
-  - Ändern Sie die Normalisierungsmethode für eine Bedingung: Aktualisieren Sie die Normalisierungsmethode.
+## <a name="specify-custom-match-conditions"></a>Benutzerdefinierte Übereinstimmungsbedingungen angeben
 
-## <a name="specify-your-custom-match-records"></a>Geben Sie Ihre benutzerdefinierten Match-Datensätze an
+Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie übereinstimmen sollen. Diese Regeln können hochgeladen werden, um den Standard-Übereinstimmungsprozess zu überschreiben. Wenn beispielsweise John Doe I und John Doe II in unseren Aufzeichnungen enthalten sind, kann das System diese als eine Person abgleichen. Mit benutzerdefinierten Übereinstimmungsregeln können Sie festlegen, dass sich ihre Profile auf verschiedene Personen beziehen. 
 
-Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie übereinstimmen sollen. Diese Regeln können in großen Mengen in den Abgleichprozess hochgeladen werden.
+1. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie **Benutzerdefinierte Übereinstimmung** im Abschnitt **Übereinstimmende Datensatzdetails** aus.
 
-1. Wählen Sie die Option **Benutzerdefinierter Abgleich** auf dem Bildschirm **Abgleichauftrag**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot des Abschnitts „Abgleichregeln” mit hervorgehobenem Steuerelement zum Überwachen benutzerdefinierter Übereinstimmungen.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Erstellen einer benutzerdefinierten Übereinstimmung](media/custom-match-create.png "Erstellen Sie eine benutzerdefinierte Übereinstimmung")
+1. Wenn Sie keine benutzerdefinierten Übereinstimmungsregeln festgelegt haben, wird ein neuer Bereich **Benutzerdefinierte Übereinstimmung** mit weiteren Details angezeigt.
 
-2. Wenn Sie keine hochgeladenen Instanzen haben, wird ein neues Dialogfeld **Anpassung** angezeigt, in dem Sie einige Details ausfüllen müssen. Wenn Sie diese Details bereits früher angegeben haben, fahren Sie mit Schritt 8 fort.
+1. Wählen Sie **Ausfüllen der Vorlage**, um eine Vorlagendatei zu erhalten, die angeben kann, welche Datensätze von welchen Entitäten immer oder nie übereinstimmen sollen. Sie müssen die "immer übereinstimmenden" und "nie übereinstimmenden" Datensätze in zwei verschiedenen Dateien getrennt ausfüllen.
 
-   > [!div class="mx-imgBorder"]
-   > ![Neues Dialogfeld für benutzerdefinierten Abgleich](media/custom-match-new-dialog-box.png "Neue benutzerdefinierte Dialogbox für die Übereinstimmung")
-
-3. Wählen Sie **Ausfüllen der Vorlage**, um eine Vorlagendatei zu erhalten, die angeben kann, welche Datensätze von welchen Entitäten immer oder nie übereinstimmen sollen. Sie müssen die "immer übereinstimmenden" und "nie übereinstimmenden" Datensätze in zwei verschiedenen Dateien getrennt ausfüllen.
-
-4. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die bei der benutzerdefinierten Übereinstimmung verwendet werden sollen. Wenn Sie beispielsweise möchten, dass der Primärschlüssel 12345 der Entität "Vertrieb" immer mit dem Primärschlüssel 34567 der Entität "Kontakt" übereinstimmt, müssen Sie Folgendes angeben:
+1. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die bei der benutzerdefinierten Übereinstimmung verwendet werden sollen. Wenn Sie bespielsweise einen Primärschlüssel *12345* von der Entität *Vertrieb* möchten, die immer mit dem Primärschlüssel *34567* der Entität *Kontakt* übereinstimmt, füllen Sie die Vorlage aus:
     - Entität1: Verkauf
     - Entity1Key: 12345
     - Entität2: Kontakt
@@ -248,22 +231,22 @@ Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie üb
    
    Wenn Sie eine benutzerdefinierte Übereinstimmung für die Deduplizierung einer Entität angeben möchten, geben Sie dieselbe Entität wie Entität1 und Entität2 an und legen Sie die verschiedenen Primärschlüsselwerte fest.
 
-5. Nachdem Sie alle Überschreibungen hinzugefügt haben, die Sie anwenden möchten, speichern Sie die Vorlagendatei.
+1. Nachdem Sie alle Überschreibungen hinzugefügt haben, die Sie anwenden möchten, speichern Sie die Vorlagendatei.
 
-6. Gehen Sie zu **Daten** > **Datenquellen** und nehmen Sie die Vorlagedateien als neue Entitäten auf. Nach der Aufnahme können Sie diese zur Festlegung der Match-Konfiguration verwenden.
+1. Gehen Sie zu **Daten** > **Datenquellen** und nehmen Sie die Vorlagedateien als neue Entitäten auf. Nach der Aufnahme können Sie diese zur Festlegung der Match-Konfiguration verwenden.
 
-7. Nachdem die Dateien und Entitäten hochgeladen wurden und verfügbar sind, wählen Sie erneut die Option **Abgleich nach Kennzahl**. Sie sehen Optionen zur Angabe der Entitäten, die Sie einbeziehen möchten. Wählen Sie die gewünschten Entitäten aus dem Dropdown-Menü.
+1. Nachdem die Dateien und Entitäten hochgeladen wurden und verfügbar sind, wählen Sie erneut die Option **Abgleich nach Kennzahl**. Sie sehen Optionen zur Angabe der Entitäten, die Sie einbeziehen möchten. Wählen Sie die gewünschten Entitäten aus dem Dropdown-Menü.
 
-   > [!div class="mx-imgBorder"]
-   > ![Überschiebung der Übereinstimmung durch den Kunden ](media/custom-match-overrides.png "Benutzerdefinierte Übereinstimmungen überschreiben")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot des Dialogfelds zum Auswählen von Überschreibungen für ein benutzerdefiniertes Übereinstimmungsszenario.":::
 
-8. Markieren Sie die Entitäten, die Sie für **Immer gleich** und **Niemals gleich** verwenden möchten, wählen Sie **Erledigt**.
+1. Markieren Sie die Entitäten, die Sie für **Immer gleich** und **Niemals gleich** verwenden möchten, wählen Sie **Erledigt**.
 
-9. Wählen Sie **Speichern** auf der Seite **Match** für die benutzerdefinierte Match-Konfiguration, die Sie gerade eingerichtet haben.
+1. Wählen Sie **Speichern** auf der Seite **Abgleichen**, um die benutzerdefinierte Übereinstimmungskonfiguration anzuwenden.
 
-10. Wählen Sie **Ausführen** auf der Seite **Match**, um den Matching-Prozess zu starten, und die benutzerdefinierte Match-Konfiguration wird in Kraft gesetzt. Alle systemabgestimmten Regeln werden durch den Konfigurationssatz außer Kraft gesetzt.
+1. Wählen Sie **Ausführen** auf der Seite **Abgleichen**, um den Abgleich zu starten. Andere angegebene Übereinstimmungsregeln werden von der benutzerdefinierten Übereinstimmungskonfiguration überschrieben.
 
-11. Sobald der Abgleich abgeschlossen ist, können Sie die Entität **ConflationMatchPair** verifizieren, um zu bestätigen, dass die Überschreibungen in den Zusammenführungsübereinstimmungen angewendet werden.
+> [!TIP]
+> Gehen Sie zu **Daten** > **Entitäten** und überprüfen Sie die Entität **ConflationMatchPair**, um zu bestätigen, dass die Überschreibungen angewendet werden.
 
 ## <a name="next-step"></a>Nächster Schritt
 

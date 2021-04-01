@@ -2,19 +2,19 @@
 title: Power BI-Connector
 description: Lernen Sie, wie der Dynamics 365 Customer Insights-Connector in Power BI verwendet wird.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477087"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596038"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector für Power BI (Vorschau)
 
@@ -23,7 +23,7 @@ Erstellen Sie Visualisierungen für Ihre Daten mit dem Power BI Desktop. Generie
 ## <a name="prerequisites"></a>Anforderungen
 
 - Sie haben einheitliche Kundenprofile.
-- Die neueste Version von [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) ist auf Ihrem Computer installiert. [Weitere Informationen zu Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Die neueste Version von [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) ist auf Ihrem Computer installiert. [Weitere Informationen zu Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfigurieren des Connector für Power BI
 
@@ -47,7 +47,7 @@ Erstellen Sie Visualisierungen für Ihre Daten mit dem Power BI Desktop. Generie
 
 ## <a name="large-data-sets"></a>Große Datasets
 
-Der Customer Insights-Konnektor für Power BI wurde für Datasets entwickelt, die bis zu 1 Million Kundenprofile enthalten. Das Importieren größerer Datenmengen funktioniert möglicherweise, dauert jedoch lange. Außerdem kann es aufgrund von Power BI-Einschränkungen zu einer Zeitüberschreitung kommen. Weitere Informationen finden Sie unter [Power BI: Empfehlungen für große Datasets](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Der Customer Insights-Konnektor für Power BI wurde für Datasets entwickelt, die bis zu 1 Million Kundenprofile enthalten. Das Importieren größerer Datenmengen funktioniert möglicherweise, dauert jedoch lange. Außerdem kann es aufgrund von Power BI-Einschränkungen zu einer Zeitüberschreitung kommen. Weitere Informationen finden Sie unter [Power BI: Empfehlungen für große Datasets](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Arbeiten mit einer Teilmenge von Daten
 
@@ -70,4 +70,3 @@ Sie können das duplizierte Beziehungen identifizieren und entfernen.
 Versuchen Sie nach dem Entfernen des duplizierten Beziehungen, den Power BI-Konnektor wieder zu konfigurieren. Die Umgebung sollte jetzt verfügbar sein.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

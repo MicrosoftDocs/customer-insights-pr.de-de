@@ -1,20 +1,20 @@
 ---
 title: Segmente erstellen und verwalten
 description: Erstellen Sie Kundensegmente, um sie auf der Grundlage verschiedener Attribute zu gruppieren.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270355"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597050"
 ---
 # <a name="create-and-manage-segments"></a>Segmente erstellen und verwalten
 
@@ -35,19 +35,19 @@ Segmente werden auf der Seite **Segmente** verwaltet.
 
 1. Gehen Sie in den Zielgruppen-Insights auf die Seite **Segmente**.
 
-2. Wählen Sie **Neu** > **Leeres Segment** aus.
+1. Wählen Sie **Neu** > **Leeres Segment** aus.
 
-3. Wählen Sie im Bereich **Neues Segment** einen Segmenttyp und geben Sie **Name** ein.
+1. Wählen Sie im Bereich **Neues Segment** einen Segmenttyp und geben Sie **Name** ein.
 
    Geben Sie optional einen Anzeigenamen und eine Beschreibung an, die die Identifizierung des Segments erleichtert.
 
-4. Wählen Sie **Weiter**, um zu der Seite **Segment-Builder** zu gelangen, auf der Sie eine Gruppe definieren. Eine Gruppe ist eine Gruppe von Kunden.
+1. Wählen Sie **Weiter**, um zu der Seite **Segment-Builder** zu gelangen, auf der Sie eine Gruppe definieren. Eine Gruppe ist eine Gruppe von Kunden.
 
-5. Wählen Sie die Entität, die das Attribut enthält, nach dem Sie segmentieren möchten.
+1. Wählen Sie die Entität, die das Attribut enthält, nach dem Sie segmentieren möchten.
 
-6. Wählen Sie das Attribut aus, nach dem segmentiert werden soll. Dieses Attribut kann einen von vier Werttypen haben: numerisch, Zeichenfolge, Datum oder boolesch.
+1. Wählen Sie das Attribut aus, nach dem segmentiert werden soll. Dieses Attribut kann einen von vier Werttypen haben: numerisch, Zeichenfolge, Datum oder boolesch.
 
-7. Wählen Sie einen Operator und einen Wert für das ausgewählte Attribut.
+1. Wählen Sie einen Operator und einen Wert für das ausgewählte Attribut.
 
    > [!div class="mx-imgBorder"]
    > ![Benutzerdefinierter Gruppenfilter](media/customer-group-numbers.png "Kundengruppen-Filter")
@@ -64,9 +64,14 @@ Segmente werden auf der Seite **Segmente** verwaltet.
    > [!div class="mx-imgBorder"]
    > ![Beziehungspfad während der Segmenterstellung](media/segments-multiple-relationships.png "Beziehungspfad während der Segmenterstellung")
 
-9. Wählen Sie **Speichern**, um Ihr Segment zu speichern. Ihr Segment wird gespeichert und verarbeitet, wenn alle Anforderungen validiert sind. Andernfalls wird es als Entwurf gespeichert.
+1. Standardmäßig generieren Segmente eine Ausgabeentität, die alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie der Ausgabeentität weitere Attribute dieser Entitäten hinzufügen. Wählen Sie, **Projektattribute**, um die Attribute auszuwählen, die an die Ausgabeentität angehängt werden.  
 
-10. Wählen Sie **Zurück zu Segmenten**, um zur Seite **Segmente** zurückzukehren.
+   
+   Beispiel: Ein Segment basiert auf einer Entität, die Kundenaktivitätsdaten enthält, die sich auf die Entität *Kunde* beziehen. Das Segment sucht nach allen Kunden, die in den letzten 60 Tagen den Helpdesk angerufen haben. Sie können die Anrufdauer und die Anzahl der Anrufe an alle übereinstimmenden Kundendatensätze in der Ausgabeentität anhängen. Diese Informationen können hilfreich sein, um eine E-Mail mit hilfreichen Links zu Online-Hilfeartikeln und häufig gestellten Fragen an Kunden zu senden, die häufig angerufen haben.
+
+1. Wählen Sie **Speichern**, um Ihr Segment zu speichern. Ihr Segment wird gespeichert und verarbeitet, wenn alle Anforderungen validiert sind. Andernfalls wird es als Entwurf gespeichert.
+
+1. Wählen Sie **Zurück zu Segmenten**, um zur Seite **Segmente** zurückzukehren.
 
 ## <a name="manage-existing-segments"></a>Vorhandene Segmente verwalten
 
@@ -85,6 +90,7 @@ Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
 
 - **Anzeigen** der Segmentdetails, einschließlich Trend der Anzahl der Mitglieder, Vorschau der Segmentmitglieder.
 - **Bearbeiten** des Segments, um seine Eigenschaften zu ändern.
+- **Duplikat erstellen** eines Segments. Sie können die Eigenschaften sofort bearbeiten oder das Duplikat einfach speichern.
 - **Aktualisieren** des Segments, um die neuesten Daten einzuschließen.
 - **Aktivieren** oder **Deaktivieren** des Segments. Segmente haben zwei mögliche Status – aktiv oder inaktiv. Diese Status sind nützlich, wenn Sie ein Segment bearbeiten. Für inaktive Segmente ist die Segmentdefinition vorhanden, enthält jedoch noch keine Kunden. Wenn Sie ein Segment aktivieren, ändert sich sein Status von inaktiv in aktiv und es wird nach Kunden gesucht, die der Segmentdefinition entsprechen. Wenn eine [geplante Aktualisierung](system.md#schedule-tab) konfiguriert ist, haben inaktive Segmente den **Status** aufgelistet als **Übersprungen**. Dies zeigt an, dass nicht einmal eine Aktualisierung versucht wurde. Wenn ein inaktives Segment aktiviert wird, wird es aktualisiert und in geplante Aktualisierungen einbezogen.
   Alternativ können Sie die Funktionalität **Planen Sie später** im Auswahlmenü unter **Aktivieren/Deaktivieren** zur Angabe eines zukünftigen Datums und einer zukünftigen Uhrzeit für die Aktivierung und Deaktivierung eines bestimmten Segments verwenden.

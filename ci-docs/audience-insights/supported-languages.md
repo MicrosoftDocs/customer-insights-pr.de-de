@@ -1,24 +1,24 @@
 ---
 title: Unterstützte Sprachen für Zielgruppen-Insights
 description: Verstehen und konfigurieren Sie die Sprachunterstützung.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268179"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595471"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Unterstützte Sprachen für Zielgruppen-Insights-Funktionalitäten
 
-Dynamics 365 Customer Insights Zielgruppen-Insights-Fähigkeit unterstützt eine Reihe von Sprachen. Dieses Thema listet die verfügbaren Sprachen auf und bietet Unterstützung beim Wechseln zwischen ihnen sowie eine Übersicht darüber, welche Inhalte übersetzt werden.
+Zielgruppen-Insights für Dynamics 365 Customer Insights wird in viele Sprachen übersetzt. Die folgende Liste enthält verfügbare Sprachen und Informationen zur Übersetzung. Sie können auch mehr darüber erfahren, wie Sie die Spracheinstellungen ändern. 
 
 ## <a name="languages"></a>Sprachen
 
@@ -28,7 +28,7 @@ Dynamics 365 Customer Insights Zielgruppen-Insights-Fähigkeit unterstützt eine
 | Bulgarisch | български |
 | Katalanisch | català |
 | Chinesisch (vereinfacht) | 中文 (简体) |
-| Chinesisch (Traditionell) | 中文 (繁體) |
+| Chinesisch (traditionell) | 中文 (繁體) |
 | Kroatisch | hrvatski |
 | Tschechisch | čeština |
 | Dänisch | dansk |
@@ -42,21 +42,21 @@ Dynamics 365 Customer Insights Zielgruppen-Insights-Fähigkeit unterstützt eine
 | Griechisch | Ελληνικά |
 | Hindi | हिंदी |
 | Ungarisch | magyar |
-| Indonesisch | Bahasa Indonesia |
+| Indonesisch | Indonesien |
 | Italienisch | italiano |
 | Japanisch | 日本語 |
-| Kasachisch | Қазақ |
+| Kasachisch | қазақ тілі |
 | Koreanisch | 한국어 |
 | Lettisch | latviešu |
 | Litauisch | lietuvių |
-| Malaiisch | Bahasa Melayu |
-| Norwegisch (Bokmål) | norsk (bokmål) |
-| Polnisch | Polski |
+| Malaiisch | Melayu |
+| Norwegisch (Bokmål) | norsk bokmål |
+| Polnisch | polski |
 | Portugiesisch (Brasilien) | Português |
 | Portugiesisch (Portugal) | Português |
 | Rumänisch | română |
-| Russisch | русский |
-| Serbisch (Kyrillisch) | српски |
+| Russisch | pусский |
+| Serbisch (kyrillisch) | српски |
 | Serbisch (Lateinisch) | srpski |
 | Slowakisch | slovenčina |
 | Slowenisch | slovenski |

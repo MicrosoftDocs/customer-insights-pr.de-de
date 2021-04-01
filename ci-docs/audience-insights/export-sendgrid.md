@@ -2,19 +2,19 @@
 title: Exportieren von Customer Insights-Daten zu SendGrid
 description: Lernen Sie, wie Sie die Verbindung zu SendGrid konfigurieren.
 ms.date: 12/08/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f16d69deb2a0b48270ed04f9b72f03056f20b619
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 1a1f679fa42d47d524ebfdd6e931ae2822565f77
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268731"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597280"
 ---
 # <a name="connector-for-sendgrid-preview"></a>Konnektor für SendGrid (Vorschau)
 

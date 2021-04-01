@@ -2,19 +2,19 @@
 title: Customer Insights-Daten zu Google Ads exportieren
 description: Lernen Sie, wie Sie die Verbindung zu Google Ads konfigurieren.
 ms.date: 11/18/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ba7c82e643ea0dc1897e0954e78646932cafffa3
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6d9a25af3913e755cccec745c532b35aef3cccf9
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268961"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598246"
 ---
 # <a name="connector-for-google-ads-preview"></a>Konnektor für Google Ads (Vorschau)
 

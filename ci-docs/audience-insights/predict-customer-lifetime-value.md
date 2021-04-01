@@ -2,19 +2,19 @@
 title: Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 description: Prognostizieren Sie das Umsatzpotenzial für aktive Kunden in der Zukunft.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268593"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595807"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Langfristiger Kundenwert(CLV)-Vorhersage (Vorschau)
 
@@ -194,11 +194,11 @@ Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite.
   
   - **Erfolgsrate bei der Vorhersage von Kunden mit hohem Wert**
 
-  Sehen Sie den Unterschied bei der Vorhersage hochwertiger Kunden mithilfe des KI-Modells im Vergleich zum Basismodell. Zum Beispiel bedeutet eine Erfolgsquote von 84 %, dass das KI-Modell von allen hochwertigen Kunden in den Trainingsdaten 84 % genau erfassen konnte. Wir vergleichen diese Erfolgsrate dann mit der Erfolgsrate des Basismodells, um die relative Änderung zu melden. Dieser Wert wird verwendet, um dem Modell eine Stufe zuzuweisen.
+    Sehen Sie den Unterschied bei der Vorhersage hochwertiger Kunden mithilfe des KI-Modells im Vergleich zum Basismodell. Zum Beispiel bedeutet eine Erfolgsquote von 84 %, dass das KI-Modell von allen hochwertigen Kunden in den Trainingsdaten 84 % genau erfassen konnte. Wir vergleichen diese Erfolgsrate dann mit der Erfolgsrate des Basismodells, um die relative Änderung zu melden. Dieser Wert wird verwendet, um dem Modell eine Stufe zuzuweisen.
 
   - **Fehlermetriken**
     
-  Mit einer anderen Metrik können Sie die Gesamtleistung des Modells in Bezug auf Fehler bei der Vorhersage zukünftiger Werte überprüfen. Wir verwenden die RMSE-Metrik (Root Mean Squared Error), um diesen Fehler zu bewerten. RMSE ist eine Standardmethode zur Messung des Fehlers eines Modells bei der Vorhersage quantitativer Daten. Der RMSE des KI-Modells wird mit dem RMSE des Basismodells verglichen und der relative Unterschied angegeben.
+    Mit einer anderen Metrik können Sie die Gesamtleistung des Modells in Bezug auf Fehler bei der Vorhersage zukünftiger Werte überprüfen. Wir verwenden die RMSE-Metrik (Root Mean Squared Error), um diesen Fehler zu bewerten. RMSE ist eine Standardmethode zur Messung des Fehlers eines Modells bei der Vorhersage quantitativer Daten. Der RMSE des KI-Modells wird mit dem RMSE des Basismodells verglichen und der relative Unterschied angegeben.
 
   Das KI-Modell priorisiert das genaue Ranking der Kunden nach dem Wert, den sie für Ihr Unternehmen bringen. Daher wird nur die Erfolgsrate der Vorhersage hochwertiger Kunden verwendet, um die endgültige Modellstufe abzuleiten. Die RMSE-Metrik reagiert empfindlich auf Ausreißer. In Szenarien, in denen Sie einen kleinen Prozentsatz von Kunden mit außerordentlich hohen Kaufwerten haben, liefert die RMSE-Gesamtmetrik möglicherweise nicht das vollständige Bild der Modellleistung.   
 

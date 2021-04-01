@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267721"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596498"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure Service Prinzipal für Insights der Zielgruppe
 
@@ -23,7 +23,7 @@ Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Be
 Sie können das Dienstprinzipal verwenden, um auf sichere Weise [einen Common Data Model-Ordner als Datenquelle hinzuzufügen oder zu bearbeiten](connect-common-data-model.md) oder [eine neue Umgebung zu erstellen oder eine bestehende zu aktualisieren](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Für das Azure Data Lake Gen2-Speicherkonto, das den Dienstprinzipal verwenden soll, muss der [Hierarchischer Namensraum (HNS) aktiviert](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace) sein.
+> - Für das Azure Data Lake Gen2-Speicherkonto, das den Dienstprinzipal verwenden soll, muss der [Hierarchischer Namensraum (HNS) aktiviert](/azure/storage/blobs/data-lake-storage-namespace) sein.
 > - Sie benötigen Admin-Berechtigungen für Ihr Azure-Abonnement, um das Service-Prinzipal zu erstellen.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Erstellen eines Azure Service Prinzipals für Zielgruppen-Insights
@@ -48,7 +48,7 @@ Bevor Sie ein neues Prinzipal für Zielgruppe Insights erstellen, prüfen Sie, o
 
 ### <a name="create-a-new-service-principal"></a>Erstellen Sie ein neues Service-Prinzipal
 
-1. Installieren Sie die neueste Version der **Azure Active Directory PowerShell für Graph**. Weitere Informationen finden Sie unter [Installieren Sie Azure Active Directory PowerShell für Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Installieren Sie die neueste Version der **Azure Active Directory PowerShell für Graph**. Weitere Informationen finden Sie unter [Installieren Sie Azure Active Directory PowerShell für Graph](/powershell/azure/active-directory/install-adv2).
    - Wählen Sie auf Ihrem PC die Windows-Taste auf Ihrer Tastatur und suchen Sie nach **Windows PowerShell** und **Als Administrator ausführen**.
    
    - Geben Sie in dem sich öffnenden PowerShell-Fenster `Install-Module AzureAD` ein.
