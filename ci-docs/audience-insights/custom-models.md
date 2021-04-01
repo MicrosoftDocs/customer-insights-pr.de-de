@@ -1,19 +1,20 @@
 ---
 title: Benutzerdefinierte Maschinelles Lernen Modelle | Microsoft Docs
 description: Arbeiten Sie mit benutzerdefinierten Modellen aus Azure Machine Learning in Dynamics 365 Customer Insights.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267233"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700667"
 ---
 # <a name="custom-machine-learning-models"></a>Benutzerdefinierte Maschinelles Lernen Modelle
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267233"
 
 ## <a name="responsible-ai"></a>Verantwortliche KI
 
-Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, Geschäftsfunktionen zu verbessern und Umsatzströme zu steigern. Wir empfehlen Ihnen dringend, den Wert Ihrer Vorhersage gegen die Auswirkungen und Verzerrungen abzuwägen, die auf ethische Art und Weise eingeführt werden können. Erfahren Sie mehr darüber, wie Microsoft [verantwortungsvolle KI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6) berücksichtigt. Sie können sich auch über [Techniken und Prozesse für verantwortungsvolles maschinelles Lernen](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) speziell für Azure Machine Learning informieren.
+Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, Geschäftsfunktionen zu verbessern und Umsatzströme zu steigern. Wir empfehlen Ihnen dringend, den Wert Ihrer Vorhersage gegen die Auswirkungen und Verzerrungen abzuwägen, die auf ethische Art und Weise eingeführt werden können. Erfahren Sie mehr darüber, wie Microsoft [verantwortungsvolle KI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6) berücksichtigt. Sie können sich auch über [Techniken und Prozesse für verantwortungsvolles maschinelles Lernen](/azure/machine-learning/concept-responsible-ml) speziell für Azure Machine Learning informieren.
 
 ## <a name="prerequisites"></a>Anforderungen
 
-- Derzeit unterstützt diese Funktion Webdienste, die über [Machine Learning Studio (Classic)](https://studio.azureml.net) und [Azure Machine Learning Batch Pipelines](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines) veröffentlicht werden.
+- Derzeit unterstützt diese Funktion Webdienste, die über [Machine Learning Studio (Classic)](https://studio.azureml.net) und [Azure Machine Learning Batch Pipelines](/azure/machine-learning/concept-ml-pipelines) veröffentlicht werden.
 
-- Sie benötigen ein Azure Data Lake Gen2-Speicherkonto, das mit Ihrer Azure Studio-Instanz verbunden ist, um diese Funktion zu verwenden. Weitere Informationen finden Sie unter [Erstellen eines Azure Data Lake Storage Gen2-Speicherkontos](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Sie benötigen ein Azure Data Lake Gen2-Speicherkonto, das mit Ihrer Azure Studio-Instanz verbunden ist, um diese Funktion zu verwenden. Weitere Informationen finden Sie unter [Erstellen eines Azure Data Lake Storage Gen2-Speicherkontos](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Für Azure Machine Learning-Arbeitsbereiche mit Pipelines benötigen Sie Eigentümer- oder Benutzerzugriffs-Administratorberechtigungen für den Azure Machine Learning-Arbeitsbereich.
+
+   > [!NOTE]
+   > Daten werden zwischen Ihren Customer Insights-Instanzen und den ausgewählten Azure-Webdiensten oder -Pipelines im Workflow übertragen. Wenn Sie Daten an einen Azure-Service übertragen, stellen Sie sicher, dass der Service für die Verarbeitung von Daten auf die Weise und für den Standort konfiguriert ist, die erforderlich ist, um die rechtlichen Anforderungen für diese Daten für Ihr Unternehmen zu erfüllen.
 
 ## <a name="add-a-new-workflow"></a>Einen neuen Workflow hinzufügen
 
@@ -45,8 +51,8 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 1. Wählen Sie die **Arbeitsbereiche**, die mit Ihrem Webdienst verbunden sind. Es sind zwei Bereiche aufgeführt, einer für Azure Machine Learning v1 (Machine Learning Studio (Classic)) und Azure Machine Learning v2 (Azure Machine Learning). Wenn Sie sich nicht sicher sind, welcher Arbeitsbereich der richtige für Ihren Machine Learning Studio (Classic) Webservice ist, wählen Sie **Beliebig**.
 
 1. Wählen Sie den Machine Learning Studio (Classic)-Webdienst oder die Azure Machine Learning-Pipeline in der Dropdown-Liste **Webdienst, der Ihr Modell enthält**. Wählen Sie anschließend **Weiter** aus.
-   - Erfahren Sie mehr über [das Veröffentlichen eines Webdienstes in Machine Learning Studio (Classic)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Erfahren Sie mehr über [Veröffentlichen einer Pipeline in Azure Machine Learning mithilfe des Designers](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) oder [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Ihre Pipeline muss unter einem [Pipeline-Endpunkt](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) veröffentlicht werden.
+   - Erfahren Sie mehr über [das Veröffentlichen eines Webdienstes in Machine Learning Studio (Classic)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - Erfahren Sie mehr über [Veröffentlichen einer Pipeline in Azure Machine Learning mithilfe des Designers](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) oder [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Ihre Pipeline muss unter einem [Pipeline-Endpunkt](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) veröffentlicht werden.
 
 1. Wählen Sie für jede **Webdienst-Eingabe** die passende **Entität** aus Zielgruppen-Insights und wählen Sie **Weiter**.
    > [!NOTE]
@@ -54,7 +60,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 
    > [!div class="mx-imgBorder"]
    > ![Workflow konfigurieren](media/intelligence-screen2-updated.png "Workflow konfigurieren")
-   
+
 1. Legen Sie im Schritt **Modellausgabeparameter** die folgenden Eigenschaften fest:
    - Machine Learning Studio (Classic)
       1. Geben Sie den Ausgang **Entitätsname** ein, in den die Ergebnisse der Web-Service-Ausgabe fließen sollen.
@@ -62,12 +68,12 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
       1. Geben Sie den Ausgabe-**Entitätsnamen** ein, in den die Ergebnisse der Pipeline-Ausgabe fließen sollen.
       1. Wählen Sie den **Output-Datenspeicher-Parameternamen** Ihrer Batch-Pipeline aus dem Dropdown-Menü.
       1. Wählen Sie den **Output Path-Parameternamen** Ihrer Batch-Pipeline aus der Auswahlliste.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Modellausgabe-Parameterbereich](media/intelligence-screen3-outputparameters.png "Modellausgabe-Parameterbereich")
 
 1. Wählen Sie das passende Attribut aus der Dropdown-Liste **Kunden-ID in Ergebnissen**, das den Kunden identifiziert, und wählen Sie **Speichern**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Ergebnisse in den Kundendatenbereich überführen](media/intelligence-screen4-relatetocustomer.png "Ergebnisse mit dem Bereich Kundendaten in Beziehung setzen")
 
@@ -95,7 +101,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
       1. Wählen Sie den **Output Path-Parameternamen** für Ihre Test-Pipeline.
 
 1. Wählen Sie das passende Attribut aus der Dropdown-Liste **Kunden-ID in Ergebnissen**, das den Kunden identifiziert, und wählen Sie **Speichern**.
-   Sie müssen ein Attribut aus der Inferenzausgabe auswählen, dessen Werte der Spalte Kunden-ID der Entität Kunde ähneln. Wenn Sie eine solche Spalte nicht in Ihrem Datensatz haben, wählen Sie ein Attribut, das die Zeile eindeutig identifiziert.
+   Wählen Sie ein Attribut aus der Inferenzausgabe aus, dessen Werte der Spalte Kunden-ID der Entität Kunde ähneln. Wenn Sie eine solche Spalte nicht in Ihrem Datensatz haben, wählen Sie ein Attribut, das die Zeile eindeutig identifiziert.
 
 ## <a name="run-a-workflow"></a>Ausführen eines Workflows
 
@@ -113,5 +119,28 @@ Ihr Workflow läuft auch automatisch bei jeder geplanten Aktualisierung. Mehr er
 
 Ihr Workflow wird gelöscht. Die [Entität](entities.md), die beim Anlegen des Workflows angelegt wurde, bleibt bestehen und kann auf der Seite **Entitäten** eingesehen werden.
 
+## <a name="results"></a>Ergebnisse
+
+Ergebnisse aus einem Workflow werden in der Entität gespeichert, die während der Phase „Modellausgabeparameter“ konfiguriert wurde. Sie können auf diese Daten von der [Entitätsseite](entities.md) oder mit [API-Zugriff](apis.md) zugreifen.
+
+### <a name="api-access"></a>API-Zugriff
+
+Verwenden Sie für die spezifische OData-Abfrage das folgende Format, um Daten von einer benutzerdefinierten Modellentität abzurufen:
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Ersetzen Sie `<your instance id>` mit der ID Ihrer Customer Insights-Umgebung, die Sie beim Zugriff auf Customer Insights in der Adressleiste Ihres Browsers finden.
+
+1. Ersetzen Sie `<custom model output entity>` mit dem Entitätsnamen, den Sie im Schritt „Modellausgabeparameter“ der benutzerdefinierten Modellkonfiguration angegeben haben.
+
+1. Ersetzen Sie `<guid value>` mit der Kunden-ID des Kunden, für den Sie auf den Datensatz zugreifen möchten. Diese ID finden Sie normalerweise auf der [Kundenprofilseite](customer-profiles.md) im Feld „CustomerID“.
+
+## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
+
+- Warum kann ich meine Pipeline beim Einrichten eines benutzerdefinierten Modellworkflows nicht sehen?    
+  Dieses Problem wird häufig durch ein Konfigurationsproblem in der Pipeline verursacht. Stellen Sie sicher, dass der [Eingabeparameter konfiguriert ist](azure-machine-learning-experiments.md#dataset-configuration), und dass [Ausgabedatenspeicher und Pfadparameter](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) ebenfalls konfiguriert sind.
+
+- Was bedeutet der Fehler „Intelligenz-Workflow konnte nicht gespeichert werden“?    
+  Benutzer sehen diese Fehlermeldung normalerweise, wenn sie keine Berechtigungen für den Eigentümer- oder Benutzerzugriff Administrator im Arbeitsbereich haben. Der Benutzer benötigt eine höhere Berechtigungsstufe, damit Customer Insights den Workflow als Service verarbeiten kann, anstatt die Benutzeranmeldeinformationen für nachfolgende Ausführungen des Workflows zu verwenden.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

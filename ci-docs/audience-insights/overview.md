@@ -2,19 +2,19 @@
 title: Zielgruppenerkenntnisse für Dynamics 365 Customer Insights – Überblick
 description: Überblick über Zielgruppenerkenntnisse für Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5476994"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598629"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Zielgruppenerkenntnisse für Dynamics 365 Customer Insights – Überblick
 
@@ -25,7 +25,7 @@ Mit Hilfe von Audience Insights können Sie ein tieferes Verständnis für Ihre 
 - **Datensilos eliminieren und Kundendaten vereinheitlichen**
 
   - Verbinden und vereinheitlichen Sie Ihre Daten mit der einfachen Übernahme von Transaktions-, Beobachtungs- und Verhaltensdaten aus gängigen [Datenquellen durch Nutzung vorgefertigter Konnektoren](data-sources.md).
-  - Transformieren Sie die Kundendaten auf intelligente Weise und erstellen Sie einheitliche Kundenprofile, die dem [Gemeinsamen Datenmodell](https://docs.microsoft.com/common-data-model/) entsprechen. Auflösen von Kundenidentitäten mit AI/ML-gesteuerten Empfehlungen.
+  - Transformieren Sie die Kundendaten auf intelligente Weise und erstellen Sie einheitliche Kundenprofile, die dem [Gemeinsamen Datenmodell](/common-data-model/) entsprechen. Auflösen von Kundenidentitäten mit AI/ML-gesteuerten Empfehlungen.
 
 - **Anreichern mit der in Microsoft Graph enthaltenen Zielgruppenintelligenz**
 
@@ -42,7 +42,7 @@ Mit Hilfe von Audience Insights können Sie ein tieferes Verständnis für Ihre 
 - **Datenanalytiker / Admins:**
 
   - Zugriff auf eine umfangreiche Sammlung von Konnektoren, um alle Ihre Kundendaten aufzunehmen.
-  - Möglichkeit, Kundendaten zu vereinheitlichen und in das Format [Gemeinsames Datenmodell](https://docs.microsoft.com/common-data-model/) zu transformieren.
+  - Möglichkeit, Kundendaten zu vereinheitlichen und in das Format [Gemeinsames Datenmodell](/common-data-model/) zu transformieren.
   - Anreicherung von Kundeninformationen mit Erkenntnissen aus den in Microsoft Graph enthaltenen Informationen über das Publikum, wie z. B. Markenaffinität und -interessen.
   - „Klicks-nicht-Code"-Konfiguration und Debugging-Erfahrung, um die Konfiguration von Insights für die Zielgruppe zu vereinfachen und mögliche Probleme zu identifizieren.
   - Bereinigen und standardisieren Sie Kundendaten aus unterschiedlichen Quellen mit KI-basierten Empfehlungen.  

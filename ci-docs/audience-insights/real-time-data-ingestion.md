@@ -2,19 +2,19 @@
 title: Datenerfassung in Echtzeit und Einschränkungen
 description: Allgemeine Informationen zu den Funktionalitäten von Zielgruppen-Insights in Echtzeit.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270279"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598568"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Datenerfassung in Echtzeit (Vorschau)
 
@@ -54,7 +54,7 @@ Mit der Echtzeit-API können Sie eine neue Aktivität aus Ihrem Quellsystem (ein
 
 Es gibt zwei Möglichkeiten, sich mit der Echtzeit-API zu verbinden:
 
-- [indirekt](#connect-via-the-dynamics-365-customer-insights-connector) unter Verwendung des [Dynamics 365 Customer Insights-Connectors](https://docs.microsoft.com/connectors/customerinsights/)
+- [indirekt](#connect-via-the-dynamics-365-customer-insights-connector) unter Verwendung des [Dynamics 365 Customer Insights-Connectors](/connectors/customerinsights/)
 - [direkt](#connect-directly-to-the-real-time-api) mit Code
 
 Die folgenden Voraussetzungen gelten für beide Methoden:
@@ -66,13 +66,13 @@ Die folgenden Voraussetzungen gelten für beide Methoden:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Über den Dynamics 365 Customer Insights-Connector verbinden
 
-Die Echtzeit-API kann Daten von einem dedizierten Power Platform-Connector, dem [Dynamics 365 Customer Insights-Connector](https://docs.microsoft.com/connectors/customerinsights/), erfassen, ohne dass Code geschrieben und bereitgestellt werden muss.    
-Der Connector kann dieselben Echtzeitaktionen wie die API ausführen. Sie benötigen eine gültige Lizenz für Premium-Connectors. Weitere Informationen finden Sie unter [FAQs zur Power Apps- und Power Automate-Lizenzierung](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Die Echtzeit-API kann Daten von einem dedizierten Power Platform-Connector, dem [Dynamics 365 Customer Insights-Connector](/connectors/customerinsights/), erfassen, ohne dass Code geschrieben und bereitgestellt werden muss.    
+Der Connector kann dieselben Echtzeitaktionen wie die API ausführen. Sie benötigen eine gültige Lizenz für Premium-Connectors. Weitere Informationen finden Sie unter [FAQs zur Power Apps- und Power Automate-Lizenzierung](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps und/oder Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps und/oder Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Einzelheiten zum Erstellen von Flows finden Sie in der [Power Automate-Dokumentation](https://docs.microsoft.com/power-automate/).
+Einzelheiten zum Erstellen von Flows finden Sie in der [Power Automate-Dokumentation](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Eine direkte Verbindung zur Echtzeit-API herstellen
 

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269927"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654731"
 ---
 # <a name="define-and-manage-measures"></a>Definieren und Verwalten von Kennzahlen
 
@@ -72,8 +72,8 @@ In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu e
    1. Wählen Sie **Dimensionen bearbeiten** aus, um Datenattribute hinzuzufügen, nach denen Sie die Kennzahlen gruppieren möchten. Zum Beispiel Stadt oder Geschlecht. Standardmäßig wird die *Kundennummer*-Dimension zum Erstellen von *Kennzahlen auf Kundenebene* ausgewählt. Sie können die Standarddimension entfernen, wenn Sie *Kennzahlen auf Unternehmensebene* erstellen möchten.
    1. Wählen Sie **Fertig**, um die Dimensionen zur Kennzahl hinzuzufügen.
 
-1. Wenn zwischen der von Ihnen zugeordneten Datenentität und der Kundenentität mehrere Pfade vorhanden sind, müssen Sie einen der identifizierten [Entitätsbeziehungspfade](relationships.md) auswählen. Die Kennzahlenergebnisse können je nach ausgewähltem Pfad variieren.
-   1. Wählen Sie **Dateneinstellungen**, und wählen Sie den Entitätspfad aus, der zur Identifizierung Ihrer Kennzahl verwendet werden soll.
+1. Wenn zwischen der von Ihnen zugeordneten Datenentität und der *Kunden* Entität mehrere Pfade vorhanden sind, müssen Sie einen der identifizierten [Entitätsbeziehungspfade auswählen](relationships.md). Die Kennzahlenergebnisse können je nach ausgewähltem Pfad variieren. 
+   1. Wählen Sie **Dateneinstellungen**, und wählen Sie den Entitätspfad aus, der zur Identifizierung Ihrer Kennzahl verwendet werden soll. Wenn es nur einen einzigen Weg zur Entität *Kunde* gibt, wird dieses Steuerelement nicht angezeigt.
    1. Wählen **Fertig**, um Ihre Auswahl anzuwenden. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Wählen Sie den Entitätspfad für die Kennzahl aus.":::
