@@ -1,7 +1,7 @@
 ---
-title: Exportziele
-description: Daten exportieren und Exportziele verwalten.
-ms.date: 07/21/2020
+title: Exportieren Sie Daten aus Customer Insights
+description: Verwalten Sie Datenexporte, um Daten freizugeben.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596084"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896142"
 ---
-# <a name="export-destinations-preview-overview"></a><span data-ttu-id="9cbba-103">Exportziele (Vorschau) – Übersicht</span><span class="sxs-lookup"><span data-stu-id="9cbba-103">Export destinations (preview) overview</span></span>
+# <a name="exports-preview-overview"></a><span data-ttu-id="e2d61-103">Exporte (Vorschau) – Übersicht</span><span class="sxs-lookup"><span data-stu-id="e2d61-103">Exports (preview) overview</span></span>
 
-<span data-ttu-id="9cbba-104">Die Seite **Exportziele** zeigt Ihnen die Orte, die Sie für den Export von Daten eingerichtet haben.</span><span class="sxs-lookup"><span data-stu-id="9cbba-104">The **Export destinations** page shows you all locations you've set up to export data to.</span></span> <span data-ttu-id="9cbba-105">Sie können auch neue Ziele für den Export hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="9cbba-105">You can also add new destinations for export.</span></span> <span data-ttu-id="9cbba-106">Zusätzlich zeigt es die aktuell verfügbaren Exportoptionen an.</span><span class="sxs-lookup"><span data-stu-id="9cbba-106">Additionally, it shows export currently available options.</span></span> <span data-ttu-id="9cbba-107">Verschaffen Sie sich einen schnellen Überblick und eine Beschreibung und finden Sie heraus, was Sie mit den einzelnen Erweiterungsoptionen tun können.</span><span class="sxs-lookup"><span data-stu-id="9cbba-107">Get a quick overview, description, and find out what you can do with each extensibility option.</span></span> <span data-ttu-id="9cbba-108">Exportieren Sie vereinheitlichte Profile, Messgrößen und Segmente in unterstützte Anwendungen, die für Ihr Unternehmen relevant sind.</span><span class="sxs-lookup"><span data-stu-id="9cbba-108">Export unified profiles, measures, and segments to supported apps relevant for your business.</span></span>
+<span data-ttu-id="e2d61-104">Die Seite **Exporte** zeigt Ihnen alle konfigurierten Exporte.</span><span class="sxs-lookup"><span data-stu-id="e2d61-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="e2d61-105">Exporte teilen bestimmte Daten mit verschiedenen Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="e2d61-106">Sie können Kundenprofile oder -entitäten, Schemas und Zuordnungsdetails enthalten.</span><span class="sxs-lookup"><span data-stu-id="e2d61-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="e2d61-107">Jeder Export erfordert eine [Verbindung, die von einem Administrator eingerichtet wurde, um die Authentifizierung und den Zugriff zu verwalten](connections.md).</span><span class="sxs-lookup"><span data-stu-id="e2d61-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
 
-<span data-ttu-id="9cbba-109">Gehen Sie zu **Admin** > **Exportziele**, um die folgenden Erweiterungsoptionen zu finden:</span><span class="sxs-lookup"><span data-stu-id="9cbba-109">Go to **Admin** > **Export destinations** to find the following extensibility options:</span></span>
+> [!NOTE]
+> <span data-ttu-id="e2d61-108">Bis März 2021 stellten Exporte automatisch eine Verbindung zum entsprechenden Dienst her.</span><span class="sxs-lookup"><span data-stu-id="e2d61-108">Until March 2021, exports created a connection to the corresponding service automatically.</span></span> <span data-ttu-id="e2d61-109">Exporte erfordern jetzt eine [Verbindung, die von einem Administrator erstellt und geteilt wurde](connections.md), bevor Sie sie erstellen können.</span><span class="sxs-lookup"><span data-stu-id="e2d61-109">Exports now require a [connection, created and shared by an administrator](connections.md) before you can create them.</span></span>
 
-- [<span data-ttu-id="9cbba-110">Adobe Campaign Standard</span><span class="sxs-lookup"><span data-stu-id="9cbba-110">Adobe Campaign Standard</span></span>](export-adobe-campaign-standard.md)
-- [<span data-ttu-id="9cbba-111">Adobe Experience Platform</span><span class="sxs-lookup"><span data-stu-id="9cbba-111">Adobe Experience Platform</span></span>](export-adobe-experience-platform.md)
-- [<span data-ttu-id="9cbba-112">AdRoll</span><span class="sxs-lookup"><span data-stu-id="9cbba-112">AdRoll</span></span>](export-adroll.md)
-- [<span data-ttu-id="9cbba-113">Autopilot</span><span class="sxs-lookup"><span data-stu-id="9cbba-113">Autopilot</span></span>](export-autopilot.md)
-- [<span data-ttu-id="9cbba-114">Azure Blob Storage</span><span class="sxs-lookup"><span data-stu-id="9cbba-114">Azure Blob Storage</span></span>](export-azure-blob-storage.md)
-- [<span data-ttu-id="9cbba-115">Azure Data Lake Storage Gen2</span><span class="sxs-lookup"><span data-stu-id="9cbba-115">Azure Data Lake Storage Gen2</span></span>](export-azure-data-lake-storage-gen2.md)
-- [<span data-ttu-id="9cbba-116">Bot für Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="9cbba-116">Bot for Microsoft Teams</span></span>](export-teams-bot.md)
-- [<span data-ttu-id="9cbba-117">Customer Insights API</span><span class="sxs-lookup"><span data-stu-id="9cbba-117">Customer Insights API</span></span>](apis.md)
-- [<span data-ttu-id="9cbba-118">DotDigital</span><span class="sxs-lookup"><span data-stu-id="9cbba-118">DotDigital</span></span>](export-dotdigital.md)
-- [<span data-ttu-id="9cbba-119">Dynamics 365 Customer Service (Kundenkarten-Add-in)</span><span class="sxs-lookup"><span data-stu-id="9cbba-119">Dynamics 365 Customer Service (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="9cbba-120">Dynamics 365 Marketing</span><span class="sxs-lookup"><span data-stu-id="9cbba-120">Dynamics 365 Marketing</span></span>](export-dynamics365-marketing.md)
-- [<span data-ttu-id="9cbba-121">Dynamics 365 Sales</span><span class="sxs-lookup"><span data-stu-id="9cbba-121">Dynamics 365 Sales</span></span>](export-dynamics365-sales.md)
-- [<span data-ttu-id="9cbba-122">Dynamics 365 Sales Hub (Kundenkarten-Add-in)</span><span class="sxs-lookup"><span data-stu-id="9cbba-122">Dynamics 365 Sales Hub (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="9cbba-123">Facebook-Werbeanzeigenmanager</span><span class="sxs-lookup"><span data-stu-id="9cbba-123">Facebook Ads Manager</span></span>](export-facebook.md)
-- [<span data-ttu-id="9cbba-124">Google Ads</span><span class="sxs-lookup"><span data-stu-id="9cbba-124">Google Ads</span></span>](export-google-ads.md)
-- [<span data-ttu-id="9cbba-125">LiveRamp&reg;</span><span class="sxs-lookup"><span data-stu-id="9cbba-125">LiveRamp&reg;</span></span>](export-liveramp.md)
-- [<span data-ttu-id="9cbba-126">Mailchimp</span><span class="sxs-lookup"><span data-stu-id="9cbba-126">Mailchimp</span></span>](export-mailchimp.md)
-- [<span data-ttu-id="9cbba-127">Marketo</span><span class="sxs-lookup"><span data-stu-id="9cbba-127">Marketo</span></span>](export-marketo.md)
-- [<span data-ttu-id="9cbba-128">Power Automate</span><span class="sxs-lookup"><span data-stu-id="9cbba-128">Power Automate</span></span>](export-power-automate.md)
-- [<span data-ttu-id="9cbba-129">Power Apps</span><span class="sxs-lookup"><span data-stu-id="9cbba-129">Power Apps</span></span>](export-power-apps.md)
-- [<span data-ttu-id="9cbba-130">Power BI</span><span class="sxs-lookup"><span data-stu-id="9cbba-130">Power BI</span></span>](export-power-bi.md)
-- [<span data-ttu-id="9cbba-131">SendGrid</span><span class="sxs-lookup"><span data-stu-id="9cbba-131">SendGrid</span></span>](export-sendgrid.md)
-- [<span data-ttu-id="9cbba-132">SFTP</span><span class="sxs-lookup"><span data-stu-id="9cbba-132">SFTP</span></span>](export-sftp.md)
+<span data-ttu-id="e2d61-110">Gehen Sie zu **Daten** > **Exporte**, um die Exportseite anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-110">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="e2d61-111">Alle Benutzerrollen haben Zugriff auf die angezeigten Exporte.</span><span class="sxs-lookup"><span data-stu-id="e2d61-111">All user roles have access to view configured exports.</span></span> <span data-ttu-id="e2d61-112">Verwenden Sie das Suchfeld in der Befehlsleiste, um Exporte nach Name, Verbindungsname oder Verbindungstyp zu suchen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-112">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
 
-## <a name="add-a-new-export-destination"></a><span data-ttu-id="9cbba-133">Neues Exportziel hinzufügen</span><span class="sxs-lookup"><span data-stu-id="9cbba-133">Add a new export destination</span></span>
+## <a name="set-up-a-new-export"></a><span data-ttu-id="e2d61-113">Einen neuen Export einrichten</span><span class="sxs-lookup"><span data-stu-id="e2d61-113">Set up a new export</span></span>
 
-<span data-ttu-id="9cbba-134">Um Exportziele hinzuzufügen, haben Sie [Administrator-Berechtigungen](permissions.md).</span><span class="sxs-lookup"><span data-stu-id="9cbba-134">To add export destinations, you have [administrator permissions](permissions.md).</span></span> <span data-ttu-id="9cbba-135">Wenn Sie zu Microsoft-Diensten exportieren, gehen wir davon aus, dass sich beide Dienste in derselben Organisation befinden.</span><span class="sxs-lookup"><span data-stu-id="9cbba-135">If you export to Microsoft services, we assume both services are in the same organization.</span></span>
+<span data-ttu-id="e2d61-114">Um einen Export einzurichten oder zu bearbeiten, müssen Verbindungen verfügbar sein.</span><span class="sxs-lookup"><span data-stu-id="e2d61-114">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="e2d61-115">Verbindungen hängen von Ihrer [Benutzerrolle](permissions.md) ab:</span><span class="sxs-lookup"><span data-stu-id="e2d61-115">Connections depend on your [user role](permissions.md):</span></span>
+- <span data-ttu-id="e2d61-116">Administratoren haben Zugriff auf alle Verbindungen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-116">Administrators have access to all connections.</span></span> <span data-ttu-id="e2d61-117">Sie können beim Einrichten eines Exports auch neue Verbindungen herstellen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-117">They can also create new connections when setting up an export.</span></span>
+- <span data-ttu-id="e2d61-118">Mitwirkende können auf bestimmte Verbindungen zugreifen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-118">Contributors can have access to specific connections.</span></span> <span data-ttu-id="e2d61-119">Sie hängen von Administratoren ab, um Verbindungen zu konfigurieren und gemeinsam zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-119">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="e2d61-120">Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="e2d61-120">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
+- <span data-ttu-id="e2d61-121">Betrachter können nur vorhandene Exporte anzeigen, aber nicht erstellen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-121">Viewers can only view existing exports but not create them.</span></span>
 
-1. <span data-ttu-id="9cbba-136">Gehen Sie zu **Administrator** > **Exportziele**.</span><span class="sxs-lookup"><span data-stu-id="9cbba-136">Go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="e2d61-122">Gehen Sie zu **Daten** > **Exporte**.</span><span class="sxs-lookup"><span data-stu-id="e2d61-122">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="9cbba-137">Wechseln Sie zur Registerkarte **Meine Exportziele**.</span><span class="sxs-lookup"><span data-stu-id="9cbba-137">Switch to the **My export destinations** tab.</span></span>
+1. <span data-ttu-id="e2d61-123">Wählen Sie **Export hinzufügen**, um ein neues Exportziel zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-123">Select **Add export** to create a new export destination.</span></span>
 
-1. <span data-ttu-id="9cbba-138">Wählen **Ziel hinzufügen**, um ein neues Exportziel zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="9cbba-138">Select **Add destination** to create a new export destination.</span></span>
+1. <span data-ttu-id="e2d61-124">Im Bereich **Export einrichten** wählen Sie aus, welche Verbindung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="e2d61-124">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="e2d61-125">[Verbindungen](connections.md) werden von Administratoren verwaltet.</span><span class="sxs-lookup"><span data-stu-id="e2d61-125">[Connections](connections.md) are managed by administrators.</span></span> 
 
-1. <span data-ttu-id="9cbba-139">In dem Bereich **Ziel hinzufügen** wählen Sie den **Typ** des Exportziels in der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="9cbba-139">In the **Add destination** pane, select the **Type** of export destination in the drop-down.</span></span>
+1. <span data-ttu-id="e2d61-126">Geben Sie die erforderlichen Details ein und wählen Sie **Speichern**, um den Export zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-126">Provide the required details and select **Save** to create the export.</span></span>
 
-1. <span data-ttu-id="9cbba-140">Geben Sie die erforderlichen Details ein und wählen Sie **Weiter**, um das Exportziel zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="9cbba-140">Provide the required details and select **Next** to create the export destination.</span></span>
+### <a name="edit-an-export"></a><span data-ttu-id="e2d61-127">Einen Export bearbeiten</span><span class="sxs-lookup"><span data-stu-id="e2d61-127">Edit an export</span></span>
 
-<span data-ttu-id="9cbba-141">Sie können auch auf einer Kachel **Installieren** in der Registerkarte **Entdecken** auswählen.</span><span class="sxs-lookup"><span data-stu-id="9cbba-141">You can also select **Set up** on a tile on the **Discover** tab.</span></span>
+1. <span data-ttu-id="e2d61-128">Wählen Sie die vertikale Auslassung für das Exportziel aus, das Sie bearbeiten möchten.</span><span class="sxs-lookup"><span data-stu-id="e2d61-128">Select the vertical ellipsis for the export destination you want to edit.</span></span>
 
-## <a name="view-export-destinations"></a><span data-ttu-id="9cbba-142">Exportziele anzeigen</span><span class="sxs-lookup"><span data-stu-id="9cbba-142">View Export destinations</span></span>
+1. <span data-ttu-id="e2d61-129">Wählen Sie **Bearbeiten** aus dem Dropdownmenü aus.</span><span class="sxs-lookup"><span data-stu-id="e2d61-129">Select **Edit** from the drop-down menu.</span></span>
 
-<span data-ttu-id="9cbba-143">Nachdem Sie Exportziele erstellt haben, finden Sie diese in einer Tabelle auf der Registerkarte **Meine Exportziele**. Diese Tabelle enthält drei Spalten:</span><span class="sxs-lookup"><span data-stu-id="9cbba-143">After creating export destinations, you'll find them in a table on the **My export destinations** tab. This table has three columns:</span></span>
+1. <span data-ttu-id="e2d61-130">Ändern Sie die gewünschten Werte zur Aktualisierung und wählen **Speichern** aus.</span><span class="sxs-lookup"><span data-stu-id="e2d61-130">Change the values you want to update and select **Save**.</span></span>
 
-- <span data-ttu-id="9cbba-144">**Anzeigename**: Der Name, den Sie beim Erstellen des Ziels eingegeben haben.</span><span class="sxs-lookup"><span data-stu-id="9cbba-144">**Display name**: The name you entered when creating the destination.</span></span>
-- <span data-ttu-id="9cbba-145">**Typ**:  Der Exportzieltyp, den Sie beim Erstellen des Ziels festgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="9cbba-145">**Type**: The export destination type you set when creating the destination.</span></span>
-- <span data-ttu-id="9cbba-146">**Erstellt am**: Das Datum, an dem das Ziel erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="9cbba-146">**Created**: The date you created the destination.</span></span>
+## <a name="view-exports-and-export-details"></a><span data-ttu-id="e2d61-131">Exporte anzeigen und Details exportieren</span><span class="sxs-lookup"><span data-stu-id="e2d61-131">View Exports and export details</span></span>
 
-## <a name="edit-an-export-destination"></a><span data-ttu-id="9cbba-147">Ein Exportziel bearbeiten</span><span class="sxs-lookup"><span data-stu-id="9cbba-147">Edit an export destination</span></span>
+<span data-ttu-id="e2d61-132">Nach dem Erstellen von Exportzielen werden diese in **Daten** > **Exporte** aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="e2d61-132">After creating export destinations, they are listed on **Data** > **Exports**.</span></span> <span data-ttu-id="e2d61-133">Alle Benutzer können sehen, welche Daten gemeinsam genutzt werden und welchen Status sie haben.</span><span class="sxs-lookup"><span data-stu-id="e2d61-133">All users can see which data is shared and its latest status.</span></span>
 
-1. <span data-ttu-id="9cbba-148">Wählen Sie die vertikale Auslassung für das Exportziel aus, das Sie bearbeiten möchten.</span><span class="sxs-lookup"><span data-stu-id="9cbba-148">Select the vertical ellipsis for the Export destination you want to edit.</span></span>
+1. <span data-ttu-id="e2d61-134">Gehen Sie zu **Daten** > **Exporte**.</span><span class="sxs-lookup"><span data-stu-id="e2d61-134">Go to **Data** > **Exports**.</span></span>
 
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="9cbba-149">![Vertikale Ellipsen](media/export-destinations-page-ellipsis.png "Vertikale Ellipsen")</span><span class="sxs-lookup"><span data-stu-id="9cbba-149">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+1. <span data-ttu-id="e2d61-135">Benutzer ohne Bearbeitungsberechtigung wählen **Anzeigen** statt **Bearbeiten** aus, um die Exportdetails anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-135">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
 
-1. <span data-ttu-id="9cbba-150">Wählen Sie **Bearbeiten** aus dem Dropdown-Menü aus.</span><span class="sxs-lookup"><span data-stu-id="9cbba-150">Select **Edit** from the dropdown menu.</span></span>
+1. <span data-ttu-id="e2d61-136">Dieser Seitenbereich zeigt die Einrichtung dieses Exports.</span><span class="sxs-lookup"><span data-stu-id="e2d61-136">This side pane shows the set up of this export.</span></span> <span data-ttu-id="e2d61-137">Ohne Bearbeitungsberechtigungen können Sie keine Werte ändern.</span><span class="sxs-lookup"><span data-stu-id="e2d61-137">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="e2d61-138">Wählen Sie **Schließen** aus, um zur Exportseite zurückzukehren.</span><span class="sxs-lookup"><span data-stu-id="e2d61-138">Select **Close** to return to the exports page.</span></span>
 
-1. <span data-ttu-id="9cbba-151">Ändern Sie die zu aktualisierenden Werte und wählen Sie **speichern**.</span><span class="sxs-lookup"><span data-stu-id="9cbba-151">Change the values that require update and select **Save**.</span></span>
+## <a name="run-exports-on-demand"></a><span data-ttu-id="e2d61-139">Exporte Bedarfsgesteuert ausführen</span><span class="sxs-lookup"><span data-stu-id="e2d61-139">Run exports on demand</span></span>
 
-## <a name="export-data-on-demand"></a><span data-ttu-id="9cbba-152">Daten nach Bedarf exportieren</span><span class="sxs-lookup"><span data-stu-id="9cbba-152">Export data on demand</span></span>
+<span data-ttu-id="e2d61-140">Nach dem Konfigurieren eines Exports wird er mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt, solange es eine funktionierende Verbindung gibt.</span><span class="sxs-lookup"><span data-stu-id="e2d61-140">After configuring an export, it will run with every [scheduled refresh](system.md#schedule-tab) as long as it has a working connection.</span></span>
 
-<span data-ttu-id="9cbba-153">Nach dem Konfigurieren eines Connectors für ein Exportziel werden die Exporte mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="9cbba-153">After configuring a connector for an export destination, exports will run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="e2d61-141">Um Daten zu exportieren, ohne auf eine geplante Aktualisierung zu warten, gehen Sie zu **Daten** > **Exporte**.</span><span class="sxs-lookup"><span data-stu-id="e2d61-141">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span> <span data-ttu-id="e2d61-142">Sie haben zwei Möglichkeiten:</span><span class="sxs-lookup"><span data-stu-id="e2d61-142">You have two options:</span></span>
 
-<span data-ttu-id="9cbba-154">Um Daten zu exportieren, ohne auf eine geplante Aktualisierung zu warten, gehen Sie zur Regisgerkarte **Meine Exportziele** unter **Administrator** > **Ziele exportieren**.</span><span class="sxs-lookup"><span data-stu-id="9cbba-154">To export data without waiting for a scheduled refresh, go the **My export destinations** tab on **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="e2d61-143">Um alle Exporte auszuführen, wählen Sie **Alle ausführen** in der Befehlsleiste aus.</span><span class="sxs-lookup"><span data-stu-id="e2d61-143">To run all exports, select **Run all** in the command bar.</span></span> 
+- <span data-ttu-id="e2d61-144">Um einen einzelnen Export auszuführen, wählen Sie die Auslassungspunkte (...) in einem Listenelement aus und wählen Sie dann **Ausführen**.</span><span class="sxs-lookup"><span data-stu-id="e2d61-144">To run a single export, select the ellipsis (...) on a list item and then choose **Run**.</span></span>
 
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="9cbba-155">![Vertikale Ellipsen](media/export-destinations-page-ellipsis.png "Vertikale Ellipsen")</span><span class="sxs-lookup"><span data-stu-id="9cbba-155">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+## <a name="remove-an-export"></a><span data-ttu-id="e2d61-145">Einen Export entfernen</span><span class="sxs-lookup"><span data-stu-id="e2d61-145">Remove an Export</span></span>
 
-- <span data-ttu-id="9cbba-156">Wählen Sie **Exportieren** oben in der Liste aus, um den Export zu allen Exportzielen gleichzeitig auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9cbba-156">Select **Export** above the list to run the export to all export destinations simultaneously.</span></span>
-- <span data-ttu-id="9cbba-157">Wählen Sie die Auslassungspunkte (...) nach einem Listenelement aus und wählen Sie dann die Option **Exportieren** zum Ausführen des Exports für ein einzelnes Exportziel.</span><span class="sxs-lookup"><span data-stu-id="9cbba-157">Select the ellipsis (...) after a list item and then choose the **Export** option to run the export for a single export destination.</span></span>
+1. <span data-ttu-id="e2d61-146">Gehen Sie zu **Daten** > **Exporte**.</span><span class="sxs-lookup"><span data-stu-id="e2d61-146">Go to **Data** > **Exports**.</span></span>
 
-## <a name="remove-an-export-destination"></a><span data-ttu-id="9cbba-158">Ein Exportziel entfernen</span><span class="sxs-lookup"><span data-stu-id="9cbba-158">Remove an Export destination</span></span>
+1. <span data-ttu-id="e2d61-147">Wählen Sie die vertikale Auslassung für den Export aus, den Sie entfernen möchten.</span><span class="sxs-lookup"><span data-stu-id="e2d61-147">Select the vertical ellipsis for the Export you want to remove.</span></span>
 
-<span data-ttu-id="9cbba-159">Um ein Exportziel zu entfernen, beginnen Sie auf der Hauptseite **Exportziele**.</span><span class="sxs-lookup"><span data-stu-id="9cbba-159">To remove an Export destination, start from the main **Export destinations** page.</span></span>
+1. <span data-ttu-id="e2d61-148">Klicken Sie im Dropdown-Menü auf **Entfernen**.</span><span class="sxs-lookup"><span data-stu-id="e2d61-148">Select **Remove** from the dropdown menu.</span></span>
 
-1. <span data-ttu-id="9cbba-160">Wählen Sie die vertikale Auslassung für das Exportziel aus, das Sie entfernen möchten.</span><span class="sxs-lookup"><span data-stu-id="9cbba-160">Select the vertical ellipsis for the Export destination you want to remove.</span></span>
-
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="9cbba-161">![Vertikale Ellipsen](media/export-destinations-page-ellipsis.png "Vertikale Ellipsen")</span><span class="sxs-lookup"><span data-stu-id="9cbba-161">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
-
-2. <span data-ttu-id="9cbba-162">Klicken Sie im Dropdown-Menü auf **Entfernen**.</span><span class="sxs-lookup"><span data-stu-id="9cbba-162">Select **Remove** from the dropdown menu.</span></span>
-
-3. <span data-ttu-id="9cbba-163">Bestätigen Sie das Entfernen, indem Sie **Entfernen** auf dem Bestätigungsbildschirm wählen.</span><span class="sxs-lookup"><span data-stu-id="9cbba-163">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
+1. <span data-ttu-id="e2d61-149">Bestätigen Sie das Entfernen, indem Sie **Entfernen** auf dem Bestätigungsbildschirm wählen.</span><span class="sxs-lookup"><span data-stu-id="e2d61-149">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
