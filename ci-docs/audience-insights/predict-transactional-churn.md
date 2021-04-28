@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597188"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906855"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Vorhersage der Transaktionsabwanderung (Vorschau)
 
@@ -46,6 +46,14 @@ Die Transaktionsabwanderungsvorhersage hilft bei der Vorhersage, ob ein Kunde Ih
         - **Zeitstempel:** Das Datum und die Uhrzeit des durch den Primärschlüssel identifizierten Ereignisses.
         - **Ereignis:** Der Name des Ereignisses, das Sie verwenden möchten. Ein Feld namens „UserAction“ in einem Lebensmittelgeschäft könnte z.B. die Verwendung des Coupons durch den Kunden sein.
         - **Details:** Detaillierte Informationen über das Ereignis. Zum Beispiel könnte ein Feld namens „CouponValue“ in einem Lebensmittelgeschäft der Währungswert des Coupons sein.
+- Vorgeschlagene Datencharakteristik:
+    - Ausreichende historische Daten: Transaktionsdaten für mindestens das Doppelte des ausgewählten Zeitfensters. Vorzugsweise zwei bis drei Jahre Abonnementdaten. 
+    - Mehrfachkäufe pro Kunde: Idealerweise mindestens zwei Transaktionen pro Kunde.
+    - Anzahl der Kunden: Mindestens 10 Kundenprofilen, vorzugsweise mehr als 1.000 eindeutigen Kunden. Das Modell schlägt mit weniger als 10 Kunden und unzureichenden historischen Daten fehl.
+    - Vollständigkeit der Daten: Weniger als 20 % der fehlenden Werte im Datenfeld der angegebenen Entität.
+
+> [!NOTE]
+> Für ein Unternehmen mit hoher Kundenkaufhäufigkeit (alle paar Wochen) wird empfohlen, ein kürzeres Vorhersage-Fenster und eine kürzere Abwanderungsdefinition auszuwählen. Wählen Sie für eine niedrige Kaufhäufigkeit (alle paar Monate oder einmal im Jahr) ein längeres Vorhersage-Fenster und eine längere Abwanderungsdefinition.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Erstellen Sie eine transaktionale Abwanderungsvorhersage
 
@@ -129,7 +137,9 @@ Die Transaktionsabwanderungsvorhersage hilft bei der Vorhersage, ob ein Kunde Ih
 1. Wählen Sie die Vorhersage aus, die Sie überprüfen möchten.
    - **Vorhersagename:** Name der Vorhersage, der beim Erstellen der Vorhersage angegeben wird.
    - **Vorhersagetyp:** Typ des für die Vorhersage verwendeten Modells
-   - **Ausgabe-Entität:** Name der Entität, die die Ausgabe der Vorhersage speichern soll. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.
+   - **Ausgabe-Entität:** Name der Entität, die die Ausgabe der Vorhersage speichern soll. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.    
+     In der Ausgabeentität ist *ChurnScore* die vorhergesagte Abwanderungswahrscheinlichkeit und *IsChurn* eine binäre Bezeichnung basierend auf *ChurnScore* mit Grenzwert 0,5. Der Standardschwellenwert funktioniert möglicherweise nicht für Ihr Szenario. [Erstellen Sie ein neues Segment](segments.md#create-a-new-segment) mit Ihrem bevorzugten Grenzwert.
+     Nicht alle Kunden sind notwendigerweise aktive Kunden. Einige von ihnen hatten möglicherweise lange Zeit keine Aktivität mehr und werden aufgrund Ihrer Abwanderungsdefinition bereits als aufgewühlt angesehen. Die Vorhersage des Abwanderungsrisikos für Kunden, die bereits Abwanderung betrieben haben, ist nicht sinnvoll, da dies nicht die Publikum von Interesse sind.
    - **Vorhersagefeld:** Dieses Feld wird nur für einige Arten von Vorhersagen ausgefüllt und wird nicht für die Abwanderungsvorhersage verwendet.
    - **Status:** Status des Vorhersagelaufs.
         - **In Warteschlange:** Die Vorhersage wartet auf die Ausführung anderer Prozesse.

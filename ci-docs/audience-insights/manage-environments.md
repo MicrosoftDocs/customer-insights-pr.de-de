@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598292"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887985"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
 
@@ -44,6 +44,9 @@ Dieser Artikel erklärt, wie Sie eine neue Organisation erstellen und wie Sie ei
 
 Beim Erstellen einer neuen Umgebung, gibt es zwei Möglichkeiten. Sie können entweder eine völlig neue Konfiguration angeben oder Sie können einige Konfigurationseinstellungen aus einer vorhandenen Umgebung kopieren.
 
+> [!NOTE]
+> Organisationen können *zwei* Umgebungen für jede Customer Insights-Lizenz erstellen. Wenn Ihre Organisation mehr als eine Lizenz erwirbt, [kKontaktieren Sie unser Support-Team](https://go.microsoft.com/fwlink/?linkid=2079641), um die Anzahl der verfügbaren Umgebungen zu erhöhen. Weitere Informationen zu Kapazität und Zusatzkapazität finden Sie im [Dynamics 365-Lizenzierungshandbuch](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 So erstellen Sie eine Umgebung:
 
 1. Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus.
@@ -55,14 +58,14 @@ So erstellen Sie eine Umgebung:
 
 1. Im **Neue Umgebung erstellen**-Dialog wählen Sie **Neue Umgebung** aus.
 
-   Wenn Sie [Daten aus der aktuellen Umgebung kopieren](#additional-considerations-for-copy-configuration-preview) wollen, wählen Sie **Aus vorhandener Umgebung kopieren** aus. Sie sehen eine Liste aller verfügbaren Umgebungen in Ihrer Organisation, aus der Sie Daten kopieren können.
+   Wenn Sie [Daten aus der aktuellen Umgebung kopieren](#considerations-for-copy-configuration-preview) wollen, wählen Sie **Aus vorhandener Umgebung kopieren** aus. Sie sehen eine Liste aller verfügbaren Umgebungen in Ihrer Organisation, aus der Sie Daten kopieren können.
 
 1. Geben Sie die folgenden Informationen an:
    - **Name**: Der Name für diese Umgebung. Dieses Feld ist bereits ausgefüllt, wenn Sie eine bestehende Umgebung kopiert haben, aber Sie können es ändern.
    - **Region**: Die Region, in der der Dienst bereitgestellt und gehostet wird.
    - **Typ**: Wählen Sie, ob Sie eine Produktions- oder Sandbox-Umgebung erstellen möchten.
 
-2. Optional können Sie **Erweiterte Einstellungen** auswählen:
+1. Optional können Sie **Erweiterte Einstellungen** auswählen:
 
    - **Sichern alle Daten**: Geben Sie an, wo Sie die aus Customer Insights generierten Ausgabedaten speichern möchten. Sie haben zwei Möglichkeiten: **Customer Insights-Speicherung** (ein vom Customer Insights-Team verwalteter Azure Data Lake) und **Azure Data Lake Storage Gen2** (Ihre eigene Azure Data Lake Storage). Standardmäßig ist die Speicheroption „Customer Insights“ ausgewählt.
 
@@ -75,20 +78,20 @@ So erstellen Sie eine Umgebung:
 
    - Für die Option Azure Data Lake Storage Gen2 können Sie zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Der **Container**-Name kann nicht geändert werden und wird „customerinsights“ lauten.
    
-   - Wenn Sie [Vorhersagen](predictions.md) verwenden möchten oder die Datenfreigabe mit Anwendungen und Lösungen basierend auf Microsoft Dataverse konfigurieren, stellen Sie die Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereit. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
+   - Wenn Sie [Vorhersagen](predictions.md) verwenden möchten, konfigurieren Sie die Datenfreigabe mit Anwendungen und Lösungen basierend auf Microsoft Dataverse oder aktivieren Sie die Datenaufnahme aus lokalen Datenquellen, stellen die Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereit. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
 
      > [!NOTE]
      > - Datenaustausch mit verwaltetem Microsoft Dataverse Data Lake wird derzeit nicht unterstützt, wenn Sie alle Daten in Ihrem eigenen Azure Data Lake Storage speichern.
      > - [Vorhersage fehlenden Werte in einer Entität](predictions.md) wird derzeit nicht unterstützt, wenn Sie die Datenfreigabe mit verwaltetem Microsoft Dataverse Data Lake aktivieren.
 
      > [!div class="mx-imgBorder"]
-     > ![Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
+     > ![Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
    Wenn Sie Prozesse ausführen, wie z.B. die Datenerfassung oder die Segmenterstellung, werden entsprechende Ordner in dem oben angegebenen Speicherkonto erstellt. Datendateien und model.json-Dateien werden basierend auf dem von Ihnen ausgeführten Prozess erstellt und den jeweiligen Unterordnern hinzugefügt.
 
    Wenn Sie mehrere Umgebungen von Customer Insights erstellen und die ausgegebenen Entitäten aus diesen Umgebungen in Ihrem Speicherkonto speichern möchten, werden für jede Umgebung separate Ordner mit ci_<environmentid> im Container erstellt.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Zusätzliche Überlegungen zur Kopierkonfiguration (Vorschau)
+### <a name="considerations-for-copy-configuration-preview"></a>Überlegungen zur Kopierkonfiguration (Vorschau)
 
 Folgende Konfigurationseinstellungen werden kopiert:
 
@@ -136,6 +139,18 @@ Sie können einige Details vorhandener Umgebungen bearbeiten.
 4. Wenn eine Umgebung zum Speichern von Daten in Azure Data Lake Storage Gen2 konfiguriert ist, können Sie den **Kontoschlüssel** aktualisieren. Sie können jedoch nicht den Namen **Kontoname** oder **Container** ändern.
 
 5. Optional können Sie von einer kontoschlüsselbasierten Verbindung zu einer ressourcenbasierten oder abonnementbasierten Verbindung aktualisieren. Nach der Aktualisierung können Sie nicht mehr zum Kontenschlüssel zurückkehren. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
+
+6. Optional können Sie eine Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereitstellen. Diese Funktionen umfassen die gemeinsame Nutzung von Daten mit Anwendungen und Lösungen, die auf Microsoft Dataverse, Datenaufnahme aus lokal Datenquellen oder der Verwendung von [Vorhersagen](predictions.md) basieren. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
+
+   > [!NOTE]
+   > - Datenaustausch mit verwaltetem Microsoft Dataverse Data Lake wird derzeit nicht unterstützt, wenn Sie alle Daten in Ihrem eigenen Azure Data Lake Storage speichern.
+   > - [Vorhersage fehlender Werte in einer Entität](predictions.md) wird derzeit nicht unterstützt, wenn Sie die Datenfreigabe mit Microsoft Dataverse Managed Data Lake aktivieren.
+
+   Nachdem Sie die Datenfreigabe in Microsoft Dataverse aktiviert haben, wird eine vollständige Aktualisierung der Datenquellen und anderer Prozesse ausgelöst. Wenn derzeit Prozesse ausgeführt und in die Warteschlange gestellt werden, wird die Option zum Aktivieren der Datenfreigabe mit Microsoft Dataverse nicht angezeigt. Sie können warten, bis diese Prozesse abgeschlossen sind, oder sie abbrechen, um die gemeinsame Nutzung von Daten zu ermöglichen. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse.":::
+   
+   Wenn Sie Prozesse ausführen, wie z.B. die Datenerfassung oder die Segmenterstellung, werden entsprechende Ordner in dem oben angegebenen Speicherkonto erstellt. Abhängig vom ausgeführten Prozess werden Datendateien und model.json-Dateien erstellt und den jeweiligen Unterordnern hinzugefügt.
 
 ## <a name="reset-an-existing-environment"></a>Zurücksetzen einer bestehenden Umgebung
 

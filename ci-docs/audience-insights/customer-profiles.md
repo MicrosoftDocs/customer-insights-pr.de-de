@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596866"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896326"
 ---
 # <a name="customer-profiles"></a>Kundenprofile
 
@@ -59,7 +59,7 @@ Kundendetails enthalten:
 
 -   **Kundenprofil-Kachel:** Diese Kachel zeigt die verschiedenen Werte der vereinheitlichten Entität „Kundenprofil“ an. Diese Angaben können z. B. E-Mail-Adresse, Name, Stadt und so weiter sein. 
 
--   **Potenzielle Interessen, potenzielle Marken:** Zeigt an, ob Sie eine Erstanbieter-Anreicherung konfiguriert haben. Es stellt potenzielle Interessen und Affinitäten für Marken dar, die ein Kunde mit einem ähnlichen Profil wie dieser Kunde haben könnte. Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft-graph.md).
+-   **Potenzielle Interessen, potenzielle Marken:** Zeigt an, ob Sie eine Erstanbieter-Anreicherung konfiguriert haben. Es stellt potenzielle Interessen und Affinitäten für Marken dar, die ein Kunde mit einem ähnlichen Profil wie dieser Kunde haben könnte. Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft.md).
 
 -   **Kennzahlen:** Zeigt an, ob Sie eine oder mehrere Kennzahlen eines bestimmten Typs konfiguriert haben: Kundenattributkennzahlen. Sie enthalten berechnete KPIs rund um Ihre Kunden auf der Ebene des einzelnen Kunden. Weitere Informationen finden Sie unter [Definieren und Verwalten von Kennzahlen](measures.md).
 

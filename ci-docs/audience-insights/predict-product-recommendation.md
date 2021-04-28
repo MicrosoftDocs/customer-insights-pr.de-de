@@ -1,7 +1,7 @@
 ---
 title: Produktempfehlungsvorhersage
 description: Sagen Sie voraus, welche Produkte ein Kunde wahrscheinlich kaufen oder mit denen er interagieren wird.
-ms.date: 02/15/2021
+ms.date: 03/17/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5ae78b6bbc51fd8a25bc408050a23479698a1414
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598062"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906763"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktempfehlungsvorhersage (Vorschau)
 
@@ -22,7 +22,7 @@ Das Produktempfehlungsmodell erstellt Sätze von prädiktiven Produktempfehlunge
 
 Produktempfehlungen können lokalen Gesetzen und Vorschriften sowie Kundenerwartungen unterliegen, die das Modell nicht speziell berücksichtigt.  Als Benutzer dieser Vorhersagefähigkeit **müssen Sie die Empfehlungen überprüfen, bevor Sie sie an Ihre Kunden liefern**, um sicherzustellen, dass Sie alle geltenden Gesetze oder Vorschriften sowie die Kundenerwartungen für das, was Sie empfehlen, einhalten. 
 
-Darüber hinaus gibt Ihnen die Ausgabe dieses Modells Empfehlungen basierend auf der Produkt-ID. Ihr Übermittlungsmechanismus muss vorhergesagte Produkt-IDs verwenden und sie geeigneten Inhalten zuordnen, damit Ihre Kunden Lokalisierung, Bildinhalte und andere geschäftsspezifische Inhalte oder Verhaltensweisen berücksichtigen können.
+Darüber hinaus gibt Ihnen die Ausgabe dieses Modells Empfehlungen basierend auf der Produkt-ID. Ihr Übermittlungsmechanismus muss die vorhergesagten Produkt-IDs geeigneten Inhalten zuordnen, damit Ihre Kunden Lokalisierung, Bildinhalte und andere geschäftsspezifische Inhalte oder Verhaltensweisen berücksichtigen können.
 
 ## <a name="sample-guide"></a>Beispielanleitung
 
@@ -31,19 +31,31 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 ## <a name="prerequisites"></a>Anforderungen
 
 - Mindestens die [Berechtigung "Mitwirkender"](permissions.md) in Customer Insights.
+
 - Geschäftskenntnisse, um verschiedene Arten von Produkten für Ihr Unternehmen zu verstehen und wie Ihre Kunden mit ihnen interagieren. Wir unterstützen die Empfehlung von Produkten, die zuvor von Ihren Kunden gekauft wurden, oder Empfehlungen für neue Produkte.
+
 - Daten über Transaktionen/Einkäufe und deren Historie:
     - Transaktionskennungen, um Käufe/Transaktionen zu unterscheiden.
     - Kundenidentifikatoren, um Transaktionen Ihren Kunden zuzuordnen.
     - Transaktionsereignisdaten, die das Datum definieren, an dem die Transaktion stattgefunden hat.
-    - (Optional) Produkt-ID-Informationen für die Transaktion.
+    - Produkt-ID-Informationen für die Transaktion.
+    - (Optional) Eine Produktkatalogdatenentität zur Verwendung eines Produktfilters.
     - (Optional) Wenn eine Transaktion eine Rückgabe ist oder nicht.
     - Das semantische Datenschema benötigt die folgenden Informationen:
         - **Transaktions-ID:** Ein eindeutiger Bezeichner eines Kaufs oder einer Transaktion.
         - **Transaktionsdatum:** Das Datum des Kaufs oder der Transaktion.
         - **Wert der Transaktion:** Der numerische Wert des Kaufs oder der Transaktion.
         - **Eindeutige Produkt-ID:** Die ID des gekauften Produkts oder Dienstes, wenn Ihre Daten auf Einzelpostenebene sind.
-        - (Optional) **Kauf oder Rücksendung:** Ein Wahr/Falsch-Feld, das angibt, ob die Transaktion eine Rückgabe war oder nicht. Wenn der **Wert der Transaktion** negativ ist, wird auch diese Information verwendet, um eine Rückgabe abzuleiten.
+        - (Optional) **Kauf oder Rückgabe:** Ein boolesches Feld, in dem der Wert *wahr* angibt, dass eine Transaktion eine Rückgabe war. Wenn die Kauf- oder Rückgabedaten nicht angegeben sind, werden das Modell und der **Wert der Transaktion** negativ sein. Wir werden diese Informationen auch verwenden, um auf eine Rückgabe zu schließen.
+- Vorgeschlagene Datencharakteristik:
+    - Ausreichende historische Daten: Mindestens ein Jahr Transaktionsdaten, vorzugsweise zwei bis drei Jahre, um eine gewisse Saisonalität zu berücksichtigen.
+    - Mehrfachkäufe pro Kunde: Drei oder mehr Transaktionen pro Kunden-ID
+    - Anzahl der Kunden: Mindestens 100 Kunden, vorzugsweise mehr als 10.000 Kunden. Das Modell wird mit weniger als 100 Kunden versagen.
+
+> [!NOTE]
+> - Das Modell erfordert die Transaktionshistorie Ihrer Kunden. Die Definition einer Transaktion ist sehr flexibel. Alle Daten, die eine Benutzer-Produkt-Interaktion beschreiben, können als Eingabe verwendet werden. Zum Beispiel: ein Produkt kaufen, eine Klasse besuchen oder an einer Veranstaltung teilnehmen.
+> - Derzeit kann nur eine Transaktionsverlaufsentität konfiguriert werden. Wenn mehrere Kaufentitäten vorhanden sind, vereinigen Sie diese vor der Datenerfassung in Power Query.
+> - Wenn Bestellung und Bestelldetails unterschiedliche Entitäten sind, verbinden Sie sie, bevor Sie sie im Modell verwenden. Das Modell funktioniert nicht nur mit einer Bestell- oder Beleg-ID in einer Entität.
 
 
 ## <a name="create-a-product-recommendation-prediction"></a>Produktempfehlungsvorhersage erstellen
@@ -71,7 +83,7 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 
 1. Wählen Sie, ob Sie **Produkte vorschlagen, die Kunden kürzlich gekauft haben**.
 
-1. Wenn Sie ausgewählt haben, *keine* kürzlich gekauften Produkte zu empfehlen, legen Sie **Fenster für Vergangenheitsdaten** fest. Diese Einstellung gibt den Zeitrahmen an, den das Modell berücksichtigt, bevor das Produkt dem Benutzer erneut empfohlen wird. Geben Sie beispielsweise an, dass ein Kunde alle 2 Jahre einen Laptop kauft. In diesem Fenster wird die Kaufhistorie der letzten 2 Jahre angezeigt. Wenn ein Artikel gefunden wird, wird der Artikel aus den Empfehlungen herausgefiltert.
+1. Wenn Sie ausgewählt haben, *keine* kürzlich gekauften Produkte zu empfehlen, legen Sie **Fenster für Vergangenheitsdaten** fest. Diese Einstellung gibt den Zeitrahmen an, den das Modell berücksichtigt, bevor das Produkt dem Benutzer erneut empfohlen wird. Geben Sie beispielsweise an, dass ein Kunde alle zwei Jahre einen Laptop kauft. In diesem Fenster wird die Kaufhistorie der letzten zwei Jahre angezeigt. Wenn ein Artikel gefunden wird, wird der Artikel aus den Empfehlungen herausgefiltert.
 
 1. Klicken Sie auf **Weiter**.
 
@@ -95,7 +107,31 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 
 1. Klicken Sie auf **Weiter**.
 
-### <a name="set-schedule-and-review-configuration"></a>Zeitplan festlegen und Konfiguration überprüfen
+### <a name="configure-product-filters"></a>Produktfilter konfigurieren
+
+Manchmal sind nur bestimmte Produkte für die Art von Vorhersage, die Sie erstellen, nützlich oder geeignet. Mit Produktfiltern können Sie eine Teilmenge von Produkten mit bestimmten Merkmalen identifizieren, die Sie Ihren Kunden empfehlen können. Das Modell verwendet alle verfügbaren Produkte, um Muster zu lernen, verwendet jedoch nur die Produkte, die dem Produktfilter in seiner Ausgabe entsprechen.
+
+1. Im Schritt **Produktinformationen hinzufügen** fügen Sie Ihren Produktkatalog mit Informationen zu jedem Produkt hinzu. Ordnen Sie die erforderlichen Informationen zu, und wählen Sie dann **Weiter** aus.
+
+3. Im Schritt **Produktfilter** wählen Sie zwischen den folgenden Optionen.
+
+   * **Keine Filter**: Verwenden Sie alle Produkte in der Produktempfehlungsvorhersage.
+
+   * **Bestimmte Produktfilter definieren**: Verwenden Sie bestimmte Produkte in der Produktempfehlungsvorhersage.
+
+1. Klicken Sie auf **Weiter**.
+
+1. Wenn Sie einen Produktfilter definieren möchten, müssen Sie ihn jetzt definieren. Im Bereich **Produktkatalogattribute** wählen Sie die Attribute aus Ihrer *Produktkatalog-Entität*, die Sie in den Filter aufnehmen möchten.
+
+   :::image type="content" source="media/product-filters-sidepane.png" alt-text="Seitenbereich, der in der Produktkatalogentität zugeordnet ist, die für Produktfilter ausgewählt wird.":::
+
+1. Wählen Sie aus, ob der Produktfilter **und**- oder **oder**-Connectors verwenden soll, um Ihre Auswahl von Attributen aus dem Produktkatalog logisch zu kombinieren.
+   
+   :::image type="content" source="media/product-filters-sample.png" alt-text="Beispielkonfiguration von Produktfiltern kombiniert mit logischen UND-Connectors.":::
+
+1. Klicken Sie auf **Weiter**.
+
+### <a name="set-update-schedule-and-review-configuration"></a>Updatezeitplan festlegen und Konfiguration überprüfen
 
 1. Legen Sie eine Häufigkeit fest, um Ihr Modell neu zu trainieren. Diese Einstellung ist wichtig, um die Genauigkeit der Vorhersagen zu aktualisieren, wenn neue Daten in Customer Insights importiert werden. Die meisten Unternehmen können einmal pro Monat eine Umschulung durchführen und erhalten eine gute Genauigkeit für ihre Vorhersagen.
 
@@ -114,8 +150,9 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 1. Wählen Sie die Vorhersage aus, die Sie überprüfen möchten.
    - **Name der Vorhersage:** Der Name der Vorhersage, der bei ihrer Erstellung angegeben wurde.
    - **Art der Vorhersage:** Typ des für die Vorhersage verwendeten Modells
-   - **Ausgabe-Entität:** Name der Entität, die die Ausgabe der Vorhersage speichern soll. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.
-   - **Vorhersagefeld:** Dieses Feld wird nur für einige Arten von Vorhersagen ausgefüllt und wird nicht für die Abwanderungsvorhersage verwendet.
+   - **Ausgabe-Entität:** Name der Entität, die die Ausgabe der Vorhersage speichern soll. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.    
+      *Ergebnis* in der Ausgabeeinheit ist ein quantitatives Maß für die Empfehlung. Das Modell empfiehlt Produkte mit einer höheren Punktzahl gegenüber Produkten mit einer niedrigeren Punktzahl.
+   - **Vorhersagefeld:** Dieses Feld wird nur für einige Typen von Vorhersagen ausgefüllt und wird bei der Vorhersage der Produktempfehlung nicht verwendet.
    - **Status:** Der aktuelle Status des Ausführung der Vorhersage.
         - **Warteschleife:** Die Vorhersage wartet derzeit auf die Ausführung anderer Prozesse.
         - **Aktualisierung:** Die Vorhersage durchläuft derzeit die "Bewertung"-Verarbeitungsphase, um Ergebnisse zu erzeugen, die in die Ausgabe-Entität fließen werden.
@@ -128,11 +165,11 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
    > [!div class="mx-imgBorder"]
    > ![Anzeige der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen](media/product-recommendation-verticalellipses.PNG "Ansicht der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen").
 
-1. Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite:
+1. Auf der Ergebnisseite befinden sich fünf primäre Datenabschnitte:
     1. **Leistung des Trainingsmodells:** A, B oder C sind mögliche Bewertungen. Diese Bewertung zeigt die Leistung der Vorhersage an und kann Ihnen bei der Entscheidung helfen, die in der Ausgabe-Entität gespeicherten Ergebnisse zu verwenden.
         - Die Bewertungen werden nach den folgenden Regeln ermittelt:
             - **A** Das Modell wird berücksichtigt **A** Qualität, wenn die Metrik „Success @ K“ mindestens 10 % über der Basislinie liegt. 
-            - **B** Das Modell wird berücksichtigt **B** Qualität, wenn die Metrik „Success @ K“ 0 bis 10 % über der Basislinie liegt.
+            - **B** Das Modell wird berücksichtigt **B** Qualität, wenn die Metrik „Success @ K“ 0 % bis 10 % über der Basislinie liegt.
             - **C** Das Modell wird berücksichtigt **C** Qualität, wenn die Metrik „Success @ K“ unter der Basislinie liegt.
                
                > [!div class="mx-imgBorder"]
@@ -140,11 +177,31 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
             - **Basislinie**: Das Modell verwendet die am häufigsten empfohlenen Produkte nach Kaufanzahl für alle Kunden und verwendet erlernte Regeln, die vom Modell identifiziert wurden, um eine Reihe von Empfehlungen für die Kunden zu erstellen. Die Vorhersagen werden dann mit den Top-Produkten verglichen, berechnet anhand der Anzahl der Kunden, die das Produkt gekauft haben. Wenn ein Kunde mindestens ein Produkt in seinen empfohlenen Produkten hat, das auch in den am häufigsten gekauften Produkten enthalten ist, wird er als Teil der Baseline betrachtet. Wenn 10 dieser Kunden ein empfohlenes Produkt von insgesamt 100 Kunden gekauft hätten, wäre die Basis 10 %.
             - **Success @ K**: Mithilfe eines Validierungssatzes für den Zeitraum von Transaktionen werden Empfehlungen für alle Kunden erstellt und mit dem Validierungssatz für Transaktionen verglichen. Beispielsweise kann in einem Zeitraum von 12 Monaten der 12. Monat als Validierungsdatensatz reserviert werden. Wenn das Modell mindestens eine Sache vorhersagt, die Sie im 12. Monat kaufen würden, basierend auf den Erkenntnissen der letzten 11 Monate, würde der Kunde die Metrik „Success @ K“ erhöhen.
     
-    1. **Am häufigsten vorgeschlagene Produkte (mit Tally):** Die Top 5 Produkte, die für Ihre Kunden vorhergesagt wurden.
+    1. **Die meisten empfohlenen Produkte (mit Tally):** Die fünf wichtigsten Produkte, die für Ihre Kunden vorhergesagt wurden.
        > [!div class="mx-imgBorder"]
        > ![Grafik mit den 5 am häufigsten empfohlenen Produkten](media/product-recommendation-topproducts.PNG "Grafik mit den 5 am häufigsten empfohlenen Produkten")
     
-    1. **Produktempfehlungen mit hoher Konfidenz:** Eine Auswahl von Empfehlungen an Ihre Kunden, von denen das Modell glaubt, dass sie wahrscheinlich vom Kunden gekauft werden.
+    1. **Wichtige Empfehlungsfaktoren:** Das Modell verwendet die Transaktionshistorie der Kunden, um Produktempfehlungen abzugeben. Es lernt Muster basierend auf früheren Einkäufen und findet Ähnlichkeiten zwischen Kunden und Produkten. Diese Ähnlichkeiten werden dann verwendet, um Produktempfehlungen zu generieren.
+    Die folgenden Faktoren können eine vom Modell generierte Produktempfehlung beeinflussen. 
+        - **Vergangene Transaktionen**: Kaufmuster in der Vergangenheit wurden vom Modell verwendet, um Produktempfehlungen zu generieren. Zum Beispiel kann das Modell eine _Surface Arc Mouse_ empfehlen, wenn jemand vor kurzem ein _Surface Book 3_ und einen _Surface Pen_ gekauft hat. Das Modell erfuhr, dass in der Vergangenheit viele Kunden eine _Surface Arc Mouse_ nach dem Kauf eines _Surface Book 3_ und eines _Surface Pen_ gekauft hatten.
+        - **Kundenähnlichkeit**: Ein empfohlenes Produkt wurde in der Vergangenheit von anderen Kunden gekauft, die ähnliche Kaufmuster aufweisen. Zum Beispiel wurden John _Surface Headphones 2_ empfohlen , weil Jennifer und Brad kürzlich _Surface Headphones 2_ gekauft haben. Das Modell glaubt, dass John Jennifer und Brad ähnlich ist, weil sie in der Vergangenheit ähnliche Kaufmuster hatten.
+        - **Produktähnlichkeit**: Ein empfohlenes Produkt ähnelt anderen Produkten, die der Kunde zuvor gekauft hat. Das Modell betrachtet zwei Produkte als ähnlich, wenn sie zusammen oder von ähnlichen Kunden gekauft wurden. Zum Beispiel bekommt jemand eine Empfehlung für ein _USB-Speicherlaufwerk_, weil sie zuvor einen _USB-C zu USB Adapter_ gekauft haben und das Modell glaubt, dass _USB-Speicherlaufwerk_ ähnlich ist wie _USB-C zu USB Adapter_ basierend auf historischen Kaufmustern.
+
+        Jede Produktempfehlung wird von einem oder mehreren dieser Faktoren beeinflusst. Der Prozentsatz der Empfehlungen, bei denen jeder Einflussfaktor eine Rolle spielte, wird in einem Diagramm dargestellt. Im folgenden Beispiel wurden 100 % der Empfehlungen durch vergangene Transaktionen beeinflusst, 60 % durch Kundenähnlichkeit und 22 % durch Produktähnlichkeit. Bewegen Sie den Mauszeiger über die Balken im Diagramm, um den genauen Prozentsatz anzuzeigen, zu dem die Einflussfaktoren beigetragen haben.
+
+        > [!div class="mx-imgBorder"]
+        > ![Wichtige Empfehlungsfaktoren](media/product-recommendation-keyrecommendationfactors.png "Wichtige Empfehlungsfaktoren, die das Modell zur Generierung von Produktempfehlungen gelernt hat")
+       
+     
+   1. **Datenstatistik** : Gibt einen Überblick über die Anzahl der Transaktionen, Kunden und Produkte, die das Modell berücksichtigt. Es basiert auf den Eingabedaten, die zum Lernen von Mustern und zum Generieren von Produktempfehlungen verwendet wurden.
+
+      > [!div class="mx-imgBorder"]
+      > ![Datenstatistiken](media/product-recommendation-datastatistics.png "Datenstatistik zu Inout-Daten, die vom Modell zum Lernen von Mustern verwendet werden")
+
+      Dieser Abschnitt zeigt Statistiken zu den Datenpunkten, die vom Modell verwendet wurden, um Muster zu lernen und Produktempfehlungen zu generieren. Die in der Modellkonfiguration konfigurierte Filterung gilt für die vom Modell generierte Ausgabe. Das Modell verwendet jedoch alle verfügbaren Daten, um Muster zu lernen. Wenn Sie in der Modellkonfiguration die Produktfilterung verwenden, wird in diesem Abschnitt die Gesamtzahl der Produkte angezeigt, die das Modell analysiert hat, um Muster zu lernen, die von der Anzahl der Produkte abweichen können, die den definierten Filterkriterien entsprechen.
+
+   1. **Produktempfehlungen mit hoher Konfidenz:** Eine Auswahl von Empfehlungen an Ihre Kunden, von denen das Modell glaubt, dass sie wahrscheinlich vom Kunden gekauft werden.    
+      Wenn ein Produktkatalog hinzugefügt wird, werden die Produkt-IDs durch Produktnamen ersetzt. Produktnamen bieten umsetzbarere und intuitivere Informationen zu den Vorhersagen.
        > [!div class="mx-imgBorder"]
        > ![Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden](media/product-recommendation-highconfidence.PNG "Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden")
 
@@ -154,7 +211,7 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 
 1. Markieren Sie die Vorhersage, für die Sie Fehlerprotokolle anzeigen möchten, und wählen Sie **Protokolle**.
 
-1. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Beispielsweise wird ein Fehler, für den nicht genügend Daten zur genauen Vorhersage vorhanden sind, in der Regel dadurch behoben, dass zusätzliche Daten in Customer Insights geladen werden.
+1. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Beispielsweise wird ein Fehler, bei dem nicht genügend Daten zur genauen Vorhersage vorhanden sind, normalerweise durch Laden weiterer Daten in Customer Insights behoben.
 
 ## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage
 

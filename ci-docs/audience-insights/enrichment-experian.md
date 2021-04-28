@@ -1,7 +1,7 @@
 ---
 title: Anreicherung mit der Drittanbieter-Anreicherung Experian
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von Experian.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597786"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896372"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kundenprofile mit demografischen Daten aus Experian anreichern (Vorschau)
 
@@ -25,10 +25,10 @@ Experian ist ein weltweit führender Anbieter von Kredit- und Marketingdienstlei
 Für das Konfigurieren von Experian an müssen folgende Voraussetzungen erfüllt sein:
 
 - Sie haben ein aktives Experian-Abonnement. Um ein Abonnement zu erhalten, [wenden Sie sich direkt an Experian](https://www.experian.com/marketing-services/contact). [Weitere Informationen zur Datenanreicherung Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Sie haben die Benutzer-ID, die Party-ID und die Modellnummer für Ihr SSH-fähiges Secure Transport (ST)-Konto, das Experian für Sie erstellt hat.
-- Sie haben [Administrator](permissions.md#administrator) Berechtigungen in Zielgruppen-Insights.
 
-## <a name="configuration"></a>Konfiguration
+- Eine Experian-Verbindung wurde bereits von einem Administrator konfiguriert *oder* Sie haben [Administrator](permissions.md#administrator)-Berechtigungen. Darüber hinaus benötigen Sie die Benutzer-ID, die Party-ID und die Modellnummer für Ihr SSH-fähiges ST-Konto (Secure Transport), das Experian für Sie erstellt hat.
+
+## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 
 1. Wechseln Sie zu **Daten** > **Anreicherung** und wählen Sie die Registerkarte **Entdecken** aus.
 
@@ -36,26 +36,46 @@ Für das Konfigurieren von Experian an müssen folgende Voraussetzungen erfüllt
 
    > [!div class="mx-imgBorder"]
    > ![Experian-Kachel](media/experian-tile.png "Experian-Kachel")
+   > 
 
-1. Wählen Sie **Los geht's** und geben Sie die Benutzer-ID, die Partei-ID und die Modellnummer für Ihr Experian Secure Transport-Konto ein. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren. Bestätigen Sie alle Eingaben durch Auswahl von **Anwenden**.
+1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie durch Auswahl von **Verbindung hinzufügen** eine Verbindung herstellen und „Experian“ aus dem Dropdownmenü auswählen. 
 
-## <a name="map-your-fields"></a>Ihre Felder zuordnen
+1. Wählen Sie **Mit Experian verbinden**, um die Verbindungsauswahl zu bestätigen.
 
-1.  Wählen Sie **Daten hinzufügen** und dann den **Kundendatensatz**, den Sie mit demografischen Daten von Experian anreichern möchten. Sie können die **Kundenentität** auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
+1.  Wählen Sie **Weiter** und wählen Sie den **Kundendatensatz**, den Sie mit Demografiedaten von Experian anreichern möchten. Sie können die **Kundenentität** auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
 
-1. Wählen Sie Ihre Schlüsselkennungen **Name und Adresse**, **E-Mail**, oder **Telefon** aus, um sie zur Identitätsauflösung an Experian zu senden.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Screenshot bei Auswahl des Kundendatensatzes.":::
 
-   > [!TIP]
-   > Weitere an Experian gesendete Schlüsselbezeichnerattribute führen wahrscheinlich zu einer höheren Übereinstimmungsrate.
+1. Wählen Sie **Weiter** aus, und definieren Sie, welche Art von Feldern aus Ihren einheitlichen Profilen verwendet werden soll, um nach übereinstimmenden demografischen Daten von Experian zu suchen. Mindestens eines der Felder **Name und Adresse**, **Telefon** oder **E-Mail** ist erforderlich. Für eine höhere Übereinstimmungsgenauigkeit können bis zu zwei weitere Felder hinzugefügt werden. Diese Auswahl wirkt sich auf die Zuordnungsfelder aus, auf die Sie im nächsten Schritt zugreifen können.
 
-1. Wählen Sie **Weiter** und ordnen Sie die entsprechenden Attribute Ihrer einheitlichen Kundenentität den ausgewählten Schlüsselbezeichnerfeldern zu.
+    > [!TIP]
+    > Weitere an Experian gesendete Schlüsselbezeichnerattribute führen wahrscheinlich zu einer höheren Übereinstimmungsrate.
 
-1. Wählen Sie **Attribut hinzufügen**, um zusätzliche Attribute zuzuordnen, die Sie an Experian senden möchten.
+1. Wählen Sie **Weiter** aus, um die Feldzuordnung zu starten.
 
-1.  Wählen Sie **Speichern** aus, um die Feldzuordnung abzuschließen.
+1. Definieren Sie, welche Felder aus Ihren einheitlichen Profilen verwendet werden sollen, um nach übereinstimmenden demografischen Daten von Experian zu suchen. Erforderliche Felder sind gekennzeichnet.
 
-    > [!div class="mx-imgBorder"]
-    > ![Experian-Feldzuordnung](media/experian-field-mapping.png "Experian-Feldzuordnung")
+1. Geben Sie einen Namen für die Anreicherung und einen Namen für die Ausgabeentität an.
+
+1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
+
+## <a name="configure-the-connection-for-experian"></a>Konfigurieren Sie die Verbindung für Experian 
+
+Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Sie **Verbindung hinzufügen** beim Konfigurieren einer Anreicherung *oder* gehen Sie zu **Administrator** > **Verbindungen** und wählen Sie **Einrichten** auf der Kachel „Experian“.
+
+1. Wählen Sie **Erste Schritte** aus.
+
+1. Geben Sie einen Namen für die Verbindung in das Feld **Anzeigename** ein.
+
+1. Geben Sie eine gültige Benutzer-ID, Party-ID und Modellnummer für Ihr Experian Secure Transport-Konto ein.
+
+1. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren.
+
+1. Wählen Sie **Überprüfen**, um die Konfiguration zu validieren.
+
+1. Wählen Sie nach Abschluss der Überprüfung **Speichern** aus.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Verbindungskonfigurationsbereich für Experian.":::
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 

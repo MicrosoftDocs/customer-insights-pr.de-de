@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597832"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896510"
 ---
 # <a name="merge-entities"></a>Entitäten zusammenführen
 
@@ -83,7 +83,7 @@ Wenn Sie eine Zusammenführung nicht zum ersten Mal erfolgreich ausgeführt habe
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Konfigurieren von [Aktivitäten](activities.md), [Anreicherung](enrichment-microsoft-graph.md), oder [Beziehungen](relationships.md), um mehr Einblicke über Ihre Kunden zu gewinnen.
+Konfigurieren von [Aktivitäten](activities.md), [Anreicherung](enrichment-hub.md), oder [Beziehungen](relationships.md), um mehr Einblicke über Ihre Kunden zu gewinnen.
 
 Wenn Sie bereits Aktivitäten, Anreicherungen oder Beziehungen konfiguriert haben oder Segmente definiert haben, werden diese automatisch verarbeitet, um die neuesten Kundendaten zu verwenden.
 

@@ -1,7 +1,7 @@
 ---
 title: Kennzahlen erstellen und verwalten
 description: Kennzahlen definieren, um Leistung und Zustand Ihres Unternehmens zu analysieren und widerzuspiegeln.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654731"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887939"
 ---
 # <a name="define-and-manage-measures"></a>Definieren und Verwalten von Kennzahlen
 
-Mithilfe von Kennzahlen können Sie das Kundenverhalten und die Geschäftsleistung besser verstehen, indem Sie relevante Werte von [einheitlichen Profilen](data-unification.md) abrufen. Zum Beispiel möchte ein Unternehmen die *Gesamtausgaben pro Kunde* ermitteln, um die Kaufhistorie des einzelnen Kunden zu verstehen. Oder messen Sie den *Gesamtumsatz des Unternehmens*, um den aggregierten Gesamtumsatz im gesamten Unternehmen zu verstehen.  
+Mithilfe von Kennzahlen können Sie das Kundenverhalten und die Geschäftsleistung besser verstehen. Sie betrachten relevante Werte aus [einheitlichen Profilen](data-unification.md). Zum Beispiel möchte ein Unternehmen die *Gesamtausgaben pro Kunde* wissen, um die Kaufhistorie eines einzelnen Kunden oder den *Gesamtumsatz des Unternehmens* des zu messen, um den aggregierten Gesamtumsatz im gesamten Unternehmen zu verstehen.  
 
 Kennzahlen werden mit dem Kennzahlungsgenerator erstellt, einer Datenabfrageplattform mit verschiedenen Operatoren und einfachen Zuordnungsoptionen. Sie können die Daten filtern, Ergebnisse gruppieren und [Entitätsbeziehungspfade](relationships.md) erkennen und zeigen eine Vorschau der Ausgabe anzeigen.
 
 Verwenden Sie die Kennzahlenerstellung, um Geschäftsaktivitäten zu planen, indem Sie Kundendaten abfragen und Erkenntnisse extrahieren. Erstellen Sie beispielsweise eine Kennzahl für *Gesamtausgaben pro Kunde* und *Gesamtrendite pro Kunde* hilft bei der Identifizierung einer Gruppe von Kunden mit hohen Ausgaben und hoher Rendite. Sie können [ein Segment erstellen](segments.md), um die nächstbesten Aktionen zu fahren. 
 
-## <a name="create-a-measure"></a>Eine Kennzahl erstellen
+## <a name="build-your-own-measure-from-scratch"></a>Eigene Kennzahlen von Grund auf neu erstellen
 
 In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu erstellen. Sie können eine Kennzahl mit Datenattributen aus Datenentitäten erstellen, für die eine Beziehung zur Verbindung mit der Kundenentität eingerichtet wurde. 
 
 1. Gehen Sie in den Zielgruppen-Insights auf **Kennzahlen**.
 
-1. Wählen Sie **Neu**.
+1. Wählen Sie **Neu** und dann **Eigene erstellen** aus.
 
 1. Wählen **Namen bearbeiten** und stellen einen **Namen** für die Kennzahl bereit. 
    > [!NOTE]
@@ -72,6 +72,8 @@ In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu e
    1. Wählen Sie **Dimensionen bearbeiten** aus, um Datenattribute hinzuzufügen, nach denen Sie die Kennzahlen gruppieren möchten. Zum Beispiel Stadt oder Geschlecht. Standardmäßig wird die *Kundennummer*-Dimension zum Erstellen von *Kennzahlen auf Kundenebene* ausgewählt. Sie können die Standarddimension entfernen, wenn Sie *Kennzahlen auf Unternehmensebene* erstellen möchten.
    1. Wählen Sie **Fertig**, um die Dimensionen zur Kennzahl hinzuzufügen.
 
+1. Wenn Ihre Daten Werte enthalten, die Sie beispielsweise durch eine Ganzzahl ersetzen müssen, ersetzen Sie *null* mit *0* und wählen **Regeln** aus. Konfigurieren Sie die Regel und stellen Sie sicher, dass Sie nur ganze Zahlen als Ersatz auswählen.
+
 1. Wenn zwischen der von Ihnen zugeordneten Datenentität und der *Kunden* Entität mehrere Pfade vorhanden sind, müssen Sie einen der identifizierten [Entitätsbeziehungspfade auswählen](relationships.md). Die Kennzahlenergebnisse können je nach ausgewähltem Pfad variieren. 
    1. Wählen Sie **Dateneinstellungen**, und wählen Sie den Entitätspfad aus, der zur Identifizierung Ihrer Kennzahl verwendet werden soll. Wenn es nur einen einzigen Weg zur Entität *Kunde* gibt, wird dieses Steuerelement nicht angezeigt.
    1. Wählen **Fertig**, um Ihre Auswahl anzuwenden. 
@@ -88,9 +90,57 @@ In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu e
 
 1. Gehen Sie zu **Kennzahlen**, um die neu erstellte Kennzahl in der Liste anzuzeigen.
 
+## <a name="use-a-template-to-build-a-measure"></a>Verwenden Sie eine Vorlage, um eine Kennzahl zu erstellen
+
+Sie können vordefinierte Vorlagen häufig verwendeter Kennzahlen verwenden, um sie zu erstellen. Detaillierte Beschreibungen der Vorlagen und eine geführte Erfahrung helfen Ihnen bei der effizienten Erstellung von Kennzahlen. Vorlagen bauen auf zugeordneten Daten aus der *Einheitliche Aktivität*-Entität auf. Stellen Sie also sicher, dass Sie [Kundenaktivitäten](activities.md) konfiguriert haben, bevor Sie eine Kennzahl aus einer Vorlage erstellen.
+
+Verfügbare Kennzahlenvorlagen: 
+- Durchschnittlicher Transaktionswert (ATV)
+- Transaktionswert insgesamt
+- Durchschnittlicher täglicher Umsatz
+- Durchschnittlicher Jahresumsatz
+- Transaktionsanzahl
+- Erhaltene Treuepunkte
+- Eingelöste Treuepunkte
+- Treuepunktebilanz
+- Aktive Kundenlebensdauer
+- Dauer der Treuemitgliedschaft
+- Zeit seit dem letzten Kauf
+
+Das folgende Verfahren beschreibt die Schritte zum Erstellen einer neuen Kennzahl mithilfe einer Vorlage.
+
+1. Gehen Sie in den Zielgruppen-Insights auf **Kennzahlen**.
+
+1. Wählen Sie **Neu** und dann **Vorlage auswählen** aus.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Screenshot des Dropdownmenüs beim Erstellen einer neuen Kennzahl mit Hervorhebung in der Vorlage.":::
+
+1. Suchen Sie die Vorlage, die Ihren Anforderungen entspricht, und wählen Sie **Vorlage auswählen** aus.
+
+1. Überprüfen Sie die erforderlichen Daten und wählen Sie **Los geht's** aus, wenn Sie alle Daten an Ort und Stelle haben.
+
+1. Im Bereich **Name bearbeiten** legen Sie den Namen für Ihre Kennzahl und die Ausgabeentität fest. 
+
+1. Wählen Sie **Fertig** aus.
+
+1. Im Abschnitt **Zeitraum festlegen** definieren Sie den Zeitrahmen der zu verwendenden Daten. Wählen Sie aus, ob die neue Kennzahl das gesamte Dataset abdecken soll, indem Sie **Alle Zeiten** auswählen. Oder die entsprechende Option wenn Sie möchten, dass sich die Kennzahl auf **Spezieller Zeitraum** konzentriert.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot mit dem Abschnitt zum Zeitraum beim Konfigurieren einer Kennzahl aus einer Vorlage.":::
+
+1. Wählen Sie im nächsten Abschnitt **Daten hinzufügen** aus, um die Aktivitäten auszuwählen und die entsprechenden Daten von Ihrer *Einheitliche Aktivität*-Entität zuzuordnen.
+
+    1. Schritt 1 von 2: Unter **Aktivitätstyp** wählen Sie den Typ der Entität, die Sie verwenden möchten. Für **Aktivitäten** wählen Sie die Objekte aus, die Sie zuordnen möchten.
+    1. Schritt 2 von 2: Wählen Sie das Attribut aus der *Einheitliche Aktivität*-Entität für die von der Formel geforderte Komponente aus. Für den durchschnittlichen Transaktionswert ist dies beispielsweise das Attribut, das den Transaktionswert darstellt. Für **Aktivitätszeitstempel** wählen Sie das Attribut aus der Entität „Einheitliche Aktivität“ aus, das Datum und Uhrzeit der Aktivität darstellt.
+   
+1. Sobald die Datenzuordnung erfolgt ist, können Sie den Status als **Abgeschlossen** und den Namen der zugeordneten Aktivitäten und Attribute anzeigen.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Screenshot einer abgeschlossenen Kennzahlvorlagenkonfiguration.":::
+
+1. Sie können jetzt **Ausführen** auswählen, um die Ergebnisse der Messung zu berechnen. Um dies später zu verfeinern, wählen Sie **Entwurf speichern**.
+
 ## <a name="manage-your-measures"></a>Verwalten von Kennzahlen
 
-Nachdem Sie mindestens eine [Kennzahl erstellt](#create-a-measure) haben, sehen Sie eine Liste der Kennzahlen auf der Seite **Kennzahlen**.
+Die Liste der Kennzahlen finden Sie auf der Seite **Kennzahlen**.
 
 Sie finden Informationen zu Kennzahlentyp, Ersteller, Erstellungsdatum, Status und Zustand. Wenn Sie eine Kennzahl aus der Liste auswählen, können Sie eine Vorschau der Ausgabe anzeigen und eine CSV-Datei herunterladen.
 

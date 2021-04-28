@@ -1,7 +1,7 @@
 ---
 title: Verwalten von Benutzerberechtigungen
 description: Erfahren Sie mehr über Berechtigungen und Benutzerrollen.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595701"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760372"
 ---
 # <a name="user-permissions"></a>Benutzerberechtigungen
 
@@ -31,10 +31,10 @@ Es gibt drei Arten von Rollen:
 - Erkunden Sie die Seite **Bereicherung**.
 - Erforschen und exportieren Sie Entitäten mit Hilfe der Seite **Entitäten**.
 - Den Status von Systemprozessen können Sie über die Seite **System** einsehen.
-- Exportieren Sie Segmente von der Seite **Segmente**.
+- Exporte auf der Seite **Exporte** anzeigen.
 - Installieren und verwenden Sie das **Power BI Customer Insights** Dashboard.
 
-## <a name="contributor"></a>Mitwirkender
+## <a name="contributor"></a>Beitragender
 
 - Alle dem Betrachter zur Verfügung stehenden Berechtigungen.
 - Laden und transformieren Sie die Daten mithilfe der Seite **Datenquellen**.
@@ -43,6 +43,7 @@ Es gibt drei Arten von Rollen:
 - Erstellen Sie Segmente mit der Seite **Segmente**.
 - Legen Sie Kennzahlen mit Hilfe der Seite **Kennzahlen** an.
 - Verwalten Sie die Konfiguration und reichern Sie Kundenprofile über die Seite **Anreicherung** an (nur für First-Party-Anreicherungen).
+- Verwalten und erstellen Sie Exporte basierend auf Verbindungen, die mit Mitwirkenden geteilt werden. [Erfahren Sie mehr darüber, wie Administratoren Mitwirkenden erlauben, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrator
 
@@ -50,8 +51,9 @@ Es gibt drei Arten von Rollen:
 - Ändern Sie die Einstellungen auf der Seite **System**, einschließlich der Arbeitssprache und der Aktualisierungszeitpläne für Ihre Systemprozesse.
 - Anzeigen und Hinzufügen von Berechtigungen über die Seite **Berechtigungen**.
 - Legen Sie Such- und Filterdefinitionen für die Seite „Kunden“ über die Seite **Such- & Filterindex** fest (Zugriff über die Seite **Kunden**).
-- Definieren Sie Dynamics 365 Sales-Segmentziele über die Seite **Ziele exportieren**.
+- Verwalten Sie Verbindungen und lassen Sie sie für andere Benutzerrollen auf der Seite **Verbindungen** zu.
 - Verwalten Sie die Konfiguration und reichern Sie Kundenprofile über die Seite **Anreicherung** an (für alle Anreicherungen).
+- Verwalten und Erstellen von Exporten auf der **Exporte**-Seite.
 - Installieren und verwenden Sie das **Kundenkarten-Add-in**.
 - Fügen Sie den **Power Apps-Konnektor** hinzu und verwenden Sie ihn.
 - Aktivieren Sie die Verwendung der [Customer Insights APIs](apis.md).

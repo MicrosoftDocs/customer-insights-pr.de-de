@@ -1,6 +1,6 @@
 ---
-title: Customer Insights-Daten zu AdRoll exportieren
-description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu AdRoll exportieren.
+title: Exportieren Sie Customer Insights-Daten in RollWorks
+description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu RollWorks exportieren.
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,36 +9,36 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 4979f0147dea2270f11342c1bb6b0693f3c24aea
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895958"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760533"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Segmentlisten in AdRoll exportieren (Vorschau)
+# <a name="export-segment-lists-to-rollworks-preview"></a>Segmentlisten in RollWorks exportieren (Vorschau)
 
-Exportieren Sie Segmente einheitlicher Kundenprofile nach AdRoll und verwenden Sie sie für Werbezwecke. 
+Exportieren Sie Segmente einheitlicher Kundenprofile in RollWorks und verwenden Sie sie für Marketingaktivitäten. 
 
 ## <a name="prerequisites-for-a-connection"></a>Voraussetzungen für die Verbindung
 
--   Sie haben ein [AdRoll-Konto](https://www.adroll.com/) und die entsprechenden Anmeldeinformationen.
+-   Sie haben ein [RollWorks-Konto](https://www.rollworks.com/) und entsprechende Administrator-Anmeldeinformationen.
 -   Sie haben [Konfigurierte Segmente](segments.md) in Zielgruppen-Insights.
 -   Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können pro Export bis zu 250.000 Profile zu AdRoll exportieren.
-- Sie können keine Segmente mit weniger als 100 Profilen nach AdRoll exportieren. 
-- Der Export zu AdRoll ist auf Segmente beschränkt.
-- Das Exportieren von bis zu 250.000 Profilen nach AdRoll kann bis zu 10 Minuten dauern. 
-- Die Anzahl der Profile, die Sie zu AdRoll exportieren können, hängt von Ihrem Vertrag mit AdRoll ab und ist dort begrenzt.
+- Sie können bis zu 250.000 Profile pro Export in RollWorks exportieren.
+- Sie können keine Segmente mit weniger als 100 Profilen nach RollWorks exportieren. 
+- Der Export nach RollWorks ist auf Segmente beschränkt.
+- Das Exportieren von bis zu 250.000 Profilen nach RollWorks kann bis zu 10 Minuten dauern. 
+- Die Anzahl der Profile, die Sie in RollWorks exportieren können, hängt von Ihrem Vertrag mit RollWorks ab.
 
-## <a name="set-up-connection-to-adroll"></a>Richten Sie die Verbindung mit AdRoll ein
+## <a name="set-up-connection-to-rollworks"></a>Verbindung mit RollWorks einrichten
 
 1. Gehen Sie zu **Administrator** > **Verbindungen**.
 
-1. Wählen Sie **Verbindung hinzufügen** und dann **AdRoll** aus, um die Verbindung zu konfigurieren.
+1. Wählen Sie **Verbindung hinzufügen** und dann **RollWorks** aus, um die Verbindung zu konfigurieren.
 
 1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
 
@@ -46,9 +46,9 @@ Exportieren Sie Segmente einheitlicher Kundenprofile nach AdRoll und verwenden S
 
 1. Wählen Sie **einverstanden**, um **Datenschutz und Compliance** zu bestätigen.
 
-1. Wählen Sie **Verbinden**, um die Verbindung zu AdRoll zu initialisieren.
+1. Wählen Sie **Verbinden** aus, um die Verbindung zu RollWorks zu initialisieren.
 
-1. Wählen Sie **Mit AdRoll authentifizieren** und geben Sie Ihre AdRoll Anmeldeinformationen an. 
+1. Wählen Sie **Mit RollWorks authentifizieren** aus, und geben Sie Ihre Administratoranmeldeinformationen für RollWorks an.
 
 1. Wählen Sie **Sich selbst als Exportbenutzer hinzufügen** und geben Sie Ihre Customer Insights Anmeldeinformationen an.
 
@@ -62,11 +62,11 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Wählen Sie **Ziel hinzufügen**, um einen neuen Export zu erstellen.
 
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem AdRoll-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
+1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem RollWorks-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
 
-1. Geben Sie Ihr **AdRoll-Werbe-ID** ein. Weitere Informationen finden Sie unter [AdRoll-Werbeprofile](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Geben Sie Ihre **RollWorks-Werbe-ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) ein.
 
-3. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Es ist erforderlich, Segmente nach AdRoll zu exportieren.
+3. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Der Export nach RollWorks ist auf Segmente beschränkt.
 
 1. Wählen Sie die Segemente aus, die Sie exportieren möchten. Wählen Sie ein Segment mit mindestens 100 Mitgliedern aus. Sie können keine kleineren Segmente exportieren. Zusätzlich beträgt die maximale Größe eines zu exportierenden Segments 250.000 Mitglieder pro Export. 
 
@@ -79,6 +79,6 @@ Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) aus
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 
-Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten an AdRoll aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird diese Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, sicherzustellen, dass AdRoll alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
+Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an RollWorks zu übertragen, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft überträgt diese Daten auf Ihre Anweisung. Sie sind jedoch dafür verantwortlich, dass RollWorks alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Ihr Dynamics 365 Customer Insights-Administrator kann dieses Exportziel jederzeit entfernen, um die Verwendung dieser Funktionalität einzustellen.

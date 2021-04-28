@@ -1,7 +1,7 @@
 ---
 title: Kundenaktivitäten
 description: Definieren Sie Kundenaktivitäten und zeigen Sie diese in der Kundenzeitleiste an.
-ms.date: 10/13/2020
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,79 +9,88 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
+ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596728"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "5866406"
 ---
 # <a name="customer-activities"></a>Kundenaktivitäten
 
-Kombinieren Sie Kundenaktivitäten aus [verschiedenen Datenquellen](data-sources.md) in Dynamics 365 Customer Insights, um eine Kunden-Zeitleiste zu erstellen, die die Aktivitäten in chronologischer Reihenfolge auflistet. Sie können die Zeitleiste in Customer Engagement Apps in Dynamics 365 über [Kundenkarten-Add-In](customer-card-add-in.md)oder in einem Power BI Dashboard integrieren.
+Kombinieren Sie Kundenaktivitäten von [verschiedene Datenquellen](data-sources.md) in Dynamics 365 Customer Insights, um eine Zeitleiste zu erstellen, in der die Aktivitäten chronologisch aufgelistet sind. Fügen Sie die Zeitleiste in Dynamics 365-Apps mit der [Kundenkarten-Add-In](customer-card-add-in.md)-Lösung oder in einem Power BI-Dashboard ein.
 
 ## <a name="define-an-activity"></a>Definieren Sie eine Aktivität
 
 Ihre Datenquellen umfassen Entitäten mit Transaktions- und Aktivitätsdaten aus mehreren Datenquellen. Identifizieren Sie diese Einheiten und wählen Sie die Aktivitäten aus, die Sie auf der Zeitachse des Kunden anzeigen möchten. Wählen Sie die Entität, die Ihre Zielaktivität oder -aktivitäten enthält.
 
+> [!NOTE]
+> Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine Kundenzeitachse aufgenommen zu werden, und Sie können keine Entitäten ohne **Datum** Felder hinzufügen. Die Kontrolle **Aktivität hinzufügen** ist deaktiviert, wenn keine solche Entität gefunden wird.
+
 1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Aktivitäten**.
 
-1. Wählen Sie **Aktivität hinzufügen**.
+1. WählenSie **Aktivität hinzufügen** aus, um die geführte Erfahrung für den Aktivitäts-Setup-Prozess zu starten.
 
-   > [!NOTE]
-   > Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine Kundenzeitachse aufgenommen zu werden, und Sie können keine Entitäten ohne **Datum** Felder hinzufügen. Die Kontrolle **Aktivität hinzufügen** ist deaktiviert, wenn keine solche Entität gefunden wird.
+1. Im Schritt **Aktivitätsdaten** stellen Sie die Werte für die folgenden Felder ein:
 
-1. Legen Sie im Bereich **Aktivität hinzufügen** die Werte für die folgenden Felder fest:
-
-   - **Entität**: Wählen Sie eine Entität, die Transaktions- oder Aktivitätsdaten enthält.
+   - **Aktivitätsname**: Wählen Sie einen Namen für Ihre Aktivität.
+   - **Entität**: Wählen Sie eine Entität aus, die Transaktions- oder Aktivitätsdaten enthält.
    - **Primärschlüssel**: Wählen Sie das Feld, das einen Datensatz eindeutig identifiziert. Sie sollte keine doppelten Werte, leere Werte oder fehlende Werte enthalten.
-   - **Zeitstempel**: Wählen Sie das Feld, das die Startzeit Ihrer Aktivität darstellt.
-   - **Ereignis**: Wählen Sie das Feld aus, das das Ereignis für die Aktivität ist.
-   - **Internetadresse**: Wählen Sie das Feld, das eine URL darstellt, die zusätzliche Informationen zu dieser Aktivität liefert. Zum Beispiel das Transaktionssystem, aus dem diese Aktivität stammt. Diese URL kann ein beliebiges Feld aus der Datenquelle sein, oder sie kann mit Hilfe einer Power-Query-Transformation als neues Feld konstruiert werden. Diese URL-Daten werden in der Entität Unified Activity gespeichert, die stromabwärts über APIs konsumiert werden kann.
-   - **Details**: Wählen Sie optional das Feld, das für zusätzliche Details hinzugefügt wird.
-   - **Symbol**: Wählen Sie optional das Symbol, das diese Aktivität repräsentiert.
-   - **Aktivitätstyp**: Definieren Sie den Aktivitätstyp-Verweis auf das Common Data Model, der die semantische Definition der Aktivität am besten beschreibt.
 
-1. Konfigurieren Sie im Abschnitt **Beziehung einrichten** die Details, die zum Verbinden Ihrer Aktivitätsdaten mit dem entsprechenden Kunden verwendet werden.
+   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Richten Sie die Aktivitätsdaten mit Name, Entität und Primärschlüssel ein.":::
 
-    - **Aktivitätsentitätsfeld**: Wählen Sie das Feld in Ihrer Aktivitätsentität aus, das zum Herstellen einer Beziehung mit einer anderen Entität verwendet werden soll.
-    - **Kundenentität**: Wählen Sie die entsprechende Quellkundenentität aus, mit der Ihre Aktivitätsentität in Beziehung steht. Sie können sich nur auf die Quellkundenentitäten beziehen, die im Datenvereinigungsprozess verwendet werden.
-    - **Kundenentitätsfeld**: In diesem Feld wird der im Map-Prozess ausgewählte Primärschlüssel der Quellkundenentität angezeigt. Dieses Primärschlüsselfeld in der Quellkundenentität wird verwendet, um eine Beziehung zur Aktivitätsentität herzustellen.
-    - **Name**: Wenn bereits eine Beziehung zwischen dieser Aktivitätsentität und der ausgewählten Quellkundenentität besteht, ist der Beziehungsname schreibgeschützt. Wenn keine solche Beziehung besteht, wird eine neue Beziehung mit dem hier angegebenen Namen erstellt.
+1. Wählen Sie **Weiter** aus, um zum nächsten Schritt zu navigieren.
+
+1. Konfigurieren Sie im Schritt **Beziehung** die Details, die zum Verbinden Ihrer Aktivitätsdaten mit dem entsprechenden Kunden verwendet werden. Dieser Schritt visualisiert die Verbindung zwischen Entitäten.  
+
+   - **Erste**: Fremdfeld in Ihrer Aktivitätsentität, das zum Herstellen einer Beziehung mit einer anderen Entität verwendet werden soll.
+   - **Zweite**: Entsprechende Quellkundenentität, mit der die Aktivitätsentität zur Beziehung hinzugefügt wird. Sie können sich nur auf Quellkundenentitäten beziehen, die im Datenvereinigungsprozess verwendet werden.
+   - **Dritte**: Wenn bereits eine Beziehung zwischen dieser Aktivitätsentität und der ausgewählten Quellkundenentität besteht, ist der Beziehungsname schreibgeschützt. Wenn keine solche Beziehung besteht, wird eine neue Beziehung mit dem Namen erstellt, den Sie in diesem Feld angeben.
+
+   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definieren der Entitätsbeziehung.":::
+
+1. Wählen Sie **Weiter** aus, um zum nächsten Schritt zu navigieren. 
+
+1. Im Schritt **Vereinheitlichung der Aktivitäten** wählen Sie das Aktivitätsereignis und die Startzeit Ihrer Aktivität. 
+   - **Erforderliche Felder**
+      1. **Ereignisaktivität**: Feld, das das Ereignis für diese Aktivität ist
+      2. **Zeitstempel**: Feld, das die Startzeit der Aktivität darstellt.
+
+   - **Optionale Felder**
+      1. **Zusätzliches Detail**: Feld mit relevanten Informationen für diese Aktivität.
+      2. **Symbol**: Symbol, das diesen Aktivitätstyp am besten darstellt.
+      3. **Webadresse**: Feld mit einer URL mit Informationen zu dieser Aktivität. Zum Beispiel das Transaktionssystem, aus dem diese Aktivität stammt. Diese URL kann ein beliebiges Feld aus der Datenquelle sein, oder sie kann mit Hilfe einer Power-Query-Transformation als neues Feld konstruiert werden. Die URL-Daten werden in der *Einheitliche Aktivität*-Entität gespeichert, die mit [APIs](apis.md) im Downstream verbraucht werden kann.
    
-   > [!div class="mx-imgBorder"]
-   > ![Definieren der Entitätsbeziehung](media/activities-entities-define.png "Definieren Sie die Entitätsbeziehung")
+   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Geben Sie die Kundenaktivitätsdaten in einer „Einheitliche Aktivität“-Entität an.":::
 
-1. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
+1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. Sie können **Abschließen und überprüfen** auswählen, um die Aktivität jetzt mit dem Aktivitätstyp **Andere** zu speichern. 
 
-1. Auf der Seite **Aktivitäten** wählen Sie **Ausführen**.
+1. Im Schritt **Aktivitätstyp** wählen Sie Schritt für Schritt den Aktivitätstyp und optional aus, ob Sie einige der Aktivitätstypen für die Verwendung in anderen Bereichen von Customer Insights semantisch zuordnen möchten. Derzeit können die Aktivitätstypen *Abonnement* & *SalesOrderLine* semantisch zugeordnet werden, nachdem vereinbart wurde, die Felder zuzuordnen. Wenn ein Aktivitätstyp für die neue Aktivität nicht relevant ist, können Sie *Andere* oder *Neu erstellen* für einen benutzerdefinierten Aktivitätstyp auswählen.
+
+1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. 
+
+1. Im Schritt **Überprüfen** Schritt überprüfen Sie Ihre Auswahl. Sie kehren zu den vorherigen Schritten zurück und aktualisieren die Informationen bei Bedarf.
+
+   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Überprüfen Sie die angegebenen Felder für eine Aktivität.":::
+   
+1. Wählen Sie **Aktivität speichern** aus, um Ihre Änderungen zu übernehmen, und wählen Sie **Fertig** aus, um zu **Daten** > **Aktivitäten** zurückzukehren. Hier sehen Sie, welche Aktivitäten in der Zeitleiste angezeigt werden sollen. 
+
+1. Wählen Sie auf der Seite **Aktivitäten** **Ausführen** aus, um die Aktivität zu verarbeiten. 
 
 > [!TIP]
 > Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
 
-## <a name="edit-an-activity"></a>Eine Aktivität bearbeiten
 
-1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Aktivitäten**.
+## <a name="manage-existing-activities"></a>Vorhandene Aktivitäten verwalten
 
-2. Wählen Sie die Aktivitätsentität aus, die Sie bearbeiten möchten, und wählen Sie **Bearbeiten** aus. Sie können auch die Maus über die Entitätszeile bewegen und das Symbol **Bearbeiten** auswählen.
+Unter **Daten** > **Aktivitäten** können Sie alle Ihre gespeicherten Aktivitäten anzeigen und verwalten. Jede Aktivität wird durch eine Zeile dargestellt, die auch Details zur Quelle, zur Entität und zum Aktivitätstyp enthält.
 
-3. Klicken Sie auf das Symbol **Bearbeiten**.
+Die folgenden Aktionen sind verfügbar, wenn Sie eine Aktivität auswählen. 
 
-4. Aktualisieren Sie im Fensterbereich **Aktivität bearbeiten** die Werte und wählen Sie **Speichern**.
+- **Bearbeiten**: Öffnet das Aktivitätssetup im Überprüfungsschritt. In diesem Schritt können Sie die aktuelle Konfiguration ganz oder teilweise ändern. Wählen Sie nach dem Ändern der Konfiguration **Aktivität speichern** und dann **Ausführen** aus, um die Änderungen zu verarbeiten.
 
-5. Auf der Seite **Aktivitäten** wählen Sie **Ausführen**.
+- **Umbenennen**: Öffnet ein Dialogfeld, in dem Sie einen anderen Namen für die ausgewählte Aktivität eingeben können. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
-## <a name="delete-an-activity"></a>Löschen einer Aktivität
-
-1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Aktivitäten**.
-
-2. Wählen Sie die Aktivitätsentität aus, die Sie entfernen möchten, und wählen Sie **Löschen** aus. Sie können auch die Maus über die Entitätszeile bewegen und das Symbol **Löschen** auswählen. Darüber hinaus können Sie mehrere Aktivitätsentitäten auswählen, die gleichzeitig gelöscht werden sollen.
-   > [!div class="mx-imgBorder"]
-   > ![Bearbeiten oder Löschen der Entitätsbeziehung](media/activities-entities-edit-delete.png "Bearbeiten oder Löschen der Entitätsbeziehung")
-
-3. Wählen Sie das Symbol **Löschen** aus.
-
-4. Bestätigen Sie den Löschvorgang.
-
+- **Löschen**: Öffnet ein Dialogfeld, um das Löschen der ausgewählten Aktivität zu bestätigen. Sie können auch mehrere Aktivitäten gleichzeitig löschen, indem Sie die Aktivitäten auswählen und dann das Löschsymbol auswählen. Um den Löschvorgang zu bestätigen, wählen Sie **Löschen**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-Daten in Adobe Campaign Standard exportieren
 description: Erfahren Sie, wie Sie Zielgruppen-Insights-Segmente in Adobe Campaign Standard verwenden.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596314"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760280"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insights-Segmente in Adobe Campaign Standard verwenden (Verwenden)
 
@@ -48,15 +48,21 @@ Die Angebots-E-Mail, die Sie versenden möchten, enthält das Vorname, Nachname,
 
 ## <a name="export-your-target-audience"></a>Exportieren Sie Ihre Zielgruppe
 
+### <a name="configure-a-connection"></a>Verbindung konfigurieren
+
 Nachdem unsere Zielgruppe identifiziert wurde, können wir den Export von Zielgruppen-Insights in ein Azure Blob-Speicherkonto konfigurieren.
 
-1. Gehen Sie in den Zielgruppen-Insights zu **Admin** > **Ziele exportieren**.
+1. Gehen Sie in Zielgruppenerkenntnissen zu **Administrator** > **Verbindungen**.
 
-1. In der Kachel **Adobe Campaign** wählen Sie **Einrichten**.
+1. Wählen Sie **Verbindung hinzufügen** und dann **Adobe Campaign** aus, um die Verbindung zu konfigurieren, oder wählen Sie **Einrichten** in der Kachel **Adobe Campaign** aus
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfigurationskachel für Adobe Campaign Standard.":::
 
-1. Geben Sie einen **Anzeigename** für dieses neue Exportziel ein und geben Sie dann **Kontoname**, **Kontoschlüssel**, und **Container** des Azure Blob-Speicherkontos ein, in das Sie das Segment exportieren möchten.  
+1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
+
+1. Wählen Sie aus, wer diese Verbindung verwenden kann. Wenn Sie keine Aktion ausführen, ist die Standardeinstellung Administratoren. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
+
+1. Geben Sie die **Kontobezeichnung**, **Kontoschlüssel** und **Container** des Azure Blob Storage-Kontos ein, in das Sie das Segment exportieren möchten.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Screenshot der Speicherkontokonfiguration. "::: 
 
@@ -64,7 +70,17 @@ Nachdem unsere Zielgruppe identifiziert wurde, können wir den Export von Zielgr
 
    - Informationen zum Erstellen eines Containers finden Sie unter [Erstellen eines Containers](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Klicken Sie auf **Weiter**.
+1. Wählen Sie zum Abschließen der Verbindung **Speichern** aus.
+
+### <a name="configure-an-export"></a>Konfigurieren Sie einen Export
+
+Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung dieses Typs haben. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
+
+1. Gehen Sie zu **Daten** > **Exporte**.
+
+1. Um einen neuen Export zu erstellen, wählen Sie **Export hinzufügen** aus.
+
+1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Adobe Campaign-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
 
 1. Wählen Sie die Segmente aus, die Sie exportieren möchten. In diesem Beispiel ist es **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Nachdem unsere Zielgruppe identifiziert wurde, können wir den Export von Zielgr
 
 1. Wählen Sie **Speichern** aus.
 
-Nachdem Sie das Exportziel gespeichert haben, finden Sie es auf **Administrator** > **Exporte** > **Meine Exportziele**.
+Nachdem Sie das Exportziel gespeichert haben, finden Sie in **Daten** > **Exporte**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Screenshot mit hervorgehobener Exportliste und Beispielsegment.":::
-
-Sie können jetzt [das Segment nach Bedarf exportieren](export-destinations.md#export-data-on-demand). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md) durchgeführt.
+Sie können jetzt [das Segment nach Bedarf exportieren](export-destinations.md#run-exports-on-demand). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md) durchgeführt.
 
 > [!NOTE]
 > Stellen Sie sicher, dass die Anzahl der Datensätze im exportierten Segment innerhalb des zulässigen Grenzwerts Ihrer Adobe Campaign Standard-Lizenz liegt.

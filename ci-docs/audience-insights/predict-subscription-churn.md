@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595655"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906901"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Vorhersage der Abwanderung von Abonnenten (Vorschau)
 
@@ -49,6 +49,12 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
         - **Zeitstempel:** Das Datum und die Uhrzeit des durch den Primärschlüssel identifizierten Ereignisses.
         - **Ereignis:** Der Name des Ereignisses, das Sie verwenden möchten. Beispielsweise könnte ein Feld mit dem Namen "UserAction" in einem Streaming-Video-Dienst den Wert "Viewed" haben.
         - **Details:** Detaillierte Informationen über das Ereignis. Beispielsweise könnte ein Feld namens "ShowTitle" in einem Streaming-Video-Dienst den Wert eines Videos haben, das ein Kunde angesehen hat.
+- Vorgeschlagene Datencharakteristik:
+    - Ausreichende historische Daten: Abonnementdaten für mindestens das Doppelte des ausgewählten Zeitfensters. Vorzugsweise zwei bis drei Jahre Abonnementdaten.
+    - Abonnementstatus: Die Daten enthalten aktive und inaktive Abonnements für jeden Kunden, sodass pro Kunden-ID mehrere Einträge vorhanden sind.
+    - Anzahl der Kunden: Mindestens 10 Kundenprofilen, vorzugsweise mehr als 1.000 eindeutigen Kunden. Das Modell schlägt mit weniger als 10 Kunden und unzureichenden historischen Daten fehl.
+    - Vollständigkeit der Daten: Weniger als 20 % der fehlenden Werte im Datenfeld der angegebenen Entität.
+   
    > [!NOTE]
    > Sie benötigen mindestens zwei Aktivitätsdatensätze für 50 % der Kunden, für die Sie die Abwanderung berechnen möchten.
 
@@ -67,7 +73,7 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 ### <a name="define-customer-churn"></a>Kundenabwanderung definieren
 
 1. Geben Sie die Anzahl von **Tagen seit Ende des Abonnements** ein, die Ihr Unternehmen einen Kunden in einem abgewanderten Zustand betrachtet. Dieser Zeitraum wird in der Regel gern für Geschäftsaktivitäten wie Angebote oder andere Marketingmaßnahmen genutzt, um den Verlust des Kunden zu verhindern.
-1. Geben Sie die Anzahl von **Tagen ein, um die Zukunft zu prognostizieren und die Abwanderung vorherzusagen** und ein Fenster für die Vorhersage der Abwanderung festzulegen. Zum Beispiel, um das Risiko einer Abwanderung für Ihre Kunden in den nächsten 90 Tagen vorherzusagen und sich an Ihren Bemühungen zur Marketingbindung auszurichten. Die Vorhersage des Abwanderungsrisikos für längere oder kürzere Zeiträume kann es schwieriger machen, die Faktoren in Ihrem Abwanderungsrisikoprofil zu berücksichtigen. Dies hängt jedoch stark von Ihren speziellen Geschäftsanforderungen ab. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen
+1. Geben Sie die Anzahl von **Tagen ein, um die Zukunft zu prognostizieren und die Abwanderung vorherzusagen** und ein Fenster für die Vorhersage der Abwanderung festzulegen. Zum Beispiel, um das Risiko einer Abwanderung für Ihre Kunden in den nächsten 90 Tagen vorherzusagen und sich an Ihren Bemühungen zur Marketingbindung auszurichten. Die Vorhersage des Abwanderungsrisikos für längere oder kürzere Zeiträume könnte es schwieriger machen, die Faktoren in Ihrem Abwanderungsrisikoprofil zu berücksichtigen, je nach spezifischen Unternehmensanforderungen. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen
    >[!TIP]
    > Sie können jederzeit **Speichern und schließen** wählen, um die Vorhersage als Entwurf zu speichern. Sie finden den Entwurf der Vorhersage im Register **Meine Vorhersagen**, um fortzufahren.
 
@@ -113,7 +119,8 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 1. Wählen Sie die Vorhersage aus, die Sie überprüfen möchten.
    - **Name der Vorhersage:** Der Name der Vorhersage, der bei ihrer Erstellung angegeben wurde.
    - **Art der Vorhersage:** Typ des für die Vorhersage verwendeten Modells
-   - **Ausgabe-Entität:** Name der Entität, die die Ausgabe der Vorhersage speichern soll. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.
+   - **Ausgabe-Entität:** Name der Entität, die die Ausgabe der Vorhersage speichern soll. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.    
+     In der Ausgabeentität ist *ChurnScore* die vorhergesagte Abwanderungswahrscheinlichkeit und *IsChurn* eine binäre Bezeichnung basierend auf *ChurnScore* mit Grenzwert 0,5. Der Standardschwellenwert funktioniert möglicherweise nicht für Ihr Szenario. [Erstellen Sie ein neues Segment](segments.md#create-a-new-segment) mit Ihrem bevorzugten Grenzwert.
    - **Vorhergesagtes Feld:** Dieses Feld wird nur für einige Arten von Vorhersagen ausgefüllt und wird nicht für die Vorhersage der Abonnentenabwanderung verwendet.
    - **Status:** Der aktuelle Status des Ausführung der Vorhersage.
         - **Warteschleife:** Die Vorhersage wartet derzeit auf die Ausführung anderer Prozesse.
@@ -145,7 +152,7 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
 1. Markieren Sie die Vorhersage, für die Sie Fehlerprotokolle anzeigen möchten, und wählen Sie **Protokolle**.
    > [!div class="mx-imgBorder"]
-   > ![Ansicht der Ergebnismenüleiste einschließlich der Schaltflächen Schließen, Modell bearbeiten und Protokolle](media/subscription-churn-logsbutton.PNG "Ansicht der Ergebnismenüleiste einschließlich der Schaltflächen "Schließen", "Modell bearbeiten" und "Protokolle")
+   > ![Ansicht der Ergebnismenüleiste einschließlich der Schaltflächen Schließen, Modell bearbeiten und Protokolle](media/subscription-churn-logsbutton.PNG "Ansicht der Ergebnismenüleiste einschließlich der Schaltflächen &quot;Schließen&quot;, &quot;Modell bearbeiten&quot; und &quot;Protokolle")
 1. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Ein Fehler, für den es nicht genügend Daten gibt, um eine genaue Vorhersage zu treffen, wird normalerweise durch das Laden zusätzlicher Daten behoben.
 
 ## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage

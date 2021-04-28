@@ -1,7 +1,7 @@
 ---
 title: Verwenden Sie Datenquellen zur Datenerfassung
 description: Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595946"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887893"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
@@ -32,8 +32,15 @@ Sie können ein Datenquelle auf drei Arten hinzufügen:
 - [Aus einem Common Data Model-Ordner](connect-common-data-model.md)
 - [Aus Ihrem eigenen Common Data Service-Lake](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Sie können noch keine Daten aus lokalen Datenquellen hinzufügen.
+## <a name="add-data-from-on-premises-data-sources"></a>Fügen Sie Daten aus lokalen Datenquellen hinzu
+
+Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Power Platform Dataflows unterstützt. Dataflows können in Customer Insights durch [Bereitstellung der Microsoft Dataverse-Umgebungs-URL](manage-environments.md#create-an-environment-in-an-existing-organization) beim Einrichten der Umgebung aktiviert werden.
+
+Datenquellen, die nach dem Zuordnen einer Dataverse-Umgebung mit Customer Insights erstellt werden, verwenden [Power Platform Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) standardmäßig. Dataflows unterstützen die lokale Konnektivität mithilfe der Datengateways. Entfernen Sie Datenquellen, die vor einer Dataverse-Umgebungszuordnung vorhanden waren, und erstellen Sie sie neu, um Datengateways lokal zu verwenden.
+
+Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Datenquellenseite enthält Links zur Power Platform-Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Screenshot der Datenquellenseite mit Links, die auf die Power Platform-Umgebung verweisen.":::
 
 ## <a name="review-ingested-data"></a>Eingebundene Daten überprüfen
 
@@ -65,7 +72,7 @@ Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
 
 2. Wählen Sie die vertikalen Auslassungspunkte neben der Datenquelle, die Sie aktualisieren möchten, und wählen Sie **Auffrischen** aus der Dropdown-Liste.
 
-3. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Das Aktualisieren einer Datenquelle aktualisiert sowohl das Entitätsschema als auch die Daten für alle Entitäten, die in der Datenquelle angegeben sind.
+3. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
 
 4. Wählen Sie **Auffrischung stoppen**, wenn Sie eine bestehende Auffrischung abbrechen wollen und die Datenquelle in ihren letzten Auffrischungsstatus zurückkehren soll.
 

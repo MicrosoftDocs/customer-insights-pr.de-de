@@ -1,7 +1,7 @@
 ---
-title: Exportziele
-description: Daten exportieren und Exportziele verwalten.
-ms.date: 07/21/2020
+title: Exportieren Sie Daten aus Customer Insights
+description: Verwalten Sie Datenexporte, um Daten freizugeben.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596084"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896142"
 ---
-# <a name="export-destinations-preview-overview"></a>Exportziele (Vorschau) – Übersicht
+# <a name="exports-preview-overview"></a>Exporte (Vorschau) – Übersicht
 
-Die Seite **Exportziele** zeigt Ihnen die Orte, die Sie für den Export von Daten eingerichtet haben. Sie können auch neue Ziele für den Export hinzufügen. Zusätzlich zeigt es die aktuell verfügbaren Exportoptionen an. Verschaffen Sie sich einen schnellen Überblick und eine Beschreibung und finden Sie heraus, was Sie mit den einzelnen Erweiterungsoptionen tun können. Exportieren Sie vereinheitlichte Profile, Messgrößen und Segmente in unterstützte Anwendungen, die für Ihr Unternehmen relevant sind.
+Die Seite **Exporte** zeigt Ihnen alle konfigurierten Exporte. Exporte teilen bestimmte Daten mit verschiedenen Anwendungen. Sie können Kundenprofile oder -entitäten, Schemas und Zuordnungsdetails enthalten. Jeder Export erfordert eine [Verbindung, die von einem Administrator eingerichtet wurde, um die Authentifizierung und den Zugriff zu verwalten](connections.md).
 
-Gehen Sie zu **Admin** > **Exportziele**, um die folgenden Erweiterungsoptionen zu finden:
+> [!NOTE]
+> Bis März 2021 stellten Exporte automatisch eine Verbindung zum entsprechenden Dienst her. Exporte erfordern jetzt eine [Verbindung, die von einem Administrator erstellt und geteilt wurde](connections.md), bevor Sie sie erstellen können.
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Adobe Experience Platform](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [Autopilot](export-autopilot.md)
-- [Azure Blob Storage](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Bot für Microsoft Teams](export-teams-bot.md)
-- [Customer Insights API](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (Kundenkarten-Add-in)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Sales Hub (Kundenkarten-Add-in)](customer-card-add-in.md)
-- [Facebook-Werbeanzeigenmanager](export-facebook.md)
-- [Google Ads](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [Mailchimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+Gehen Sie zu **Daten** > **Exporte**, um die Exportseite anzuzeigen. Alle Benutzerrollen haben Zugriff auf die angezeigten Exporte. Verwenden Sie das Suchfeld in der Befehlsleiste, um Exporte nach Name, Verbindungsname oder Verbindungstyp zu suchen.
 
-## <a name="add-a-new-export-destination"></a>Neues Exportziel hinzufügen
+## <a name="set-up-a-new-export"></a>Einen neuen Export einrichten
 
-Um Exportziele hinzuzufügen, haben Sie [Administrator-Berechtigungen](permissions.md). Wenn Sie zu Microsoft-Diensten exportieren, gehen wir davon aus, dass sich beide Dienste in derselben Organisation befinden.
+Um einen Export einzurichten oder zu bearbeiten, müssen Verbindungen verfügbar sein. Verbindungen hängen von Ihrer [Benutzerrolle](permissions.md) ab:
+- Administratoren haben Zugriff auf alle Verbindungen. Sie können beim Einrichten eines Exports auch neue Verbindungen herstellen.
+- Mitwirkende können auf bestimmte Verbindungen zugreifen. Sie hängen von Administratoren ab, um Verbindungen zu konfigurieren und gemeinsam zu nutzen. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Betrachter können nur vorhandene Exporte anzeigen, aber nicht erstellen.
 
-1. Gehen Sie zu **Administrator** > **Exportziele**.
+1. Gehen Sie zu **Daten** > **Exporte**.
 
-1. Wechseln Sie zur Registerkarte **Meine Exportziele**.
+1. Wählen Sie **Export hinzufügen**, um ein neues Exportziel zu erstellen.
 
-1. Wählen **Ziel hinzufügen**, um ein neues Exportziel zu erstellen.
+1. Im Bereich **Export einrichten** wählen Sie aus, welche Verbindung verwendet werden soll. [Verbindungen](connections.md) werden von Administratoren verwaltet. 
 
-1. In dem Bereich **Ziel hinzufügen** wählen Sie den **Typ** des Exportziels in der Dropdown-Liste.
+1. Geben Sie die erforderlichen Details ein und wählen Sie **Speichern**, um den Export zu erstellen.
 
-1. Geben Sie die erforderlichen Details ein und wählen Sie **Weiter**, um das Exportziel zu erstellen.
-
-Sie können auch auf einer Kachel **Installieren** in der Registerkarte **Entdecken** auswählen.
-
-## <a name="view-export-destinations"></a>Exportziele anzeigen
-
-Nachdem Sie Exportziele erstellt haben, finden Sie diese in einer Tabelle auf der Registerkarte **Meine Exportziele**. Diese Tabelle enthält drei Spalten:
-
-- **Anzeigename**: Der Name, den Sie beim Erstellen des Ziels eingegeben haben.
-- **Typ**:  Der Exportzieltyp, den Sie beim Erstellen des Ziels festgelegt haben.
-- **Erstellt am**: Das Datum, an dem das Ziel erstellt wurde.
-
-## <a name="edit-an-export-destination"></a>Ein Exportziel bearbeiten
+### <a name="edit-an-export"></a>Einen Export bearbeiten
 
 1. Wählen Sie die vertikale Auslassung für das Exportziel aus, das Sie bearbeiten möchten.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vertikale Ellipsen](media/export-destinations-page-ellipsis.png "Vertikale Ellipsen")
+1. Wählen Sie **Bearbeiten** aus dem Dropdownmenü aus.
 
-1. Wählen Sie **Bearbeiten** aus dem Dropdown-Menü aus.
+1. Ändern Sie die gewünschten Werte zur Aktualisierung und wählen **Speichern** aus.
 
-1. Ändern Sie die zu aktualisierenden Werte und wählen Sie **speichern**.
+## <a name="view-exports-and-export-details"></a>Exporte anzeigen und Details exportieren
 
-## <a name="export-data-on-demand"></a>Daten nach Bedarf exportieren
+Nach dem Erstellen von Exportzielen werden diese in **Daten** > **Exporte** aufgelistet. Alle Benutzer können sehen, welche Daten gemeinsam genutzt werden und welchen Status sie haben.
 
-Nach dem Konfigurieren eines Connectors für ein Exportziel werden die Exporte mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt.
+1. Gehen Sie zu **Daten** > **Exporte**.
 
-Um Daten zu exportieren, ohne auf eine geplante Aktualisierung zu warten, gehen Sie zur Regisgerkarte **Meine Exportziele** unter **Administrator** > **Ziele exportieren**.
+1. Benutzer ohne Bearbeitungsberechtigung wählen **Anzeigen** statt **Bearbeiten** aus, um die Exportdetails anzuzeigen.
 
-> [!div class="mx-imgBorder"]
-> ![Vertikale Ellipsen](media/export-destinations-page-ellipsis.png "Vertikale Ellipsen")
+1. Dieser Seitenbereich zeigt die Einrichtung dieses Exports. Ohne Bearbeitungsberechtigungen können Sie keine Werte ändern. Wählen Sie **Schließen** aus, um zur Exportseite zurückzukehren.
 
-- Wählen Sie **Exportieren** oben in der Liste aus, um den Export zu allen Exportzielen gleichzeitig auszuführen.
-- Wählen Sie die Auslassungspunkte (...) nach einem Listenelement aus und wählen Sie dann die Option **Exportieren** zum Ausführen des Exports für ein einzelnes Exportziel.
+## <a name="run-exports-on-demand"></a>Exporte Bedarfsgesteuert ausführen
 
-## <a name="remove-an-export-destination"></a>Ein Exportziel entfernen
+Nach dem Konfigurieren eines Exports wird er mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt, solange es eine funktionierende Verbindung gibt.
 
-Um ein Exportziel zu entfernen, beginnen Sie auf der Hauptseite **Exportziele**.
+Um Daten zu exportieren, ohne auf eine geplante Aktualisierung zu warten, gehen Sie zu **Daten** > **Exporte**. Sie haben zwei Möglichkeiten:
 
-1. Wählen Sie die vertikale Auslassung für das Exportziel aus, das Sie entfernen möchten.
+- Um alle Exporte auszuführen, wählen Sie **Alle ausführen** in der Befehlsleiste aus. 
+- Um einen einzelnen Export auszuführen, wählen Sie die Auslassungspunkte (...) in einem Listenelement aus und wählen Sie dann **Ausführen**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vertikale Ellipsen](media/export-destinations-page-ellipsis.png "Vertikale Ellipsen")
+## <a name="remove-an-export"></a>Einen Export entfernen
 
-2. Klicken Sie im Dropdown-Menü auf **Entfernen**.
+1. Gehen Sie zu **Daten** > **Exporte**.
 
-3. Bestätigen Sie das Entfernen, indem Sie **Entfernen** auf dem Bestätigungsbildschirm wählen.
+1. Wählen Sie die vertikale Auslassung für den Export aus, den Sie entfernen möchten.
+
+1. Klicken Sie im Dropdown-Menü auf **Entfernen**.
+
+1. Bestätigen Sie das Entfernen, indem Sie **Entfernen** auf dem Bestätigungsbildschirm wählen.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
