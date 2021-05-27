@@ -1,7 +1,7 @@
 ---
 title: Mit APIs arbeiten
 description: APIs verwenden und Einschränkungen verstehen.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873661"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016591"
 ---
 # <a name="work-with-customer-insights-apis"></a>Arbeiten Sie mit Customer Insights APIs
 
@@ -90,19 +90,13 @@ Der [Abschnitt App-Registrierung](#create-a-new-app-registration-in-the-azure-po
 
 1. Gehen Sie bei Ihrer App-Registrierung im Azure-Portal zu **API-Berechtigungen**.
 
-1. Wählen Sie **Eine Berechtigung hinzufügen** und wählen Sie **Customer Insights** im Seitenbereich.
+1. Wählen Sie **Berechtigung hinzufügen** aus. 
+
+1. Wählen Sie die Registerkarte **APIs, die meine Organisation verwendet** und wählen Sie **Dynamics 365 KI für Customer Insights** aus der Liste. 
 
 1. Wählen Sie für **Berechtigungstyp** die **Anwendungsberechtigungen** und wählen Sie die Berechtigung **CustomerInsights.Api.All**.
 
 1. Wählen Sie **Berechtigungen hinzufügen** aus.
-
-1. Um die Admin-Berechtigung für diese Anwendung zu erteilen, müssen Sie ein Service Principal hinzufügen.
-
-   1. Installieren Sie das Azure Active Directory (AD) PowerShell-Modul: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Verbinden Sie sich mit Ihrem AD-Konto: `Connect-AzureAD -TenantId <your tenant id>`. Sie finden Ihre Mandanten-ID auf **Übersicht** > **Azure Active Directory**.
-   1. Führen Sie den folgenden Befehl aus, um ein Azure AD Service Principal hinzuzufügen: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` Der Parameter AppId bezieht sich auf die Customer Insights API App.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Serviceprinzipal-Beispiel":::
 
 1. Gehen Sie zurück zu **API-Berechtigungen** für Ihre App-Registrierung.
 
@@ -138,7 +132,7 @@ Lernen Sie, wie Sie mit den C# Client-Bibliotheken von NuGet.org arbeiten könne
 
 1. Verwenden Sie die [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview), um eine `AccessToken` mit Ihrer bestehenden [Azure-App-Registrierung](#create-a-new-app-registration-in-the-azure-portal) zu erhalten.
 
-1. Nach erfolgreicher Authentifizierung und dem Erwerb eines Tokens erstellen Sie eine neue oder verwenden eine bestehende `HttpClient`mit den zusätzlichen **DefaultRequestHeaders „Authorization“**, die auf **Bearer <access token>** und **Ocp-Apim-Subscription-Key** auf den [**Abonnementschlüssel** aus Ihrer Customer Insights Umgebung](#get-started-trying-the-customer-insights-apis) gesetzt sind.    
+1. Nach erfolgreicher Authentifizierung und dem Erwerb eines Tokens erstellen Sie eine neue oder verwenden eine bestehende `HttpClient` mit den zusätzlichen **DefaultRequestHeaders „Authorization“**, die auf **Bearer <access token>** und **Ocp-Apim-Subscription-Key** auf den [**Abonnementschlüssel** aus Ihrer Customer Insights Umgebung](#get-started-trying-the-customer-insights-apis) gesetzt sind.    
    Setzen Sie gegebenenfalls den **Autorisierung**-Header zurück. Zum Beispiel, wann der Token abgelaufen ist.
 
 1. Übergeben Sie diese `HttpClient` in die Konstruktion des `CustomerInsights` Clients.

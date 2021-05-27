@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595563"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085621"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
@@ -103,6 +103,18 @@ Fügen Sie einer Übereinstimmungsregel weitere Bedingungen hinzu, um Entitäten
 
 > [!NOTE]
 > Die Reihenfolge der Regeln ist wichtig. Der Abgleichalgorithmus versucht, basierend auf der ersten Regel eine Übereinstimmung zu finden, und fährt mit der zweiten Regel fort, wenn unter der ersten Regel keine Übereinstimmungen identifiziert wurden.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Ändern Sie die Entitätsreihenfolge in Übereinstimmungsregeln
+
+Sie können Entitäten für Übereinstimmungsregeln neu anordnen, um die Reihenfolge zu ändern, in der sie verarbeitet werden. Regeln, die aufgrund einer geänderten Reihenfolge in Konflikt stehen, werden entfernt. Sie müssen entfernte Regeln mit einer aktualisierten Konfiguration neu erstellen.
+
+1. Gehen Sie zu **Daten** > **Zusammenführen** > **Abgleichen** und wählen Sie **Bearbeiten** aus.
+
+1. In dem Bereich **Regel bearbeiten** wählen Sie das Steuerelement **Nach oben/unten verschieben** oder Ziehen und legen Sie Entitäten ab, um die Reihenfolge zu ändern.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Optionen, um zu ändern, in welcher Reihenfolge Entitäten in der Übereinstimmungsphase verarbeitet werden.":::
+
+1. Wählen Sie **Abgeschlossen** und speichern Sie die Regel.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definieren Sie die Deduplizierung auf einer Match-Entität
 

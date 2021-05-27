@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596406"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049393"
 ---
 # <a name="entities-in-audience-insights"></a>Entitäten in Zielgruppen-Insights
 
@@ -35,14 +35,14 @@ Die Seite **Entitäten** listet Entitäten auf und enthält mehrere Spalten:
 Wählen Sie eine Entität aus, um die verschiedenen Felder und Datensätze innerhalb dieser Entität zu untersuchen.
 
 > [!div class="mx-imgBorder"]
-> ![Auswahl einer Entität](media/data-manager-entities-data.png "Wählen Sie eine Entität")
+> ![Eine Entität auswählen](media/data-manager-entities-data.png "Wählen Sie eine Entität")
 
-- Die Registerkarte **Daten** ist standardmäßig ausgewählt und zeigt eine Tabelle mit Details zu den einzelnen Datensätzen der Entität.
+- Die Registerkarte **Daten** zeigt eine Tabelle mit Details zu einzelnen Datensätzen der Entität.
 
 > [!div class="mx-imgBorder"]
 > ![Feldtabelle](media/data-manager-entities-fields.PNG "Tabelle Felder")
 
-- Das Register **Felder** zeigt eine Tabelle zur Überprüfung der Details für die ausgewählte Entität, wie z. B. Feldnamen, Datentypen und -arten. Die Spalte **Typ** zeigt die mit dem Common Data Model verbundenen Typen, die entweder vom System automatisch identifiziert oder von den Benutzern [manuell abgebildet](map-entities.md) werden. Es handelt sich um semantische Typen, die sich von den Datentypen der Attribute unterscheiden können, z. B. hat das Feld *Email* unten einen Datentyp *Text*, aber sein (semantischer) Common Data Model Typ könnte *Email* oder *EmailAddress* sein.
+- Die Registerkarte **Attribute** ist standardmäßig ausgewählt und zeigt eine Tabelle an, in der Details für die ausgewählte Entität wie Feldnamen, Datentypen und Typen überprüft werden. Die Spalte **Typ** zeigt die mit dem Common Data Model verbundenen Typen, die entweder vom System automatisch identifiziert oder von den Benutzern [manuell abgebildet](map-entities.md) werden. Es handelt sich um semantische Typen, die sich von den Datentypen der Attribute unterscheiden können, z. B. hat das Feld *Email* unten einen Datentyp *Text*, aber sein (semantischer) Common Data Model Typ könnte *Email* oder *EmailAddress* sein.
 
 > [!NOTE]
 > Beide Tabellen zeigen nur einen Ausschnitt der Daten Ihrer Entität. Um den vollständigen Datensatz anzuzeigen, gehen Sie zur Seite **Datenquellen**, wählen Sie eine Entität, wählen Sie **Bearbeiten** und zeigen Sie dann die Daten dieser Entität mit dem Power Query-Editor an, wie unter [Datenquellen](data-sources.md) erläutert.

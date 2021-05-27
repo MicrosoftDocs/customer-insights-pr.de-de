@@ -1,7 +1,7 @@
 ---
-title: Segmente erstellen und verwalten
-description: Erstellen Sie Kundensegmente, um sie auf der Grundlage verschiedener Attribute zu gruppieren.
-ms.date: 03/02/2021
+title: Segmente in Zielgruppenerkenntnissen
+description: Übersicht über Segmente und wie man sie erstellt und verwaltet.
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,79 +9,42 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
+ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597050"
+ms.lasthandoff: 05/14/2021
+ms.locfileid: "6034011"
 ---
-# <a name="create-and-manage-segments"></a>Segmente erstellen und verwalten
+# <a name="segments-overview"></a>Übersicht über Segmente
 
 Mit Segmenten können Sie Ihre Kunden anhand von demografischen, transaktionalen oder verhaltensbezogenen Attributen gruppieren. Sie können Segmente verwenden, um Werbekampagnen, Vertriebsaktivitäten und Kundensupportaktionen gezielt auf die Erreichung Ihrer Geschäftsziele auszurichten.
 
-Sie können komplexe Filter um die Entität Kundenprofil und die damit verbundenen Entitäten definieren. Jedes Segment erstellt nach der Verarbeitung eine Reihe von Kundendatensätzen, die Sie exportieren und für die Sie Maßnahmen ergreifen können. Es gelten einige [Serviceeinschränkungen](service-limits.md).
-
-Wenn nicht anders angegeben, handelt es sich bei allen Segmenten um **Dynamische Segmente**, die in einem wiederkehrenden Zeitplan aufgefrischt werden.
-
-Das folgende Beispiel veranschaulicht die Funktionalität der Segmentierung. Wir haben ein Segment für Kunden definiert, die in den letzten 90 Tagen Waren im Wert von mindestens 500 US-Dollar bestellt haben *und* die an einem Kundenserviceanruf beteiligt waren, der eskaliert wurde.
-
-> [!div class="mx-imgBorder"]
-> ![Mehrere Gruppen](media/segmentation-group1-2.png "Mehrere Gruppen")
+Kundenprofile, die den Filtern einer Segmentdefinition entsprechen, werden als *Mitglieder* eines Segments bezeichnet. Es gelten einige [Serviceeinschränkungen](service-limits.md).
 
 ## <a name="create-a-new-segment"></a>Ein neues Segment erstellen
 
-Segmente werden auf der Seite **Segmente** verwaltet.
+Es gibt mehrere Wege, ein neues Segment zu erstellen: 
 
-1. Gehen Sie in den Zielgruppen-Insights auf die Seite **Segmente**.
+- Komplexes Segment mit Segment Builder: [Leeres Segment](segment-builder.md#create-a-new-segment)
+- Einfache Segmente mit einem Operator: [Schnelles Segment](segment-builder.md#quick-segments)
+- KI-gestützter Weg, um ähnliche Kunden zu finden: [Ähnliche Kunden](find-similar-customer-segments.md)
+- KI-gestützte Vorschläge basierend auf Maßnahmen oder Attributen: [Vorgeschlagene Segmente zur Verbesserung der Maßnahmen](suggested-segments.md)
+- Vorschläge basierend auf Aktivitäten: [Vorgeschlagene Segmente basierend auf der Kundenaktivität](suggested-segments-activity.md)
 
-1. Wählen Sie **Neu** > **Leeres Segment** aus.
+## <a name="get-insights-on-existing-segments"></a>Erkenntnisse in vorhandene Segmente erhalten
 
-1. Wählen Sie im Bereich **Neues Segment** einen Segmenttyp und geben Sie **Name** ein.
+Entdecken Sie zusätzliche Informationen zu Ihren vorhandenen Segmenten mit [Segmenterkenntnissen](segment-insights.md). Finden Sie heraus, was zwei Segmente unterscheidet oder was sie gemeinsam haben.
 
-   Geben Sie optional einen Anzeigenamen und eine Beschreibung an, die die Identifizierung des Segments erleichtert.
+## <a name="find-similar-customers"></a>Ähnliche Kunden finden
 
-1. Wählen Sie **Weiter**, um zu der Seite **Segment-Builder** zu gelangen, auf der Sie eine Gruppe definieren. Eine Gruppe ist eine Gruppe von Kunden.
-
-1. Wählen Sie die Entität, die das Attribut enthält, nach dem Sie segmentieren möchten.
-
-1. Wählen Sie das Attribut aus, nach dem segmentiert werden soll. Dieses Attribut kann einen von vier Werttypen haben: numerisch, Zeichenfolge, Datum oder boolesch.
-
-1. Wählen Sie einen Operator und einen Wert für das ausgewählte Attribut.
-
-   > [!div class="mx-imgBorder"]
-   > ![Benutzerdefinierter Gruppenfilter](media/customer-group-numbers.png "Kundengruppen-Filter")
-
-   |Anzahl |Definition  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Attribut          |
-   |3    |Operator         |
-   |4    |Wert         |
-
-8. Wenn die Entität über [Beziehungen](relationships.md) mit der einheitlichen Kundenentität verbunden ist, müssen Sie den Beziehungspfad definieren, um ein gültiges Segment zu erstellen. Fügen Sie die Entitäten aus dem Beziehungspfad hinzu, bis Sie die Entität **Kunde: Customer Insights** aus der Dropdownliste auswählen können. Wählen Sie dann **Alle Datensätze** für jede Bedingung aus.
-
-   > [!div class="mx-imgBorder"]
-   > ![Beziehungspfad während der Segmenterstellung](media/segments-multiple-relationships.png "Beziehungspfad während der Segmenterstellung")
-
-1. Standardmäßig generieren Segmente eine Ausgabeentität, die alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie der Ausgabeentität weitere Attribute dieser Entitäten hinzufügen. Wählen Sie, **Projektattribute**, um die Attribute auszuwählen, die an die Ausgabeentität angehängt werden.  
-
-   
-   Beispiel: Ein Segment basiert auf einer Entität, die Kundenaktivitätsdaten enthält, die sich auf die Entität *Kunde* beziehen. Das Segment sucht nach allen Kunden, die in den letzten 60 Tagen den Helpdesk angerufen haben. Sie können die Anrufdauer und die Anzahl der Anrufe an alle übereinstimmenden Kundendatensätze in der Ausgabeentität anhängen. Diese Informationen können hilfreich sein, um eine E-Mail mit hilfreichen Links zu Online-Hilfeartikeln und häufig gestellten Fragen an Kunden zu senden, die häufig angerufen haben.
-
-1. Wählen Sie **Speichern**, um Ihr Segment zu speichern. Ihr Segment wird gespeichert und verarbeitet, wenn alle Anforderungen validiert sind. Andernfalls wird es als Entwurf gespeichert.
-
-1. Wählen Sie **Zurück zu Segmenten**, um zur Seite **Segmente** zurückzukehren.
+Finden Sie mithilfe künstlicher Intelligenz Kunden, die den Mitgliedern eines ausgewählten Segments ähnlich sind. Weitere Informationen finden Sie unter [ähnliche Kunden](find-similar-customer-segments.md).
 
 ## <a name="manage-existing-segments"></a>Vorhandene Segmente verwalten
 
-Auf der Seite **Segmente** können Sie alle Ihre gespeicherten Segmente anzeigen und verwalten.
+Gehen Sie zur Seite **Segmente**, um alle Ihre gespeicherten Segmente anzuzeigen und zu verwalten.
 
 Jedes Segment wird durch eine Zeile dargestellt, die zusätzliche Informationen über das Segment enthält.
-
-Sie können die Segmente in einer Spalte sortieren, indem Sie die Spaltenüberschrift auswählen.
-
-Verwenden Sie das Feld **Suchen** in der oberen rechten Ecke, um die Segmente zu filtern.
 
 > [!div class="mx-imgBorder"]
 > ![Optionen zum Verwalten eines vorhandenen Segments](media/segments-selected-segment.png "Optionen zum Verwalten eines vorhandenen Segments")
@@ -106,71 +69,6 @@ Sie können alle Segmente auf einmal aktualisieren, indem Sie **Alles aktualisie
 > [!TIP]
 > Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
 
-## <a name="download-and-export-segments"></a>Herunterladen und Exportieren von Segmenten
-
-Sie können Ihre Segmente in eine CSV-Datei herunterladen oder nach Dynamics 365 Sales exportieren.
-
-### <a name="download-segments-to-a-csv-file"></a>Herunterladen von Segmenten in eine CSV-Datei
-
-1. Gehen Sie in den Zielgruppen-Insights auf die Seite **Segmente**.
-
-2. Wählen Sie die Auslassungspunkte in der Kachel eines bestimmten Segments aus.
-
-3. Wählen Sie **Download als CSV** aus der Dropdown-Liste Aktionen.
-
-### <a name="export-segments-to-dynamics-365-sales"></a>Exportieren von Segmenten nach Dynamics 365 Sales
-
-Vor dem Exportieren von Segmenten nach Dynamics 365 Sales muss ein Administrator [die Erstellung des Exportziels](export-destinations.md) für Dynamics 365 Sales vornehmen.
-
-1. Gehen Sie in den Zielgruppen-Insights auf die Seite **Segmente**.
-
-2. Wählen Sie die Auslassungspunkte in der Kachel eines bestimmten Segments aus.
-
-3. Wählen Sie aus der Aktionen-Dropdownliste die Option **Hinzufügen** und dann das Exportziel aus, an das Sie die Daten senden möchten.
-
-## <a name="draft-mode-for-segments"></a>Entwurfsmodus für Segmente
-
-Wenn nicht alle Voraussetzungen für die Verarbeitung eines Segments erfüllt sind, können Sie das Segment als Entwurf speichern und von der Seite **Segmente** aufrufen.
-
-Es wird als inaktives Segment gespeichert und kann erst aktiviert werden, wenn es gültig ist.
-
-## <a name="add-more-conditions-to-a-group"></a>Weitere Bedingungen zu einer Gruppe hinzufügen
-
-Um weitere Bedingungen zu einer Gruppe hinzuzufügen, können Sie zwei logische Operatoren verwenden:
-
-- **AND** Operator: Beide Bedingungen müssen als Teil des Segmentierungsprozesses erfüllt sein. Diese Option ist am nützlichsten, wenn Sie Bedingungen für verschiedene Entitäten definieren.
-
-- **OR**-Operator: Jede der beiden Bedingungen muss als Teil des Segmentierungsprozesses erfüllt sein. Diese Option ist am nützlichsten, wenn Sie mehrere Bedingungen für dieselbe Entität definieren.
-
-   > [!div class="mx-imgBorder"]
-   > ![OR-Operator, wobei jede der beiden Bedingungen erfüllt sein muss](media/segmentation-either-condition.png "OR-Operator, wobei jede der beiden Bedingungen erfüllt sein muss")
-
-Es ist derzeit möglich, einen **OR** Operator unter einem **AND** Operator zu verschachteln, aber nicht umgekehrt.
-
-## <a name="combine-multiple-groups"></a>Kombinieren mehrerer Gruppen
-
-Jede Gruppe produziert eine bestimmte Gruppe von Kunden. Sie können diese Gruppen kombinieren, um die Kunden einzuschließen, die für Ihren Geschäftsfall erforderlich sind.
-
-1. Gehen Sie in Zielgruppen-Insights auf die Seite **Segmente** und wählen Sie ein Segment aus.
-
-2. Wählen Sie **Gruppe hinzufügen**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Kundengruppe Gruppe hinzufügen](media/customer-group-add-group.png "Kundengruppe Gruppe hinzufügen")
-
-3. Wählen Sie einen der folgenden Set-Operatoren aus: **Vereinigen**, **Überschneiden** oder **Außer**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Kundengruppe Vereinigung hinzufügen](media/customer-group-union.png "Kundengruppe Vereinigung hinzufügen")
-
-   Wählen Sie einen Set-Operator aus, um eine neue Gruppe zu definieren. Speichern Sie verschiedene Gruppen, um zu bestimmen, welche Daten erhalten bleiben sollen:
-
-   - **Vereinigen** vereinigt die beiden Gruppen.
-
-   - **Überschneiden** überschneidet die beiden Gruppen. Nur Daten, die *beiden Gruppen gemeinsam* sind, werden in der vereinigten Gruppe beibehalten.
-
-   - **Außer** kombiniert die beiden Gruppen. Nur Daten in Gruppe A, die *nicht gemeinsam* mit Daten in Gruppe B sind, bleiben erhalten.
-
 ## <a name="view-processing-history-and-segment-members"></a>Anzeigen der Verarbeitungsgeschichte und der Segmentmitglieder
 
 Sie können konsolidierte Daten zu einem Segment anzeigen, indem Sie die Details des Segments überprüfen.
@@ -191,43 +89,4 @@ Der untere Teil enthält eine Liste der Segmentmitglieder.
 >
 >Die Liste ist eine Vorschau der passenden Segmentmitglieder und zeigt die ersten 100 Datensätze Ihres Segments an, so dass Sie es schnell auswerten und seine Definitionen bei Bedarf überprüfen können. Um alle übereinstimmenden Datensätze zu sehen, müssen Sie [Segment](export-destinations.md) exportieren.
 
-## <a name="quick-segments"></a>Schnelle Segmente
-
-Zusätzlich zum Segment-Builder gibt es einen weiteren Weg, um Segmente zu erstellen. Mit schnellen Segmenten können Sie einfache Segmente mit einem einzigen Operator schnell und mit sofortigen Erkenntnissen erstellen.
-
-1. Wählen Sie auf der Seite **Segmente** die Option **Neu** > **Schnell erstellen aus**.
-
-   - Wählen Sie die Option **Profile**, um ein Segment zu erstellen, das auf der einheitlichen Kundenentität basiert.
-   - Wählen Sie die Option **Kennzahlen**, um ein Segment um jeden Kennzahlentyp vom Typ Kundenattribut herum aufzubauen, den Sie zuvor auf der Seite **Kennzahlen** erstellt haben.
-   - Wählen Sie die Option **Intelligenz** zum Erstellen eines Segments für eine der Ausgabeentitäten aus, die Sie mit einer der beiden Funktionen **Vorhersagen** oder **Benutzerdefinierte Modelle** generiert haben.
-
-2. Wählen Sie im Dialogfeld **Neues schnelles Segment** ein Attribut aus der Dropdownliste **Feld** aus.
-
-3. Das System liefert einige zusätzliche Erkenntnisse, die Ihnen helfen, bessere Segmente Ihrer Kunden zu erstellen.
-   - Für kategoriale Felder werden 10 Top-Kundenzahlen angezeigt. Wählen Sie einen **Wert** und wählen Sie **Überprüfung**.
-
-   - Bei einem numerischen Attribut zeigt das System an, welcher Attributwert unter das Perzentil des jeweiligen Kunden fällt. Wählen Sie einen **Bediener** und einen **Wert**, dann wählen Sie **Review**.
-
-4. Das System liefert Ihnen eine **geschätzte Segmentgröße**. Sie können wählen, ob Sie das von Ihnen definierte Segment generieren oder es zunächst erneut aufrufen, um eine andere Segmentgröße zu erhalten.
-
-    > [!div class="mx-imgBorder"]
-    > ![Name und Schätzung für ein Quick-Segment](media/quick-segment-name.png "Name und Schätzung für ein schnelles Segment")
-
-5. Geben Sie einen **Name** für Ihr Segment an. Geben Sie optional einen **Anzeigename** ein.
-
-6. Wählen Sie **Speichern**, um Ihr Segment zu erstellen.
-
-7. Nachdem das Segment fertig bearbeitet wurde, können Sie es wie jedes andere von Ihnen erstellte Segment anzeigen.
-
-Für die folgenden Szenarien empfehlen wir, den Segment-Builder statt der empfohlenen Segment-Fähigkeit zu verwenden:
-
-- Erstellen von Segmenten mit Filtern auf kategoriale Felder, bei denen sich der Operator von dem Operator **Ist** unterscheidet
-- Erstellen von Segmenten mit Filtern für numerische Felder, bei denen der Operator sich von den Operatoren **Zwischen**, **Größer als** und **Kleiner als** unterscheidet
-- Erstellen von Segmenten mit Filtern für Datumsfelder
-
-## <a name="next-steps"></a>Nächste Schritte
-
-[Exportieren Sie ein Segment](export-destinations.md) und erkunden Sie die [Kundenkarte](customer-card-add-in.md) und [Connectors](export-power-bi.md), um Einblicke auf Kundenebene zu erhalten.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../includes/footer-banner.md)] 

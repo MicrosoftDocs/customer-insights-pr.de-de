@@ -1,7 +1,7 @@
 ---
-title: Installieren und konfigurieren Sie das Customer Card Add-in
-description: Installieren und konfigurieren Sie das Kundenkarten-Add-in für Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Kundenkarten-Add-In für Dynamics 365 Apps
+description: Zeigen Sie mit diesem Add-In Daten aus Zielgruppenerkenntnissen in Dynamics 365-Apps an.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597326"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059587"
 ---
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics 365. Zeigen Sie demografische Daten, Einblicke und Aktivitätszeitpläne mit dem Kundenkarten-Add-in an.
+Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics 365. Wenn das Kundenkarten-Add-In in einer unterstützten Dynamics 365-App installiert ist, können Sie Demografien, Einblicke und Aktivitätszeitpläne anzeigen. Das Add-In ruft Daten aus Customer Insights ab, ohne die Daten in der verbundenen Dynamics 365-App zu beeinflussen. 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Anforderungen
 
-- Dynamics 365-App (z. B. Vertriebshub oder Kundenservicehub), Version 9.0 und höher mit aktivierter Einheitlicher Oberfläche.
-- Kundenprofile [werden aus der Dynamics 365 App über Common Data Service abgerufen](connect-power-query.md).
-- Benutzer des Customer Card Add-Ins müssen [als Benutzer](permissions.md) in Zielgruppen-Insights hinzugefügt werden.
-- [Konfigurierte Such- und Filter-Funktionalitäten](search-filter-index.md).
-- Demografische Kontrolle: Demografische Felder, wie z.B. Alter oder Geschlecht, sind im einheitlichen Kundenprofil verfügbar.
-- Anreicherungskontrolle: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet.
-- Steuerung der Intelligenz: Erfordert Daten, die mit Azure Machine Learning generiert wurden ([Vorhersagen](predictions.md) oder [Benutzerdefinierte Modelle](custom-models.md))
-- Kennzahlen-Kontrolle: Erfordert [Konfigurierte Kennzahlen](measures.md).
-- Zeitleistensteuerung: Erfordert [Konfigurierte Aktivitäten](activities.md).
+- Das Add-In funktioniert nur mit modellgetriebenen Dynamics 365-Apps wie Vertrieb oder Kundenservice, Version 9.0 und höher.
+- Damit Ihre Dynamics 365-Daten den Kundenprofilen der Zielgruppenerkenntnissen zugeordnet werden können, müssen sie [von der Dynamics 365-App mit dem Common Data Service Konnektor](connect-power-query.md) eingebunden werden.
+- Alle Dynamics 365-Benutzer des Kundenkarten-Add-Ins müssen in Zielgruppenerkenntnissen [als Benutzer hinzugefügt](permissions.md) sein, um die Daten zu sehen.
+- [Konfigurierte Such- und Filterfunktionen](search-filter-index.md) In Zielgruppenerkenntnissen sind erforderlich, damit die Suche nach Daten funktioniert.
+- Jedes Add-In-Steuerelement basiert auf bestimmten Daten in Zielgruppenerkenntnissen:
+  - Kennzahlen-Kontrolle: Erfordert [Konfigurierte Kennzahlen](measures.md).
+  - Intelligenzsteuerung: Erfordert Daten, die mit [Vorhersagen](predictions.md) oder [kundenspezifischen Modellen](custom-models.md) generiert wurden.
+  - Demografische Kontrolle: Demografische Felder, wie z.B. Alter oder Geschlecht, sind im einheitlichen Kundenprofil verfügbar.
+  - Anreicherungskontrolle: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet.
+  - Zeitleistensteuerung: Erfordert [Konfigurierte Aktivitäten](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Installieren Sie das Kundenkarten-Add-in
 
@@ -56,9 +57,9 @@ Es kann einige Zeit dauern, bis die Lösung in Ihrer Umgebung installiert ist.
    > [!NOTE]
    > Stellen Sie sicher, dass der Popupblocker des Browsers das Authentifizierungsfenster nicht blockiert, wenn Sie die Schaltfläche **Anmelden** auswählen.
 
-1. Wählen Sie die Umgebung, aus der Sie Daten abrufen wollen.
+1. Wählen Sie die Customer Insights Umgebung, von der Sie Daten abrufen möchten.
 
-1. Definieren Sie, welche die Zuordnung der Felder zu Datensätzen in der Dynamics 365 App.
+1. Definieren Sie die Feldzuordnung zu Datensätzen in der Dynamics 365-App. Abhängig von Ihren Daten in Customer Insights können Sie die folgenden Optionen zuordnen:
    - Um mit einem Kontakt zuzuordnen, wählen Sie das Feld in der Entität Kunde, das mit der ID Ihrer Kontakt-Entität übereinstimmt.
    - Um eine Zuordnung zu einem Konto vorzunehmen, wählen Sie das Feld in der Entität „Kunde“, das mit der ID Ihrer Entität „Konto“ übereinstimmt.
 

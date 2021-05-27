@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595807"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954578"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Langfristiger Kundenwert(CLV)-Vorhersage (Vorschau)
 
@@ -38,11 +38,11 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
 - Kundenkennung: Eindeutige Kennung, um Transaktionen einem einzelnen Kunden zuzuordnen
 
 - Transaktionsverlauf: Protokoll historischer Transaktionen mit dem folgenden semantischen Datenschema
-    - Transaktions-ID: Eindeutiger Bezeichner der einzelnen Transaktionen
-    - Transaktionsdatum: Datum, vorzugsweise ein Zeitstempel jeder Transaktion
-    - Transaktionsbetrag: Geldwert (z. B. Umsatz oder Gewinnspanne) jeder Transaktion
-    - Bezeichnung, die Retouren zugewiesen ist (optional): Boolescher Wert, der angibt, ob es sich bei der Transaktion um eine Retoure handelt 
-    - Produkt-ID (optional): Produkt-ID des an der Transaktion beteiligten Produkts
+    - **Transaktions-ID**: Eindeutiger Bezeichner der einzelnen Transaktionen
+    - **Transaktionsdatum**: Datum, vorzugsweise ein Zeitstempel jeder Transaktion
+    - **Transaktionsbetrag**: Geldwert (z. B. Umsatz oder Gewinnspanne) jeder Transaktion
+    - **Bezeichnung, die Retouren zugewiesen ist** (optional): Boolescher Wert, der angibt, ob es sich bei der Transaktion um eine Retoure handelt 
+    - **Produkt-ID** (optional): Produkt-ID des an der Transaktion beteiligten Produkts
 
 - Zusätzliche Daten (optional), zum Beispiel
     - Webaktivitäten: Website-Besuchsverlauf, E-Mail-Verlauf
@@ -53,10 +53,20 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
     - Kundenidentifikatoren zur Zuordnung von Aktivitäten zu Ihren Kunden
     - Aktivitätsinformationen, die den Namen und das Datum der Aktivität enthalten
     - Das semantische Datenschema für Aktivitäten umfasst: 
-        - Primärschlüssel: Ein eindeutiger Identifikator für eine Aktivität
-        - Zeitstempel: Das Datum und die Uhrzeit des Ereignisses, identifiziert durch den Primärschlüssel
-        - Ereignis (Aktivitätsname): Der Name des Ereignisses, das Sie verwenden möchten
-        - Details (Betrag oder Wert): Details zur Kundenaktivität
+        - **Primärschlüssel**: Ein eindeutiger Identifikator für eine Aktivität
+        - **Zeitstempel**: Das Datum und die Uhrzeit des Ereignisses, identifiziert durch den Primärschlüssel
+        - **Ereignis (Aktivitätsname)**: Der Name des Ereignisses, das Sie verwenden möchten
+        - **Details (Betrag oder Wert)**: Details zur Kundenaktivität
+
+- Vorgeschlagene Datencharakteristik:
+    - Ausreichende historische Daten: Mindestens ein Jahr Transaktionsdaten. Vorzugsweise zwei bis drei Jahre Transaktionsdaten, um CLV für ein Jahr vorherzusagen.
+    - Mehrere Einkäufe pro Kunde: Idealerweise mindestens zwei bis drei Transaktionen pro Kunden-ID, vorzugsweise über mehrere Daten hinweg.
+    - Anzahl der Kunden: Mindestens 100 einzigartige Kunden, vorzugsweise mehr als 10.000 Kunden. Das Modell schlägt mit weniger als 100 Kunden und unzureichenden historischen Daten fehl
+    - Vollständigkeit der Daten: Weniger als 20 % fehlende Werte in den erforderlichen Feldern in den Eingabedaten   
+
+> [!NOTE]
+> - Das Modell erfordert die Transaktionshistorie Ihrer Kunden. Derzeit kann nur eine Transaktionsverlaufsentität konfiguriert werden. Wenn mehrere Kaufentitäten/Transaktionsentitäten vorhanden sind, vereinigen Sie diese vor der Datenerfassung in Power Query.
+> - Für zusätzliche Kundenaktivitätsdaten (optional) können Sie jedoch so viele Kundenaktivitätsentitäten hinzufügen, wie Sie für das Modell berücksichtigen möchten.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Langfristige Kundenwertvorhersage erstellen
 
@@ -76,7 +86,7 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
    Standardmäßig ist die Einheit auf Monate eingestellt. Sie können sie in Jahre ändern, um weiter in die Zukunft zu schauen.
 
    > [!TIP]
-   > Um den CLV für den von Ihnen festgelegten Zeitraum genau vorherzusagen, benötigen Sie einen vergleichbaren Zeitraum historischer Daten. Wenn Sie beispielsweise Vorhersagen für die nächsten 12 Monate treffen möchten, wird empfohlen, dass Sie über historische Daten für mindestens 18 bis 24 Monate verfügen.
+   > Um den CLV für den von Ihnen festgelegten Zeitraum genau vorherzusagen, benötigen Sie einen vergleichbaren Zeitraum historischer Daten. Wenn Sie beispielsweise CLV-Vorhersagen für die nächsten 12 Monate treffen möchten, wird empfohlen, dass Sie über historische Daten für mindestens 18 bis 24 Monate verfügen.
 
 1. Geben Sie an, was **Aktive Kunden** für Ihr Geschäft bedeuten. Legen Sie den Zeitrahmen fest, in dem ein Kunde mindestens eine Transaktion gehabt haben muss, um als aktiv zu gelten. Das Modell sagt CLV nur für aktive Kunden voraus. 
    - **Kaufintervall durch das Modell berechnen lassen (empfohlen)** : Das Modell analysiert Ihre Daten und ermittelt einen Zeitraum basierend auf historischen Einkäufen.
@@ -181,14 +191,14 @@ Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite.
   Anhand der Definition von Kunden mit hohem Wert, die bei der Konfiguration von Vorhersage angegeben wurden, bewertet das System, wie sich das KI-Modell bei der Vorhersage von Kunden mit hohem Wert im Vergleich zu einem Basismodell verhält.    
 
   Die Stufen werden nach den folgenden Regeln ermittelt:
-  - A, wenn das Modell im Vergleich zum Basismodell mindestens 5 % mehr hochwertige Kunden genau vorhergesagt hat.
-  - B, wenn das Modell im Vergleich zum Basismodell zwischen 0-5 % mehr hochwertige Kunden genau vorhergesagt hat.
-  - C, wenn das Modell im Vergleich zum Basismodell wenigerhochwertige Kunden genau vorhergesagt hat.
+  - **A**, wenn das Modell im Vergleich zum Basismodell mindestens 5 % mehr hochwertige Kunden genau vorhergesagt hat.
+  - **B**, wenn das Modell im Vergleich zum Basismodell zwischen 0-5 % mehr hochwertige Kunden genau vorhergesagt hat.
+  - **C**, wenn das Modell im Vergleich zum Basismodell weniger hochwertige Kunden genau vorhergesagt hat.
 
   Im Bereich **Modellbewertung** werden weitere Details zur Leistung des KI-Modells und zum Basismodell angezeigt. Das Basismodell verwendet einen nicht auf KI basierenden Ansatz, um den langfristigen Kundenwert zu berechnen, der hauptsächlich auf historischen Einkäufen von Kunden basiert.     
   Die Standardformel zur Berechnung des CLV anhand des Basismodells:    
 
-  *CLV für jeden Kunden = durchschnittlicher monatlicher Einkauf des Kunden im aktiven Kundenfenster * Anzahl der Monate im CLV-Vorhersagezeitraum * Gesamtbindungsrate aller Kunden*
+  _**CLV für jeden Kunden** = durchschnittlicher monatlicher Einkauf des Kunden im aktiven Kundenfenster * Anzahl der Monate im CLV-Vorhersagezeitraum * Gesamtbindungsrate aller Kunden_
 
   Das KI-Modell wird anhand von zwei Modellleistungsmetriken mit dem Basismodell verglichen.
   

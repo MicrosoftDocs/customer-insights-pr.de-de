@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896142"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016613"
 ---
 # <a name="exports-preview-overview"></a>Exporte (Vorschau) – Übersicht
 
 Die Seite **Exporte** zeigt Ihnen alle konfigurierten Exporte. Exporte teilen bestimmte Daten mit verschiedenen Anwendungen. Sie können Kundenprofile oder -entitäten, Schemas und Zuordnungsdetails enthalten. Jeder Export erfordert eine [Verbindung, die von einem Administrator eingerichtet wurde, um die Authentifizierung und den Zugriff zu verwalten](connections.md).
-
-> [!NOTE]
-> Bis März 2021 stellten Exporte automatisch eine Verbindung zum entsprechenden Dienst her. Exporte erfordern jetzt eine [Verbindung, die von einem Administrator erstellt und geteilt wurde](connections.md), bevor Sie sie erstellen können.
 
 Gehen Sie zu **Daten** > **Exporte**, um die Exportseite anzuzeigen. Alle Benutzerrollen haben Zugriff auf die angezeigten Exporte. Verwenden Sie das Suchfeld in der Befehlsleiste, um Exporte nach Name, Verbindungsname oder Verbindungstyp zu suchen.
 
