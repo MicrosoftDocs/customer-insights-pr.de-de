@@ -1,7 +1,7 @@
 ---
 title: Neue und kommende Funktionen
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988919"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263250"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
@@ -26,6 +26,37 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365  Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Update Mai 2021
+
+Die Updates im Mai 2021 umfassen verschiedene Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
+
+### <a name="data-ingestion"></a>Dateneinbindung
+
+- **Anzeigen oder Ändern von Metadaten oder Entitätsdefinitionen beim Anhängen von Daten aus Ihrem Azure Data Lake Storage** – Sie können jetzt Metadaten oder Entitätsdefinitionen in Zielgruppenerkenntnissen anzeigen und bearbeiten, wenn Sie Daten aus einem Common Data Model-Ordner in Ihrem Azure Data Lake Storage anhängen. Diese Funktion bietet Echtzeit-Feedback, Modellprüfung und Fehlerüberprüfung. Sie können sowohl model.json als auch manifest.json nahtlos bearbeiten.
+
+### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Verbesserte Segmentexporte, benutzerdefinierter Zeitplan und Duplizierung** – Sie können jetzt [alle Exporte für ein bestimmtes Segment](export-destinations.md#view-exports-and-export-details) in einer Liste anzeigen. Diese neue Ansicht hilft dabei, die Verwendung eines bestimmten Segments zu verwalten und bestehende Exporte anzupassen oder neue Exporte zu erstellen.    
+  Sie können [benutzerdefinierte Aktualisierungszeitpläne](export-destinations.md#schedule-and-run-exports) für einzelne Exporte oder mehrere Exporte gleichzeitig definieren. Bisher wurden alle Exporte bei jeder Systemaktualisierung ausgeführt.    
+  Anstatt einen neuen Export von Grund auf neu zu erstellen, können Sie auf der Grundlage eines bestehenden Exports damit beginnen, um Zeit zu sparen.
+
+- **Exportieren von Segmenten nach Microsoft Advertising** – Wir haben unsere Exportziele um Microsoft Advertising erweitert. Erstellen Sie Zielgruppen in Microsoft Advertising mit den Daten Ihres vereinheitlichten Kundenprofils und verwenden Sie diese Zielgruppen für Ihre Advertising-Kampagnen. Weitere Informationen finden Sie unter [Exportieren von Segmenten nach Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Exportieren von Segmenten nach LinkedIn Ads** – Wir haben unsere Exportziele um LinkedIn Ads erweitert und ermöglichen Ihnen dadurch die Nutzung von Contact Targeting sowie Company Targeting über LinkedIn, indem Sie Ihre vereinheitlichten Kundenprofildaten exportieren. Weitere Informationen finden Sie unter [Exportieren von Segmenten nach LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Exportieren von Segmenten nach Omnisend** – Wir haben unsere Exportziele um Omnisend erweitert. Verwenden Sie die in Zielgruppenerkenntnissen erstellten Segmente, um Kampagnen zu generieren, E-Mail-Marketing bereitzustellen und spezifische Kundengruppen mit Omnisend zu nutzen. Weitere Informationen finden Sie unter [Exportieren von Segmenten nach Omnisend](export-omnisend.md).
+
+### <a name="predictions"></a>Vorhersagen
+
+- **Eingabedaten-Nutzungsbericht** – Der Eingabedaten-Nutzungsbericht bietet eine konsolidierte Ansicht der Fehler und Warnungen, die Ihre sofort einsatzbereiten Vorhersagen generieren. Er gibt auch Empfehlungen zur Verbesserung der Modellleistung.    
+  Der Bericht ist verfügbar, nachdem ein Modell seinen Trainingsprozess abgeschlossen hat. Er wird für jedes Modell separat erstellt, unabhängig davon, ob es erfolgreich abgeschlossen wurde oder nicht.
+  Derzeit ist diese Funktion nur für das Abwanderungsmodell für Transaktionen verfügbar. Weitere Informationen finden Sie unter [Eingabedaten-Nutzungsbericht](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Beziehungen
+
+- **Beziehungsvisualisierer** – Die Beziehungsvisualisierungsansicht ermöglicht es Ihnen, alle vorhandenen Beziehungen zwischen Entitäten und ihrer Kardinalität anzuzeigen. Beziehungen sind jetzt in Gruppen organisiert: vom Benutzer erstellte, System- und geerbte Beziehungen. Sie können eine Ansicht auch als Bild exportieren. Weitere Informationen finden Sie unter [Anzeigen von Beziehungen](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Update April 2021
 

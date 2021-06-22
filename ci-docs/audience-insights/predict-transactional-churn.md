@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906855"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095601"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Vorhersage der Transaktionsabwanderung (Vorschau)
 
@@ -144,7 +144,7 @@ Die Transaktionsabwanderungsvorhersage hilft bei der Vorhersage, ob ein Kunde Ih
    - **Status:** Status des Vorhersagelaufs.
         - **In Warteschlange:** Die Vorhersage wartet auf die Ausführung anderer Prozesse.
         - **Auffrischen:** Die Vorhersage läuft gerade, um Ergebnisse zu erzeugen, die in die Ausgabe-Entität fließen.
-        - **Fehlgeschlagen:** Der Vorhersagelauf ist fehlgeschlagen. [Betrachten Sie die Protokolle](#troubleshoot-a-failed-prediction) für weitere Details.
+        - **Fehlgeschlagen:** Der Vorhersagelauf ist fehlgeschlagen. [Betrachten Sie die Protokolle](manage-predictions.md#troubleshoot-a-failed-prediction) für weitere Details.
         - **TotalPrice:** Die Vorhersage ist erfolgreich. Wählen Sie **Ansicht** unter den vertikalen Auslassungspunkten, um die Vorhersage zu überprüfen.
    - **Bearbeitet:** Das Datum, an dem die Konfiguration für die Vorhersage geändert wurde.
    - **Zuletzt aktualisiert:** Das Datum, an dem die Vorhersage in der Ausgabe-Entität aktualisiert wurde.
@@ -168,35 +168,9 @@ Die Transaktionsabwanderungsvorhersage hilft bei der Vorhersage, ob ein Kunde Ih
        
     1. **Die wichtigsten Einflussfaktoren:** Es gibt viele Faktoren, die bei der Erstellung Ihrer Vorhersage berücksichtigt werden. Für jeden der Faktoren wird seine Wichtigkeit für die aggregierten Vorhersagen, die ein Modell erstellt, berechnet. Sie können diese Faktoren verwenden, um Ihre Vorhersageergebnisse zu validieren. Oder Sie können diese Informationen später verwenden, um [Segmente](segments.md) zu erstellen, die dazu beitragen könnten, das Abwanderungsrisiko für Kunden zu beeinflussen.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Fehlersuche bei einer fehlgeschlagenen Vorhersage
+## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-
-1. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, für die Sie Fehlerprotokolle anzeigen möchten.
-
-1. Wählen Sie **Logs**.
-
-1. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Beispielsweise wird ein Fehler, für den nicht genügend Daten zur genauen Vorhersage vorhanden sind, in der Regel dadurch behoben, dass zusätzliche Daten in Customer Insights geladen werden.
-
-## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage
-
-Vorhersagen werden automatisch zum gleichen [Zeitpunkt aktualisiert, zu dem Ihre Daten aktualisiert werden](system.md#schedule-tab), wie in den Einstellungen konfiguriert. Sie können sie auch manuell aktualisieren.
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-
-1. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie aktualisieren möchten.
-
-1. Wählen Sie **Aktualisieren** aus.
-
-## <a name="delete-a-prediction"></a>Löschen einer Vorhersage
-
-Das Löschen einer Vorhersage entfernt auch deren Ausgabe-Entität.
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-
-1. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie löschen möchten.
-
-1. Klicken Sie auf **Löschen**.
+Es ist möglich, Vorhersagen zu optimieren, zu korrigieren, zu aktualisieren oder zu löschen. Sehen Sie sich einen Eingabedaten-Nutzungsberichts an, um herauszufinden, wie Sie Vorhersagen schneller und zuverlässiger machen. Weitere Informationen finden Sie unter [Verwalten von Vorhersagen](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

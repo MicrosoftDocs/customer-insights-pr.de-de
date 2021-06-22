@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906763"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095555"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktempfehlungsvorhersage (Vorschau)
 
@@ -205,33 +205,9 @@ Manchmal sind nur bestimmte Produkte für die Art von Vorhersage, die Sie erstel
        > [!div class="mx-imgBorder"]
        > ![Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden](media/product-recommendation-highconfidence.PNG "Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden")
 
-## <a name="fix-a-failed-prediction"></a>Korrigieren einer fehlgeschlagenen Vorhersage
+## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 
-1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
-
-1. Markieren Sie die Vorhersage, für die Sie Fehlerprotokolle anzeigen möchten, und wählen Sie **Protokolle**.
-
-1. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Beispielsweise wird ein Fehler, bei dem nicht genügend Daten zur genauen Vorhersage vorhanden sind, normalerweise durch Laden weiterer Daten in Customer Insights behoben.
-
-## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage
-
-Vorhersagen werden automatisch nach der gleichen [Planung der Datenaktualisierungen](system.md#schedule-tab) aktualisiert, wie in den Einstellungen konfiguriert.
-
-1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
-
-1. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie aktualisieren möchten.
-
-1. Wählen Sie **Aktualisieren** aus.
-
-## <a name="delete-a-prediction"></a>Löschen einer Vorhersage
-
-Das Löschen einer Vorhersage entfernt auch deren Ausgabe-Entität.
-
-1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
-
-1. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie löschen möchten.
-
-1. Klicken Sie auf **Löschen**.
+Es ist möglich, Vorhersagen zu optimieren, zu korrigieren, zu aktualisieren oder zu löschen. Sehen Sie sich einen Eingabedaten-Nutzungsberichts an, um herauszufinden, wie Sie Vorhersagen schneller und zuverlässiger machen. Weitere Informationen finden Sie unter [Verwalten von Vorhersagen](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034011"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111386"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
@@ -32,22 +32,13 @@ Es gibt mehrere Wege, ein neues Segment zu erstellen:
 - KI-gestützte Vorschläge basierend auf Maßnahmen oder Attributen: [Vorgeschlagene Segmente zur Verbesserung der Maßnahmen](suggested-segments.md)
 - Vorschläge basierend auf Aktivitäten: [Vorgeschlagene Segmente basierend auf der Kundenaktivität](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Erkenntnisse in vorhandene Segmente erhalten
-
-Entdecken Sie zusätzliche Informationen zu Ihren vorhandenen Segmenten mit [Segmenterkenntnissen](segment-insights.md). Finden Sie heraus, was zwei Segmente unterscheidet oder was sie gemeinsam haben.
-
-## <a name="find-similar-customers"></a>Ähnliche Kunden finden
-
-Finden Sie mithilfe künstlicher Intelligenz Kunden, die den Mitgliedern eines ausgewählten Segments ähnlich sind. Weitere Informationen finden Sie unter [ähnliche Kunden](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Vorhandene Segmente verwalten
 
 Gehen Sie zur Seite **Segmente**, um alle Ihre gespeicherten Segmente anzuzeigen und zu verwalten.
 
 Jedes Segment wird durch eine Zeile dargestellt, die zusätzliche Informationen über das Segment enthält.
 
-> [!div class="mx-imgBorder"]
-> ![Optionen zum Verwalten eines vorhandenen Segments](media/segments-selected-segment.png "Optionen zum Verwalten eines vorhandenen Segments")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Ausgewähltes Segment mit Dropdownliste und verfügbaren Optionen.":::
 
 Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
 
@@ -59,7 +50,7 @@ Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
   Alternativ können Sie die Funktionalität **Planen Sie später** im Auswahlmenü unter **Aktivieren/Deaktivieren** zur Angabe eines zukünftigen Datums und einer zukünftigen Uhrzeit für die Aktivierung und Deaktivierung eines bestimmten Segments verwenden.
 - **Umbenennen** des Segments.
 - **Download** die Liste der Mitglieder als .CSV-Datei herunterladen.
-- **Hinzufügen zu**-Option sendet die Liste der Kunden-IDs im Segment zur Verarbeitung in einer anderen Anwendung.
+- **Exporte verwalten**, um exportbezogene Segmente anzuzeigen und zu verwalten. [Weitere Informationen zu Exporten.](export-destinations.md)
 - **Löschen** des Segments.
 
 ## <a name="refresh-segments"></a>Aktualisieren von Segmenten
@@ -68,6 +59,24 @@ Sie können alle Segmente auf einmal aktualisieren, indem Sie **Alles aktualisie
 
 > [!TIP]
 > Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
+
+## <a name="export-segments"></a>Segmente exportieren
+
+Sie können ein Segment von der Segmentseite oder der [Exportseite](export-destinations.md) exportieren. 
+
+1. Gehen Sie zur Seite **Segmente**.
+
+1. Wählen Sie für das Segment, das Sie exportieren möchten, **Mehr anzeigen [...]** aus.
+
+1. Wählen Sie aus der Dropdownliste für Aktionen die Option **Exporte verwalten** aus.
+
+1. Die Seite **Exporte (Vorschau) für Segment** wird angezeigt. Sie können alle konfigurierten Exporte gruppiert nach Exporten anzeigen, die das aktuelle Segment enthalten oder nicht enthalten.
+
+   1. Um das ausgewählte Segment zu einem Export hinzuzufügen, wählen Sie den Export in der Liste aus und wählen Sie dann **Segment hinzufügen** aus.
+
+   1. Um einen neuen Export mit dem ausgewählten Segment zu erstellen, wählen Sie **Export hinzufügen** aus. Weitere Informationen zum Erstellen von Exporten finden Sie unter [Einrichten eines neuen Exports](export-destinations.md#set-up-a-new-export).
+
+1. Wählen Sie **Zurück** aus, um zur Hauptseite für Segmente zurückzukehren.
 
 ## <a name="view-processing-history-and-segment-members"></a>Anzeigen der Verarbeitungsgeschichte und der Segmentmitglieder
 

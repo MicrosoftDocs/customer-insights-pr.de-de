@@ -1,7 +1,7 @@
 ---
 title: Kundenprofile mit Daten von Microsoft anreichern
 description: Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Marken- und Interessenbeziehungen zu bereichern.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064890"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245706"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Anreichern von Kundenprofilen mit Marken- und Interessenbeziehungen (Vorschau)
 
@@ -69,12 +69,10 @@ Eine geführte Erfahrung hilft Ihnen bei der Konfiguration der Anreicherungen.
 
 ### <a name="define-your-brands-or-interests"></a>Definieren Sie Ihre Marken oder Interessen
 
-Wählen Sie eine der folgenden Optionen aus:
+Wählen Sie bis zu fünf Marken oder Interessen mit einer oder beiden dieser Optionen aus:
 
-- **Industrie**: Das System identifiziert die für Ihre Branche relevanten Top-Marken oder Interessen und reichert Ihre Kundendaten damit an.
-- **Eigene wählen**: Wählen Sie bis zu fünf Elemente aus der Liste der Marken oder Interessen aus, die für Ihr Unternehmen am relevantesten sind.
-
-Um eine Marke oder ein Interesse hinzuzufügen, geben Sie es in den Eingabebereich ein, um Vorschläge basierend auf übereinstimmenden Begriffen zu erhalten. Wenn wir keine Marke oder kein Interesse auflisten, nach dem Sie suchen, senden Sie uns Feedback über den Link **Vorschlagen**.
+- **Industrie**: Wählen Sie aus der Dropdownliste Ihre Branche aus und treffen Sie dann eine Wahl aus den Top-Marken oder den führenden Interessen für diese Branche.
+- **Eigene auswählen**: Geben Sie eine Marke oder ein Interesse ein, die bzw. das für Ihr Unternehmen relevant ist, und wählen Sie dann aus den passenden Vorschlägen aus. Wenn wir keine Marke oder kein Interesse auflisten, nach dem Sie suchen, senden Sie uns Feedback über den Link **Vorschlagen**.
 
 ### <a name="review-enrichment-preferences"></a>Anreicherungseinstellungen überprüfen
 

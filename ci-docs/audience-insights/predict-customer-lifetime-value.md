@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954578"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095509"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Langfristiger Kundenwert(CLV)-Vorhersage (Vorschau)
 
@@ -149,7 +149,6 @@ Daten, die wichtige Kundeninteraktionen widerspiegeln (wie Web, Kundenservice un
 
 1. Klicken Sie auf **Weiter**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Überprüfen Sie die Modellkonfiguration und führen Sie sie aus
 
 1. Im Schritt **Überprüfen Sie die Modelldetails** überprüfen Sie die Konfiguration der Vorhersage. Sie können zu jedem Teil der Vorhersagekonfiguration zurückkehren, indem Sie unter dem angezeigten Wert **Bearbeiten** wählen. Sie können auch einen Konfigurationsschritt aus der Fortschrittsanzeige auswählen.
@@ -170,11 +169,10 @@ Daten, die wichtige Kundeninteraktionen widerspiegeln (wie Web, Kundenservice un
 - **Status:** Status des Vorhersagelaufs.
     - **In Warteschlange:** Die Vorhersage wartet auf den Abschluss anderer Prozesse.
     - **Wird aktualisiert:** Die Vorhersage läuft gerade, um Ergebnisse zu erstellen, die in die Ausgabe-Entität fließen.
-    - **Fehlgeschlagen:** Der Vorhersagelauf ist fehlgeschlagen. [Betrachten Sie die Protokolle](#troubleshoot-a-failed-prediction) für weitere Details.
+    - **Fehlgeschlagen:** Der Vorhersagelauf ist fehlgeschlagen. [Betrachten Sie die Protokolle](manage-predictions.md#troubleshoot-a-failed-prediction) für weitere Details.
     - **Erfolgreich:** Die Vorhersage ist erfolgreich. Wählen Sie **Anzeigen** unter den vertikalen Ellipsen, um die Ergebnisse der Vorhersage anzuzeigen.
 - **Bearbeitet:** Das Datum, an dem die Konfiguration für die Vorhersage geändert wurde.
 - **Zuletzt aktualisiert:** Das Datum, an dem die Vorhersage in der Ausgabe-Entität aktualisiert wurde.
-
 
 ### <a name="review-prediction-results"></a>Überprüfen Sie die Ergebnisse der Vorhersage
 
@@ -216,28 +214,8 @@ Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite.
 
 - **Einflussreichste Faktoren**: Beim Erstellen Ihrer CLV-Vorhersage werden verschiedene Faktoren berücksichtigt, die auf den für das KI-Modell bereitgestellten Eingabedaten basieren. Für jeden dieser Faktoren wird ihre Bedeutung für die aggregierten Vorhersagen, die ein Modell erstellt, berechnet. Sie können diese Faktoren verwenden, um Ihre Vorhersageergebnisse zu validieren. Diese Faktoren bieten auch mehr Einblick in die einflussreichsten Faktoren, die zur Vorhersage des CLV bei all Ihren Kunden beigetragen haben.
 
-## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage
+## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 
-Vorhersagen werden automatisch nach der gleichen [Planung der Datenaktualisierungen](system.md#schedule-tab) aktualisiert, wie in den Einstellungen konfiguriert. Sie können sie auch manuell aktualisieren.
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie aktualisieren möchten.
-3. Wählen Sie **Aktualisieren** aus.
-
-## <a name="delete-a-prediction"></a>Löschen einer Vorhersage
-
-Das Löschen einer Vorhersage entfernt auch deren Ausgabe-Entität.
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie löschen möchten.
-3. Klicken Sie auf **Löschen**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Fehlersuche bei einer fehlgeschlagenen Vorhersage
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, für die Sie Fehlerprotokolle anzeigen möchten.
-3. Wählen Sie **Logs**.
-4. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Ein Fehler, für den es nicht genügend Daten gibt, um eine genaue Vorhersage zu treffen, wird normalerweise durch das Laden zusätzlicher Daten in Zielgruppenerkenntnisse behoben.
-
+Es ist möglich, Vorhersagen zu optimieren, zu korrigieren, zu aktualisieren oder zu löschen. Sehen Sie sich einen Eingabedaten-Nutzungsberichts an, um herauszufinden, wie Sie Vorhersagen schneller und zuverlässiger machen. Weitere Informationen finden Sie unter [Verwalten von Vorhersagen](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

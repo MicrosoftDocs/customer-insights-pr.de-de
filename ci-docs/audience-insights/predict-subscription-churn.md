@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906901"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095647"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Vorhersage der Abwanderung von Abonnenten (Vorschau)
 
@@ -147,30 +147,9 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
        > [!div class="mx-imgBorder"]
        > ![Liste, die die Einflussfaktoren und ihre Bedeutung bei der Vorhersage des Abwanderungsergebnisses zeigt](media/subscription-churn-influentialfactors.PNG "Liste mit Einflussfaktoren und deren Bedeutung für die Vorhersage des Abwanderungsergebnisses")
 
-## <a name="fix-a-failed-prediction"></a>Korrigieren einer fehlgeschlagenen Vorhersage
+## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 
-1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
-1. Markieren Sie die Vorhersage, für die Sie Fehlerprotokolle anzeigen möchten, und wählen Sie **Protokolle**.
-   > [!div class="mx-imgBorder"]
-   > ![Ansicht der Ergebnismenüleiste einschließlich der Schaltflächen Schließen, Modell bearbeiten und Protokolle](media/subscription-churn-logsbutton.PNG "Ansicht der Ergebnismenüleiste einschließlich der Schaltflächen &quot;Schließen&quot;, &quot;Modell bearbeiten&quot; und &quot;Protokolle")
-1. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Ein Fehler, für den es nicht genügend Daten gibt, um eine genaue Vorhersage zu treffen, wird normalerweise durch das Laden zusätzlicher Daten behoben.
-
-## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage
-
-Vorhersagen werden automatisch zum gleichen [Zeitpunkt aktualisiert, zu dem Ihre Daten aktualisiert werden](system.md#schedule-tab), wie in den Einstellungen konfiguriert.
-
-1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
-1. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie aktualisieren möchten.
-1. Wählen Sie **Aktualisieren** aus.
-
-## <a name="delete-a-prediction"></a>Löschen einer Vorhersage
-
-1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
-1. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie löschen möchten.
-1. Klicken Sie auf **Löschen**.
-
-> [!NOTE]
-> Durch Löschen eines Vorhersage wird dessen Ausgabeentität entfernt.
+Es ist möglich, Vorhersagen zu optimieren, zu korrigieren, zu aktualisieren oder zu löschen. Sehen Sie sich einen Eingabedaten-Nutzungsberichts an, um herauszufinden, wie Sie Vorhersagen schneller und zuverlässiger machen. Weitere Informationen finden Sie unter [Verwalten von Vorhersagen](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

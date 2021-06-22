@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887985"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259098"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
 
@@ -76,9 +76,9 @@ So erstellen Sie eine Umgebung:
    > Wir unterstützen nur Azure Data Lake Gen2-Speicherkonten aus derselben Azure-Region, die Sie beim Erstellen der Umgebung ausgewählt haben.
    > Wir unterstützen nur Azure Data Lake Gen2 hierarchische Name Space (HNS) aktivierte Speicherkonten.
 
-   - Für die Option Azure Data Lake Storage Gen2 können Sie zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Der **Container**-Name kann nicht geändert werden und wird „customerinsights“ lauten.
+   - Für die Option Azure Data Lake Storage Gen2 können Sie zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Der Name unter **Container** kann nicht geändert werden und lautet `customerinsights`.
    
-   - Wenn Sie [Vorhersagen](predictions.md) verwenden möchten, konfigurieren Sie die Datenfreigabe mit Anwendungen und Lösungen basierend auf Microsoft Dataverse oder aktivieren Sie die Datenaufnahme aus lokalen Datenquellen, stellen die Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereit. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
+   - Wenn Sie [Vorhersagen](predictions.md) verwenden möchten, konfigurieren Sie die Datenfreigabe mit Microsoft Dataverse oder aktivieren Sie die Datenerfassung aus lokalen Datenquellen, stellen Sie die Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren** bereit und aktivieren Sie zusätzliche Funktionen. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
 
      > [!NOTE]
      > - Datenaustausch mit verwaltetem Microsoft Dataverse Data Lake wird derzeit nicht unterstützt, wenn Sie alle Daten in Ihrem eigenen Azure Data Lake Storage speichern.
@@ -87,7 +87,7 @@ So erstellen Sie eine Umgebung:
      > [!div class="mx-imgBorder"]
      > ![Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Wenn Sie Prozesse ausführen, wie z.B. die Datenerfassung oder die Segmenterstellung, werden entsprechende Ordner in dem oben angegebenen Speicherkonto erstellt. Datendateien und model.json-Dateien werden basierend auf dem von Ihnen ausgeführten Prozess erstellt und den jeweiligen Unterordnern hinzugefügt.
+   Wenn Sie Prozesse ausführen, wie z.B. die Datenerfassung oder die Segmenterstellung, werden entsprechende Ordner in dem oben angegebenen Speicherkonto erstellt. Abhängig vom ausgeführten Prozess werden Datendateien und model.json-Dateien erstellt und basierend auf dem Prozessnamen Ordnern hinzugefügt.
 
    Wenn Sie mehrere Umgebungen von Customer Insights erstellen und die ausgegebenen Entitäten aus diesen Umgebungen in Ihrem Speicherkonto speichern möchten, werden für jede Umgebung separate Ordner mit ci_<environmentid> im Container erstellt.
 
@@ -140,13 +140,13 @@ Sie können einige Details vorhandener Umgebungen bearbeiten.
 
 5. Optional können Sie von einer kontoschlüsselbasierten Verbindung zu einer ressourcenbasierten oder abonnementbasierten Verbindung aktualisieren. Nach der Aktualisierung können Sie nicht mehr zum Kontenschlüssel zurückkehren. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
 
-6. Optional können Sie eine Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereitstellen. Diese Funktionen umfassen die gemeinsame Nutzung von Daten mit Anwendungen und Lösungen, die auf Microsoft Dataverse, Datenaufnahme aus lokal Datenquellen oder der Verwendung von [Vorhersagen](predictions.md) basieren. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
+6. Optional können Sie eine Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereitstellen. Diese Funktionen umfassen die gemeinsame Nutzung von Daten mit Anwendungen und Lösungen, die auf Microsoft Dataverse, der Datenerfassung aus lokalen Datenquellen oder der Verwendung von [Vorhersagen](predictions.md) basieren. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
 
    > [!NOTE]
    > - Datenaustausch mit verwaltetem Microsoft Dataverse Data Lake wird derzeit nicht unterstützt, wenn Sie alle Daten in Ihrem eigenen Azure Data Lake Storage speichern.
    > - [Vorhersage fehlender Werte in einer Entität](predictions.md) wird derzeit nicht unterstützt, wenn Sie die Datenfreigabe mit Microsoft Dataverse Managed Data Lake aktivieren.
 
-   Nachdem Sie die Datenfreigabe in Microsoft Dataverse aktiviert haben, wird eine vollständige Aktualisierung der Datenquellen und anderer Prozesse ausgelöst. Wenn derzeit Prozesse ausgeführt und in die Warteschlange gestellt werden, wird die Option zum Aktivieren der Datenfreigabe mit Microsoft Dataverse nicht angezeigt. Sie können warten, bis diese Prozesse abgeschlossen sind, oder sie abbrechen, um die gemeinsame Nutzung von Daten zu ermöglichen. 
+   Nach der Aktivierung der Datenfreigabe in Microsoft Dataverse startet eine vollständige Aktualisierung der Datenquellen und anderer Prozesse. Wenn derzeit Prozesse ausgeführt werden, wird die Option zum Aktivieren der Datenfreigabe mit Microsoft Dataverse nicht angezeigt. Warten Sie, bis diese Prozesse abgeschlossen sind, oder brechen Sie sie ab, um die gemeinsame Nutzung von Daten zu ermöglichen. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse.":::
    
