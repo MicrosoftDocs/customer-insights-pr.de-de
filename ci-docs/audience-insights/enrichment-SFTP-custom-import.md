@@ -9,22 +9,22 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896280"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304649"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Anreichern von Kundenprofilen mit benutzerdefinierten Daten (Vorschau)
 
-Mit dem benutzerdefinierten SFTP-Import (Secure File Transfer Protocol) können Sie Daten importieren, die nicht den Prozess der Datenvereinigung durchlaufen müssen. Es ist eine flexible, sichere und einfache Möglichkeit, Ihre Daten einzubringen. Der benutzerdefinierte SFTP-Import kann in Kombination mit dem [SFTP-Export](export-sftp.md) verwendet werden, mit dem Sie die Kundenprofildaten exportieren können, die für die Anreicherung benötigt werden. Die Daten können dann verarbeitet und angereichert werden, und der benutzerdefinierte SFTP-Import kann verwendet werden, um die angereicherten Daten wieder in die Zielgruppen-Insights-Funktionalitäten von Dynamics 365 Customer Insights zu bringen.
+Der benutzerdefinierte Import über das Secure File Transfer Protocol(SFTP) ermöglicht es Ihnen, Daten zu importieren, die nicht den Prozess der Datenvereinheitlichung durchlaufen müssen. Es ist eine flexible, sichere und einfache Möglichkeit, Ihre Daten einzubringen. Der benutzerdefinierte SFTP-Import kann in Kombination mit dem [SFTP-Export](export-sftp.md) verwendet werden, mit dem Sie die Kundenprofildaten exportieren können, die für die Anreicherung benötigt werden. Die Daten können dann verarbeitet und angereichert werden, und der benutzerdefinierte SFTP-Import kann verwendet werden, um die angereicherten Daten wieder in die Zielgruppenerkenntnis-Funktion von Dynamics 365 Customer Insights zu bringen.
 
 ## <a name="prerequisites"></a>Anforderungen
 
 Um den benutzerdefinierten SFTP-Import zu konfigurieren, müssen die folgenden Voraussetzungen erfüllt sein:
 
-- Sie haben den Dateinamen und den Speicherort (Pfad) der Datei, die auf den SFTP-Host importiert werden soll.
+- Sie haben den Dateinamen und den Speicherort (Pfad) der zu importierenden Datei auf dem SFTP-Host.
 - Da ist eine *model.json*-Datei, die [das Common Data Model-Schema](/common-data-model/) für die zu importierenden Daten angibt. Diese Datei muss sich im selben Verzeichnis befinden wie die zu importierende Datei.
 - Eine SFTP-Verbindung wurde bereits von einem Administrator konfiguriert *oder* Sie haben [Administrator](permissions.md#administrator)-Berechtigungen. Sie benötigen die Benutzeranmeldeinformationen, die URL und die Portnummer für den SFTP-Speicherort, von dem Sie Daten importieren möchten.
 
@@ -37,11 +37,11 @@ Um den benutzerdefinierten SFTP-Import zu konfigurieren, müssen die folgenden V
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Benutzerdefinierter SFTP-Import-Kachel":::
 
-1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie durch Auswahl von **Verbindung hinzufügen** eine Verbindung herstellen und **Benutzerdefinierter SFTP-Import** aus dem Dropdownmenü auswählen.
+1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie eine Verbindung herstellen, indem Sie **Verbindung hinzufügen** und dann **SFTP benutzerdefinierter Import** aus der Dropdown-Liste auswählen.
 
 1. Wählen Sie **Verbindung mit dem benutzerdefinierten Import herstellen** aus, um die ausgewählte Verbindung zu bestätigen.
 
-1.  Wählen Sie **Weiter** und geben Sie **Dateiname** und **Pfad** der Datendatei ein, die Sie importieren möchten.
+1.  Wählen Sie **Weiter** und geben Sie einen **Pfad** und einen **Dateinamen** für die Datendatei an, die Sie importieren möchten.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot bei der Eingabe des Datenorts.":::
 
@@ -55,21 +55,21 @@ Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Si
 
 1. Geben Sie einen Namen für die Verbindung in das Feld **Anzeigename** ein.
 
-1. Geben Sie einen gültigen Benutzernamen, ein Kennwort und eine gültige Host-URL für den STFP-Server ein, auf dem sich die zu importierenden Daten befinden.
+1. Geben Sie einen gültigen Benutzernamen, ein Kennwort und eine Host-URL für den SFTP-Server ein, auf dem sich die zu importierenden Daten befinden.
 
 1. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren.
 
 1. Wählen Sie **Überprüfen**, um die Konfiguration zu validieren.
 
-1. Nach Abschluss der Überprüfung kann die Verbindung durch Klicken auf **Speichern** gespeichert werden.
+1. Nach Abschluss der Verifizierung kann die Verbindung durch Auswahl von **speichern** gespeichert werden.
 
-> [!div class="mx-imgBorder"]
-   > ![Verbindungskonfigurationsseite für Experian](media/enrichment-SFTP-connection.png "Verbindungskonfigurationsseite für Experian")
+   > [!div class="mx-imgBorder"]
+   > ![Experian Verbindungskonfigurationsseite](media/enrichment-SFTP-connection.png "Experian Verbindungskonfigurationsseite")
 
 
 ## <a name="defining-field-mappings"></a>Definieren von Feldzuordnungen 
 
-Das Verzeichnis, das die zu importierende Datei auf dem SFTP-Server enthält, muss auch eine *model.json*-Datei enthalten. Diese Datei definiert das Schema, das zum Importieren der Daten verwendet werden soll. Das Schema muss [das Common Data Model](/common-data-model/) verwenden, um die Zuordnung der Felder zu spezifizieren. Ein einfaches Beispiel für eine model.json-Datei sieht wie folgt aus:
+Das Verzeichnis, das die zu importierende Datei auf dem SFTP-Server enthält, muss auch eine *model.json*-Datei enthalten. Diese Datei definiert das Schema, das zum Importieren der Daten verwendet werden soll. Das Schema muss verwendet werden, um [Common Data Model](/common-data-model/) zu verwenden, um die Feldzuordnung anzugeben. Ein einfaches Beispiel für eine model.json-Datei sieht wie folgt aus:
 
 ```
 {
@@ -123,6 +123,6 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](segments.md), [Kennzahlen](measures.md) und [Exportieren Sie die Daten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

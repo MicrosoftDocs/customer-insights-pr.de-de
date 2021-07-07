@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049249"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304792"
 ---
 # <a name="define-and-manage-measures"></a>Definieren und Verwalten von Kennzahlen
 
-Mithilfe von Kennzahlen können Sie das Kundenverhalten und die Geschäftsleistung besser verstehen. Sie betrachten relevante Werte aus [einheitlichen Profilen](data-unification.md). Zum Beispiel möchte ein Unternehmen die *Gesamtausgaben pro Kunde* wissen, um die Kaufhistorie eines einzelnen Kunden oder den *Gesamtumsatz des Unternehmens* des zu messen, um den aggregierten Gesamtumsatz im gesamten Unternehmen zu verstehen.  
+Mithilfe von Kennzahlen können Sie das Kundenverhalten und die Geschäftsleistung besser verstehen. Sie betrachten relevante Werte aus [einheitlichen Profilen](data-unification.md). Ein Unternehmen möchte beispielsweise die *Gesamtausgaben pro Kunde* ermitteln, um den Kaufverlauf oder -messung eines einzelnen Kunden oder den *Gesamtumsatz des Unternehmens* zu verstehen, um den aggregierten Gesamtumsatz des gesamten Unternehmens zu verstehen.  
 
 Kennzahlen werden mit dem Kennzahlungsgenerator erstellt, einer Datenabfrageplattform mit verschiedenen Operatoren und einfachen Zuordnungsoptionen. Sie können die Daten filtern, Ergebnisse gruppieren und [Entitätsbeziehungspfade](relationships.md) erkennen und zeigen eine Vorschau der Ausgabe anzeigen.
 
@@ -36,7 +36,7 @@ In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu e
    > [!NOTE]
    > Wenn Ihre neue Kennzahlkonfiguration nur zwei Felder enthält, z. B. CustomerID und eine Berechnung, wird die Ausgabe als neue Spalte zu der vom System generierten Entität Customer_Measure hinzugefügt. Und Sie können den Wert der Kennzahl im einheitlichen Kundenprofil sehen. Andere Kennzahlen werden ihre eigenen Einheiten erzeugen.
 
-1. Wählen Sie im Konfigurationsbereich die Aggregationsfunktion aus dem **Funktion auswählen** Dropdownmenü aus. Zu den Aggregationsfunktionen gehören: 
+1. Wählen Sie im Konfigurationsbereich die Aggregationsfunktion aus dem Dropdown-Menü **Funktion auswählen** aus. Zu den Aggregationsfunktionen gehören: 
    - **Sum**
    - **Durchschnitt**
    - **Anzahl**
@@ -64,17 +64,19 @@ In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu e
 
 1. Um Filter hinzuzufügen, wählen Sie **Filter** im Konfigurationsbereich. 
   
-   1. Im **Attribut hinzufügen**-Abschnitt des **Filter** -Bereichs wählen Sie das Attribut aus, mit dem Sie Filter erstellen möchten.
+   1. In dem Abschnitt **Attribute hinzufügen** des Bereichs **Filter** wählen Sie im Bereich das Attribut aus, das Sie zum Erstellen von Filtern verwenden möchten.
    1. Legen Sie die Filteroperatoren fest, um den Filter für jedes ausgewählte Attribut zu definieren.
    1. Wählen Sie **Anwenden**, um den Filter zur Kennzahl hinzuzufügen.
 
 1. Um Dimensionen hinzuzufügen, wählen Sie **Dimension** im Konfigurationsbereich. Dimensionen werden als Spalten in der Kennzahlausgabeeinheit angezeigt.
+ 
    1. Wählen Sie **Dimensionen bearbeiten** aus, um Datenattribute hinzuzufügen, nach denen Sie die Kennzahlen gruppieren möchten. Zum Beispiel Stadt oder Geschlecht. Standardmäßig wird die *Kundennummer*-Dimension zum Erstellen von *Kennzahlen auf Kundenebene* ausgewählt. Sie können die Standarddimension entfernen, wenn Sie *Kennzahlen auf Unternehmensebene* erstellen möchten.
    1. Wählen Sie **Fertig**, um die Dimensionen zur Kennzahl hinzuzufügen.
 
 1. Wenn Ihre Daten Werte enthalten, die Sie beispielsweise durch eine Ganzzahl ersetzen müssen, ersetzen Sie *null* mit *0* und wählen **Regeln** aus. Konfigurieren Sie die Regel und stellen Sie sicher, dass Sie nur ganze Zahlen als Ersatz auswählen.
 
 1. Wenn zwischen der von Ihnen zugeordneten Datenentität und der *Kunden* Entität mehrere Pfade vorhanden sind, müssen Sie einen der identifizierten [Entitätsbeziehungspfade auswählen](relationships.md). Die Kennzahlenergebnisse können je nach ausgewähltem Pfad variieren. 
+   
    1. Wählen Sie **Dateneinstellungen**, und wählen Sie den Entitätspfad aus, der zur Identifizierung Ihrer Kennzahl verwendet werden soll. Wenn es nur einen einzigen Weg zur Entität *Kunde* gibt, wird dieses Steuerelement nicht angezeigt.
    1. Wählen **Fertig**, um Ihre Auswahl anzuwenden. 
 
@@ -113,7 +115,7 @@ Das folgende Verfahren beschreibt die Schritte zum Erstellen einer neuen Kennzah
 
 1. Wählen Sie **Neu** und dann **Vorlage auswählen** aus.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Screenshot des Dropdownmenüs beim Erstellen einer neuen Kennzahl mit Hervorhebung in der Vorlage.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Screenshot des Dropdown-Menüs beim Erstellen einer neuen Kennzahl mit Hervorhebung auf der Vorlage.":::
 
 1. Suchen Sie die Vorlage, die Ihren Anforderungen entspricht, und wählen Sie **Vorlage auswählen** aus.
 
@@ -123,7 +125,7 @@ Das folgende Verfahren beschreibt die Schritte zum Erstellen einer neuen Kennzah
 
 1. Wählen Sie **Fertig** aus.
 
-1. Im Abschnitt **Zeitraum festlegen** definieren Sie den Zeitrahmen der zu verwendenden Daten. Wählen Sie aus, ob die neue Kennzahl das gesamte Dataset abdecken soll, indem Sie **Alle Zeiten** auswählen. Oder die entsprechende Option wenn Sie möchten, dass sich die Kennzahl auf **Spezieller Zeitraum** konzentriert.
+1. Im Abschnitt **Zeitraum festlegen** definieren Sie den Zeitrahmen der zu verwendenden Daten. Wählen Sie aus, ob die neue Kennzahl das gesamte DataSet abdecken soll, indem Sie **Immer** oder **Spezifischen Zeitraum** auswählen, wenn Sie möchten, dass sich die Kennzahl nur auf einen bestimmten Zeitraum bezieht.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot mit dem Abschnitt zum Zeitraum beim Konfigurieren einer Kennzahl aus einer Vorlage.":::
 
@@ -147,7 +149,7 @@ Sie finden Informationen zu Kennzahlentyp, Ersteller, Erstellungsdatum, Status u
 Um alle Ihre Kennzahlen gleichzeitig zu aktualisieren, wählen Sie **Alle aktualisieren** aus, ohne eine bestimmte Kennzahl auszuwählen.
 
 > [!div class="mx-imgBorder"]
-> ![Maßnahmen zur Verwaltung einzelner Kennzahlen](media/measure-actions.png "Maßnahmen zur Verwaltung einzelner Kennzahlen")
+> ![Maßnahmen zur Verwaltung einzelner Kennzahlen.](media/measure-actions.png "Maßnahmen zur Verwaltung einzelner Kennzahlen.")
 
 Wählen Sie eine Kennzahl aus den folgenden Optionen in der Liste aus:
 
@@ -159,11 +161,11 @@ Wählen Sie eine Kennzahl aus den folgenden Optionen in der Liste aus:
 - **Aktivieren** oder **Deaktivieren**. Inaktive Maßnahmen werden während einer [geplanten Aktualisierung](system.md#schedule-tab) nicht aktualisiert.
 
 > [!TIP]
-> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
+> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Einzelheiten** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Bearbeitungszeit, das letzte Verarbeitungsdatum und alle mit der Aufgabe verbundenen Fehler und Warnungen.
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Sie können vorhandene Kennzahlen zum Erstellen [eines Kundensegments](segments.md) verwenden.
+Sie können vorhandene Maßnahmen verwenden, um [ein Kundensegment](segments.md) zu erstellen.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

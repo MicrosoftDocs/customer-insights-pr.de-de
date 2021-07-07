@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595333"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306073"
 ---
 # <a name="segment-insights-preview"></a>Segment-Insights (Vorschau)
 
@@ -50,7 +50,7 @@ Wählen Sie eine Erkenntnis aus, um die Analyseergebnisse anzuzeigen:
 
 - Die Anzahl der Mitglieder, die die für die Analyse ausgewählten Segmente überlappen.
 - Die Anzahl der Mitglieder, die in einem der Segmente enthalten sind, jedoch nicht in den übrigen Segmenten.
-- Wenn Sie beim Konfigurieren der Überlappungsanalyse Felder ausgewählt haben, finden Sie diese auf den entsprechenden Registerkarten. Sie können das Filter-Dropdown-Menü verwenden, um eine beliebige interessierende Attributebene auszuwählen. In der Tabelle unten werden die entsprechenden Daten angezeigt.
+- Wenn Sie beim Konfigurieren der Überlappungsanalyse Felder ausgewählt haben, finden Sie diese auf den entsprechenden Registerkarten. Sie können die Filter-Dropdown-Liste verwenden, um eine beliebige Attributebene auszuwählen, die von Interesse ist, und die Tabelle unten zeigt die entsprechenden Daten an.
 
 ## <a name="segment-differentiators"></a>Segment-Unterscheidungsmerkmale
 

@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595425"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306119"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Anleitung zur Vorhersage der Transaktionsabwanderung (Vorschau)
 
-Diese Anleitung führt Sie durch ein End-to-End-Beispiel für die Vorhersage der Transaktionsabwanderung in Customer Insights unter Verwendung der unten angegebenen Daten. Alle in dieser Anleitung verwendeten Daten sind keine echten Kundendaten und gehören zum Contoso Dataset, das sich in der *Demo* Umgebung innerhalb Ihres Customer Insights-Abonnements befindet.
+Diese Anleitung führt Sie durch ein End-to-End-Beispiel für die Vorhersage der Transaktionsabwanderung in Customer Insights unter Verwendung der unten angegebenen Daten. Alle in diesem Leitfaden verwendeten Daten sind keine echten Kundendaten und sind Teil des Contoso DataSets, das in der *Demo* Umgebung innerhalb Ihres Customer Insights-Abonnements gefunden werden kann.
 
 ## <a name="scenario"></a>Szenario
 
-Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt, die es über seine Website Contoso Coffee verkauft. Ihr Ziel ist es, zu wissen, welche Kunden, die normalerweise regelmäßig ihre Produkte kaufen, in den nächsten 60 Tagen keine aktiven Kunden mehr sein werden. Zu wissen, welche ihrer Kunden **wahrscheinlich abwandern**, kann ihnen helfen, Marketingaufwand zu sparen, indem sie sich darauf konzentrieren, diese Kunden zu halten.
+Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt. Beides wird über die Website von Contoso Kaffee vertrieben. Ihr Ziel ist es, zu wissen, welche Kunden, die normalerweise regelmäßig ihre Produkte kaufen, in den nächsten 60 Tagen keine aktiven Kunden mehr sein werden. Zu wissen, welche ihrer Kunden **wahrscheinlich abwandern**, kann ihnen helfen, Marketingaufwand zu sparen, indem sie sich darauf konzentrieren, diese Kunden zu halten.
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -109,9 +109,9 @@ Nach der Datenerfassung beginnen wir nun mit dem **Zuordnen, Abgleichen, Zusamme
 
 1. Gehen Sie auf die Registerkarte **Abgleichen** und wählen Sie **Reihenfolge festlegen**.
 
-1. In der Dropdown-Liste **Primär** wählen Sie **eCommerceContacts : eCommerce** als primäre Quelle und schließen alle Datensätze ein.
+1. Wählen Sie in der Dropdown-Liste **Primär** und wählen Sie **eCommerceKontakte: eCommerce** als Primärquelle aus, und wählen Sie dann Alle Datensätze einbinden aus.
 
-1. Wählen Sie in der Dropdown-Liste **Entität 2** die Option **loyCustomers : LoyaltyScheme** und schließen Sie alle Datensätze ein.
+1. Wählen Sie in der Dropdownliste **Entität 2** den Eintrag **loyCustomers: LoyaltyScheme** und dann Alle Datensätze berücksichtigen aus.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Abgleich eCommerce und Loyalty vereinheitlichen.":::
 
@@ -119,16 +119,16 @@ Nach der Datenerfassung beginnen wir nun mit dem **Zuordnen, Abgleichen, Zusamme
 
 1. Fügen Sie Ihre erste Bedingung mit FullName hinzu.
 
-   * Für eCommerceContacts wählen Sie **FullName** in der Dropdown-Liste.
-   * Für loyCustomers wählen Sie **FullName** im Dropdown.
+   * Für eCommerceKontakte wählen Sie **Vollständiger Name** in der Dropdown-Liste.
+   * Für loyCustomers wählen Sie **Vollständiger Name** in der Dropdown-Liste.
    * Wählen Sie das Dropdown-Menü **Normalisieren** und wählen Sie **Typ (Telefon, Name, Adresse, ...)**.
    * Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
 
 1. Geben Sie als Regelname **FullName, Email** ein.
 
    * Fügen Sie eine zweite Bedingung für E-Mail-Adressen hinzu, indem Sie **Bedingung hinzufügen** wählen.
-   * Für die Entität eCommerceContacts wählen Sie **EMail** im Dropdown.
-   * Für die Entität loyCustomers wählen Sie **EMail** im Drop-Down. 
+   * Wählen Sie für eCommerce-Kontakte der Entität **Email** im Dropdown-Menü.
+   * Wählen Sie für loyCustomers der Entität **Email** im Dropdown-Menü. 
    * Lassen Sie Normalisieren leer. 
    * Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
 

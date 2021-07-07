@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085529"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304695"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
@@ -30,15 +30,15 @@ Sie können ein Datenquelle auf drei Arten hinzufügen:
 
 - [Durch Dutzende von Power Query-Connectors](connect-power-query.md)
 - [Aus einem Common Data Model-Ordner](connect-common-data-model.md)
-- [Aus Ihrem eigenen Common Data Service-Lake](connect-common-data-service-lake.md)
+- [Aus Ihrem eigenen Microsoft Dataverse-Lake](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Fügen Sie Daten aus lokalen Datenquellen hinzu
 
-Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Power Platform Dataflows unterstützt. Dataflows können in Customer Insights durch [Bereitstellung der Microsoft Dataverse-Umgebungs-URL](manage-environments.md#create-an-environment-in-an-existing-organization) beim Einrichten der Umgebung aktiviert werden.
+Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Microsoft Power Platform Dataflows unterstützt. Dataflows können in Customer Insights durch [Bereitstellung der Microsoft Dataverse-Umgebungs-URL](manage-environments.md#create-an-environment-in-an-existing-organization) beim Einrichten der Umgebung aktiviert werden.
 
-Datenquellen, die nach dem Zuordnen einer Dataverse-Umgebung mit Customer Insights erstellt werden, verwenden [Power Platform Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) standardmäßig. Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Entfernen Sie Datenquellen, die vor einer Dataverse Umgebungszuordnung vorhanden waren, und erstellen Sie sie neu, um [Datengateways lokal zu verwenden](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Datenquellen, die nach dem Zuordnen einer Dataverse-Umgebung mit Customer Insights erstellt werden, verwenden [Power Platform Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) standardmäßig. Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Entfernen Sie Datenquellen, die vor einer Dataverse Umgebungszuordnung vorhanden waren, und erstellen Sie sie neu, um [Datengateways lokal zu verwenden](/data-integration/gateway/service-gateway-app.md).
 
-Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Datenquellenseite enthält Links zur Power Platform-Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
+Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
 
 ## <a name="review-ingested-data"></a>Eingebundene Daten überprüfen
 
@@ -56,7 +56,7 @@ Sie sehen den Namen jeder aufgenommenen Datenquelle, ihren Status und das letzte
 
 Wählen Sie den Wert in der **Status**-Spalte einer beliebigen Datenquelle, um weitere Details zu überprüfen. Im **Fortschrittsdetails**-Bereich erweitern Sie **Datenquellen**. Wählen Sie **Details anzeigen**, um weitere Informationen zum Auffrischungsstatus zu prüfen, einschließlich Fehlerdetails und nachgelagerte Prozessaktualisierungen.
 
-Das Laden von Daten kann einige Zeit dauern. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite **Entitäten** überprüft werden. Weitere Informationen finden Sie unter [Entitäten](entities.md).
+Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite **Entitäten** überprüft werden. Weitere Informationen finden Sie unter [Entitäten](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Aktualisieren einer Datenquelle
 
@@ -66,9 +66,9 @@ Gehen Sie zu **Admin** > **System** > [**Planen**](system.md#schedule-tab), um g
 
 Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
 
-1. Gehen Sie in Zielgruppen-Insights zu **Daten** > **Datenquellen**
+1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Datenquelle, die Sie aktualisieren möchten, und wählen Sie **Auffrischen** aus der Dropdown-Liste.
+2. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Aktualisieren** aus dem Dropdown-Menü.
 
 3. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
 
@@ -78,7 +78,7 @@ Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
 
 1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Datenquelle aus, die Sie entfernen möchten, und wählen Sie **Löschen** aus dem Dropdownmenü aus.
+2. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle, die Sie entfernen möchten, und wählen Sie **Löschen** aus dem Dropdown-Menü.
 
 3. Bestätigen Sie den Löschvorgang.
 

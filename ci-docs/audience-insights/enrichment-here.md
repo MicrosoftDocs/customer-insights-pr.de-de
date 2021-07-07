@@ -1,5 +1,5 @@
 ---
-title: Anreicherung von mit der Drittanbieter-Anreicherung HERE Technologies
+title: Anreicherung mit der Anreicherung von Drittanbietern HERE Technologies
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896050"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305293"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Anreicherung von Kundenprofilen mit HERE Technologies (Vorschau)
 
@@ -26,7 +26,7 @@ Um HERE Technologies Enrichments zu konfigurieren, müssen die folgenden Vorauss
 
 - Sie haben ein aktives HERE Technologies Abonnement. Um ein Abonnement zu erhalten, können Sie sich [hier anmelden](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) oder [direkt mit HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) in Verbindung setzen. [Erfahren Sie mehr über HERE Technologies Location Enrichment.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Es gibt eine HERE-[Verbindung](connections.md) *oder* Sie haben [Administrator](permissions.md#administrator)-Berechtigungen und den HERE Technologies-API-Schlüssel.
+- Eine HERE [Verbindung](connections.md) ist verfügbar *oder* Sie haben [Administrator](permissions.md#administrator) Berechtigungen und den HERE Technologien API-Schlüssel.
 
 ## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 
@@ -37,7 +37,7 @@ Um HERE Technologies Enrichments zu konfigurieren, müssen die folgenden Vorauss
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies Kachel](media/HERE-tile.png "HERE Technologies Kachel")
 
-1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie durch Auswahl von **Verbindung hinzufügen** eine Verbindung herstellen. Wählen Sie **HERE Technologies** aus dem Dropdownmenü. 
+1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie durch Auswahl von **Verbindung hinzufügen** eine Verbindung herstellen. Wählen Sie **HERE Technologien** aus der Dropdwon-Liste aus. 
 
 1. Wählen Sie **Mit HERE Technologies verbinden**, um die Auswahl zu bestätigen.
 
@@ -58,7 +58,7 @@ Um HERE Technologies Enrichments zu konfigurieren, müssen die folgenden Vorauss
 
 1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Konfigurieren Sie die Verbindung für HERE Technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Konfigurieren Sie die Verbindung für HERE Technologien 
 
 Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Sie **Verbindung hinzufügen** beim Konfigurieren einer Anreicherung *oder* gehen Sie zu **Administrator** > **Verbindungen** und wählen Sie **Einrichten** auf der Kachel „HERE Technologies“.
 
@@ -66,13 +66,13 @@ Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Si
 
 1. Geben Sie einen gültigen API-Schlüssel für HERE Technologies an.
 
-1. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren.
+1. Überprüfen Sie und geben Sie Ihre Zustimmung für **Datenschutz und Einhaltung** durch die Auswahl von **Ich stimme zu**.
 
 1. Wählen Sie **Überprüfen**, um die Konfiguration zu validieren.
 
 1. Wählen Sie nach Abschluss der Überprüfung **Speichern** aus.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Verbindungskonfigurationsseite für HERE Technologies](media/enrichment-HERE-connection.png "Verbindungskonfigurationsseite für HERE Technologies")
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
@@ -85,12 +85,12 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](segments.md), [Maße](measures.md), und selbst [Exportdaten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 
 Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten an HERE Technologies aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird solche Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass HERE Technologies alle Datenschutz- oder Sicherheitsverpflichtungen einhält, die Sie haben können. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
-Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
+Ihr Dynamics 365 Customer Insights Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

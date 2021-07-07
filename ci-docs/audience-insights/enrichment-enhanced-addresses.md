@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965577"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305431"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Anreicherung von Kundenprofilen mit erweiterten Adressen
 
@@ -22,11 +22,11 @@ Adressen in Ihren Daten können unstrukturiert, unvollständig oder falsch sein.
 
 ## <a name="how-we-enhance-addresses"></a>Wie wir Adressen verbessern
 
-Unser Modell durchläuft einen zweistufigen Prozess, um eine Adresse zu verbessern. Zunächst wird die Adresse analysiert, um die Komponenten zu identifizieren und in ein strukturiertes Format gebracht. Anschließend verwenden wir künstliche Intelligenz, um die Werte in der Adresse zu korrigieren, zu vervollständigen und zu standardisieren.
+Unser Modell durchläuft einen zweistufigen Prozess, um eine Adresse zu verbessern. Zunächst wird die Adresse analysiert, um die Komponenten zu identifizieren und in ein strukturiertes Format gebracht. Dann verwenden wir KI, um die Werte in der Adresse zu korrigieren, zu vervollständigen und zu standardisieren.
 
 ### <a name="example"></a>Beispiel
 
-Adressinformationen haben möglicherweise ein nicht standardmäßiges Format und enthalten Rechtschreibfehler. Das Modell kann diese Probleme beheben und konsistente Adressen in einheitlichen Kundenprofilen erstellen.
+Adressinformationen können in einem nicht standardmäßigen Format vorliegen und Rechtschreibfehler enthalten. Das Modell kann diese Probleme beheben und konsistente Adressen in einheitlichen Kundenprofilen erstellen.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Erweiterte Adressen funktionieren nur mit den Werten, die bereits in Ihren aufge
 2. Überprüfen, ob einer der Werte wie Postleitzahlen oder Straßennamen gültig ist.
 3. Werte ändern, die nicht erkannt werden.
 
-Das Modell verwendet auf maschinellem Lernen basierende Techniken, um Adressen zu verbessern. Während wir wie bei jedem ML-basierten Modell einen hohen Konfidenzschwellenwert anwenden, wenn das Modell einen Eingabewert ändert, ist eine 100% ige Genauigkeit nicht garantiert.
+Das Modell verwendet auf maschinellem Lernen basierende Techniken, um Adressen zu verbessern. Wir wenden zwar einen hohen Konfidenzschwellenwert an, wenn das Modell einen Eingabewert ändert, wie bei jedem auf maschinellem Lernen basierenden Modell, aber eine 100-prozentige Genauigkeit kann nicht garantiert werden.
 
 ## <a name="supported-countries-or-regions"></a>Unterstützte Länder oder Regionen
 
@@ -76,7 +76,7 @@ Adressen müssen einen Länder-/Regionswert enthalten. Wir verarbeiten keine Adr
 1. Wählen Sie aus, wie Adressen in Ihrem Datenset formatiert werden. Wählen Sie **Einzelattributadresse** aus, wenn Adressen in Ihren Daten ein einzelnes Feld verwenden. Wählen Sie **Mehrattributadresse** aus, wenn Adressen in Ihren Daten mehr als ein einzelnes Feld verwenden.
 
    > [!NOTE]
-   > Land/Region ist sowohl für Adressen mit einem als auch mit mehreren Attributen obligatorisch. Adressen, die keine gültigen oder unterstützten Länder-/Regionswerte enthalten, werden nicht angereichert
+   > Land/Region ist sowohl in Einzelattribut- als auch in Mehrfachattributadressen obligatorisch. Adressen, die keine gültigen oder unterstützten Länder-/Regionswerte enthalten, werden nicht angereichert.
 
 1.  Ordnen Sie die Adressfelder Ihrer einheitlichen Kundenentität zu.
 
@@ -98,6 +98,6 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](segments.md), [Maße](measures.md), und selbst [Exportdaten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

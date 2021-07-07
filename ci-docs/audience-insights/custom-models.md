@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700667"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305630"
 ---
 # <a name="custom-machine-learning-models"></a>Benutzerdefinierte Maschinelles Lernen Modelle
 
@@ -72,7 +72,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
       > [!div class="mx-imgBorder"]
       > ![Modellausgabe-Parameterbereich](media/intelligence-screen3-outputparameters.png "Modellausgabe-Parameterbereich")
 
-1. Wählen Sie das passende Attribut aus der Dropdown-Liste **Kunden-ID in Ergebnissen**, das den Kunden identifiziert, und wählen Sie **Speichern**.
+1. Wählen Sie das passende Attribut aus der **Kunden-ID in den Ergebnissen**-Dropdown-Liste, die Ihrer Customer Insights-Kunden-ID zugeordnet ist, und wählen Sie **speichern**.
 
    > [!div class="mx-imgBorder"]
    > ![Ergebnisse in den Kundendatenbereich überführen](media/intelligence-screen4-relatetocustomer.png "Ergebnisse mit dem Bereich Kundendaten in Beziehung setzen")
@@ -100,7 +100,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
       1. Wählen Sie den **Parameternamen des Ausgabedatenspeichers** für Ihre Test-Pipeline.
       1. Wählen Sie den **Output Path-Parameternamen** für Ihre Test-Pipeline.
 
-1. Wählen Sie das passende Attribut aus der Dropdown-Liste **Kunden-ID in Ergebnissen**, das den Kunden identifiziert, und wählen Sie **Speichern**.
+1. Wählen Sie das passende Attribut aus der **Kunden-ID in den Ergebnissen**-Dropdown-Liste, die Ihrer Customer Insights-Kunden-ID zugeordnet ist, und wählen Sie **speichern**.
    Wählen Sie ein Attribut aus der Inferenzausgabe aus, dessen Werte der Spalte Kunden-ID der Entität Kunde ähneln. Wenn Sie eine solche Spalte nicht in Ihrem Datensatz haben, wählen Sie ein Attribut, das die Zeile eindeutig identifiziert.
 
 ## <a name="run-a-workflow"></a>Ausführen eines Workflows

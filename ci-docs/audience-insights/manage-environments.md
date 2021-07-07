@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259098"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304879"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
 
@@ -54,29 +54,32 @@ So erstellen Sie eine Umgebung:
 1. Wählen Sie **Neu**.
 
    > [!div class="mx-imgBorder"]
-   > ![Umgebungseinstellungen](media/environment-settings-dialog.png)
+   > ![Umgebungseinstellungen.](media/environment-settings-dialog.png)
 
-1. Im **Neue Umgebung erstellen**-Dialog wählen Sie **Neue Umgebung** aus.
+1. In dem **Schaffen Sie eine Umgebung** Dialog, wählen Sie **Neue Umgebung**.
 
    Wenn Sie [Daten aus der aktuellen Umgebung kopieren](#considerations-for-copy-configuration-preview) wollen, wählen Sie **Aus vorhandener Umgebung kopieren** aus. Sie sehen eine Liste aller verfügbaren Umgebungen in Ihrer Organisation, aus der Sie Daten kopieren können.
 
 1. Geben Sie die folgenden Informationen an:
    - **Name**: Der Name für diese Umgebung. Dieses Feld ist bereits ausgefüllt, wenn Sie eine bestehende Umgebung kopiert haben, aber Sie können es ändern.
-   - **Region**: Die Region, in der der Dienst bereitgestellt und gehostet wird.
    - **Typ**: Wählen Sie, ob Sie eine Produktions- oder Sandbox-Umgebung erstellen möchten.
-
+   - **Region**: Die Region, in der der Dienst bereitgestellt und gehostet wird.
+   
 1. Optional können Sie **Erweiterte Einstellungen** auswählen:
 
-   - **Sichern alle Daten**: Geben Sie an, wo Sie die aus Customer Insights generierten Ausgabedaten speichern möchten. Sie haben zwei Möglichkeiten: **Customer Insights-Speicherung** (ein vom Customer Insights-Team verwalteter Azure Data Lake) und **Azure Data Lake Storage Gen2** (Ihre eigene Azure Data Lake Storage). Standardmäßig ist die Speicheroption „Customer Insights“ ausgewählt.
+   - **Sichern alle Daten**: Geben Sie an, wo Sie die aus Customer Insights generierten Ausgabedaten speichern möchten. Sie haben zwei Möglichkeiten: **Customer Insights-Speicher** (ein Azure Data Lake, der vom Customer Insights-Team verwaltet wird) und **Azure Data Lake Storage** (Ihr eigener Azure Data Lake Storage). Standardmäßig ist die Speicheroption „Customer Insights“ ausgewählt.
 
-   > [!NOTE]
-   > Durch die Speicherung von Daten in Azure Data Lake Storage erklären Sie sich damit einverstanden, dass die Daten an den für dieses Azure Storage-Konto geeigneten geografischen Ort übertragen und dort gespeichert werden. Dieser kann von dem Ort abweichen, an dem die Daten in Dynamics 365 Customer Insights gespeichert sind. [Weitere Informationen finden Sie im Microsoft Trust Center.](https://www.microsoft.com/trust-center)
-   >
-   > Derzeit werden aufgenommene Entitäten immer im verwalteten Customer Insights Data Lake gespeichert.
-   > Wir unterstützen nur Azure Data Lake Gen2-Speicherkonten aus derselben Azure-Region, die Sie beim Erstellen der Umgebung ausgewählt haben.
-   > Wir unterstützen nur Azure Data Lake Gen2 hierarchische Name Space (HNS) aktivierte Speicherkonten.
+     > [!NOTE]
+     > Durch die Speicherung von Daten in Azure Data Lake Storage erklären Sie sich damit einverstanden, dass die Daten an den für dieses Azure Storage-Konto geeigneten geografischen Ort übertragen und dort gespeichert werden. Dieser kann von dem Ort abweichen, an dem die Daten in Dynamics 365 Customer Insights gespeichert sind. [Weitere Informationen finden Sie im Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+     >
+     > Derzeit werden aufgenommene Entitäten immer im verwalteten Customer Insights verwalteten Data Lake gespeichert. 
+     > 
+     > Wir unterstützen nur Azure Data Lake Storage Konten aus derselben Azure-Region, die Sie beim Erstellen der Umgebung ausgewählt haben. 
+     > 
+     > Wir unterstützen nur Azure Data Lake Storage Konten mit aktiviertem hierarchischen Namespace.
 
-   - Für die Option Azure Data Lake Storage Gen2 können Sie zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Der Name unter **Container** kann nicht geändert werden und lautet `customerinsights`.
+
+   - Für die Azure Data Lake Storage Option können Sie zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Der Name unter **Container** kann nicht geändert werden und lautet `customerinsights`.
    
    - Wenn Sie [Vorhersagen](predictions.md) verwenden möchten, konfigurieren Sie die Datenfreigabe mit Microsoft Dataverse oder aktivieren Sie die Datenerfassung aus lokalen Datenquellen, stellen Sie die Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren** bereit und aktivieren Sie zusätzliche Funktionen. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
 
@@ -85,7 +88,7 @@ So erstellen Sie eine Umgebung:
      > - [Vorhersage fehlenden Werte in einer Entität](predictions.md) wird derzeit nicht unterstützt, wenn Sie die Datenfreigabe mit verwaltetem Microsoft Dataverse Data Lake aktivieren.
 
      > [!div class="mx-imgBorder"]
-     > ![Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Wenn Sie Prozesse ausführen, wie z.B. die Datenerfassung oder die Segmenterstellung, werden entsprechende Ordner in dem oben angegebenen Speicherkonto erstellt. Abhängig vom ausgeführten Prozess werden Datendateien und model.json-Dateien erstellt und basierend auf dem Prozessnamen Ordnern hinzugefügt.
 
@@ -113,14 +116,14 @@ Folgende Konfigurationseinstellungen werden *nicht* kopiert:
 
 - Kundenprofile.
 - Anmeldeinformationen für die Datenquelle. Sie müssen die Anmeldeinformationen für jede Datenquelle angeben und die Datenquellen manuell aktualisieren.
-- Datenquellen aus dem Common Data Model-Ordner und Common Data Service verwalteter Lake. Sie müssen diese Datenquellen manuell mit demselben Namen wie in der Quellumgebung erstellen.
+- Datenquellen aus dem Ordner Common Data Model und Dataverse verwalteten Data Lake. Sie müssen diese Datenquellen manuell mit demselben Namen wie in der Quellumgebung erstellen.
 
 Wenn Sie eine Umgebung kopieren, wird eine Bestätigungsmeldung angezeigt, dass die neue Umgebung erstellt wurde. Wählen Sie **Gehen Sie zu Datenquellen**, um die Liste der Datenquellen anzuzeigen.
 
 Alle Datenquellen zeigen einen Status **Anmeldeinformationen erforderlich**. Bearbeiten Sie die Datenquellen und geben Sie die Anmeldeinformationen ein, um sie zu aktualisieren.
 
 > [!div class="mx-imgBorder"]
-> ![Datenquellen kopiert](media/data-sources-copied.png)
+> ![Datenquellen kopiert.](media/data-sources-copied.png)
 
 Nachdem Sie die Datenquellen aktualisiert haben, gehen Sie zu **Daten** > **Vereinheitlichen**. Hier finden Sie Einstellungen aus der Quellumgebung. Bearbeiten Sie sie nach Bedarf oder wählen Sie **Ausführen**, um den Datenvereinheitlichungsprozess zu starten und die einheitliche Kundenentität zu erstellen.
 
@@ -136,7 +139,7 @@ Sie können einige Details vorhandener Umgebungen bearbeiten.
 
 3. Im Feld **Umgebung bearbeiten** können Sie den **Anzeigename** der Umgebung aktualisieren, Sie können jedoch nicht die **Region** oder den **Art** ändern.
 
-4. Wenn eine Umgebung zum Speichern von Daten in Azure Data Lake Storage Gen2 konfiguriert ist, können Sie den **Kontoschlüssel** aktualisieren. Sie können jedoch nicht den Namen **Kontoname** oder **Container** ändern.
+4. Wenn eine Umgebung zum Speichern von Daten konfiguriert ist in Azure Data Lake Storage, können Sie die **Kontoschlüssel** aktualisieren. Sie können jedoch nicht den Namen **Kontoname** oder **Container** ändern.
 
 5. Optional können Sie von einer kontoschlüsselbasierten Verbindung zu einer ressourcenbasierten oder abonnementbasierten Verbindung aktualisieren. Nach der Aktualisierung können Sie nicht mehr zum Kontenschlüssel zurückkehren. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
 
@@ -158,19 +161,19 @@ Als Administrator können Sie eine Umgebung auf einen leeren Zustand zurücksetz
 
 1.  Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus. 
 
-2.  Wählen Sie die Umgebung aus, die Sie zurücksetzen möchten, und wählen Sie die Auslassungspunkte **...** aus. 
+2.  Wählen Sie die Umgebung aus, die Sie zurücksetzen möchten, und wählen Sie die Auslassungspunkte (**...**) aus. 
 
 3. Wählen Sie die Option **Zurücksetzen** aus. 
 
 4.  Um das Löschen zu bestätigen, geben Sie den Namen der Umgebung ein und wählen Sie **Zurücksetzen**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Löschen Sie eine vorhandene Umgebung (nur für Administratoren verfügbar).
+## <a name="delete-an-existing-environment"></a>Löschen Sie eine vorhandene Umgebung
 
 Als Administrator können Sie eine von Ihnen verwaltete Umgebung löschen.
 
 1.  Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus.
 
-2.  Wählen Sie die Umgebung aus, die Sie zurücksetzen möchten, und wählen Sie die Auslassungspunkte **...** aus. 
+2.  Wählen Sie die Umgebung aus, die Sie zurücksetzen möchten, und wählen Sie die Auslassungspunkte (**...**) aus. 
 
 3. Wählen Sie die Option **Löschen** aus. 
 

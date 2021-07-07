@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111386"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306256"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
@@ -38,7 +38,7 @@ Gehen Sie zur Seite **Segmente**, um alle Ihre gespeicherten Segmente anzuzeigen
 
 Jedes Segment wird durch eine Zeile dargestellt, die zusätzliche Informationen über das Segment enthält.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Ausgewähltes Segment mit Dropdownliste und verfügbaren Optionen.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Ausgewähltes Segment mit Optionen-Dropdown-Liste und verfügbaren Optionen.":::
 
 Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
 
@@ -68,7 +68,7 @@ Sie können ein Segment von der Segmentseite oder der [Exportseite](export-desti
 
 1. Wählen Sie für das Segment, das Sie exportieren möchten, **Mehr anzeigen [...]** aus.
 
-1. Wählen Sie aus der Dropdownliste für Aktionen die Option **Exporte verwalten** aus.
+1. Wählen Sie **Exporte verwalten** aus der Dropdown-Liste Aktionen.
 
 1. Die Seite **Exporte (Vorschau) für Segment** wird angezeigt. Sie können alle konfigurierten Exporte gruppiert nach Exporten anzeigen, die das aktuelle Segment enthalten oder nicht enthalten.
 

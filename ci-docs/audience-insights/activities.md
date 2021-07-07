@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866406"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304925"
 ---
 # <a name="customer-activities"></a>Kundenaktivitäten
 
@@ -53,23 +53,23 @@ Ihre Datenquellen umfassen Entitäten mit Transaktions- und Aktivitätsdaten aus
 
 1. Im Schritt **Vereinheitlichung der Aktivitäten** wählen Sie das Aktivitätsereignis und die Startzeit Ihrer Aktivität. 
    - **Erforderliche Felder**
-      1. **Ereignisaktivität**: Feld, das das Ereignis für diese Aktivität ist
-      2. **Zeitstempel**: Feld, das die Startzeit der Aktivität darstellt.
+      - **Ereignisaktivität**: Feld, das das Ereignis für diese Aktivität ist.
+      - **Zeitstempel**: Feld, das die Startzeit der Aktivität darstellt.
 
    - **Optionale Felder**
-      1. **Zusätzliches Detail**: Feld mit relevanten Informationen für diese Aktivität.
-      2. **Symbol**: Symbol, das diesen Aktivitätstyp am besten darstellt.
-      3. **Webadresse**: Feld mit einer URL mit Informationen zu dieser Aktivität. Zum Beispiel das Transaktionssystem, aus dem diese Aktivität stammt. Diese URL kann ein beliebiges Feld aus der Datenquelle sein, oder sie kann mit Hilfe einer Power-Query-Transformation als neues Feld konstruiert werden. Die URL-Daten werden in der *Einheitliche Aktivität*-Entität gespeichert, die mit [APIs](apis.md) im Downstream verbraucht werden kann.
+      - **Zusätzliches Detail**: Feld mit relevanten Informationen für diese Aktivität.
+      - **Symbol**: Symbol, das diesen Aktivitätstyp am besten darstellt.
+      - **Webadresse**: Feld mit einer URL mit Informationen zu dieser Aktivität. Zum Beispiel das Transaktionssystem, aus dem diese Aktivität stammt. Diese URL kann ein beliebiges Feld aus der Datenquelle sein, oder sie kann mit Hilfe einer Power-Query-Transformation als neues Feld konstruiert werden. Die URL-Daten werden in der *Einheitliche Aktivität*-Entität gespeichert, die mit [APIs](apis.md) im Downstream verbraucht werden kann.
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Geben Sie die Kundenaktivitätsdaten in einer „Einheitliche Aktivität“-Entität an.":::
 
 1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. Sie können **Abschließen und überprüfen** auswählen, um die Aktivität jetzt mit dem Aktivitätstyp **Andere** zu speichern. 
 
-1. Im Schritt **Aktivitätstyp** wählen Sie Schritt für Schritt den Aktivitätstyp und optional aus, ob Sie einige der Aktivitätstypen für die Verwendung in anderen Bereichen von Customer Insights semantisch zuordnen möchten. Derzeit können die Aktivitätstypen *Abonnement* & *SalesOrderLine* semantisch zugeordnet werden, nachdem vereinbart wurde, die Felder zuzuordnen. Wenn ein Aktivitätstyp für die neue Aktivität nicht relevant ist, können Sie *Andere* oder *Neu erstellen* für einen benutzerdefinierten Aktivitätstyp auswählen.
+1. Im Schritt **Aktivitätstyp** wählen Sie Schritt für Schritt den Aktivitätstyp und optional aus, ob Sie einige der Aktivitätstypen für die Verwendung in anderen Bereichen von Customer Insights semantisch zuordnen möchten. Zurzeit können *Abonnement* und *SalesOrderLine* Aktivitätstypen semantisch zugeordnet werden, nachdem die Felder für die Zuordnung definiert wurden. Wenn ein Aktivitätstyp für die neue Aktivität nicht relevant ist, können Sie *Andere* oder *Neu erstellen* für einen benutzerdefinierten Aktivitätstyp auswählen.
 
 1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. 
 
-1. Im Schritt **Überprüfen** Schritt überprüfen Sie Ihre Auswahl. Sie kehren zu den vorherigen Schritten zurück und aktualisieren die Informationen bei Bedarf.
+1. Im Schritt **Überprüfen** Schritt überprüfen Sie Ihre Auswahl. Kehren Sie zu einem der vorherigen Schritte zurück und aktualisieren Sie die Informationen bei Bedarf.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Überprüfen Sie die angegebenen Felder für eine Aktivität.":::
    
@@ -89,7 +89,7 @@ Die folgenden Aktionen sind verfügbar, wenn Sie eine Aktivität auswählen.
 
 - **Bearbeiten**: Öffnet das Aktivitätssetup im Überprüfungsschritt. In diesem Schritt können Sie die aktuelle Konfiguration ganz oder teilweise ändern. Wählen Sie nach dem Ändern der Konfiguration **Aktivität speichern** und dann **Ausführen** aus, um die Änderungen zu verarbeiten.
 
-- **Umbenennen**: Öffnet ein Dialogfeld, in dem Sie einen anderen Namen für die ausgewählte Aktivität eingeben können. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
+- **Umbenennen**: Öffnet einen Dialog, in dem Sie einen anderen Namen für die ausgewählte Aktivität eingeben können. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
 - **Löschen**: Öffnet ein Dialogfeld, um das Löschen der ausgewählten Aktivität zu bestätigen. Sie können auch mehrere Aktivitäten gleichzeitig löschen, indem Sie die Aktivitäten auswählen und dann das Löschsymbol auswählen. Um den Löschvorgang zu bestätigen, wählen Sie **Löschen**.
 

@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760280"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305385"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insights-Segmente in Adobe Campaign Standard verwenden (Verwenden)
 
-Als Benutzer von Zielgruppen-Insights für Dynamics 365 Customer Insights haben Sie möglicherweise Segmente erstellt, um Ihre Marketingkampagnen effizienter zu gestalten, indem Sie relevante Zielgruppen ansprechen. Um ein Segment aus Zielgruppen-Insights in Adobe Experience Platform und Anwendungen wie Adobe Campaign Standard zu verwenden, müssen Sie einige in diesem Artikel beschriebene Schritte ausführen.
+Als Nutzer von Zielgruppeneinblicken in Dynamics 365 Customer Insights haben Sie möglicherweise Segmente erstellt, um Ihre Marketingkampagnen durch die Ausrichtung auf relevante Zielgruppen effizienter zu gestalten. Um ein Segment aus Zielgruppen-Insights in Adobe Experience Platform und Anwendungen wie Adobe Campaign Standard zu verwenden, müssen Sie einige in diesem Artikel beschriebene Schritte ausführen.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Prozessdiagramm der in diesem Artikel beschriebenen Schritte.":::
 
@@ -54,7 +54,7 @@ Nachdem unsere Zielgruppe identifiziert wurde, können wir den Export von Zielgr
 
 1. Gehen Sie in Zielgruppenerkenntnissen zu **Administrator** > **Verbindungen**.
 
-1. Wählen Sie **Verbindung hinzufügen** und dann **Adobe Campaign** aus, um die Verbindung zu konfigurieren, oder wählen Sie **Einrichten** in der Kachel **Adobe Campaign** aus
+1. Wählen Sie **Verbindung hinzufügen** und dann **Adobe Campaign** aus, um die Verbindung zu konfigurieren, oder wählen Sie **Einrichten** in der Kachel **Adobe Campaign** aus.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfigurationskachel für Adobe Campaign Standard.":::
 
@@ -66,7 +66,7 @@ Nachdem unsere Zielgruppe identifiziert wurde, können wir den Export von Zielgr
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Screenshot der Speicherkontokonfiguration. "::: 
 
-   - Weitere Informationen zum Suchen des Azure-Blobspeicherkontonamens und des Kontoschlüssels finden Sie unter [Verwalten von Speicherkontoeinstellungen im Azure-Portal](/azure/storage/common/storage-account-manage).
+   - Weitere Informationen zum Suchen des Azure-Blob Storage Kontonamen und des Kontoschlüssels finden Sie unter [Verwalten von Speicherkontoeinstellungen im Azure-Portal](/azure/storage/common/storage-account-manage).
 
    - Informationen zum Erstellen eines Containers finden Sie unter [Erstellen eines Containers](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -80,7 +80,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Um einen neuen Export zu erstellen, wählen Sie **Export hinzufügen** aus.
 
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Adobe Campaign-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
+1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Adobe Campaign-Abschnitt aus. Wenn dieser Abschnittsname nicht angezeigt wird, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
 
 1. Wählen Sie die Segmente aus, die Sie exportieren möchten. In diesem Beispiel ist es **ChurnProneCustomers**.
 
@@ -106,7 +106,7 @@ Sie können jetzt [das Segment nach Bedarf exportieren](export-destinations.md#r
 > [!NOTE]
 > Stellen Sie sicher, dass die Anzahl der Datensätze im exportierten Segment innerhalb des zulässigen Grenzwerts Ihrer Adobe Campaign Standard-Lizenz liegt.
 
-Exportierte Daten werden in dem oben konfigurierten Azure Blob-Speichercontainer gespeichert. Der folgende Ordnerpfad wird automatisch in Ihrem Container erstellt:
+Exportierte Daten werden in dem oben konfigurierten Azure Blob Storage Container gespeichert. Der folgende Ordnerpfad wird automatisch in Ihrem Container erstellt:
 
 *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
@@ -118,7 +118,7 @@ Wenn ein Segment aus Zielgruppen-Insights exportiert wird, enthält es die Spalt
 
 Um das Segment in Adobe Campaign Standard zu verwenden, müssen Sie das Profilschema in Adobe Campaign Standard um zwei zusätzliche Felder erweitern. Lernen wie man [die Profilressource erweitert](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) mit neuen Feldern in Adobe Campaign Standard.
 
-In unserem Beispiel sind diese Felder *Segmentname und Segmentdatum (optional).*
+In unserem Beispiel sind diese Felder *Segmentname und Segmentdatum (optional)*.
 
 Wir werden diese Felder verwenden, um die Profile in Adobe Campaign Standard zu identifizieren, auf die wir für diese Kampagne abzielen möchten.
 
@@ -128,7 +128,7 @@ Wenn in Adobe Campaign Standard keine anderen Datensätze als die zu importieren
 
 Nachdem alles vorhanden ist, müssen wir die vorbereiteten Zielgruppen-Daten aus Zielgruppen-Insights in Adobe Campaign Standard importieren, um Profile zu erstellen. Lernen Sie, [wie Sie Profile in Adobe Campaign Standard importieren](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) mihilfe eines Workflows.
 
-Der Import-Workflow in der Abbildung unten wurde so konfiguriert, dass er alle 8 Stunden ausgeführt wird. Er sucht nach exportierten Zielgruppen-Insights-Segmenten (CSV-Datei im Azure Blob-Speicher). Der Workflow extrahiert den Inhalt der CSV-Datei in einer angegebenen Spaltenreihenfolge. Dieser Workflow wurde entwickelt, um eine grundlegende Fehlerbehandlung durchzuführen und sicherzustellen, dass jeder Datensatz eine E-Mail-Adresse hat, bevor die Daten in Adobe Campaign Standard hydratisiert werden. Der Workflow extrahiert auch den Segmentnamen aus dem Dateinamen, bevor er in ACS-Profildaten aktualisiert wird.
+Der Importworkflow in der Abbildung unten wurde so konfiguriert, dass er alle acht Stunden ausgeführt wird und nach exportierten Zielgruppenerkenntnis-Segmenten (.csv-Datei in Azure Blob Storage) sucht. Der Workflow extrahiert den Inhalt der CSV-Datei in einer angegebenen Spaltenreihenfolge. Dieser Workflow wurde entwickelt, um eine grundlegende Fehlerbehandlung durchzuführen und sicherzustellen, dass jeder Datensatz eine E-Mail-Adresse hat, bevor die Daten in Adobe Campaign Standard hydratisiert werden. Der Workflow extrahiert außerdem den Segmentnamen aus dem Dateinamen, bevor er in die Profildaten von Adobe Campaign Standard übertragen wird.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Screenshot eines Import-Workflows in der Benutzeroberfläche von Adobe Campaign Standard.":::
 

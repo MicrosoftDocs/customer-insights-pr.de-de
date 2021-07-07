@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129898"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306165"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Beispielanleitung für Produktempfehlungsvorhersage (Vorschau)
 
@@ -105,9 +105,9 @@ Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um 
 
 1. Gehen Sie auf die Registerkarte **Abgleichen** und wählen Sie **Reihenfolge festlegen**.
 
-2. In der Dropdown-Liste **Primär** wählen Sie **eCommerceContacts : eCommerce** als primäre Quelle und schließen alle Datensätze ein.
+2. Wählen Sie in der Dropdown-Liste **Primär** und wählen Sie **eCommerceKontakte: eCommerce** als Primärquelle aus, und wählen Sie dann Alle Datensätze einbinden aus.
 
-3. Wählen Sie in der Dropdown-Liste **Entität 2** die Option **loyCustomers : LoyaltyScheme** und schließen Sie alle Datensätze ein.
+3. Wählen Sie in der Dropdownliste **Entität 2** den Eintrag **loyCustomers: LoyaltyScheme** und dann Alle Datensätze berücksichtigen aus.
 
    ![Abgleich eCommerce und Loyalty vereinheitlichen.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um 
 
 5. Fügen Sie Ihre erste Bedingung mit FullName hinzu.
 
-   - Für eCommerceContacts wählen Sie **FullName** in der Dropdown-Liste.
-   - Für loyCustomers wählen Sie **FullName** im Dropdown.
+   - Für eCommerceKontakte wählen Sie **Vollständiger Name** in der Dropdown-Liste.
+   - Für loyCustomers wählen Sie **Vollständiger Name** in der Dropdown-Liste.
    - Wählen Sie das Dropdown-Menü **Normalisieren** und wählen Sie **Typ (Telefon, Name, Adresse, ...)**.
    - Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
 
 6. Geben Sie als Regelname **FullName, Email** ein.
 
    - Fügen Sie eine zweite Bedingung für E-Mail-Adressen hinzu, indem Sie **Bedingung hinzufügen** wählen.
-   - Für die Entität eCommerceContacts wählen Sie **EMail** im Dropdown.
-   - Für die Entität loyCustomers wählen Sie **EMail** im Drop-Down.
+   - Wählen Sie für eCommerce-Kontakte der Entität **Email** im Dropdown-Menü.
+   - Wählen Sie für loyCustomers der Entität **Email** im Dropdown-Menü.
    - Lassen Sie Normalisieren leer.
    - Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
 

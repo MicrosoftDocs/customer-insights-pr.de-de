@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954486"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305247"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
@@ -22,7 +22,8 @@ Nutzen Sie Daten aus Quellen wie Microsoft und anderen Partnern zur Anreicherung
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Enrichment Hub-Seite":::
 
-Gehen Sie in Zielgruppen-Insights zu **Daten** > **Anreicherung**, um mit Anreicherungsoptionen zu arbeiten.    
+Gehen Sie in Zielgruppen-Insights zu **Daten** > **Anreicherung**, um mit Anreicherungsoptionen zu arbeiten.  
+
 Um Anreicherungen erstellen oder bearbeiten zu können, benötigen Sie die Berechtigungen eines Teilnehmers oder Administrators. Weitere Informationen finden Sie unter [Berechtigungen](permissions.md).
 
 Auf der Registerkarte **Entdecken** finden Sie die folgenden Anreicherungen:
@@ -31,7 +32,7 @@ Auf der Registerkarte **Entdecken** finden Sie die folgenden Anreicherungen:
 - [Interessen](enrichment-microsoft.md) bereitgestellt von Microsoft
 - [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft
 - [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
-- [Demografische Daten](enrichment-experian.md) bereitgestellt von Experian
+- [Demografiedaten](enrichment-experian.md) von Experian bereitgestellt
 - [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies
 - [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP)
 
@@ -39,7 +40,7 @@ Auf der Registerkarte **Meine Anreicherungen** können Sie die von Ihnen konfigu
 
 ## <a name="manage-existing-enrichments"></a>Vorhandene Anreicherungen verwalten
 
-Gehen Sie zu **Meine Anreicherungen**, um alle konfigurierten Anreicherungen zu sehen. Jede Anreicherung wird als Zeile dargestellt, die zusätzliche Informationen zur Anreicherung enthält.
+Gehen Sie zur Registerkarte **Meine Anreicherungen**, um alle konfigurierten Anreicherungen anzuzeigen. Jede Anreicherung wird als Zeile dargestellt, die zusätzliche Informationen zur Anreicherung enthält.
 
 Wählen Sie eine Anreicherung aus, um die verfügbaren Optionen anzuzeigen. Sie können auch die Auslassungspunkte (...) in einem Listenelement auswählen, um die Optionen anzuzeigen.
 
@@ -59,6 +60,6 @@ Anreicherungen von Drittanbietern werden mithilfe von [Verbindungen](connections
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mehrfachanreicherungen des gleichen Typs
 
-Die zu bereichernde Entität wird während der Anreicherungskonfiguration angegeben, sodass Sie nur eine Teilmenge Ihrer Profile anreichern können. Reichern Sie beispielsweise Daten nur für ein bestimmtes Segment an. Sie können mehrere Anreicherungen desselben Typs konfigurieren und dieselbe Verbindung wiederverwenden. Bei einigen Anreicherungen ist die Anzahl der Anreicherungen desselben Typs, die erstellt werden können, begrenzt. Die Grenzwerte und die aktuelle Verwendung sind auf der Seite **Anreicherung** zu sehen.
+Die zu bereichernde Entität wird während der Anreicherungskonfiguration angegeben, sodass Sie nur eine Teilmenge Ihrer Profile anreichern können. Anreichern von Daten beispielsweise nur für ein bestimmtes Segment. Sie können mehrere Anreicherungen desselben Typs konfigurieren und dieselbe Verbindung wiederverwenden. Bei einigen Anreicherungen ist die Anzahl der Anreicherungen desselben Typs, die erstellt werden können, begrenzt. Die Grenzwerte und die aktuelle Verwendung sind auf der Seite **Anreicherung** zu sehen.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

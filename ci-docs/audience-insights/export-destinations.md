@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253039"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305477"
 ---
 # <a name="exports-preview-overview"></a>Exporte (Vorschau) – Übersicht
 
 Die Seite **Exporte** zeigt Ihnen alle konfigurierten Exporte. Exporte teilen bestimmte Daten mit verschiedenen Anwendungen. Sie können Kundenprofile oder -entitäten, Schemas und Zuordnungsdetails enthalten. Jeder Export erfordert eine [Verbindung, die von einem Administrator eingerichtet wurde, um die Authentifizierung und den Zugriff zu verwalten](connections.md).
 
-Gehen Sie zu **Daten** > **Exporte**, um die Exportseite anzuzeigen. Alle Benutzerrollen haben Zugriff auf die angezeigten Exporte. Verwenden Sie das Suchfeld in der Befehlsleiste, um Exporte nach Name, Verbindungsname oder Verbindungstyp zu suchen.
+Gehen Sie zu **Daten** > **Exporte**, um die Exportseite anzuzeigen. Alle Benutzerrollen können konfigurierte Exporte anzeigen. Verwenden Sie das Suchfeld in der Befehlsleiste, um Exporte anhand ihres Namens, Verbindungsnamens oder Verbindungstyps zu suchen.
 
 ## <a name="set-up-a-new-export"></a>Einen neuen Export einrichten
 
@@ -65,7 +65,7 @@ Nach dem Erstellen von Exportzielen werden diese unter **Daten** > **Exporte** a
 
 1. Gehen Sie zu **Daten** > **Exporte**.
 
-1. Benutzer ohne Bearbeitungsberechtigung wählen **Anzeigen** statt **Bearbeiten** aus, um die Exportdetails anzuzeigen.
+1. Benutzer ohne Bearbeitungsberechtigungen wählen **Ansicht** anstatt **Bearbeiten**, um die Exportdetails anzuzeigen.
 
 1. Der Seitenbereich zeigt die Konfiguration eines Exports an. Ohne Bearbeitungsberechtigungen können Sie keine Werte ändern. Wählen Sie **Schließen** aus, um zur Exportseite zurückzukehren.
 
@@ -73,7 +73,7 @@ Nach dem Erstellen von Exportzielen werden diese unter **Daten** > **Exporte** a
 
 Jeder von Ihnen konfigurierte Export verfügt über einen Aktualisierungszeitplan. Während einer Aktualisierung sucht das System nach neuen oder aktualisierten Daten, die in einen Export aufgenommen werden sollen. Standardmäßig werden Exporte als Teil einer jeden [geplanten Systemaktualisierung](system.md#schedule-tab) ausgeführt. Sie können den Aktualisierungszeitplan anpassen oder deaktivieren, um Exporte manuell auszuführen.
 
-Exportzeitpläne hängen vom Status Ihrer Umgebung ab. Wenn zu dem Zeitpunkt, an dem ein geplanter Export starten soll, Updates von [Abhängigkeiten](system.md#refresh-policies) ausgeführt werden, vervollständigt das System zuerst die Abhängigkeiten und führt dann den Export aus. In der Spalte **Aktualisiert** sehen Sie, wann ein Export letztmalig aktualisiert wurde.
+Exportzeitpläne hängen vom Status Ihrer Umgebung ab. Wenn Aktualisierungen in Bearbeitung von [Abhängigkeiten](system.md#refresh-policies) sind, wenn ein geplanter Export gestartet werden soll, führt das System zuerst die Aktualisierungen durch und führt dann den Export aus. In der Spalte **Aktualisiert** sehen Sie, wann ein Export letztmalig aktualisiert wurde.
 
 ### <a name="schedule-exports"></a>Planen von Exporten
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596912"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305890"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Mit einer Power Query-Datenquelle verbinden
 
@@ -72,7 +72,7 @@ Connectors mit einem Häkchen in der Spalte **Customer Insights (Datenflows)** s
 
 1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Datenquelle aus, die Sie ändern möchten, und wählen Sie **Bearbeiten** aus dem Dropdownmenü aus.
+2. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Bearbeiten** aus dem Dropdown-Menü.
 
    > [!div class="mx-imgBorder"]
    > ![Optionen bearbeiten](media/edit-option-data-sources.png "Optionen bearbeiten")

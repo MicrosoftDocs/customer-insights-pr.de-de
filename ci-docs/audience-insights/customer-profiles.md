@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896326"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304603"
 ---
 # <a name="customer-profiles"></a>Kundenprofile
 
@@ -57,13 +57,13 @@ Wählen Sie eine der Kundenkacheln, um die **Kundendetailseite** zu öffnen. Die
 
 Kundendetails enthalten:
 
--   **Kundenprofil-Kachel:** Diese Kachel zeigt die verschiedenen Werte der vereinheitlichten Entität „Kundenprofil“ an. Diese Angaben können z. B. E-Mail-Adresse, Name, Stadt und so weiter sein. 
+-   **Kundenprofil-Kachel**: Diese Kachel zeigt die verschiedenen Werte der vereinheitlichten Entität „Kundenprofil“ an. Diese Angaben können z. B. E-Mail-Adresse, Name, Stadt und so weiter sein. 
 
--   **Potenzielle Interessen, potenzielle Marken:** Zeigt an, ob Sie eine Erstanbieter-Anreicherung konfiguriert haben. Es stellt potenzielle Interessen und Affinitäten für Marken dar, die ein Kunde mit einem ähnlichen Profil wie dieser Kunde haben könnte. Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft.md).
+-   **Potenzielle Interessen, potenzielle Marken**: Zeigt an, ob Sie eine Erstanbieter-Anreicherung konfiguriert haben. Es stellt potenzielle Interessen und Affinitäten für Marken dar, die ein Kunde mit einem ähnlichen Profil wie dieser Kunde haben könnte. Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft.md).
 
--   **Kennzahlen:** Zeigt an, ob Sie eine oder mehrere Kennzahlen eines bestimmten Typs konfiguriert haben: Kundenattributkennzahlen. Sie enthalten berechnete KPIs rund um Ihre Kunden auf der Ebene des einzelnen Kunden. Weitere Informationen finden Sie unter [Definieren und Verwalten von Kennzahlen](measures.md).
+-   **Kennzahlen**: Zeigt an, ob Sie eine oder mehrere Kennzahlen eines bestimmten Typs konfiguriert haben: Kundenattributkennzahlen. Sie enthalten berechnete KPIs rund um Ihre Kunden auf der Ebene des einzelnen Kunden. Weitere Informationen finden Sie unter [Definieren und Verwalten von Kennzahlen](measures.md).
 
--   **Aktivitäts-Zeitleiste:** Zeigt an, ob Sie Aktivitäten konfiguriert haben. Die Zeitleistenansicht enthält chronologisch sortierte Aktivitäten dieses Kunden, beginnend mit der jüngsten Aktivität. Weitere Informationen finden Sie unter [Kundenaktivitäten](activities.md).
+-   **Aktivitäts-Zeitleiste**: Zeigt an, ob Sie Aktivitäten konfiguriert haben. Die Zeitleistenansicht enthält chronologisch sortierte Aktivitäten dieses Kunden, beginnend mit der jüngsten Aktivität. Weitere Informationen finden Sie unter [Kundenaktivitäten](activities.md).
 
 Wählen Sie **Zurück zu Kunden**, um zur Kundensuchseite zurückzukehren.
 

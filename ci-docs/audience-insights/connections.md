@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896096"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304971"
 ---
 # <a name="connections-preview-overview"></a>Verbindungsübersicht (Vorschau)
 
@@ -74,7 +74,9 @@ Beim Einrichten oder Bearbeiten einer Exportverbindung legen Sie fest, welche Be
 
 ## <a name="remove-a-connection"></a>Verbindung entfernen
 
-Wenn die Verbindung, die Sie entfernen, von Anreicherungen oder Exporten verwendet wird, müssen Sie diese zuerst trennen oder entfernen. Das Dialogfeld „Entfernen“ führt Sie zu den relevanten Anreicherungen oder Exporten. Abgelöste Anreicherungen und Exporte werden inaktiv. Sie reaktivieren sie, indem Sie ihnen eine weitere Verbindung auf den Seiten [Anreicherungen](enrichment-hub.md) oder [Exporte](export-destinations.md) hinzufügen.
+Wenn die Verbindung, die Sie entfernen, von Anreicherungen oder Exporten verwendet wird, müssen Sie diese zuerst trennen oder entfernen. Das Dialogfeld „Entfernen“ führt Sie zu den relevanten Anreicherungen oder Exporten. 
+
+Abgelöste Anreicherungen und Exporte werden inaktiv. Sie reaktivieren sie, indem Sie ihnen eine weitere Verbindung auf den Seiten [Anreicherungen](enrichment-hub.md) oder [Exporte](export-destinations.md) hinzufügen.
 
 1. Gehen Sie zu **Administrator** > **Verbindungen (Vorschau)**.
 

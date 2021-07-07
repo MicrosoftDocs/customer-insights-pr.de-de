@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085621"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306027"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
@@ -209,7 +209,7 @@ Probieren Sie verschiedene Präzisionsschwellenwerte für Bedingungen aus, um de
 
 Sie können die meisten Übereinstimmungsparameter neu konfigurieren und optimieren.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Screenshot des Dropdownmenüs mit Optionen für Übereinstimmungsregeln.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Screenshot des Dropdownmenüs mit passenden Regeloptionen.":::
 
 - **Ändern Sie die Reihenfolge Ihrer Regeln**, wenn Sie mehrere Regeln definiert haben. Sie können die Spielregeln neu anordnen, indem Sie die Optionen **Nach oben** und **Nach unten** wählen oder per Drag & Drop.
 
@@ -247,7 +247,7 @@ Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie üb
 
 1. Gehen Sie zu **Daten** > **Datenquellen** und nehmen Sie die Vorlagedateien als neue Entitäten auf. Nach der Aufnahme können Sie diese zur Festlegung der Match-Konfiguration verwenden.
 
-1. Nachdem die Dateien und Entitäten hochgeladen wurden und verfügbar sind, wählen Sie erneut die Option **Abgleich nach Kennzahl**. Sie sehen Optionen zur Angabe der Entitäten, die Sie einbeziehen möchten. Wählen Sie die gewünschten Entitäten aus dem Dropdown-Menü.
+1. Nachdem die Dateien und Entitäten hochgeladen wurden und verfügbar sind, wählen Sie erneut die Option **Abgleich nach Kennzahl**. Sie sehen Optionen zur Angabe der Entitäten, die Sie einbeziehen möchten. Wählen Sie im Dropdownmenü die erforderlichen Entitäten aus.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot des Dialogfelds zum Auswählen von Überschreibungen für ein benutzerdefiniertes Übereinstimmungsszenario.":::
 
