@@ -9,199 +9,199 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129898"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306165"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a><span data-ttu-id="2e61b-103">Beispielanleitung für Produktempfehlungsvorhersage (Vorschau)</span><span class="sxs-lookup"><span data-stu-id="2e61b-103">Product recommendation prediction (preview) sample guide</span></span>
+# <a name="product-recommendation-prediction-preview-sample-guide"></a><span data-ttu-id="74181-103">Beispielanleitung für Produktempfehlungsvorhersage (Vorschau)</span><span class="sxs-lookup"><span data-stu-id="74181-103">Product recommendation prediction (preview) sample guide</span></span>
 
-<span data-ttu-id="2e61b-104">Wir führen Sie durch ein End-to-End-Beispiel für die Vorhersage von Produktempfehlungen anhand der unten bereitgestellten Beispieldaten.</span><span class="sxs-lookup"><span data-stu-id="2e61b-104">We'll walk you through an end to end example of product recommendation prediction using the sample data provided below.</span></span>
+<span data-ttu-id="74181-104">Wir führen Sie durch ein End-to-End-Beispiel für die Vorhersage von Produktempfehlungen anhand der unten bereitgestellten Beispieldaten.</span><span class="sxs-lookup"><span data-stu-id="74181-104">We'll walk you through an end to end example of product recommendation prediction using the sample data provided below.</span></span>
 
-## <a name="scenario"></a><span data-ttu-id="2e61b-105">Szenario</span><span class="sxs-lookup"><span data-stu-id="2e61b-105">Scenario</span></span>
+## <a name="scenario"></a><span data-ttu-id="74181-105">Szenario</span><span class="sxs-lookup"><span data-stu-id="74181-105">Scenario</span></span>
 
-<span data-ttu-id="2e61b-106">Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt. Beides wird über die Website von Contoso Kaffee vertrieben.</span><span class="sxs-lookup"><span data-stu-id="2e61b-106">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="2e61b-107">Ihr Ziel ist es zu verstehen, welche Produkte sie ihren wiederkehrenden Kunden empfehlen sollten.</span><span class="sxs-lookup"><span data-stu-id="2e61b-107">Their goal is to understand which products should they recommend to their recurring customers.</span></span> <span data-ttu-id="2e61b-108">Das Wissen darüber, was Kunden **wahrscheinlich eher kaufen**, kann ihnen helfen, Marketingbemühungen zu sparen, indem sie sich auf bestimmte Elemente konzentrieren.</span><span class="sxs-lookup"><span data-stu-id="2e61b-108">Knowing what customers are more **likely to purchase**, can help them save marketing efforts by focusing on specific items.</span></span>
+<span data-ttu-id="74181-106">Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt. Beides wird über die Website von Contoso Kaffee vertrieben.</span><span class="sxs-lookup"><span data-stu-id="74181-106">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="74181-107">Ihr Ziel ist es zu verstehen, welche Produkte sie ihren wiederkehrenden Kunden empfehlen sollten.</span><span class="sxs-lookup"><span data-stu-id="74181-107">Their goal is to understand which products should they recommend to their recurring customers.</span></span> <span data-ttu-id="74181-108">Das Wissen darüber, was Kunden **wahrscheinlich eher kaufen**, kann ihnen helfen, Marketingbemühungen zu sparen, indem sie sich auf bestimmte Elemente konzentrieren.</span><span class="sxs-lookup"><span data-stu-id="74181-108">Knowing what customers are more **likely to purchase**, can help them save marketing efforts by focusing on specific items.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="2e61b-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2e61b-109">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="74181-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="74181-109">Prerequisites</span></span>
 
-- <span data-ttu-id="2e61b-110">Mindestens die [Berechtigung "Mitwirkender"](permissions.md) in Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="2e61b-110">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
-- <span data-ttu-id="2e61b-111">Wir empfehlen, dass Sie die folgenden Schritte [in einer neuen Umgebung](manage-environments.md) implementieren.</span><span class="sxs-lookup"><span data-stu-id="2e61b-111">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
+- <span data-ttu-id="74181-110">Mindestens die [Berechtigung "Mitwirkender"](permissions.md) in Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="74181-110">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
+- <span data-ttu-id="74181-111">Wir empfehlen, dass Sie die folgenden Schritte [in einer neuen Umgebung](manage-environments.md) implementieren.</span><span class="sxs-lookup"><span data-stu-id="74181-111">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
 
-## <a name="task-1---ingest-data"></a><span data-ttu-id="2e61b-112">Aufgabe 1 - Datenerfassung</span><span class="sxs-lookup"><span data-stu-id="2e61b-112">Task 1 - Ingest data</span></span>
+## <a name="task-1---ingest-data"></a><span data-ttu-id="74181-112">Aufgabe 1 - Datenerfassung</span><span class="sxs-lookup"><span data-stu-id="74181-112">Task 1 - Ingest data</span></span>
 
-<span data-ttu-id="2e61b-113">Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query Konnektoren](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="2e61b-113">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="2e61b-114">Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind.</span><span class="sxs-lookup"><span data-stu-id="2e61b-114">The following information assumes you familiarized with ingesting data in general.</span></span>
+<span data-ttu-id="74181-113">Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query Konnektoren](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="74181-113">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="74181-114">Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind.</span><span class="sxs-lookup"><span data-stu-id="74181-114">The following information assumes you familiarized with ingesting data in general.</span></span>
 
-### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="2e61b-115">Datenerfassung von Kundendaten aus der eCommerce-Plattform</span><span class="sxs-lookup"><span data-stu-id="2e61b-115">Ingest customer data from eCommerce platform</span></span>
+### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="74181-115">Datenerfassung von Kundendaten aus der eCommerce-Plattform</span><span class="sxs-lookup"><span data-stu-id="74181-115">Ingest customer data from eCommerce platform</span></span>
 
-1. <span data-ttu-id="2e61b-116">Erstellen Sie eine Datenquelle mit dem Namen **eCommerce**, wählen Sie die Importoption und wählen Sie den **Text/CSV** Konnektor.</span><span class="sxs-lookup"><span data-stu-id="2e61b-116">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="74181-116">Erstellen Sie eine Datenquelle mit dem Namen **eCommerce**, wählen Sie die Importoption und wählen Sie den **Text/CSV** Konnektor.</span><span class="sxs-lookup"><span data-stu-id="74181-116">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="2e61b-117">Geben Sie die URL für eCommerce-Kontakte https://aka.ms/ciadclasscontacts ein.</span><span class="sxs-lookup"><span data-stu-id="2e61b-117">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
+1. <span data-ttu-id="74181-117">Geben Sie die URL für eCommerce-Kontakte https://aka.ms/ciadclasscontacts ein.</span><span class="sxs-lookup"><span data-stu-id="74181-117">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
 
-1. <span data-ttu-id="2e61b-118">Wählen Sie beim Bearbeiten der Daten **Transformieren** und dann **Erste Zeile als Kopfzeile verwenden**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-118">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="74181-118">Wählen Sie beim Bearbeiten der Daten **Transformieren** und dann **Erste Zeile als Kopfzeile verwenden**.</span><span class="sxs-lookup"><span data-stu-id="74181-118">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="2e61b-119">Aktualisieren Sie den Datentyp für die unten aufgeführten Spalten:</span><span class="sxs-lookup"><span data-stu-id="2e61b-119">Update the datatype for the columns listed below:</span></span>
-   - <span data-ttu-id="2e61b-120">**DateOfBirth**: Datum</span><span class="sxs-lookup"><span data-stu-id="2e61b-120">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="2e61b-121">**CreatedOn**: Datum/Uhrzeit/Zone</span><span class="sxs-lookup"><span data-stu-id="2e61b-121">**CreatedOn**: Date/Time/Zone</span></span>
+1. <span data-ttu-id="74181-119">Aktualisieren Sie den Datentyp für die unten aufgeführten Spalten:</span><span class="sxs-lookup"><span data-stu-id="74181-119">Update the datatype for the columns listed below:</span></span>
+   - <span data-ttu-id="74181-120">**DateOfBirth**: Datum</span><span class="sxs-lookup"><span data-stu-id="74181-120">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="74181-121">**CreatedOn**: Datum/Uhrzeit/Zone</span><span class="sxs-lookup"><span data-stu-id="74181-121">**CreatedOn**: Date/Time/Zone</span></span>
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Geburtsdatum in Datum umwandeln":::
 
-5. <span data-ttu-id="2e61b-123">Benennen Sie im Feld 'Name' im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommerceContacts** um</span><span class="sxs-lookup"><span data-stu-id="2e61b-123">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
+5. <span data-ttu-id="74181-123">Benennen Sie im Feld 'Name' im rechten Fensterbereich Ihre Datenquelle von **Abfrage** in **eCommerceContacts** um</span><span class="sxs-lookup"><span data-stu-id="74181-123">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
 
-6. <span data-ttu-id="2e61b-124">**Speichern** Sie die Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="2e61b-124">**Save** the data source.</span></span>
+6. <span data-ttu-id="74181-124">**Speichern** Sie die Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="74181-124">**Save** the data source.</span></span>
 
-### <a name="ingest-online-purchase-data"></a><span data-ttu-id="2e61b-125">Datenerfassung von Online-Kaufdaten</span><span class="sxs-lookup"><span data-stu-id="2e61b-125">Ingest online purchase data</span></span>
+### <a name="ingest-online-purchase-data"></a><span data-ttu-id="74181-125">Datenerfassung von Online-Kaufdaten</span><span class="sxs-lookup"><span data-stu-id="74181-125">Ingest online purchase data</span></span>
 
-1. <span data-ttu-id="2e61b-126">Fügen Sie einen weiteren Datensatz zur gleichen **eCommerce** Datenquelle hinzu.</span><span class="sxs-lookup"><span data-stu-id="2e61b-126">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="2e61b-127">Wählen Sie erneut den **Text/CSV** Konnektor.</span><span class="sxs-lookup"><span data-stu-id="2e61b-127">Choose the **Text/CSV** connector again.</span></span>
+1. <span data-ttu-id="74181-126">Fügen Sie einen weiteren Datensatz zur gleichen **eCommerce** Datenquelle hinzu.</span><span class="sxs-lookup"><span data-stu-id="74181-126">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="74181-127">Wählen Sie erneut den **Text/CSV** Konnektor.</span><span class="sxs-lookup"><span data-stu-id="74181-127">Choose the **Text/CSV** connector again.</span></span>
 
-1. <span data-ttu-id="2e61b-128">Geben Sie die URL für **Online-Einkäufe** Daten https://aka.ms/ciadclassonline ein.</span><span class="sxs-lookup"><span data-stu-id="2e61b-128">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
+1. <span data-ttu-id="74181-128">Geben Sie die URL für **Online-Einkäufe** Daten https://aka.ms/ciadclassonline ein.</span><span class="sxs-lookup"><span data-stu-id="74181-128">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
 
-1. <span data-ttu-id="2e61b-129">Wählen Sie beim Bearbeiten der Daten **Transformieren** und dann **Erste Zeile als Kopfzeile verwenden**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-129">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="74181-129">Wählen Sie beim Bearbeiten der Daten **Transformieren** und dann **Erste Zeile als Kopfzeile verwenden**.</span><span class="sxs-lookup"><span data-stu-id="74181-129">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="2e61b-130">Aktualisieren Sie den Datentyp für die unten aufgeführten Spalten:</span><span class="sxs-lookup"><span data-stu-id="2e61b-130">Update the datatype for the columns listed below:</span></span>
-   - <span data-ttu-id="2e61b-131">**Gekauft am**: Datum/Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="2e61b-131">**PurchasedOn**: Date/Time</span></span>
-   - <span data-ttu-id="2e61b-132">**GesamtPreis**: Währung</span><span class="sxs-lookup"><span data-stu-id="2e61b-132">**TotalPrice**: Currency</span></span>
+1. <span data-ttu-id="74181-130">Aktualisieren Sie den Datentyp für die unten aufgeführten Spalten:</span><span class="sxs-lookup"><span data-stu-id="74181-130">Update the datatype for the columns listed below:</span></span>
+   - <span data-ttu-id="74181-131">**Gekauft am**: Datum/Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="74181-131">**PurchasedOn**: Date/Time</span></span>
+   - <span data-ttu-id="74181-132">**GesamtPreis**: Währung</span><span class="sxs-lookup"><span data-stu-id="74181-132">**TotalPrice**: Currency</span></span>
 
-1. <span data-ttu-id="2e61b-133">Benennen Sie im Feld **Name** im rechten Seitenbereich Ihre Datenquelle von **Abfrage** in **eCommercePurchases** um.</span><span class="sxs-lookup"><span data-stu-id="2e61b-133">In the **Name** field on the side pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
+1. <span data-ttu-id="74181-133">Benennen Sie im Feld **Name** im rechten Seitenbereich Ihre Datenquelle von **Abfrage** in **eCommercePurchases** um.</span><span class="sxs-lookup"><span data-stu-id="74181-133">In the **Name** field on the side pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
 
-1. <span data-ttu-id="2e61b-134">**Speichern** Sie die Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="2e61b-134">**Save** the data source.</span></span>
+1. <span data-ttu-id="74181-134">**Speichern** Sie die Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="74181-134">**Save** the data source.</span></span>
 
 
-### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="2e61b-135">Kundendaten aus dem Treueschema einlesen</span><span class="sxs-lookup"><span data-stu-id="2e61b-135">Ingest customer data from loyalty schema</span></span>
+### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="74181-135">Kundendaten aus dem Treueschema einlesen</span><span class="sxs-lookup"><span data-stu-id="74181-135">Ingest customer data from loyalty schema</span></span>
 
-1. <span data-ttu-id="2e61b-136">Erstellen Sie eine Datenquelle mit dem Namen **LoyaltyScheme**, wählen Sie die Importoption und wählen Sie den Konnektor **Text/CSV**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-136">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="74181-136">Erstellen Sie eine Datenquelle mit dem Namen **LoyaltyScheme**, wählen Sie die Importoption und wählen Sie den Konnektor **Text/CSV**.</span><span class="sxs-lookup"><span data-stu-id="74181-136">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="2e61b-137">Geben Sie die URL für eCommerce-Kontakte https://aka.ms/ciadclasscustomerloyalty ein.</span><span class="sxs-lookup"><span data-stu-id="2e61b-137">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
+1. <span data-ttu-id="74181-137">Geben Sie die URL für eCommerce-Kontakte https://aka.ms/ciadclasscustomerloyalty ein.</span><span class="sxs-lookup"><span data-stu-id="74181-137">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
 
-1. <span data-ttu-id="2e61b-138">Wählen Sie beim Bearbeiten der Daten **Transformieren** und dann **Erste Zeile als Kopfzeile verwenden**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-138">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="74181-138">Wählen Sie beim Bearbeiten der Daten **Transformieren** und dann **Erste Zeile als Kopfzeile verwenden**.</span><span class="sxs-lookup"><span data-stu-id="74181-138">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="2e61b-139">Aktualisieren Sie den Datentyp für die unten aufgeführten Spalten:</span><span class="sxs-lookup"><span data-stu-id="2e61b-139">Update the datatype for the columns listed below:</span></span>
-   - <span data-ttu-id="2e61b-140">**DateOfBirth**: Datum</span><span class="sxs-lookup"><span data-stu-id="2e61b-140">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="2e61b-141">**RewardsPoints**: Ganze Zahl</span><span class="sxs-lookup"><span data-stu-id="2e61b-141">**RewardsPoints**: Whole Number</span></span>
-   - <span data-ttu-id="2e61b-142">**CreatedOn**: Datum/Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="2e61b-142">**CreatedOn**: Date/Time</span></span>
+1. <span data-ttu-id="74181-139">Aktualisieren Sie den Datentyp für die unten aufgeführten Spalten:</span><span class="sxs-lookup"><span data-stu-id="74181-139">Update the datatype for the columns listed below:</span></span>
+   - <span data-ttu-id="74181-140">**DateOfBirth**: Datum</span><span class="sxs-lookup"><span data-stu-id="74181-140">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="74181-141">**RewardsPoints**: Ganze Zahl</span><span class="sxs-lookup"><span data-stu-id="74181-141">**RewardsPoints**: Whole Number</span></span>
+   - <span data-ttu-id="74181-142">**CreatedOn**: Datum/Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="74181-142">**CreatedOn**: Date/Time</span></span>
 
-1. <span data-ttu-id="2e61b-143">Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Query** in **loyCustomers** um.</span><span class="sxs-lookup"><span data-stu-id="2e61b-143">In the **Name** field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
+1. <span data-ttu-id="74181-143">Benennen Sie im Feld **Name** im rechten Fensterbereich Ihre Datenquelle von **Query** in **loyCustomers** um.</span><span class="sxs-lookup"><span data-stu-id="74181-143">In the **Name** field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
 
-1. <span data-ttu-id="2e61b-144">**Speichern** Sie die Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="2e61b-144">**Save** the data source.</span></span>
+1. <span data-ttu-id="74181-144">**Speichern** Sie die Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="74181-144">**Save** the data source.</span></span>
 
-## <a name="task-2---data-unification"></a><span data-ttu-id="2e61b-145">Aufgabe 2 - Daten vereinheitlichen</span><span class="sxs-lookup"><span data-stu-id="2e61b-145">Task 2 - Data unification</span></span>
+## <a name="task-2---data-unification"></a><span data-ttu-id="74181-145">Aufgabe 2 - Daten vereinheitlichen</span><span class="sxs-lookup"><span data-stu-id="74181-145">Task 2 - Data unification</span></span>
 
-<span data-ttu-id="2e61b-146">Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um ein vereinheitlichtes Kundenprofil zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2e61b-146">After ingesting the data, we now begin the data unification process to create a unified customer profile.</span></span> <span data-ttu-id="2e61b-147">Weitere Informationen finden Sie unter [Datenvereinheitlichung](data-unification.md).</span><span class="sxs-lookup"><span data-stu-id="2e61b-147">For more information, see [Data unification](data-unification.md).</span></span>
+<span data-ttu-id="74181-146">Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um ein vereinheitlichtes Kundenprofil zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="74181-146">After ingesting the data, we now begin the data unification process to create a unified customer profile.</span></span> <span data-ttu-id="74181-147">Weitere Informationen finden Sie unter [Datenvereinheitlichung](data-unification.md).</span><span class="sxs-lookup"><span data-stu-id="74181-147">For more information, see [Data unification](data-unification.md).</span></span>
 
-### <a name="map"></a><span data-ttu-id="2e61b-148">Zuordnung</span><span class="sxs-lookup"><span data-stu-id="2e61b-148">Map</span></span>
+### <a name="map"></a><span data-ttu-id="74181-148">Zuordnung</span><span class="sxs-lookup"><span data-stu-id="74181-148">Map</span></span>
 
-1. <span data-ttu-id="2e61b-149">Nach der Datenerfassung ordnen Sie die Kontakte aus den eCommerce- und Loyalty-Daten den gemeinsamen Datentypen zu.</span><span class="sxs-lookup"><span data-stu-id="2e61b-149">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="2e61b-150">Gehen Sie zu **Daten** > **Vereinheitlichen** > **Karten**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-150">Go to **Data** > **Unify** > **Map**.</span></span>
+1. <span data-ttu-id="74181-149">Nach der Datenerfassung ordnen Sie die Kontakte aus den eCommerce- und Loyalty-Daten den gemeinsamen Datentypen zu.</span><span class="sxs-lookup"><span data-stu-id="74181-149">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="74181-150">Gehen Sie zu **Daten** > **Vereinheitlichen** > **Karten**.</span><span class="sxs-lookup"><span data-stu-id="74181-150">Go to **Data** > **Unify** > **Map**.</span></span>
 
-2. <span data-ttu-id="2e61b-151">Wählen Sie die Entitäten, die das Kundenprofil darstellen - **eCommerceContacts** und **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-151">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span>
+2. <span data-ttu-id="74181-151">Wählen Sie die Entitäten, die das Kundenprofil darstellen - **eCommerceContacts** und **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="74181-151">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span>
 
    ![Vereinheitlichen Sie E-Commerce- und Treue-Datenquellen.](media/unify-ecommerce-loyalty.png)
 
-3. <span data-ttu-id="2e61b-153">Wählen Sie **KontaktId** als Primärschlüssel für **eCommerceKontakte** und **LoyaltyID** als Primärschlüssel für **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-153">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
+3. <span data-ttu-id="74181-153">Wählen Sie **KontaktId** als Primärschlüssel für **eCommerceKontakte** und **LoyaltyID** als Primärschlüssel für **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="74181-153">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
 
    ![Vereinheitlichen Sie LoyaltyId als Primärschlüssel.](media/unify-loyaltyid.png)
 
-### <a name="match"></a><span data-ttu-id="2e61b-155">Abgleichen</span><span class="sxs-lookup"><span data-stu-id="2e61b-155">Match</span></span>
+### <a name="match"></a><span data-ttu-id="74181-155">Abgleichen</span><span class="sxs-lookup"><span data-stu-id="74181-155">Match</span></span>
 
-1. <span data-ttu-id="2e61b-156">Gehen Sie auf die Registerkarte **Abgleichen** und wählen Sie **Reihenfolge festlegen**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-156">Go to the **Match** tab and select **Set Order**.</span></span>
+1. <span data-ttu-id="74181-156">Gehen Sie auf die Registerkarte **Abgleichen** und wählen Sie **Reihenfolge festlegen**.</span><span class="sxs-lookup"><span data-stu-id="74181-156">Go to the **Match** tab and select **Set Order**.</span></span>
 
-2. <span data-ttu-id="2e61b-157">In der Dropdown-Liste **Primär** wählen Sie **eCommerceContacts : eCommerce** als primäre Quelle und schließen alle Datensätze ein.</span><span class="sxs-lookup"><span data-stu-id="2e61b-157">In the **Primary** drop-down list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
+2. <span data-ttu-id="74181-157">Wählen Sie in der Dropdown-Liste **Primär** und wählen Sie **eCommerceKontakte: eCommerce** als Primärquelle aus, und wählen Sie dann Alle Datensätze einbinden aus.</span><span class="sxs-lookup"><span data-stu-id="74181-157">In the **Primary** dropdown list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
 
-3. <span data-ttu-id="2e61b-158">Wählen Sie in der Dropdown-Liste **Entität 2** die Option **loyCustomers : LoyaltyScheme** und schließen Sie alle Datensätze ein.</span><span class="sxs-lookup"><span data-stu-id="2e61b-158">In the **Entity 2** drop-down list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
+3. <span data-ttu-id="74181-158">Wählen Sie in der Dropdownliste **Entität 2** den Eintrag **loyCustomers: LoyaltyScheme** und dann Alle Datensätze berücksichtigen aus.</span><span class="sxs-lookup"><span data-stu-id="74181-158">In the **Entity 2** dropdown list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
 
    ![Abgleich eCommerce und Loyalty vereinheitlichen.](media/unify-match-order.png)
 
-4. <span data-ttu-id="2e61b-160">Wählen Sie **Eine neue Regel erstellen**</span><span class="sxs-lookup"><span data-stu-id="2e61b-160">Select **Create a new rule**</span></span>
+4. <span data-ttu-id="74181-160">Wählen Sie **Eine neue Regel erstellen**</span><span class="sxs-lookup"><span data-stu-id="74181-160">Select **Create a new rule**</span></span>
 
-5. <span data-ttu-id="2e61b-161">Fügen Sie Ihre erste Bedingung mit FullName hinzu.</span><span class="sxs-lookup"><span data-stu-id="2e61b-161">Add your first condition using FullName.</span></span>
+5. <span data-ttu-id="74181-161">Fügen Sie Ihre erste Bedingung mit FullName hinzu.</span><span class="sxs-lookup"><span data-stu-id="74181-161">Add your first condition using FullName.</span></span>
 
-   - <span data-ttu-id="2e61b-162">Für eCommerceContacts wählen Sie **FullName** in der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="2e61b-162">For eCommerceContacts select **FullName** in the drop-down.</span></span>
-   - <span data-ttu-id="2e61b-163">Für loyCustomers wählen Sie **FullName** im Dropdown.</span><span class="sxs-lookup"><span data-stu-id="2e61b-163">For loyCustomers select **FullName** in the drop-down.</span></span>
-   - <span data-ttu-id="2e61b-164">Wählen Sie das Dropdown-Menü **Normalisieren** und wählen Sie **Typ (Telefon, Name, Adresse, ...)**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-164">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
-   - <span data-ttu-id="2e61b-165">Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-165">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   - <span data-ttu-id="74181-162">Für eCommerceKontakte wählen Sie **Vollständiger Name** in der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="74181-162">For eCommerceContacts select **FullName** in the dropdown.</span></span>
+   - <span data-ttu-id="74181-163">Für loyCustomers wählen Sie **Vollständiger Name** in der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="74181-163">For loyCustomers select **FullName** in the dropdown.</span></span>
+   - <span data-ttu-id="74181-164">Wählen Sie das Dropdown-Menü **Normalisieren** und wählen Sie **Typ (Telefon, Name, Adresse, ...)**.</span><span class="sxs-lookup"><span data-stu-id="74181-164">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
+   - <span data-ttu-id="74181-165">Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.</span><span class="sxs-lookup"><span data-stu-id="74181-165">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
-6. <span data-ttu-id="2e61b-166">Geben Sie als Regelname **FullName, Email** ein.</span><span class="sxs-lookup"><span data-stu-id="2e61b-166">Enter the name **FullName, Email** for the new rule.</span></span>
+6. <span data-ttu-id="74181-166">Geben Sie als Regelname **FullName, Email** ein.</span><span class="sxs-lookup"><span data-stu-id="74181-166">Enter the name **FullName, Email** for the new rule.</span></span>
 
-   - <span data-ttu-id="2e61b-167">Fügen Sie eine zweite Bedingung für E-Mail-Adressen hinzu, indem Sie **Bedingung hinzufügen** wählen.</span><span class="sxs-lookup"><span data-stu-id="2e61b-167">Add a second condition for email address by selecting **Add Condition**</span></span>
-   - <span data-ttu-id="2e61b-168">Für die Entität eCommerceContacts wählen Sie **EMail** im Dropdown.</span><span class="sxs-lookup"><span data-stu-id="2e61b-168">For entity eCommerceContacts, choose **EMail** in drop-down.</span></span>
-   - <span data-ttu-id="2e61b-169">Für die Entität loyCustomers wählen Sie **EMail** im Drop-Down.</span><span class="sxs-lookup"><span data-stu-id="2e61b-169">For entity loyCustomers, choose **EMail** in the drop-down.</span></span>
-   - <span data-ttu-id="2e61b-170">Lassen Sie Normalisieren leer.</span><span class="sxs-lookup"><span data-stu-id="2e61b-170">Leave Normalize blank.</span></span>
-   - <span data-ttu-id="2e61b-171">Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-171">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   - <span data-ttu-id="74181-167">Fügen Sie eine zweite Bedingung für E-Mail-Adressen hinzu, indem Sie **Bedingung hinzufügen** wählen.</span><span class="sxs-lookup"><span data-stu-id="74181-167">Add a second condition for email address by selecting **Add Condition**</span></span>
+   - <span data-ttu-id="74181-168">Wählen Sie für eCommerce-Kontakte der Entität **Email** im Dropdown-Menü.</span><span class="sxs-lookup"><span data-stu-id="74181-168">For entity eCommerceContacts, choose **EMail** in dropdown.</span></span>
+   - <span data-ttu-id="74181-169">Wählen Sie für loyCustomers der Entität **Email** im Dropdown-Menü.</span><span class="sxs-lookup"><span data-stu-id="74181-169">For entity loyCustomers, choose **EMail** in the dropdown.</span></span>
+   - <span data-ttu-id="74181-170">Lassen Sie Normalisieren leer.</span><span class="sxs-lookup"><span data-stu-id="74181-170">Leave Normalize blank.</span></span>
+   - <span data-ttu-id="74181-171">Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.</span><span class="sxs-lookup"><span data-stu-id="74181-171">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
    ![Übereinstimmungsregel für Name und E-Mail vereinheitlichen.](media/unify-match-rule.png)
 
-7. <span data-ttu-id="2e61b-173">Wählen Sie **Speichern** und **Ausführen**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-173">Select **Save** and **Run**.</span></span>
+7. <span data-ttu-id="74181-173">Wählen Sie **Speichern** und **Ausführen**.</span><span class="sxs-lookup"><span data-stu-id="74181-173">Select **Save** and **Run**.</span></span>
 
-### <a name="merge"></a><span data-ttu-id="2e61b-174">Mergen</span><span class="sxs-lookup"><span data-stu-id="2e61b-174">Merge</span></span>
+### <a name="merge"></a><span data-ttu-id="74181-174">Mergen</span><span class="sxs-lookup"><span data-stu-id="74181-174">Merge</span></span>
 
-1. <span data-ttu-id="2e61b-175">Gehen Sie auf die Registerkarte **Zusammenführen**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-175">Go to the **Merge** tab.</span></span>
+1. <span data-ttu-id="74181-175">Gehen Sie auf die Registerkarte **Zusammenführen**.</span><span class="sxs-lookup"><span data-stu-id="74181-175">Go to the **Merge** tab.</span></span>
 
-1. <span data-ttu-id="2e61b-176">Ändern Sie auf der **ContactId** für die Entität **loyCustomers** den Anzeigenamen in **ContactIdLOYALTY**, um sie von den anderen aufgenommenen IDs zu unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="2e61b-176">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
+1. <span data-ttu-id="74181-176">Ändern Sie auf der **ContactId** für die Entität **loyCustomers** den Anzeigenamen in **ContactIdLOYALTY**, um sie von den anderen aufgenommenen IDs zu unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="74181-176">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
 
    ![Contactid aus Treue-ID umbenennen:](media/unify-merge-contactid.png)
 
-1. <span data-ttu-id="2e61b-178">Wählen Sie **Speichern** und **Ausführen**, um den Zusammenführungsprozess zu starten.</span><span class="sxs-lookup"><span data-stu-id="2e61b-178">Select **Save** and **Run** to start the Merge Process.</span></span>
+1. <span data-ttu-id="74181-178">Wählen Sie **Speichern** und **Ausführen**, um den Zusammenführungsprozess zu starten.</span><span class="sxs-lookup"><span data-stu-id="74181-178">Select **Save** and **Run** to start the Merge Process.</span></span>
 
-## <a name="task-3---configure-product-recommendation-prediction"></a><span data-ttu-id="2e61b-179">Aufgabe 3 – Konfigurieren Sie die Produktempfehlungsvorhersage</span><span class="sxs-lookup"><span data-stu-id="2e61b-179">Task 3 - Configure product recommendation prediction</span></span>
+## <a name="task-3---configure-product-recommendation-prediction"></a><span data-ttu-id="74181-179">Aufgabe 3 – Konfigurieren Sie die Produktempfehlungsvorhersage</span><span class="sxs-lookup"><span data-stu-id="74181-179">Task 3 - Configure product recommendation prediction</span></span>
 
-<span data-ttu-id="2e61b-180">Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhersage für Abonnements durchführen.</span><span class="sxs-lookup"><span data-stu-id="2e61b-180">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span>
+<span data-ttu-id="74181-180">Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhersage für Abonnements durchführen.</span><span class="sxs-lookup"><span data-stu-id="74181-180">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span>
 
-1. <span data-ttu-id="2e61b-181">Gehen Sie zu **Intelligenz** > **Vorhersage** und wählen Sie **Produktempfehlung** aus.</span><span class="sxs-lookup"><span data-stu-id="2e61b-181">Go to **Intelligence** > **Prediction** choose **Product recommendation**.</span></span>
+1. <span data-ttu-id="74181-181">Gehen Sie zu **Intelligenz** > **Vorhersage** und wählen Sie **Produktempfehlung** aus.</span><span class="sxs-lookup"><span data-stu-id="74181-181">Go to **Intelligence** > **Prediction** choose **Product recommendation**.</span></span>
 
-1. <span data-ttu-id="2e61b-182">Wählen Sie **Erste Schritte** aus.</span><span class="sxs-lookup"><span data-stu-id="2e61b-182">Select **Get started**.</span></span>
+1. <span data-ttu-id="74181-182">Wählen Sie **Erste Schritte** aus.</span><span class="sxs-lookup"><span data-stu-id="74181-182">Select **Get started**.</span></span>
 
-1. <span data-ttu-id="2e61b-183">Nennen Sie das Modell **OOB-Produktempfehlungsmodell-Vorhersage** und die Ausgabeentität **OOBProductRecommendationModelPrediction**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-183">Name the model **OOB Product Recommendation Model Prediction** and the output entity **OOBProductRecommendationModelPrediction**.</span></span>
+1. <span data-ttu-id="74181-183">Nennen Sie das Modell **OOB-Produktempfehlungsmodell-Vorhersage** und die Ausgabeentität **OOBProductRecommendationModelPrediction**.</span><span class="sxs-lookup"><span data-stu-id="74181-183">Name the model **OOB Product Recommendation Model Prediction** and the output entity **OOBProductRecommendationModelPrediction**.</span></span>
 
-1. <span data-ttu-id="2e61b-184">Definieren Sie drei Bedingungen für das Modell:</span><span class="sxs-lookup"><span data-stu-id="2e61b-184">Define three conditions for the model:</span></span>
+1. <span data-ttu-id="74181-184">Definieren Sie drei Bedingungen für das Modell:</span><span class="sxs-lookup"><span data-stu-id="74181-184">Define three conditions for the model:</span></span>
 
-   - <span data-ttu-id="2e61b-185">**Anzahl der Produkte**: Setzen Sie diesen Wert auf **5**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-185">**Number of products**: Set this value to **5**.</span></span> <span data-ttu-id="2e61b-186">Diese Einstellung definiert, wie viele Produkte Sie Ihren Kunden empfehlen möchten.</span><span class="sxs-lookup"><span data-stu-id="2e61b-186">This setting defines how many products you want to recommend to your customers.</span></span>
+   - <span data-ttu-id="74181-185">**Anzahl der Produkte**: Setzen Sie diesen Wert auf **5**.</span><span class="sxs-lookup"><span data-stu-id="74181-185">**Number of products**: Set this value to **5**.</span></span> <span data-ttu-id="74181-186">Diese Einstellung definiert, wie viele Produkte Sie Ihren Kunden empfehlen möchten.</span><span class="sxs-lookup"><span data-stu-id="74181-186">This setting defines how many products you want to recommend to your customers.</span></span>
 
-   - <span data-ttu-id="2e61b-187">**Erwartete wiederholte Einkäufe**: Wählen Sie **Ja** aus, um anzugeben, dass Sie Produkte in die Empfehlung aufnehmen möchten, die Ihre Kunden bereits gekauft haben.</span><span class="sxs-lookup"><span data-stu-id="2e61b-187">**Repeat purchases expected**: Select **Yes** to indicate that you want to include products in the recommendation that your customers have purchased before.</span></span>
+   - <span data-ttu-id="74181-187">**Erwartete wiederholte Einkäufe**: Wählen Sie **Ja** aus, um anzugeben, dass Sie Produkte in die Empfehlung aufnehmen möchten, die Ihre Kunden bereits gekauft haben.</span><span class="sxs-lookup"><span data-stu-id="74181-187">**Repeat purchases expected**: Select **Yes** to indicate that you want to include products in the recommendation that your customers have purchased before.</span></span>
 
-   - <span data-ttu-id="2e61b-188">**Fenster für Vergangenheitsdaten:** Wählen Sie mindestens **365 Tage**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-188">**Look back window:** Select at least **365 days**.</span></span> <span data-ttu-id="2e61b-189">Diese Einstellung legt fest, wie weit das Modell die Aktivität des Kunden zurückverfolgt, um sie als Eingabe für Empfehlungen zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="2e61b-189">This setting defines how far the model will look back at the customer's activity to use it as input to their recommendations.</span></span>
+   - <span data-ttu-id="74181-188">**Fenster für Vergangenheitsdaten:** Wählen Sie mindestens **365 Tage**.</span><span class="sxs-lookup"><span data-stu-id="74181-188">**Look back window:** Select at least **365 days**.</span></span> <span data-ttu-id="74181-189">Diese Einstellung legt fest, wie weit das Modell die Aktivität des Kunden zurückverfolgt, um sie als Eingabe für Empfehlungen zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="74181-189">This setting defines how far the model will look back at the customer's activity to use it as input to their recommendations.</span></span>
    
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Modelleinstellungen für das Produktempfehlungsmodell":::
 
-1. <span data-ttu-id="2e61b-191">Wählen Sie **Erforderliche Daten** und wählen Sie **Daten hinzufügen** für die Einkaufshistorie.</span><span class="sxs-lookup"><span data-stu-id="2e61b-191">Select **Required data** and select **Add data** for purchase history.</span></span>
+1. <span data-ttu-id="74181-191">Wählen Sie **Erforderliche Daten** und wählen Sie **Daten hinzufügen** für die Einkaufshistorie.</span><span class="sxs-lookup"><span data-stu-id="74181-191">Select **Required data** and select **Add data** for purchase history.</span></span>
 
-1. <span data-ttu-id="2e61b-192">Fügen Sie die Entität **eCommercePurchases : eCommerce** hinzu und ordnen Sie die Felder von eCommerce den entsprechenden vom Modell benötigten Feldern zu.</span><span class="sxs-lookup"><span data-stu-id="2e61b-192">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
+1. <span data-ttu-id="74181-192">Fügen Sie die Entität **eCommercePurchases : eCommerce** hinzu und ordnen Sie die Felder von eCommerce den entsprechenden vom Modell benötigten Feldern zu.</span><span class="sxs-lookup"><span data-stu-id="74181-192">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
 
-1. <span data-ttu-id="2e61b-193">Verbinden Sie die Entität **eCommercePurchases : eCommerce** mit **eCommerceContacts : eCommerce**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-193">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
+1. <span data-ttu-id="74181-193">Verbinden Sie die Entität **eCommercePurchases : eCommerce** mit **eCommerceContacts : eCommerce**.</span><span class="sxs-lookup"><span data-stu-id="74181-193">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
 
    ![Join von eCommerce-Entitäten.](media/model-purchase-join.png)
 
-1. <span data-ttu-id="2e61b-195">Wählen Sie **Weiter**, um den Modellplan einzustellen.</span><span class="sxs-lookup"><span data-stu-id="2e61b-195">Select **Next** to set the model schedule.</span></span>
+1. <span data-ttu-id="74181-195">Wählen Sie **Weiter**, um den Modellplan einzustellen.</span><span class="sxs-lookup"><span data-stu-id="74181-195">Select **Next** to set the model schedule.</span></span>
 
-   <span data-ttu-id="2e61b-196">Das Modell muss regelmäßig trainieren, um neue Muster zu lernen, wenn neue Daten erfasst werden.</span><span class="sxs-lookup"><span data-stu-id="2e61b-196">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="2e61b-197">Wählen Sie für dieses Beispiel **Monatlich**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-197">For this example, select **Monthly**.</span></span>
+   <span data-ttu-id="74181-196">Das Modell muss regelmäßig trainieren, um neue Muster zu lernen, wenn neue Daten erfasst werden.</span><span class="sxs-lookup"><span data-stu-id="74181-196">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="74181-197">Wählen Sie für dieses Beispiel **Monatlich**.</span><span class="sxs-lookup"><span data-stu-id="74181-197">For this example, select **Monthly**.</span></span>
 
-1. <span data-ttu-id="2e61b-198">Nachdem Sie alle Details überprüft haben, wählen Sie **Speichern und Ausführen**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-198">After reviewing all the details, select **Save and Run**.</span></span>
+1. <span data-ttu-id="74181-198">Nachdem Sie alle Details überprüft haben, wählen Sie **Speichern und Ausführen**.</span><span class="sxs-lookup"><span data-stu-id="74181-198">After reviewing all the details, select **Save and Run**.</span></span>
 
 
-## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="2e61b-199">Aufgabe 4 - Überprüfung der Modellergebnisse und Erklärungen</span><span class="sxs-lookup"><span data-stu-id="2e61b-199">Task 4 - Review model results and explanations</span></span>
+## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="74181-199">Aufgabe 4 - Überprüfung der Modellergebnisse und Erklärungen</span><span class="sxs-lookup"><span data-stu-id="74181-199">Task 4 - Review model results and explanations</span></span>
 
-<span data-ttu-id="2e61b-200">Lassen Sie das Modell das Training und das Scoring der Daten abschließen.</span><span class="sxs-lookup"><span data-stu-id="2e61b-200">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="2e61b-201">Sie können nun die Erklärungen zum Produktempfehlungsmodell überprüfen.</span><span class="sxs-lookup"><span data-stu-id="2e61b-201">You can now review the product recommendation model explanations.</span></span> <span data-ttu-id="2e61b-202">Weitere Informationen finden Sie unter [Überprüfen eines Vorhersagestatus und der Ergebnisse](predict-subscription-churn.md#review-a-prediction-status-and-results).</span><span class="sxs-lookup"><span data-stu-id="2e61b-202">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
+<span data-ttu-id="74181-200">Lassen Sie das Modell das Training und das Scoring der Daten abschließen.</span><span class="sxs-lookup"><span data-stu-id="74181-200">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="74181-201">Sie können nun die Erklärungen zum Produktempfehlungsmodell überprüfen.</span><span class="sxs-lookup"><span data-stu-id="74181-201">You can now review the product recommendation model explanations.</span></span> <span data-ttu-id="74181-202">Weitere Informationen finden Sie unter [Überprüfen eines Vorhersagestatus und der Ergebnisse](predict-subscription-churn.md#review-a-prediction-status-and-results).</span><span class="sxs-lookup"><span data-stu-id="74181-202">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
 
-## <a name="task-5---create-a-segment-of-high-purchased-products"></a><span data-ttu-id="2e61b-203">Aufgabe 5 – Erstellen Sie ein Segment mit häufig gekauften Produkten</span><span class="sxs-lookup"><span data-stu-id="2e61b-203">Task 5 - Create a segment of high purchased products</span></span>
+## <a name="task-5---create-a-segment-of-high-purchased-products"></a><span data-ttu-id="74181-203">Aufgabe 5 – Erstellen Sie ein Segment mit häufig gekauften Produkten</span><span class="sxs-lookup"><span data-stu-id="74181-203">Task 5 - Create a segment of high purchased products</span></span>
 
-<span data-ttu-id="2e61b-204">Das Ausführen des Produktionsmodells erstellt eine neue Entität, die Sie in **Daten** > **Entitäten** sehen können.</span><span class="sxs-lookup"><span data-stu-id="2e61b-204">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>
+<span data-ttu-id="74181-204">Das Ausführen des Produktionsmodells erstellt eine neue Entität, die Sie in **Daten** > **Entitäten** sehen können.</span><span class="sxs-lookup"><span data-stu-id="74181-204">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>
 
-<span data-ttu-id="2e61b-205">Sie können ein neues Segment basierend auf der vom Modell erstellten Entität erstellen.</span><span class="sxs-lookup"><span data-stu-id="2e61b-205">You can create a new segment based on the entity created by the model.</span></span>
+<span data-ttu-id="74181-205">Sie können ein neues Segment basierend auf der vom Modell erstellten Entität erstellen.</span><span class="sxs-lookup"><span data-stu-id="74181-205">You can create a new segment based on the entity created by the model.</span></span>
 
-1. <span data-ttu-id="2e61b-206">Gehen Sie zu **Segmente**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-206">Go to **Segments**.</span></span> <span data-ttu-id="2e61b-207">Wählen Sie **Neu** aus und wechseln Sie dann zu **Erstellen aus** > **Intelligenz**.</span><span class="sxs-lookup"><span data-stu-id="2e61b-207">Select **New** and choose **Create from** > **Intelligence**.</span></span>
+1. <span data-ttu-id="74181-206">Gehen Sie zu **Segmente**.</span><span class="sxs-lookup"><span data-stu-id="74181-206">Go to **Segments**.</span></span> <span data-ttu-id="74181-207">Wählen Sie **Neu** aus und wechseln Sie dann zu **Erstellen aus** > **Intelligenz**.</span><span class="sxs-lookup"><span data-stu-id="74181-207">Select **New** and choose **Create from** > **Intelligence**.</span></span>
 
    ![Erstellen eines Segments mit der Modellausgabe.](media/segment-intelligence.png)
 
-1. <span data-ttu-id="2e61b-209">Wählen Sie den Endpunkt **OOBProductRecommendationModelPrediction** und definieren Sie das Segment:</span><span class="sxs-lookup"><span data-stu-id="2e61b-209">Select the **OOBProductRecommendationModelPrediction** endpoint and define the segment:</span></span>
+1. <span data-ttu-id="74181-209">Wählen Sie den Endpunkt **OOBProductRecommendationModelPrediction** und definieren Sie das Segment:</span><span class="sxs-lookup"><span data-stu-id="74181-209">Select the **OOBProductRecommendationModelPrediction** endpoint and define the segment:</span></span>
 
-   - <span data-ttu-id="2e61b-210">Feld: ProductID</span><span class="sxs-lookup"><span data-stu-id="2e61b-210">Field: ProductID</span></span>
-   - <span data-ttu-id="2e61b-211">Operator: Wert</span><span class="sxs-lookup"><span data-stu-id="2e61b-211">Operator: Value</span></span>
-   - <span data-ttu-id="2e61b-212">Wert: Wählen Sie die drei wichtigsten Produkt-IDs aus</span><span class="sxs-lookup"><span data-stu-id="2e61b-212">Value: Select the top three product IDs</span></span>
+   - <span data-ttu-id="74181-210">Feld: ProductID</span><span class="sxs-lookup"><span data-stu-id="74181-210">Field: ProductID</span></span>
+   - <span data-ttu-id="74181-211">Operator: Wert</span><span class="sxs-lookup"><span data-stu-id="74181-211">Operator: Value</span></span>
+   - <span data-ttu-id="74181-212">Wert: Wählen Sie die drei wichtigsten Produkt-IDs aus</span><span class="sxs-lookup"><span data-stu-id="74181-212">Value: Select the top three product IDs</span></span>
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Erstellen Sie ein Segment aus den Modellergebnissen.":::
 
-<span data-ttu-id="2e61b-214">Sie haben jetzt ein Segment, das dynamisch aktualisiert wird und die Kunden identifiziert, die eher bereit sind, die drei am meisten empfohlenen Produkte zu kaufen</span><span class="sxs-lookup"><span data-stu-id="2e61b-214">You now have a segment that is dynamically updated which identifies the customers who are more willing to purchase the three most recommended products</span></span> 
+<span data-ttu-id="74181-214">Sie haben jetzt ein Segment, das dynamisch aktualisiert wird und die Kunden identifiziert, die eher bereit sind, die drei am meisten empfohlenen Produkte zu kaufen</span><span class="sxs-lookup"><span data-stu-id="74181-214">You now have a segment that is dynamically updated which identifies the customers who are more willing to purchase the three most recommended products</span></span> 
 
-<span data-ttu-id="2e61b-215">Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).</span><span class="sxs-lookup"><span data-stu-id="2e61b-215">For more information, see [Create and manage segments](segments.md).</span></span>
+<span data-ttu-id="74181-215">Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).</span><span class="sxs-lookup"><span data-stu-id="74181-215">For more information, see [Create and manage segments](segments.md).</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

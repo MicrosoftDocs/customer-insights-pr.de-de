@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: Anreicherung mit Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Mit Experian anreichern
+        - name: Anreichern mit Experian
           href: audience-insights/enrichment-experian.md
         - name: Anreichern mit benutzerdefiniertem SFTP-Import
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,6 +136,8 @@
           items:
             - name: Exportübersicht
               href: audience-insights/export-destinations.md
+            - name: Active Campaigns
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -144,7 +146,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse-Analysen
+            - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -238,10 +244,10 @@
       items:
         - name: Los geht's
           href: engagement-insights/get-started.md
-        - name: Erstellen Sie einen Arbeitsbereich
+        - name: Arbeitsbereich erstellen
           href: engagement-insights/create-workspace.md
-        - name: Instrumentieren Sie Ihre Website
-          href: engagement-insights/instrument-website.md
+        - name: Erfassen Sie Ereignisse aus Websites und mobilen Apps
+          href: engagement-insights/developer-resources.md
         - name: Konzepte und Terminologie
           href: engagement-insights/glossary.md
     - name: Ereignisse
@@ -272,10 +278,18 @@
       items:
         - name: Übersicht der Entwickler-Ressourcen
           href: engagement-insights/developer-resources.md
-        - name: Web-SDK-Anleitung
+        - name: Web SDK-Anleitung
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Web SDK-Beispiel
           href: engagement-insights/websdk-sample.md
+        - name: Android SDK Tutorial
+          href: engagement-insights/get-started-android.md
+        - name: Android SDK Beispiel
+          href: engagement-insights/androidsdk-sample.md
+        - name: iOS SDK-Anleitung
+          href: engagement-insights/get-started-ios.md
+        - name: iOS SDK-Beispiel
+          href: engagement-insights/iossdk-sample.md
     - name: Verwaltung
       items:
         - name: Rollen und Berechtigungen
