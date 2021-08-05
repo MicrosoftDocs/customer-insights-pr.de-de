@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598154"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554112"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps-Connector (Vorschau)
 
@@ -56,12 +56,12 @@ Beispiel: Sie fügen Kundenprofile zu einem [Galerie-Steuerelement](/powerapps/m
 1. Fügen Sie ein Steuerelement **Galerie** zu einer App hinzu, die Sie erstellen.
 
 > [!div class="mx-imgBorder"]
-> ![Ein Galerie-Element hinzufügen](media/connector-powerapps9.png "Ein Galerie-Element hinzufügen")
+> ![Ein Galerie-Element hinzufügen.](media/connector-powerapps9.png "Ein Galerie-Element hinzufügen")
 
 1. Wählen Sie **Kunde** als Datenquelle für Artikel.
 
     > [!div class="mx-imgBorder"]
-    > ![Datenquelle auswählen](media/choose-datasource-powerapps.png "Wählen Sie eine Datenquelle")
+    > ![Datenquelle auswählen.](media/choose-datasource-powerapps.png "Wählen Sie eine Datenquelle")
 
 1. Sie können das Datenfeld auf der rechten Seite ändern, um auszuwählen, welches Feld für die Kundeneinheit in der Galerie angezeigt werden soll.
 

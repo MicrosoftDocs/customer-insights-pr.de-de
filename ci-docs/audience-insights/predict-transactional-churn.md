@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095601"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559404"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Vorhersage der Transaktionsabwanderung (Vorschau)
 
@@ -47,7 +47,7 @@ Die Transaktionsabwanderungsvorhersage hilft bei der Vorhersage, ob ein Kunde Ih
         - **Ereignis:** Der Name des Ereignisses, das Sie verwenden möchten. Ein Feld namens „UserAction“ in einem Lebensmittelgeschäft könnte z.B. die Verwendung des Coupons durch den Kunden sein.
         - **Details:** Detaillierte Informationen über das Ereignis. Zum Beispiel könnte ein Feld namens „CouponValue“ in einem Lebensmittelgeschäft der Währungswert des Coupons sein.
 - Vorgeschlagene Datencharakteristik:
-    - Ausreichende historische Daten: Transaktionsdaten für mindestens das Doppelte des ausgewählten Zeitfensters. Vorzugsweise zwei bis drei Jahre Abonnementdaten. 
+    - Ausreichende historische Daten: Transaktionsdaten für mindestens das Doppelte des ausgewählten Zeitfensters. Vorzugsweise zwei bis drei Jahre Transaktionshistorie. 
     - Mehrfachkäufe pro Kunde: Idealerweise mindestens zwei Transaktionen pro Kunde.
     - Anzahl der Kunden: Mindestens 10 Kundenprofilen, vorzugsweise mehr als 1.000 eindeutigen Kunden. Das Modell schlägt mit weniger als 10 Kunden und unzureichenden historischen Daten fehl.
     - Vollständigkeit der Daten: Weniger als 20 % der fehlenden Werte im Datenfeld der angegebenen Entität.
@@ -156,7 +156,7 @@ Die Transaktionsabwanderungsvorhersage hilft bei der Vorhersage, ob ein Kunde Ih
 1. Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite:
     1. **Leistung des Trainingsmodells:** A, B oder C sind mögliche Bewertungen. Diese Bewertung zeigt die Leistung der Vorhersage an und kann Ihnen bei der Entscheidung helfen, die in der Ausgabe-Entität gespeicherten Ergebnisse zu verwenden. Bewertungen werden auf der Grundlage der folgenden Regeln ermittelt:
          
-         - **A**, wenn das Modell mindestens 50 % der gesamten Vorhersagen richtig vorhergesagt hat und wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, um mindestens 10 % größer ist als die Basisrate.
+         - **A**, wenn das Modell mindestens 50 % der gesamten Vorhersagen richtig vorhergesagt hat und wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, um mindestens 10 % größer ist als die Basisrate.
             
          - **B**, wenn das Modell mindestens 50 % der gesamten Vorhersagen richtig vorhergesagt hat und wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, bis zu 10 % höher ist als die Basislinie.
             

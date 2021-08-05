@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304695"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692434"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
@@ -30,13 +31,13 @@ Sie können ein Datenquelle auf drei Arten hinzufügen:
 
 - [Durch Dutzende von Power Query-Connectors](connect-power-query.md)
 - [Aus einem Common Data Model-Ordner](connect-common-data-model.md)
-- [Aus Ihrem eigenen Microsoft Dataverse-Lake](connect-common-data-service-lake.md)
+- [Aus Ihrem eigenen Microsoft Dataverse-Lake](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Fügen Sie Daten aus lokalen Datenquellen hinzu
 
-Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Microsoft Power Platform Dataflows unterstützt. Dataflows können in Customer Insights durch [Bereitstellung der Microsoft Dataverse-Umgebungs-URL](manage-environments.md#create-an-environment-in-an-existing-organization) beim Einrichten der Umgebung aktiviert werden.
+Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Microsoft Power Platform Dataflows unterstützt. Dataflows können in Customer Insights durch [Bereitstellung der Microsoft Dataverse-Umgebungs-URL](get-started-paid.md) beim Einrichten der Umgebung aktiviert werden.
 
-Datenquellen, die nach dem Zuordnen einer Dataverse-Umgebung mit Customer Insights erstellt werden, verwenden [Power Platform Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) standardmäßig. Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Entfernen Sie Datenquellen, die vor einer Dataverse Umgebungszuordnung vorhanden waren, und erstellen Sie sie neu, um [Datengateways lokal zu verwenden](/data-integration/gateway/service-gateway-app.md).
+Datenquellen, die nach dem Zuordnen einer Dataverse-Umgebung mit Customer Insights erstellt werden, verwenden [Power Platform Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) standardmäßig. Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Entfernen Sie Datenquellen, die vor einer Dataverse Umgebungszuordnung vorhanden waren, und erstellen Sie sie neu, um [Datengateways lokal zu verwenden](/data-integration/gateway/service-gateway-app).
 
 Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
 
@@ -47,7 +48,7 @@ Sie sehen den Namen jeder aufgenommenen Datenquelle, ihren Status und das letzte
 > [!div class="mx-imgBorder"]
 > ![Datenquelle hinzugefügt](media/configure-data-datasource-added.png "Datenquelle hinzugefügt")
 
-|Status  |Beschreibung des Dataflows  |
+|Status  |Beschreibung  |
 |---------|---------|
 |Erfolgreich   |Die Datenquelle wurde erfolgreich aufgenommen, wenn in der Spalte **Aufgefrischt** ein Zeitpunkt genannt wird.
 |Nicht gestartet   |Die Datenquelle hat noch keine Datenerfassung oder ist noch im Entwurfsmodus.         |

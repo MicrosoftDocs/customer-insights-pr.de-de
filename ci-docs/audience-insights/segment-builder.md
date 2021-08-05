@@ -1,7 +1,7 @@
 ---
 title: Segmente erstellen und verwalten
 description: Erstellen Sie Kundensegmente, um sie auf der Grundlage verschiedener Attribute zu gruppieren.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064936"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685461"
 ---
 # <a name="create-and-manage-segments"></a>Segmente erstellen und verwalten
+
+> [!IMPORTANT]
+> Im September 2021 werden mehrere Änderungen an der Segmenterstellung eingeführt: 
+> - Der Segmentgenerator wird mit neu gestalteten Elementen und einem verbesserten Benutzerflow etwas anders aussehen.
+> - Im Segmentgenerator sind neue Datetime-Operatoren und eine verbesserte Datumsauswahl aktiviert.
+> - Sie können Bedingungen und Regeln zu Segmenten hinzufügen oder daraus entfernen. 
+> - Geschachtelte Regeln, die mit einer ODER-Bedingung beginnen, sind verfügbar. Sie benötigen keine UND-Bedingung mehr auf der äußersten Ebene.
+> - Ein Seitenbereich zum Auswählen von Attributen ist ständig verfügbar.
+> - Eine Option zum Auswählen von Entitätsbeziehungspfaden.
+> Um den neuen Segmentgenerator auszuprobieren, senden Sie eine E-Mail mit dem Betreff „Request to enable the new segment builder“ an cihelp [at] microsoft.com. Geben Sie den Namen Ihrer Organisation und die ID Ihrer Sandbox-Umgebung an.
 
 Sie können komplexe Filter mit Bezug zur einheitlichen Kundenentität und den verwandten Entitäten festlegen. Jedes Segment erstellt nach der Verarbeitung eine Reihe von Kundendatensätzen, die Sie exportieren und für die Sie Maßnahmen ergreifen können. Segmente werden auf der Seite **Segmente** verwaltet. 
 
@@ -50,7 +60,7 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. Es wird
 1. Wählen Sie einen Operator und einen Wert für das ausgewählte Attribut.
 
    > [!div class="mx-imgBorder"]
-   > ![Benutzerdefinierter Gruppenfilter](media/customer-group-numbers.png "Kundengruppen-Filter")
+   > ![Benutzerdefinierter Gruppenfilter.](media/customer-group-numbers.png "Kundengruppen-Filter")
 
    |Anzahl |Definition  |
    |---------|---------|
@@ -66,7 +76,7 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. Es wird
       - **OR**-Operator: Jede der beiden Bedingungen muss als Teil des Segmentierungsprozesses erfüllt sein. Diese Option ist am nützlichsten, wenn Sie mehrere Bedingungen für dieselbe Entität definieren.
 
       > [!div class="mx-imgBorder"]
-      > ![OR-Operator, wobei jede der beiden Bedingungen erfüllt sein muss](media/segmentation-either-condition.png "OR-Operator, wobei jede der beiden Bedingungen erfüllt sein muss")
+      > ![ODER-Operator, wobei jede der beiden Bedingungen erfüllt sein muss.](media/segmentation-either-condition.png "OR-Operator, wobei jede der beiden Bedingungen erfüllt sein muss")
 
       Es ist derzeit möglich, einen **OR** Operator unter einem **AND** Operator zu verschachteln, aber nicht umgekehrt.
 
@@ -74,12 +84,12 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. Es wird
    Wählen Sie **Gruppe hinzufügen**.
 
       > [!div class="mx-imgBorder"]
-      > ![Kundengruppe Gruppe hinzufügen](media/customer-group-add-group.png "Kundengruppe Gruppe hinzufügen")
+      > ![Kundengruppe „Gruppe hinzufügen“.](media/customer-group-add-group.png "Kundengruppe Gruppe hinzufügen")
 
    1. Wählen Sie einen der eingestellten Operatoren aus: **Gesamtmenge**, **Überschneiden**, oder **Außer**.
 
    > [!div class="mx-imgBorder"]
-   > ![Kundengruppe Vereinigung hinzufügen](media/customer-group-union.png "Kundengruppe Vereinigung hinzufügen")
+   > ![Kundengruppe „Vereinigung hinzufügen“.](media/customer-group-union.png "Kundengruppe Vereinigung hinzufügen")
 
    - **Vereinigen** vereinigt die beiden Gruppen.
 
@@ -90,7 +100,7 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. Es wird
 1. Wenn die Entität über [Beziehungen](relationships.md) mit der einheitlichen Kundenentität verbunden ist, müssen Sie den Beziehungspfad definieren, um ein gültiges Segment zu erstellen. Fügen Sie die Entitäten aus dem Beziehungspfad hinzu, bis Sie die Entität **Kunde: Customer Insights** aus der Dropdownliste auswählen können. Dann wählen Sie **Alle Datensätze** für jeden Schritt aus.
 
    > [!div class="mx-imgBorder"]
-   > ![Beziehungspfad während der Segmenterstellung](media/segments-multiple-relationships.png "Beziehungspfad während der Segmenterstellung")
+   > ![Beziehungspfad während der Segmenterstellung.](media/segments-multiple-relationships.png "Beziehungspfad während der Segmenterstellung")
 
 1. Standardmäßig generieren Segmente eine Ausgabeentität, die alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie der Ausgabeentität weitere Attribute dieser Entitäten hinzufügen. Wählen Sie, **Projektattribute**, um die Attribute auszuwählen, die an die Ausgabeentität angehängt werden.  
   
@@ -127,7 +137,7 @@ Mit schnellen Segmenten können Sie schnell einfache Segmente mit einem einzigen
 4. Das System liefert Ihnen eine **geschätzte Segmentgröße**. Sie können wählen, ob Sie das von Ihnen definierte Segment generieren oder es zunächst erneut aufrufen, um eine andere Segmentgröße zu erhalten.
 
     > [!div class="mx-imgBorder"]
-    > ![Name und Schätzung für ein Quick-Segment](media/quick-segment-name.png "Name und Schätzung für ein schnelles Segment")
+    > ![Name und Schätzung für ein schnelles Segment.](media/quick-segment-name.png "Name und Schätzung für ein schnelles Segment")
 
 5. Geben Sie einen **Name** für Ihr Segment an. Geben Sie optional einen **Anzeigename** ein.
 

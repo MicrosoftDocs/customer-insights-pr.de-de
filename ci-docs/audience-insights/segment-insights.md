@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306073"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554984"
 ---
 # <a name="segment-insights-preview"></a>Segment-Insights (Vorschau)
 
@@ -44,7 +44,7 @@ Sie können auch analysieren, wie sich die Überlappung für bestimmte Attribute
 Nach Abschluss der Analyse finden Sie Details zu diesem Einblick unter **Segmente** > **Erkenntnisse (Vorschau)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Erkenntnisdetails zur Segmentüberlappung":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Erkenntnisdetails zur Segmentüberlappung.":::
 
 Wählen Sie eine Erkenntnis aus, um die Analyseergebnisse anzuzeigen:
 
@@ -77,9 +77,9 @@ Mithilfe von Segmentunterscheidungsmerkmalen können Sie herausfinden, was ein S
 Nach Abschluss der Analyse finden Sie Details zu diesem Einblick unter **Segmente** > **Erkenntnisse (Vorschau)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Segmentdifferenziator Erkenntnisdetails":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Segmentdifferenziator Erkenntnisdetails.":::
 
-Wählen Sie eine Erkenntnis aus, um die Analyseergebnisse anzuzeigen. Eine Differenzierungsanalyse umfasst zwei Registerkarten. Die Registerkarte **Attribute** listet Profilattribute auf, die als Unterscheidungsmerkmale betrachtet werden. Die Registerkarte **Maßnahmen** listet Unterscheidungsmerkmale auf. Jede Registerkarte enthält die folgenden Details:
+Wählen Sie eine Erkenntnis aus, um die Analyseergebnisse anzuzeigen. Eine Unterscheidungsmerkmalanalyse enthält zwei Registerkarten. Die Registerkarte **Attribute** listet Profilattribute auf, die als Unterscheidungsmerkmale betrachtet werden. Die Registerkarte **Maßnahmen** listet Unterscheidungsmerkmale auf. Jede Registerkarte enthält die folgenden Details:
 
 - Rangliste der Unterscheidungsmerkmale, sortiert nach Differenzwerten.
 - Das **Differenzwert** für jedes Unterscheidungsmerkmal. Die Differenzbewertung gibt den Differenzgrad eines Attributs zwischen zwei Segmenten an. Je höher die Differenzbewertung ist, desto stärker unterscheiden sich die Attribute zwischen den beiden Segmenten. Wählen Sie einen Wert aus, um den Bereich **Differenzwert** mit den Werteverteilungen für dieses Attribut zu öffnen.

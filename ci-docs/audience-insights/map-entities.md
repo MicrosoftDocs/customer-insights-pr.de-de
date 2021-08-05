@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595992"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555122"
 ---
 # <a name="map-entities-and-attributes"></a>Entitäten und Attribute zuordnen
 
@@ -35,14 +35,14 @@ Weitere Informationen über den allgemeinen Flow der Datenvereinheitlichung find
 3. Wählen Sie die Entitäten und Attribute aus, die Sie in den Phasen *Abgleichen* und *Zusammenführen* verwenden wollen. Sie können die erforderlichen Attribute einzeln aus einer Entität auswählen oder alle Attribute aus einer Entität einschließen, indem Sie das Kontrollkästchen **Alle Felder einschließen** auf Entitätsebene auswählen. Wir empfehlen die Auswahl von mindestens zwei Entitäten, die von dem Datenvereinheitlichungsprozess profitieren.
 
    > [!div class="mx-imgBorder"]
-   > ![Beispiel für das Hinzufügen von Entitäten](media/data-manager-configure-map-add-entities-example.png "Beispiel für das Hinzufügen von Entitäten")
+   > ![Beispiel für das Hinzufügen von Entitäten.](media/data-manager-configure-map-add-entities-example.png "Beispiel für das Hinzufügen von Entitäten")
 
    In diesem Beispiel fügen wir die Entitäten **eCommerceContacts** und **loyCustomers** hinzu. Durch Auswahl dieser Entitäten können Sie Erkenntnisse darüber gewinnen, welche der Online-Geschäftskunden Mitglieder des Treueprogramms sind.
    
    Sie können nach Schlüsselwörtern in allen Attributen und Entitäten suchen, um die erforderlichen Attribute auszuwählen, die Sie zuordnen möchten.
    
      > [!div class="mx-imgBorder"]
-   > ![Beispiel für Suchfelder](media/data-manager-configure-map-search-fields-example.png "Beispiel für Suchfelder")
+   > ![Beispiel für Suchfelder.](media/data-manager-configure-map-search-fields-example.png "Beispiel für Suchfelder")
 
 4. Wählen Sie **Anwenden**, um Ihre Auswahl zu bestätigen.
 
@@ -55,7 +55,7 @@ Nach Auswahl Ihrer Entitäten wird die Seite **Karte** die ausgewählten Entitä
 - **Semantischer Attributtyp**: Kategorien Ihrer Attribute, wie z. B. E-Mail-Adresse oder Name. Um KI-Modelle für intelligente Vorhersage der Semantik zu verwenden, Zeit zu sparen und die Genauigkeit zu verbessern, stellen Sie **Intelligentes Mapping** auf **AN**. Intelligentes Mapping hebt die KI-basierte Semantikempfehlung im **Typ**-Feld hervor. Wenn Sie es auf **AUS** stellen, sehen Sie unsere regulären Mappingempfehlungen. Sie können einen beliebigen semantischen Typ aus der Liste verfügbarer Optionen auswählen und die vorgeschlagene Auswahl außer Kraft setzen.
 
 > [!div class="mx-imgBorder"]
-> ![Attributtyp und Semantikvorhersage](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Attributtyp und Semantikvorhersage")
+> ![Attributtyp und Semantikvorhersage.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Attributtyp und Semantikvorhersage")
 
 Das Hinzufügen eines benutzerdefinierten semantischen Typs ist ebenfalls möglich. Wählen Sie das Typ-Feld für dieses Attribut und geben Sie Ihren benutzerdefinierten Namen des semantischen Typs ein. Auf diese Weise können Sie auch die Attributtypen ändern, die vom System identifiziert wurden.
 
@@ -64,7 +64,7 @@ Alle Attribute, für die ein semantischer Typ automatisch identifiziert wird, si
 Attribute, die nicht automatisch einem semantischen Typ zugeordnet werden, werden im Abschnitt **Definieren der Daten in den nicht zugeordneten Feldern** zusammengefasst. Wählen Sie das Feld für den semantischen Typ für die nicht zugeordneten Attribute aus, oder geben Sie Ihren benutzerdefinierten Attributtypnamen ein.
 
 > [!div class="mx-imgBorder"]
-> ![Primärschlüssel und Attributtyp](media/data-manager-configure-map-add-attributes.png "Primärschlüssel und Attributtyp")
+> ![Primärschlüssel und Attributtyp.](media/data-manager-configure-map-add-attributes.png "Primärschlüssel und Attributtyp")
 
 > [!NOTE]
 > Ein Feld sollte dem semantischen Typ Person.FullName zugeordnet sein, um den Kundennamen auf der Kundenkarte auszufüllen. Andernfalls erscheinen die Kundenkarten namenlos. 
@@ -76,7 +76,7 @@ Attribute, die nicht automatisch einem semantischen Typ zugeordnet werden, werde
 2. In dem Bereich **Felder bearbeiten** fügen Sie Attribute oder Entitäten hinzu oder entfernen sie diese. Verwenden Sie die Suche oder den Bildlauf, um Ihre Attribute und Objekte von Interesse zu finden und auszuwählen. Sie können ein Attribut oder eine Entität nicht entfernen, wenn sie bereits übereinstimmen.
 
    > [!div class="mx-imgBorder"]
-   > ![Attribute hinzufügen oder entfernen](media/configure-data-map-edit.png "Attribute hinzufügen oder entfernen")
+   > ![Hinzufügen oder Entfernen von Attributen.](media/configure-data-map-edit.png "Attribute hinzufügen oder entfernen")
 
 3. Wählen Sie **Übernehmen** aus.
 

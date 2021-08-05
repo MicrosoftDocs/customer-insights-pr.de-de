@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596820"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554158"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementelle Aktualisierung für Datenquellen basierend auf Power Query
 
@@ -45,7 +45,7 @@ Zielgruppen-Insights ermöglicht eine inkrementelle Aktualisierung für Datenque
 1. Auf **Inkrementelle Aktualisierungseinstellungen** konfigurieren Sie die inkrementelle Aktualisierung für alle Entitäten, die Sie beim Erstellen des Datenquelle ausgewählt haben.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurieren Sie Entitäten in einem Datenquelle für die inkrementelle Aktualisierung](media/incremental-refresh-settings.png "Konfigurieren Sie Entitäten in einem Datenquelle für die inkrementelle Aktualisierung")
+   > ![Konfigurieren Sie Entitäten in einem Datenquelle für die inkrementelle Aktualisierung.](media/incremental-refresh-settings.png "Konfigurieren Sie Entitäten in einem Datenquelle für die inkrementelle Aktualisierung")
 
 1. Wählen Sie eine Entität aus und geben Sie die folgenden Details an:
 

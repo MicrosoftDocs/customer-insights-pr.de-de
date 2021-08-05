@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259190"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650041"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Arbeiten mit Customer Insights-Daten in Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights bietet die Möglichkeit, Ausgabeentitäten in [Microsoft Datav
 
 **Organisationen mit bestehenden Dataverse-Umgebungen**
 
-Organisationen, die bereits mit Dataverse arbeiten, können [eine ihrer bestehenden Dataverse-Umgebungen verwenden](manage-environments.md#create-an-environment-in-an-existing-organization), wenn ein Administrator Zielgruppenerkenntnisse einrichtet. Durch die Bereitstellung der URL zur Dataverse-Umgebung wird sie an ihre neue Umgebung für Zielgruppenerkenntnisse angehängt. Um die bestmögliche Leistung zu gewährleisten, müssen Customer Insights und Dataverse-Umgebungen in derselben Region gehostet werden.
+Organisationen, die bereits mit Dataverse arbeiten, können [eine ihrer bestehenden Dataverse-Umgebungen verwenden](get-started-paid.md), wenn ein Administrator Zielgruppenerkenntnisse einrichtet. Durch die Bereitstellung der URL zur Dataverse-Umgebung wird sie an ihre neue Umgebung für Zielgruppenerkenntnisse angehängt. Um die bestmögliche Leistung zu gewährleisten, müssen Customer Insights und Dataverse-Umgebungen in derselben Region gehostet werden.
 
 Zum Anhängen einer Dataverse-Umgebung erweitern Sie **Erweiterte Einstellungen** beim Erstellen der Umgebung für Zielgruppenerkenntnisse. Stellen Sie die **Microsoft Dataverse-Umgebungs-URL** zur Verfügung und aktivieren Sie das Kontrollkästchen **Datenfreigabe aktivieren**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="Alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="Alt.":::
 
 **Neue Organisation**
 
@@ -83,7 +83,7 @@ Diese Tabelle enthält Aktivitäten von Benutzern, die in Customer Insights verf
 | ActivityTimeStamp | DATETIME    | Aktivitätszeitstempel                                                                      |
 | Titel             | String      | Titel oder Name der Aktivität                                                               |
 | Beschreibung       | String      | Aktivitätsbeschreibung                                                                     |
-| URL                | String      | Link zu einer externen URL, die für die Aktivität spezifisch ist                                         |
+| URL               | String      | Link zu einer externen URL, die für die Aktivität spezifisch ist                                         |
 | SemanticData      | JSON-Zeichenfolge | Enthält eine Liste von Schlüssel-Wert-Paaren für semantische Mapping-Felder, die für den Aktivitätstyp spezifisch sind |
 | RangeIndex        | String      | Unix-Zeitstempel, der zum Sortieren der Aktivitätszeitskala und der Abfragen des effektiven Bereichs verwendet wird |
 | mydynci_unifiedactivityid   | GUID | Interne ID der Kundenaktivität (ActivityId) |

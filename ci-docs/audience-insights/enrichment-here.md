@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305293"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555306"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Anreicherung von Kundenprofilen mit HERE Technologies (Vorschau)
 
@@ -35,7 +35,7 @@ Um HERE Technologies Enrichments zu konfigurieren, müssen die folgenden Vorauss
 1. Wählen Sie **Meine Daten anreichern** auf der HERE Technologies-Kachel und wählen Sie **Los geht's**.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies Kachel](media/HERE-tile.png "HERE Technologies Kachel")
+   > ![HERE Technologies-Kachel.](media/HERE-tile.png "HERE Technologies Kachel")
 
 1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie durch Auswahl von **Verbindung hinzufügen** eine Verbindung herstellen. Wählen Sie **HERE Technologien** aus der Dropdwon-Liste aus. 
 
@@ -50,7 +50,7 @@ Um HERE Technologies Enrichments zu konfigurieren, müssen die folgenden Vorauss
 1. Definieren Sie, welche Felder aus Ihren einheitlichen Profilen verwendet werden sollen, um nach übereinstimmenden Standortdaten von HERE Technologies zu suchen. Die Felder **Straße 1** und **Postleitzahl** sind für die ausgewählte primäre und/oder sekundäre Adresse erforderlich. Für eine höhere Abgleichsgenauigkeit können weitere Felder hinzugefügt werden.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies Anreicherungs-Konfigurationsseite](media/enrichment-HERE-configuration.png "HERE Technologies Anreicherungs-Konfigurationsseite")
+   > ![HERE Technologies Anreicherungs-Konfigurationsseite.](media/enrichment-HERE-configuration.png "HERE Technologies Anreicherungs-Konfigurationsseite")
 
 1. Wählen Sie **Weiter** aus, um die Feldzuordnung abzuschließen.
 
@@ -73,7 +73,7 @@ Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Si
 1. Wählen Sie nach Abschluss der Überprüfung **Speichern** aus.
 
    > [!div class="mx-imgBorder"]
-   > ![Verbindungskonfigurationsseite für HERE Technologies](media/enrichment-HERE-connection.png "Verbindungskonfigurationsseite für HERE Technologies")
+   > ![Verbindungskonfigurationsseite für HERE Technologies.](media/enrichment-HERE-connection.png "Verbindungskonfigurationsseite für HERE Technologies")
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
@@ -85,7 +85,7 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 

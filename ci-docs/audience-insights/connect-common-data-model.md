@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596544"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554893"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
 
@@ -45,7 +45,7 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
 
 1. Sie können zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Geben Sie die **Container**-Informationen ein und wählen Sie **Weiter**.
    > [!div class="mx-imgBorder"]
-   > ![Dialogfeld zum Eingeben neuer Verbindungsdetails für Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Dialogfeld zum Eingeben neuer Verbindungsdetails für Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Sie benötigen eine der folgenden Rollen entweder für den Container oder das oben genannte Speicherkonto, um eine Verbindung zu einem Datenquelle herstellen und einen solchen erstellen zu können:
    >  - Speicher-Blob-Datenleser
@@ -58,11 +58,11 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
 
 1. Sie erhalten eine Liste der verfügbaren Entitäten in der ausgewählten model.json- oder manifest.json-Datei. Sie können aus der Liste der verfügbaren Entitäten prüfen und auswählen und **Speichern** wählen. Alle ausgewählten Entitäten werden von der neuen Datenquelle aufgenommen.
    > [!div class="mx-imgBorder"]
-   > ![Dialogfeld mit einer Liste von Entitäten aus einer model.json-Datei](media/review-entities.png)
+   > ![Dialogfeld mit einer Liste von Entitäten aus einer model.json-Datei.](media/review-entities.png)
 
 8. Geben Sie an, für welche Entitäten Sie die Datenprofilierung aktivieren möchten, und wählen Sie **Speichern**. Die Datenprofilerstellung ermöglicht Analysen und andere Funktionen. Sie können die gesamte Entität auswählen, wodurch alle Attribute der Entität ausgewählt werden, oder Sie können bestimmte Attribute Ihrer Wahl auswählen. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
    > [!div class="mx-imgBorder"]
-   > ![Dialogfeld, das eine Datenprofilierung zeigt](media/dataprofiling-entities.png)
+   > ![Dialogfeld, das eine Datenprofilierung zeigt.](media/dataprofiling-entities.png)
 
 9. Nachdem Sie Ihre Auswahl gespeichert haben, wird die Seite **Datenquellen** geöffnet. Sie sollten nun die Ordnerverbindung Common Data Model als Datenquelle sehen.
 
@@ -81,12 +81,12 @@ Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den
 
 4. Aktualisieren Sie optional den **Zugriffsschlüssel** und wählen Sie **Weiter** aus.
 
-   ![Dialog, um einen Zugriffsschlüssel für eine vorhandene Datenquelle zu bearbeiten und zu aktualisieren](media/edit-access-key.png)
+   ![Dialog, um einen Zugriffsschlüssel für eine vorhandene Datenquelle zu bearbeiten und zu aktualisieren.](media/edit-access-key.png)
 
 5. Optional können Sie von einer Kontoschlüssel-Verbindung zu einer ressourcenbasierten oder abonnementbasierten Verbindung aktualisieren. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
    > [!div class="mx-imgBorder"]
 
-   > ![Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake zu einem vorhandenen Speicherkonto](media/enter-existing-storage-details.png)
+   > ![Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake zu einem vorhandenen Speicherkonto.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Sie benötigen eine der folgenden Rollen entweder für den Container oder das oben genannte Speicherkonto, um eine Verbindung zu einem Datenquelle herstellen und einen solchen erstellen zu können:

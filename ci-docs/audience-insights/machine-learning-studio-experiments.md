@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598338"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555168"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Verwenden Sie Modelle, die auf Azure Machine Learning Studio (Classic) basieren
 
@@ -41,7 +41,7 @@ In einem ersten Schritt müssen wir einen Arbeitsbereich für das Machine Learni
 
 1. Nach dem Erstellen der Ressource wird das Dashboard Machine Learning Studio Arbeitsbereich angezeigt. Wählen Sie **Machine Learning Studio starten**.
 
-   ![Azure Machine Learning Studio Benutzeroberfläche](media/azure-machine-learning-studio.png)
+   ![Azure Machine Learning Studio-Benutzeroberfläche.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Arbeiten mit Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Sie können jetzt ein neues Experiment erstellen oder eine vorhandene Experiment
 
 1. Wenn Sie ein neues Experiment erstellen oder eine Experimentvorlage aus der Galerie verwenden, müssen Sie die Eigenschaften **Daten importieren** konfigurieren. Verwenden Sie die Anleitung oder geben Sie direkt Details an, um auf den Azure Blob storage zuzugreifen, der Ihre Daten enthält.  
 
-   ![Experiment mit Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Experiment mit Azure Machine Learning Studio.](media/azure-machine-learning-studio-experiment.png)
 
 1. Jetzt können Sie eine benutzerdefinierte Verarbeitungspipeline erstellen, um die Daten zu bereinigen und vorzuverarbeiten, Features zu extrahieren und ein geeignetes Modell zu trainieren.
 
@@ -63,15 +63,15 @@ Sie können jetzt ein neues Experiment erstellen oder eine vorhandene Experiment
 
 1. Wenn Sie mit der Qualität eines Modells zufrieden sind, wählen Sie **Richten Sie den Webdienst ein** > **Vorhersage-Webdienst**. Diese Option importiert das trainierte Modell und die Funktions-Pipeline aus dem Trainingsexperiment in einen Vorhersagedienst. Der Vorhersagedienst kann einen anderen Satz von Eingabedaten mit dem im Trainingsexperiment verwendeten Schema verwenden, um Vorhersagen zu treffen.
 
-   ![Richten Sie einen Vorhersage-Webdienst ein](media/predictive-webservice-control.png)
+   ![Richten Sie einen Vorhersage-Webdienst ein.](media/predictive-webservice-control.png)
 
 1. Sobald das Vorhersage-Webdienst-Experiment erfolgreich ist, können Sie es für die automatische Planung bereitstellen. Wählen Sie aus, damit der Webdienst mit Customer Insights funktioniert **Stellen Sie den Webdienst bereit** > **Vorschau Webdienst [Neu] bereitstellen**. [Weitere Informationen zum Bereitstellen eines Webdienstes](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Vorhersage-Webdienst bereitstellen](media/predictive-webservice-deploy.png)
+   ![Vorhersage-Webdienst bereitstellen.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Beispielmodelle aus der Galerie
 
-Für die Modelle in diesem Artikel verwenden wir ein fiktives Szenario von Contoso Hotel. Das Contoso Hotel sammelt folgende Daten:
+Wir verwenden ein fiktives Szenario von Contoso Hotel für die Modelle in diesem Artikel. Contoso Hotel sammelt die folgenden Daten:
 
 - CRM-Daten, bestehend aus Hotelaufenthaltsaktivität. Das Dataset enthält Informationen zu den Aufenthaltsdaten für jeden registrierten Kunden. Es enthält auch Informationen zur Buchung, Zimmertypen, Details zu den Ausgaben usw. Die Daten erstrecken sich über vier Jahre von Januar 2014 bis Januar 2018.
 - Kundenprofile von Hotelgästen. Diese Profile enthalten Informationen zu jedem Kunden, einschließlich Name, Geburtsdatum, Postanschrift, Geschlecht und Telefonnummer.
@@ -87,13 +87,13 @@ Die Definition der Abwanderung kann je nach Szenario unterschiedlich sein. In di
 
 Die Experimentvorlage kann aus dem Katalog importiert werden. Stellen Sie zunächst sicher, dass Sie die Daten für **Hotelaufenthaltsaktivität**, **Kundendaten** und **Service-Nutzungsdaten** aus dem Azure Blob storage importieren.
 
-   ![Importieren Sie Daten für das Abwanderungsmodell](media/import-data-azure-blob-storage.png)
+   ![Importieren Sie Daten für das Abwanderungsmodell.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Funktionenbereitstellung
 
 Basierend auf der Definition von „Churn“ identifizieren wir zunächst die Roh-Features, die das Label beeinflussen werden. Anschließend verarbeiten wir diese Grundfunktionen zu numerischen Funktionen, die mit Machine Learning Modellen verwendet werden können. Die Datenintegration erfolgt in Customer Insights, sodass wir diese Tabellen über die *Kunden-ID* verbinden können.
 
-   ![Importierte Daten verbinden](media/join-imported-data.png)
+   ![Importierte Daten verbinden.](media/join-imported-data.png)
 
 Die Funktion zur Erstellung des Modells für die Abwanderungsanalyse kann ein wenig knifflig sein. Die Daten sind eine Funktion der Zeit, wobei täglich neue Hotelaktivitäten aufgezeichnet werden. Während der Anpassung möchten wir statische Funktionen aus den dynamischen Daten generieren. In diesem Fall erzeugen wir mehrere Funktionen aus der Hotelaktivität mit einem gleitenden Fenster von einem Jahr. Wir erweitern auch die kategorialen Funktionen wie Zimmertyp oder Buchungstyp mithilfe der One-Hot-Codierung in separate Funktionen.  
 
@@ -114,7 +114,7 @@ Jetzt müssen wir den optimalen Algorithmus auswählen. In diesem Fall basieren 
 
 Das folgende Bild zeigt die Modellschulungs- und Evaluierungspipeline von Azure Machine Learning Studio:
 
-![Abwanderungsmodell in Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Abwanderungsmodell in Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 Wir wenden auch eine Technik namens **Wichtigkeit der Permutationsfunktion** an, ein wichtiger Aspekt der Modelloptimierung. Eingebaute Modelle haben wenig bis gar keinen Einblick in die Auswirkungen bestimmter Funktionen auf die endgültige Vorhersage. Der Rechner für die Wichtigkeit der Funktionen verwendet einen benutzerdefinierten Algorithmus, um den Einfluss der einzelnen Funktionen auf das Ergebnis für ein bestimmtes Modell zu berechnen. Die Merkmalsbedeutung wird zwischen +1 und -1 normalisiert. Ein negativer Einfluss bedeutet, dass das entsprechende Merkmal einen kontra-intuitiven Einfluss auf das Ergebnis hat und aus dem Modell entfernt werden sollte. Ein positiver Einfluss zeigt an, dass die Funktion einen großen Beitrag zur Vorhersage leistet. Diese Werte sind keine Korrelationskoeffizienten, da es sich um unterschiedliche Metriken handelt. Weitere Informationen finden Sie unter [Permutation Funktion Wichtigkeit](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Wir definieren das Ziel als Maximierung der Service-Nutzung in US-Dollar, indem 
 
 Wie beim Churn-Modell verbinden wir das Hotel ServiceCustomerID mit CustomerID, um Empfehlungen konsistent pro CustomerID zu erstellen.
 
-![Ausstattung des Empfehlungsmodells](media/azure-machine-learning-model-featurization.png)
+![Ausstattung des Empfehlungsmodells.](media/azure-machine-learning-model-featurization.png)
 
 Die Daten stammen von drei verschiedenen Entitäten und Funktionen werden daraus abgeleitet. Die Funktion für das Empfehlungsproblem unterscheidet sich von Abwanderungs- oder CLTV-Szenarien. Das Empfehlungsmodell benötigt Eingabedaten in Form von drei Sätzen von Funktionen.
 
@@ -156,13 +156,13 @@ Die Daten stammen von drei verschiedenen Entitäten und Funktionen werden daraus
 
 Wir sagen Produkte oder Dienstleistungen voraus, indem wir den Algorithmus **Übereinstimmungsemfehlung trainieren** verwenden, um das Empfehlungsmodell zu trainieren.
 
-![Produktempfehlungen-Algorithmus](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Produktempfehlungen-Algorithmus.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Die drei Eingänge für das Modell **Übereinstimmungsemfehlung trainieren** nehmen die Trainingsdaten der Servicenutzung, die Kundenbeschreibung (optional) und die Servicebeschreibung auf. Es gibt drei verschiedene Arten, das Modell zu bewerten. Eine ist für die Modellbewertung, bei der ein NDCG-Wert (Normalized Discounted Cumulative Gain) berechnet wird, um die bewerteten Elemente in eine Rangfolge zu bringen. In diesem Experiment haben wir den NDCG-Score als 0.97. Die anderen beiden Optionen sind die Bewertung des Modells für den gesamten Katalog empfehlenswerter Dienste oder die Bewertung nur für Elemente, die Benutzer noch nicht verwendet haben.
 
 Wenn wir uns die Verteilung der Empfehlungen auf den gesamten Servicekatalog genauer ansehen, stellen wir fest, dass Telefon, WiFi und Kurier die am häufigsten empfohlenen Services sind. Dies steht im Einklang mit dem, was wir aus den Verteilungen der Dienstverbrauchsdaten herausgefunden haben:
 
-![Empfehlungsmodell-Ausgabe](media/azure-machine-learning-model-output.png)
+![Empfehlungsmodell-Ausgabe.](media/azure-machine-learning-model-output.png)
 
 Auf das gesamte [Produktempfehlungs-Experiment kann in der Azure AI Gallery zugegriffen werden.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

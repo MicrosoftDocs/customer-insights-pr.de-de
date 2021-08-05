@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305630"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554847"
 ---
 # <a name="custom-machine-learning-models"></a>Benutzerdefinierte Maschinelles Lernen Modelle
 
@@ -42,7 +42,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 1. Ihr benutzerdefiniertes Modell wird im Feld **Name** mit einem erkennbaren Namen benannt.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot des Fensters Neuer Workflow](media/new-workflowv2.png "Screenshot des Fensters Neuer Workflow")
+   > ![Screenshot des Fensters „Neuer Workflow“.](media/new-workflowv2.png "Screenshot des Fensters Neuer Workflow")
 
 1. Wählen Sie die Organisation, die den Webdienst enthält, unter **Mandant, der Ihren Webdienst enthält**.
 
@@ -59,7 +59,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
    > Der benutzerdefinierte Modellworkflow wendet Heuristiken an, um die Webdienst-Eingabefelder den Entitätsattributen basierend auf dem Namen und dem Datentyp des Felds zuzuordnen. Es wird ein Fehler angezeigt, wenn ein Webdienstfeld keiner Entität zugeordnet werden kann.
 
    > [!div class="mx-imgBorder"]
-   > ![Workflow konfigurieren](media/intelligence-screen2-updated.png "Workflow konfigurieren")
+   > ![Workflow konfigurieren.](media/intelligence-screen2-updated.png "Workflow konfigurieren")
 
 1. Legen Sie im Schritt **Modellausgabeparameter** die folgenden Eigenschaften fest:
    - Machine Learning Studio (Classic)
@@ -70,12 +70,12 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
       1. Wählen Sie den **Output Path-Parameternamen** Ihrer Batch-Pipeline aus der Auswahlliste.
 
       > [!div class="mx-imgBorder"]
-      > ![Modellausgabe-Parameterbereich](media/intelligence-screen3-outputparameters.png "Modellausgabe-Parameterbereich")
+      > ![Modellausgabe-Parameterbereich.](media/intelligence-screen3-outputparameters.png "Modellausgabe-Parameterbereich")
 
 1. Wählen Sie das passende Attribut aus der **Kunden-ID in den Ergebnissen**-Dropdown-Liste, die Ihrer Customer Insights-Kunden-ID zugeordnet ist, und wählen Sie **speichern**.
 
    > [!div class="mx-imgBorder"]
-   > ![Ergebnisse in den Kundendatenbereich überführen](media/intelligence-screen4-relatetocustomer.png "Ergebnisse mit dem Bereich Kundendaten in Beziehung setzen")
+   > ![Ergebnisse in den Kundendatenbereich überführen.](media/intelligence-screen4-relatetocustomer.png "Ergebnisse mit dem Bereich Kundendaten in Beziehung setzen")
 
 1. Sie sehen dann das Bild **Workflow Gespeichert** mit Einzelheiten zum Workflow.    
    Wenn Sie einen Workflow für eine Azure Machine Learning-Pipeline konfiguriert haben, wird Zielgruppen-Insights an den Arbeitsbereich angehängt, der die Pipeline enthält. Zielgruppen-Insights erhalten eine **Beitragender**-Rolle auf dem Azure-Arbeitsbereich.

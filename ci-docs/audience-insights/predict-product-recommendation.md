@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095555"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556123"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktempfehlungsvorhersage (Vorschau)
 
@@ -64,7 +64,7 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 
 1. Wählen Sie die Kachel **Produktempfehlungsmodell (Vorschau)** und wählen Sie **Dieses Modell verwenden**.
    > [!div class="mx-imgBorder"]
-   > ![Produktempfehlungs-Modellkachel mit Schaltfläche „Dieses Modell verwenden“](media/product-recommendation-usethismodel.PNG "Produktempfehlungs-Modellkachel mit Schaltfläche „Dieses Modell verwenden“")
+   > ![Produktempfehlungs-Modellkachel mit Schaltfläche „Dieses Modell verwenden“.](media/product-recommendation-usethismodel.PNG "Produktempfehlungs-Modellkachel mit Schaltfläche „Dieses Modell verwenden“")
 
 1. Überprüfen Sie die Informationen zu den Modellanforderungen. Wenn Sie die erforderlichen Daten haben, wählen Sie **Erste Schritte**.
 
@@ -93,7 +93,7 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 
 1. Ordnen Sie die semantischen Felder den Attributen innerhalb Ihrer Entität „Kaufhistorie“ zu und wählen Sie **Nächste**. Beschreibungen der Felder finden Sie unter [Voraussetzungen](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definieren der Entitätsbeziehung](media/product-recommendation-purchasehistorymapping.PNG "Seite „Kaufhistorie“ mit semantischen Attributen, die Feldern in der ausgewählten Entität „Kaufhistorie“ zugeordnet sind")
+   > ![Definieren der Entitätsbeziehung.](media/product-recommendation-purchasehistorymapping.PNG "Seite „Kaufhistorie“ mit semantischen Attributen, die Feldern in der ausgewählten Entität „Kaufhistorie“ zugeordnet sind")
 
 1. Wenn die Felder nicht ausgefüllt sind, konfigurieren Sie die Beziehung von Ihrer Entität „Kaufhistorie“ zur Entität *Kunde*.
     1. Wählen Sie die Entität **Kaufhistorie**.
@@ -145,7 +145,7 @@ Manchmal sind nur bestimmte Produkte für die Art von Vorhersage, die Sie erstel
 
 1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
    > [!div class="mx-imgBorder"]
-   > ![Ansicht der Seite Meine Vorhersagen](media/product-recommendation-mypredictions.PNG "Ansicht der Seite Meine Vorhersagen")
+   > ![Ansicht der Seite „Meine Vorhersagen“.](media/product-recommendation-mypredictions.PNG "Ansicht der Seite Meine Vorhersagen")
 
 1. Wählen Sie die Vorhersage aus, die Sie überprüfen möchten.
    - **Name der Vorhersage:** Der Name der Vorhersage, der bei ihrer Erstellung angegeben wurde.
@@ -163,7 +163,7 @@ Manchmal sind nur bestimmte Produkte für die Art von Vorhersage, die Sie erstel
 
 1. Markieren Sie die vertikalen Auslassungspunkte neben der Vorhersage, deren Ergebnisse Sie überprüfen möchten, und wählen Sie **Ansicht**.
    > [!div class="mx-imgBorder"]
-   > ![Anzeige der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen](media/product-recommendation-verticalellipses.PNG "Ansicht der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen").
+   > ![Anzeige der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen.](media/product-recommendation-verticalellipses.PNG "Ansicht der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen")
 
 1. Auf der Ergebnisseite befinden sich fünf primäre Datenabschnitte:
     1. **Leistung des Trainingsmodells:** A, B oder C sind mögliche Bewertungen. Diese Bewertung zeigt die Leistung der Vorhersage an und kann Ihnen bei der Entscheidung helfen, die in der Ausgabe-Entität gespeicherten Ergebnisse zu verwenden.
@@ -173,13 +173,13 @@ Manchmal sind nur bestimmte Produkte für die Art von Vorhersage, die Sie erstel
             - **C** Das Modell wird berücksichtigt **C** Qualität, wenn die Metrik „Success @ K“ unter der Basislinie liegt.
                
                > [!div class="mx-imgBorder"]
-               > ![Ansicht der Modellleistungsergebnisse](media/product-recommendation-modelperformance.PNG "Ansicht des Leistungsergebnisses des Modells")
+               > ![Ansicht der Modellleistungsergebnisse.](media/product-recommendation-modelperformance.PNG "Ansicht des Leistungsergebnisses des Modells")
             - **Basislinie**: Das Modell verwendet die am häufigsten empfohlenen Produkte nach Kaufanzahl für alle Kunden und verwendet erlernte Regeln, die vom Modell identifiziert wurden, um eine Reihe von Empfehlungen für die Kunden zu erstellen. Die Vorhersagen werden dann mit den Top-Produkten verglichen, berechnet anhand der Anzahl der Kunden, die das Produkt gekauft haben. Wenn ein Kunde mindestens ein Produkt in seinen empfohlenen Produkten hat, das auch in den am häufigsten gekauften Produkten enthalten ist, wird er als Teil der Baseline betrachtet. Wenn 10 dieser Kunden ein empfohlenes Produkt von insgesamt 100 Kunden gekauft hätten, wäre die Basis 10 %.
             - **Success @ K**: Mithilfe eines Validierungssatzes für den Zeitraum von Transaktionen werden Empfehlungen für alle Kunden erstellt und mit dem Validierungssatz für Transaktionen verglichen. Beispielsweise kann in einem Zeitraum von 12 Monaten der 12. Monat als Validierungsdatensatz reserviert werden. Wenn das Modell mindestens eine Sache vorhersagt, die Sie im 12. Monat kaufen würden, basierend auf den Erkenntnissen der letzten 11 Monate, würde der Kunde die Metrik „Success @ K“ erhöhen.
     
     1. **Die meisten empfohlenen Produkte (mit Tally):** Die fünf wichtigsten Produkte, die für Ihre Kunden vorhergesagt wurden.
        > [!div class="mx-imgBorder"]
-       > ![Grafik mit den 5 am häufigsten empfohlenen Produkten](media/product-recommendation-topproducts.PNG "Grafik mit den 5 am häufigsten empfohlenen Produkten")
+       > ![Grafik mit den 5 am häufigsten empfohlenen Produkten.](media/product-recommendation-topproducts.PNG "Grafik mit den 5 am häufigsten empfohlenen Produkten")
     
     1. **Wichtige Empfehlungsfaktoren:** Das Modell verwendet die Transaktionshistorie der Kunden, um Produktempfehlungen abzugeben. Es lernt Muster basierend auf früheren Einkäufen und findet Ähnlichkeiten zwischen Kunden und Produkten. Diese Ähnlichkeiten werden dann verwendet, um Produktempfehlungen zu generieren.
     Die folgenden Faktoren können eine vom Modell generierte Produktempfehlung beeinflussen. 
@@ -190,20 +190,20 @@ Manchmal sind nur bestimmte Produkte für die Art von Vorhersage, die Sie erstel
         Jede Produktempfehlung wird von einem oder mehreren dieser Faktoren beeinflusst. Der Prozentsatz der Empfehlungen, bei denen jeder Einflussfaktor eine Rolle spielte, wird in einem Diagramm dargestellt. Im folgenden Beispiel wurden 100 % der Empfehlungen durch vergangene Transaktionen beeinflusst, 60 % durch Kundenähnlichkeit und 22 % durch Produktähnlichkeit. Bewegen Sie den Mauszeiger über die Balken im Diagramm, um den genauen Prozentsatz anzuzeigen, zu dem die Einflussfaktoren beigetragen haben.
 
         > [!div class="mx-imgBorder"]
-        > ![Wichtige Empfehlungsfaktoren](media/product-recommendation-keyrecommendationfactors.png "Wichtige Empfehlungsfaktoren, die das Modell zur Generierung von Produktempfehlungen gelernt hat")
+        > ![Wichtige Empfehlungsfaktoren.](media/product-recommendation-keyrecommendationfactors.png "Wichtige Empfehlungsfaktoren, die das Modell zur Generierung von Produktempfehlungen gelernt hat")
        
      
    1. **Datenstatistik** : Gibt einen Überblick über die Anzahl der Transaktionen, Kunden und Produkte, die das Modell berücksichtigt. Es basiert auf den Eingabedaten, die zum Lernen von Mustern und zum Generieren von Produktempfehlungen verwendet wurden.
 
       > [!div class="mx-imgBorder"]
-      > ![Datenstatistiken](media/product-recommendation-datastatistics.png "Datenstatistik zu Inout-Daten, die vom Modell zum Lernen von Mustern verwendet werden")
+      > ![Datenstatistiken.](media/product-recommendation-datastatistics.png "Datenstatistik zu Inout-Daten, die vom Modell zum Lernen von Mustern verwendet werden")
 
       Dieser Abschnitt zeigt Statistiken zu den Datenpunkten, die vom Modell verwendet wurden, um Muster zu lernen und Produktempfehlungen zu generieren. Die in der Modellkonfiguration konfigurierte Filterung gilt für die vom Modell generierte Ausgabe. Das Modell verwendet jedoch alle verfügbaren Daten, um Muster zu lernen. Wenn Sie in der Modellkonfiguration die Produktfilterung verwenden, wird in diesem Abschnitt die Gesamtzahl der Produkte angezeigt, die das Modell analysiert hat, um Muster zu lernen, die von der Anzahl der Produkte abweichen können, die den definierten Filterkriterien entsprechen.
 
    1. **Produktempfehlungen mit hoher Konfidenz:** Eine Auswahl von Empfehlungen an Ihre Kunden, von denen das Modell glaubt, dass sie wahrscheinlich vom Kunden gekauft werden.    
       Wenn ein Produktkatalog hinzugefügt wird, werden die Produkt-IDs durch Produktnamen ersetzt. Produktnamen bieten umsetzbarere und intuitivere Informationen zu den Vorhersagen.
        > [!div class="mx-imgBorder"]
-       > ![Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden](media/product-recommendation-highconfidence.PNG "Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden")
+       > ![Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden.](media/product-recommendation-highconfidence.PNG "Liste mit Vorschlägen für hohes Vertrauen für eine ausgewählte Gruppe einzelner Kunden")
 
 ## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 

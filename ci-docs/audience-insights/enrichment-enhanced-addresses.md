@@ -1,7 +1,7 @@
 ---
 title: Anreicherung der Adressverbesserung
 description: Bereichern und normalisieren Sie Adressinformationen von Kundenprofilen mit Microsoft-Modellen.
-ms.date: 04/21/2021
+ms.date: 07/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305431"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692252"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Anreicherung von Kundenprofilen mit erweiterten Adressen
 
@@ -22,7 +22,7 @@ Adressen in Ihren Daten können unstrukturiert, unvollständig oder falsch sein.
 
 ## <a name="how-we-enhance-addresses"></a>Wie wir Adressen verbessern
 
-Unser Modell durchläuft einen zweistufigen Prozess, um eine Adresse zu verbessern. Zunächst wird die Adresse analysiert, um die Komponenten zu identifizieren und in ein strukturiertes Format gebracht. Dann verwenden wir KI, um die Werte in der Adresse zu korrigieren, zu vervollständigen und zu standardisieren.
+Unser Modell durchläuft einen zweistufigen Prozess, um eine Adresse zu verbessern. Zuerst analysiert es die Adresse, um ihre Komponenten zu identifizieren, und bringt sie in ein strukturiertes Format. Dann verwenden wir KI, um die Werte in der Adresse zu korrigieren, zu vervollständigen und zu standardisieren.
 
 ### <a name="example"></a>Beispiel
 
@@ -44,24 +44,28 @@ Adressinformationen können in einem nicht standardmäßigen Format vorliegen un
 
 ### <a name="limitations"></a>Einschränkungen
 
-Erweiterte Adressen funktionieren nur mit den Werten, die bereits in Ihren aufgenommenen Adressdaten vorhanden sind. Das Modell wird nicht: 
+Erweiterte Adressen funktionieren nur mit den Werten, die bereits in Ihren aufgenommenen Adressdaten vorhanden sind. Das Modell führt folgende Aktionen nicht aus: 
 
-1. Überprüfen, ob die Adresse eine gültige Adresse ist.
-2. Überprüfen, ob einer der Werte wie Postleitzahlen oder Straßennamen gültig ist.
-3. Werte ändern, die nicht erkannt werden.
+1. Überprüfen, ob die Adresse eine gültige Adresse ist
+2. Überprüfen, ob Werte wie Postleitzahlen oder Straßennamen gültig sind
+3. Werte ändern, die nicht erkennt wurden
 
 Das Modell verwendet auf maschinellem Lernen basierende Techniken, um Adressen zu verbessern. Wir wenden zwar einen hohen Konfidenzschwellenwert an, wenn das Modell einen Eingabewert ändert, wie bei jedem auf maschinellem Lernen basierenden Modell, aber eine 100-prozentige Genauigkeit kann nicht garantiert werden.
 
 ## <a name="supported-countries-or-regions"></a>Unterstützte Länder oder Regionen
 
-Wir unterstützen derzeit bereichernde Adressen in diesen Ländern oder Regionen: 
+Wir unterstützen derzeit die Anreicherung von Adressen in diesen Ländern oder Regionen: 
 
 - Australien
 - Kanada
+- Frankreich
+- Deutschland
+- Italien
+- Japan
 - Großbritannien
 - Vereinigte Staaten
 
-Adressen müssen einen Länder-/Regionswert enthalten. Wir verarbeiten keine Adressen für Länder oder Regionen, die nicht unterstützt werden, und Adressen, für die kein Land oder keine Region angegeben ist.
+Adressen müssen einen Wert für ein Land/eine Region enthalten. Wir verarbeiten keine Adressen für Länder oder Regionen, die nicht unterstützt werden, und Adressen, für die kein Land oder keine Region angegeben ist.
 
 ## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 
@@ -98,6 +102,6 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309819"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555352"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Anreichern von Kundenprofilen mit demografischen Daten von Experian (Vorschau)
 
@@ -39,7 +39,7 @@ Derzeit unterstützen wir die Anreicherung von Kundenprofilen nur in den USA.
 1. Wählen Sie **Meine Daten anreichern** auf der Experian Kachel.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian Kacheln](media/experian-tile.png "Experian tile")
+   > ![Experian-Kachel.](media/experian-tile.png "Experian tile")
    > 
 
 1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie eine Verbindung herstellen, indem Sie **Verbindung hinzufügen** und dann Experian aus der Dropdown-Liste auswählen. 
@@ -91,7 +91,7 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 

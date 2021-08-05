@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304649"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555398"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Anreichern von Kundenprofilen mit benutzerdefinierten Daten (Vorschau)
 
@@ -64,7 +64,7 @@ Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Si
 1. Nach Abschluss der Verifizierung kann die Verbindung durch Auswahl von **speichern** gespeichert werden.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian Verbindungskonfigurationsseite](media/enrichment-SFTP-connection.png "Experian Verbindungskonfigurationsseite")
+   > ![Experian-Verbindungskonfigurationsseite.](media/enrichment-SFTP-connection.png "Experian Verbindungskonfigurationsseite")
 
 
 ## <a name="defining-field-mappings"></a>Definieren von Feldzuordnungen 
@@ -123,6 +123,6 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059587"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692204"
 ---
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
 
@@ -25,7 +25,7 @@ Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics
 ## <a name="prerequisites"></a>Anforderungen
 
 - Das Add-In funktioniert nur mit modellgetriebenen Dynamics 365-Apps wie Vertrieb oder Kundenservice, Version 9.0 und höher.
-- Damit Ihre Dynamics 365-Daten den Kundenprofilen der Zielgruppenerkenntnissen zugeordnet werden können, müssen sie [von der Dynamics 365-App mit dem Common Data Service Konnektor](connect-power-query.md) eingebunden werden.
+- Damit Ihre Dynamics 365-Daten den Kundenprofilen der Zielgruppenerkenntnissen zugeordnet werden können, müssen sie [von der Dynamics 365-App mit dem Microsoft Dataverse Konnektor](connect-power-query.md) eingebunden werden.
 - Alle Dynamics 365-Benutzer des Kundenkarten-Add-Ins müssen in Zielgruppenerkenntnissen [als Benutzer hinzugefügt](permissions.md) sein, um die Daten zu sehen.
 - [Konfigurierte Such- und Filterfunktionen](search-filter-index.md) In Zielgruppenerkenntnissen sind erforderlich, damit die Suche nach Daten funktioniert.
 - Jedes Add-In-Steuerelement basiert auf bestimmten Daten in Zielgruppenerkenntnissen:
@@ -50,7 +50,7 @@ Es kann einige Zeit dauern, bis die Lösung in Ihrer Umgebung installiert ist.
 1. Wählen Sie den Link **Anzeigename** für die Lösung **Dynamics 365 Customer Insights-Kundenkarten-Add-in (Vorschau)** aus.
 
    > [!div class="mx-imgBorder"]
-   > ![Anzeigename auswählen](media/select-display-name.png "Anzeigename auswählen")
+   > ![Anzeigename auswählen.](media/select-display-name.png "Anzeigename auswählen")
 
 1. Wählen Sie **Anmelden** aus und geben Sie die Anmeldeinformationen für das Administratorkonto ein, mit dem Sie Customer Insights konfiguriert haben.
 
@@ -64,7 +64,7 @@ Es kann einige Zeit dauern, bis die Lösung in Ihrer Umgebung installiert ist.
    - Um eine Zuordnung zu einem Konto vorzunehmen, wählen Sie das Feld in der Entität „Kunde“, das mit der ID Ihrer Entität „Konto“ übereinstimmt.
 
    > [!div class="mx-imgBorder"]
-   > ![Kontakt-ID-Feld](media/contact-id-field.png "Kontakt-ID-Feld")
+   > ![Kontakt-ID-Feld.](media/contact-id-field.png "Kontakt-ID-Feld")
 
 1. Wählen Sie **Konfiguration speichern**, um die Einstellungen zu speichern.
 
@@ -83,7 +83,7 @@ Es kann einige Zeit dauern, bis die Lösung in Ihrer Umgebung installiert ist.
 1. Wählen Sie das Kontaktformular aus, dem Sie die Kundenkartensteuerelemente hinzufügen möchten.
 
     > [!div class="mx-imgBorder"]
-    > ![Auswählen von Kontaktformular](media/contact-active-forms.png "Wählen Sie Kontaktformular")
+    > ![Kontaktformular auswählen.](media/contact-active-forms.png "Wählen Sie Kontaktformular")
 
 1. Um dem Formular-Editor ein Steuerelement hinzuzufügen, ziehen Sie ein beliebiges Feld aus dem **Feld-Explorer** dorthin, wo das Steuerelement angezeigt werden soll.
 
@@ -110,7 +110,7 @@ Das Kundenkarten-Add-In wird nicht automatisch aktualisiert. Befolgen Sie dieses
 
 1. Wählen Sie **Upgrade auf Lösung anwenden** in der Aktionsleiste aus.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Aktualisieren Sie die Lösung im Bereich „Anpassung“ von Dynamics 365-Apps":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Aktualisieren Sie die Lösung im Bereich „Anpassung“ von Dynamics 365-Apps.":::
 
 1. Nach dem Start des Upgradevorgangs wird eine Ladeanzeige angezeigt, bis das Upgrade abgeschlossen ist. Wenn es keine neuere Version gibt, wird beim Upgrade eine Fehlermeldung angezeigt.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049393"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553974"
 ---
 # <a name="entities-in-audience-insights"></a>Entitäten in Zielgruppen-Insights
 
@@ -30,19 +30,19 @@ Die Seite **Entitäten** listet Entitäten auf und enthält mehrere Spalten:
 - **Zuletzt aktualisiert**: Datum und Uhrzeit der letzten Aktualisierung der Entität
 - **Letzte Aktualisierung**: Datum und Uhrzeit der letzten Datenaktualisierung
 
-## <a name="exploring-a-specific-entitys-data"></a>Erforschung der Daten einer bestimmten Einheit
+## <a name="explore-a-specific-entitys-data"></a>Die Daten einer bestimmten Einheit untersuchen
 
 Wählen Sie eine Entität aus, um die verschiedenen Felder und Datensätze innerhalb dieser Entität zu untersuchen.
 
 > [!div class="mx-imgBorder"]
-> ![Eine Entität auswählen](media/data-manager-entities-data.png "Wählen Sie eine Entität")
+> ![Eine Entität auswählen.](media/data-manager-entities-data.png "Eine Entität auswählen")
 
 - Die Registerkarte **Daten** zeigt eine Tabelle mit Details zu einzelnen Datensätzen der Entität.
 
 > [!div class="mx-imgBorder"]
-> ![Feldtabelle](media/data-manager-entities-fields.PNG "Tabelle Felder")
+> ![Feldtabelle.](media/data-manager-entities-fields.PNG "Tabelle Felder")
 
-- Die Registerkarte **Attribute** ist standardmäßig ausgewählt und zeigt eine Tabelle an, in der Details für die ausgewählte Entität wie Feldnamen, Datentypen und Typen überprüft werden. Die Spalte **Typ** zeigt die mit dem Common Data Model verbundenen Typen, die entweder vom System automatisch identifiziert oder von den Benutzern [manuell abgebildet](map-entities.md) werden. Es handelt sich um semantische Typen, die sich von den Datentypen der Attribute unterscheiden können, z. B. hat das Feld *Email* unten einen Datentyp *Text*, aber sein (semantischer) Common Data Model Typ könnte *Email* oder *EmailAddress* sein.
+- Die Registerkarte **Attribute** ist standardmäßig ausgewählt und zeigt eine Tabelle an, in der Details für die ausgewählte Entität wie Feldnamen, Datentypen und Typen überprüft werden. Die Spalte **Typ** zeigt die mit dem Common Data Model verbundenen Typen, die entweder vom System automatisch identifiziert oder von den Benutzern [manuell abgebildet](map-entities.md) werden. Diese Typen sind semantische Typen, die sich von den Datentypen der Attribute unterscheiden können. Das Feld *E-Mail* unten hat zum Beispiel einen Datentyp *Text*, aber sein (semantischer) Common Data Model-Typ könnte *E-Mail* oder *E-Mail-Addresse* sein.
 
 > [!NOTE]
 > Beide Tabellen zeigen nur einen Ausschnitt der Daten Ihrer Entität. Um den vollständigen Datensatz anzuzeigen, gehen Sie zur Seite **Datenquellen**, wählen Sie eine Entität, wählen Sie **Bearbeiten** und zeigen Sie dann die Daten dieser Entität mit dem Power Query-Editor an, wie unter [Datenquellen](data-sources.md) erläutert.
@@ -52,11 +52,28 @@ Um mehr über die in die Entität aufgenommenen Daten zu erfahren, finden Sie in
 Wählen Sie das Diagrammsymbol, um die Zusammenfassung der Daten anzuzeigen.
 
 > [!div class="mx-imgBorder"]
-> ![Zusammenfassungssymbol](media/data-manager-entities-summary.png "Daten-Zusammenfassungstabelle")
+> ![Zusammenfassungssymbol.](media/data-manager-entities-summary.png "Daten-Zusammenfassungstabelle")
 
-### <a name="next-step"></a>Nächster Schritt
+## <a name="entity-specific-information"></a>Entitätsspezifische Informationen
 
-Siehe [Vereinheitlichung](data-unification.md), um zu erfahren, wie *Karte*, *Abgleich* und *Zusammenführung* der aufgenommenen Daten.
+Der folgende Abschnitt enthält Informationen zu einigen vom System erstellten Entitäten.
+
+### <a name="corrupted-data-sources"></a>Beschädigte Datenquellen
+
+Felder aus einer erfassten Datenquelle können beschädigte Daten enthalten. Datensätze mit beschädigten Feldern werden in vom System erstellten Entitäten verfügbar gemacht. Wenn Sie über beschädigte Datensätze Bescheid wissen, können Sie erkennen, welche Daten auf dem Quellsystem überprüft und aktualisiert werden müssen. Nach der nächsten Aktualisierung des Datenquelle werden die korrigierten Datensätze in Customer Insights aufgenommen und an Downstream-Prozesse weitergegeben. 
+
+Beispielsweise hat eine Spalte „Geburtstag“ den Datentyp „Datum“. Der Geburtstag eines Kundendatensatzes ist als „01.01.19777“ eingetragen. Das System kennzeichnet diesen Datensatz als beschädigt. Jemand kann jetzt den Geburtstag im Quellsystem auf „1977“ ändern. Nach einer automatisierten Aktualisierung der Datenquellen hat das Feld jetzt ein gültiges Format und der Datensatz wird aus der beschädigten Entität entfernt. 
+
+Gehen Sie zu **Daten** > **Entitäten** und suchen Sie nach den korrumpierten Entitäten im Abschnitt **System**. Benennungsschema beschädigter Entitäten: „DataSourceName_EntityName_corrupt“.
+
+Customer Insights verarbeitet beschädigte Datensätze weiterhin. Sie können jedoch Probleme beim Arbeiten mit den vereinheitlichten Daten verursachen.
+
+Die folgenden Prüfungen werden für die erfassten Daten ausgeführt, um beschädigte Datensätze zu erkennen: 
+
+- Der Wert eines Felds stimmt nicht mit dem Datentyp seiner Spalte überein.
+- Felder enthalten Zeichen, die dazu führen, dass die Spalten nicht dem erwarteten Schema entsprechen. Beispiel: falsch formatierte Anführungszeichen, nicht in Escape-Zeichen gesetzte Anführungszeichen oder Zeilenumbruchzeichen.
+- Wenn datetime-/date-/datetimeoffset-Spalten vorhanden sind, muss deren Format im Modell festgelegt werden, wenn nicht das Standard-ISO-Format genutzt wird.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

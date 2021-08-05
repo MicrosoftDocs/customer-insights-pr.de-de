@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305155"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555490"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Anreichern von Kundenprofilen mit Marken- und Interessenbeziehungen (Vorschau)
 
@@ -27,7 +27,7 @@ Um die Anreicherung von Markenaffinitäten zu konfigurieren, gehen Sie zur Regis
 Um die Anreicherung von Interessenaffinitäten zu konfigurieren, gehen Sie zum Register **Entdecken** und wählen Sie **Anreicherung meiner Daten** auf der Kachel **Interessen**.
 
    > [!div class="mx-imgBorder"]
-   > ![Marken und Interessenkacheln](media/BrandsInterest-tile-Hub.png "Marken und Interessenkacheln")
+   > ![Marken- und Interessenkacheln.](media/BrandsInterest-tile-Hub.png "Marken und Interessenkacheln")
 
 ## <a name="how-we-determine-affinities"></a>Wie wir Affinitäten bestimmen
 
@@ -123,7 +123,7 @@ Abhängig von der Menge Ihrer Kundendaten kann es einige Minuten dauern, bis ein
 
 Nachdem Sie den Anreicherungsprozess ausgeführt haben, gehen Sie zu **Meine Anreicherungen**, um die Gesamtzahl der angereicherten Kunden und eine Aufschlüsselung der Marken oder Interessen in den angereicherten Kundenprofilen zu überprüfen.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Vorschau der Ergebnisse nach Ausführung des Anreicherungsprozesses":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Vorschau der Ergebnisse nach Ausführung des Anreicherungsprozesses.":::
 
 Überprüfen Sie die angereicherten Daten durch Auswahl **Angereicherte Daten anzeigen** in der Grafik. Angereicherte Daten für Marken gehen an die Entität **BrandAffinityFromMicrosoft**. Daten für Interessen sind in der Entität **InterestAffinityFromMicrosoft**. Sie finden diese Entitäten auch in der Gruppe **Anreicherung** unter **Daten** > **Entitäten**.
 
@@ -131,7 +131,7 @@ Nachdem Sie den Anreicherungsprozess ausgeführt haben, gehen Sie zu **Meine Anr
 
 Marken- und Interessenbeziehungen können auch auf einzelnen Kundenkarten eingesehen werden. Gehen Sie zu **Kunden** und wählen Sie ein Kundenprofil. In der Kundenkarte finden Sie Diagramme für die Marken oder Interessen, für die Personen im demografischen Profil dieses Kunden eine Affinität haben.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kundenkarte mit angereicherten Daten":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kundenkarte mit angereicherten Daten.":::
 
 ## <a name="next-steps"></a>Nächste Schritte
 

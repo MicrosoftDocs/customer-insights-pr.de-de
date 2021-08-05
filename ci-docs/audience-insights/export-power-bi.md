@@ -1,7 +1,7 @@
 ---
 title: Power BI-Connector
 description: Lernen Sie, wie der Dynamics 365 Customer Insights-Connector in Power BI verwendet wird.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596038"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661101"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector für Power BI (Vorschau)
 
@@ -39,7 +39,7 @@ Erstellen Sie Visualisierungen für Ihre Daten mit dem Power BI Desktop. Generie
 
 1. Im Dialogfeld **Navigator**. sehen Sie die Liste aller Umgebungen, auf die Sie Zugriff haben. Erweitern Sie eine Umgebung und öffnen Sie einen der Ordner (Entitäten, Kennzahlen, Segmente, Anreicherungen). Öffnen Sie zum Beispiel den Ordner **Entitäten**, um alle Entitäten anzuzeigen, die Sie importieren können.
 
-   ![Power BI Connector-Navigator](media/power-bi-navigator.png "Power BI Connector-Navigator")
+   ![Power BI Connector-Navigator.](media/power-bi-navigator.png "Power BI Connector-Navigator")
 
 1. Aktivieren Sie die Kontrollkästchen neben den Entitäten, die Sie einschließen möchten, und wählen Sie **Laden** aus. Sie können mehrere Entitäten aus mehreren Umgebungen auswählen.
 
@@ -68,5 +68,11 @@ Sie können das duplizierte Beziehungen identifizieren und entfernen.
 3. Entfernen Sie alle identifizierten doppelten Beziehungen.
 
 Versuchen Sie nach dem Entfernen des duplizierten Beziehungen, den Power BI-Konnektor wieder zu konfigurieren. Die Umgebung sollte jetzt verfügbar sein.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Fehler in Datumsfeldern beim Laden von Entitäten in Power BI Desktop
+
+Beim Laden von Entitäten, die Felder mit einem Datumsformat wie MM/TT/JJJJ enthalten, können Fehler aufgrund nicht übereinstimmender Gebietsschemaformate auftreten. Diese Diskrepanz tritt auf, wenn Ihre Power BI Desktop-Datei auf ein anderes Gebietsschema als Englisch (Vereinigte Staaten) eingestellt ist, da Datumsfelder in Zielgruppenerkenntnissen im amerikanischen Format gespeichert werden.
+
+Die Power BI Desktop-Datei hat eine einzelne Gebietsschemaeinstellung, die beim Abrufen von Daten angewendet wird. Damit diese Datumsfelder richtig interpretiert werden, legen Sie das Gebietsschema der .BPI-Datei auf Englisch (Vereinigte Staaten) fest. [Erfahren Sie, wie Sie das Gebietsschema einer Power BI Desktop-Datei ändern](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

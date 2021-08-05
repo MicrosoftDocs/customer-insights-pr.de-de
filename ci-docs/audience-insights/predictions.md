@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595900"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692526"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Ergänzen von Teildaten mit Vorhersagen
 
@@ -31,11 +31,11 @@ Mit Vorhersagen können Sie auf einfache Weise Werte vorhersagen, die Ihr Verst�
 
 Bevor Ihre Organisation die Vorhersagefunktion verwenden kann, müssen die folgenden Voraussetzungen erfüllt sein:
 
-1. Ihre Organisation hat eine Instanz [ in der Common Data Service](/ai-builder/build-model#prerequisites) eingerichtet und sie befindet sich in der gleichen Organisation wie Customer Insights.
+1. Ihre Organisation hat eine Instanz [in Microsoft Dataverse eingerichtet](/ai-builder/build-model#prerequisites) und sie befindet sich in derselben Organisation wie Customer Insights.
 
-2. Ihre Umgebung ist mit Ihrer Common Data Service-Instanz verbunden.
+2. Ihre Zielgruppenerkenntnis-Umgebung ist mit Ihrer Dataverse-Instanz verknüpft.
 
-Wenn Sie eine [neue Umgebung schaffen](manage-environments.md), konfigurieren Sie sie im Dialogfeld **Erstellen Sie eine Umgebung** und wählen **Erweitert**. Wenn Sie bereits eine Umgebung erstellt haben, gehen Sie zu deren Einstellungen und wählen Sie **Erweitert**. So oder so, geben Sie im Abschnitt **Vorhersagen verwenden** die Common Data Service-Instanz-URL ein, an die Sie Ihre Umgebung anhängen möchten.
+Wenn Sie eine [neue Umgebung schaffen](get-started-paid.md), konfigurieren Sie sie im Dialogfeld **Erstellen Sie eine Umgebung** und wählen **Erweitert**. Wenn Sie bereits eine Umgebung erstellt haben, gehen Sie zu deren Einstellungen und wählen Sie **Erweitert**. So oder so, geben Sie im Abschnitt **Vorhersagen verwenden** die Dataverse-Instanz-URL ein, an die Sie Ihre Umgebung anhängen möchten.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Erstellen Sie eine Vorhersage in der Kunde-Entität
 
@@ -47,17 +47,17 @@ Wenn Sie eine [neue Umgebung schaffen](manage-environments.md), konfigurieren Si
 
 4. Suchen Sie den Attributnamen, für den Sie Werte vorhersagen möchten, und wählen Sie dann das Symbol **Übersicht** in der Spalte **Zusammenfassung**.
    > [!div class="mx-imgBorder"]
-   > ![Übersichtssymbol](media/intelligence-overviewicon.png "Übersicht über das Symbol")
+   > ![Übersichtssymbol.](media/intelligence-overviewicon.png "Übersicht über das Symbol")
 
 5. Wenn es eine hohe Rate fehlender Werte für Ihr Attribut gibt, wählen Sie **Fehlende Werte vorhersagen** aus, um mit Ihrer Vorhersage fortzufahren.
    > [!div class="mx-imgBorder"]
-   > ![Übersichtsstatus mit angezeigter Schaltfläche zur Vorhersage fehlender Werte](media/intelligence-overviewpredictmissingvalues.png "Überblicksstatus mit angezeigter Schaltfläche zur Vorhersage fehlender Werte")
+   > ![Übersichtsstatus mit angezeigter Schaltfläche zur Vorhersage fehlender Werte.](media/intelligence-overviewpredictmissingvalues.png "Überblicksstatus mit angezeigter Schaltfläche zur Vorhersage fehlender Werte")
 
 6. Stellen Sie einen **Anzeigename** und einen **Name der Ausgabeentität** für die Ergebnisse der Vorhersage bereit.
 
 7. Eine vorbelegte Liste von Optionen zeigt an, wo Sie die Werte einer vorhergesagten Kategorie zuordnen können. In diesem Fall sind Ihre einzigen Kategorie-Optionen 0 oder 1, da sie der Wahr/Falsch- oder Binär-Natur der Vorhersage entsprechen. Ordnen Sie in der Kategorie-Spalte die Feldwerte, die in der endgültigen Vorhersage als 0 klassifiziert werden sollen, als 0 und die Elemente, die Sie in der endgültigen Vorhersage als 1 klassifizieren möchten, als 1 zu.
    > [!div class="mx-imgBorder"]
-   > ![Beispiel mit zugeordneten Feldwerten zu Kategorien](media/intelligence-categorymapping.png "Beispiel für die Zuordnung von Feldwerten zu Kategorien")
+   > ![Beispiel mit zugeordneten Feldwerten zu Kategorien.](media/intelligence-categorymapping.png "Beispiel für die Zuordnung von Feldwerten zu Kategorien")
 
 8. Wählen Sie **Abgeschlossen**, und die Vorhersage wird verarbeitet. Die Bearbeitung wird je nach Umfang und Komplexität der Daten einige Zeit in Anspruch nehmen. Die Ergebnisse werden in einer neuen Entität basierend auf dem **Name der Ausgabeentität** der Vorhersage bereitgestellt, die Sie erstellt haben.
 
@@ -77,7 +77,7 @@ Als Teil dieses Ablaufs wählen Sie ein bestimmtes Attribut aus, auf dem Ihr Seg
 
 5. Wenn das von Ihnen erstellte Segment unvollständige Daten im Quellfeld enthält, können Sie die fehlenden Werte vorhersagen.
    > [!div class="mx-imgBorder"]
-   > ![Schaltfläche Vorhersage](media/segments-predictoption.png "Schaltfläche Vorhersage")
+   > ![Schaltfläche „Vorhersage“.](media/segments-predictoption.png "Schaltfläche Vorhersage")
 
 6. Stellen Sie einen **Anzeigename** und einen **Name der Ausgabeentität** für die Ergebnisse der Vorhersage bereit.
 
@@ -93,7 +93,7 @@ Als Teil dieses Ablaufs wählen Sie ein bestimmtes Attribut aus, auf dem Ihr Seg
 
 4. Sie sehen eine Reihe von Datenpunkten in der Ansicht Ihrer Vorhersage.
    > [!div class="mx-imgBorder"]
-   > ![Vorhersagen Seite](media/intelligence-predictionsviewpage.png "Seite Vorhersagen")
+   > ![Seite „Vorhersagen“.](media/intelligence-predictionsviewpage.png "Seite Vorhersagen")
 
    - **Vorhergesagte Werte** zeigt die Zuordnung, die Sie während der Zuordnungsphase von Feldwert zu Kategorie erstellt haben. Dies sind die Werte in Ihrem DataSet, die einer bestimmten Kategorie zugeordnet wurden.
    -**Top-Einflussfaktoren** sind die Faktoren innerhalb Ihres Datensatzes, die am ehesten die Zuverlässigkeit der Vorhersage bezüglich der Zuordnung Ihres Feldwertes zu einer bestimmten Kategorie beeinflussen.
@@ -139,7 +139,7 @@ Der nächste Lauf Ihrer Vorhersage wird das von Ihnen erstellte aktualisierte Mo
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Wenn Sie den Common Data Service-Anfügevorgang aufgrund eines Fehlers nicht abschließen können, können Sie versuchen, den Vorgang manuell abzuschließen. Es gibt zwei bekannte Probleme, die beim Anfügevorgang auftreten können:
+Wenn Sie den Dataverse-Anfügevorgang aufgrund eines Fehlers nicht abschließen können, können Sie versuchen, den Vorgang manuell abzuschließen. Es gibt zwei bekannte Probleme, die beim Anfügevorgang auftreten können:
 
 - Die Lösung Customer Card Add-in ist nicht installiert.
     1. Vervollständigen Sie die Anweisungen in Bezug auf [Installieren und Konfigurieren der Lösung](customer-card-add-in.md).

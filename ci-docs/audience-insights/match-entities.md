@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306027"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650317"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
@@ -118,11 +118,11 @@ Sie können Entitäten für Übereinstimmungsregeln neu anordnen, um die Reihenf
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definieren Sie die Deduplizierung auf einer Match-Entität
 
-Zusätzlich zu [entitätsübergreifenden Übereinstimmungsregeln](#define-rules-for-match-pairs) können Sie auch Deduplizierungsregeln angeben. *Deduplizierung* ist ein weiterer Prozess beim Abgleichen von Datensätzen. Es identifiziert doppelte Datensätze und führt sie zu einem Datensatz zusammen. Quelldatensätze werden mit alternativen IDs mit dem zusammengeführten Datensatz verknüpft.
+Zusätzlich zu [entitätsübergreifenden Übereinstimmungsregeln](#define-rules-for-match-pairs) können Sie auch Deduplizierungsregeln angeben. *Deduplizierung* ist ein weiterer Prozess beim Abgleichen von Datensätzen. Sie identifiziert doppelte Datensätze und führt sie zu einem Datensatz zusammen. Quelldatensätze werden mit alternativen IDs mit dem zusammengeführten Datensatz verknüpft.
 
-Deduplizierte Datensätze werden dann im entitätsübergreifenden Abgleichprozess verwendet. Die Deduplizierung erfolgt für einzelne Entitäten und kann für jede Entität konfiguriert werden, die in Übereinstimmungspaaren verwendet wird.
+Deduplizierte Datensätze werden im entitätsübergreifenden Abgleichprozess verwendet. Die Deduplizierung erfolgt auf einzelnen Entitäten und kann für jede Entität konfiguriert werden, die in Übereinstimmungspaaren verwendet wird.
 
-Die Angabe von Deduplizierungsregeln ist nicht zwingend erforderlich. Wenn keine solchen Regeln konfiguriert sind, werden die systemdefinierten Regeln angewendet. Sie kombinieren alle Datensätze zu einem einzigen Datensatz, bevor sie die Entitätsdaten an einen entitätsübergreifenden Abgleich übergeben, um die Leistung zu verbessern.
+Die Angabe von Deduplizierungsregeln ist nicht obligatorisch. Wenn keine solchen Regeln konfiguriert sind, werden die systemdefinierten Regeln angewendet. Sie kombinieren alle Datensätze zu einem einzigen Datensatz, bevor sie die Entitätsdaten an einen entitätsübergreifenden Abgleich übergeben, um die Leistung zu verbessern.
 
 ### <a name="add-deduplication-rules"></a>Deduplizierungsregeln hinzufügen
 
@@ -133,12 +133,12 @@ Die Angabe von Deduplizierungsregeln ist nicht zwingend erforderlich. Wenn keine
 1. Wählen Sie im Bereich **Zusammenführungseinstellungen** die Entitäten aus, auf die Sie die Deduplizierung anwenden wollen.
 
 1. Geben Sie an, wie die doppelten Datensätze kombiniert werden sollen und wählen Sie eine von drei Optionen:
-   - **Am häufigsten**: Identifiziert den Datensatz mit den meisten ausgefüllten Attributfeldern als Gewinner-Datensatz. Dies ist die Standard-Zusammenführungsoption.
-   - **Aktuell**: Identifiziert den Gewinner-Datensatz auf der Basis der größten Aktualität. Benötigt ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
-   - **Letzer**: Identifiziert den Gewinner-Datensatz basierend auf der besten Aktualität. Benötigt ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
+   - **Am häufigsten**: Identifiziert den Datensatz mit den meisten ausgefüllten Attributfeldern als Gewinner-Datensatz. Dies ist die standardmäßige Zusammenführungsoption.
+   - **Aktuell**: Identifiziert den Gewinner-Datensatz auf der Basis der größten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
+   - **Letzer**: Identifiziert den Gewinner-Datensatz basierend auf der besten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
  
    > [!div class="mx-imgBorder"]
-   > ![Deduplizierungsregeln Schritt 1](media/match-selfconflation.png "Deduplizierungsregeln Schritt 1")
+   > ![Deduplizierungsregeln Schritt 1.](media/match-selfconflation.png "Deduplizierungsregeln Schritt 1")
  
 1. Sobald die Entitäten ausgewählt sind und ihre Zusammenführungspräferenz eingestellt ist, wählen Sie **Regel hinzufügen**, um die Deduplizierungsregeln auf Entitätsebene zu definieren.
    - **Feld auswählen** listet alle verfügbaren Felder dieser Entität auf. Wählen Sie das Feld aus, das Sie auf Duplikate prüfen möchten. Wählen Sie Felder aus, die wahrscheinlich für jeden einzelnen Kunden eindeutig sind. Zum Beispiel eine E-Mail-Adresse oder die Kombination aus Name, Stadt und Telefonnummer.
@@ -146,7 +146,7 @@ Die Angabe von Deduplizierungsregeln ist nicht zwingend erforderlich. Wenn keine
    - Definieren Sie zusätzliche Bedingungen, indem Sie **Bedingung hinzufügen** wählen.
  
    > [!div class="mx-imgBorder"]
-   > ![Deduplizierungsregeln Schritt 2](media/match-selfconflation-rules.png "Deduplizierungsregeln Schritt 2")
+   > ![Deduplizierungsregeln Schritt 2.](media/match-selfconflation-rules.png "Deduplizierungsregeln Schritt 2")
 
   Sie können mehrere Deduplizierungsregeln für eine Entität erstellen. 
 
@@ -179,7 +179,9 @@ Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie *
 Das Ergebnis einer erfolgreichen Ausführung, die einheitliche Kundenprofilentität, finden Sie auf der Seite **Entitäten** Seite. Ihre einheitliche Kundenentität lautet **Kunden** im Abschnitt **Profile**. Die erste erfolgreiche Übereinstimmungsausführung erstellt die Entität einheitlicher *Kunde*. Alle nachfolgenden Übereinstimmungsausführungen erweitern diese Entität.
 
 > [!TIP]
-> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
+> Wählen Sie nach dem Ausführen des Abgleichsprozesses den Prozessstatus aus, um das Feld **Aufgabendetails** zu öffnen. Dort erhalten Sie einen Überblick über die Bearbeitungszeit, das letzte Bearbeitungsdatum und alle mit der Aufgabe verbundenen Fehler und Warnungen. Wählen Sie **Detail anzeigen** aus, um zu sehen, welche Entitäten am Abgleichsprozess teilgenommen haben, welche Regeln auf sie angewandt wurden und ob die Updates erfolgreich veröffentlicht wurden.  
+> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Drilldownpfad, um über den Link zum Aufgabenstatus zu Prozessdetails zu gelangen.":::
 
 ## <a name="review-and-validate-your-matches"></a>Überprüfen und validieren Sie Ihre Übereinstimmungen
 

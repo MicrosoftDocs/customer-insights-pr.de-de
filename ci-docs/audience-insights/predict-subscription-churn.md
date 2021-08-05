@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095647"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556306"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Vorhersage der Abwanderung von Abonnenten (Vorschau)
 
@@ -63,7 +63,7 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 1. Gehen Sie in Zielgruppen-Insights zu **Intelligenz** > **Vorhersagen**.
 1. Wählen Sie die Kachel **Abonnement-Abwanderungsmodell (Vorschau)** und wählen Sie **Dieses Modell verwenden**.
    > [!div class="mx-imgBorder"]
-   > ![Abonnement-Abwanderungsmodell Kachel mit der Schaltfläche Dieses Modell verwenden](media/subscription-churn-usethismodel.PNG "Abonnement Abwanderungsmodell-Kachel mit Schaltfläche Dieses Modell verwenden").
+   > ![Abonnement-Abwanderungsmodell-Kachel mit der Schaltfläche „Dieses Modell verwenden“.](media/subscription-churn-usethismodel.PNG "Abonnement Abwanderungsmodell-Kachel mit Schaltfläche Dieses Modell verwenden")
 
 ### <a name="name-model"></a>Modell benennen
 
@@ -86,11 +86,11 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
     1. Wählen Sie das Feld **Kundenentität**, das sich auf Ihre primäre Kundenentität bezieht.
     1. Geben Sie einen Namen ein, der die Beziehung beschreibt.
        > [!div class="mx-imgBorder"]
-       > ![Abonnementhistorie-Seite, die die Erstellung einer Beziehung zum Kunden zeigt](media/subscription-churn-subscriptionhistoryrelationship.PNG "Seite der Abonnementshistorie, die den Aufbau einer Beziehung zum Kunden zeigt")
+       > ![Abonnementhistorie-Seite, die die Erstellung einer Beziehung zum Kunden zeigt.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Seite der Abonnementshistorie, die den Aufbau einer Beziehung zum Kunden zeigt")
 1. Klicken Sie auf **Weiter**.
 1. Ordnen Sie die semantischen Felder den Attributen innerhalb Ihrer Abonnementshistorien-Entität zu und wählen Sie **Speichern**. Beschreibungen der Felder finden Sie unter [Voraussetzungen](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Die Seite Abonnementshistorie zeigt semantische Attribute, die Feldern in der ausgewählten Entität der Abonnementshistorie zugeordnet sind.](media/subscription-churn-subscriptionhistorymapping.PNG "Die Seite Abonnementshistorie zeigt semantische Attribute, die Feldern in der ausgewählten Entität der Abonnementshistorie zugeordnet sind.")
+   > ![Die Seite Abonnementshistorie zeigt semantische Attribute, die Feldern in der ausgewählten Entität der Abonnementhistorie zugeordnet sind.](media/subscription-churn-subscriptionhistorymapping.PNG "Die Seite Abonnementshistorie zeigt semantische Attribute, die Feldern in der ausgewählten Entität der Abonnementshistorie zugeordnet sind.")
 1. Wählen Sie **Daten hinzufügen** für **Kundenaktivitäten** und wählen Sie die Entität, die die Informationen zu den Kundenaktivitäten liefert, wie in den Voraussetzungen beschrieben.
 1. Wählen Sie eine Aktivitätsart, die mit der Art der Kundenaktivität übereinstimmt, die Sie konfigurieren.  Wählen Sie **Neu anlegen** und geben Sie einen Namen an, wenn Sie keine Option sehen, die der von Ihnen benötigten Aktivitätsart entspricht.
 1. Sie müssen die Beziehung von Ihrer Entität Kundenaktivität zu der Entität Kunde konfigurieren.
@@ -101,10 +101,10 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 1. Ordnen Sie die semantischen Felder den Attributen innerhalb Ihrer Entität Kundenaktivität zu und wählen Sie **Speichern**. Beschreibungen der Felder finden Sie unter [Voraussetzungen](#prerequisites).
 1. (Optional) Wenn Sie weitere Kundenaktivitäten einbeziehen möchten, wiederholen Sie die obigen Schritte.
    > [!div class="mx-imgBorder"]
-   > ![Definieren der Entitätsbeziehung](media/subscription-churn-customeractivitiesmapping.PNG "Kundenaktivitäten-Seite mit semantischen Attributen, die Feldern in der ausgewählten Entität der Kundenaktivität zugeordnet sind")
+   > ![Definieren der Entitätsbeziehung.](media/subscription-churn-customeractivitiesmapping.PNG "Kundenaktivitäten-Seite mit semantischen Attributen, die Feldern in der ausgewählten Entität der Kundenaktivität zugeordnet sind")
 1. Klicken Sie auf **Weiter**.
 
-### <a name="set-schedule-and-review-configuration"></a>Legen Sie den Zeitplan fest und überprüfen Sie die Konfiguration
+### <a name="set-schedule-and-review-configuration"></a>Zeitplan festlegen und Konfiguration überprüfen
 
 1. Legen Sie eine Häufigkeit fest, um Ihr Modell neu zu trainieren. Diese Einstellung ist wichtig, um die Genauigkeit der Vorhersagen zu aktualisieren, wenn neue Daten in die Zielgruppen-Insights aufgenommen werden. Die meisten Unternehmen können einmal pro Monat eine Umschulung durchführen und erhalten eine gute Genauigkeit für ihre Vorhersagen.
 1. Klicken Sie auf **Weiter**.
@@ -115,7 +115,7 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 
 1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
    > [!div class="mx-imgBorder"]
-   > ![Ansicht der Seite Meine Vorhersagen](media/subscription-churn-mypredictions.PNG "Ansicht der Seite Meine Vorhersagen")
+   > ![Ansicht der Seite „Meine Vorhersagen“.](media/subscription-churn-mypredictions.PNG "Ansicht der Seite Meine Vorhersagen")
 1. Wählen Sie die Vorhersage aus, die Sie überprüfen möchten.
    - **Name der Vorhersage:** Der Name der Vorhersage, der bei ihrer Erstellung angegeben wurde.
    - **Art der Vorhersage:** Typ des für die Vorhersage verwendeten Modells
@@ -131,7 +131,7 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
    - **Zuletzt aktualisiert:** Das Datum, an dem die Vorhersage in der Ausgabe-Entität aktualisiert wurde.
 1. Markieren Sie die vertikalen Auslassungspunkte neben der Vorhersage, deren Ergebnisse Sie überprüfen möchten, und wählen Sie **Ansicht**.
    > [!div class="mx-imgBorder"]
-   > ![Anzeige der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen](media/subscription-churn-verticalellipses.PNG "Ansicht der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen").
+   > ![Anzeige der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen.](media/subscription-churn-verticalellipses.PNG "Ansicht der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen")
 1. Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite:
     1. **Leistung des Trainingsmodells:** A, B oder C sind mögliche Bewertungen. Diese Bewertung zeigt die Leistung der Vorhersage an und kann Ihnen bei der Entscheidung helfen, die in der Ausgabe-Entität gespeicherten Ergebnisse zu verwenden.
         - Bewertungen werden auf der Grundlage der folgenden Regeln ermittelt:
@@ -139,13 +139,13 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
             - **B** wenn das Modell mindestens 50% der Gesamtvorhersagen genau vorhergesagt hat und wenn der Prozentsatz der genauen Vorhersagen für Kunden, die Abwanderung betrieben haben, um mindestens 10% der historischen Abwanderungsrate über der historischen durchschnittlichen Abwanderungsrate liegt.
             - **C** wenn das Modell weniger als 50% der Gesamtvorhersagen genau vorhergesagt hat oder wenn der Prozentsatz der genauen Vorhersagen für Kunden, die Abwanderung betrieben haben, geringer ist als die historische durchschnittliche Abwanderungsrate.
                > [!div class="mx-imgBorder"]
-               > ![Ansicht der Modellleistungsergebnisse](media/subscription-churn-modelperformance.PNG "Ansicht des Leistungsergebnisses des Modells")
+               > ![Ansicht der Modellleistungsergebnisse.](media/subscription-churn-modelperformance.PNG "Ansicht des Leistungsergebnisses des Modells")
     1. **Wahrscheinlichkeit der Abwanderung (Anzahl der Kunden):** Kundengruppen auf der Grundlage ihres vorhergesagten Abwanderungsrisikos. Diese Daten können Ihnen später helfen, wenn Sie ein Kundensegment mit hohem Abwanderungsrisiko erstellen möchten. Solche Segmente helfen Ihnen zu verstehen, wo Ihr Grenzwert für die Segmentmitgliedschaft liegen sollte.
        > [!div class="mx-imgBorder"]
-       > ![Grafik zur Verteilung der Abwanderungsergebnisse, unterteilt in Bereiche von 0-100%](media/subscription-churn-resultdistribution.PNG "Grafik zur Verteilung der Abwanderungsergebnisse, unterteilt in Bereiche von 0-100%.")
+       > ![Grafik zur Verteilung der Abwanderungsergebnisse, unterteilt in Bereiche von 0–100 %.](media/subscription-churn-resultdistribution.PNG "Grafik zur Verteilung der Abwanderungsergebnisse, unterteilt in Bereiche von 0 bis 100 %.")
     1. **Die wichtigsten Einflussfaktoren:** Es gibt viele Faktoren, die bei der Erstellung Ihrer Vorhersage berücksichtigt werden. Für jeden dieser Faktoren wird ihre Bedeutung für die aggregierten Vorhersagen, die ein Modell erstellt, berechnet. Sie können diese Faktoren verwenden, um Ihre Vorhersageergebnisse zu validieren. Oder Sie können diese Informationen später verwenden, um [Segmente](segments.md) zu erstellen, die dazu beitragen könnten, das Abwanderungsrisiko für Kunden zu beeinflussen.
        > [!div class="mx-imgBorder"]
-       > ![Liste, die die Einflussfaktoren und ihre Bedeutung bei der Vorhersage des Abwanderungsergebnisses zeigt](media/subscription-churn-influentialfactors.PNG "Liste mit Einflussfaktoren und deren Bedeutung für die Vorhersage des Abwanderungsergebnisses")
+       > ![Liste, die die Einflussfaktoren und ihre Bedeutung bei der Vorhersage des Abwanderungsergebnisses zeigt.](media/subscription-churn-influentialfactors.PNG "Liste mit Einflussfaktoren und deren Bedeutung für die Vorhersage des Abwanderungsergebnisses")
 
 ## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 

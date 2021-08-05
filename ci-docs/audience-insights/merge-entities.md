@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305635"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650133"
 ---
 # <a name="merge-entities"></a>Entitäten zusammenführen
 
@@ -109,7 +109,7 @@ Einige Entitäten enthalten mehr Details als andere. Wenn eine Entität die neue
 Unabhängig davon, ob Sie Attribute manuell zusammenführen oder vom System zusammenführen lassen, können Sie Ihre Zusammenführung immer durchführen. Wählen Sie **Ausführen** auf der Seite **Zusammenführen**, um den Prozess zu starten.
 
 > [!div class="mx-imgBorder"]
-> ![Datenzusammenführung Speichern und Ausführen](media/configure-data-merge-save-run.png "Datenzusammenführung Speichern und Ausführen")
+> ![Datenzusammenführung speichern und ausführen.](media/configure-data-merge-save-run.png "Datenzusammenführung Speichern und Ausführen")
 
 Wählen Sie **nur Zusammenführen ausführen**, wenn Sie nur die Ausgabe in der einheitlichen Kundenentität anzeigen möchten. Nachgelagerte Prozesse werden als [im Aktualisierungsplan definiert](system.md#schedule-tab) aktualisiert.
 
@@ -118,7 +118,9 @@ Wählen Sie **Merge- und Downstream-Prozesse ausführen**, um das System mit Ihr
 Um weitere Änderungen vorzunehmen und den Schritt erneut auszuführen, können Sie eine laufende Zusammenführung abbrechen. Wählen Sie den Text **Wird aktualisiert ...** und **Auftrag abbrechen**  im angezeigten Seitenbereich aus.
 
 > [!TIP]
-> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
+> Wählen Sie nach dem Ausführen des Zusammenführungsprozesses den Prozessstatus aus, um das Feld **Aufgabendetails** zu öffnen. Dort erhalten Sie einen Überblick über die Bearbeitungszeit, das letzte Bearbeitungsdatum und alle mit der Aufgabe verbundenen Fehler und Warnungen. Wählen Sie **Detail anzeigen** aus, um zu sehen, welche Entitäten am Abgleichsprozess teilgenommen haben, ob die Konfliktlösung erfolgreich war und ob die Updates erfolgreich veröffentlicht wurden.  
+> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Drilldownpfad, um über den Link zum Aufgabenstatus zu Prozessdetails zu gelangen.":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760326"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555444"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Segmente nach LiveRamp&reg; exportieren (Vorschau)
 
@@ -23,7 +23,7 @@ Aktivieren Sie Ihre Daten in LiveRamp, um sich mit über 500 Plattformen in digi
 ## <a name="prerequisites-for-a-connection"></a>Voraussetzungen für die Verbindung
 
 - Sie benötigen ein LiveRamp-Abonnement, um diesen Connector verwenden zu können.
-- Um ein Abonnement zu erhalten, [kontaktieren Sie LiveRamp ](https://liveramp.com/contact/) direkt. [Erfahren Sie mehr über LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
+- Um ein Abonnement zu erhalten, [kontaktieren Sie LiveRamp](https://liveramp.com/contact/) direkt. [Erfahren Sie mehr über LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
 ## <a name="set-up-connection-to-liveramp"></a>Verbindung mit LiveRamp einrichten
 
@@ -56,7 +56,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. In dem Feld **Wählen Sie Ihre Schlüsselkennung** wählen Sie **E-Mail**, **Name und Adresse** oder **Telefon**, um die Identitätsauflösung an LiveRamp zu senden.
    > [!div class="mx-imgBorder"]
-   > ![LiveRamp-Connector mit Attributzuordnung](media/export-liveramp-segments.png "LiveRamp-Connector mit Attributzuordnung")
+   > ![LiveRamp-Connector mit Attributzuordnung.](media/export-liveramp-segments.png "LiveRamp-Connector mit Attributzuordnung")
 
 1. Ordnen Sie die entsprechenden Attribute Ihrer einheitlichen Kundenentität der ausgewählten Schlüsselkennung zu.
 

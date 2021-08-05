@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305890"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554682"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Mit einer Power Query-Datenquelle verbinden
 
@@ -42,7 +42,7 @@ Power Query bietet eine breite Palette von Connectos zum Erfassen von Daten. Die
 1. Im Dialogfeld **Power Query – Abfragen bearbeiten** können Sie die Daten überprüfen und verfeinern. Die Entitäten, die die in Ihrer ausgewählten Datenquelle identifizierten Systeme aufweisen, erscheinen im linken Fensterbereich.
 
    > [!div class="mx-imgBorder"]
-   > ![Dialogfeld „Abfragen bearbeiten“](media/data-manager-configure-edit-queries.png "Dialogfeld „Abfragen bearbeiten“")
+   > ![Dialogfeld „Abfragen bearbeiten“.](media/data-manager-configure-edit-queries.png "Dialogfeld „Abfragen bearbeiten“")
 
 1. Sie können Ihre Daten auch transformieren. Wählen Sie eine Entität zum Bearbeiten oder Transformieren aus. Verwenden Sie die Optionen im Fenster „Power Query“, um Transformationen anzuwenden. Jede Transformation wird unter **Angewandte Schritte** aufgelistet. Power Query bietet zahlreiche vorgefertigte Transformationsoptionen. Weitere Informationen finden Sie im Artikel [Power Query-Transformationen](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Connectors mit einem Häkchen in der Spalte **Customer Insights (Datenflows)** s
 2. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Bearbeiten** aus dem Dropdown-Menü.
 
    > [!div class="mx-imgBorder"]
-   > ![Optionen bearbeiten](media/edit-option-data-sources.png "Optionen bearbeiten")
+   > ![Optionen bearbeiten.](media/edit-option-data-sources.png "Optionen bearbeiten")
 
 3. Übernehmen Sie Ihre Änderungen und Transformationen in das Dialogfeld **Power Query – Abfragen bearbeiten** wie im Abschnitt [Eine neue Datenquelle erstellen](#create-a-new-data-source) beschrieben ein.
 

@@ -1,7 +1,7 @@
 ---
 title: Neue und kommende Funktionen
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263250"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692388"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
@@ -25,7 +25,29 @@ Wir freuen uns, unsere neuesten Updates bekannt zu geben! In diesem Artikel werd
 Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vor anderen sehen. Sofern nicht anders angegeben, müssen Sie keine Maßnahmen ergreifen, und wir aktualisieren die App automatisch ohne Ausfallzeiten.
 
 > [!TIP]
-> Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365  Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+> Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Updates Juni 2021
+
+Die Updates im Juni 2021 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
+
+### <a name="data-ingestion"></a>Dateneinbindung
+
+- **Verbesserte Aktualisierungen des Datenvereinheitlichungsfortschritts** Sie sehen jetzt detailliertere, verbesserte dynamische Statusaktualisierungen in den Schritten zum [Datenvereinheitlichungsprozess](data-unification.md). Mit dieser Funktion können Sie den detaillierten Fortschritt verfolgen, um den Prozessflow zu verstehen und Maßnahmen zu ergreifen, wenn ein Schritt Ihre Aufmerksamkeit erfordert.
+
+### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Exportieren von Segmenten und anderen Daten in die Salesforce Marketing Cloud** Wir haben unsere Exportziele ausgeweitet, sodass sie jetzt die [Salesforce Marketing Cloud](export-salesforce.md) miteinschließen. Sie können jetzt Segmente und andere Datentypen über einen Marken-SFTP-Export in die Salesforce Marketing Cloud exportieren. Der Datenimport kann in Salesforce vollständig automatisiert und zur Erstellung effektiverer Marketingkampagnen verwendet werden.  
+ 
+- **Segmente nach ActiveCampaign exportieren** Wir haben unsere Exportziele ausgeweitet, sodass sie jetzt auch [Aktive Kampagne](export-active-campaign.md) umfassen. Sie können Segmente jetzt exportieren, um Kampagnen zu generieren, E-Mail-Marketing auszuführen und mit spezifischen Kundengruppen in ActiveCampaign arbeiten.
+ 
+- **Segmente nach Sendinblue exportieren** Wir haben unsere Exportziele ausgeweitet, sodass sie jetzt auch [Sendinblue](export-sendinblue.md) umfassen. Sie können Segmente jetzt exportieren, um Kampagnen zu generieren, E-Mail-Marketing auszuführen und mit spezifischen Kundengruppen mit Sendinblue arbeiten.
+ 
+### <a name="ux-updates"></a>UX-Updates 
+
+- **Neue und verbesserte Kundenseite und Profildetailseite** Wir haben die Kundenseite und die Profildetailseiten zur Verbesserung der Benutzererfahrung und Leistung neu gestaltet. Mit diesen Änderungen können Sie Kunden anzeigen, sortieren, suchen und filtern. Filter werden jetzt in der URL dargestellt, um die Suchergebnisse nahtlos mit anderen Benutzern zu teilen. Suchergebnisse können auch als Segment gespeichert werden.    
+  Die Detailseite für Kundenprofile gruppiert Daten jetzt in verschiedene Unterabschnitte wie demografische Daten, IDs und andere Profilattribute, um die Lesbarkeit zu verbessern. Andere Abschnitte auf der Profildetailseite sind jetzt interaktiver. Zum Beispiel ermöglicht der Abschnitt „Aktivitäten“ jetzt das Filtern und Sortieren.
+
 
 ## <a name="may-2021-updates"></a>Update Mai 2021
 
@@ -170,7 +192,7 @@ Die Updates im Februar 2021 enthalten verschiedene Funktionen, Leistungsverbesse
 
 - **Die Kopierumgebung unterstützt mehr Arten von Datenquellen**
 
-  Administratoren können Umgebungskonfigurationen in eine neue Umgebung in derselben Organisation kopieren. Diese Funktion erweitert die Kopierumgebungsfunktionalität für Fälle, in denen Datenquellen auf Common Data Service Data Lake basierenoder ein Common Data Model-Ordner verwendet wird.
+  Administratoren können Umgebungskonfigurationen in eine neue Umgebung in derselben Organisation kopieren. Diese Funktion erweitert die Funktionalität „Umgebung kopieren“ auf Fälle, in denen Datenquellen basierend auf einem von Microsoft Dataverse verwalteten Data Lake oder einem Common Data Model-Ordner verwendet werden.
 
 ## <a name="january-2021-updates"></a>Updates Januar 2021
 

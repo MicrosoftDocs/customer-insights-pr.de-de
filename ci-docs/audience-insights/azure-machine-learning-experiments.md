@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597418"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554434"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Verwenden Sie auf Azure Machine Learning basierende Modelle
 
@@ -52,7 +52,7 @@ Sie müssen Datasets erstellen, um Entitätsdaten aus Customer Insights für Ihr
      Öffnen Sie im Designer **Spalten in Dataset auswählen** und wählen Sie **Als Pipeline-Parameter festlegen**, wo Sie einen Namen für den Parameter angeben.
 
      > [!div class="mx-imgBorder"]
-     > ![Dataset-Parametrisierung im Designer](media/intelligence-designer-dataset-parameters.png "Dataset-Parametrisierung im Designer")
+     > ![Dataset-Parametrisierung im Designer.](media/intelligence-designer-dataset-parameters.png "Dataset-Parametrisierung im Designer")
    
 * Dataset-Parameter im SDK (Python)
    
@@ -78,7 +78,7 @@ Sie müssen Datasets erstellen, um Entitätsdaten aus Customer Insights für Ihr
 
 * Der Designer bietet das Modul [Daten exportieren](/azure/machine-learning/algorithm-module-reference/export-data), mit dem die Ausgabe einer Pipeline in den Azure-Speicher exportiert werden kann. Derzeit muss das Modul den Datenspeichertyp **Azure Blob Storage** verwenden und den **Datastore** und den relativen **Pfad** parametrisieren. Customer Insights überschreibt diese beiden Parameter während der Pipeline-Ausführung mit einem Datenspeicher und Pfad, auf den das Produkt Zugriff hat.
    > [!div class="mx-imgBorder"]
-   > ![Datenmodul-Konfiguration exportieren](media/intelligence-designer-importdata.png "Daten exportieren Modul-Konfiguration")
+   > ![Datenmodul-Konfiguration exportieren.](media/intelligence-designer-importdata.png "Daten exportieren Modul-Konfiguration")
    
 * Wenn Sie die Inferenzausgabe mit Code schreiben, können Sie die Ausgabe in den Pfad innerhalb eines *registrierten Datenspeichers* im Arbeitsbereich hochladen. Wenn der Pfad und der Datenspeicher in der Pipeline parametrisiert sind, kann Customer Insights die Inferenzausgabe lesen und importieren. Derzeit wird eine einfache tabellarische Ausgabe im csv-Format unterstützt. Der Pfad muss das Verzeichnis und den Dateinamen enthalten.
 
