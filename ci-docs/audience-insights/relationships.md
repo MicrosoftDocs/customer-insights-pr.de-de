@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171163"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035230"
 ---
 # <a name="relationships-between-entities"></a>Beziehungen zwischen Entitäten
 
@@ -82,7 +82,7 @@ Diese Seite bietet eine Reihe von Optionen für bestehende und neue Beziehungen:
 
 ### <a name="explore-the-relationship-visualizer"></a>Der Beziehungsvisualisierer
 
-Der Beziehungsvisualisierer zeigt ein Netzwerkdiagramm der bestehenden Beziehungen zwischen verbundenen Entitäten und ihrer Kardinalität an.
+Der Beziehungsvisualisierer zeigt ein Netzwerkdiagramm der bestehenden Beziehungen zwischen verbundenen Entitäten und ihrer Kardinalität an. Es visualisiert auch den Beziehungspfad.
 
 Um die Ansicht anzupassen, können Sie die Position der Felder ändern, indem Sie sie auf das Canvas ziehen.
 
@@ -92,6 +92,20 @@ Verfügbare Optionen:
 - **Als Bild exportieren**: Speichern Sie die aktuelle Ansicht als Bilddatei.
 - **Zum horizontalen/vertikalen Layout wechseln**: Ändern Sie die Ausrichtung der Entitäten und Beziehungen.
 - **Bearbeiten**: Aktualisieren Sie die Eigenschaften von benutzerdefinierten Beziehungen im Bearbeitungsbereich und speichern Sie die Änderungen.
+
+### <a name="relationship-path"></a>Beziehungspfad
+
+Der Beziehungspfad beschreibt die Entitäten, die mit Beziehungen zwischen einer Quell-Entität und einer Ziel-Entität verbunden sind. Es wird verwendet, wenn ein Segment oder eine Kennzahl erstellt wird, die andere Entitäten als die einheitliche Profilentität enthält, und es gibt mehrere Optionen, um die einheitliche Profilentität zu erreichen.
+
+Der Beziehungspfad teilt dem System mit, über welchen Beziehungen auf die einheitliche Profilentität zugegriffen werden soll. Unterschiedliche Beziehungspfade können zu unterschiedlichen Ergebnissen führen.
+
+Zum Beispiel hat die Entität *eCommerce_eCommerceEinkäufe* die folgenden Beziehungen zum einheitlichen Profil *benutzerdefinierte* Entität:
+
+- eCommerce_eCommercePurchases > Kunde
+- eCommerce_eCommercePurchases > eCommerce_eCommerceKontakte > POS_posPurchases > Kunde
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Kunde 
+
+Der Beziehungspfad bestimmt, welche Entitäten Sie beim Erstellen von Regeln für Kennzahlen oder Segmente verwenden können. Die Auswahl der Option mit dem längsten Beziehungspfad führt wahrscheinlich zu weniger Ergebnissen, da die übereinstimmenden Datensätze Teil aller Entitäten sein müssen. In diesem Beispiel muss ein Kunde Waren über E-Commerce (eCommerce_eCommercePurchases) an einer Verkaufsstelle (POS_posPurchases) gekauft haben und an unserem Treueprogramm (loyaltyScheme_loyCustomers) teilnehmen. Wenn Sie sich für die erste Option entscheiden, erhalten Sie wahrscheinlich mehr Ergebnisse, da Kunden nur in einer weiteren Entität vorhanden sein müssen.
 
 ## <a name="manage-existing-relationships"></a>Verwalten bestehender Beziehungen 
 
@@ -105,6 +119,6 @@ Wählen Sie eine Beziehung aus und wählen Sie dann eine der folgenden Optionen 
 
 ## <a name="next-step"></a>Nächster Schritt
 
-System- und benutzerdefinierte Beziehungen werden zur [Erstellung von Segmenten](segments.md) auf der Grundlage mehrerer Datenquellen verwendet, die nicht mehr in einem Silo gespeichert sind.
+System und benutzerdefinierte Beziehungen werden verwendet, um [Segmente zu erstellen](segments.md) und [Maße](measures.md) basierend auf mehreren Datenquellen, die nicht mehr isoliert sind.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

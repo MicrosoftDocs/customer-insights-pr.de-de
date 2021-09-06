@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-Daten nach Dynamics 365 Marketing exportieren
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Dynamics 365 Marketing exportieren.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692480"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417204"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Segmente in Dynamics 365 Marketing verwenden (Vorschau)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Verwenden Sie [Segmente](segments.md), um mit Dynamics 365 Marketing Kampagnen zu erstellen und bestimmte Kundengruppen zu kontaktieren. Weitere Informationen finden Sie unter [Segmente ab Dynamics 365 Customer Insights mit Dynamics 365 Marketing verwenden](/dynamics365/marketing/customer-insights-segments)
+Verwenden Sie [Segmente](segments.md), um mit Dynamics 365 Marketing Kampagnen zu erstellen und bestimmte Kundengruppen zu kontaktieren. Weitere Informationen finden Sie unter [Segmente aus Dynamics 365 Customer Insights mit Dynamics 365 Marketing verwenden](/dynamics365/marketing/customer-insights-segments).
+
+Wenn Sie die neuen Funktionen von Dynamics 365 Marketing für die Echtzeit-Orchestrierung des Kundenkontaktverlauf in einer Dataverse Org. nutzen, müssen Sie keinen Standardexport nach Dynamics 365 Marketing erstellen. Kontakte und Segmente aus Zielgruppenerkenntnissen sind direkt in Dynamics 365 Marketing verfügbar, nachdem Marketing und Customer Insights verbunden wurden. Bevor Sie vorhandene Exporte löschen, lesen Sie die Dokumentation zu [wie man Zielgruppenerkenntnisse und Dynamics 365 Marketing Kundenkontaktverlauf-Orchestrierung verbindet](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Voraussetzungen für die Verbindung
 

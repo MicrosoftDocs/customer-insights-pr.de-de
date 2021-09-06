@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685461"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377787"
 ---
 # <a name="create-and-manage-segments"></a>Segmente erstellen und verwalten
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685461"
 > - Ein Seitenbereich zum Auswählen von Attributen ist ständig verfügbar.
 > - Eine Option zum Auswählen von Entitätsbeziehungspfaden.
 > Um den neuen Segmentgenerator auszuprobieren, senden Sie eine E-Mail mit dem Betreff „Request to enable the new segment builder“ an cihelp [at] microsoft.com. Geben Sie den Namen Ihrer Organisation und die ID Ihrer Sandbox-Umgebung an.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elemente des Segment-Builders." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organisieren Sie Ihr Segment mit Regeln und Unterregeln. Jede Regel oder Unterregel besteht aus Bedingungen. Kombinieren Sie die Bedingungen mit logischen Operatoren
+>
+> 2 - Wählen Sie den [Beziehungspfad](relationships.md) zwischen Entitäten, die für eine Regel gelten. Der Beziehungspfad bestimmt, welche Attribute in einer Bedingung verwendet werden können.
+>
+> 3 - Regeln und untergeordnete Regeln verwalten. Ändern Sie die Position einer Regel oder löschen Sie sie.
+>
+> 4 - Fügen Sie Bedingungen hinzu und erstellen Sie mithilfe von Unterregeln die richtige Verschachtelungsebene.
+>
+> 5 - Wenden Sie Set-Operationen auf verbundene Regeln an.
+>
+> 6 - Verwenden Sie den Attributbereich, um verfügbare Entitätsattribute hinzuzufügen oder Bedingungen basierend auf Attributen zu erstellen. Der Bereich zeigt die Liste der Entitäten und Attribute basierend auf dem ausgewählten Beziehungspfad, die für die ausgewählte Regel verfügbar sind.
+>
+> 7 - Fügen Sie Bedingungen basierend auf Attributen zu bestehenden Regeln und untergeordneten Regeln hinzu oder fügen Sie sie zu einer neuen Regel hinzu.
+>
+> 8 - Machen Sie Änderungen beim Erstellen des Segments rückgängig und wiederholen Sie sie.
 
 Sie können komplexe Filter mit Bezug zur einheitlichen Kundenentität und den verwandten Entitäten festlegen. Jedes Segment erstellt nach der Verarbeitung eine Reihe von Kundendatensätzen, die Sie exportieren und für die Sie Maßnahmen ergreifen können. Segmente werden auf der Seite **Segmente** verwaltet. 
 
@@ -145,8 +162,8 @@ Mit schnellen Segmenten können Sie schnell einfache Segmente mit einem einzigen
 
 7. Nachdem das Segment fertig bearbeitet wurde, können Sie es wie jedes andere von Ihnen erstellte Segment anzeigen.
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte,
 
-[Exportieren Sie ein Segment](export-destinations.md) und erkunden Sie die [Kundenkarte](customer-card-add-in.md) und [Connectors](export-power-bi.md), um Einblicke auf Kundenebene zu erhalten.
+[Exportieren eines Segments](export-destinations.md) und erkunden der [Kundenkartenintegration](customer-card-add-in.md), um Segmente in anderen Anwendungen zu verwenden.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
