@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-Daten in Adobe Experience Platform exportieren
+title: Exportieren Sie Customer Insights-Daten nach Adobe Experience Platform
 description: Erfahren Sie, wie Sie Zielgruppen-Einblick-Segmente in der Adobe Experience Platform verwenden.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305523"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032116"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insights-Segmente in Adobe Experience Platform verwenden (Verwenden)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insights Segmente in Adobe Experience Platform nutzen (Vorschau)
 
-Als Nutzer von Zielgruppeneinblicken in Dynamics 365 Customer Insights haben Sie möglicherweise Segmente erstellt, um Ihre Marketingkampagnen durch die Ausrichtung auf relevante Zielgruppen effizienter zu gestalten. Um ein Segment aus Zielgruppen-Insights in Adobe Experience Platform und Anwendungen wie Adobe Campaign Standard zu verwenden, müssen Sie einige in diesem Artikel beschriebene Schritte ausführen.
+Als Nutzer von Zielgruppeneinblicken in Dynamics 365 Customer Insights haben Sie möglicherweise Segmente erstellt, um Ihre Marketingkampagnen durch die Ausrichtung auf relevante Zielgruppen effizienter zu gestalten. So verwenden Sie ein Segment aus Zielgruppenerkenntnissen in Adobe Experience Platform und Anwendungen wie Adobe Campaign Standard, Sie müssen einige der in diesem Artikel beschriebenen Schritte ausführen.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Prozessdiagramm der in diesem Artikel beschriebenen Schritte.":::
 
@@ -26,14 +26,14 @@ Als Nutzer von Zielgruppeneinblicken in Dynamics 365 Customer Insights haben Sie
 
 -   Dynamics 365 Customer Insights-Lizenz
 -   Adobe Experience Platform-Lizenz
--   Adobe Campaign Standard-Lizenz
+-   Adobe Campaign Standard Linzenz
 -   Azure Blob Storage-Konto
 
 ## <a name="campaign-overview"></a>Kampagnenübersicht
 
-Schauen wir uns eine fiktive Beispielkampagne an, um besser zu verstehen, wie Sie Segmente aus Zielgruppen-Insights in Adobe Experience Platform verwenden können.
+Um besser zu verstehen, wie Sie Segmente aus Zielgruppenerkenntnissen in Adobe Experience Platform verwenden können, schauen wir uns eine fiktive Beispielkampagne an.
 
-Nehmen wir an, Ihr Unternehmen bietet Ihren Kunden in den USA einen monatlichen, abonnementbasierten Service an. Sie möchten Kunden identifizieren, deren Abonnements in den Nächsten acht Tagen erneuert werden sollen, deren Abonnement jedoch noch nicht verlängert wurde. Um diese Kunden zu halten, möchten Sie ihnen mithilfe von Adobe Experience Platform ein Werbeangebot per E-Mail senden.
+Nehmen wir an, Ihr Unternehmen bietet Ihren Kunden in den USA einen monatlichen, abonnementbasierten Service an. Sie möchten Kunden identifizieren, deren Abonnements in den Nächsten acht Tagen erneuert werden sollen, deren Abonnement jedoch noch nicht verlängert wurde. Um diese Kunden zu halten, möchten Sie ihnen ein Werbeangebot per E-Mail senden, indem Sie Adobe Experience Platform verwenden.
 
 In diesem Beispiel möchten wir die Werbe-E-Mail-Kampagne einmal ausführen. Dieser Artikel behandelt nicht den Anwendungsfall, die Kampagne mehr als einmal auszuführen.
 
@@ -93,7 +93,7 @@ Nachdem Sie das Exportziel gespeichert haben, finden Sie in **Daten** > **Export
 Sie können jetzt [das Segment nach Bedarf exportieren](export-destinations.md#run-exports-on-demand). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md) durchgeführt.
 
 > [!NOTE]
-> Stellen Sie sicher, dass die Anzahl der Datensätze im exportierten Segment innerhalb des zulässigen Grenzwerts Ihrer Adobe Campaign Standard-Lizenz liegt.
+> Stellen Sie sicher, dass die Anzahl der Datensätze im exportierten Segment innerhalb des zulässigen Grenzwerts Ihrer Adobe Campaign Standard-Lizenz liegen.
 
 Exportierte Daten werden in dem oben konfigurierten Azure Blob Storage Container gespeichert. Der folgende Ordnerpfad wird automatisch in Ihrem Container erstellt:
 
@@ -105,26 +105,26 @@ Das *model.json* für die exportierten Entitäten befindet sich auf der *%Export
 
 Beispiel Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definieren Sie das Experience Data Model (XDM) in Adobe Experience Platform
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Experience Data Model (XDM) definieren in Adobe Experience Platform
 
-Bevor die aus Zielgruppe-Insights exportierten Daten in Adobe Experience Platform verwendet werden können, müssen Sie das Experience Data Model-Schema definieren und [die Daten für das Echtzeit-Kundenprofil konfigurieren](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Bevor die exportierten Daten aus Zielgruppenerkenntnissen in Adobe Experience Platform verwendet werden können, müssen wir das Experience Data Model-Schema definieren und [die Daten für das Echtzeit-Kundenprofil konfigurieren](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Lernen Sie, [was XDM ist](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) und verstehen Sie die [Grundlagen der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Importieren Sie Daten in die Adobe Experience Platform
+## <a name="import-data-into-adobe-experience-platform"></a>Daten importieren in Adobe Experience Platform
 
-Nachdem alles vorhanden ist, müssen wir die vorbereiteten Zielgruppen-Daten aus Zielgruppen-Insights in Adobe Experience Platform importieren, um Profile zu erstellen.
+Nun, da alles an seinem Platz ist, müssen wir die vorbereiteten Zielgruppenendaten aus den Zielgruppenerkenntnissen Adobe Experience Platform importieren.
 
 Zuerst, [erstellen Sie eine Azure Blob Storage-Quellverbindung](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Nachdem Sie die Quellverbindung definiert haben, [konfigurieren Sie einen Dataflow](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) für eine Cloud-Speicher-Batch-Verbindung zum Importieren der Segmentausgabe von Zielgruppen-Insights in Adobe Experience Platform.
+Nachdem Sie die Quellverbindung definiert haben, [konfigurieren Sie einen Datenfluss](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) für eine Cloud-Speicher-Batch-Verbindung zum Importieren der Segmentausgabe von Zielgruppenerkenntnissen in Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Erstellen Sie eine Zielgruppe in Adobe Campaign Standard
 
-Zum Senden der E-Mail für diese Kampagne verwenden wir Adobe Campaign Standard. Nach dem Importieren der Daten in Adobe Experience Platform müssen wir [eine Zielgruppe erstellen](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) in Adobe Campaign Standard unter Verwendung der Daten in Adobe Experience Platform.
+Zum Senden der E-Mail für diese Kampagne verwenden wir Adobe Campaign Standard. Nach dem Importieren der Daten in Adobe Experience Platform müssen wir [eine Zielgruppe erstellen](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) in Adobe Campaign Standard mit den Daten in Adobe Experience Platform.
 
 
-Lernen wie man, [den Segment Builder verwendet](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) in Adobe Campaign Standard, um ein Publikum basierend auf den Daten in Adobe Experience Platform zu definieren.
+Lernen wie man [den Segment-Builder nutzt](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) in Adobe Campaign Standard zum Definieren einer Zielgruppe basierend auf den Daten in der Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Erstellen und senden Sie die E-Mail mit Adobe Campaign Standard
 

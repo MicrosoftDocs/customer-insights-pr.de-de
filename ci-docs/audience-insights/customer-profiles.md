@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554617"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032803"
 ---
 # <a name="customer-profiles"></a>Kundenprofile
 
@@ -67,9 +67,9 @@ Kundendetails enthalten:
 
 Wählen Sie **Zurück zu Kunden**, um zur Kundensuchseite zurückzukehren.
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte,
 
-[Fügen Sie weitere Datenquellen hinzu](data-sources.md) oder [erstellen Sie Kundensegmente](segments.md).
+[Weitere Datenquellen hinzufügen](data-sources.md), [Vereinheitlichte Profile qnreichern](enrichment-hub.md), oder [Segmente erstellen](segments.md), um mit einheitlichen Profilen in anderen Anwendungen zu arbeiten.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
