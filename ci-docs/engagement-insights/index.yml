@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Kundenbindungserkenntnisse (Vorschauversion) in Dynamics 365 Customer Insights
+summary: Sammeln Sie Daten für Ihre Websites. Verstehen Sie interaktiv, wie Kunden mit Ihren Websites interagieren und sie nutzen. Nutzen Sie die tiefe Integration der Funktionen Kundenbindungserkenntnisse und Zielgruppenerkenntnisse, um Ihre Echtzeit-Verhaltensanalysen mit Kundenprofilberichten zu bereichern. Bereichern Sie Kundenprofile mit Webaktivitäten, um Verhaltensdaten in Echtzeit zusammen mit relevanten Kundendaten abzurufen. Transformieren Sie Ihr Unternehmen, um aus Ihren Kundendaten einen unmittelbaren Nutzen zu ziehen.
+metadata:
+  title: Dokumentation zur Funktion Kundenbindungserkenntnisse (Vorschauversion)
+  description: Hilfe-Hub mit wichtigen Links zur Funktion Kundenbindungserkenntnisse.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036237"
+landingContent:
+- title: Info
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Funktionalitätsübersicht
+      url: overview.md
+    - text: Begriffe und Konzepte
+      url: glossary.md
+    - text: Kundenbindungserkenntnisse entdecken
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Onboarding
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Los geht's
+      url: get-started.md
+    - text: Arbeitsbereich erstellen
+      url: create-workspace.md
+    - text: Instrumentieren Sie Ihre Website
+      url: instrument-website.md
+- title: Berichte
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Berichte anzeigen
+      url: view-reports.md
+    - text: Benutzerdefinierte Berichte erstellen
+      url: custom-reports.md
+    - text: Bericht über vereinheitlichte Profile anzeigen
+      url: profile-reports.md
+    - text: Verkaufstrichterberichte erstellen
+      url: funnel-reports.md
+- title: Ereignisse
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Detailliertere Ereignisse erstellen
+      url: refined-events.md
+    - text: Ereignisse exportieren
+      url: export-events.md
+    - text: Löschen und Exportieren von Personendaten
+      url: delete-export-personal-data.md
+- title: Entwicklerressourcen
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Entwicklerressourcen
+      url: developer-resources.md
+    - text: Web SDK-Beispiel
+      url: websdk-sample.md
+    - text: Erweiterte Web SDK-Szenarien
+      url: advanced-SDK-implementation.md
+    - text: Android SDK Beispiel
+      url: get-started-android.md
+    - text: iOS SDK-Beispiel
+      url: get-started-ios.md
+- title: Verwaltung
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Verwalten von Umgebungen und Arbeitsbereichen
+      url: manage-environments-workspaces.md
+    - text: Mit Zielgruppenerkenntnissen verbinden
+      url: configure-connections.md
+    - text: Verwalten von Cookies und Benutzereinwilligungen
+      url: user-consent-storage.md
