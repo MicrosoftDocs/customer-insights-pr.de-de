@@ -4,17 +4,17 @@ description: So verwenden Sie Verkaufstrichterberichte, um zu verstehen, wie Ihr
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032254"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498641"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Erstellen und Verwalten von Verkaufstrichter-Berichten
 
@@ -158,4 +158,21 @@ Sie können den Namen eines Verkaufstrichterberichts ändern, löschen oder die 
 1. Wählen Sie einen Namen aus, um den Bericht zu öffnen.
 
 1. Wählen Sie den Schritt aus, den Sie entfernen möchten, und wählen Sie dann **Löschen** aus.
+
+## <a name="funnel-insights"></a>Verkaufstrichtererkenntnisse 
+
+Interaktionserkenntnisse bieten jetzt Verkaufstrichtererkenntnisse für Kunden. Nutzen Sie Verkaufstrichtererkenntnisse, um tiefere Einblicke in das Kundenverhalten zu den Schritten in Ihrem Verkaufstrichterbericht zu erhalten. Wenn Sie einen neuen Verkaufstrichterbericht erstellen und speichern, werden automatisch Verkaufstrichtererkenntnisse für Ihren Bericht generiert. 
+
+Sie können Verkaufstrichtererkenntnisse aus den folgenden Kategorien sowohl auf Haupt- als auch auf Schrittebene anzeigen: 
+
+ - Konversionsrate 
+ - Übergangszeit 
+ - Abschlusszeit 
+
+Nutzen Sie diese Einblicke, um das Kundenverhalten genauer zu untersuchen und Absprungpunkte und Konvertierungen für Ihren Verkaufstrichterbericht besser zu verstehen. 
+
+Verkaufstrichtererkenntnisse werden alle 24 Stunden neu berechnet, oder wenn Sie den Verkaufstrichterbericht **speichern**. 
+
+> [!NOTE]
+> Um Erkenntnisse für Ihren Verkaufstrichter anzuzeigen, müssen Sie Ihren Bericht jedes Mal speichern, wenn Sie Änderungen vornehmen. 
 

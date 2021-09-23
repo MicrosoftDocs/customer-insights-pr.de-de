@@ -1,20 +1,20 @@
 ---
 title: Produktempfehlungsvorhersage
 description: Sagen Sie voraus, welche Produkte ein Kunde wahrscheinlich kaufen oder mit denen er interagieren wird.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034955"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494538"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktempfehlungsvorhersage (Vorschau)
 
@@ -89,23 +89,24 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 
 ### <a name="add-required-data"></a>Erforderliche Daten hinzufügen
 
-1. Wählen Sie **Daten hinzufügen** für **Kundentransaktionsverlauf** und wählen Sie die Entität, die die Informationen zur Transaktion/Kaufhistorie bereitstellt, wie in den [Voraussetzungen](#prerequisites) beschrieben.
+1. Wählen Sie **Daten hinzufügen** aus, und wählen Sie den Aktivitätstyp im Seitenbereich aus, der die erforderlichen Transaktions- oder Kaufverlaufsinformationen enthält.
 
-1. Ordnen Sie die semantischen Felder den Attributen innerhalb Ihrer Entität „Kaufhistorie“ zu und wählen Sie **Nächste**. Beschreibungen der Felder finden Sie unter [Voraussetzungen](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Definieren der Entitätsbeziehung.](media/product-recommendation-purchasehistorymapping.PNG "Seite „Kaufhistorie“ mit semantischen Attributen, die Feldern in der ausgewählten Entität „Kaufhistorie“ zugeordnet sind")
+1. Wählen Sie unter **Aktivitäten wählen** die spezifischen Aktivitäten aus der ausgewählten Aktivität aus, auf die sich die Berechnung konzentrieren soll.
 
-1. Wenn die Felder nicht ausgefüllt sind, konfigurieren Sie die Beziehung von Ihrer Entität „Kaufhistorie“ zur Entität *Kunde*.
-    1. Wählen Sie die Entität **Kaufhistorie**.
-    1. Wählen Sie das **Feld**, das den Kunden in der Entität Kaufhistorie identifiziert. Es muss sich auf die primäre Kunden-ID Ihrer Entität *Kunde* beziehen.
-    1. Wählen Sie das Feld **Kundenentität**, das sich auf Ihre primäre Kundenentität bezieht.
-    1. Geben Sie einen Namen ein, der die Beziehung beschreibt.
-       > [!div class="mx-imgBorder"]
-       > ![Kaufhistorie-Seite, die die Erstellung einer Beziehung zum Kunden anzeigt.](media/model-purchase-join.png "Kaufhistorie-Seite, die die Erstellung einer Beziehung zum Kunden anzeigt.")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Seitenbereich, der die Auswahl bestimmter Aktivitäten unter dem semantischen Typ zeigt.":::
+
+1. Wenn Sie die Aktivität noch keinem semantischen Typ zugeordnet haben, wählen Sie hierzu **Bearbeiten** aus. Die geführte Erfahrung zur Zuordnung semantischer Aktivitäten wird geöffnet. Ordnen Sie Ihre Daten jetzt den entsprechenden Feldern im ausgewählten Aktivitätstyp zu.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Seite zum Festlegen des Aktivitätstyps.":::
+
+1. Nachdem Sie die Aktivität dem entsprechenden semantischen Typ zugeordnet haben, wählen Sie **Weiter** aus, um fortzufahren. 
+ 
+1. Ordnen Sie die semantischen Attribute den Feldern zu, die zum Ausführen des Modells erforderlich sind.
 
 1. Wählen Sie **Speichern** aus.
 
-1. Klicken Sie auf **Weiter**.
+1. Wählen **Weiter** aus.
+
 
 ### <a name="configure-product-filters"></a>Produktfilter konfigurieren
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033860"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466623"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Anreichern von Kundenprofilen mit Marken- und Interessenbeziehungen (Vorschau)
 
@@ -126,6 +126,8 @@ Nachdem Sie den Anreicherungsprozess ausgeführt haben, gehen Sie zu **Meine Anr
 :::image type="content" source="media/my-enrichments.png" alt-text="Vorschau der Ergebnisse nach Ausführung des Anreicherungsprozesses.":::
 
 Überprüfen Sie die angereicherten Daten durch Auswahl **Angereicherte Daten anzeigen** in der Grafik. Angereicherte Daten für Marken gehen an die Entität **BrandAffinityFromMicrosoft**. Daten für Interessen sind in der Entität **InterestAffinityFromMicrosoft**. Sie finden diese Entitäten auch in der Gruppe **Anreicherung** unter **Daten** > **Entitäten**.
+
+Sie sehen ein Diagramm mit der Anzahl der angereicherten Kundenprofile im Zeitverlauf und eine Vorschau der angereicherten Entität. Wählen Sie **Mehr anzeigen** in der Vorschaukachel, um die angereicherte Entität zu öffnen.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Siehe Anreicherungsdaten auf der Kundenkarte
 

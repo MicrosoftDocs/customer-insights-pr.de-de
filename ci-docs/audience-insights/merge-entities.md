@@ -1,7 +1,7 @@
 ---
 title: Entitäten bei der Datenvereinheitlichung zusammenführen
 description: Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035001"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494318"
 ---
 # <a name="merge-entities"></a>Entitäten zusammenführen
 
@@ -66,7 +66,7 @@ Um zusammengeführte Felder zu trennen, suchen Sie das Attribut in der Tabelle. 
 
 Schließen Sie ein Attribut aus dem einheitlichen Kundenprofil aus. Wenn das Feld in anderen Prozessen verwendet wird, z. B. in einem Segment, entfernen Sie es aus diesen Prozessen, bevor Sie es aus dem Kundenprofil ausschließen. 
 
-1. Wählen Sie das zusammengeführte Feld aus.
+1. Wählen Sie ein zusammengeführtes Feld aus.
   
 1. Wählen Sie **mehr anzeigen** und wählen Sie **ausschließen** aus.
 
@@ -76,17 +76,40 @@ Schließen Sie ein Attribut aus dem einheitlichen Kundenprofil aus. Wenn das Fel
 
 Auf der Seite **Zusammenführen** wählen Sie **Ausgeschlossene Felder**, um die Liste aller ausgeschlossenen Felder anzuzeigen. In diesem Bereich können Sie ausgeschlossene Felder wieder hinzufügen.
 
+## <a name="edit-a-merged-field"></a>Ein zusammengeführtes Feld bearbeiten
+
+1.  Wählen Sie ein zusammengeführtes Feld aus.
+
+1.  Wählen Sie **mehr anzeigen** und wählen Sie **bearbeiten** aus.
+
+1.  Geben Sie mit einer der drei Optionen an, wie die Felder kombiniert oder zusammengeführt werden sollen:
+    - **Relevanz**: Identifiziert den Gewinnerwert basierend auf dem für die teilnehmenden Felder angegebenen Relevanzrang. Dies ist die standardmäßige Zusammenführungsoption. Wählen Sie **Nach oben/unten** aus, um die Wichtigkeitseinstufungen festzulegen.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Relevanz-Option im Dialogfeld zum Zusammenführen von Feldern."::: 
+    - **Am neuesten**: Identifiziert den Gewinnerwert basierend auf der größten Aktualität. Erfordert ein Datum oder ein numerisches Feld für jede teilnehmende Entität im Bereich des Zusammenführens von Feldern, um die Aktualität zu definieren.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Aktualitäts-Option im Dialogfeld zum Zusammenführen von Feldern.":::
+    - **Am ältesten**: Identifiziert den Gewinnerwert basierend auf der geringsten Aktualität. Erfordert ein Datum oder ein numerisches Feld für jede teilnehmende Entität im Bereich des Zusammenführens von Feldern, um die Aktualität zu definieren.
+
+1.  Sie können zusätzliche Felder hinzufügen, um am Zusammenführungsprozess teilzunehmen.
+
+1.  Sie können das zusammengeführte Feld auch umbenennen.
+
+1. Wählen Sie **Fertig** aus, um Ihre Änderungen zu übernehmen.
+
+1. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten. 
+
 ## <a name="manually-combine-fields"></a>Felder manuell kombinieren
 
 Zusammengeführtes Attribut manuell definieren. 
 
 1. Auf der Seite **Zusammenführen** wählen Sie **Felder kombinieren**.
 
-1. Einen **Namen** und einen **Name des Ausgabefeldes** bereitstellen.
+1. Geben Sie die Richtlinie für das Zusammenführen von Gewinnern in der Dropdown-Liste **Felder kombinieren nach** an.
 
 1. Ein Feld zum Hinzufügen auswählen. Wählen Sie **Felder hinzufügen** aus, um mehr Felder zu kombinieren.
 
-1. Bestätigen Sie den Ausschluss.
+1. Einen **Namen** und einen **Name des Ausgabefeldes** bereitstellen.
+
+1. Wählen Sie **Fertig** aus, um Ihre Änderungen zu übernehmen.
 
 1. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten. 
 
@@ -103,6 +126,27 @@ Einige Entitäten enthalten mehr Details als andere. Wenn eine Entität die neue
 1. Die Änderung bestätigen.
 
 1. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten.
+
+## <a name="configure-customer-id-generation"></a>Generierung von Kunden-IDs konfigurieren 
+
+Nachdem Sie das Zusammenführen von Feldern konfiguriert haben, können Sie definieren, wie CustomerId-Werte, die eindeutigen Kundenprofil-IDs, generiert werden. Der Zusammenführungsschritt im Datenvereinheitlichungsprozess generiert die eindeutige Kundenprofilkennung. Die Kennung ist die CustomerId in der Entität *Kunde*, die aus dem Datenvereinheitlichungsprozess resultiert. 
+
+Die CustomerId in der Kundenentität basiert auf einem Hash des ersten Werts der Gewinner-Primärschlüssel ungleich null. Diese Schlüssel stammen von den Entitäten, die in der Abgleichs- und Zusammenführungsphase verwendet werden und von der Zuordnungsreihenfolge beeinflusst werden.Die generierte CustomerID kann sich also ändern, wenn sich ein Primärschlüsselwert in der primären Entität der Zuordnungsreihenfolge ändert. Folglich repräsentiert der Primärschlüsselwert möglicherweise nicht immer denselben Kunden.
+
+Durch die Konfiguration einer stabilen Kunden-ID können Sie dieses Verhalten vermeiden.
+
+**Eindeutige Kunden-ID konfigurieren**
+
+1. Gehen Sie zu **Vereinheitlichen** > **Zusammenführen**.
+
+1. Wählen Sie auf der Seite **Zusammenführen** die Registerkarte **Schüssel** aus. 
+
+1. Bewegen Sie den Mauszeiger über die Zeile **CustomerId**, und wählen Sie die Option **Konfigurieren**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Steuerung zum Anpassen der ID-Generierung.":::
+
+1. Wählen Sie bis zu fünf Felder aus, die eine eindeutige Kunden-ID enthalten und stabiler sind. Datensätze, die nicht Ihrer Konfiguration entsprechen, verwenden stattdessen eine vom System konfigurierte ID.  
+
+1. Wählen Sie **Fertig**, und führen Sie den Zusammenführungsprozess aus, um Ihre Änderungen zu übernehmen.
 
 ## <a name="run-your-merge"></a>Führen Sie Ihre Zusammenführung durch
 

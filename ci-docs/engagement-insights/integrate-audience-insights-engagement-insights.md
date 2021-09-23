@@ -1,19 +1,19 @@
 ---
 title: Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Kundenbindungserkenntnissen
 description: Erstellen Sie eine aktive Verknüpfung zwischen Zielgruppenerkenntnissen und Bindungserkenntnissen, um den bidirektionalen Datenaustausch zu ermöglichen.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461012"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487106"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Kundenbindungserkenntnissen
 
@@ -26,14 +26,14 @@ Verwenden Sie einheitliche Profile und Segmente aus Zielgruppenerkenntnissen fü
 ## <a name="prerequisites"></a>Anforderungen
 
 - Zielgruppenerkenntnis-Profile müssen in einem Azure Data Lake Storage Konto, das Sie besitzen, oder in einem [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; verwalteten Data Lake gespeichert werden. 
-
+- Ihre Zielgruppenerkenntnis-Umgebung sollte eine zugeordnete Dataverse-Umgebung haben. Und wenn diese Umgebung Dataverse auch für die Datenspeicherung verwendet, aktivieren Sie unbedingt die Option **Datenfreigabe aktivieren** in den Zielgruppenerkenntnissen. Weitere Informationen finden Sie unter [Erstellen und Konfigurieren einer kostenpflichtigen Umgebung in Zielgruppenerkenntnissen](../audience-insights/get-started-paid.md).
 - Sie benötigen Administrator-Berechtigungen sowohl für die Umgebungen mit Bindungserkenntnissen als auch für Zielgruppenerkenntnissen.
-
 - Verknüpfte Umgebungen müssen sich in derselben geografischen Region befinden.
 
 > [!NOTE]
-> - Wenn es sich bei Ihrem Zielgruppenerkenntnis-Abonnement um eine Testversion handelt, die einen Zielgruppenerkenntnis intern verwalteten Data Lake verwendet, wenden Sie sich an[pirequest@microsoft.com](mailto:pirequest@microsoft.com) für Unterstützung. 
-> - Wenn Ihre Zielgruppenerkenntnis-Umgebung Ihren eigenen Azure Data Lake Storage verwendet, um Daten zu speichern, müssen Sie Ihrem Speicherkonto einen Azure-Dienstprinzipal für Bindungserkenntnisse hinzufügen. Weitere Informationen finden Sie unter [Verbinden Sie sich mit einem Azure Data Lake Storage Konto mit einem Azure-Dienstprinzipal für Zielgruppenerkenntnisse](../audience-insights/connect-service-principal.md). Außerdem sollte Ihrer Zielgruppenerkenntnis-Umgebung eine zugeordnete [Dataverse Umgebung](../audience-insights/get-started-paid.md) haben. 
+> - Wenn es sich bei Ihrem Zielgruppenerkenntnis-Abonnement um eine Testversion handelt, die einen Zielgruppenerkenntnis intern verwalteten Data Lake verwendet, wenden Sie sich an [pirequest@microsoft.com](mailto:pirequest@microsoft.com) für Unterstützung. 
+> - Wenn Ihre Zielgruppenerkenntnis-Umgebung Ihren eigenen Azure Data Lake Storage verwendet, um Daten zu speichern, müssen Sie Ihrem Speicherkonto einen Azure-Dienstprinzipal für Bindungserkenntnisse hinzufügen. Weitere Informationen finden Sie unter [Verbinden Sie sich mit einem Azure Data Lake Storage Konto mit einem Azure-Dienstprinzipal für Zielgruppenerkenntnisse](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Eine Umgebungsverknüpfung erstellen
 
@@ -75,6 +75,7 @@ Nach der verknüpfung von Umgebungen können Sie optionale Funktionen für die v
 
    > [!IMPORTANT]
    > Wenn Sie in diesem Schritt keine Nutzer explizit hinzufügen, werden die Daten für Nutzer in Bindungserkenntnissen ausgeblendet.
+   > Damit Zielgruppenerkenntnis-Segmente in den Bindungserkenntnissen angezeigt werden, müssen Sie zuerst [Merge -und Downstream-Prozesse ausführen](../audience-insights/merge-entities.md). Nachgelagerte Prozesse sind wichtig, weil sie eine einzigartige Tabelle generieren, die Zielgruppenerkenntnis-Segmente für die gemeinsame Nutzung mit Bindungserkenntnissen vorbereitet. (Wenn eine Systemaktualisierung geplant ist, umfasst sie automatisch nachgelagerte Prozesse.)
 
 1. Überprüfen Sie Ihren Abschnitt und wählen Sie **Fertig**.
 

@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie das iOS SDK personalisieren und ausführen
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036872"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494229"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Erste Schritte mit der iOS SDK
 
@@ -45,11 +45,36 @@ Beginnen Sie den Vorgang, indem Sie einen Arbeitsbereich auswählen, in dem Sie 
 
 - Wenn Sie keinen bestehenden Arbeitsbereich haben, wählen Sie **Neuer Arbeitsbereich** und befolgen Sie die Schritte zum Erstellen eines [neuen Arbeitsbereichs](create-workspace.md).
 
+- Nachdem Sie einen Arbeitsbereich erstellt haben, gehen Sie zu **Administrator** > **Arbeitsplatz** und wählen **Installationsanleitung**.
+
 ## <a name="configure-the-sdk"></a>Konfigurieren des SDK
 
-Nachdem Sie das SDK heruntergeladen haben, können Sie damit in Xcode arbeiten, um Ereignisse zu aktivieren und zu definieren.
+Nachdem Sie das SDK heruntergeladen haben, können Sie damit in Xcode arbeiten, um Ereignisse zu aktivieren und zu definieren. Hierzu stehen zwei Möglichkeiten zur Verfügung
 
-1. Nachdem Sie einen Arbeitsbereich erstellt haben, gehen Sie zu **Administrator** > **Arbeitsplatz** und wählen **Installationsanleitung**.
+### <a name="option-1-using-cocoapods-recommended"></a>Option 1: Verwenden von CocoaPods (empfohlen)
+CocoaPods ist ein Abhängigkeitsmanager für Swift- und Objective-C-Cocoa-Projekte. Dadurch wird die Integration des Interaktionserkenntnisse SDK für iOS einfacher. CocoaPods ermöglicht Ihnen außerdem ein Upgrade auf die neueste Version des Interaktionserkenntnisse SDK. So verwenden Sie CocoaPods, um das Interaktionserkenntnisse SDK in Ihr Xcode-Projekt zu integrieren. 
+
+1. Installieren Sie CocoaPods. 
+
+1. Erstellen Sie eine neue Datei namens Podfile im Stammverzeichnis Ihres Projekts, und fügen Sie die folgenden Anweisungen hinzu.Ersetzen Sie YOUR_TARGET_PROJECT_NAME durch den Namen Ihres Xcode-Projekts. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+Die obige Pod-Konfiguration enthält sowohl die Debug- als auch die Releaseversionen des SDK. Wählen Sie diejenige aus, die für Ihr Projekt am besten geeignet ist.
+
+1. Installieren Sie den Pod, indem Sie den folgenden Befehl ausführen: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>Option 2: Downloadlink verwenden
 
 1. Laden Sie die [Kundenbindungseinblicke iOS SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) herunter und platzieren Sie die `EIObjC.xcframework` Datei im `Frameworks` Ordner.
 

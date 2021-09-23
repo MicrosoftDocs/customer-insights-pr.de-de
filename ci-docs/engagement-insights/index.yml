@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Kundenbindungserkenntnisse (Vorschauversion) in Dynamics 365 Customer Insights
+title: Funktion Interaktionserkenntnisse in Dynamics 365 Customer Insights (Vorschau)
 summary: Sammeln Sie Daten für Ihre Websites. Verstehen Sie interaktiv, wie Kunden mit Ihren Websites interagieren und sie nutzen. Nutzen Sie die tiefe Integration der Funktionen Kundenbindungserkenntnisse und Zielgruppenerkenntnisse, um Ihre Echtzeit-Verhaltensanalysen mit Kundenprofilberichten zu bereichern. Bereichern Sie Kundenprofile mit Webaktivitäten, um Verhaltensdaten in Echtzeit zusammen mit relevanten Kundendaten abzurufen. Transformieren Sie Ihr Unternehmen, um aus Ihren Kundendaten einen unmittelbaren Nutzen zu ziehen.
 metadata:
-  title: Dokumentation zur Funktion Kundenbindungserkenntnisse (Vorschauversion)
+  title: Dokumentation zur Funktion Interaktionserkenntnisse (Vorschauversion)
   description: Hilfe-Hub mit wichtigen Links zur Funktion Kundenbindungserkenntnisse.
   ms.service: customer-insights
   ms.subservice: engagement-insights
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036237"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494183"
 landingContent:
 - title: Info
   linkLists:
   - linkListType: overview
     links:
-    - text: Funktionalitätsübersicht
+    - text: Funktionsvorteile
       url: overview.md
-    - text: Begriffe und Konzepte
+    - text: Glossar der Begriffe
       url: glossary.md
-    - text: Kundenbindungserkenntnisse entdecken
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Neue und aktualisierte Funktionen
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Onboarding
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Instrumentieren Sie Ihre Website
       url: instrument-website.md
-- title: Berichte
+- title: Ansicht und Filterbericht
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Berichte anzeigen
       url: view-reports.md
-    - text: Benutzerdefinierte Berichte erstellen
-      url: custom-reports.md
     - text: Bericht über vereinheitlichte Profile anzeigen
       url: profile-reports.md
-    - text: Verkaufstrichterberichte erstellen
-      url: funnel-reports.md
-- title: Ereignisse
+    - text: Verwenden von Zielgruppensegmenten, um Berichte zu filtern
+      url: integrate-audience-insights-segments.md
+- title: Analysieren
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Verkaufstrichterberichte erstellen
+      url: funnel-reports.md
+    - text: Verhaltensdaten analysieren
+      url: curate-dimensions.md
+    - text: Benutzerdefinierte Berichte erstellen
+      url: custom-reports.md
     - text: Detailliertere Ereignisse erstellen
       url: refined-events.md
     - text: Ereignisse exportieren
       url: export-events.md
-    - text: Löschen und Exportieren von Personendaten
-      url: delete-export-personal-data.md
 - title: Entwicklerressourcen
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: Verwalten von Umgebungen und Arbeitsbereichen
       url: manage-environments-workspaces.md
     - text: Mit Zielgruppenerkenntnissen verbinden
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Verwalten von Cookies und Benutzereinwilligungen
       url: user-consent-storage.md
+    - text: Löschen und Exportieren von Personendaten
+      url: delete-export-personal-data.md
+    - text: Dienstlimits
+      url: ../service-limits.md

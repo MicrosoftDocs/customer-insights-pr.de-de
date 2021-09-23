@@ -1,7 +1,7 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
 description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032527"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469973"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
@@ -29,6 +29,7 @@ Um Anreicherungen erstellen oder bearbeiten zu können, benötigen Sie die Berec
 
 Auf der Registerkarte **Entdecken** finden Sie die folgenden Anreicherungen:
 
+- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
 - [Marken](enrichment-microsoft.md) bereitgestellt von Microsoft
 - [Interessen](enrichment-microsoft.md) bereitgestellt von Microsoft
 - [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft
@@ -62,5 +63,17 @@ Anreicherungen von Drittanbietern werden mithilfe von [Verbindungen](connections
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mehrfachanreicherungen des gleichen Typs
 
 Die zu bereichernde Entität wird während der Anreicherungskonfiguration angegeben, sodass Sie nur eine Teilmenge Ihrer Profile anreichern können. Anreichern von Daten beispielsweise nur für ein bestimmtes Segment. Sie können mehrere Anreicherungen desselben Typs konfigurieren und dieselbe Verbindung wiederverwenden. Bei einigen Anreicherungen ist die Anzahl der Anreicherungen desselben Typs, die erstellt werden können, begrenzt. Die Grenzwerte und die aktuelle Verwendung sind auf der Seite **Anreicherung** zu sehen.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Anzeigen des Fortschritts des Anreicherungsprozesses
+
+Sie finden Details zur Verarbeitung einer Anreicherung, einschließlich ihres Status und potenzieller Probleme, während der Aktualisierung oder nach Abschluss einer Aktualisierung. Verstehen Sie, welche Prozesse beteiligt sind, um eine Anreicherung zu aktualisieren, und wie lange es dauerte, die Prozesse auszuführen. Der Anreicherungsstatus wird unterstützt für Experian, Leadspace, HERE Technologies, SFTP Import und Azure Maps.
+
+Anzeigen des Status der Bereicherung
+
+1. Gehen Sie zu **Daten** > **Anreicherung**. 
+1. Wählen Sie auf der Registerkarte **Meine Anreicherungen** den Status einer Anreicherung aus, um einen Seitenbereich zu öffnen. 
+1. Erweitern Sie im Bereich **Fortschrittsdetails** den Abschnitt **Anreicherungen**. 
+1. Wählen Sie unter der Bereicherung, deren Fortschritt Sie sehen möchten, **Details anzeigen**. 
+1. Im Bereich **Aufgabendetails** wählen Sie **Details anzeigen**, um die Prozesse anzuzeigen, die an der Aktualisierung der Anreicherung beteiligt sind, und deren Status. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

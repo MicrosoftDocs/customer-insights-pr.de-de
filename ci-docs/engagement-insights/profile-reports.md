@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033951"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486119"
 ---
 # <a name="out-of-box-profile-reports"></a>Sofort einsatzbereite Profilberichte
 
@@ -31,7 +31,7 @@ Wenn Sie eine Testversion der Funktion Zielgruppenerkenntnisse oder eine Umgebun
 
 ## <a name="enable-the-customer-profile-report"></a>Aktivieren des Kundenprofilberichts
 
-Ein Umgebungsadministrator muss [eine Verbindung zur Funktion Zielgruppenerkenntnisse erstellen](configure-connections.md).
+Ein Umgebungsadministrator muss [Bindungserkenntnisse und Zielgruppenerkenntnisse verknüpfen](integrate-audience-insights-engagement-insights.md).
 
 Nach Angabe der Verbindungsdetails kann der Administrator anderen Personen in der Organisation Zugriff gewähren, um den Bericht anzuzeigen. Der Umgebungsadministrator, der die Verbindung einrichtet, hat automatisch Zugriff auf den Bericht. 
 

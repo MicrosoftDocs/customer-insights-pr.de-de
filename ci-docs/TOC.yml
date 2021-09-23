@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Neue und aktualisierte Funktionen
       href: audience-insights/whats-new-audience-insights.md
-    - name: Neue Umgebung erstellen
-      href: audience-insights/get-started-paid.md
+    - name: Los geht's
+      items:
+        - name: Erste Schritte
+          href: audience-insights/get-started.md
+        - name: Neue Umgebung erstellen
+          href: audience-insights/get-started-paid.md
+        - name: Zielgruppenerkenntnisse erkunden
+          href: audience-insights/home.md
     - name: Lernmodule
       items:
         - name: Einlesen von Daten
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Erweiterte Adressen
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Mit Azure Maps anreichern
+          href: audience-insights/enrichment-azure-maps.md
         - name: Anreicherung mit HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Anreicherung mit Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: API-Referenzen
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Dienstlimits
-      href: audience-insights/service-limits.md
-    - name: DSR-Anfragen unter DSGVO
-      href: audience-insights/gdpr.md
 - name: Interaktionserkenntnisse (Vorschauversion)
   items:
     - name: Hilfe-Hub
       href: engagement-insights/index.yml
     - name: Funktionalitätsübersicht
       href: engagement-insights/overview.md
-    - name: Kostenlose Testversion
-      href: 'https://pi.dynamics.com/'
     - name: Los geht's
       items:
-        - name: Los geht's
+        - name: Erste Schritte
           href: engagement-insights/get-started.md
         - name: Arbeitsbereich erstellen
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Verwalten von Umgebungen und Arbeitsbereichen
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Konfigurieren Sie Verbindungen
-          href: engagement-insights/configure-connections.md
         - name: Verwalten von Cookies und Benutzereinwilligungen
           href: engagement-insights/user-consent-storage.md
-    - name: DSGVO
-      items:
-        - name: Löschen und Exportieren von Personendaten
-          href: engagement-insights/delete-export-personal-data.md
     - name: Regionale Verfügbarkeit
       href: engagement-insights/regional-availability.md
-    - name: Dienstlimits
-      href: engagement-insights/quotas.md
 - name: Integrieren Sie Publikum und Einblicke in das Engagement
   items:
     - name: Kundenbindungserkenntnisse mit Zielgruppenerkenntnissen verknüpfen
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Verwenden Sie demografische Dimensionen zum Aufteilen von Verhaltensdaten
       href: engagement-insights/curate-dimensions.md
+- name: Dienstlimits
+  href: service-limits.md
+- name: DSR-Rechte und -Anfragen
+  href: dsr-rights-requests.md
 - name: Support erhalten
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

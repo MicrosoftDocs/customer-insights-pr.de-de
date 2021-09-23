@@ -1,7 +1,7 @@
 ---
 title: Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Dienstprinzipals
 description: Verwenden Sie einen Azure-Dienstprinzipal, um eine Verbindung zu Ihrem eigenen Data Lake herzustellen.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461147"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483524"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Berechtigungen haben. Anstatt dass sich Anwendungen als voll privilegierter Benutzer anmelden müssen, bietet Azure Dienstprinzipale an. Lesen Sie weiter, um zu erfahren, wie Sie Dynamics 365 Customer Insights mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals anstelle von Speicherkontoschlüsseln verbinden. 
 
-Sie können den Dienstprinzipal verwenden, um sicher [einen Common Data Model Ordner als Datenquelle hinzuzufügen oder zu bearbeiten](connect-common-data-model.md), oder [eine Umgebung zu erstellen oder zu aktualisieren](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Sie können den Dienstprinzipal verwenden, um sicher [einen Common Data Model Ordner als Datenquelle hinzuzufügen oder zu bearbeiten](connect-common-data-model.md), oder [eine Umgebung zu erstellen oder zu aktualisieren](get-started-paid.md).
 
 > [!IMPORTANT]
-> - Das Data Lake Storage-Konto verwendet<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> der Dienstprinzipal muss [hierarchische Namespace aktiviert haben](/azure/storage/blobs/data-lake-storage-namespace).
+> - Für das Data Lake Storage-Konto, das den Dienstprinzipal verwendet, muss der [hierarchische Namespace aktiviert sein](/azure/storage/blobs/data-lake-storage-namespace).
 > - Sie benötigen Admin-Berechtigungen für Ihr Azure-Abonnement, um das Service-Prinzipal zu erstellen.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Erstellen eines Azure-Dienstprinzipals für Customer Insights
@@ -38,7 +38,7 @@ Bevor Sie einen neuen Dienstprinzipal für Zielgruppenerkenntnisse oder Bindungs
 
 3. Unter **Verwalten**, wählen Sie **Unternehmensanwendungen**.
 
-4. Suchen Sie nach Microsoft<!--note from editor: Via Microsoft Writing Style Guide.--> Anwendungs-ID:
+4. Suchen Sie nach der Microsoft-Anwendungs-ID:
    - Zielgruppenerkenntnisse: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` namens `Dynamics 365 AI for Customer Insights`
    - Bindungserkenntnisse: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` namens `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Bevor Sie einen neuen Dienstprinzipal für Zielgruppenerkenntnisse oder Bindungs
 6. Wenn keine Ergebnisse zurückgegeben werden, erstellen Sie einen neuen Dienstprinzipal.
 
 >[!NOTE]
->Um die volle Kraft von Dynamics 365 Customer Insights zu nutzen, schlagen wir vor, dass Sie beide Apps zum Dienstprinzipal hinzufügen.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Um die volle Kraft von Dynamics 365 Customer Insights zu nutzen, schlagen wir vor, dass Sie beide Apps zum Dienstprinzipal hinzufügen.
 
 ### <a name="create-a-new-service-principal"></a>Erstellen Sie ein neues Service-Prinzipal
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Neueste Version von Azure Active Directory PowerShell für Graph. Weitere Informationen finden Sie unter [Installieren von Azure Active Directory PowerShell für Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. Wählen Sie auf Ihrem PC die Windows-Taste auf Ihrer Tastatur und suchen Sie nach **Windows PowerShell** und wählen Sie **Als Administrator ausführen**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. Wählen Sie auf Ihrem PC die Windows-Taste auf Ihrer Tastatur und suchen Sie nach **Windows PowerShell** und wählen Sie **Als Administrator ausführen**.
    
    1. Geben Sie in dem sich öffnenden PowerShell-Fenster `Install-Module AzureAD` ein.
 
 2. Erstellen Sie den Dienstprinzipal für Customer Insights mit dem Azure AD PowerShell-Modul.
 
-   1. Geben Sie im PowerShell-Fenster `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure` ein. *[Ihre Mandant-ID]* ersetzen<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> mit der tatsächlichen ID Ihres Mandanten, in dem Sie den Dienstprinzipal erstellen möchten. Der Parameter für den Umgebungsnamen `AzureEnvironmentName` ist optional.
+   1. Geben Sie im PowerShell-Fenster `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure` ein. Ersetzen Sie *[Ihre Mandanten-ID]* durch die tatsächliche ID Ihres Mandanten, bei dem Sie das Prinzipal erstellen wollen. Der Parameter für den Umgebungsnamen `AzureEnvironmentName` ist optional.
   
    1. Geben Sie `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"` ein. Dieser Befehl erstellt den Service Principal für Zielgruppen-Insights für den ausgewählten Mandanten. 
 
-   1. Geben Sie `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"` ein. Dieser Befehl erstellt den Dienstprinzipal für Bindungserkenntnisse<!--note from editor: Edit okay?--> auf dem ausgewählten Mandanten.
+   1. Geben Sie `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"` ein. Dieser Befehl erstellt den Dienstprinzipal für Bindungserkenntnisse auf dem ausgewählten Mandanten.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Erteilen Sie dem Service Principal Berechtigungen für den Zugriff auf das Speicherkonto
 
@@ -90,7 +90,7 @@ Es kann bis zu 15 Minuten dauern, bis die Änderungen propagiert werden.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Geben Sie die Azure Ressourcen-ID oder die Azure Abonnementdetails im Anhang des Speicherkontos für Zielgruppenerkenntnisse ein
 
-Sie können<!--note from editor: Edit suggested only if this section is optional.--> ein Data Lake Storage-Konto in Zielgruppenerkenntnissen anhängen um [Ausgabedaten zu speichern](manage-environments.md) oder [als Datenquelle zu nutzen](connect-common-data-service-lake.md). Mit dieser Option können Sie zwischen einem ressourcenbasierten oder einem abonnementbasierten Ansatz wählen. Befolgen Sie je nach gewähltem Ansatz das Verfahren in einem der folgenden Abschnitte.<!--note from editor: Suggested.-->
+Sie können ein Data Lake Storage-Konto in Zielgruppenerkenntnissen anhängen um [Ausgabedaten zu speichern](manage-environments.md) oder [als Datenquelle zu nutzen](connect-common-data-service-lake.md). Mit dieser Option können Sie zwischen einem ressourcenbasierten oder einem abonnementbasierten Ansatz wählen. Befolgen Sie je nach gewähltem Ansatz das Verfahren in einem der folgenden Abschnitte.
 
 ### <a name="resource-based-storage-account-connection"></a>Ressourcen-basierte Speicherkonto-Verbindung
 

@@ -1,20 +1,20 @@
 ---
 title: Kundenaktivitäten
-description: Definieren Sie Kundenaktivitäten und zeigen Sie diese in der Kundenzeitleiste an.
-ms.date: 04/07/2021
+description: Definieren Sie Kundenaktivitäten, und zeigen Sie diese in einer Zeitskala auf Kundenprofilen an.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033630"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494410"
 ---
 # <a name="customer-activities"></a>Kundenaktivitäten
 
@@ -60,12 +60,15 @@ Ihre Datenquellen umfassen Entitäten mit Transaktions- und Aktivitätsdaten aus
       - **Zusätzliches Detail**: Feld mit relevanten Informationen für diese Aktivität.
       - **Symbol**: Symbol, das diesen Aktivitätstyp am besten darstellt.
       - **Webadresse**: Feld mit einer URL mit Informationen zu dieser Aktivität. Zum Beispiel das Transaktionssystem, aus dem diese Aktivität stammt. Diese URL kann ein beliebiges Feld aus der Datenquelle sein, oder sie kann mit Hilfe einer Power-Query-Transformation als neues Feld konstruiert werden. Die URL-Daten werden in der *Einheitliche Aktivität*-Entität gespeichert, die mit [APIs](apis.md) im Downstream verbraucht werden kann.
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Geben Sie die Kundenaktivitätsdaten in einer „Einheitliche Aktivität“-Entität an.":::
+
+   - **In der Zeitachse anzeigen**
+      - Wählen Sie aus, ob diese Aktivität in der Zeitskalaansicht Ihren Kundenprofilen angezeigt werden soll. Wählen Sie **Ja** aus, um die Aktivität in der Zeitskala anzuzeigen, oder **Nein**, um sie zu verbergen.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Geben Sie die Kundenaktivitätsdaten in einer „Einheitliche Aktivität“-Entität an.":::
 
 1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. Sie können **Abschließen und überprüfen** auswählen, um die Aktivität jetzt mit dem Aktivitätstyp **Andere** zu speichern. 
 
-1. Im Schritt **Aktivitätstyp** wählen Sie Schritt für Schritt den Aktivitätstyp und optional aus, ob Sie einige der Aktivitätstypen für die Verwendung in anderen Bereichen von Customer Insights semantisch zuordnen möchten. Zurzeit können *Abonnement* und *SalesOrderLine* Aktivitätstypen semantisch zugeordnet werden, nachdem die Felder für die Zuordnung definiert wurden. Wenn ein Aktivitätstyp für die neue Aktivität nicht relevant ist, können Sie *Andere* oder *Neu erstellen* für einen benutzerdefinierten Aktivitätstyp auswählen.
+1. Im Schritt **Aktivitätstyp** wählen Sie Schritt für Schritt den Aktivitätstyp und optional aus, ob Sie einige der Aktivitätstypen für die Verwendung in anderen Bereichen von Customer Insights semantisch zuordnen möchten. Zurzeit können die Aktivitätstypen *Feedback*, *Treue*, *SalesOrder*, *SalesOrderLine* und *Abonnement* semantisch zugeordnet werden, nachdem die Felder für die Zuordnung definiert wurden. Wenn ein Aktivitätstyp für die neue Aktivität nicht relevant ist, können Sie *Andere* oder *Neu erstellen* für einen benutzerdefinierten Aktivitätstyp auswählen.
 
 1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. 
 

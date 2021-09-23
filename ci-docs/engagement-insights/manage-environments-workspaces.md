@@ -4,17 +4,17 @@ description: So können Sie Arbeitsbereiche und Umgebungen erstellen, umbenennen
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034041"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486034"
 ---
 # <a name="manage-environments-and-workspaces"></a>Verwalten von Umgebungen und Arbeitsbereichen
 
@@ -85,13 +85,11 @@ Durch Löschen eines Arbeitsbereichs werden alle Inhalte, Daten, Einstellungen u
 
 1. Wählen Sie **Mitglieder hinzufügen** aus, um selbigen den Zugriff zu gewähren und [Rollen zuzuweisen](user-roles.md). Derzeit ist nur die Rolle **Arbeitsbereichsadministrator** verfügbar.
 
-1. Wenn Sie eine [Verbindung zur Funktion Zielgruppenerkenntnisse](configure-connections.md) einrichten, können Sie **Zugriff auf Profildaten erlauben** auswählen, damit das Mitglied Berichte basierend auf dem [Benutzerprofil](profile-reports.md) anzeigen kann.
-
 1. Wählen Sie **Mitglieder hinzufügen** aus, um sie Ihrem Arbeitsbereich hinzuzufügen.
 
 ## <a name="manage-an-environment"></a>Umgebung verwalten
 
-Als Umgebungsadministrator können Sie über den linken Navigationsbereich auf eine Umgebung zugreifen. Sie können Umgebungseinstellungen, andere Umgebungsadministratoren, Arbeitsbereiche und [Verbindungen zu Zielgruppenerkenntnisse](configure-connections.md) konfigurieren. Wählen Sie Registerkarten aus, um zwischen verschiedenen Bereichen im Admin Center zu wechseln.
+Als Umgebungsadministrator können Sie über den linken Navigationsbereich auf eine Umgebung zugreifen. Sie können Umgebungseinstellungen, andere Umgebungsadministratoren und Arbeitsbereiche konfigurieren. Wählen Sie Registerkarten aus, um zwischen verschiedenen Bereichen im Admin Center zu wechseln.
 
 :::image type="content" source="media/New-environment.png" alt-text="Admin Center für Umgebungen.":::
 
@@ -123,8 +121,6 @@ Als Umgebungsadministrator können Sie über den linken Navigationsbereich auf e
 
 1. Wählen Sie **Mitglieder hinzufügen** aus, um Mitglieder zu aktualisieren und ihnen [Rollen zuzuweisen](user-roles.md). Derzeit ist nur die Rolle **Umgebungsadministrator** verfügbar.
 
-1. Wenn Sie eine [Verbindung zur Funktion Zielgruppenerkenntnisse](configure-connections.md) einrichten, können Sie **Zugriff auf Profildaten erlauben** auswählen, damit das Mitglied Berichte basierend auf dem [Benutzerprofil](profile-reports.md) anzeigen kann.
-
 1. Wählen Sie **Mitglieder hinzufügen** aus, um sie Ihrer Umgebung hinzuzufügen.
 
 ### <a name="delete-an-environment"></a>Eine Umgebung löschen
@@ -143,7 +139,7 @@ Umgebungsadministratoren können Umgebungen löschen. Bevor Sie eine Umgebung l�
 
 Durch das Herstellen von Verbindungen zur Funktion Zielgruppenerkenntnisse können Sie Berichte in Zielgruppenerkenntnisse anzeigen, die auf einheitlichen Kundenprofilen basieren. 
 
-Weitere Informationen finden Sie unter [Konfigurieren von Verbindungen](configure-connections.md).
+Weitere Informationen finden Sie unter [Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Kundenbindungserkenntnissen](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Verwalten persönlicher Daten
 

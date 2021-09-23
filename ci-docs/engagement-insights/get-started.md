@@ -4,18 +4,18 @@ description: Eine Übersicht der Hilferessourcen für einen schnellen Einstieg.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 12/21/2020
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5ee1567cea834670a16aaa3253912b7957ce26b3
-ms.sourcegitcommit: 86739a3f238162fc96837270b5d184e648fab15c
+ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "7405357"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494593"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Erste Schritte mit Dynamics 365 Customer Insights Kundenbindungserkenntnisse (öffentliche Vorschauversion)
 
@@ -25,27 +25,27 @@ mit der Funktion Kundenbindungserkenntnisse können Sie das Kundenverhalten auf 
 
 ## <a name="step-1-review-prerequisites"></a>Schritt 1: Prüfen der Voraussetzungen
 
-Zunächst benötigen Sie ein aktives Microsoft Azure Active Directory-Benutzerkonto. Lesen Sie anschließend die folgenden Artikel, bevor Sie einen Arbeitsbereich für Kundenbindungen einrichten.
+Zunächst benötigen Sie ein aktives Microsoft Azure Active Directory (AAD)-Benutzerkonto. Lesen Sie anschließend die folgenden Artikel, bevor Sie einen Arbeitsbereich für Kundenbindungen einrichten.
 
 - Lesen Sie die [Vertragsbedingungen](terms-of-service.md) von Microsoft und stimmen Sie ihnen zu.  
-- Lesen Sie den Artikel [Verwalten von Cookies und Benutzereinwilligung](user-consent-storage.md). Prüfen Sie nach dem Lesen dieses Artikels, ob Sie Ihre Benachrichtigung über die Benutzereinwilligung aktualisieren müssen. Wenn Sie zuvor keine „unwesentlichen“ Cookies hatten, müssen Sie Ihre Website-Richtlinien vermutlich aktualisieren.
+- Lesen Sie den Artikel [Verwalten von Cookies und Benutzereinwilligung](user-consent-storage.md). Bewerten Sie anschließend, ob Sie Ihre Benachrichtigung zur Benutzereinwilligung aktualisieren müssen. Wenn Sie zuvor keine „unwesentlichen“ Cookies hatten, müssen Sie Ihre Website-Richtlinien vermutlich aktualisieren.
 - Verwenden Sie das [Glossar](glossary.md) für einen schnelle Einführung in wichtige Begriffe und Konzepte.
 
 ## <a name="step-2-explore-engagement-insights"></a>Schritt 2: Erkunden der Funktion Kundenbindungserkenntnisse
 
-Wenn Sie die Funktion Kundenbindungserkenntnisse zum ersten Mal verwenden, können Sie Einstellungen konfigurieren, Richtlinien überprüfen und das Produkt erkunden.
+Wenn Sie sich zum ersten Mal bei Interaktionserkenntnissen anmelden, können Sie Einstellungen konfigurieren, Richtlinien überprüfen und die Funktion erkunden.
 
-1. Melden Sie sich beim [Portal der Funktion Kundenbindungserkenntnisse](https://pi.dynamics.com) an. Verwenden Sie hierfür Ihr Microsoft Azure Active Directory-Benutzerkonto. (Es kann Ihr Schul- oder Geschäftskonto sein.)
+1. Melden Sie sich bei dem [Portal der Funktion Interaktionserkenntnisse](https://home.ci.ai.dynamics.com/app/engagement-insights) mit Ihrem Microsoft AAD-Benutzerkonto (Schule oder Arbeit) an.
 
-1. Wählen Sie Ihre Region aus und geben Sie über das Kontrollkästchen an, ob Sie den Erhalt von Updates und Angeboten per E-Mail abonnieren möchten.
+1. Wählen Sie Ihre Region aus und aktivieren Sie das Kontrollkästchen, wenn Sie sich für den Erhalt von E-Mail-Updates und Angeboten anmelden möchten.
 
-1. Lesen Sie die **Nutzungsbedingungen für Kundenbindungserkenntnisse (Vorschauversion)** und die **Datenschutzerklärung**. Wählen Sie anschließend **Erkunden der Demo** aus, um sie zu akzeptieren.
+1. Überprüfen Sie die **Nutzungsbedingungen für Interaktionserkenntnisse (Vorschau)** und die **Datenschutzerklärung**, und wählen Sie dann **Demo erkunden** aus, um diese Einstellungen zu übernehmen.
 
 1. Erkunden Sie das Produkt anhand einer Reihe von Beispieldaten.
 
 ##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Schritt 3: Einrichten eines Arbeitsbereichs und Hinzufügen von Code zu Ihrer Website
 
-Im Arbeitsbereich können Sie Benutzeraktivitäten in Echtzeit anzeigen und Berichte speichern und verwalten. Fügen Sie Ihrer Website Code hinzu, um mit dem Sammeln von *Ereignissen* zu beginnen, den Aktivitätsdaten, die von Benutzern eingehen.
+In einem Arbeitsbereich können Sie Benutzeraktivitäten in Echtzeit anzeigen und Berichte speichern und verwalten. Fügen Sie Ihrer Website Code hinzu, um mit dem Sammeln von *Ereignissen* zu beginnen, den Aktivitätsdaten, die von Benutzern eingehen.
 
 1. [Erstellen Sie einen Arbeitsbereich](create-workspace.md) und fügen Sie Mitglieder hinzu.
 
@@ -61,11 +61,13 @@ Sie können *verfeinerte Ereignisse* (eine virtuelle Ansicht) Ihrer Webanalyseda
 
 1. [Exportieren Sie die Daten](export-events.md) nach Data Lake Store.
 
+1. [Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Interaktionserkenntnissen](integrate-audience-insights-engagement-insights.md), um Daten zwischen den beiden Funktionen auszutauschen.
+
 1. Erfahren Sie, wie Sie [Ereignisdaten mit persönlichen Informationen löschen und exportieren](delete-export-personal-data.md).
  
 ## <a name="step-5-stay-connected"></a>Schritt 5: In Verbindung bleiben
 
-Wir bedanken uns für Ihre aktive Teilnahme und planen, das gesamte relevante Feedback bei der Entwicklung zukünftiger Versionen zu berücksichtigen. Teilen Sie Ihr Feedback und melden Sie Probleme über einen dieser Kanäle:
+Wir schätzen Ihre aktive Teilnahme und berücksichtigen alle relevanten Rückmeldungen bei der Entwicklung zukünftiger Versionen. Teilen Sie Ihr Feedback und melden Sie Probleme über einen dieser Kanäle:
 - [Community](https://go.microsoft.com/fwlink/?linkid=2141648)
 - [Feedback senden](https://go.microsoft.com/fwlink/?linkid=2143222)
 - [Support anfordern](https://go.microsoft.com/fwlink/?linkid=2145734) 
