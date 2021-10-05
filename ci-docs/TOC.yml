@@ -242,7 +242,7 @@
   items:
     - name: Hilfe-Hub
       href: engagement-insights/index.yml
-    - name: Funktionalitätsübersicht
+    - name: Über Interaktionserkenntnisse
       href: engagement-insights/overview.md
     - name: Los geht's
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionale Verfügbarkeit
       href: engagement-insights/regional-availability.md
-- name: Integrieren Sie Publikum und Einblicke in das Engagement
+- name: Daten zwischen Funktionen teilen
   items:
     - name: Kundenbindungserkenntnisse mit Zielgruppenerkenntnissen verknüpfen
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR-Rechte und -Anfragen
   href: dsr-rights-requests.md
-- name: Support erhalten
-  href: 'https://dynamics.microsoft.com/support/'
