@@ -1,7 +1,7 @@
 ---
 title: Power Apps-Konnektor
 description: Verbinden Sie sich mit Power Apps und Power Automate.
-ms.date: 01/19/2021
+ms.date: 10/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: fc0af656cd5b436d9efd65b2a2c75dde9c9deb9dbcdd56ffc6a960f5878a631f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 985e6c85795fba8ca3063cdffc7f9012e798856a
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031748"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623222"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps-Connector (Vorschau)
 
@@ -30,48 +30,47 @@ Siehe Power Apps-Dokumentation für weitere Informationen zu [Hinzufügen einer 
 
 Nach dem Hinzufügen von Customer Insights als Datenverbindung können Sie die folgenden Entitäten in Power Apps auswählen:
 
-- Kunde: zur Verwendung von Daten aus dem [einheitlichen Kundenprofil](customer-profiles.md).
-- UnifiedActivity: um die [Aktivitätszeitskala](activities.md) in der App anzuzeigen.
+- **Kunde**: Zur Verwendung von Daten aus dem [Vereinheitlichtes Kund*innenprofil](customer-profiles.md).
+- **UnifiedActivity**: Um die [Aktivitätszeitachse](activities.md) in der App anzuzeigen.
+- **ContactProfile**: Um die Kontakte eines Kunden anzuzeigen. Diese Entität ist derzeit nur mit Zielgruppenerkenntnis-Umgebungen für Geschäftskonten verfügbar.
 
 ## <a name="limitations"></a>Einschränkungen
 
 ### <a name="retrievable-entities"></a>Abrufbare Entitäten
 
-Sie können nur die Entitäten **Kunde**, **UnifiedActivity** und **Segmente** durch den Power Apps-Konnektor aufrufen. Andere Entitäten werden angezeigt, da der zugrunde liegende Konnektor sie durch Trigger in Power Automate unterstützt.  
+Sie können nur die Entitäten **Kunde**, **UnifiedActivity**, **Segmente** und **Kontaktprofil** durch die Power Apps Konnektoren abrufen. Kontaktprofil ist derzeit nur mit Zielgruppenerkenntnis-Instanzen Geschäftskonten verfügbar. Andere Entitäten werden angezeigt, da der zugrunde liegende Konnektor sie durch Trigger in Power Automate unterstützt.
 
 ### <a name="delegation"></a>Stellvertretung
 
-Die Delegierung funktioniert für die Kundenentität und die UnifiedActivity-Entität. 
+Die Delegierung funktioniert für die **Kundenentität** und die **UnifiedActivity**-Entität. 
 
 - Delegation für die Entität **Kunde**: Um die Delegation für diese Entität zu verwenden, müssen die Felder in [Such- & Filterindex](search-filter-index.md) indiziert sein.  
-
 - Delegierung für **UnifiedActivity**: Die Delegierung für diese Entität funktioniert nur für die Felder **ActivityId** und **CustomerId**.  
+- Delegation für **KontaktProfil**: Delegation für diese Entität funktioniert nur für die Felder **Kontakt-ID** und **Kunden-ID**. KontaktProfil ist derzeit nur mit Zielgruppenerkenntnis-Umgebungen für Geschäftskonten verfügbar.
 
-- Weitere Informationen zur Delegierung finden Sie unter [Power Apps delegierbare Funktionen und Vorgänge](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Weitere Informationen zur Delegation finden Sie unter [Power Apps delegierbare Funktionen und Operationen](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Beispiel für Galeriesteuerelement
 
-Beispiel: Sie fügen Kundenprofile zu einem [Galerie-Steuerelement](/powerapps/maker/canvas-apps/add-gallery) hinzu.
+Sie können Kundenprofile zu einer [Katalogsteuerelement](/powerapps/maker/canvas-apps/add-gallery) hinzufügen.
 
-1. Fügen Sie ein Steuerelement **Galerie** zu einer App hinzu, die Sie erstellen.
-
-> [!div class="mx-imgBorder"]
-> ![Ein Galerie-Element hinzufügen.](media/connector-powerapps9.png "Ein Galerie-Element hinzufügen")
-
-1. Wählen Sie **Kunde** als Datenquelle für Artikel.
+1. Fügen Sie ein Steuerelement **Katalog** zu einer App hinzu, die Sie erstellen.
 
     > [!div class="mx-imgBorder"]
-    > ![Datenquelle auswählen.](media/choose-datasource-powerapps.png "Wählen Sie eine Datenquelle")
+    > ![Ein Galerie-Element hinzufügen.](media/connector-powerapps9.png "Ein Katalog-Element hinzufügen.")
 
-1. Sie können das Datenfeld auf der rechten Seite ändern, um auszuwählen, welches Feld für die Kundeneinheit in der Galerie angezeigt werden soll.
+2. Wählen Sie **Kunde** als Datenquelle für Artikel.
 
-1. Wenn Sie ein beliebiges Feld des ausgewählten Kunden in der Galerie anzeigen möchten, füllen Sie die Eigenschaft Text eines Etiketts aus: **{Name_of_the_gallery}.Selected.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Datenquelle auswählen.](media/choose-datasource-powerapps.png "Wählen Sie eine Datenquelle.")
 
-    Beispiel: Gallery1.Selected.address1_city
+3. Sie können das Datenfeld auf der rechten Seite ändern, um auszuwählen, welches Feld für die Kundeneinheit in der Galerie angezeigt werden soll.
 
-1. Um die einheitliche Zeitachse für einen Kunden anzuzeigen, fügen Sie ein Gallery-Element und die Eigenschaft Items hinzu: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Wenn Sie ein beliebiges Feld des ausgewählten Kunden im Katalog anzeigen möchten, füllen Sie die Eigenschaft **Text** einer Beschriftung mithilfe von **{Name_of_the_gallery}.Ausgewählt.{property_name}** hinzu.  
+    - Beispiel: _Gallery1.Selected.address1_city_
 
-    Beispiel: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Um die einheitliche Zeitskala für einen Kunden anzuzeigen, fügen Sie ein Katalog-Element und die Eigenschaft **Elemente** mithilfe von **Filter (UnifiedActivity, CustomerID = {Customer_Id})** hinzu  
+    - Beispiel: _Filter('Unified Activity', CustomerId = Gallery1.Selected.CustomerId)_
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557351"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623003"
 ---
 # <a name="relationships-between-entities"></a>Beziehungen zwischen Entitäten
 
@@ -67,6 +67,20 @@ Die Beziehung besteht aus einer *Quellentität* mit dem Fremdschlüssel und eine
    - **Zielschlüsselfeld**: Das Schlüsselfeld der Zielentität. Beispiel: Customer könnte das Schlüsselfeld **CustomerID** verwenden.
 
 4. Wählen Sie **Speichern** aus, um die benutzerdefinierte Beziehung zu erstellen.
+
+## <a name="set-up-account-hierarchies"></a>Kontohierarchien einrichten
+
+Umgebungen, die für die Verwendung von Geschäftskonten als primäre Zielgruppe konfiguriert sind, können Kontohierarchien für zugehörige Geschäftskonten konfigurieren. Beispiel: ein Unternehmen mit separaten Geschäftsbereichen. 
+
+Organisationen erstellen Kontohierarchien, um Konten und ihre Beziehungen untereinander besser zu verwalten. Die Zielgruppenerkenntnis-Funktion unterstützt über- resp. untergeordnete Kontenhierarchien, die bereits in aufgenommenen Kundendaten vorhanden sind. Zum Beispiel Konten von Dynamics 365 Sales. Diese Hierarchien können auf der Seite **Beziehungen** unter Zielgruppenerkenntnissen auf der Registerkarte Kontohierarchie konfiguriert werden.
+
+1. Gehen Sie zu **Daten** > **Beziehungen**.
+1. Wählen Sie die Registerkarte **Kontohierarchie** aus.
+1. **Neue Kontohierarchie** auswählen. 
+1. In dem Bereich **Kontohierarchie** geben Sie einen Namen für die Hierarchie ein. Das System erstellt einen Namen für die Ausgabeentität. Sie können den Namen der Ausgabeentitäte ändern.
+1. Wählen Sie die Entität aus, die Ihre Kontohierarchie enthält. Es befindet sich normalerweise in derselben Entität, die die Konten enthält.
+1. Wählen Sie **Konto-ID** und **Übergeordnete Konto-ID** von der ausgewählten Entität aus 
+1. Wählen Sie **Speichern**, um die Einstellungen zu übernehmen und die Kontenhierarchie abzuschließen.
 
 ## <a name="view-relationships"></a>Anzeigen von Beziehungen
 

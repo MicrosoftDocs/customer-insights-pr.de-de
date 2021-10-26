@@ -4,18 +4,18 @@ description: Eine Übersicht der Hilferessourcen für einen schnellen Einstieg.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494593"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623676"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Erste Schritte mit Dynamics 365 Customer Insights Kundenbindungserkenntnisse (öffentliche Vorschauversion)
 
@@ -39,33 +39,47 @@ Wenn Sie sich zum ersten Mal bei Interaktionserkenntnissen anmelden, können Sie
 
 1. Wählen Sie Ihre Region aus und aktivieren Sie das Kontrollkästchen, wenn Sie sich für den Erhalt von E-Mail-Updates und Angeboten anmelden möchten.
 
-1. Überprüfen Sie die **Nutzungsbedingungen für Interaktionserkenntnisse (Vorschau)** und die **Datenschutzerklärung**, und wählen Sie dann **Demo erkunden** aus, um diese Einstellungen zu übernehmen.
+1. Überprüfen Sie die **Nutzungsbedingungen für Interaktionserkenntnisse (Vorschau)** und die **Datenschutzerklärung**, und wählen Sie **Demo erkunden** aus, um diese Einstellungen zu übernehmen.
 
 1. Erkunden Sie das Produkt anhand einer Reihe von Beispieldaten.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Schritt 3: Einrichten eines Arbeitsbereichs und Hinzufügen von Code zu Ihrer Website
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Schritt 3: Richten Sie einen Arbeitsbereich ein und erstellen Sie Berichte
 
 In einem Arbeitsbereich können Sie Benutzeraktivitäten in Echtzeit anzeigen und Berichte speichern und verwalten. Fügen Sie Ihrer Website Code hinzu, um mit dem Sammeln von *Ereignissen* zu beginnen, den Aktivitätsdaten, die von Benutzern eingehen.
 
 1. [Erstellen Sie einen Arbeitsbereich](create-workspace.md) und fügen Sie Mitglieder hinzu.
 
-1. [Code zu Ihrer Website hinzufügen](instrument-website.md) oder [mobile App](developer-resources.md#capture-events-from-mobile-apps) um zu sehen, wie Benutzeraktivitäten in Ihrem Arbeitsbereich eintreffen.
+1. [Code zu Ihrer Website hinzufügen](instrument-website.md) oder [mobile App](developer-resources.md#capture-events-from-mobile-apps), um zu sehen, wie Benutzeraktivitäten in Ihrem Arbeitsbereich eintreffen.
 
 1. Zeigen Sie einen [Echtzeitbericht](view-reports.md) an, der aktive Benutzer nach Browser, Gerät, Betriebssystem, Standort und Sprache anzeigt. Sie können auch [benutzerdefinierte Berichte](custom-reports.md) erstellen, um eigene Visualisierungen zu erstellen.
+
+1. Erstellen Sie [Dimensionen](dimensions.md), um Besucher nach neuen und wiederkehrenden Benutzern zu sortieren, [Metriken](metrics.md), um das Nutzerverhalten besser zu verstehen, und [Segmente](segments.md), um Teilmengen von Besuchern anhand von Merkmalen oder Website-Interaktionen zu identifizieren.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Schritt 4: Exportieren von Daten in andere Kanäle
 
-Sie können *verfeinerte Ereignisse* (eine virtuelle Ansicht) Ihrer Webanalysedaten erstellen. Filtern Sie die Daten anschließend und exportieren Sie sie nach Azure Data Lake Storage. Sie können die exportierten Daten als Datenquelle aufnehmen. Weitere Informationen finden Sie unter [Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Kundenbindungserkenntnissen](integrate-audience-insights-engagement-insights.md).
+Sie können *verfeinerte Ereignisse* (eine virtuelle Ansicht) Ihrer Webanalysedaten erstellen. Filtern Sie die Daten anschließend und exportieren Sie sie nach Azure Data Lake Storage. Sie können die exportierten Daten als Datenquelle aufnehmen.
 
 1. [Erstellen Sie verfeinerte Ereignisse](refined-events.md) für den Export.
 
-1. [Exportieren Sie die Daten](export-events.md) nach Data Lake Store.
+1. [Die Daten nach exportieren](export-events.md) nach Azure Data Lake Storage.
 
 1. [Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Interaktionserkenntnissen](integrate-audience-insights-engagement-insights.md), um Daten zwischen den beiden Funktionen auszutauschen.
 
+1. [Erkennen Sie Webereignisse von zuvor authentifizierten Benutzern](unknown-to-known.md) mit der Funktion **unbekannt bis bekannt**.
+
 1. Erfahren Sie, wie Sie [Ereignisdaten mit persönlichen Informationen löschen und exportieren](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>Schritt 5: Trichterberichte erstellen und verwalten
+
+Ein Verkaufstrichterbericht sammelt Informationen über die Schritte, die während eines Kundenkontaktverlauf über Ihre Website oder mobile App ausgeführt werden. Sie können nicht nur vorkonfigurierte Profilberichte und benutzerdefinierte Berichte erstellen, sondern auch einen Trichterbericht erstellen, um die Wege Ihrer Kunden zu identifizieren, bevor sie einen Kauf tätigen. 
+
+1. [Erstellen Sie einen Trichterbericht](funnel-reports.md), um Entscheidungen zu treffen und Bereiche für Optimierungen und Prozessverbesserungen zu identifizieren.
+
+1. Erstellen Sie kanalübergreifende Trichterberichte, sobald Sie Ihre mobile App mit den Engagement-Erkenntnissen [Android SDK](get-started-android.md) oder [iOS-SDK](get-started-ios.md) ausgestattet haben.
+
+1. Nutzen Sie [Verkaufstrichtererkenntnisse](funnel-reports.md#funnel-insights), um tiefere Einblicke in das Kundenverhalten zu den Schritten in Ihrem Verkaufstrichterbericht zu erhalten.
  
-## <a name="step-5-stay-connected"></a>Schritt 5: In Verbindung bleiben
+## <a name="step-6-stay-connected"></a>Schritt 6: In Verbindung bleiben
 
 Wir schätzen Ihre aktive Teilnahme und berücksichtigen alle relevanten Rückmeldungen bei der Entwicklung zukünftiger Versionen. Teilen Sie Ihr Feedback und melden Sie Probleme über einen dieser Kanäle:
 - [Community](https://go.microsoft.com/fwlink/?linkid=2141648)

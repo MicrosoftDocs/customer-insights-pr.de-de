@@ -1,7 +1,7 @@
 ---
 title: Exportieren von Customer Insights-Daten nach LinkedIn Ads
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und einen Export nach LinkedIn Ads durchführen.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034222"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618290"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportieren von Segmenten nach LinkedIn Ads (Vorschau)
 
@@ -28,9 +28,9 @@ Exportieren Sie Segmente einheitlicher Kundenprofilen nach LinkedIn Ads, um pass
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 100.000 Profile pro Export nach LinkedIn Ads exportieren.
+- Sie können bis zu hunderttausend Kundenprofile pro Export nach LinkedIn Ads exportieren.
 - Der Export nach LinkedIn Ads ist auf Segmente beschränkt.
-- Das Exportieren von bis zu 100.000 Profilen nach LinkedIn Ads kann bis zu 10 Minuten dauern. 
+- Der Export von Segmenten mit bis hunderttausend Kundenprofilen nach LinkedIn Ads kann bis zu 10 Minuten dauern. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Einrichten der Verbindung mit LinkedIn Ads
 
@@ -66,7 +66,7 @@ Sie können einen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung die
 
 1. Wählen Sie aus, ob Sie Daten für [Kontakt-Targeting](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) oder [Unternehmens-Targeting](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) auf LinkedIn exportieren möchten. 
 
-1. Wählen Sie im Bereich **Datenabgleich** in Ihrem vereinheitlichten Kundenprofil das Feld aus, das die E-Mail-Adresse eines Kunden darstellt. Der Export nach LinkedIn Ads ist auf Segmente beschränkt.
+1. In dem Abschnitt **Datenabgleich** wählen Sie für das Kontakt-Targeting mindestens ein Feld aus, das die E-Mail-Adresse eines Kunden, die Apple-Anzeigen-ID, die Google-Anzeigen-ID, die Google-Benutzer-ID oder zuerst und Nachname darstellt. Wenn Sie Unternehmens-Targeting auswählen, wählen Sie mindestens ein Feld aus, das einen Firmennamen, eine E-Mail-Domäne, eine LinkedIn-Seiten-URL, ein Aktiensymbol oder eine Website darstellt. Zusätzliche Felder können ausgewählt werden, um Ihren Export weiter zu definieren. 
 
 1. Wählen Sie die Segemente aus, die Sie exportieren möchten. Die passenden Zielgruppen in LinkedIn Campaign Manager werden automatisch mit dem Namen der Segmente erstellt, die Sie zum Exportieren ausgewählt haben. Jedes Segment führt zu einer separaten passenden Zielgruppe. 
 

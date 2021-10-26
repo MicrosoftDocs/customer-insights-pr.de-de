@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034176"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645125"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
 
@@ -26,7 +26,7 @@ Wählen Sie die Option **Umgebung** in der rechten oberen Ecke der Seite, um die
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Screenshot des Steuerelements zum Wechseln der Umgebung.":::
 
-Administratoren können Umgebungen [erstellen](get-started-paid.md) und verwalten.
+Administratoren können Umgebungen [erstellen](create-environment.md) und verwalten.
 
 ## <a name="edit-an-existing-environment"></a>So bearbeiten Sie eine bestehende Umgebung
 
@@ -36,23 +36,9 @@ Sie können einige Details vorhandener Umgebungen bearbeiten.
 
 2.  Wählen Sie das Symbol **Bearbeiten** aus.
 
-3. Im Feld **Umgebung bearbeiten** können Sie den **Anzeigename** der Umgebung aktualisieren, Sie können jedoch nicht die **Region** oder den **Art** ändern.
+3. In dem Kästchen **Umgebung bearbeiten** können Sie die Umgebungseinstellungen aktualisieren.
 
-4. Wenn eine Umgebung zum Speichern von Daten konfiguriert ist in Azure Data Lake Storage, können Sie die **Kontoschlüssel** aktualisieren. Sie können jedoch nicht den Namen **Kontoname** oder **Container** ändern.
-
-5. Optional können Sie von einer kontoschlüsselbasierten Verbindung zu einer ressourcenbasierten oder abonnementbasierten Verbindung aktualisieren. Nach der Aktualisierung können Sie nicht mehr zum Kontenschlüssel zurückkehren. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
-
-6. Optional können Sie eine Microsoft Dataverse-Umgebungs-URL unter **Datenfreigabe mit Microsoft Dataverse konfigurieren und zusätzliche Funktionen aktivieren** bereitstellen. Diese Funktionen umfassen die gemeinsame Nutzung von Daten mit Anwendungen und Lösungen, die auf Microsoft Dataverse, der Datenerfassung aus lokalen Datenquellen oder der Verwendung von [Vorhersagen](predictions.md) basieren. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Microsoft Dataverse Data Lake zu teilen.
-
-   > [!NOTE]
-   > - Datenaustausch mit verwaltetem Microsoft Dataverse Data Lake wird derzeit nicht unterstützt, wenn Sie alle Daten in Ihrem eigenen Azure Data Lake Storage speichern.
-   > - [Vorhersage fehlender Werte in einer Entität](predictions.md) und PowerBI Embedded-Berichte in Zielgruppenerkenntnisse werden (sofern in Ihrer Umgebung aktiviert) derzeit nicht unterstützt, wenn Sie die Datenfreigabe mit verwalteten Microsoft Dataverse Data Lakes aktivieren.
-
-   Nach der Aktivierung der Datenfreigabe in Microsoft Dataverse startet eine vollständige Aktualisierung der Datenquellen und anderer Prozesse. Wenn derzeit Prozesse ausgeführt werden, wird die Option zum Aktivieren der Datenfreigabe mit Microsoft Dataverse nicht angezeigt. Warten Sie, bis diese Prozesse abgeschlossen sind, oder brechen Sie sie ab, um die gemeinsame Nutzung von Daten zu ermöglichen. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse.":::
-   
-   Wenn Sie Prozesse ausführen, wie z.B. die Datenerfassung oder die Segmenterstellung, werden entsprechende Ordner in dem oben angegebenen Speicherkonto erstellt. Abhängig vom ausgeführten Prozess werden Datendateien und model.json-Dateien erstellt und den jeweiligen Unterordnern hinzugefügt.
+Weitere Informationen zu Umgebungseinstellungen finden Sie unter [Schaffen Sie eine neue Umgebung](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Umgebungskonfiguration kopieren
 

@@ -4,17 +4,17 @@ description: So können Sie Arbeitsbereiche und Umgebungen erstellen, umbenennen
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486034"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645445"
 ---
 # <a name="manage-environments-and-workspaces"></a>Verwalten von Umgebungen und Arbeitsbereichen
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486034"
 
 ## <a name="overview"></a>Überblick
 
-In einem Arbeitsbereich werden Ereignisse und Berichte gespeichert und verwaltet. Hier können Sie Benutzeraktivitäten in Echtzeit anzeigen. Wenn Sie einen Arbeitsbereich erstellen, wählen Sie den Datentyp aus, den Sie an den Arbeitsbereich senden. Derzeit werden Webdaten und mobile Apps unterstützt.
+In diesem Thema wird erläutert, wie Arbeitsbereiche und Umgebungen verwaltet werden, nachdem sie bereits erstellt wurden. 
 
-Eine Umgebung ist ein Bereich, in dem Sie Ihre Arbeitsbereiche und Verbindungen verwalten. Wie Sie Umgebungen nutzen, hängt von Ihrer Organisation und Ihrem Anwendungsfall ab. So können beispielsweise Folgendes erstellen:
+- In einem *Arbeitsbereich* werden Ereignisse und Berichte gespeichert und verwaltet. Hier können Sie Benutzeraktivitäten in Echtzeit anzeigen. Wenn Sie einen Arbeitsbereich erstellen, wählen Sie den Datentyp aus, den Sie an den Arbeitsbereich senden. Derzeit werden Webdaten und mobile Apps unterstützt. Weitere Informationen finden Sie unter [Erstellen Sie einen Arbeitsbereich und fügen Sie Mitglieder hinzu](create-workspace.md).
 
--   Eine einzelne Umgebung.
--   Separate Test- und Produktionsumgebungen.
--   Separate Umgebungen für bestimmte Teams oder Abteilungen in Ihrer Organisation, die relevante Ereignisse für jede Zielgruppe enthalten.
--   Separate Umgebungen für verschiedene Niederlassungen Ihres Unternehmens.
--   Verbindungen zur Funktion Zielgruppenerkenntnisse von Customer Insights.
+- Eine *Umgebung* ist ein Bereich, in dem Sie Ihre Arbeitsbereiche und Verbindungen verwalten. Weitere Informationen finden Sie unter [Eine neue Umgebung erstellen](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Auswählen einer Umgebung und Erstellen eines Arbeitsbereichs 
-
-Jeder Arbeitsbereich muss sich in einer Umgebung befinden. Sie können eine bereits vorhandene Umgebung auswählen oder eine neue erstellen, wenn Sie einen Arbeitsbereich erstellen. Anschließend können Sie Arbeitsbereichsmitglieder hinzufügen und mit dem Sammeln von Daten beginnen.
-
-**Erstellen Ihres ersten Arbeitsbereichs**
-
-1. Wählen Sie in der Funktion Kundenbindungserkenntnisse im Arbeitsbereichsumschalter die Option **Neu** aus. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Arbeitsbereichsauswahl auf der Customer Insights-Seite.":::
-
-1. Wählen Sie eine Umgebung aus der Liste aus oder wählen Sie **Neue Umgebung erstellen** aus.
-
-1. Geben Sie einen Namen in das Feld **Arbeitsbereichsname** ein. 
-
-1. Wählen Sie die Art der Umgebung aus, die Sie erstellen möchten, je nachdem, ob Sie messen möchten, was auf einer Website oder in einer mobilen App passiert. 
-
-1. Sie können Mitglieder hinzufügen und ihre Berechtigungsstufe über die Liste **Rolle** zuweisen. Wählen Sie dann **Fertigstellen** aus, um den Arbeitsbereich zu erstellen, oder **Weiter**, um Code zu installieren. 
-
-1. Installieren Sie den Codeausschnitt, um Daten zu empfangen, und wählen Sie dann **Fertig** aus. 
-
-## <a name="manage-a-workspace"></a>Verwalten eines Arbeitsbereichs
+## <a name="manage-an-existing-workspace"></a>Verwalten eines vorhandenen Arbeitsbereichs
 
 Sie können mehrere Arbeitsbereiche gleichzeitig in einer Umgebung verwalten. Ihre [Rolle](user-roles.md) legt fest, wie Sie darin arbeiten können. 
 
  - Sie müssen ein Umgebungsadministrator oder ein Arbeitsbereichsadministrator sein, um den Arbeitsbereich verwalten zu können.
  - Als Arbeitsbereichsadministrator können Sie vorhandene Arbeitsbereiche umbenennen oder löschen. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Arbeitsbereichsadministratorcenter.":::
 
 ### <a name="edit-a-workspace-name"></a>Bearbeiten eines Arbeitsbereichsnamens
 
@@ -75,7 +53,7 @@ Durch Löschen eines Arbeitsbereichs werden alle Inhalte, Daten, Einstellungen u
 
 1. Wählen Sie **Arbeitsbereich löschen** aus. 
 
-1. Geben Sie im Dialog **Arbeitsbereich löschen** den Text **LÖSCHEN BESTÄTIGEN** ein. 
+1. In dem **Arbeitsbereich löschen** Dialog, geben Sie **LÖSCHEN BESTÄTIGEN** in Großbuchstaben ein. 
 
 1. Wählen Sie **Löschen** aus, um den Arbeitsbereich dauerhaft zu löschen.
 
@@ -87,27 +65,11 @@ Durch Löschen eines Arbeitsbereichs werden alle Inhalte, Daten, Einstellungen u
 
 1. Wählen Sie **Mitglieder hinzufügen** aus, um sie Ihrem Arbeitsbereich hinzuzufügen.
 
-## <a name="manage-an-environment"></a>Umgebung verwalten
+## <a name="manage-an-existing-environment"></a>Eine bestehende Umgebung verwalten
 
-Als Umgebungsadministrator können Sie über den linken Navigationsbereich auf eine Umgebung zugreifen. Sie können Umgebungseinstellungen, andere Umgebungsadministratoren und Arbeitsbereiche konfigurieren. Wählen Sie Registerkarten aus, um zwischen verschiedenen Bereichen im Admin Center zu wechseln.
+Als Umgebungsadministrator können Sie auf eine Umgebung über den linken Navigationsbereich zugreifen. Sie können Umgebungseinstellungen, andere Umgebungsadministratoren und Arbeitsbereiche konfigurieren. Wählen Sie Registerkarten aus, um zwischen verschiedenen Bereichen im Admin Center zu wechseln.
 
-:::image type="content" source="media/New-environment.png" alt-text="Admin Center für Umgebungen.":::
-
-### <a name="create-an-environment"></a>Umgebung erstellen
-
-1. Wählen Sie in der Arbeitsbereichsauswahl **+Neu** aus.
-
-1. Öffnen Sie in der geführten Umgebung das Dropdownmenü **Umgebung** und wählen Sie **Neue Umgebung erstellen** aus. 
-
-1. Geben Sie einen **Umgebungsnamen** an.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Führen Sie die geführte Umgebung aus, um die Umgebungsdetails anzugeben.":::
-
-1. Wählen Sie die **Region** und dann **Weiter** aus. 
-
-1. Geben Sie einen Arbeitsbereichsnamen an und wählen Sie aus, welchen Arbeitsbereichstyp Sie erstellen möchten. 
-
-1.  Fügen Sie optional Mitglieder hinzu und kopieren Sie den Codeausschnitt, um den Erstellungsprozess abzuschließen.
+:::image type="content" source="media/environment-edit.png" alt-text="Admin Center für Umgebungen.":::
 
 ### <a name="rename-an-environment"></a>Umbenennen einer Umgebung
 
@@ -131,7 +93,7 @@ Umgebungsadministratoren können Umgebungen löschen. Bevor Sie eine Umgebung l�
 
 1. Wählen Sie **Umgebung löschen** aus. 
 
-1. Geben Sie im Dialog **Arbeitsbereich löschen** den Text **LÖSCHEN BESTÄTIGEN** ein. 
+1. In dem **Arbeitsbereich löschen** Dialog, geben Sie **LÖSCHEN BESTÄTIGEN** in Großbuchstaben ein. 
 
 1. Wählen Sie **Löschen**, um die Umgebung dauerhaft zu löschen.
 

@@ -1,7 +1,7 @@
 ---
 title: Startseite in Zielgruppen-Insights
 description: Starten Sie die Erkundung der App auf der Startseite.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469972"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617693"
 ---
 # <a name="explore-audience-insights"></a>Zielgruppenerkenntnisse erkunden
 
@@ -23,7 +23,7 @@ Die **Zuhause**-Seite zeigt eine Übersicht über Segmente, Kennzahlen und Anrei
 
 :::image type="content" source="media/home-page.png" alt-text="Screenshot des Startbildschirms mit Beispielerkenntnissen.":::
 
-1 – Wechseln Sie zwischen den Funktionen von Customer Insights 2 – Verwenden Sie den linken Bereich, um zwischen verschiedenen Bereichen zu navigieren 3 – Finden Sie heraus, in welcher Umgebung Sie arbeiten, und verwalten Sie Umgebungen als Administrator 4 – Legen Sie persönliche Einstellungen für Customer Insights fest
+1 - Wechseln Sie zwischen den Funktionen von Customer Insights 2 - Verwenden Sie den linken Bereich, um zwischen verschiedenen Bereichen zu navigieren und wählen Sie die primäre Zielgruppe aus 3 - Finden Sie heraus, in welcher Umgebung Sie arbeiten und verwalten Sie Umgebungen als Administrator 4 - Legen Sie persönliche Einstellungen für Customer Insights fest
 
 Unter **Aktuelle Segmente** sehen Sie Kundengruppen basierend auf demografischen, Verhaltens- oder Transaktionsattributen, die Sie definiert haben. [Segmente erstellen](segments.md) hilft Ihnen, Ihren Kundenstamm zu gruppieren und Ihre Geschäftsaktivitäten besser auszurichten.
 

@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483524"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645171"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals
 
 Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Berechtigungen haben. Anstatt dass sich Anwendungen als voll privilegierter Benutzer anmelden müssen, bietet Azure Dienstprinzipale an. Lesen Sie weiter, um zu erfahren, wie Sie Dynamics 365 Customer Insights mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals anstelle von Speicherkontoschlüsseln verbinden. 
 
-Sie können den Dienstprinzipal verwenden, um sicher [einen Common Data Model Ordner als Datenquelle hinzuzufügen oder zu bearbeiten](connect-common-data-model.md), oder [eine Umgebung zu erstellen oder zu aktualisieren](get-started-paid.md).
+Sie können den Dienstprinzipal verwenden, um sicher [einen Common Data Model Ordner als Datenquelle hinzuzufügen oder zu bearbeiten](connect-common-data-model.md), oder [eine Umgebung zu erstellen oder zu aktualisieren](create-environment.md).
 
 > [!IMPORTANT]
 > - Für das Data Lake Storage-Konto, das den Dienstprinzipal verwendet, muss der [hierarchische Namespace aktiviert sein](/azure/storage/blobs/data-lake-storage-namespace).

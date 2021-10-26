@@ -1,7 +1,7 @@
 ---
-title: Zuordnen von Entitäten zur Datenvereinheitlichung
-description: Ordnen Sie Daten zu, um einheitliche Kundenprofile zu erstellen.
-ms.date: 09/25/2020
+title: Entitäten und Attribute für die Datenvereinigung zuordnen
+description: Wählen Sie Entitäten, Attribute, Primärschlüssel und semantische Typen aus, um Daten dem vereinheitlichten Kund*innenprofil zuzuordnen.
+ms.date: 10/18/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 570683876b10cb83d8af14552ca9bea9d80613575005d49a9af37cc16b8e75c9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-map
+ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034405"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648161"
 ---
 # <a name="map-entities-and-attributes"></a>Entitäten und Attribute zuordnen
 

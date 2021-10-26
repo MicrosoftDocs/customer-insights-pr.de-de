@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559017"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645581"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Kundenbindungserkenntnissen
 
@@ -26,7 +26,7 @@ Verwenden Sie einheitliche Profile und Segmente aus Zielgruppenerkenntnissen fü
 ## <a name="prerequisites"></a>Anforderungen
 
 - Zielgruppenerkenntnis-Profile müssen in einem Azure Data Lake Storage Konto, das Sie besitzen, oder in einem [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; verwalteten Data Lake gespeichert werden. 
-- Ihre Zielgruppenerkenntnis-Umgebung sollte eine zugeordnete Dataverse-Umgebung haben. Und wenn diese Umgebung Dataverse auch für die Datenspeicherung verwendet, aktivieren Sie unbedingt die Option **Datenfreigabe aktivieren** in den Zielgruppenerkenntnissen. Weitere Informationen finden Sie unter [Erstellen und Konfigurieren einer kostenpflichtigen Umgebung in Zielgruppenerkenntnissen](../audience-insights/get-started-paid.md).
+- Ihre Zielgruppenerkenntnis-Umgebung sollte eine zugeordnete Dataverse-Umgebung haben. Und wenn diese Umgebung Dataverse auch für die Datenspeicherung verwendet, aktivieren Sie unbedingt die Option **Datenfreigabe aktivieren** in den Zielgruppenerkenntnissen. Weitere Informationen finden Sie unter [Erstellen und konfigurieren Sie eine Umgebung in Zielgruppenerkenntnissen](../audience-insights/create-environment.md).
 - Sie benötigen Administrator-Berechtigungen sowohl für die Umgebungen mit Bindungserkenntnissen als auch für Zielgruppenerkenntnissen.
 - Verknüpfte Umgebungen müssen sich in derselben geografischen Region befinden.
 

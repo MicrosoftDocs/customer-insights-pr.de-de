@@ -1,7 +1,7 @@
 ---
 title: Kundenaktivitäten
 description: Definieren Sie Kundenaktivitäten, und zeigen Sie diese in einer Zeitskala auf Kundenprofilen an.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494410"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617968"
 ---
 # <a name="customer-activities"></a>Kundenaktivitäten
 
@@ -24,8 +24,7 @@ Kombinieren Sie Kundenaktivitäten von [verschiedene Datenquellen](data-sources.
 
 Ihre Datenquellen umfassen Entitäten mit Transaktions- und Aktivitätsdaten aus mehreren Datenquellen. Identifizieren Sie diese Einheiten und wählen Sie die Aktivitäten aus, die Sie auf der Zeitachse des Kunden anzeigen möchten. Wählen Sie die Entität, die Ihre Zielaktivität oder -aktivitäten enthält.
 
-> [!NOTE]
-> Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine Kundenzeitachse aufgenommen zu werden, und Sie können keine Entitäten ohne **Datum** Felder hinzufügen. Die Kontrolle **Aktivität hinzufügen** ist deaktiviert, wenn keine solche Entität gefunden wird.
+Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine Kundenzeitachse aufgenommen zu werden, und Sie können keine Entitäten ohne **Datum** Felder hinzufügen. Die Kontrolle **Aktivität hinzufügen** ist deaktiviert, wenn keine solche Entität gefunden wird.
 
 1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Aktivitäten**.
 
@@ -48,6 +47,9 @@ Ihre Datenquellen umfassen Entitäten mit Transaktions- und Aktivitätsdaten aus
    - **Dritte**: Wenn bereits eine Beziehung zwischen dieser Aktivitätsentität und der ausgewählten Quellkundenentität besteht, ist der Beziehungsname schreibgeschützt. Wenn keine solche Beziehung besteht, wird eine neue Beziehung mit dem Namen erstellt, den Sie in diesem Feld angeben.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definieren der Entitätsbeziehung.":::
+
+   > [!TIP]
+   > In B2B-Umgebungen können Sie zwischen Kontoentitäten und anderen Entitäten wählen. Wenn Sie eine Kontoentität auswählen, wird der Beziehungspfad automatisch festgelegt. Für andere Entitäten müssen Sie den Beziehungspfad über eine oder mehrere Zwischenentitäten definieren, bis Sie eine Kontoentität erreichen.
 
 1. Wählen Sie **Weiter** aus, um zum nächsten Schritt zu navigieren. 
 
@@ -95,5 +97,34 @@ Die folgenden Aktionen sind verfügbar, wenn Sie eine Aktivität auswählen.
 - **Umbenennen**: Öffnet einen Dialog, in dem Sie einen anderen Namen für die ausgewählte Aktivität eingeben können. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
 - **Löschen**: Öffnet ein Dialogfeld, um das Löschen der ausgewählten Aktivität zu bestätigen. Sie können auch mehrere Aktivitäten gleichzeitig löschen, indem Sie die Aktivitäten auswählen und dann das Löschsymbol auswählen. Um den Löschvorgang zu bestätigen, wählen Sie **Löschen**.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Aktivitätszeitachsen in Kundenprofilen anzeigen
+
+Nachdem Sie Kundenaktivitäten konfiguriert haben, wählen Sie **In Aktivitätszeitachse anzeigen** in der Aktivitätskonfiguration, um alle Aktivitäten Ihres Kunden in seinem Kundenprofil zu finden.
+
+Um die Zeitskala für einen Kunden zu öffnen, gehen Sie zu **Kunden** und wählen Sie das Kundenprofil aus, das Sie anzeigen möchten.
+
+Wenn ein Kunde an einer von Ihnen konfigurierten Aktivität teilgenommen hat, finden Sie diese im Abschnitt **Aktivitätszeitachse**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Zeigen Sie konfigurierte Aktivitäten in Kundenprofilen an.":::
+
+Es gibt mehrere Möglichkeiten, Aktivitäten in der Aktivitätszeitachse zu filtern:
+
+- Sie können eines oder mehrere der Aktivitätssymbole auswählen, um Ihre Ergebnisse so zu verfeinern, dass nur die ausgewählten Typen berücksichtigt werden.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtern Sie Aktivitäten nach Typ mithilfe der Symbole.":::
+
+- Sie können **Filter** auswählen, um ein Filterfenster zu öffnen, um Ihre Zeitachsenfilter zu konfigurieren.
+
+   1. Sie können nach *Aktivitätstyp* und *Datum* filtern
+   1. Wählen Sie **Anwenden**, um die Filter in der Aktivitätszeitachse zu verwenden.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Verwenden Sie das Filterbedienfeld, um Filterbedingungen zu konfigurieren.":::
+
+Um Filter zu entfernen, wählen Sie **x** neben jedem auf der Zeitskala angewendeten Filter oder wählen Sie **Filter löschen**.
+
+
+> [!NOTE]
+> Aktivitätsfilter werden entfernt, wenn Sie ein Kundenprofil verlassen. Sie müssen sie jedes Mal anwenden, wenn Sie ein Kundenprofil öffnen.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

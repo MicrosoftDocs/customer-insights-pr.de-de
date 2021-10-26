@@ -1,7 +1,7 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
 description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469973"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617554"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
@@ -27,16 +27,26 @@ Gehen Sie in Zielgruppen-Insights zu **Daten** > **Anreicherung**, um mit Anreic
 
 Um Anreicherungen erstellen oder bearbeiten zu können, benötigen Sie die Berechtigungen eines Teilnehmers oder Administrators. Weitere Informationen finden Sie unter [Berechtigungen](permissions.md).
 
-Auf der Registerkarte **Entdecken** finden Sie die folgenden Anreicherungen:
+Auf der Registerkarte **Entdecken** finden Sie alle unterstützten Anreicherungsoptionen.
 
-- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
+# <a name="individual-customers-b2c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+
 - [Marken](enrichment-microsoft.md) bereitgestellt von Microsoft
 - [Interessen](enrichment-microsoft.md) bereitgestellt von Microsoft
-- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft
-- [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
+- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
 - [Demografiedaten](enrichment-experian.md) von Experian bereitgestellt
-- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies
-- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP)
+- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
+
+# <a name="business-accounts-b2b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+
+- [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
+- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
+- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies 
+- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
+
+---
 
 Auf der Registerkarte **Meine Anreicherungen** können Sie die von Ihnen konfigurierten Anreicherungen sehen und ihre Eigenschaften bearbeiten.
 
@@ -58,7 +68,7 @@ Führen Sie mehrere Anreicherungen gleichzeitig aus oder deaktivieren Sie sie, i
 
 ## <a name="enrichments-and-connections"></a>Anreicherungen und Verbindungen
 
-Anreicherungen von Drittanbietern werden mithilfe von [Verbindungen](connections.md) konfiguriert, die ein Administrator mit Anmeldeinformationen einrichtet und die Zustimmung zur Datenübertragung erteilt. Die Verbindung kann dann von Administratoren und Mitwirkenden zur Anreicherungskonfiguration verwendet werden.  
+Anreicherungen von Drittanbietern werden mithilfe von [Verbindungen](connections.md) konfiguriert, die ein Administrator mit Anmeldeinformationen einrichtet und die Zustimmung zur Datenübertragung erteilt. Die Verbindung kann von Administratoren und Beitragenden zur Konfiguration von Anreicherungen verwendet werden.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mehrfachanreicherungen des gleichen Typs
 

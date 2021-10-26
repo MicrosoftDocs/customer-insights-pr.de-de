@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033217"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605948"
 ---
 # <a name="connections-preview-overview"></a>Verbindungsübersicht (Vorschau)
 
@@ -47,6 +47,7 @@ Um Verbindungen hinzuzufügen, müssen Sie [Administratorberechtigungen](permiss
 1. Im Bereich **Verbindung herstellen** geben Sie die erforderlichen Details an. 
    1. Der **Anzeigename** und der Typ der Verbindung beschreiben eine Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel dieser Verbindung erklärt.
    1. Die genauen Felder hängen davon ab, zu welchem Dienst Sie eine Verbindung herstellen. Einzelheiten zu einem bestimmten Verbindungstyp finden Sie im Artikel über den Zieldienst.
+   1. Wenn Sie [Ihren eigenen Key Vault verwenden](use-azure-key-vault.md), um Geheimnisse zu speichern, aktivieren Sie **Key Vault verwenden** und wählen Sie das Geheimnis aus der Liste aus.
 
 1. Wählen Sie zum Erstellen der Verbindung **Speichern** aus.
 
@@ -93,3 +94,6 @@ Abgelöste Anreicherungen und Exporte werden inaktiv. Sie reaktivieren sie, inde
 
 1. Um den Löschvorgang zu bestätigen, wählen Sie **Entfernen**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Stellen Sie Verbindungen mit Geheimnissen her, die von Ihrem eigenen Key Vault verwaltet werden
+
+Einige Verbindungen benötigen Geheimnisse wie API-Schlüssel oder Passwörter. Einige Verbindungen unterstützen Geheimnisse, die in Ihrem eigenen Key Vault gespeichert sind. Erfahren Sie mehr über unterstützte Verbindungen und die Einrichtung unter [Ihr eigener Key Vault für Zielgruppenerkenntnisse](use-azure-key-vault.md).

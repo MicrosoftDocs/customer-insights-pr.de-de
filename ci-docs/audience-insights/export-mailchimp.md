@@ -1,7 +1,7 @@
 ---
 title: Exportieren von Customer Insights-Daten zu Mailchimp
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Mailchimp exportieren.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033538"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618612"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportieren von Segmenten nach Mailchimp (Vorschau)
 
@@ -29,10 +29,10 @@ Exportieren Sie Segmente von vereinheitlichten Kundenprofilen nach Mailchimp, um
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Bis zu 1 Million Profile pro Export zu Mailchimp.
+- Bis zu 1 Million Kundenprofile pro Export zu Mailchimp.
 - Der Export zu Mailchimp ist auf Segmente beschränkt.
-- Das Exportieren von Segmenten mit 1 Million Profilen kann bis zu drei Stunden dauern. 
-- Die Anzahl der Profile, die Sie zu Mailchimp exportieren können, hängt von Ihrem Vertrag mit Mailchimp ab und ist dort begrenzt.
+- Der Export von Segmenten mit 1 Million Kundenprofilen kann bis zu drei Stunden dauern. 
+- Die Anzahl der Kundenprofile, die Sie nach Mailchimp exportieren können, hängt von Ihrem Vertrag mit Mailchimp ab.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Verbindung mit Mailchimp einrichten
 
@@ -66,7 +66,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Geben Sie Ihre **[Mailchimp-Zielgruppen-ID](https://mailchimp.com/help/find-audience-id/)** ein
 
-3. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. 
+1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. 
 
 1. Optional können Sie **Vorname** und **Nachname** exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
 

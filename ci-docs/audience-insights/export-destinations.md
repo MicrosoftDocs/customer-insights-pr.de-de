@@ -1,7 +1,7 @@
 ---
 title: Exportieren Sie Daten aus Customer Insights
 description: Verwalten Sie Datenexporte, um Daten freizugeben.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034681"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623100"
 ---
 # <a name="exports-preview-overview"></a>Exporte (Vorschau) – Übersicht
 
-Die Seite **Exporte** zeigt Ihnen alle konfigurierten Exporte. Exporte teilen bestimmte Daten mit verschiedenen Anwendungen. Sie können Kundenprofile oder -entitäten, Schemas und Zuordnungsdetails enthalten. Jeder Export erfordert eine [Verbindung, die von einem Administrator eingerichtet wurde, um die Authentifizierung und den Zugriff zu verwalten](connections.md).
+Die Seite **Exporte** zeigt Ihnen alle konfigurierten Exporte. Exporte teilen bestimmte Daten mit verschiedenen Anwendungen. Sie können Kundenprofile, Entitäten, Schemata und Zuordnungsdetails enthalten. Jeder Export erfordert eine [Verbindung, die von einem Administrator eingerichtet wurde, um die Authentifizierung und den Zugriff zu verwalten](connections.md).
 
 Gehen Sie zu **Daten** > **Exporte**, um die Exportseite anzuzeigen. Alle Benutzerrollen können konfigurierte Exporte anzeigen. Verwenden Sie das Suchfeld in der Befehlsleiste, um Exporte anhand ihres Namens, Verbindungsnamens oder Verbindungstyps zu suchen.
 
-## <a name="set-up-a-new-export"></a>Einen neuen Export einrichten
+## <a name="export-types"></a>Exporttypen
 
+Es gibt zwei Haupttypen für Exporte:  
+
+- Mit **Daten-Out-Exporte** können Sie jede Art von Entität exportieren, die in Zielgruppenerkenntnissen verfügbar ist. Die für den Export ausgewählten Entitäten werden mit allen Datenfeldern, Metadaten, Schemas und Zuordnungsdetails exportiert. 
+- **Segmentexporte** können Sie Segmententitäten aus Zielgruppenerkenntnissen exportieren. Segmente stellen eine Liste von Kundenprofilen dar. Bei der Konfiguration des Exports wählen Sie je nach Zielsystem, in das Sie Daten exportieren, die enthaltenen Datenfelder aus. 
+
+### <a name="export-segments"></a>Segmente exportieren
+
+**Exportieren von Segmenten in Umgebungen für Geschäftskonten (B2B) oder Einzelkunden (B2C)**  
+Die meisten Exportoptionen unterstützen beide Arten von Umgebungen. Der Export von Segmenten in verschiedene Zielsysteme stellt besondere Anforderungen. Im Allgemeinen enthält ein Segmentmitglied, das Kundenprofil, Kontaktinformationen. Während dies normalerweise bei Segmenten der Fall ist, die auf Einzelkunden basieren (B2C), ist dies nicht unbedingt der Fall bei Segmenten, die auf Geschäftskonten basieren (B2B). 
+
+**Segmentexportumgebungen für Geschäftskonten (B2B)**  
+- Segmente im Kontext von Umgebungen für Geschäftskonten bauen auf dem *Konto* juristische Person auf. Um Kontensegmente unverändert zu exportieren, muss das Zielsystem reine Kontensegmente unterstützen. Dies ist der Fall für [LinkedIn](export-linkedin-ads.md) wenn Sie die Option **Unternehmen** wählen, wenn Sie den Export definieren.
+- Alle anderen Zielsysteme benötigen Felder aus der Kontaktentität. Um sicherzustellen, dass Firmensegmente Daten von verwandten Kontakten abrufen können, muss Ihre Segmentdefinition Attribute der Kontaktentität projizieren. Erfahren Sie mehr darüber, wie es geht, [Segmente und Projektattribute zu konfigurieren](segment-builder.md).
+
+**Segmentexporte in Umgebungen für Einzelkunden (B2C)**  
+- Segmente im Kontext von Umgebungen für individuelle Kunden bauen auf der Entität *Vereinheitlichtes Kund*innenprofil* auf. Jedes Segment, das die Anforderungen der Zielsysteme erfüllt (z.B. eine E-Mail-Adresse), kann exportiert werden.
+
+**Beschränkungen für Segmentexporte**  
+- Zielsysteme von Drittanbietern können die Anzahl der Kundenprofile, die Sie exportieren können, einschränken. 
+- Bei einzelnen Kunden sehen Sie die tatsächliche Anzahl der Segmentmitglieder, wenn Sie ein Segment für den Export auswählen. Sie erhalten eine Warnung, wenn ein Segment zu groß ist. 
+- Bei Geschäftskonten sehen Sie die Anzahl der Konten in einem Segment. die Anzahl der Kontakte, die projiziert werden können, wird jedoch nicht angezeigt. In manchen Fällen kann dies dazu führen, dass das exportierte Segment tatsächlich mehr Kundenprofile enthält, als das Zielsystem akzeptiert. Bei Überschreitung der Grenzwerte der Zielsystemergebnisse wird der Export übersprungen. 
+
+## <a name="set-up-a-new-export"></a>Einen neuen Export einrichten  
 Um einen Export einzurichten oder zu bearbeiten, müssen Verbindungen verfügbar sein. Verbindungen hängen von Ihrer [Benutzerrolle](permissions.md) ab:
-- Administratoren haben Zugriff auf alle Verbindungen. Sie können beim Einrichten eines Exports auch neue Verbindungen herstellen.
-- Mitwirkende können auf bestimmte Verbindungen zugreifen. Sie hängen von Administratoren ab, um Verbindungen zu konfigurieren und gemeinsam zu nutzen. Die Exportliste zeigt den Mitwirkenden an, ob sie einen Export bearbeiten oder nur in der Spalte **Ihre Berechtigungen** anzeigen können. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Betrachter können nur vorhandene Exporte anzeigen, aber nicht erstellen.
+- **Administratoren** haben Zugriff auf alle Verbindungen. Sie können beim Einrichten eines Exports auch neue Verbindungen herstellen.
+- **Mitwirkende** können auf bestimmte Verbindungen zugreifen. Sie hängen von Administratoren ab, um Verbindungen zu konfigurieren und gemeinsam zu nutzen. Die Exportliste zeigt den Mitwirkenden an, ob sie einen Export bearbeiten oder nur in der Spalte **Ihre Berechtigungen** anzeigen können. Weitere Informationen finden Sie unter [Erlauben Sie Mitwirkenden, eine Verbindung für Exporte zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Betrachter** kann nur vorhandene Exporte anzeigen, nicht erstellen.
 
 ### <a name="define-a-new-export"></a>Definieren eines neuen Exports
 

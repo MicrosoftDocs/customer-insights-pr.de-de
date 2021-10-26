@@ -2,8 +2,14 @@
   href: index.yml
 - name: Produktübersicht
   href: overview.md
-- name: Eine Testversion erstellen
-  href: audience-insights/get-started-trial.md
+- name: Kostenlose Testversion
+  items:
+    - name: Für eine kostenlose Testversion anmelden
+      href: trial-signup.md
+    - name: FAQ zur Testversion
+      href: trial-FAQ.md
+- name: Beginnen Sie mit einer kostenpflichtigen Lizenz
+  href: paid-license.md
 - name: Auf Ihre Umgebung zugreifen
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Zielgruppenerkenntnisse
@@ -19,9 +25,11 @@
         - name: Erste Schritte
           href: audience-insights/get-started.md
         - name: Neue Umgebung erstellen
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Zielgruppenerkenntnisse erkunden
           href: audience-insights/home.md
+    - name: Mit Geschäftskonten arbeiten
+      href: audience-insights/work-with-business-accounts.md
     - name: Lernmodule
       items:
         - name: Einlesen von Daten
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Kundenaktivitäten aufführen
           href: audience-insights/activities.md
+        - name: Semantische Zuordnungen definieren
+          href: audience-insights/semantic-mappings.md
     - name: Datenanreicherung
       items:
         - name: Kundenprofile bereichern
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Abonnementabwanderung vorhersagen
               href: audience-insights/predict-subscription-churn.md
-            - name: Transaktionsbedingte Abwanderung vorhersagen
+            - name: Transaktionsabwanderung vorhersagen
               href: audience-insights/predict-transactional-churn.md
             - name: Verwenden von benutzerdefinierten Modellen aus Azure Machine Learning
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Beispielanleitung für die Vorhersage der Abwanderung von Abonnenten
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Beispielanleitung für die Vorhersage von Transaktionsabwanderung
+            - name: Beispielanleitung für Transaktionsabwanderungs-Vorhersage
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Beispielanleitung für Produktempfehlungsvorhersage
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Mehrere Umgebungen verwalten
           href: audience-insights/manage-environments.md
-        - name: Verbinden mit einem ADLS-Speicherkonto über ein Service Principal
-          href: audience-insights/connect-service-principal.md
         - name: Unterstützte Sprachen
           href: audience-insights/supported-languages.md
+        - name: Sicherheit
+          items:
+            - name: Bring Your Own Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Verbinden mit einem ADLS-Speicherkonto über ein Service Principal
+              href: audience-insights/connect-service-principal.md
     - name: Erweiterbarkeit
       items:
         - name: Integrieren Sie Webdaten aus Erkenntnissen zur Kundenbindung
@@ -248,6 +262,8 @@
       items:
         - name: Erste Schritte
           href: engagement-insights/get-started.md
+        - name: Eine Umgebung erstellen
+          href: engagement-insights/create-new-environment.md
         - name: Arbeitsbereich erstellen
           href: engagement-insights/create-workspace.md
         - name: Erfassen Sie Ereignisse aus Websites und mobilen Apps

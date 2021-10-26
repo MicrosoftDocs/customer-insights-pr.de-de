@@ -1,32 +1,32 @@
 ---
 title: Anreicherung von Firmenprofilen mit der Drittanbieter-Anreicherung Leadspace
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von Leadspace.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031702"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617400"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Anreicherung von Firmenprofilen mit Leadspace (Vorschau)
 
-Leadspace ist ein datenwissenschaftliches Unternehmen, das eine B2B-Kundendatenplattform anbietet. Sie ermöglicht es Kunden mit einheitlichen Kundenprofilen für Unternehmen, ihre Daten anzureichern. Anreicherungen umfassen zusätzliche Attribute wie Unternehmensgröße, Standort, Branche und mehr.
+Leadspace ist ein Data Science-Unternehmen, das eine B2B-Kundendatenplattform bereitstellt. Es ermöglicht Umgebungen mit einheitlichen Kundenprofilen basierend auf Konten, ihre Daten anzureichern. Bereichern von *Kundenprofilen* mit Attributen wie Unternehmensgröße, Standort oder Branche. Bereichern von *Kontaktprofilen* mit Attributen wie Titel, Persona oder E-Mail-Verifizierung.
 
-## <a name="prerequisites"></a>Anforderungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Um Leadspace zu konfigurieren, müssen die folgenden Voraussetzungen erfüllt sein:
 
 - Sie benötigen eine aktive Leadspace-Lizenz.
-- Sie haben [Einheitliche Kundenprofile](customer-profiles.md) für Unternehmen.
-- Eine Leadspace-Verbindung wurde bereits von einem Administrator konfiguriert oder Sie haben [Administrator](permissions.md#administrator)-Berechtigungen und „dauerhaften Schlüssel“ (bezeichnet als **Leadspace-Token**). Kontaktieren Sie [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) direkt für Details über ihr Produkt.
+- Sie haben [Vereinheitlichtes Kund*innenprofil](customer-profiles.md) basierend auf Konten.
+- Eine Leadspace-Verbindung wurde bereits von einem Administrator konfiguriert oder Sie haben [Administrator](permissions.md#administrator)-Berechtigungen und „dauerhaften Schlüssel“ (bezeichnet als **Leadspace-Token**). Kontaktieren Sie [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) direkt für Details über ihr Produkt.
 
 ## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 
@@ -50,6 +50,10 @@ Um Leadspace zu konfigurieren, müssen die folgenden Voraussetzungen erfüllt se
 
 1. Wählen Sie **Weiter** aus, um die Feldzuordnung abzuschließen.
 
+1. Aktivieren Sie das Kontrollkästchen, wenn Sie *Kontaktprofile* haben, die Sie bereichern möchten. Zielgruppenerkenntnisse ordnet automatisch die erforderlichen Felder zu.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Anreicherung von Leadspace-Kontaktdatensätzen.":::
+ 
 1. Geben Sie einen Namen für die Anreicherung ein und wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
 
 
@@ -79,9 +83,10 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 Weitere Informationen finden Sie unter [Leadspace-APIs](https://support.leadspace.com/hc/en-us/sections/201997649-API).
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte,
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 

@@ -4,23 +4,29 @@ description: Übersicht der verfügbaren Rollen und Berechtigungen für Arbeitsb
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036692"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645536"
 ---
 # <a name="roles-and-permissions"></a>Rollen und Berechtigungen
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-In einem Arbeitsbereich speichern und verwalten Sie Ereignisse und Berichte. Ein Mitglied ist ein Benutzer, der auf einen Arbeitsbereich zugreifen kann. Sie können Ihrem Arbeitsbereich Mitglieder zuweisen und deren Rollen und Berechtigungen definieren. Administratorrollen verwalten Arbeitsbereiche und Umgebungen und konfigurieren Interaktionserkenntnisse für andere Benutzer. Die Mitwirkendenrollen richten sich an Analysten, die keine Interaktionserkenntnisse konfigurieren müssen, sondern ihre eigenen Berichte, Trichter oder Segmente erstellen möchten.
+In einem Arbeitsbereich speichern und verwalten Sie Ereignisse und Berichte. Weitere Informationen finden Sie unter [Erstellen Sie einen Arbeitsbereich und fügen Sie Mitglieder hinzu](create-workspace.md). 
+
+Ein Arbeitsbereich kann die folgenden Rollen und Berechtigungen umfassen:
+
+- *Mitgliederrollen* sind Benutzer, die auf einen Arbeitsbereich zugreifen können. Sie können Ihrem Arbeitsbereich Mitglieder zuweisen und deren Rollen und Berechtigungen definieren. 
+- *Administratorrollen* verwalten Arbeitsbereiche und Umgebungen und konfigurieren Interaktionserkenntnisse für andere Benutzer. 
+- *Teilnehmerrollen* richten sich an Analysten, die keine Einblicke in die Kundenbindung konfigurieren müssen, sondern ihre eigenen Berichte, Trichter oder Segmente erstellen möchten.
 
 ## <a name="permissions"></a>Berechtigungen
   

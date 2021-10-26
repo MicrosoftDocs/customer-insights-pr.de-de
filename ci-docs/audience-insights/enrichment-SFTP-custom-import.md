@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032711"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618681"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Anreichern von Kundenprofilen mit benutzerdefinierten Daten (Vorschau)
 
@@ -44,6 +44,8 @@ Um den benutzerdefinierten SFTP-Import zu konfigurieren, müssen die folgenden V
 1.  Wählen Sie **Weiter** und geben Sie einen **Pfad** und einen **Dateinamen** für die Datendatei an, die Sie importieren möchten.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot bei der Eingabe des Datenorts.":::
+
+1. **Weiter** auswählen und dann Kunden-Dataset wählen. Dies können entweder alle Kundenprofile oder ein Segment sein.
 
 1. Wählen Sie **Weiter** und geben Sie einen Namen für die Anreicherung und einen Namen für die Ausgabeentität an. 
 
@@ -121,8 +123,8 @@ Nachdem der Anreicherungsprozess abgeschlossen ist, können Sie Ihre neu importi
 
 Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherungen ansehen**.
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte,
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

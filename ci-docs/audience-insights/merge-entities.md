@@ -1,7 +1,7 @@
 ---
 title: Entitäten bei der Datenvereinheitlichung zusammenführen
 description: Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494318"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648253"
 ---
 # <a name="merge-entities"></a>Entitäten zusammenführen
 
@@ -89,7 +91,7 @@ Auf der Seite **Zusammenführen** wählen Sie **Ausgeschlossene Felder**, um die
     :::image type="content" source="media/recency-merge-option.png" alt-text="Aktualitäts-Option im Dialogfeld zum Zusammenführen von Feldern.":::
     - **Am ältesten**: Identifiziert den Gewinnerwert basierend auf der geringsten Aktualität. Erfordert ein Datum oder ein numerisches Feld für jede teilnehmende Entität im Bereich des Zusammenführens von Feldern, um die Aktualität zu definieren.
 
-1.  Sie können zusätzliche Felder hinzufügen, um am Zusammenführungsprozess teilzunehmen.
+1.  Sie können weitere Felder hinzufügen, um am Zusammenführungsprozess teilzunehmen.
 
 1.  Sie können das zusammengeführte Feld auch umbenennen.
 
@@ -131,7 +133,7 @@ Einige Entitäten enthalten mehr Details als andere. Wenn eine Entität die neue
 
 Nachdem Sie das Zusammenführen von Feldern konfiguriert haben, können Sie definieren, wie CustomerId-Werte, die eindeutigen Kundenprofil-IDs, generiert werden. Der Zusammenführungsschritt im Datenvereinheitlichungsprozess generiert die eindeutige Kundenprofilkennung. Die Kennung ist die CustomerId in der Entität *Kunde*, die aus dem Datenvereinheitlichungsprozess resultiert. 
 
-Die CustomerId in der Kundenentität basiert auf einem Hash des ersten Werts der Gewinner-Primärschlüssel ungleich null. Diese Schlüssel stammen von den Entitäten, die in der Abgleichs- und Zusammenführungsphase verwendet werden und von der Zuordnungsreihenfolge beeinflusst werden.Die generierte CustomerID kann sich also ändern, wenn sich ein Primärschlüsselwert in der primären Entität der Zuordnungsreihenfolge ändert. Folglich repräsentiert der Primärschlüsselwert möglicherweise nicht immer denselben Kunden.
+Die CustomerId in der Kundenentität basiert auf einem Hash des ersten Werts der Gewinner-Primärschlüssel ungleich null. Diese Schlüssel stammen von den Entitäten, die in der Abgleichs- und Zusammenführungsphase verwendet werden und von der Zuordnungsreihenfolge beeinflusst werden.Die generierte CustomerID kann sich also ändern, wenn sich ein Primärschlüsselwert in der primären Entität der Zuordnungsreihenfolge ändert. Daher repräsentiert der Primärschlüsselwert möglicherweise nicht immer denselben Kunden.
 
 Durch die Konfiguration einer stabilen Kunden-ID können Sie dieses Verhalten vermeiden.
 
@@ -139,7 +141,7 @@ Durch die Konfiguration einer stabilen Kunden-ID können Sie dieses Verhalten ve
 
 1. Gehen Sie zu **Vereinheitlichen** > **Zusammenführen**.
 
-1. Wählen Sie auf der Seite **Zusammenführen** die Registerkarte **Schüssel** aus. 
+1. Wählen Sie die Registerkarte **Schlüssel** aus. 
 
 1. Bewegen Sie den Mauszeiger über die Zeile **CustomerId**, und wählen Sie die Option **Konfigurieren**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Steuerung zum Anpassen der ID-Generierung.":::
@@ -147,6 +149,30 @@ Durch die Konfiguration einer stabilen Kunden-ID können Sie dieses Verhalten ve
 1. Wählen Sie bis zu fünf Felder aus, die eine eindeutige Kunden-ID enthalten und stabiler sind. Datensätze, die nicht Ihrer Konfiguration entsprechen, verwenden stattdessen eine vom System konfigurierte ID.  
 
 1. Wählen Sie **Fertig**, und führen Sie den Zusammenführungsprozess aus, um Ihre Änderungen zu übernehmen.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Profile in Haushalte oder Cluster gruppieren
+
+Als Teil des Konfigurationsprozesses der Kundenprofilgenerierung können Sie Regeln definieren, um verwandte Profile in einem Cluster zu gruppieren. Derzeit sind zwei Arten von Cluster verfügbar – Haushalts- und benutzerdefinierte Cluster. Das System wählt automatisch einen Haushalt mit vordefinierten Regeln aus, wenn die *Kunde* Entität die semantischen Felder *Person.Nachname* und *Standort-Adresse* enthält. Sie können auch einen Cluster mit Ihren eigenen Regeln und Bedingungen erstellen, ähnlich wie bei [Abstimmungsregeln](match-entities.md#define-rules-for-match-pairs).
+
+**Definieren Sie einen Haushalt oder ein Cluster**
+
+1. Gehen Sie zu **Vereinheitlichen** > **Zusammenführen**.
+
+1. Auf der **Zusammenführen** Registerkarte, wählen Sie **Erweitert** > **Cluster erstellen**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Steuerelement zum Erstellen eines neuen Clusters.":::
+
+1. Wählen Sie zwischen einem **Haushalt** oder einem **Benutzerdefiniert** Cluster. Wenn die semantischen Felder *Person.Nachname* und *Standort-Adresse* in der *Kunde* Entität vorhanden sind, wird Haushalt automatisch ausgewählt.
+
+1. Geben Sie einen Namen für den Cluster ein und wählen Sie **Fertig**.
+
+1. Wählen Sie die Registerkarte **Cluster**, um den von Ihnen erstellten Cluster zu finden.
+
+1. Geben Sie die Regeln und Bedingungen an, um Ihren Cluster zu definieren.
+
+1. Wählen Sie **Ausführen**, um den Zusammenführungsprozess auszuführen und den Cluster zu erstellen.
+
+Nach dem Ausführen des Zusammenführungsprozesses werden die Cluster-IDs als neue Felder zu der Entität *Kunde* hinzugefügt.
 
 ## <a name="run-your-merge"></a>Führen Sie Ihre Zusammenführung durch
 

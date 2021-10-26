@@ -8,18 +8,18 @@ ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564593"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645400"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regionale Verfügbarkeit für Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Interaktionserkenntnisse, eine Funktion von Dynamics 365 Customer Insights, führt nach und nach weitere Regionen ein, in denen Kunden ihre Daten speichern können. Administratoren können eine Region auswählen, wenn sie [eine neue Umgebung erstellen](manage-environments-workspaces.md#create-an-environment). 
+Interaktionserkenntnisse, eine Funktion von Dynamics 365 Customer Insights, führt nach und nach weitere Regionen ein, in denen Kunden ihre Daten speichern können. Administratoren können eine Region auswählen, wenn sie [eine neue Umgebung erstellen](create-new-environment.md). 
 
 Wenn Sie zum ersten Mal Interaktionserkenntnisse einrichten, können Sie die Region während der [geführten ersten Umgebung](quickstart.md) auswählen. Später können Sie in jeder neuen Umgebung die Region auswählen, in der die Daten gespeichert werden.
 

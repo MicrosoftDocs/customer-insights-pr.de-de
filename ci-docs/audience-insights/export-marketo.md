@@ -1,7 +1,7 @@
 ---
 title: Customer Insights Daten nach Marketo exportieren
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Marketo exportieren.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033492"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619164"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmente nach Marketo exportieren (Vorschau)
 
@@ -29,10 +29,10 @@ Exportieren Sie Segmente von vereinheitlichten Kundenprofilen, um Kampagnen zu e
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Bis zu 1 Million Profile pro Export zu Marketo.
+- Bis zu 1 Million Kundenprofile pro Export zu Marketo.
 - Der Export zu Marketo ist auf Segmente beschränkt.
-- Das Exportieren von Segmenten mit insgesamt 1 Million Profilen kann bis zu 3 Stunden dauern. 
-- Die Anzahl der Profile, die Sie zu Marketo exportieren können, hängt von Ihrem Vertrag mit Marketo ab und ist dort begrenzt.
+- Der Export von Segmenten mit insgesamt 1 Million Kundenprofilen kann bis zu drei Stunden dauern. 
+- Die Anzahl der Kundenprofile, die Sie nach Marketo exportieren können, hängt von Ihrem Vertrag mit Marketo ab.
 
 ## <a name="set-up-connection-to-marketo"></a>Richten Sie die Verbindung mit Marketo ein
 
@@ -64,9 +64,9 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Geben Sie Ihre **[Marketo-Listen-ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** ein. Die Listen-ID ist ein rein numerischer Wert. Wenn Ihre Marketo-Listen-ID beispielsweise ST12345A7 lautet, entfernen Sie das Zeichen vor und nach den Ziffern und geben Sie `12345` ein. 
 
-1. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. 
+1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. 
 
-1. Optional können Sie **Vorname**, **Nachname**, **Stadt**, **Bundesland** und **Land/Region** exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
+1. Optional können Sie **Vorname**, **Nachname**, **Stadt**, **Bundesland** und **Land / Region** exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
 
 1. Wählen Sie die Segemente aus, die Sie exportieren möchten. Sie können insgesamt bis zu 1 Mio. Kundenprofile zu Marketo exportieren.
 

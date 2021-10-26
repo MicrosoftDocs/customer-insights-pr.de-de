@@ -1,7 +1,7 @@
 ---
 title: Segmente in Zielgruppenerkenntnissen
 description: Übersicht über Segmente und wie man sie erstellt und verwaltet.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036372"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617374"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
@@ -26,11 +26,19 @@ Kundenprofile, die den Filtern einer Segmentdefinition entsprechen, werden als *
 
 Es gibt mehrere Wege, ein neues Segment zu erstellen: 
 
-- Komplexes Segment mit Segment Builder: [Leeres Segment](segment-builder.md#create-a-new-segment)
-- Einfache Segmente mit einem Operator: [Schnelles Segment](segment-builder.md#quick-segments)
-- KI-gestützter Weg, um ähnliche Kunden zu finden: [Ähnliche Kunden](find-similar-customer-segments.md)
-- KI-gestützte Vorschläge basierend auf Maßnahmen oder Attributen: [Vorgeschlagene Segmente zur Verbesserung der Maßnahmen](suggested-segments.md)
-- Vorschläge basierend auf Aktivitäten: [Vorgeschlagene Segmente basierend auf der Kundenaktivität](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+
+- Komplexes Segment mit Segmentbuilder: [Unsere eigenen erstellen](segment-builder.md#create-a-new-segment) 
+- Einfache Segmente mit einem Operator: [Schnelles Segment](segment-builder.md#quick-segments) 
+- KI-gestützter Weg, um ähnliche Kunden zu finden: [Ähnliche Kunden](find-similar-customer-segments.md) 
+- KI-gestützte Vorschläge basierend auf Maßnahmen oder Attributen: [Vorgeschlagene Segmente zur Verbesserung der Maßnahmen](suggested-segments.md) 
+- Vorschläge basierend auf Aktivitäten: [Vorgeschlagene Segmente basierend auf der Kundenaktivität](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+
+- Komplexes Segment mit Segmentbuilder: [Unsere eigenen erstellen](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Vorhandene Segmente verwalten
 
@@ -70,9 +78,9 @@ Sie können ein Segment von der Segmentseite oder der [Exportseite](export-desti
 
 1. Wählen Sie **Exporte verwalten** aus der Dropdown-Liste Aktionen.
 
-1. Die Seite **Exporte (Vorschau) für Segment** wird angezeigt. Sie können alle konfigurierten Exporte gruppiert nach Exporten anzeigen, die das aktuelle Segment enthalten oder nicht enthalten.
+1. Die Seite **Exporte (Vorschau) für Segment** wird angezeigt. Sie sehen alle konfigurierten Exporte gruppiert danach, ob sie das aktuelle Segment enthalten oder nicht.
 
-   1. Um das ausgewählte Segment zu einem Export hinzuzufügen, wählen Sie den Export in der Liste aus und wählen Sie dann **Segment hinzufügen** aus.
+   1. Um das ausgewählte Segment zu einem Export hinzuzufügen, **bearbeiten** Sie den jeweiligen Export, um das entsprechende Segment auszuwählen, speichern Sie dann. In Umgebungen für einzelne Kunden können Sie stattdessen den Export in der Liste auswählen und **Segment hinzufügen** auswählen, um das gleiche Ergebnis zu erzielen.
 
    1. Um einen neuen Export mit dem ausgewählten Segment zu erstellen, wählen Sie **Export hinzufügen** aus. Weitere Informationen zum Erstellen von Exporten finden Sie unter [Einrichten eines neuen Exports](export-destinations.md#set-up-a-new-export).
 

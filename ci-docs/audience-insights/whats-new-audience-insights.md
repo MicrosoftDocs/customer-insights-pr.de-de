@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465204"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606071"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
@@ -26,6 +26,20 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Aktualisierungen September 2021
+
+Die Updates im September 2021 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="activities"></a>Aktivitäten
+
+- **Verbesserungen der Aktivitätszeitachse** Wir haben die Filter für die Aktivitätszeitleiste auf Kundenprofilen erweitert. Darüber hinaus können Sie den neuen Filterbereich verwenden, um nach Aktivitätstyp und Datum zu filtern. Datumsangaben können nach verschiedenen Bedingungen gefiltert werden. Weitere Informationen finden Sie unter [Aktivitätszeitachsen in Kundenprofilen anzeigen](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Beziehungen
+
+- **Unterstützung von Multi-Hop-Beziehungen** Verwenden Sie Multi-Hop Beziehungen, wenn Sie Aktivitäten konfigurieren und Beziehungen zwischen Entitäten definieren. Multi-Hop Beziehungen verwendet eine Zwischenentität, um zwei Entitäten zu verbinden. Beim Konfigurieren einer Aktivität können Sie eine Multi-Hop-Beziehung verwenden, um Ihre Aktivitätsentität mit einer Zwischenentität und dann mit einer Kundenentität zu verbinden. Sie können Multi-Hop Beziehungen mit Multi-Pfad Beziehungen kombinieren. Weitere Informationen finden Sie im Abschnitt [Multi-Hop Beziehungen](relationships.md#multi-hop-relationship).
+
+- **Unterstützung von Multi-Pfad-Beziehungen** Verwenden Sie Multi-Pfad Beziehungen, wenn Sie Aktivitäten konfigurieren und Beziehungen zwischen Entitäten definieren. Multi-Pfad Beziehungen verbindet eine Quellentität mit mehr als einer Entität. Beim Konfigurieren einer Aktivität können Sie eine Multi-Pfad-Beziehung verwenden, um Ihre Aktivitätsentität mit einer Zwischenentität und dann mit einer Kundenentität zu verbinden. Sie können Multi-Pfad Beziehungen mit Multi-Hop Beziehungen kombinieren. Weitere Informationen finden Sie im Abschnitt [Multi-Pfad Beziehungen](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Aktualisierungen August 2021
 

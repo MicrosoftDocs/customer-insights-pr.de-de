@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
-ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
+ms.openlocfilehash: 51b150cbf5d9cfb3a5df42e680bcfa57ec5496cb
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466623"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617876"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Anreichern von Kundenprofilen mit Marken- und Interessenbeziehungen (Vorschau)
 
@@ -86,7 +86,7 @@ Wählen Sie **Entität anreichern** und wählen Sie den Kundendatensatz, den Sie
 
 ### <a name="map-your-fields"></a>Ihre Felder zuordnen
 
-Ordnen Sie Felder Ihrer einheitlichen Kundenentität zu, um das demografische Segment zu definieren, das das System zur Anreicherung Ihrer Kundendaten verwenden soll. Ordnen Sie Land/Region und mindestens Geburtsdatum oder Geschlechtsattribute zu. Sie müssen außerdem mindestens einen Ort (und ein Bundesland/Kanton) bzw. eine Postleitzahl zuordnen. Wählen Sie **Bearbeiten**, um die Zuordnung der Felder zu definieren und wählen Sie dann **Anwenden**, wenn Sie fertig sind. Wählen Sie **Speichern** aus, um die Feldzuordnung abzuschließen.
+Ordnen Sie Felder Ihrer einheitlichen Kundenentität zu, um das demografische Segment zu definieren, das das System zur Anreicherung Ihrer Kundendaten verwenden soll. Ordnen Sie Land / Region und mindestens Geburtsdatum oder Geschlechtsattribute zu. Sie müssen außerdem mindestens einen Ort (und ein Bundesland/Kanton) bzw. eine Postleitzahl zuordnen. Wählen Sie **Bearbeiten**, um die Zuordnung der Felder zu definieren und wählen Sie dann **Anwenden**, wenn Sie fertig sind. Wählen Sie **Speichern** aus, um die Feldzuordnung abzuschließen.
 
 Die folgenden Formate und Werte werden unterstützt (Bei Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden):
 
@@ -95,7 +95,7 @@ Die folgenden Formate und Werte werden unterstützt (Bei Werten wird nicht zwisc
 - **Postleitzahl**: Fünfstellige Postleitzahl für die USA, Standardpostleitzahl überall sonst.
 - **Stadt**: Name der Stadt in Englisch.
 - **Bundesland/Kanton** : Zwei-Buchstaben-Abkürzung für die USA und Kanada. Zwei oder drei Buchstaben Abkürzung für Australien. Gilt nicht für Frankreich, Deutschland oder Großbritannien.
-- **Land/Region**:
+- **Land / Region**:
 
   - USA: Vereinigte Staaten von Amerika, USA, USA, USA, Amerika
   - CA: Kanada, CA
@@ -135,9 +135,9 @@ Marken- und Interessenbeziehungen können auch auf einzelnen Kundenkarten einges
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Kundenkarte mit angereicherten Daten.":::
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte,
 
-Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren von Daten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

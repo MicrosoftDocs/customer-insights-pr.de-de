@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6ce72486faa97e6f630a991044ca5e6d4714d0b8b8395a60fad12f3e3a49fa29
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032434"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645033"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Ergänzen von Teildaten mit Vorhersagen
 
@@ -35,7 +35,7 @@ Bevor Ihre Organisation die Vorhersagefunktion verwenden kann, müssen die folge
 
 2. Ihre Zielgruppenerkenntnis-Umgebung ist mit Ihrer Dataverse-Instanz verknüpft.
 
-Wenn Sie eine [neue Umgebung schaffen](get-started-paid.md), konfigurieren Sie sie im Dialogfeld **Erstellen Sie eine Umgebung** und wählen **Erweitert**. Wenn Sie bereits eine Umgebung erstellt haben, gehen Sie zu deren Einstellungen und wählen Sie **Erweitert**. So oder so, geben Sie im Abschnitt **Vorhersagen verwenden** die Dataverse-Instanz-URL ein, an die Sie Ihre Umgebung anhängen möchten.
+Weitere Informationen finden Sie unter [Eine neue Umgebung erstellen](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Erstellen Sie eine Vorhersage in der Kunde-Entität
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-Daten in Microsoft Dataverse
 description: Verwenden Sie Customer Insights-Entitäten als Tabellen in Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032895"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645217"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Arbeiten mit Customer Insights-Daten in Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Customer Insights bietet die Möglichkeit, Ausgabeentitäten in [Microsoft Datav
 
 **Organisationen mit bestehenden Dataverse-Umgebungen**
 
-Organisationen, die bereits mit Dataverse arbeiten, können [eine ihrer bestehenden Dataverse-Umgebungen verwenden](get-started-paid.md), wenn ein Administrator Zielgruppenerkenntnisse einrichtet. Durch die Bereitstellung der URL zur Dataverse-Umgebung wird sie an ihre neue Umgebung für Zielgruppenerkenntnisse angehängt. Um die bestmögliche Leistung zu gewährleisten, müssen Customer Insights und Dataverse-Umgebungen in derselben Region gehostet werden.
-
-Zum Anhängen einer Dataverse-Umgebung erweitern Sie **Erweiterte Einstellungen** beim Erstellen der Umgebung für Zielgruppenerkenntnisse. Stellen Sie die **Microsoft Dataverse-Umgebungs-URL** zur Verfügung und aktivieren Sie das Kontrollkästchen **Datenfreigabe aktivieren**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="Alt.":::
+Organisationen, die bereits mit Dataverse arbeiten, können [eine ihrer bestehenden Dataverse-Umgebungen verwenden](create-environment.md), wenn ein Administrator Zielgruppenerkenntnisse einrichtet. Durch die Bereitstellung der URL zur Dataverse-Umgebung wird sie an ihre neue Umgebung für Zielgruppenerkenntnisse angehängt. Um die bestmögliche Leistung zu gewährleisten, müssen Customer Insights und Dataverse-Umgebungen in derselben Region gehostet werden.
 
 **Neue Organisation**
 
