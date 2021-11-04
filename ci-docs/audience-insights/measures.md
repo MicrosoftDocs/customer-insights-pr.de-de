@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622969"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673458"
 ---
 # <a name="define-and-manage-measures"></a>Definieren und Verwalten von Kennzahlen
 
@@ -28,7 +28,7 @@ Verwenden Sie die Kennzahlenerstellung, um Geschäftsaktivitäten zu planen, ind
 
 In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu erstellen. Sie können eine Kennzahl mit Datenattributen von Datenentitäten erstellen, für die eine Beziehung eingerichtet ist, um eine Verbindung mit der einheitlichen Kundenprofilentität herzustellen.
 
-# <a name="individual-customers-b2c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 
 1. Gehen Sie in den Zielgruppen-Insights auf **Kennzahlen**.
 
@@ -92,7 +92,7 @@ In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu e
 
 1. Gehen Sie zu **Kennzahlen**, um die neu erstellte Kennzahl in der Liste anzuzeigen.
 
-# <a name="business-accounts-b2b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
 1. Gehen Sie in den Zielgruppen-Insights auf **Kennzahlen**.
 
@@ -164,7 +164,7 @@ In diesem Abschnitt erfahren Sie, wie Sie eine neue Kennzahl von Grund auf neu e
 
 Sie können vordefinierte Vorlagen häufig verwendeter Kennzahlen verwenden, um sie zu erstellen. Detaillierte Beschreibungen der Vorlagen und eine geführte Erfahrung helfen Ihnen bei der effizienten Erstellung von Kennzahlen. Vorlagen bauen auf zugeordneten Daten aus der *Einheitliche Aktivität*-Entität auf. Stellen Sie also sicher, dass Sie [Kundenaktivitäten](activities.md) konfiguriert haben, bevor Sie eine Kennzahl aus einer Vorlage erstellen.
 
-# <a name="individual-customers-b2c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 
 Sie können vordefinierte Vorlagen häufig verwendeter Kennzahlen verwenden, um sie zu erstellen. Detaillierte Beschreibungen der Vorlagen und eine geführte Erfahrung helfen Ihnen bei der effizienten Erstellung von Kennzahlen. Vorlagen bauen auf zugeordneten Daten aus der *Einheitliche Aktivität*-Entität auf. Stellen Sie also sicher, dass Sie [Kundenaktivitäten](activities.md) konfiguriert haben, bevor Sie eine Kennzahl aus einer Vorlage erstellen.
 
@@ -212,7 +212,7 @@ Das folgende Verfahren beschreibt die Schritte zum Erstellen einer neuen Kennzah
 
 1. Sie können jetzt **Ausführen** auswählen, um die Ergebnisse der Messung zu berechnen. Um dies später zu verfeinern, wählen Sie **Entwurf speichern**.
 
-# <a name="business-accounts-b2b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
 Diese Funktion ist nur für Maßnahmen verfügbar, die in Umgebungen mit einzelnen Kunden als primäres Zielgruppenpublikum erstellt wurden.
 

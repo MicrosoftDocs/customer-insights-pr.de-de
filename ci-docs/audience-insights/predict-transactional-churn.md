@@ -1,7 +1,7 @@
 ---
 title: Transaktionsabwanderung vorhersagen
 description: Sagen Sie voraus, ob bei einem Kunden das Risiko besteht, dass er Ihre Produkte oder Dienstleistungen nicht mehr kauft.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643376"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673044"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Transkaktionsabwanderungs-Vorhersage (Vorschau)
 
@@ -28,6 +28,32 @@ Für Umgebungen, die auf Geschäftskonten basieren, können wir die Transaktions
 > Probieren Sie das Tutorial für eine Transaktionsabwanderungs-Vorhersage mit Beispieldaten aus: [Transaktionsabwanderungs-Vorhersage (Vorschau) Beispielanleitung](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
+
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+
+- Mindestens die [Berechtigung "Mitwirkender"](permissions.md) in Customer Insights.
+- Geschäftswissen, um zu verstehen, was Abwanderung für Ihr Unternehmen bedeutet. Wir unterstützen zeitbasierte Abwanderungsdefinitionen, was bedeutet, dass ein Kunde nach einem Zeitraum ohne Käufe als abgewandert gilt.
+- Daten über Ihre Transaktionen/Einkäufe und deren Historie:
+    - Transaktionskennungen, um Käufe/Transaktionen zu unterscheiden.
+    - Kundenidentifikatoren, um Transaktionen Ihren Kunden zuzuordnen.
+    - Transaktionsereignisdaten, die das Datum definieren, an dem die Transaktion stattgefunden hat.
+    - Das semantische Datenschema für Käufe/Transaktionen benötigt die folgenden Informationen:
+        - **Transaktions-ID**:  Ein eindeutiger Bezeichner eines Kaufs oder einer Transaktion.
+        - **Transaktionsdatum**: Das Datum des Kaufs oder der Transaktion.
+        - **Wert der Transaktion**: Der Währungswert/numerischer Wert der Transaktion/des Elements.
+        - (Optional) **Einzige Produkt-ID**: Die ID des gekauften Produkts oder Dienstes, wenn Ihre Daten auf Einzelpostenebene sind.
+        - (Optional) **Ob diese Transaktion eine Rückgabe war**: Ein Wahr/Falsch-Feld, das angibt, ob die Transaktion eine Rückgabe war oder nicht. Wenn der **Wert der Transaktion** negativ ist, wird auch diese Information verwendet, um eine Rückgabe abzuleiten.
+- (Optional) Daten über Kundenaktivitäten:
+    - Aktivitätskennungen zur Unterscheidung von Aktivitäten desselben Typs.
+    - Kundenidentifikatoren zur Zuordnung von Aktivitäten zu Ihren Kunden.
+    - Aktivitätsinformationen, die den Namen und das Datum der Aktivität enthalten.
+    - Das semantische Datenschema für Kundenaktivitäten umfasst
+        - **Primärschlüssel:** Ein eindeutiger Identifikator für eine Aktivität. Zum Beispiel ein Website-Besuch oder ein Verwendungsnachweis, der zeigt, dass der Kunde eine Probe Ihres Produkts ausprobiert hat.
+        - **Zeitstempel:** Das Datum und die Uhrzeit des durch den Primärschlüssel identifizierten Ereignisses.
+        - **Ereignis:** Der Name des Ereignisses, das Sie verwenden möchten. Ein Feld namens „UserAction“ in einem Lebensmittelgeschäft könnte z.B. die Verwendung des Coupons durch den Kunden sein.
+        - **Details:** Detaillierte Informationen über das Ereignis. Zum Beispiel könnte ein Feld namens „CouponValue“ in einem Lebensmittelgeschäft der Währungswert des Coupons sein.
+
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
 - Mindestens die [Berechtigung "Mitwirkender"](permissions.md) in Customer Insights.
 - Geschäftswissen, um zu verstehen, was Abwanderung für Ihr Unternehmen bedeutet. Wir unterstützen zeitbasierte Abwanderungsdefinitionen, was bedeutet, dass ein Kunde nach einem Zeitraum ohne Käufe als abgewandert gilt.
@@ -59,6 +85,9 @@ Für Umgebungen, die auf Geschäftskonten basieren, können wir die Transaktions
         - **Land:** Das Land eines Kunden.
         - **Branche:** Der Branchentyp eines Kunden. Beispielsweise könnte ein Feld namens Industrie in einem Kaffeeröster anzeigen, ob es sich bei dem Kunden um einen Einzelhandelskunden handelt.
         - **Einstufung:** Die Kategorisierung eines Kunden für Ihr Unternehmen. Ein Feld namens ValueSegment in einem Kaffeeröster könnte beispielsweise die Kundenstufe basierend auf der Kundengröße sein.
+
+---
+
 - Vorgeschlagene Datencharakteristik:
     - Ausreichende historische Daten: Transaktionsdaten für mindestens das Doppelte des ausgewählten Zeitfensters. Vorzugsweise zwei bis drei Jahre Transaktionshistorie. 
     - Mehrfachkäufe pro Kunde: Idealerweise mindestens zwei Transaktionen pro Kunde.
@@ -114,6 +143,32 @@ Für Umgebungen, die auf Geschäftskonten basieren, können wir die Transaktions
 
 1. Wählen **Weiter** aus.
 
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Zusätzliche Daten hinzufügen (optional)
+
+Konfigurieren Sie die Beziehung von Ihrer Kundenaktivitätsentität zur *Kunde*-Entität.
+
+1. Wählen Sie das Feld, das den Kunden in der Kundenaktivitätstabelle identifiziert. Es kann sich direkt auf die primäre Kunden-ID Ihrer Entität *Kunde* beziehen.
+
+1. Wählen Sie die Entität aus, die Ihre primäre *Kundenentität* ist.
+
+1. Geben Sie einen Namen ein, der die Beziehung beschreibt.
+
+#### <a name="customer-activities"></a>Kundenaktivitäten
+
+1. Wählen Sie optional **Daten hinzufügen** für **Kundenaktivitäten**.
+
+1. Wählen Sie den semantischen Aktivitätstyp aus, der die Daten enthält, die Sie verwenden möchten, und wählen Sie dann eine oder mehrere Aktivitäten im Bereich **Aktivitäten** aus.
+
+1. Wählen Sie eine Aktivitätsart, die mit der Art der Kundenaktivität übereinstimmt, die Sie konfigurieren. Wählen Sie **Neu erstellen** und wählen Sie einen verfügbaren Aktivitätstyp oder erstellen Sie einen neuen Typ.
+
+1. Wählen Sie **Weiter** und dann **Speichern** aus.
+
+1. Wenn Sie weitere Kundenaktivitäten haben, die Sie einbeziehen möchten, wiederholen Sie die obigen Schritte.
+
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Vorhersagestube auswählen
 
 Die meisten Vorhersagen werden auf Kundenebene erstellt. In einigen Situationen ist dies möglicherweise nicht granular genug, um Ihre Geschäftsanforderungen zu erfüllen. Sie können diese Funktion verwenden, um die Abwanderung beispielsweise für eine Filiale eines Kunden und nicht für den gesamten Kunden vorherzusagen.
@@ -124,7 +179,7 @@ Die meisten Vorhersagen werden auf Kundenebene erstellt. In einigen Situationen 
 
 1. Wählen Sie das Attribut aus, das Sie als sekundäre Ebene verwenden möchten, und wählen Sie dann **Hinzufügen**
 
-1. Klicken Sie auf **Weiter**.
+1. Wählen **Weiter** aus.
 
 > [!NOTE]
 > Die in diesem Abschnitt verfügbaren Entitäten werden angezeigt, da sie eine Beziehung zu der Entität haben, die Sie im vorherigen Abschnitt ausgewählt haben. Wenn die Entität, die Sie hinzufügen möchten, nicht angezeigt wird, stellen Sie sicher, dass eine gültige Beziehung vorhanden ist unter **Beziehungen**. Nur 1:1- und n:1-Beziehungen sind für diese Konfiguration gültig.
@@ -159,7 +214,7 @@ Konfigurieren Sie die Beziehung von Ihrer Kundenaktivitätsentität zur *Kunde*-
 
 1. Wählen **Weiter** aus.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Geben Sie eine optionale Liste von Benchmark-Konten an (nur Geschäftskonten)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Geben Sie eine optionale Liste von Benchmark-Konten an
 
 Fügen Sie eine Liste Ihrer Geschäftskunden und Konten hinzu, die Sie als Benchmarks verwenden möchten. Sie erhalten [Details zu diesen Benchmark-Konten](#review-a-prediction-status-and-results) einschließlich ihrer Abwanderungsbewertung und der einflussreichsten Funktionen, die sich auf ihre Abwanderungs-Vorhersage ausgewirkt haben.
 
@@ -168,6 +223,8 @@ Fügen Sie eine Liste Ihrer Geschäftskunden und Konten hinzu, die Sie als Bench
 1. Wählen Sie die Kunden aus, die als Maßstab dienen.
 
 1. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Zeitplan festlegen und Konfiguration überprüfen
 
@@ -201,6 +258,25 @@ Fügen Sie eine Liste Ihrer Geschäftskunden und Konten hinzu, die Sie als Bench
 1. Markieren Sie die vertikalen Auslassungspunkte neben der Vorhersage, deren Ergebnisse Sie überprüfen möchten, und wählen Sie **Ansicht**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Steuerelement zum Anzeigen der Ergebnisse einer Vorhersage.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+
+1. Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite:
+   - **Leistung des Trainingsmodells** A, B oder C sind mögliche Bewertungen. Diese Bewertung zeigt die Leistung der Vorhersage an und kann Ihnen bei der Entscheidung helfen, die in der Ausgabe-Entität gespeicherten Ergebnisse zu verwenden. Bewertungen werden auf der Grundlage der folgenden Regeln ermittelt: 
+        - **A**, wenn das Modell mindestens 50 % der gesamten Vorhersagen richtig vorhergesagt hat und wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, um mindestens 10 % größer ist als die Basisrate.
+            
+        - **B**, wenn das Modell mindestens 50 % der gesamten Vorhersagen richtig vorhergesagt hat und wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, bis zu 10 % höher ist als die Basislinie.
+            
+        - **C**, wenn das Modell weniger als 50 % der gesamten Vorhersagen richtig vorhergesagt hat, oder wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, kleiner ist als die Basislinie.
+               
+        - **Basis** nimmt das für das Modell eingegebene Vorhersage-Zeitfenster (z. B. ein Jahr) und das Modell erstellt verschiedene Zeitbruchteile, indem es durch 2 geteilt wird, bis es einen Monat oder weniger erreicht. Es verwendet diese Anteile, um eine Geschäftsregel für Kunden zu erstellen, die in diesem Zeitrahmen nicht gekauft haben. Diese Kunden werden als abgewandert betrachtet. Die zeitbasierte Geschäftsregel mit der höchsten Fähigkeit zur Vorhersage der Abwanderungswahrscheinlichkeit wird als Basismodell gewählt.
+            
+    - **Wahrscheinlichkeit der Abwanderung (Anzahl der Kunden)**: Kundengruppen auf der Grundlage ihres vorhergesagten Abwanderungsrisikos. Diese Daten können Ihnen später helfen, wenn Sie ein Kundensegment mit hohem Abwanderungsrisiko erstellen möchten. Solche Segmente helfen Ihnen zu verstehen, wo Ihr Grenzwert für die Segmentmitgliedschaft liegen sollte.
+       
+    - **Die wichtigsten Einflussfaktoren**: Es gibt viele Faktoren, die bei der Erstellung Ihrer Vorhersage berücksichtigt werden. Für jeden der Faktoren wird seine Wichtigkeit für die aggregierten Vorhersagen, die ein Modell erstellt, berechnet. Sie können diese Faktoren verwenden, um Ihre Vorhersage-Ergebnisse zu validieren, oder Sie können diese Informationen später verwenden, um [Segmente zu erstellen](segments.md). Dies könnte dazu beitragen, das Abwanderungsrisiko für Kunden zu beeinflussen.
+
+
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
 1. Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite:
    - **Leistung des Trainingsmodells** A, B oder C sind mögliche Bewertungen. Diese Bewertung zeigt die Leistung der Vorhersage an und kann Ihnen bei der Entscheidung helfen, die in der Ausgabe-Entität gespeicherten Ergebnisse zu verwenden. Bewertungen werden auf der Grundlage der folgenden Regeln ermittelt: 
@@ -237,6 +313,11 @@ Fügen Sie eine Liste Ihrer Geschäftskunden und Konten hinzu, die Sie als Bench
        Wenn Sie die Abwanderung auf Kontoebene vorhersagen, werden alle Konten bei der Ableitung der durchschnittlichen Merkmalswerte für Abwanderungssegmente berücksichtigt. Bei Abwanderungsvorhersagen auf sekundärer Ebene für jedes Konto hängt die Ableitung von Abwanderungssegmenten von der sekundären Ebene des im Seitenbereich ausgewählten Elements ab. Wenn ein Artikel beispielsweise eine sekundäre Produktkategorie = Büroartikel hat, werden bei der Ableitung der durchschnittlichen Merkmalswerte für Abwanderungssegmente nur Artikel mit Büroartikeln als Produktkategorie berücksichtigt. Diese Logik wird angewendet, um einen fairen Vergleich der Merkmalswerte des Artikels mit den Durchschnittswerten in Segmenten mit niedriger, mittlerer und hoher Abwanderung zu gewährleisten.
 
        In einigen Fällen ist der Durchschnittswert von Segmenten mit niedriger, mittlerer oder hoher Abwanderung leer oder nicht verfügbar, da keine Artikel vorhanden sind, die gemäß der obigen Definition zu den entsprechenden Abwanderungssegmenten gehören.
+       
+       > [!NOTE]
+       > Die Interpretation der Werte in den Spalten „Durchschnitt niedrig“, „mittel“ und „hoch“ ist für kategoriale Merkmale wie Land oder Branche unterschiedlich. Da der Begriff „durchschnittlicher“ Merkmalswert nicht für kategoriale Merkmale gilt, geben die Werte in diesen Spalten den Anteil der Kunden in Segmenten mit geringer, mittlerer oder hoher Abwanderung an, die den gleichen Wert des kategorialen Merkmals wie der Artikel aufweisen im Seitenbereich ausgewählt.
+
+---
 
 ## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 

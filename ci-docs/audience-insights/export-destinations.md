@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623100"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673322"
 ---
 # <a name="exports-preview-overview"></a>Exporte (Vorschau) – Übersicht
 
@@ -32,14 +32,14 @@ Es gibt zwei Haupttypen für Exporte:
 
 ### <a name="export-segments"></a>Segmente exportieren
 
-**Exportieren von Segmenten in Umgebungen für Geschäftskonten (B2B) oder Einzelkunden (B2C)**  
-Die meisten Exportoptionen unterstützen beide Arten von Umgebungen. Der Export von Segmenten in verschiedene Zielsysteme stellt besondere Anforderungen. Im Allgemeinen enthält ein Segmentmitglied, das Kundenprofil, Kontaktinformationen. Während dies normalerweise bei Segmenten der Fall ist, die auf Einzelkunden basieren (B2C), ist dies nicht unbedingt der Fall bei Segmenten, die auf Geschäftskonten basieren (B2B). 
+**Exportieren von Segmenten in Umgebungen für Geschäftskonten (B2B) oder Verbraucher (B2C)**  
+Die meisten Exportoptionen unterstützen beide Arten von Umgebungen. Der Export von Segmenten in verschiedene Zielsysteme stellt besondere Anforderungen. Im Allgemeinen enthält ein Segmentmitglied, das Kundenprofil, Kontaktinformationen. Während dies normalerweise bei Segmenten der Fall ist, die auf Verbrauchern basieren (B2C), ist dies nicht unbedingt der Fall bei Segmenten, die auf Geschäftskonten basieren (B2B). 
 
 **Segmentexportumgebungen für Geschäftskonten (B2B)**  
 - Segmente im Kontext von Umgebungen für Geschäftskonten bauen auf dem *Konto* juristische Person auf. Um Kontensegmente unverändert zu exportieren, muss das Zielsystem reine Kontensegmente unterstützen. Dies ist der Fall für [LinkedIn](export-linkedin-ads.md) wenn Sie die Option **Unternehmen** wählen, wenn Sie den Export definieren.
 - Alle anderen Zielsysteme benötigen Felder aus der Kontaktentität. Um sicherzustellen, dass Firmensegmente Daten von verwandten Kontakten abrufen können, muss Ihre Segmentdefinition Attribute der Kontaktentität projizieren. Erfahren Sie mehr darüber, wie es geht, [Segmente und Projektattribute zu konfigurieren](segment-builder.md).
 
-**Segmentexporte in Umgebungen für Einzelkunden (B2C)**  
+**Segmentexporte in Umgebungen für Verbraucher (B2C)**  
 - Segmente im Kontext von Umgebungen für individuelle Kunden bauen auf der Entität *Vereinheitlichtes Kund*innenprofil* auf. Jedes Segment, das die Anforderungen der Zielsysteme erfüllt (z.B. eine E-Mail-Adresse), kann exportiert werden.
 
 **Beschränkungen für Segmentexporte**  

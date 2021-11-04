@@ -1,7 +1,7 @@
 ---
 title: Erstellen von Segmenten mithilfe des Segment-Builders
 description: Erstellen Sie Kundensegmente, um sie auf der Grundlage verschiedener Attribute zu gruppieren.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623008"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673549"
 ---
 # <a name="create-segments"></a>Segmente erstellen
 
@@ -23,6 +23,7 @@ Sie können komplexe Filter mit Bezug zur einheitlichen Kundenentität und den v
 > [!TIP]
 > - Schnelle Sgmente werden nur in Umgebungen für **individuelle Kunden** unterstützt.    
 > - Segmente basierend auf **individuelle Kunden** schließen automatisch verfügbare Kontaktinformationen für Segmentmitglieder ein. In Umgebungen für **Geschäftskonten** basieren Seg,emte auf Konten (Gesellschaften oder Tochtergesellschaften). Um Kontaktinformationen in ein Segment aufzunehmen, verwenden Sie die **Projektattribute** Funktionalität im Segmentersteller.
+>    - Stellen Sie sicher, dass die Kontaktdatenquellen [semantisch der ContactProfile-Entität zugeordnet](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) werden.
 
 ## <a name="segment-builder"></a>Segmentgenerator
 
@@ -52,7 +53,7 @@ Das obige Beispiel veranschaulicht die Segmentierungsfunktion. Wir haben ein Seg
 
 Es gibt mehrere Wege, ein neues Segment zu erstellen. In diesem Abschnitt wird beschrieben, wie Sie Ihr eigenes Segment von Grund auf neu erstellen. Sie können auch ein *schnelles Segment* basierend auf vorhandenen Entitäten erstellen oder Maschinelles Lernen-Modelle verwenden, um *vorgeschlagene Segmente* zu erhalten. Weitere Informationen finden Sie unter [Segmente-Übersicht](segments.md).
 
-Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der Entwurfsphase wird ein Segment als inaktives Segment gespeichert. Wenn Sie die Segmentkonfiguration abgeschlossen haben, führen Sie sie aus, um das Segment zu aktivieren. Alternativ können Sie ein Segment ***aktivieren** _ aus der _ *Alle Segmente** Seite.
+Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der Entwurfsphase wird ein Segment als inaktives Segment gespeichert. Wenn Sie die Segmentkonfiguration abgeschlossen haben, führen Sie sie aus, um das Segment zu aktivieren. Sie können auch ein Segment über die **Alle Segmente**-Seite **aktivieren**.
 
 1. Gehen Sie zur Seite **Segmente**.
 
@@ -93,10 +94,18 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
    - Wählen Sie einen der eingestellten Operatoren aus: **Gesamtmenge**, **Überschneiden**, oder **Außer**.
 
       - **Vereinigen** vereinigt die beiden Gruppen.
-      - **Überschneiden** überschneidet die beiden Gruppen. Nur Daten, die *beiden Gruppen gemeinsam* sind, werden in der vereinigten Gruppe beibehalten.
-      - **Außer** kombiniert die beiden Gruppen. Nur Daten in Gruppe A, die *nicht gemeinsam* mit Daten in Gruppe B sind, bleiben erhalten.
+      - **Überschneiden** überschneidet die beiden Gruppen. Nur Daten, die beiden Gruppen *angehören*, verbleiben in der vereinheitlichten Gruppe.
+      - **Außer** kombiniert die beiden Gruppen. Nur Daten in Gruppe A, die *nicht* Daten in Gruppe B angehören, werden beibehalten.
 
-1. Segmente generieren standardmäßig die Ausgabeentität, die alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie der Ausgabeentität weitere Attribute dieser Entitäten hinzufügen. Wählen Sie, **Projektattribute**, um die Attribute auszuwählen, die an die Ausgabeentität angehängt werden.  
+1. Segmente generieren standardmäßig die Ausgabeentität, die alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie der Ausgabeentität weitere Attribute dieser Entitäten hinzufügen. Wählen Sie, **Projektattribute**, um die Attribute auszuwählen, die an die Ausgabeentität angehängt werden. 
+
+   > [!IMPORTANT]
+   > Bei Segmenten, die auf Geschäftskonten basieren, müssen Details zu einem oder mehreren Kontakten jedes Kontos aus der *ContactProfile*-Entität in das Segment aufgenommen werden, damit dieses Segment aktiviert oder an Ziele exportiert werden kann, für die Kontaktinformationen erforderlich sind. Weitere Informationen über die *ContactProfile*-Entität finden Sie unter [Semantische Zuordnungen](semantic-mappings.md).
+   > Eine Beispielausgabe für ein Segment basierend auf Geschäftskonten mit projizierten Attributen von Kontakten könnte wie folgt aussehen: 
+   >
+   > |Kennung  |Firmenname  |Einnahmen  |Kontaktname  | Rolle des Kontakts|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, Beschaffungsmanagement]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Beispiel für im Seitenbereich ausgewählte projizierte Attribute, die der Ausgabeentität hinzugefügt werden sollen.":::
   
@@ -107,13 +116,14 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
    > - Wenn das Attribut, das Sie projizieren möchten, mehr als einen Hop von der Entität *Kunde* entfernt ist, wie durch die Beziehung definiert, sollte dieses Attribut in jeder Regel der Segmentabfrage verwendet werden, die Sie erstellen. 
    > - Wenn das Attribut, das Sie projizieren möchten, nur einen Hop von der Entität *Kunde* entfernt ist, muss dieses Attribut nicht in jeder Regel der Segmentabfrage vorhanden sein, die Sie erstellen. 
    > - **Projizierte Attribute** werden bei Verwendung von festgelegten Operatoren berücksichtigt.
-   > - Bei Segmenten, die auf Geschäftskonten basieren, müssen Details zu einem oder mehreren Kontakten jedes Kontos in das Segment aufgenommen werden, damit dieses Segment aktiviert oder an Ziele exportiert werden kann, für die Kontaktinformationen erforderlich sind.
 
 1. Bevor Sie das Segment speichern und ausführen, wählen Sie **Details bearbeiten** neben dem Segmentnamen. Geben Sie einen Namen für Ihr Segment ein, und aktualisieren Sie den vorgeschlagenen **Ausgabeentitätsnamen** für das Segment. Sie können dem Segment auch eine Beschreibung hinzufügen.
 
 1. Wählen Sie **Ausführen**, um das Segment zu speichern, aktivieren Sie es und beginnen Sie mit der Verarbeitung Ihres Segments basierend auf allen Regeln und Bedingungen. Andernfalls wird es als inaktives Segment gespeichert.
-
+   
 1. Wählen Sie **Zurück zu Segmenten**, um zur Seite **Segmente** zurückzukehren.
+
+1. Standardmäßig wird das Segment als dynamisches Segment erstellt. Dies bedeutet, dass das Segment während der Systemaktualisierung aktualisiert wird. Um die [automatische Aktualisierung anzuhalten](segments.md#manage-existing-segments), wählen Sie das Segment und dann die Option **Statisch machen** aus. Statische Segmente können jederzeit [manuell aktualisiert](segments.md#refresh-segments) werden.
 
 > [!TIP]
 > - Der Segmentgenerator schlägt beim Festlegen der Operatoren für die Bedingungen keine gültigen Werte aus Entitäten vor. Sie können zu **Daten** > **Entitäten** wechseln, und die Entitätsdaten herunterladen, um zu sehen, welche Werte verfügbar sind.

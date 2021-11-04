@@ -1,7 +1,7 @@
 ---
 title: Systemkonfiguration in Zielgruppen-Insights
 description: Lernen Sie die Systemeinstellungen der Dynamics 365 Customer Insights-Zielgruppen-Insights Funktionalität kennen.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035902"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651839"
 ---
 # <a name="system-configuration"></a>Systemkonfiguration
 
@@ -24,9 +24,9 @@ Die Seite **System** enthält die folgenden Registerkarten:
 - [API-Verwendung](#api-usage-tab)
 - [Info](#about-tab)
 - [Allgemein](#general-tab)
+- [Sicherheit](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Systemseite.](media/system-tabs.png "System-Seite")
+:::image type="content" source="media/system-tabs.png" alt-text="Registerkarten für Einstellungen auf der Systemseite.":::
 
 ## <a name="status-tab"></a>Registerkarte „Status“
 
@@ -84,9 +84,15 @@ Die Registerkarte **Info** enthält den **Displaynamen** Ihrer Organisation, die
 
 ## <a name="general-tab"></a>Registerkarte „Allgemein“
 
-Es gibt zwei Optionen auf der Registerkarte **Allgemein**: **Sprache** und **Format für Land/Region**.
+Sie können die Sprache und das Länder-/Regionsformat auf der **Allgemein**-Registerkarte ändern.
 
-Die App [unterstützt eine Reihe von Sprachen](supported-languages.md). Um Ihre bevorzugte Sprache zu ändern, wählen Sie eine **Sprache** aus der Dropdownliste aus.
+Customer Insights [unterstützt eine Reihe von Sprachen](/dynamics365/get-started/availability). Die App verwendet Ihre Spracheinstellung, um Elemente wie das Menü, Label-Text und Systemmeldungen in Ihrer bevorzugten Sprache anzuzeigen.
+
+Importierte Daten und Informationen, die Sie manuell eingegeben haben, werden nicht übersetzt.
+
+### <a name="update-the-settings"></a>Einstellungen aktualisieren
+
+Um Ihre bevorzugte Sprache zu ändern, wählen Sie eine **Sprache** aus der Dropdownliste aus.
 
 Verwenden Sie die Dropdownliste **Format für Land/Region**, um Ihre bevorzugte Formatierung für Datum, Uhrzeit und Zahlen zu ändern. Unter diesem Feld wird eine Formatierungsvorschau angezeigt. Das System wird automatisch eine Auswahl vorschlagen, wenn Sie eine neue Sprache wählen.
 
@@ -105,6 +111,13 @@ Die **API-Nutzung** enthält drei Abschnitte:
 
    Operationen, die [Datenerfassung in Echtzeit](real-time-data-ingestion.md) verwenden, enthalten eine Schaltfläche mit einem Fernglas-Symbol, um die API-Nutzung in Echtzeit anzuzeigen. Wählen Sie die Schaltfläche, um einen Seitenbereich mit Nutzungsdetails für die Echtzeit-API-Nutzung in der aktuellen Umgebung zu öffnen.   
    Verwenden Sie das Feld **Gruppieren nach** im Bereich **Echtzeit-API-Nutzung**, in dem Sie auswählen können, wie Sie Ihre Echtzeitinteraktionen am besten präsentieren möchten. Sie können die Daten nach API-Methode, qualifiziertem Namen der Entität (aufgenommene Entität), erstellt von (Quelle des Ereignisses), Ergebnis (Erfolg oder Misserfolg) oder Fehlercodes gruppieren. Die Daten stehen als Historiendiagramm und als Tabelle zur Verfügung.
+
+## <a name="security-tab"></a>Sicherheit-Registerkarte
+
+Auf der **Sicherheit**-Registerkarte können Sie Ihren eigenen [Azure Key Vault](/azure/key-vault/general/basic-concepts) für die Umgebung verlinken und verwalten.
+Der dedizierte Schlüsseltresor kann verwendet werden, um Geheimnisse innerhalb der Compliance-Grenze einer Organisation bereitzustellen und zu verwenden. Zielgruppenerkenntnisse können die Geheimnisse in Azure Key Vault verwenden, um [Verbindungen einzurichten](connections.md) zu Drittsystemen.
+
+Weitere Informationen finden Sie unter [Bring Your Own Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

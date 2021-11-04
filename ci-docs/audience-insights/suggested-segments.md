@@ -1,7 +1,7 @@
 ---
 title: Vorgeschlagene Segmente auf Basis von maschinellem Lernen
 description: Mit maschinellem Lernen können Sie neue und interessante Segmente anhand von Kundenattributen finden.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028359"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673182"
 ---
 # <a name="suggested-segments-preview"></a>Vorgeschlagene Segmente (Vorschau)
 
@@ -23,7 +23,7 @@ Entdecken Sie mithilfe eines KI-Modells interessante Segmente Ihrer Kunden. Dies
 > [!NOTE]
 > Die vorgeschlagene Segmentfunktion verwendet Automatisierung, um Daten auszuwerten und Vorhersagen auf Grundlage dieser Daten zu treffen, und kann daher als Methode zur Profilerstellung verwendet werden, wie dieser Begriff in der Datenschutz-Grundverordnung („DSGVO“) definiert ist. Ihre Verwendung dieser Funktion zur Verarbeitung von Daten unterliegt möglicherweise der DSGVO oder anderen Gesetzen oder Vorschriften. Sie sind dafür verantwortlich, dass Ihre Dynamics 365 Customer Insights-Nutzung, einschließlich dieser Funktion, allen geltenden Gesetzen und Vorschriften entspricht, einschließlich Gesetzen in Bezug auf Privatsphäre, personenbezogene Daten, biometrische Daten, Datenschutz und Vertraulichkeit der Kommunikation.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Seite „Vorgeschlagene Segmente“ in Customer Insights mit Details zu einem Vorschlag in einem Seitenbereich.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Seite „Vorgeschlagene Segmente“, die Details zu einem Vorschlag in einem Seitenbereich anzeigt.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Vorgeschlagene Segmente zur Verbesserung Ihrer KPIs
 
@@ -49,7 +49,7 @@ Segmentvorschläge unterscheiden sich, wenn Sie ein numerisches Attribut oder ei
 
 Mit einem numerischen Attribut wie *jährliches Einkommen* oder *Mitgliedschaftszeitraum* als primäres Attribut schlägt das System Segmente vor, die im Vergleich zu allen Kunden einen höheren oder niedrigeren Durchschnittswert des numerischen Attributs aufweisen.
 
-Ein kategoriales Attribut wie *Kundenzufriedenheit* als primäres Attribut führt zu vorgeschlagenen Segmenten mit einem höheren oder niedrigeren Prozentsatz von Kunden, die zu einer bestimmten Kategorie gehören, verglichen mit dem Prozentsatz aller Kunden, die zu derselben Kategorie gehören. Zum Beispiel wird *Kundenzufriedenheit* als primäres Attribut ausgewählt und besteht aus drei Kategorien (*Niedrig*, *Mittel* und *Hoch*). Für jede Kategorie werden Segmente vorgeschlagen, die einen signifikant höheren oder niedrigeren Prozentsatz der Kunden dieser Kategorie aufweisen als der Anteil aller Kunden derselben Kategorie. Wenn 22 % aller Kunden eine *Hoch*-Zufriedenheit haben, also nur Segmente, die einen deutlich höheren oder niedrigeren Kundenanteil mit *Hoch*-Zufriedenheit im Vergleich zu 22 % haben, wird diese für diese Kategorie vorgeschlagen. In ähnlicher Weise werden Segmente für jede der anderen Kategorien vorgeschlagen (*Niedrig* und *Mittel*), wenn sie statistisch signifikant sind.
+Ein kategoriales Attribut wie *Kundenzufriedenheit* als primäres Attribut führt zu vorgeschlagenen Segmenten mit einem höheren oder niedrigeren Prozentsatz von Kunden, die zu einer bestimmten Kategorie gehören, verglichen mit dem Prozentsatz aller Kunden, die zu derselben Kategorie gehören. Zum Beispiel wird *Kundenzufriedenheit* als primäres Attribut ausgewählt und besteht aus drei Kategorien (*Niedrig*, *Mittel* und *Hoch*). Für jede Kategorie werden Segmente vorgeschlagen, die einen höheren oder niedrigeren Prozentsatz von Kunden dieser Kategorie im Vergleich zum Anteil aller Kunden in derselben Kategorie aufweisen. Wenn 22 % aller Kunden eine Zufriedenheit *Hoch* haben, werden nur Segmente, die einen höheren oder niedrigeren Anteil an Kunden mit *Hoch*-Zufriedenheit im Vergleich zu 22 %, für diese Kategorie vorgeschlagen. In ähnlicher Weise werden Segmente für jede der anderen Kategorien vorgeschlagen (*Niedrig* und *Mittel*), wenn sie statistisch signifikant sind.
 
 > [!NOTE]
 > Derzeit unterstützen wir nur primäre kategoriale Attribute mit bis zu 10 Kategorien. Wenn Sie Segmentvorschläge basierend auf einem primären Attribut mit mehr als 10 Kategorien anzeigen möchten, empfehlen wir, einige der Kategorien zu gruppieren, um die Anzahl der Kategorien auf 10 oder weniger zu reduzieren. Diese Einschränkung gilt nur für primäre Attribute. Zur Beeinflussung kategorialer Attribute unterstützen wir derzeit maximal 100 Kategorien.
@@ -77,7 +77,7 @@ Ein kategoriales Attribut wie *Kundenzufriedenheit* als primäres Attribut führ
 
 Sobald das KI-Modell die Vorschläge generiert hat, finden Sie sie unter **Segmente** > **Vorschläge (Vorschau)**.
  
-Wählen Sie ein vorgeschlagenes Segment aus, um die Details dieses Vorschlags einschließlich eines Vergleichs des Durchschnittswerts und der Anzahl der Segmentmitglieder zu überprüfen. Sie können auch die Attributwerte oder Regeln überprüfen, die das KI-Modell gelernt hat, um das ausgewählte Segment vorzuschlagen.
+Wählen Sie ein vorgeschlagenes Segment aus, um die Details dieses Vorschlags zu überprüfen. Sie können auch die Attributwerte oder Regeln überprüfen, die das KI-Modell gelernt hat, um das ausgewählte Segment vorzuschlagen.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Speichern Sie einen Vorschlag als Segment
 

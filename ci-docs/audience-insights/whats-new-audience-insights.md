@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606071"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673839"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
@@ -166,7 +166,7 @@ Die Updates im März 2021 umfassen verschiedene Funktionen, Leistungsverbesserun
 - **Exportieren Sie Segmente in Constant Contact** – Wir haben unsere Exportziele um Constant Contact erweitert. Sie können jetzt Segmente aus Customer Insights in Constant Contact-Listen exportieren und als Basis für Ihre Marketingkampagnen verwenden.   
    Weitere Informationen finden Sie unter [Exportieren nach Constant Contact](export-constant-contact.md).
 
-- **Exportieren Sie Segmente in RollWorks** – Wir haben unsere Exportziele um RollWorks erweitert. Sie können jetzt Segmente aus Customer Insights in RollWorks-Zielgruppen exportieren und als Basis für Ihre B2B-Kampagnen verwenden.    
+- **Exportieren Sie Segmente in RollWorks** – Wir haben unsere Exportziele um RollWorks erweitert. Sie können jetzt Segmente aus Customer Insights zu RollWorks-Zielgruppen exportieren und sie als Grundlage für Ihre B2B-Werbung verwenden.    
    Weitere Informationen finden Sie unter [Exportieren nach RollWorks](export-rollworks.md).
 
 - **Exportieren Sie Segmente in Snapchat** – Wir haben unsere Exportziele um Snapchat erweitert. Sie können jetzt Segmente aus Customer Insights in Snapchat-Zielgruppen exportieren und als Basis für Ihre Kampagnen verwenden.     

@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617554"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672998"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
@@ -29,7 +29,7 @@ Um Anreicherungen erstellen oder bearbeiten zu können, benötigen Sie die Berec
 
 Auf der Registerkarte **Entdecken** finden Sie alle unterstützten Anreicherungsoptionen.
 
-# <a name="individual-customers-b2c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 
 - [Marken](enrichment-microsoft.md) bereitgestellt von Microsoft
 - [Interessen](enrichment-microsoft.md) bereitgestellt von Microsoft
@@ -38,7 +38,7 @@ Auf der Registerkarte **Entdecken** finden Sie alle unterstützten Anreicherungs
 - [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
 
-# <a name="business-accounts-b2b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
 - [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
 - [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
