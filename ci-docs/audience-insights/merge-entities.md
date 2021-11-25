@@ -1,7 +1,7 @@
 ---
 title: Entitäten bei der Datenvereinheitlichung zusammenführen
 description: Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648253"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732771"
 ---
 # <a name="merge-entities"></a>Entitäten zusammenführen
 
@@ -187,10 +187,9 @@ Wählen Sie **Merge- und Downstream-Prozesse ausführen**, um das System mit Ihr
 
 Um weitere Änderungen vorzunehmen und den Schritt erneut auszuführen, können Sie eine laufende Zusammenführung abbrechen. Wählen Sie den Text **Wird aktualisiert ...** und **Auftrag abbrechen**  im angezeigten Seitenbereich aus.
 
-> [!TIP]
-> Wählen Sie nach dem Ausführen des Zusammenführungsprozesses den Prozessstatus aus, um das Feld **Aufgabendetails** zu öffnen. Dort erhalten Sie einen Überblick über die Bearbeitungszeit, das letzte Bearbeitungsdatum und alle mit der Aufgabe verbundenen Fehler und Warnungen. Wählen Sie **Detail anzeigen** aus, um zu sehen, welche Entitäten am Abgleichsprozess teilgenommen haben, ob die Konfliktlösung erfolgreich war und ob die Updates erfolgreich veröffentlicht wurden.  
-> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Drilldownpfad, um über den Link zum Aufgabenstatus zu Prozessdetails zu gelangen.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Drilldownpfad, um über den Link zum Aufgabenstatus zu Prozessdetails zu gelangen.":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

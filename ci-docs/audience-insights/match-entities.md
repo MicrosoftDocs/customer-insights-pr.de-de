@@ -1,7 +1,7 @@
 ---
 title: Entitäten für die Datenvereinheitlichung abgleichen
 description: Stimmen Sie Entitäten ab, um Datensätze zu kombinieren und einheitliche Kundenprofile zu erstellen.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648207"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732633"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
@@ -180,10 +180,7 @@ Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie *
 
 Das Ergebnis einer erfolgreichen Ausführung, die einheitliche Kundenprofilentität, finden Sie auf der Seite **Entitäten** Seite. Ihre einheitliche Kundenentität lautet **Kunden** im Abschnitt **Profile**. Die erste erfolgreiche Übereinstimmungsausführung erstellt die Entität einheitlicher *Kunde*. Alle nachfolgenden Übereinstimmungsausführungen erweitern diese Entität.
 
-> [!TIP]
-> Wählen Sie nach dem Ausführen des Abgleichsprozesses den Prozessstatus aus, um das Feld **Aufgabendetails** zu öffnen. Dort erhalten Sie einen Überblick über die Bearbeitungszeit, das letzte Bearbeitungsdatum und alle mit der Aufgabe verbundenen Fehler und Warnungen. Wählen Sie **Detail anzeigen** aus, um zu sehen, welche Entitäten am Abgleichsprozess teilgenommen haben, welche Regeln auf sie angewandt wurden und ob die Updates erfolgreich veröffentlicht wurden.  
-> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Drilldownpfad, um über den Link zum Aufgabenstatus zu Prozessdetails zu gelangen.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Überprüfen und validieren Sie Ihre Übereinstimmungen
 

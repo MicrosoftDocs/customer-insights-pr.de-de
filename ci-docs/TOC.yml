@@ -84,6 +84,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Erweiterte Adressen
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Unternehmensdaten verbessern
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Mit Azure Maps anreichern
           href: audience-insights/enrichment-azure-maps.md
         - name: Anreicherung mit HERE Technologies
@@ -250,6 +252,40 @@
           href: audience-insights/apis.md
         - name: API-Referenzen
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Zustimmungsverwaltung (Vorschauversion)
+  items:
+    - name: Hilfe-Hub
+      href: consent-management/index.yml
+    - name: Funktionalitätsübersicht
+      href: consent-management/overview.md
+    - name: Los geht's
+      items:
+        - name: Los geht's
+          href: consent-management/get-started.md
+        - name: Konzepte und Terminologie
+          href: consent-management/glossary.md
+    - name: Zustimmungsdaten importieren
+      items:
+        - name: Zustimmungsdaten importieren
+          href: consent-management/import-consent-data.md
+        - name: Zustimmungsdaten festlegen und Zustimmungseinstellungen anwenden
+          href: consent-management/set-consent-rules.md
+    - name: Zustimmungsdaten verwalten
+      items:
+        - name: Zustimmungsregeln in Zielgruppenerkenntnissen aktivieren
+          href: audience-insights/activate-consent.md
+        - name: Standardzustimmungsregeln in Zielgruppenerkenntnis-Segmenten verwalten
+          href: audience-insights/change-default-consent-rules.md
+    - name: Einstellungen und Benutzer verwalten
+      items:
+        - name: Systemeinstellungen konfigurieren
+          href: consent-management/system-settings.md
+        - name: Benutzer und Berechtigungen verwalten
+          href: consent-management/manage-users.md
+    - name: Zustimmungsdaten verwenden
+      items:
+        - name: Vorhersagen mit Zustimmungsdaten erstellen
+          href: consent-management/predictions-consent-data.md
 - name: Interaktionserkenntnisse (Vorschauversion)
   items:
     - name: Hilfe-Hub

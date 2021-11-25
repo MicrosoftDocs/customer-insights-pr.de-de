@@ -1,7 +1,7 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
 description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7672998"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770121"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
@@ -42,6 +42,7 @@ Auf der Registerkarte **Entdecken** finden Sie alle unterstützten Anreicherungs
 
 - [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
 - [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
+- [Erweiterte Unternehmensdaten](enrichment-enhanced-company-data.md) bereitgestellt von Microsoft
 - [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies 
 - [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483667"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791980"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Servicegrenzen in Customer Insights-Funktionen
 
@@ -26,7 +26,7 @@ Dieser Artikel beschreibt die eingebauten Limits des Customer Insights-Dienstes,
 
 | Region  | Grenzwerte  | Anmerkungen |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmente und Maßnahmen | 100 Segmente oder Kennzahlen. | Die Gesamtzahl der aktiven [Segmente](audience-insights/segments.md) und [Kennzahlen](audience-insights/measures.md) zusammen kann 100 nicht überschreiten.  |
+| Segmente, Kennzahlen und Vorhersagen | 300  | Die volle Anzahl an [Segmenten](audience-insights/segments.md), [Kennzahlen](audience-insights/measures.md) und [Vorhersagen](audience-insights/predictions.md) zusammen darf 300 nicht überschreiten.  |
 | Beziehungen | 20 Tiefenstufen für Beziehungen in Entitätspfaden. | Beim Erstellen von [Segmenten](audience-insights/segments.md) oder [Kennzahlen](audience-insights/measures.md) mit der Builder-Schnittstelle können Entitätspfade bis zu 20 Beziehungs-Hops zwischen der Startentität und der Zielentität aufweisen.  |
 
 

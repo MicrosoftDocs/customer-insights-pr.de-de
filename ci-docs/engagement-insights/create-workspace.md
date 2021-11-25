@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645309"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673442"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Erstellen eines neuen Arbeitsbereichs und Hinzufügen von Mitgliedern
 
@@ -26,17 +26,17 @@ Wenn Sie einen Arbeitsbereich erstellen, wählen Sie den Datentyp aus, auf den S
 
 ## <a name="create-a-new-workspace"></a>Neuen Arbeitsbereich erstellen
 
-Das Erstellen eines Arbeitsbereichs umfasst das Einrichten der *Umgebung*, um Ihren Arbeitsbereich zu organisieren. Eine Umgebung ist ein Bereich, der einen oder mehrere Arbeitsbereiche enthalten kann. Sie können eine Umgebung verwenden, um Ihre Arbeitsbereiche und Verbindungen zur Funktion Zielgruppenerkenntnisse von Customer Insights zu verwalten.
+Das Erstellen eines Arbeitsbereichs umfasst das Einrichten der *Umgebung*, um Ihren Arbeitsbereich zu organisieren. Eine Umgebung ist ein Bereich, der einen oder mehrere Arbeitsbereiche enthalten kann. Sie können eine Umgebung verwenden, um Ihre Arbeitsbereiche und Verbindungen zur Zielgruppenerkenntnis-Funktion zu verwalten.
 
-1. Wählen Sie im Arbeitsbereichsumschalter **Neu** aus.
+1. Wählen Sie im Arbeitsbereichsumschalter **+Neu** aus.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Seite der Kundenerkenntnisse mit Legende zum Navigationsbereich und Beschreibung.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Seite von Customer Insights mit Legende zum Navigationsbereich und Beschreibung.":::
 
 1. In dem Bereich **Arbeitsplatz** geben Sie einen **Arbeitsbereichsnamen** ein.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Geben Sie einen Arbeitsbereichsnamen ein.":::
 
-1. Wählen Sie den Plattformtyp (Web oder Mobil), den Sie messen möchten.
+1. Wählen Sie den Plattformtyp (Web oder Mobil) aus, den Sie messen möchten.
 
 1. Wählen Sie **Erweiterte Einstellungen anzeigen**, um diese optionalen Einstellungen zu aktivieren oder zu deaktivieren:
 

@@ -1,7 +1,7 @@
 ---
 title: Systemkonfiguration in Zielgruppen-Insights
 description: Lernen Sie die Systemeinstellungen der Dynamics 365 Customer Insights-Zielgruppen-Insights Funktionalität kennen.
-ms.date: 10/15/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651839"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732360"
 ---
 # <a name="system-configuration"></a>Systemkonfiguration
+
+Um auf Systemkonfigurationen in Zielgruppenerkenntnissen zuzugreifen, wählen Sie in der linken Navigationsleiste **Administrator** > **System**, um eine Liste der Systemaufgaben und -prozesse anzuzeigen.
 
 Die Seite **System** enthält die folgenden Registerkarten:
 - [Status](#status-tab)
@@ -30,41 +32,57 @@ Die Seite **System** enthält die folgenden Registerkarten:
 
 ## <a name="status-tab"></a>Registerkarte „Status“
 
-Auf der **Registerkarte Status** können Sie den Fortschritt der Datenaufnahme, des Datenexports und mehrerer anderer wichtiger Produktprozesse verfolgen. Überprüfen Sie die Informationen auf dieser Registerkarte, um die Vollständigkeit der aktiven Prozesse sicherzustellen.
+Die **Status-Registerkarte** lässt Sie den Fortschritt von Aufgaben, Datenerfassungen, Datenexporten und mehreren anderen wichtigen Produktprozessen nachverfolgen. Überprüfen Sie die Informationen auf dieser Registerkarte, um die Vollständigkeit Ihrer aktiven Aufgaben und Prozesse sicherzustellen.
 
-Diese Registerkarte enthält Tabellen mit Status- und Verarbeitungsinformationen für verschiedene Prozesse. Jede Tabelle verfolgt den **Name** der Aufgabe und ihrer entsprechenden Entität, den **Status** ihres letzten Laufs und wann die **Letzte Aktualisierung** war.
+Diese Registerkarte enthält Tabellen mit Status- und Verarbeitungsinformationen für verschiedene Prozesse. Jede Tabelle verfolgt den **Name** der Aufgabe und ihrer entsprechenden Entität, den **Status** ihres letzten Laufs und wann die **Letzte Aktualisierung** war. Sie können die Details mehrerer letzter Ausführungen anzeigen, indem Sie den Aufgaben- oder Prozessnamen auswählen. 
 
-Zeigen Sie die Details der letzten Durchläufe der Aufgaben an, indem Sie ihren Namen auswählen.
+Wählen Sie den Status neben der Aufgabe oder dem Prozess in der Spalte **Status** aus, um den Bereich **Fortschrittsdetails** zu öffnen.
 
-### <a name="status-types"></a>Statustypen
+   :::image type="content" source="media/system-progress-details.png" alt-text="Bereich mit den Details zum Systemfortschritt":::
 
-Es gibt sechs Arten von Status für Aufgaben. Die folgenden Statustypen werden auch auf den Seiten *Abgleichen*, *Zusammenführen*, *Datenquellen*, *Segmente*, *Maßnahmen*, *Anreicherung*, *Aktivitäten* und *Vorhersagen* angezeigt:
+### <a name="status-definitions"></a>Statusdefinitionen
 
-- **Wird bearbeitet:** Aufgabe ist in Bearbeitung. Der Status kann in „Erfolgreich“ oder „Fehlgeschlagen“ geändert werden.
-- **Erfolgreich:** Aufgabe erfolgreich abgeschlossen.
-- **Übersprungen:** Aufgabe wurde übersprungen. Einer oder mehrere der nachgelagerten Prozesse, von denen diese Aufgabe abhängt, sind fehlgeschlagen oder wurden übersprungen.
-- **Fehler:** Die Verarbeitung der Aufgabe ist fehlgeschlagen.
-- **Abgebrochen:** Die Verarbeitung wurde vom Benutzer abgebrochen, bevor sie abgeschlossen war.
-- **In Warteschlange:** Die Verarbeitung wird in die Warteschlange gestellt und gestartet, sobald alle vorgelagerten Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in den [Aktualisierungsrichtlinien](#refresh-policies).
+Das System verwendet folgende Status für Aufgaben und Prozesse:
 
-### <a name="refresh-policies"></a>Aktualisierungsrichtlinien
+|Status  |Definition  |
+|---------|---------|
+|Storniert |Die Verarbeitung wurde vom Benutzer abgebrochen, bevor sie abgeschlossen wurde.   |
+|Fehlerhaft   |Bei der Dateneingabe sind Fehler aufgetreten.         |
+|Fehler  |Die Verarbeitung ist fehlgeschlagen.  |
+|Nicht begonnen   |Die Datenquelle hat noch keine Datenerfassung oder ist noch im Entwurfsmodus.         |
+|Wird verarbeitet...  |Aufgabe oder Prozess wird ausgeführt.  |
+|Wird aktualisiert    |Die Datenaufnahme ist im Gange. Sie können diesen Vorgang abbrechen, indem Sie **Aktualisierung beenden** in der Spalte **Aktionen** wählen. Wenn Sie die Aktualisierung einer Datenquelle stoppen, wird der letzte Aktualisierungsstatus wiederhergestellt.       |
+|Übersprungen  |Aufgabe oder Prozess wurde übersprungen. Einer oder mehrere der nachgelagerten Prozesse, von denen diese Aufgabe abhängt, sind fehlgeschlagen oder wurden übersprungen.|
+|Erfolgreich  |Aufgabe oder Prozess wurde erfolgreich abgeschlossen. Gibt bei Datenquellen an, dass die Daten erfolgreich aufgenommen wurden, wenn eine Zeit in der Spalte **Aktualisiert** angegeben ist.|
+|In Warteschlange | Die Verarbeitung wird in die Warteschlange gestellt und beginnt, sobald alle Upstream-Aufgaben und -Prozesse abgeschlossen sind. Weitere Informationen finden Sie unter [Prozesse aktualisieren](#refresh-processes).|
 
-Diese Liste zeigt die Aktualisierungsrichtlinien für jeden der Hauptprozesse:
+### <a name="refresh-processes"></a>Prozesse aktualisieren
 
-- **Datenquellen:** Läuft nach dem [konfigurierten Zeitplan](#schedule-tab). Sie hängt von keinem anderen Prozess ab. Der Abgleich hängt vom erfolgreichen Abschluss dieses Prozesses ab.
-- **Abgleich:** Läuft nach dem [konfigurierten Zeitplan](#schedule-tab). Hängt von der Verarbeitung der in der Abgleichdefinition verwendeten Datenquellen ab. Die Zusammenführung hängt vom erfolgreichen Abschluss dieses Prozesses ab.
-- **Zusammenführen:** Läuft nach dem [konfigurierten Zeitplan](#schedule-tab). Hängt vom Abschluss des Abgleichvorgangs ab. Segmente, Kennzahlen, Anreicherung, Suchen, Aktivitäten, Vorhersagen und Datenaufbereitung hängen vom erfolgreichen Abschluss dieses Prozesses ab.
-- **Segmente**: Läuft manuell (einmalige Aktualisierung) und gemäß dem [konfigurierten Zeitplan](#schedule-tab). Hängt von der Zusammenführung ab. Erkenntnisse hängen von der Verarbeitung ab.
-- **Kennzahlen**: Läuft manuell (einmalige Aktualisierung) und gemäß dem [konfigurierten Zeitplan](#schedule-tab). Hängt von der Zusammenführung ab.
-- **Aktivitäten**: Läuft manuell (einmalige Aktualisierung) und gemäß dem [konfigurierten Zeitplan](#schedule-tab). Hängt von der Zusammenführung ab.
-- **Anreicherung**: Läuft manuell (einmalige Aktualisierung) und gemäß dem [konfigurierten Zeitplan](#schedule-tab). Hängt von der Zusammenführung ab.
-- **Suchen**: Läuft manuell (einmalige Aktualisierung) und gemäß dem [konfigurierten Zeitplan](#schedule-tab). Hängt von der Zusammenführung ab.
-- **Datenaufbereitung:** Läuft nach dem [konfigurierten Zeitplan](#schedule-tab). Hängt von der Zusammenführung ab.
-- **Erkenntnisse**: Läuft manuell (einmalige Aktualisierung) und gemäß dem [konfigurierten Zeitplan](#schedule-tab). Kommt auf Segmente an.
+Die Aktualisierung für Aufgaben und Prozesse wird gemäß dem [konfigurierten Zeitplan](#schedule-tab) ausgeführt. 
 
-Wählen Sie den Status einer Aufgabe aus, um die Fortschrittsdetails des gesamten Auftrags anzuzeigen, in dem sie ausgeführt wurde. Die oben genannten Aktualisierungsrichtlinien können Ihnen dabei helfen, zu verstehen, wie Sie eine Aufgabe von **Übersprungen** oder **In Warteschlange** angehen können.
+|Verarbeiten  |Beschreibung  |
+|---------|---------|
+|Aktivität  |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt vom Zusammenführungsprozess ab. Erkenntnisse hängen von der Verarbeitung ab.|
+|Analyseverknüpfung |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt von Segmenten ab.  |
+|Analysevorbereitung |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt von Segmenten ab.  |
+|Datenvorbereitung   |Hängt von der Zusammenführung ab.   |
+|Datenquellen   |Sie hängt von keinem anderen Prozess ab. Der Abgleich hängt vom erfolgreichen Abschluss dieses Prozesses ab.  |
+|Anreicherungen   |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt vom Zusammenführungsprozess ab. |
+|Ziele für Exporte |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt von Segmenten ab.  |
+|Insights |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt von Segmenten ab.  |
+|Intelligenz   |Hängt von der Zusammenführung ab.   |
+|Abgleichen |Hängt von der Verarbeitung der in der Abgleichdefinition verwendeten Datenquellen ab.      |
+|Measures  |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt vom Zusammenführungsprozess ab.  |
+|Zusammenführen   |Hängt vom Abschluss des Abgleichvorgangs ab. Segmente, Kennzahlen, Anreicherung, Suchen, Aktivitäten, Vorhersagen und Datenaufbereitung hängen vom erfolgreichen Abschluss dieses Prozesses ab.   |
+|Profile   |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt vom Zusammenführungsprozess ab. |
+|Search   |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt vom Zusammenführungsprozess ab. |
+|Segmente  |Wird manuell ausgeführt (einmalige Aktualisierung). Hängt vom Zusammenführungsprozess ab. Erkenntnisse hängen von der Verarbeitung ab.|
+|System   |Hängt vom Abschluss des Abgleichvorgangs ab. Segmente, Kennzahlen, Anreicherung, Suchen, Aktivitäten, Vorhersagen und Datenaufbereitung hängen vom erfolgreichen Abschluss dieses Prozesses ab.   |
+|User  |Wird manuell ausgeführt (einmalige Aktualisierung). Abhängig von Entitäten.  |
 
-## <a name="schedule-tab"></a>Registerkarte "Zeitplan
+Wählen Sie den Status eines Prozesses aus, um die Fortschrittsdetails des gesamten Auftrags anzuzeigen, in dem er sich befand. Die oben genannten Aktualisierungsprozesse können Ihnen helfen zu verstehen, was Sie tun können, um eine Aufgabe oder einen Prozess mit dem Status **Übersprungen** oder **In Warteschlange** zu behandeln.
+
+## <a name="schedule-tab"></a>Registerkarte „Zeitplan“
 
 Verwenden Sie die Registerkarte **Zeitplan**, um automatische Aktualisierungen aller Ihrer [eingespeicherten Datenquellen](data-sources.md) zu planen. Automatische Aktualisierungen sorgen dafür, dass Aktualisierungen aus Ihren Datenquellen in Ihren einheitlichen Kundenprofilen berücksichtigt werden.
 
@@ -86,7 +104,7 @@ Die Registerkarte **Info** enthält den **Displaynamen** Ihrer Organisation, die
 
 Sie können die Sprache und das Länder-/Regionsformat auf der **Allgemein**-Registerkarte ändern.
 
-Customer Insights [unterstützt eine Reihe von Sprachen](/dynamics365/get-started/availability). Die App verwendet Ihre Spracheinstellung, um Elemente wie das Menü, Label-Text und Systemmeldungen in Ihrer bevorzugten Sprache anzuzeigen.
+Customer Insights [unterstützt viele Sprachen](/dynamics365/get-started/availability). Die App verwendet Ihre Spracheinstellung, um Elemente wie das Menü, Label-Text und Systemmeldungen in Ihrer bevorzugten Sprache anzuzeigen.
 
 Importierte Daten und Informationen, die Sie manuell eingegeben haben, werden nicht übersetzt.
 
@@ -109,7 +127,7 @@ Die **API-Nutzung** enthält drei Abschnitte:
 
 -  **Operationen** – eine Tabelle mit Zeilen für jede verfügbare API-Operation und Details zur Verwendung der Operationen. Sie können einen Operationsnamen auswählen, um zur [API-Referenz](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) zu wechseln.
 
-   Operationen, die [Datenerfassung in Echtzeit](real-time-data-ingestion.md) verwenden, enthalten eine Schaltfläche mit einem Fernglas-Symbol, um die API-Nutzung in Echtzeit anzuzeigen. Wählen Sie die Schaltfläche, um einen Seitenbereich mit Nutzungsdetails für die Echtzeit-API-Nutzung in der aktuellen Umgebung zu öffnen.   
+   Vorgänge, die [Echtzeit-Datenerfassung](real-time-data-ingestion.md) verwenden, enthalten eine Schaltfläche mit einem Fernglassymbol, um die API-Nutzung in Echtzeit anzuzeigen. Wählen Sie die Schaltfläche, um einen Seitenbereich mit Nutzungsdetails für die Echtzeit-API-Nutzung in der aktuellen Umgebung zu öffnen.   
    Verwenden Sie das Feld **Gruppieren nach** im Bereich **Echtzeit-API-Nutzung**, in dem Sie auswählen können, wie Sie Ihre Echtzeitinteraktionen am besten präsentieren möchten. Sie können die Daten nach API-Methode, qualifiziertem Namen der Entität (aufgenommene Entität), erstellt von (Quelle des Ereignisses), Ergebnis (Erfolg oder Misserfolg) oder Fehlercodes gruppieren. Die Daten stehen als Historiendiagramm und als Tabelle zur Verfügung.
 
 ## <a name="security-tab"></a>Sicherheit-Registerkarte

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483666"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732679"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Daten-abhängige Rechteanforderungen unter DSGVO
 
@@ -79,7 +79,14 @@ Ein Mandanten-Administrator kann diese Schritte befolgen, um Daten zu exportiere
 2. Bestätigen Sie die Meldung, um die Daten für den angeforderten Benutzer zu exportieren.
 3. Erhalten Sie die exportierten Daten über die E-Mail-Adresse des Mandantenverwalters.
 
-## <a name="engagement-insights"></a>Interaktionserkenntnisse
+## <a name="consent-management-preview"></a>Zustimmungsverwaltung (Vorschauversion)
+
+Die Zustimmungsverwaltungsfunktion erfasst Benutzerdaten nicht direkt. Sie importiert und verarbeitet nur Zustimmungsdaten, die von Benutzern in anderen Anwendungen bereitgestellt werden.
+
+Um Zustimmungsdaten zu bestimmten Benutzern zu entfernen, entfernen Sie sie aus den Datenquellen, die in die Zustimmungsverwaltungsfunktion aufgenommen wurden. Nach der Aktualisierung der Datenquelle werden die entfernten Daten auch im Zustimmungscenter gelöscht. Anwendungen, die die Einwilligungsentität verwenden, löschen auch Daten, die aus der Quelle nach einer [Aktualisierung](audience-insights/system.md#refresh-processes) entfernt wurden. Wir empfehlen, Datenquellen schnell zu aktualisieren, nachdem Sie auf eine Anfrage einer betroffenen Person, Daten des Benutzers aus allen anderen Prozessen und Anwendungen zu entfernen, reagiert haben.
+
+
+## <a name="engagement-insights-preview"></a>Interaktionserkenntnisse (Vorschauversion)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Löschen und Exportieren von Ereignisdaten mit Endbenutzerinformationen
 

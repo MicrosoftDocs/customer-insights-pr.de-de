@@ -1,7 +1,7 @@
 ---
 title: Neue und kommende Funktionen
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673839"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753116"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
@@ -26,6 +26,41 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Oktober 2021 Aktualisierungen
+
+Die Updates im Oktober 2021 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="b-to-b"></a>B2B
+
+Ab Oktober 2021 können Sie in Customer Insights mit Geschäftskonten und den dazugehörigen Kontakten arbeiten. Zuvor war die App hauptsächlich auf einzelne Verbraucher zugeschnitten. Mehrere Funktionsbereiche wurden aktualisiert, um B2B-Szenarien zusätzlich zu einem neuen Umgebungstyp zu unterstützen. Eine Übersicht über unterstützte B2B-Funktionen finden Sie unter [Mit Geschäftskonten in Zielgruppenerkenntnissen arbeiten](work-with-business-accounts.md).
+
+In den folgenden Abschnitten werden einige der Schlüsselbereiche hervorgehoben, die angepasst wurden, um Geschäftskonten und Privatkunden zu unterstützen.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Segmente basierend auf Geschäftskonten exportieren
+
+Alle Segmentexporte in Zielgruppenerkenntnissen sind im Kontext von Geschäftskonten verfügbar. Die meisten Segmentexporte erfordern zusätzliche Konfigurations- und [Kontaktinformationen](segment-builder.md#create-a-new-segment), die in den zugrunde liegenden Segmenten projiziert werden, um für Geschäftskonten gültig zu sein. Weitere Informationen finden Sie unter [Segmente exportieren](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Ads-Export mit Geschäftskonten verwenden
+
+Der LinkedIn Ads-Export steht jetzt für das Kontakt- und Unternehmens-Targeting im Kontext von Geschäftskonten zur Verfügung. Wenn Sie das Unternehmens-Targeting als Hauptfokus des LinkedIn-Exports auswählen, können Sie Segmente exportieren, die auf Geschäftskonten basieren, ohne Kontaktinformationen projizieren zu müssen. Weitere Informationen finden Sie in den Dokumentationen zum [LinkedIn Ads-Export](export-linkedin-ads.md) und dem Unterschied zwischen [Kontakt-Targeting](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) und [Unternehmens-Targeting](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Kennzahlen basierend auf Geschäftskonten und deren Hierarchie erstellen
+
+Mit dem Kennzahlen-Builder können Sie Kennzahlen rund um Geschäftskonten erstellen und optional die Hierarchieinformationen verwenden. Hierarchieinformationen werden verwendet, um eine Kennzahlberechnung für ein Konto und alle zugehörigen Unterkonten zusammenzufassen. Sie können beispielsweise Kennzahlen wie den Gesamtumsatz für jede Gruppe von Geschäftskonten erstellen, die durch ihre Hierarchie identifiziert werden. Weitere Informationen finden Sie unter [Definieren und Verwalten von Kennzahlen](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmente basierend auf Geschäftskonten und deren Hierarchie erstellen
+
+Mit dem Segment-Builder können Sie Segmente von Geschäftkonten erstellen, die optional Kontaktinformationen für jedes Konto in einem Segment enthalten. Wenn Sie eine Kontenhierarchie eingerichtet haben, können Sie Informationen zur Kontenhierarchie bei der Segmenterstellung verwenden. Weitere Informationen finden Sie unter [Eine neues Segment erstellen](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Geschäftskonten mit tiefen Einblicken in ihre Abwanderungstendenz beibehalten
+
+Das Vorhersagemodell zur Kundenabwanderung unterstützt jetzt auch Geschäftskonten. Sie können das Abwanderungsrisiko nicht nur für ein Konto bewerten, sondern auch für eine Kombination aus einem Konto und einer Produkt- oder Servicekategorie, die sie bei Ihnen kaufen. Dieser Zusatz hilft Ihnen zu verstehen, ob es wahrscheinlicher ist, dass ein Konto bei Ihnen im Allgemeinen oder nur für eine bestimmte Kategorie von Waren oder Services nicht mehr kauft. Um Sie bei der Verwendung dieses KI-Modells weiter zu unterstützen, werden auch Gründe aufgeführt, warum ein Konto wahrscheinlich abwandert. Weitere Informationen finden Sie unter [Transaktionsabwanderungs-Vorhersage (Vorschau)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Kontakte eines Geschäftskontos in der Kundenansicht anzeigen
+
+Wenn Geschäftskonten verwandten Konten zugeordnet sind, zeigt die Customer Insights-App diese verknüpften Kontakte als Teil der Kundendetailansicht an. Weitere Informationen finden Sie unter [Kundenprofile](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Aktualisierungen September 2021
 
