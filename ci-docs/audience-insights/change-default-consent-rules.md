@@ -1,6 +1,6 @@
 ---
 title: Standardzustimmungsregeln für Segmente verwalten
-description: Erfahren Sie, wie Sie standardmäßige Zustimmungsregeln deaktivieren oder ändern, wenn Überschreibungen aktiviert sind.
+description: Mit der Einwilligungsverwaltungsfunktion können Sie die standardmäßigen Einwilligungsregeln deaktivieren oder ändern, wenn Überschreibungen aktiviert sind.
 ms.date: 10/30/2021
 ms.service: customer-insights
 mms.topic: how-to
@@ -8,16 +8,16 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f61bdd796b3a125b8b72d8749cc00ba0031a673f
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 358ec05d0f7b5fe4ef15d65054b66eaaad301626
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7733017"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790721"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Standardzustimmungsregeln deaktivieren oder ändern
 
-Wenn Ihre Organisationen die [Zustimmungsverwaltungsfunktion](../consent-management/overview.md) kombiniert mit Zielgruppenerkenntnissen verwendet, [können Administratoren die Zustimmung für Segmente erzwingen](activate-consent.md). 
+Wenn Ihre Organisationen die [Zustimmungsverwaltungsfunktion](../consent-management/overview.md) kombiniert mit Zielgruppenerkenntnissen verwendet, [können Administratoren die Einwilligungsregeln für Segmente erzwingen](activate-consent.md). 
 
 Mit erzwungenen Zustimmungsregeln im Segmentbereich informiert jedes Segment über den Status der Zustimmungsüberprüfung und -regeln. Wenn Überschreibungen zulässig sind, werden die standardmäßigen Zustimmungsregeln für bestimmte Segmente deaktiviert. Jeder Ersteller eines Segments kann weitere Zustimmungsregeln für ein Segment hinzufügen. 
 

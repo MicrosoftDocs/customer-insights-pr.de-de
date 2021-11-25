@@ -1,7 +1,7 @@
 ---
 title: Kundenprofile mit Daten von Microsoft anreichern
-description: Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Marken- und Interessenbeziehungen zu bereichern.
-ms.date: 11/01/2021
+description: Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Affinitäten und Share of Voice anzureichern.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732541"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793703"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Anreichern von Kundenprofilen mit Marken- und Interessenbeziehungen (Vorschau)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Anreichern von Kundenprofilen mit Affinitäten und Share of Voice (Vorschau)
 
-Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Marken- und Interessenbeziehungen zu bereichern. Diese Affinitäten basieren auf Daten von Personen in ähnlichen Bevölkerungsgruppen wie Ihren Kunden. Diese Informationen helfen Ihnen dabei, Ihre Kunden anhand ihrer Affinität zu bestimmten Marken und Interessen besser zu verstehen und zu segmentieren.
+Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Markenaffinitäten, Interessenaffinitäten und Share of Voice (SoV) anzureichern. Diese Affinitäten und SoV basieren auf Daten von Personen in ähnlichen Bevölkerungsgruppen wie Ihre Kunden. Diese Informationen helfen Ihnen, Ihre Kunden basierend auf ihren Affinitäten oder SoV zu bestimmten Marken und Interessen besser zu verstehen und zu segmentieren.
 
 Gehen Sie in Zielgruppenerkenntnisse auf **Daten** > **Anreicherung**, um [Anreicherungen zu konfigurieren und anzuzeigen](enrichment-hub.md).
 
-Um die Anreicherung von Markenaffinitäten zu konfigurieren, gehen Sie zur Registerkarte **Entdecken** und wählen Sie **Anreicherung meiner Daten** auf der Kachel **Marken**.
+Um Markenaffinitäten und SoV-Anreicherung zu konfigurieren, gehen Sie zur **Erkunden**-Registerkarte und wählen **Meine Daten anreichern** auf der **Marken**-Kachel.
 
-Um die Anreicherung von Interessenaffinitäten zu konfigurieren, gehen Sie zum Register **Entdecken** und wählen Sie **Anreicherung meiner Daten** auf der Kachel **Interessen**.
+Um Interessenaffinitäten und SoV-Anreicherung zu konfigurieren, gehen Sie zur **Erkunden**-Registerkarte und wählen **Meine Daten anreichern** auf der **Interessen**-Kachel.
 
    > [!div class="mx-imgBorder"]
    > ![Marken- und Interessenkacheln.](media/BrandsInterest-tile-Hub.png "Marken und Interessenkacheln")
 
-## <a name="how-we-determine-affinities"></a>Wie wir Affinitäten bestimmen
+## <a name="how-we-determine-affinities-and-sov"></a>Wie wir Affinitäten und SoV bestimmen
 
-Wir verwenden die Online-Suchdaten von Microsoft, um Affinitäten für Marken und Interessen in verschiedenen demografischen Segmenten (definiert nach Alter, Geschlecht oder Standort) zu finden. Das Onlinesuchvolumen für eine Marke oder ein Interesse bestimmt, wie viel Affinität ein demografisches Segment im Vergleich zu anderen Segmenten zu dieser Marke oder diesem Interesse hat.
+Wir verwenden die Online-Suchdaten von Microsoft, um Affinitäten und SoV für Marken und Interessen in verschiedenen demografischen Segmenten (definiert nach Alter, Geschlecht oder Standort) zu finden. Das Online-Suchvolumen für eine Marke oder ein Interesse bildet die Grundlage für die Bestimmung der Affinität oder SoV. Die beiden bieten jedoch unterschiedliche Perspektiven, um die Kunden zu verstehen.
+
+- Affinität ist ein Vergleich demografischer Segmente. Anhand dieser Informationen können Sie demografische Segmente identifizieren, die im Vergleich zu anderen Segmenten die höchste Affinität zu einer bestimmten Marke oder einem bestimmten Interesse aufweisen.
+
+- Share of Voice ist ein Vergleich zwischen Ihren ausgewählten Marken oder Interessen. Anhand dieser Informationen können Sie ermitteln, welche Marke oder welches Interesse im Vergleich zu anderen von Ihnen ausgewählten Marken oder Interessen den höchsten Share-of-Voice für ein bestimmtes demografisches Segment hat.
 
 ## <a name="affinity-level-and-score"></a>Affinitätsstufe und Punktzahl
 
@@ -48,6 +52,10 @@ Für jedes erweiterte Kundenprofil geben wir zwei verwandte Werte an: Affinität
 |Niedrig     | 1-34        |
 
 Abhängig von der Granularität, die Sie zum Messen der Affinität wünschen, können Sie entweder die Affinitätsstufe oder die Punktzahl verwenden. Der Affinitätswert gibt Ihnen eine genauere Kontrolle.
+
+## <a name="share-of-voice-sov"></a>Share of voice (SoV)
+
+Wir berechnen SoV auf einer 100-Punkte-Skala. Der Gesamt-SoV über alle Marken oder Interessen für jedes angereicherte Kundenprofil summiert sich auf 100. Im Gegensatz zu Affinitäten ist SoV relativ zu den von Ihnen ausgewählten Marken und Interessen. Beispielsweise können die SoV-Werte für „Microsoft“ unterschiedlich sein, wenn die ausgewählten Marken („Microsoft“, „GitHub“) gegenüber („Microsoft“, „LinkedIn“) sind.
 
 ## <a name="supported-countriesregions"></a>Unterstützte Länder/Regionen
 
@@ -82,7 +90,7 @@ Wählen Sie bis zu fünf Marken oder Interessen mit einer oder beiden dieser Opt
 
 ### <a name="select-entity-to-enrich"></a>Anzureichernde Entität auswählen
 
-Wählen Sie **Entität anreichern** und wählen Sie den Kundendatensatz, den Sie mit Unternehmensdaten von Microsoft anreichern möchten. Sie können die Kundenentität auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
+Wählen Sie **Entität anreichern** und dann das Dataset aus, das Sie mit Daten von Microsoft anreichern möchten. Sie können die Kundenentität auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
 
 ### <a name="map-your-fields"></a>Ihre Felder zuordnen
 
@@ -124,13 +132,11 @@ Nachdem Sie den Anreicherungsprozess ausgeführt haben, gehen Sie zu **Meine Anr
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Vorschau der Ergebnisse nach Ausführung des Anreicherungsprozesses.":::
 
-Überprüfen Sie die angereicherten Daten durch Auswahl **Angereicherte Daten anzeigen** in der Grafik. Angereicherte Daten für Marken gehen an die Entität **BrandAffinityFromMicrosoft**. Daten für Interessen sind in der Entität **InterestAffinityFromMicrosoft**. Sie finden diese Entitäten auch in der Gruppe **Anreicherung** unter **Daten** > **Entitäten**.
-
-Sie sehen ein Diagramm mit der Anzahl der angereicherten Kundenprofile im Zeitverlauf und eine Vorschau der angereicherten Entität. Wählen Sie **Mehr anzeigen** in der Vorschaukachel, um die angereicherte Entität zu öffnen.
+Sie finden ein Diagramm mit der Anzahl der angereicherten Kundenprofile im Zeitverlauf und Vorschauen der angereicherten Entitäten. Überprüfen Sie die angereicherten Daten, indem Sie **Mehr anzeigen** in den Diagrammen **Affinitätsebene** oder **Share of Voice** auswählen. Angereicherte Daten für Marken gehen an die **BrandAffinityFromMicrosoft**- und **BrandShareOfVoiceFromMicrosoft**-Entitäten. Daten für Interessen befinden sich in denn Entitäten **InterestAffinityFromMicrosoft** und **InterestShareOfVoiceFromMicrosoft**. Sie finden diese Entitäten auch in der Gruppe **Anreicherung** unter **Daten** > **Entitäten**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Siehe Anreicherungsdaten auf der Kundenkarte
 
-Marken- und Interessenbeziehungen können auch auf einzelnen Kundenkarten eingesehen werden. Gehen Sie zu **Kunden** und wählen Sie ein Kundenprofil. In der Kundenkarte finden Sie Diagramme für die Marken oder Interessen, für die Personen im demografischen Profil dieses Kunden eine Affinität haben.
+Marken- und Interessens-SoV können auch auf einzelnen Kundenkarten eingesehen werden. Gehen Sie zu **Kunden** und wählen Sie ein Kundenprofil. In der Kundenkarte finden Sie Diagramme für die Marken- oder Interessen-SoV zu den Personen im demografischen Profil dieses Kunden.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Kundenkarte mit angereicherten Daten.":::
 

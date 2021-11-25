@@ -1,7 +1,7 @@
 ---
 title: Verbesserung von Unternehmensdaten
 description: Verwenden Sie Modelle von Microsoft, um Unternehmensdaten anzureichern und zu normalisieren.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770169"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813917"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Anreicherung von Unternehmensprofilen mit verbesserten Unternehmensdaten
 
@@ -51,7 +51,8 @@ Bei den erweiterten Daten gibt es einige Einschränkungen. Die Elemente in der L
 
 1.  Bestätigung der Identität des Unternehmens. Wir überprüfen nicht, ob es sich bei der Eingabe um eine vorhandene Organisation handelt oder ob eine Firma die Ausgabe als Standardnamen verwendet.
 2.  Umfassende Abdeckung von Unternehmen weltweit. Die von Microsoft zusammengestellten Unternehmensdaten haben eine globale Abdeckung, bieten jedoch die meisten Abdeckungen in Australien, Kanada, dem Vereinigten Königreich und den Vereinigten Staaten.
-3.  Garantie für Korrektheit oder Aktualität der Daten. Da sich Unternehmensinformationen häufig ändern, können wir nicht garantieren, dass die bereitgestellten erweiterten Unternehmensdaten immer genau oder aktuell sind.
+3.  Standardisieren Sie Firmenadressen weltweit. Wir unterstützen derzeit die Standardisierung von Adressen in diesen Ländern oder Regionen: Australien, Kanada, Frankreich, Deutschland, Italien, Japan, Vereinigtes Königreich und USA.
+4.  Garantie für Korrektheit oder Aktualität der Daten. Da sich Unternehmensinformationen häufig ändern, können wir nicht garantieren, dass die bereitgestellten erweiterten Unternehmensdaten immer genau oder aktuell sind.
 
 ## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 
