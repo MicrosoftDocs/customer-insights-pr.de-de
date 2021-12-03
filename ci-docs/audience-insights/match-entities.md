@@ -1,7 +1,7 @@
 ---
 title: Entitäten für die Datenvereinheitlichung abgleichen
-description: Stimmen Sie Entitäten ab, um Datensätze zu kombinieren und einheitliche Kundenprofile zu erstellen.
-ms.date: 11/01/2021
+description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732633"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863810"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
@@ -224,17 +224,24 @@ Sie können die meisten Übereinstimmungsparameter neu konfigurieren und optimie
 
 ## <a name="specify-custom-match-conditions"></a>Benutzerdefinierte Übereinstimmungsbedingungen angeben
 
-Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie übereinstimmen sollen. Diese Regeln können hochgeladen werden, um den Standard-Übereinstimmungsprozess zu überschreiben. Wenn beispielsweise John Doe I und John Doe II in unseren Aufzeichnungen enthalten sind, kann das System diese als eine Person abgleichen. Mit benutzerdefinierten Übereinstimmungsregeln können Sie festlegen, dass sich ihre Profile auf verschiedene Personen beziehen. 
+Sie können Bedingungen angeben, die die standardmäßige Übereinstimmungslogik überschreiben. Die folgenden vier Optionen sind verfügbar: 
+
+|Option  |Beschreibung des Dataflows |Beispiel  |
+|---------|---------|---------|
+|Immer übereinstimmen     | Definiert Werte, die immer übereinstimmen.         |  *Mike* und *MikeR* immer übereinstimmen.       |
+|Nicht übereinstimmen     | Definiert Werte, die niemals übereinstimmen.        | *John* und *Jonathan* nie übereinstimmen.        |
+|Benutzerdefinierte Umgehung     | Definiert Werte, die das System in der Übereinstimmungsphase immer ignorieren soll. |  Werte *11111* und *Unbekannt* während der Übereinstimmung ignorieren.        |
+|Alias-Zuordnung    | Definieren von Werten, die das System als denselben Wert betrachten soll.         | *Joe* als gleich zu *Joseph* betrachten.        |
 
 1. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie **Benutzerdefinierte Übereinstimmung** im Abschnitt **Übereinstimmende Datensatzdetails** aus.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot des Abschnitts „Abgleichregeln” mit hervorgehobenem Steuerelement zum Überwachen benutzerdefinierter Übereinstimmungen.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot des Abschnitts „Abgleichregeln” mit hervorgehobenem Steuerelement zum Überwachen benutzerdefinierter Übereinstimmungen.":::
 
-1. Wenn Sie keine benutzerdefinierten Übereinstimmungsregeln festgelegt haben, wird ein neuer Bereich **Benutzerdefinierte Übereinstimmung** mit weiteren Details angezeigt.
+1. Gehen Sie im Bereich **Benutzerdefiniert** zur Registerkarte **Datensätze**.
 
-1. Wählen Sie **Ausfüllen der Vorlage**, um eine Vorlagendatei zu erhalten, die angeben kann, welche Datensätze von welchen Entitäten immer oder nie übereinstimmen sollen. Sie müssen die "immer übereinstimmenden" und "nie übereinstimmenden" Datensätze in zwei verschiedenen Dateien getrennt ausfüllen.
+1. Wählen Sie die benutzerdefinierte Übereinstimmungsoption aus dem **Benutzerdefinierter Typ**-Dropdownmenü und dann **Vorlage herunterladen**. Sie benötigen für jede Übereinstimmungsoption eine separate Vorlage.
 
-1. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die bei der benutzerdefinierten Übereinstimmung verwendet werden sollen. Wenn Sie bespielsweise einen Primärschlüssel *12345* von der Entität *Vertrieb* möchten, die immer mit dem Primärschlüssel *34567* der Entität *Kontakt* übereinstimmt, füllen Sie die Vorlage aus:
+1. Eine Vorlage wird heruntergeladen. Öffnen Sie sie und geben Sie die Details ein. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die bei der benutzerdefinierten Übereinstimmung verwendet werden sollen. Wenn Sie bespielsweise einen Primärschlüssel *12345* von der Entität *Vertrieb* möchten, die immer mit dem Primärschlüssel *34567* der Entität *Kontakt* übereinstimmt, füllen Sie die Vorlage aus:
     - Entität1: Verkauf
     - Entity1Key: 12345
     - Entität2: Kontakt
@@ -244,26 +251,32 @@ Sie können Bedingungen festlegen, dass bestimmte Datensätze immer oder nie üb
    
    Wenn Sie eine benutzerdefinierte Übereinstimmung für die Deduplizierung einer Entität angeben möchten, geben Sie dieselbe Entität wie Entität1 und Entität2 an und legen Sie die verschiedenen Primärschlüsselwerte fest.
 
-1. Nachdem Sie alle Überschreibungen hinzugefügt haben, die Sie anwenden möchten, speichern Sie die Vorlagendatei.
+1. Nachdem Sie alle Überschreibungen hinzugefügt haben, speichern Sie die Vorlagendatei.
 
-1. Gehen Sie zu **Daten** > **Datenquellen** und nehmen Sie die Vorlagedateien als neue Entitäten auf. Nach der Aufnahme können Sie diese zur Festlegung der Match-Konfiguration verwenden.
+1. Gehen Sie zu **Daten** > **Datenquellen** und nehmen Sie die Vorlagedateien als neue Entitäten auf.
 
-1. Nachdem die Dateien und Entitäten hochgeladen wurden und verfügbar sind, wählen Sie erneut die Option **Abgleich nach Kennzahl**. Sie sehen Optionen zur Angabe der Entitäten, die Sie einbeziehen möchten. Wählen Sie im Dropdownmenü die erforderlichen Entitäten aus.
+1. Nachdem die Dateien und Entitäten hochgeladen wurden und verfügbar sind, wählen Sie erneut die Option **Abgleich nach Kennzahl**. Sie sehen Optionen zur Angabe der Entitäten, die Sie einbeziehen möchten. Wählen Sie die erforderlichen Entitäten aus dem Dropdownmenü und dann **Fertig** aus.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot des Dialogfelds zum Auswählen von Überschreibungen für ein benutzerdefiniertes Übereinstimmungsszenario.":::
 
-1. Markieren Sie die Entitäten, die Sie für **Immer gleich** und **Niemals gleich** verwenden möchten, wählen Sie **Erledigt**.
+1. Das Anwenden der benutzerdefinierten Übereinstimmung hängt von der Übereinstimmungsoption ab, die Sie verwenden möchten. 
+
+   - Für **Immer übereinstimmen** oder **Nie übereinstimmen** fahren Sie mit dem nächsten Schritt fort.
+   - Für **Benutzerdefinierte Umgehung** oder **Alias-Zuordnung** wählen Sie **Bearbeiten** in einer vorhandenen Übereinstimmungsregel aus oder erstellen eine neue Regel. Wählen Sie im Normalisierungen-Dropdownmenü die Option **Benutzerdefinierte Umgehung** oder **Alias-Zuordnung** und dann **Fertig** aus.
 
 1. Wählen Sie **Speichern** auf der Seite **Abgleichen**, um die benutzerdefinierte Übereinstimmungskonfiguration anzuwenden.
 
 1. Wählen Sie **Ausführen** auf der Seite **Abgleichen**, um den Abgleich zu starten. Andere angegebene Übereinstimmungsregeln werden von der benutzerdefinierten Übereinstimmungskonfiguration überschrieben.
 
-> [!TIP]
-> Gehen Sie zu **Daten** > **Entitäten** und überprüfen Sie die Entität **ConflationMatchPair**, um zu bestätigen, dass die Überschreibungen angewendet werden.
+### <a name="known-issues"></a>Bekannte Probleme
+
+- Bei der Selbstzusammenführung werden die normalisierten Daten in Deduplizierungsentitäten nicht angezeigt. Es wendet die Normalisierung jedoch intern während der Deduplizierung an. Dies gilt entwurfsbedingt für alle Normalisierungen. 
+- Wenn die Einstellung für den Semantiktyp in der Phase **Zuordnung** entfernt wird, wenn eine Alias-Zuordnungs- oder benutzerdefinierte Umgehungs-Übereinstimmungsregel verwendet wird, wird die Normalisierung nicht angewendet. Dies geschieht nur, wenn Sie den Semantiktyp löschen, nachdem Sie die Normalisierung in der Übereinstimmungsregel konfiguriert haben, da der Semantiktyp unbekannt ist.
+
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Nachdem Sie den Abgleichsprozess für mindestens ein Abgleichspaar abgeschlossen haben, können Sie mögliche Widersprüche in Ihren Daten auflösen, indem Sie das Thema [**Zusammenführen**](merge-entities.md) durchlaufen.
+Nachdem Sie den Übereinstimmungsprozess für mindestens ein Übereinstimmungspaar abgeschlossen haben, fahren Sie mit dem [**Zusammenführen**](merge-entities.md)-Schritt fort.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
