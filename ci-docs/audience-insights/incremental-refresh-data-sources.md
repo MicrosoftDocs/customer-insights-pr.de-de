@@ -1,7 +1,7 @@
 ---
 title: Inkrementelle Aktualisierung für Power Query-basierte Datenquellen
 description: Aktualisieren Sie neue und aktualisierte Daten für große Datenquellen basierend auf Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377833"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900267"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementelle Aktualisierung für Datenquellen basierend auf Power Query
+
+In diesem Artikel wird erläutert, wie die inkrementelle Aktualisierung für Datenquellen basierend auf Power Query konfiguriert wird.
 
 Die inkrementelle Aktualisierung für Datenquellen bietet die folgenden Vorteile:
 
@@ -30,9 +32,9 @@ Zielgruppen-Insights ermöglicht eine inkrementelle Aktualisierung für Datenque
 
 1. [Erstellen Sie eine neue Datenquelle basierend auf Power Query](connect-power-query.md).
 
-1. Geben Sie dann einen Namen für die Datenquelle ein.
+1. Geben Sie dann einen **Namen** für die Datenquelle ein.
 
-1. Wählen Sie ein Datenquelle aus, das inkrementelle Aktualisierungen unterstützt, z. B. die Azure SQL-Datenbank.
+1. Wählen Sie eine Datenquelle aus, die inkrementelle Aktualisierungen unterstützt, z. B. [Azure SQL-Datenbank](/power-query/connectors/azuresqldatabase).
 
 1. Wählen Sie die Entitäten oder Tabellen aus, die erfasst werden sollen.
 

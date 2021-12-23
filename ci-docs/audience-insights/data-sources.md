@@ -1,7 +1,7 @@
 ---
 title: Verwenden Sie Datenquellen zur Datenerfassung
 description: Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732141"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900341"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
@@ -25,19 +25,22 @@ Die Funktionalität „Zielgruppen-Insights“ in Dynamics 365 Customer Insights
 
 ## <a name="add-a-data-source"></a>Datenquelle hinzufügen
 
-In den ausführlichen Artikeln erfahren Sie, wie Sie ein Datenquelle hinzufügen, je nachdem, welche Option Sie auswählen.
+Wie Sie je nach gewählter Option eine Datenquelle hinzufügen können, erfahren Sie in den entsprechenden Artikeln.
 
-Sie können ein Datenquelle auf drei Arten hinzufügen:
+Die folgenden Datenquellen können hinzugefügt werden:
 
-- [Durch Dutzende von Power Query-Connectors](connect-power-query.md)
-- [Aus einem Common Data Model-Ordner](connect-common-data-model.md)
-- [Aus Ihrem eigenen Microsoft Dataverse-Lake](connect-dataverse-managed-lake.md)
+- [Power Query-Konnektoren](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse-Lake](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Wenn Sie die Testversion verwenden, enthält der Abschnitt mit den Importmethoden die Option **Customer Insights-Datenbibliothek**. Wählen Sie diese Option aus, um ein Beispiel-DataSet auszuwählen, das für verschiedene Branchen verfügbar ist. Weitere Informationen finden Sie unter [Dynamics 365 Customer Insights-Testversion](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Fügen Sie Daten aus lokalen Datenquellen hinzu
 
-Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Microsoft Power Platform Dataflows unterstützt. Dataflows können in Customer Insights durch [Bereitstellung der Microsoft Dataverse-Umgebungs-URL](create-environment.md) beim Einrichten der Umgebung aktiviert werden.
+Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Microsoft Power Platform Dataflows unterstützt. Beim Einrichten der Umgebung können Sie Dataflows in Customer Insights durch das [Bereitstellen der Microsoft Dataverse-Umgebungs-URL](create-environment.md) aktivieren.
 
-Datenquellen, die nach dem Zuordnen einer Dataverse-Umgebung mit Customer Insights erstellt werden, verwenden [Power Platform Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) standardmäßig. Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Entfernen Sie Datenquellen, die vor einer Dataverse Umgebungszuordnung vorhanden waren, und erstellen Sie sie neu, um [Datengateways lokal zu verwenden](/data-integration/gateway/service-gateway-app).
+Datenquellen, die nach dem Verknüpfen einer Dataverse-Umgebung mit Customer Insights erstellt wurden, verwenden standardmäßig [Power Platform-Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Sie können Datenquellen, die vor der Verknüpfung einer Dataverse-Umgebung vorhanden waren, durch [Verwenden von lokalen Datengateways](/data-integration/gateway/service-gateway-app) entfernen und neu erstellen.
 
 Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
 

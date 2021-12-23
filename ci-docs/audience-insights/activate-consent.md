@@ -1,7 +1,7 @@
 ---
 title: Einwilligungsregeln für Segmente aktivieren
 description: Führen Sie diese Schritte zum Verknüpfen von Zustimmungsregeln und Aktivieren von Zustimmungsüberprüfungen in Zielgruppenerkenntnissen aus. Ein Administrator kann auch Einwilligungsprüfungen deaktivieren.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790775"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884073"
 ---
 # <a name="activate-consent-rules"></a>Zustimmungsregeln aktivieren
 
@@ -49,3 +49,6 @@ Um die Verwendung von Zustimmungsdaten in Zielgruppenerkenntnissen zu beenden, m
 1. Wählen Sie die Registerkarte **Zustimmung (Vorschau)** aus.
 
 1. Stellen Sie im Abschnitt **Zustimmungsüberprüfungen aktivieren** den Umschalter auf **Aus**.
+
+> [!TIP]
+> Weitere Informationen dazu, wie Sie die Verwendung der Zustimmungsverwaltungsfunktion beenden, finden Sie unter [Systemeinstellungen im Zustimmungscenter (Vorschauversion)](../consent-management/system-settings.md).

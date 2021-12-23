@@ -1,7 +1,7 @@
 ---
 title: Azure Machine Learning Experimente
 description: Verwenden Sie auf Azure Machine Learning basierende Modelle in Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,18 +9,18 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033171"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881737"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Verwenden Sie auf Azure Machine Learning basierende Modelle
 
-Die vereinheitlichten Daten in Dynamics 365 Customer Insights sind eine Quelle für den Aufbau von Machine-Learning-Modellen, die zusätzliche Geschäftseinblicke generieren können. Customer Insights lässt sich mit Machine Learning Studio (Classic) und Azure Machine Learning integrieren, um Ihre eigenen benutzerdefinierten Modelle zu verwenden. Beispiele für Experimente, die auf Machine Learning Studio (Classic) basieren, finden Sie unter [Machine Learning Studio (Classic) Experimente](machine-learning-studio-experiments.md). 
+Die vereinheitlichten Daten in Dynamics 365 Customer Insights sind eine Quelle für den Aufbau von Machine-Learning-Modellen, die zusätzliche Geschäftseinblicke generieren können. Customer Insights lässt sich in Azure Machine Learning integrieren, um Ihre eigenen benutzerdefinierten Modelle zu verwenden.
 
-## <a name="prerequisites"></a>Anforderungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Zugriff auf Customer Insights
 - Ein aktives Azure-Enterprise-Abonnement
@@ -35,7 +35,7 @@ Die vereinheitlichten Daten in Dynamics 365 Customer Insights sind eine Quelle f
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Arbeiten Sie mit dem Azure Machine Learning Designer
 
-Azure Machine Learning Designer bietet einen visuellen Canvas, in den Sie Datasets und Module ziehen können, ähnlich wie bei Machine Learning Studio (Classic). Eine mit dem Designer erstellte Batch-Pipeline kann in Customer Insights integriert werden, wenn sie entsprechend konfiguriert ist. 
+Der Azure Machine Learning-Designer stellt eine visuelle Canvas bereit, in die Sie Datasets und Module ziehen und ablegen können. Eine mit dem Designer erstellte Batch-Pipeline kann in Customer Insights integriert werden, wenn sie entsprechend konfiguriert ist. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Arbeiten mit dem Azure Machine Learning SDK
 

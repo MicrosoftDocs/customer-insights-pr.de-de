@@ -1,20 +1,20 @@
 ---
-title: Kundenkarten-Add-In für Dynamics 365 Apps
+title: Kundenkarten-Add-In für Dynamics 365-Apps (Video)
 description: Zeigen Sie mit diesem Add-In Daten aus Zielgruppenerkenntnissen in Dynamics 365-Apps an.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792026"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904012"
 ---
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
 
@@ -34,7 +34,7 @@ Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics
   - **Measure-Steuerelement**: Erfordert [konfigurierte Measures](measures.md) vom Typ Kundenattribute.
   - **Intelligenz-Steuerelement**: Erfordert Daten, die mit [Vorhersagen](predictions.md) oder [kundenspezifischen Modellen](custom-models.md) generiert wurden.
   - **Kundendetail-Steuerelement**: Alle Felder aus dem Profil sind im vereinheitlichtes Kund*innenprofil verfügbar.
-  - **Anreicherungs-Steuerelement**: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt diese Anreicherungen: [Marken](enrichment-microsoft.md), die von Microsoft bereitgestellt wurden, [Interessen](enrichment-microsoft.md), die von Microsoft bereitgestellt wurden.
+  - **Anreicherungs-Steuerelement**: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt die folgenden Anreicherungen: Von Microsoft bereitgestellte [Marken](enrichment-microsoft.md), [Interessen](enrichment-microsoft.md) und [Office-Bindungsdaten](enrichment-office.md).
   - **Kontakt-Steuerelement**: Erfordert die Definition einer semantischen Entität des Typs Kontakte.
   - **Zeitskala-Steuerelement**: Erfordert [Konfigurierte Aktivitäten](activities.md).
 

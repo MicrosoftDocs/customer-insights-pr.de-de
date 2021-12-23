@@ -1,7 +1,7 @@
 ---
-title: Datenerfassung über einen Power Query Konnektor
+title: Daten über einen Power Query-Konnektor erfassen (Video)
 description: Connectors für Datenquellen basierend auf Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732217"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903839"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Mit einer Power Query-Datenquelle verbinden
 
-Power Query bietet eine breite Palette von Connectos zum Erfassen von Daten. Die meisten dieser Connectors werden von Dynamics 365 Customer Insights unterstützt. Das Hinzufügen von Datenquellen basierend auf Power Query-Connectors erfolgt im Allgemeinen gemäß den im nächsten Abschnitt beschriebenen Schritten. Abhängig vom verwendeten Connector sind jedoch unterschiedliche Informationen erforderlich. Weitere Informationen finden Sie in der Dokumentation zu den einzelnen Connectors im [Power Query-Connectorverweis](/power-query/connectors/).
+Power Query bietet eine breite Palette von Connectos zum Erfassen von Daten. Die meisten dieser Connectors werden von Dynamics 365 Customer Insights unterstützt. 
+
+Das Hinzufügen von Datenquellen basierend auf Power Query-Konnektoren folgt im Allgemeinen den in diesem Abschnitt beschriebenen Schritten. Abhängig vom verwendeten Connector sind jedoch unterschiedliche Informationen erforderlich. Weitere Informationen finden Sie in der Dokumentation zu einzelnen Konnektoren in der [Power Query-Konnektor-Referenz](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query bietet eine breite Palette von Connectos zum Erfassen von Daten. Die
 
 1. Wählen Sie **Datenquelle hinzufügen**.
 
-1. Wählen Sie die Methode **Daten importieren** und wählen Sie **Weiter**.
+1. Wählen Sie **Microsoft Power Query** und dann **Weiter** aus.
 
-1. Geben Sie einen **Namen** für die Datenquelle und wählen Sie **Weiter**, um die Datenquelle zu erstellen. Namensrichtlinien: 
-   - Beginnen Sie mit einem Buchstaben.
-   - Verwenden Sie nur Buchstaben und Zahlen. Leerzeichen und Sonderzeichen sind nicht zulässig.
-   - Verwenden Sie zwischen 3 und 64 Zeichen.
+1. Geben Sie einen **Namen** für die Datenquelle und wählen Sie **Weiter**, um die Datenquelle zu erstellen.
 
-1. Wählen Sie einen der [verfügbaren Konnektoren](#available-power-query-data-sources) aus. Für dieses Beispiel wählen wir den Connector **Text/CSV**.
+1. Wählen Sie einen der [verfügbaren Konnektoren](#available-power-query-data-sources) aus. In diesem Beispiel wählen wir den Konnektor **Text/CSV** aus.
 
 1. Geben Sie die erforderlichen Details für den ausgewählten Connector in das Feld **Verbindungseinstellungen** ein und wählen Sie **Weiter**, um eine Vorschau der Daten zu sehen.
 
@@ -50,7 +49,7 @@ Power Query bietet eine breite Palette von Connectos zum Erfassen von Daten. Die
 
 1. Sie können Ihrer Datenquelle weitere Entitäten hinzufügen, indem Sie im Dialog **Abfragen bearbeiten** **Daten holen** wählen.
 
-   Diese Transformationen werden dringend empfohlen:
+   Wir empfehlen die Verwendung der folgenden Transformationen:
 
    - Wenn Sie Daten aus einer CSV-Datei erfassen, enthält die erste Zeile häufig Überschriften. Wechseln Sie zu **Tabelle transformieren** aus und danach **Überschriften als erste Zeile verwenden**.
    - Stellen Sie sicher, dass der Datentyp richtig eingestellt ist.
@@ -61,7 +60,7 @@ Power Query bietet eine breite Palette von Connectos zum Erfassen von Daten. Die
 
 ## <a name="available-power-query-data-sources"></a>Verfügbare Power Query-Datenquellen
 
-Eine aktuelle Liste derConnectors, die Sie zum Importieren von Daten in Customer Insights auswählen können, finden Sie unter [Power Query-Connectorverweis](/power-query/connectors/). 
+Eine Liste der Konnektoren, die Sie zum Importieren von Daten in Customer Insights verwenden können, finden Sie in der [Power Query-Konnektor-Referenz](/power-query/connectors/). 
 
 Connectors mit einem Häkchen in der Spalte **Customer Insights (Datenflows)** sind verfügbar, um neue Datenquellen basierend auf Power Query zu erstellen. Lesen Sie die Dokumentation eines bestimmten Connectors, um mehr über seine Voraussetzungen, Einschränkungen und andere Details zu erfahren.
 
@@ -70,7 +69,7 @@ Connectors mit einem Häkchen in der Spalte **Customer Insights (Datenflows)** s
 > [!NOTE]
 > Es ist möglicherweise nicht möglich, Änderungen an Datenquellen vorzunehmen, die derzeit in einem der Prozesse der App verwendet werden (z. B. *Segmentierung*, *Abgleich* oder *Zusammenführung*). 
 >
-> Über die Seite **Einstellungen** können Sie den Fortschritt jedes aktiven Prozesses verfolgen. Wenn ein Prozess abgeschlossen ist, können Sie zur Seite **Datenquellen** zurückkehren und Ihre Änderungen vornehmen.
+> Auf der Seite **Einstellungen** können Sie den Fortschritt jedes aktiven Prozesses verfolgen. Wenn ein Prozess abgeschlossen ist, können Sie zur Seite **Datenquellen** zurückkehren und Ihre Änderungen vornehmen.
 
 1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Datenquellen**.
 

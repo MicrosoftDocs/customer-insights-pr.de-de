@@ -1,7 +1,7 @@
 ---
 title: Verbinden Sie Common Data Model-Daten mit einem Azure Data Lake-Konto
 description: Arbeiten Sie mit Common Data Model-Daten unter Verwendung von Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033125"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900196"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
 
@@ -30,7 +30,7 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
 
 - Der Azure Data Lake, mit dem Sie sich verbinden und von dem Sie Daten aufnehmen möchten, muss sich in derselben Azure-Region befinden wie die Dynamics 365 Customer Insights-Umgebung. Verbindungen zu einem Common Data Model-Ordner aus einem Data Lake in einer anderen Azure-Region werden nicht unterstützt. Um die Azure-Region der Umgebung zu kennen, gehen Sie zu **Admin** > **System** > **Über** in Zielgruppen-Insights.
 
-- Daten, die in Online-Diensten gespeichert sind, können an einem anderen Ort gespeichert werden als dort, wo die Daten verarbeitet oder in Dynamics 365 Customer Insights gespeichert werden. Durch das Importieren von oder Verbinden mit Daten, die in Online-Diensten gespeichert sind, erklären Sie sich damit einverstanden, dass Daten an das Microsoft Trust Center übertragen und dort mit Dynamics 365 Customer Insights gespeichert werden können. [Lernen Sie mehr im Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+- Daten, die in Online-Diensten gespeichert sind, können an einem anderen Ort gespeichert werden als dort, wo die Daten verarbeitet oder in Dynamics 365 Customer Insights gespeichert werden. Durch das Importieren von oder Verbinden mit Daten, die in Online-Diensten gespeichert sind, erklären Sie sich damit einverstanden, dass Daten an das Microsoft Trust Center übertragen und dort mit Dynamics 365 Customer Insights gespeichert werden können. [Erfahren Sie mehr im Microsoft Trust Center.](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Mit einem „Common Data Model“-Ordner verbinden
 
@@ -38,12 +38,11 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
 
 1. Wählen Sie **Datenquelle hinzufügen**.
 
-1. Wählen Sie **Verbinden mit einem gemeinsamen Datenmodell-Ordner**, geben Sie einen **Name** für die Datenquelle ein und wählen Sie **Weiter**. Namensrichtlinien: 
-   - Beginnen Sie mit einem Buchstaben.
-   - Verwenden Sie nur Buchstaben und Zahlen. Leerzeichen und Sonderzeichen sind nicht zulässig.
-   - Verwenden Sie zwischen 3 und 64 Zeichen.
+1. Wählen Sie **Azure Data Lake Storage** aus, geben Sie einen **Namen** für Datenquelle ein, und wählen Sie dann **Weiter** aus.
 
-1. Sie können zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Geben Sie die **Container**-Informationen ein und wählen Sie **Weiter**.
+   - Wählen Sie bei entsprechender Aufforderung einen der zu Ihrer Branche gehörenden Beispieldatensätze und anschließend **Weiter** aus. 
+
+1. Sie können zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md). Geben Sie die **Serveradresse** ein, und wählen Sie **Anmelden** und dann **Weiter** aus.
    > [!div class="mx-imgBorder"]
    > ![Dialogfeld zum Eingeben neuer Verbindungsdetails für Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
    > [!NOTE]
    > Jede model.json- oder manifest.json-Datei, die mit einer anderen Datenquelle in der Umgebung verbunden ist, wird nicht in der Liste angezeigt.
 
-1. Sie erhalten eine Liste der verfügbaren Entitäten in der ausgewählten model.json- oder manifest.json-Datei. Sie können aus der Liste der verfügbaren Entitäten prüfen und auswählen und **Speichern** wählen. Alle ausgewählten Entitäten werden von der neuen Datenquelle aufgenommen.
+1. In der ausgewählten model.json- oder manifest.json-Datei wird eine Liste der verfügbaren Entitäten angezeigt. Überprüfen Sie die Liste der verfügbaren Entitäten, treffen Sie eine Auswahl, und wählen Sie anschließend **Speichern** aus. Alle ausgewählten Entitäten werden von der neuen Datenquelle aufgenommen.
    > [!div class="mx-imgBorder"]
    > ![Dialogfeld mit einer Liste von Entitäten aus einer model.json-Datei.](media/review-entities.png)
 
-8. Geben Sie an, für welche Entitäten Sie die Datenprofilierung aktivieren möchten, und wählen Sie **Speichern**. Die Datenprofilerstellung ermöglicht Analysen und andere Funktionen. Sie können die gesamte Entität auswählen, wodurch alle Attribute der Entität ausgewählt werden, oder Sie können bestimmte Attribute Ihrer Wahl auswählen. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
+8. Geben Sie an, für welche Datenentitäten die Datenprofilerstellung aktiviert werden soll, und wählen Sie dann **Speichern** aus. Die Datenprofilerstellung ermöglicht Analysen und andere Funktionen. Sie können die gesamte Entität auswählen, wodurch alle Attribute der Entität ausgewählt werden, oder Sie können bestimmte Attribute Ihrer Wahl auswählen. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
    > [!div class="mx-imgBorder"]
    > ![Dialogfeld, das eine Datenprofilierung zeigt.](media/dataprofiling-entities.png)
 
