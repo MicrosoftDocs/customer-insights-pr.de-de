@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417204"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975123"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Segmente in Dynamics 365 Marketing verwenden (Vorschau)
 
@@ -45,7 +45,7 @@ Wenn Sie die neuen Funktionen von Dynamics 365 Marketing für die Echtzeit-Orche
 
 1. In dem Abschnitt **Serveradministratorkonto** wählen Sie **Anmeldung** und ein Dynamics 365 Marketing-Konto.
 
-1. Ordnen Sie ein Kunden-ID-Feld der Dynamics 365 Kontakt-ID zu.
+1. Ordnen Sie das Feld „Kontakt-ID“ in der Entität „Kunde“ der Dynamics 365-Kontakt-ID zu.
 
 1. Wählen Sie zum Abschließen der Verbindung **Speichern** aus. 
 

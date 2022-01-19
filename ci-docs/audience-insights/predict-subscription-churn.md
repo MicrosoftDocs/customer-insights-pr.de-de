@@ -1,5 +1,5 @@
 ---
-title: Abonnementabwanderung vorhersagen (Video)
+title: Abonnementabwanderung vorhersagen (enthält Video)
 description: Sagen Sie voraus, ob für einen Kunden das Risiko besteht, dass er die Abonnementprodukte oder -dienste Ihres Unternehmens nicht mehr nutzt.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903988"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967700"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Vorhersage der Abwanderung von Abonnenten (Vorschau)
 
@@ -77,7 +77,7 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 1. Geben Sie die Anzahl von **Tagen seit Ende des Abonnements** ein, die Ihr Unternehmen einen Kunden in einem abgewanderten Zustand betrachtet. Dieser Zeitraum wird in der Regel gern für Geschäftsaktivitäten wie Angebote oder andere Marketingmaßnahmen genutzt, um den Verlust des Kunden zu verhindern.
 1. Geben Sie die Anzahl von **Tagen ein, um die Zukunft zu prognostizieren und die Abwanderung vorherzusagen** und ein Fenster für die Vorhersage der Abwanderung festzulegen. Zum Beispiel, um das Risiko einer Abwanderung für Ihre Kunden in den nächsten 90 Tagen vorherzusagen und sich an Ihren Bemühungen zur Marketingbindung auszurichten. Die Vorhersage des Abwanderungsrisikos für längere oder kürzere Zeiträume könnte es schwieriger machen, die Faktoren in Ihrem Abwanderungsrisikoprofil zu berücksichtigen, je nach spezifischen Unternehmensanforderungen. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen
    >[!TIP]
-   > Sie können jederzeit **Speichern und schließen** wählen, um die Vorhersage als Entwurf zu speichern. Sie finden den Entwurf der Vorhersage im Register **Meine Vorhersagen**, um fortzufahren.
+   > Sie können jederzeit **Entwurf speichern** auswählen, um die Vorhersage als Entwurf zu speichern. Sie finden den Entwurf der Vorhersage im Register **Meine Vorhersagen**, um fortzufahren.
 
 ### <a name="add-required-data"></a>Erforderliche Daten hinzufügen
 

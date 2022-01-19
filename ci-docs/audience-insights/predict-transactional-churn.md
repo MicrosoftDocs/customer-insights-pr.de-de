@@ -1,7 +1,7 @@
 ---
-title: Transaktionsabwanderung vorhersagen (Video)
+title: Transaktions-Churn vorhersagen (enthält Video)
 description: Sagen Sie voraus, ob bei einem Kunden das Risiko besteht, dass er Ihre Produkte oder Dienstleistungen nicht mehr kauft.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904071"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967746"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Transkaktionsabwanderungs-Vorhersage (Vorschau)
 
@@ -103,25 +103,25 @@ Für Umgebungen, die auf Geschäftskonten basieren, können wir die Transaktions
 
 1. Wählen Sie die Kachel **Kundenabwanderungsmodell (Vorschau)** und wählen Sie **Dieses Modell verwenden**.
 
-1. In dem Bereich **Kundenabwanderungsmodell** wählen Sie **Transaktion** und dann **Erse Schritte**.
+1. In dem Bereich **Kundenabwanderungsmodell (Vorschau)** wählen Sie **Transaktion** und dann **Erse Schritte**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Screenshot mit ausgewählter Transaktionsoption im Bereich Kundenabwanderungsmodell.":::
-
+ 
 ### <a name="name-model"></a>Modell benennen
 
 1. Geben Sie einen Namen für das Modell an, um es von anderen Modellen zu unterscheiden.
 
 1. Geben Sie einen Namen für die Ausgabe-Entität an, der nur Buchstaben und Zahlen ohne Leerzeichen enthält. Das ist der Name, den die Modell-Entität verwenden wird. 
 
-1. Klicken Sie auf **Weiter**.
+1. Wählen **Weiter** aus.
 
 ### <a name="define-customer-churn"></a>Kundenabwanderung definieren
 
-1. Legen Sie im Feld **Kunden identifizieren, die im nächsten** abwandern könnten ein Zeitfenster von Tagen fest, für das die Abwanderung vorhergesagt werden soll. Sagen Sie z. B. das Abwanderungsrisiko für Ihre Kunden in den nächsten 90 Tagen voraus, um Ihre Marketing-Bindungsmaßnahmen darauf abzustimmen. Die Vorhersage des Abwanderungsrisikos über einen längeren oder kürzeren Zeitraum kann es schwieriger machen, die Faktoren in Ihrem Abwanderungsrisikoprofil zu berücksichtigen, aber das hängt von Ihren spezifischen Geschäftsanforderungen ab.
+1. Legen Sie das **Vorhersagefenster** fest. Sagen Sie z. B. das Abwanderungsrisiko für Ihre Kunden in den nächsten 90 Tagen voraus, um Ihre Marketing-Bindungsmaßnahmen darauf abzustimmen. Die Vorhersage des Abwanderungsrisikos über einen längeren oder kürzeren Zeitraum kann es schwieriger machen, die Faktoren in Ihrem Abwanderungsrisikoprofil zu berücksichtigen, aber das hängt von Ihren spezifischen Geschäftsanforderungen ab.
    >[!TIP]
-   > Sie können jederzeit **Speichern und schließen** wählen, um die Vorhersage als Entwurf zu speichern. Sie finden den Entwurf der Vorhersage im Register **Meine Vorhersagen**, um fortzufahren.
+   > Sie können jederzeit **Entwurf speichern** auswählen, um die Vorhersage als Entwurf zu speichern. Sie finden den Entwurf der Vorhersage im Register **Meine Vorhersagen**, um fortzufahren.
 
-1. Geben Sie in das Feld **Ein Kunde ist abgewandert, wenn er keine Käufe getätigt hat in:** die Anzahl der Tage ein, um die Abwanderung zu definieren. Wenn ein Kunde z. B. in den letzten 30 Tagen keine Käufe getätigt hat, könnte er für Ihr Unternehmen als abgewandert betrachtet werden. 
+1. Geben Sie die Anzahl der Tage ein, um im Feld **Churn-Definition** den Churn zu definieren. Wenn ein Kunde z. B. in den letzten 30 Tagen keine Käufe getätigt hat, könnte er für Ihr Unternehmen als abgewandert betrachtet werden. 
 
 1. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
 
@@ -129,19 +129,16 @@ Für Umgebungen, die auf Geschäftskonten basieren, können wir die Transaktions
 
 1. Wählen Sie **Daten hinzufügen** aus, und wählen Sie den Aktivitätstyp im Seitenbereich aus, der die erforderlichen Transaktions- oder Kaufverlaufsinformationen enthält.
 
-1. Wählen Sie unter **Aktivitäten wählen** die spezifischen Aktivitäten aus der ausgewählten Aktivität aus, auf die sich die Berechnung konzentrieren soll.
+1. Wählen Sie unter **Aktivitäten auswählen** die spezifischen Aktivitäten aus dem ausgewählten Aktivitätstyp aus, auf die sich die Berechnung konzentrieren soll.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Seitenbereich, der die Auswahl bestimmter Aktivitäten unter dem semantischen Typ zeigt.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Seitenbereich, der die Auswahl bestimmter Aktivitäten unter dem semantischen Typ zeigt.":::
 
-1. Wenn Sie die Aktivität noch keinem semantischen Typ zugeordnet haben, wählen Sie hierzu **Bearbeiten** aus. Die geführte Erfahrung zur Zuordnung semantischer Aktivitäten wird geöffnet. Ordnen Sie Ihre Daten jetzt den entsprechenden Feldern im ausgewählten Aktivitätstyp zu.
+   Wenn Sie die Aktivität noch keinem semantischen Typ zugeordnet haben, wählen Sie hierzu **Bearbeiten** aus. Die geführte Erfahrung zur Zuordnung semantischer Aktivitäten wird geöffnet. Ordnen Sie Ihre Daten jetzt den entsprechenden Feldern im ausgewählten Aktivitätstyp zu.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Seite zum Festlegen des Aktivitätstyps.":::
+1. Ordnen Sie die semantischen Attribute den Feldern zu, die zum Ausführen des Modells erforderlich sind. Wenn die Felder unten nicht ausgefüllt sind, konfigurieren Sie die Beziehung von Ihrer Entität „Kaufhistorie“ zur Entität *Kunde*. Wählen Sie **Speichern**.
 
-1. Nachdem Sie die Aktivität dem entsprechenden semantischen Typ zugeordnet haben, wählen Sie **Weiter** aus, um fortzufahren.
+1. Wählen Sie im Schritt **Erforderliche Daten hinzufügen** **Weiter** aus, um fortzufahren, wenn Sie keine weiteren Aktivitäten hinzufügen möchten.
 
-1. Ordnen Sie die semantischen Attribute den Feldern zu, die zum Ausführen des Modells erforderlich sind. Wenn die Felder unten nicht ausgefüllt sind, konfigurieren Sie die Beziehung von Ihrer Entität „Kaufhistorie“ zur Entität *Kunde*.
-
-1. Wählen **Weiter** aus.
 
 # <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 

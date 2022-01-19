@@ -1,7 +1,7 @@
 ---
 title: Produktempfehlungsvorhersage
 description: Sagen Sie voraus, welche Produkte ein Kunde wahrscheinlich kaufen oder mit denen er interagieren wird.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494538"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967793"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Produktempfehlungsvorhersage (Vorschau)
 
@@ -79,11 +79,11 @@ Wenn Sie diese Funktion ausprobieren möchten, aber keine Daten haben, um die fo
 1. Legen Sie die **Anzahl der Produkte** fest, die Sie einem Kunden empfehlen möchten. Dieser Wert hängt davon ab, wie Ihre Versandmethode Daten füllt. Wenn Sie drei Produkte empfehlen können, stellen Sie diesen Wert entsprechend ein.
    
    >[!TIP]
-   > Sie können jederzeit **Speichern und schließen** wählen, um die Vorhersage als Entwurf zu speichern. Die Entwurfsvorhersage finden Sie auf der **Meine Vorhersagen**-Registerkarte.
+   > Sie können jederzeit **Entwurf speichern** auswählen, um die Vorhersage als Entwurf zu speichern. Die Entwurfsvorhersage finden Sie auf der **Meine Vorhersagen**-Registerkarte.
 
-1. Wählen Sie, ob Sie **Produkte vorschlagen, die Kunden kürzlich gekauft haben**.
+1. Wählen Sie aus, ob Sie Produkte, die Kunden kürzlich gekauft haben, in das **Wiederholungskäufe erwartet** aufnehmen möchten.
 
-1. Wenn Sie ausgewählt haben, *keine* kürzlich gekauften Produkte zu empfehlen, legen Sie **Fenster für Vergangenheitsdaten** fest. Diese Einstellung gibt den Zeitrahmen an, den das Modell berücksichtigt, bevor das Produkt dem Benutzer erneut empfohlen wird. Geben Sie beispielsweise an, dass ein Kunde alle zwei Jahre einen Laptop kauft. In diesem Fenster wird die Kaufhistorie der letzten zwei Jahre angezeigt. Wenn ein Artikel gefunden wird, wird der Artikel aus den Empfehlungen herausgefiltert.
+1. Legen Sie das **Fenster für Vergangenheitsdaten** fest. Diese Einstellung gibt den Zeitrahmen an, den das Modell berücksichtigt, bevor das Produkt dem Benutzer erneut empfohlen wird. Geben Sie beispielsweise an, dass ein Kunde alle zwei Jahre einen Laptop kauft. In diesem Fenster wird die Kaufhistorie der letzten zwei Jahre angezeigt. Wenn ein Artikel gefunden wird, wird der Artikel aus den Empfehlungen herausgefiltert.
 
 1. Klicken Sie auf **Weiter**.
 

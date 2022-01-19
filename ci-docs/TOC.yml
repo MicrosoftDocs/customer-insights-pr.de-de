@@ -80,7 +80,7 @@
       items:
         - name: Kundenprofile bereichern
           href: audience-insights/enrichment-hub.md
-        - name: Marken- und Interessenaffinitäten
+        - name: Marken und Interessen
           href: audience-insights/enrichment-microsoft.md
         - name: Erweiterte Adressen
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Transaktionsabwanderung vorhersagen
               href: audience-insights/predict-transactional-churn.md
+            - name: Stimmung im Kundenfeedback analysieren
+              href: audience-insights/sentiment-analysis.md
             - name: Verwenden von benutzerdefinierten Modellen aus Azure Machine Learning
               href: audience-insights/custom-models.md
             - name: Teilweise fehlende Daten vervollständigen

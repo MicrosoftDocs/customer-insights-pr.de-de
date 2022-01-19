@@ -1,7 +1,7 @@
 ---
-title: Kundenkarten-Add-In für Dynamics 365-Apps (Video)
+title: Kundenkarten-Add-In für Dynamics 365-Apps (enthält Video)
 description: Zeigen Sie mit diesem Add-In Daten aus Zielgruppenerkenntnissen in Dynamics 365-Apps an.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904012"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945426"
 ---
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
 
@@ -27,12 +27,12 @@ Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics
 ## <a name="prerequisites"></a>Anforderungen
 
 - Das Add-In funktioniert nur mit modellgetriebenen Dynamics 365-Apps wie Vertrieb oder Kundenservice, Version 9.0 und höher.
-- Damit Ihre Dynamics 365 Daten den Kundenprofilen der Zielgruppenerkenntnissen zugeordnet werden können, müssen sie [von der Dynamics 365-App mit dem Microsoft Dataverse Konnektor](connect-power-query.md) eingebunden werden.
+- Damit Ihre Dynamics 365 Daten den Kundenprofilen der Zielgruppenerkenntnissen zugeordnet werden können, empfehlen wir sie [von der Dynamics 365-App mit dem Microsoft Dataverse-Konnektor](connect-power-query.md) einzubinden. Wenn Sie eine andere Methode zum Erfassen von Dynamics 365-Kontakten (oder -Konten) verwenden, müssen Sie sicherstellen, dass das Feld `contactid` (oder`accountid`) [im Zuordnungsschritt des Datenvereinigungsprozesses als Primärschlüssel für diese Datenquelle](map-entities.md#select-primary-key-and-semantic-type-for-attributes) festgelegt ist. 
 - Alle Dynamics 365-Benutzer des Kundenkarten-Add-Ins müssen in Zielgruppenerkenntnissen [als Benutzer hinzugefügt](permissions.md) sein, um die Daten zu sehen.
 - [Konfigurierte Such- und Filterfunktionen](search-filter-index.md) In Zielgruppenerkenntnissen sind erforderlich, damit die Suche nach Daten funktioniert.
 - Jedes Add-In-Steuerelement basiert auf bestimmten Daten in Zielgruppenerkenntnissen. Einige Daten und Steuerelemente sind nur in Umgebungen bestimmter Typen verfügbar. Die Add-In-Konfiguration informiert Sie, wenn ein Steuerelement aufgrund des ausgewählten Umgebungstyps nicht verfügbar ist. Erhalten Sie weitere Informationen zu [Umgebungen, die Fälle verwenden](work-with-business-accounts.md).
   - **Measure-Steuerelement**: Erfordert [konfigurierte Measures](measures.md) vom Typ Kundenattribute.
-  - **Intelligenz-Steuerelement**: Erfordert Daten, die mit [Vorhersagen](predictions.md) oder [kundenspezifischen Modellen](custom-models.md) generiert wurden.
+  - **Intelligenzsteuerung**: Erfordert Daten, die mit [Vorhersagen oder kundenspezifischen Modellen](predictions-overview.md) generiert wurden.
   - **Kundendetail-Steuerelement**: Alle Felder aus dem Profil sind im vereinheitlichtes Kund*innenprofil verfügbar.
   - **Anreicherungs-Steuerelement**: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt die folgenden Anreicherungen: Von Microsoft bereitgestellte [Marken](enrichment-microsoft.md), [Interessen](enrichment-microsoft.md) und [Office-Bindungsdaten](enrichment-office.md).
   - **Kontakt-Steuerelement**: Erfordert die Definition einer semantischen Entität des Typs Kontakte.

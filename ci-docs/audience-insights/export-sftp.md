@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-Daten nach SFTP-Hosts exportieren (Video)
+title: Customer Insights-Daten nach SFTP-Hosts exportieren (enthält Video)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu einem SFTP-Speicherort exportieren.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb73c49cf87657b71e0c2f5934662b062eeffb21
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904118"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934886"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportieren von Segmenten und anderen Daten nach SFTP (Vorschau)
 
@@ -28,6 +28,7 @@ Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie 
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- SFTP-Ziele hinter Firewalls werden derzeit nicht unterstützt. 
 - Die Laufzeit eines Exports hängt von Ihrer Systemleistung ab. Wir empfehlen zwei CPU-Kerne und 1 GB Speicher als minimale Konfiguration Ihres Servers. 
 - Das Exportieren von Entitäten mit bis zu 100 Millionen Kundenprofilen kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird. 
 
