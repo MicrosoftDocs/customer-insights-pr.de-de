@@ -1,7 +1,7 @@
 ---
 title: Entitäten bei der Datenvereinheitlichung zusammenführen
-description: Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.
-ms.date: 11/01/2021
+description: 'Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.'
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732771"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Entitäten zusammenführen
 
 Die Zusammenführungsphase ist die letzte Phase des Datenvereinheitlichungsprozesses. Sein Zweck ist es, widersprüchliche Daten abzugleichen. Beispiele für widersprüchliche Daten könnten ein Kundenname sein, der in zwei Ihrer Datensätze gefunden wurde, der jedoch in jedem etwas anders angezeigt wird („Grant Marshall“ gegenüber "Grant Marshal"), oder eine Telefonnummer, die sich im Format (617-803-091X im Vergleich zu 617803091X unterscheidet). Die Zusammenführung dieser widersprüchlichen Datenpunkte erfolgt auf einer attributweisen Basis.
@@ -99,11 +94,13 @@ Auf der Seite **Zusammenführen** wählen Sie **Ausgeschlossene Felder**, um die
 
 1. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten. 
 
-## <a name="manually-combine-fields"></a>Felder manuell kombinieren
+## <a name="combine-fields-manually"></a>Felder manuell kombinieren
 
-Zusammengeführtes Attribut manuell definieren. 
+Zusammengeführtes Attribut manuell definieren.
 
-1. Auf der Seite **Zusammenführen** wählen Sie **Felder kombinieren**.
+1. Auf der **Zusammenführen**-Seite wählen Sie **Kombinieren**.
+
+1. Wählen Sie die Option **Felder**.
 
 1. Geben Sie die Richtlinie für das Zusammenführen von Gewinnern in der Dropdown-Liste **Felder kombinieren nach** an.
 
@@ -114,6 +111,26 @@ Zusammengeführtes Attribut manuell definieren.
 1. Wählen Sie **Fertig** aus, um Ihre Änderungen zu übernehmen.
 
 1. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten. 
+
+## <a name="combine-a-group-of-fields"></a>Eine Gruppe von Feldern kombinieren
+
+Behandeln Sie eine Gruppe von Feldern als eine Einheit. Zum Beispiel, wenn unsere Datensätze die Felder Adresse1, Adresse2, Stadt, Bundesland und Postleitzahl enthalten. Wir sollten wahrscheinlich nicht die Adresse2 eines anderen Datensatzes zusammenführen, weil wir glauben, dass unsere Daten dadurch vollständiger würden
+
+1. Auf der **Zusammenführen**-Seite wählen Sie **Kombinieren**.
+
+1. Wählen Sie die Option **Guppe von Feldern**.
+
+1. Geben Sie die Richtlinie für das Zusammenführen von Gewinnern in der Dropdown-Liste **Gruppen bewerten nach** an.
+
+1. Wählen Sie **Hinzufügen** aus. Wählen Sie dann aus, ob Sie den Feldern weitere Felder oder zusätzliche Gruppen hinzufügen möchten.
+
+1. Stellen Sie einen **Namen** und einen **Ausgabenamen** für jedes kombinierte Feld bereit.
+
+1. Geben Sie einen **Namen** für die Gruppe von Feldern an. 
+
+1. Wählen Sie **Fertig** aus, um Ihre Änderungen zu übernehmen.
+
+1. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten.
 
 ## <a name="change-the-order-of-fields"></a>Die Reihenfolge von Feldern ändern
 

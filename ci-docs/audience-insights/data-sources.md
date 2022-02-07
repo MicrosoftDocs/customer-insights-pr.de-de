@@ -1,6 +1,6 @@
 ---
 title: Verwenden Sie Datenquellen zur Datenerfassung
-description: Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.
+description: 'Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.'
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977828"
 ---
+
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Die Funktionalität „Zielgruppen-Insights“ in Dynamics 365 Customer Insights verbindet sich mit Daten aus einer breiten Palette von Quellen. Das Herstellen einer Verbindung zu einem Datenquelle wird häufig als Prozess von *Datenerfassung* bezeichnet. Nach der Erfassung der Daten können Sie [vereinheitlichen](data-unification.md) und Aktionen durchführen.
 
@@ -28,7 +23,7 @@ Wie Sie je nach gewählter Option eine Datenquelle hinzufügen können, erfahren
 
 Die folgenden Datenquellen können hinzugefügt werden:
 
-- [Power Query-Konnektoren](connect-power-query.md)
+- [Power Query-Connectors](connect-power-query.md)
 - [Common Data Model](connect-common-data-model.md)
 - [Microsoft Dataverse-Lake](connect-dataverse-managed-lake.md)
 

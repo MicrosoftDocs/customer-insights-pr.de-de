@@ -1,7 +1,7 @@
 ---
 title: Verbinden Sie Common Data Model-Daten mit einem Azure Data Lake-Konto
 description: Arbeiten Sie mit Common Data Model-Daten unter Verwendung von Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900196"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
 
 Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Model-Ordner mit Ihrem Azure Data Lake Storage Gen2-Konto aufnehmen.
@@ -25,6 +20,8 @@ Dieser Artikel informiert Sie darüber, wie Sie Daten aus einem Common Data Mode
 - Daten in Azure Data Lake müssen dem Common Data Model-Standard entsprechen. Andere Formate werden derzeit nicht unterstützt.
 
 - Die Datenerfassung unterstützt ausschließlich Azure Data Lake *Gen2* Speicherkonten. Sie können keine Azure Data Lake Gen1-Speicherkonten für die Datenerfassung verwenden.
+
+- Bei dem Azure Data Lake-Speicherkonto muss [hierarchischer Namespace aktiviert](/azure/storage/blobs/data-lake-storage-namespace) sein.
 
 - Um sich mit einem Azure Service Prinzipal zu authentifizieren, stellen Sie sicher, dass es in Ihrem Mandanten konfiguriert ist. Weitere Informationen finden Sie unter [Verbinden Sie Zielgruppen-Insights mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Dienstprinzipal](connect-service-principal.md).
 

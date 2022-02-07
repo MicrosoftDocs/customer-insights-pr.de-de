@@ -1,7 +1,7 @@
 ---
 title: Neue und kommende Funktionen
-description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 12/02/2021
+description: 'Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884261"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Wir freuen uns, unsere neuesten Updates bekannt zu geben! In diesem Artikel werden Funktionen für die öffentliche Vorschau, Verbesserungen der allgemeinen Verfügbarkeit und Funktionsupdates zusammengefasst. Um die langfristig geplanten Funktionen zu sehen, werfen Sie einen Blick auf die [Dynamics 365 und Power Platform Freigabe-Pläne](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Updates für Dezember 2021
+
+Die Updates im Dezember 2021 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insights-Protokolle an Azure Monitor weiterleiten
+
+Customer Insights bietet eine direkte Integration in Azure Monitor. Diese Funktion umfasst Prüfereignisse und Betriebsereignisse. Mit Azure Monitor-Ressourcenprotokollen können Sie Protokolle überwachen und an Azure Storage bzw. Azure Log Analytics senden oder zu Azur Event Hubs streamen.
+
+Weitere Informationen finden Sie unter [Weiterleitung mit Azure Monitor in Dynamics 365 Customer Insights protokollieren (Vorschau)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Kundenprofile mit Interaktionsdaten anreichern
+
+Verwenden Sie Daten aus Microsoft Office 365, um Ihre Kundenkontoprofile mit Erkenntnissen über Interaktionserkenntnisse durch Office 365-Apps anzureichern. Die Interaktionsdaten bestehen aus E-Mail- und Besprechungsaktivitäten, die auf Kontoebene aggregiert werden. Beispielsweise die Anzahl der E-Mails von einem Geschäftskonto oder die Anzahl der Besprechungen mit dem Konto. Es werden keine Daten über einzelne Benutzer weitergegeben. Diese Anreicherung ist in den folgenden Regionen verfügbar: Vereinigtes Königreich, Europa, Nordamerika.
+
+Weitere Informationen finden Sie unter [Kundenprofile mit Kundenbindungsdaten anreichern (Vorschau)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Erweiterte Funktionen zur Datenvereinheitlichung
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Konfliktlösungsrichtlinien auf der Ebene der einzelnen Attribute aktivieren
+
+Wenn Sie Kundendatensätze innerhalb einer Entität deduplizieren, möchten Sie möglicherweise nicht einen vollständigen Datensatz als Gewinner auswählen. Wir ermöglichen Ihnen jetzt, die besten Felder aus verschiedenen Datensätzen basierend auf Regeln für jedes Attribut zusammenzuführen. Sie können beispielsweise wählen, ob Sie die neueste E-Mail UND die vollständigste Adresse aus verschiedenen Datensätzen behalten möchten. 
+
+Sie können jetzt separate Zusammenführungsregeln für einzelne Attribute definieren, während Sie Datensätze innerhalb einer einzelnen Entität deduplizieren und zusammenführen. Bisher konnten Sie nur eine einzige Zusammenführungsregel auswählen (Aufbewahrung von Datensätzen basierend auf der Vollständigkeit der Aktualitätsdaten), und diese Regel wurde auf Datensatzebene auf alle Attribute angewendet. Das ist nicht ideal, wenn sich einige der Daten, die Sie behalten möchten, in Datensatz A und andere gute Daten in Datensatz B befinden.
+
+Weitere Informationen finden Sie unter [Definieren der Deduplizierung auf einer übereinstimmenden Entität](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Benutzerdefinierte Regeln für den Abgleich
+
+Es gibt Zeiten, in denen Sie eine Ausnahme von allgemeinen Regeln angeben müssen, um Datensätze NICHT abzugleichen. Dies kann passieren, wenn mehrere Personen genügend Informationen teilen, sodass das System sie als eine einzelne Person abgleichen würde. Zum Beispiel Zwillinge mit demselben Nachnamen, die in derselben Stadt leben und das gleiche Geburtsdatum haben.
+
+Ausnahmen stellen sicher, dass eine fehlerhafte Datenvereinheitlichung in den Vereinheitlichungsregeln behandelt werden kann. Sie können einer Regel mehrere Ausnahmen hinzufügen.
+
+Weitere Informationen finden Sie unter [Hinzufügen von Ausnahmen zu einer Regel](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Zusätzliche Konfliktlösungsrichtlinien bereitstellen und die Gruppierung von Attributen aktivieren
+
+Mit dieser Funktion können Sie eine Gruppe von Feldern als eine Einheit behandeln. Zum Beispiel, wenn unsere Datensätze die Felder Adresse1, Adresse2, Stadt, Bundesland und Postleitzahl enthalten. Wir sollten wahrscheinlich nicht die Adresse2 eines anderen Datensatzes zusammenführen, weil wir glauben, dass unsere Daten dadurch vollständiger würden.
+
+Sie können jetzt eine Gruppe verwandter Felder kombinieren und eine einzelne Zusammenführungsrichtlinie auf die Gruppe anwenden. 
+
+Weitere Informationen finden Sie unter [Eine Gruppe von Feldern kombinieren](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Aktualisierungen im November 2021
 
@@ -230,7 +269,7 @@ Die Updates im März 2021 umfassen verschiedene Funktionen, Leistungsverbesserun
 - **Erläuterungen zu Produktempfehlungen** – Wir haben Informationen hinzugefügt, in denen die Schlüsselfaktoren erläutert werden, die das KI-Modell zur Generierung von Produktempfehlungen gelernt hat, und inwieweit diese Faktoren zu den Produktempfehlungen beitragen. Diese Informationen werden dem Modellergebnisbildschirm hinzugefügt.    
    Weitere Informationen finden Sie unter [Überprüfen eines Vorhersagestatus und der Ergebnisse](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
-## <a name="february-2021-updates"></a>Updates Februar 2021
+## <a name="february-2021-updates"></a>Updates von Februar 2021
 
 Die Updates im Februar 2021 enthalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
 

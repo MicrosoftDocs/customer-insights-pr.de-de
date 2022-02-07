@@ -1,7 +1,7 @@
 ---
 title: Verbesserung von Unternehmensdaten
-description: Verwenden Sie Modelle von Microsoft, um Unternehmensdaten anzureichern und zu normalisieren.
-ms.date: 12/16/2021
+description: 'Verwenden Sie Modelle von Microsoft, um Unternehmensdaten anzureichern und zu normalisieren.'
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927581"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Anreicherung von Unternehmensprofilen mit verbesserten Unternehmensdaten
 
 Verwenden Sie Microsofts Modelle und zusammengestellte Unternehmensdaten, um Ihre Unternehmensprofile zu korrigieren, zu ergänzen und zu standardisieren. Wir werden das [Common Data Model-Format](/common-data-model/schema/core/applicationcommon/account) verwenden, um eine bessere Genauigkeit und bessere Einblicke zu erzielen.
@@ -82,19 +77,19 @@ Wählen Sie **Ausführen** aus der Befehlsleiste aus, um den Anreicherungsprozes
 
 Nach Abschluss des Anreicherungsprozesses können Sie die neu angereicherten Kundenprofildaten unter **Meine Anreicherungen** überprüfen. Außerdem finden Sie den Zeitpunkt des letzten Updates und die Anzahl der angereicherten Profile.
 
-Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherungen ansehen**.
+Sie können ein Beispiel der angereicherten Daten in der Kachel **Vorschau der angereicherten Kunden** sehen. Wählen Sie **Mehr anzeigen** und die **Daten**-Registerkarte aus, um auf eine detaillierte Ansicht jedes angereicherten Profils zuzugreifen.
 
 ### <a name="overview-card"></a>Übersichtskarte
 
 Die Übersichtskarte zeigt Details zur Deckung der Anreicherung. 
 
-* **Kunden verarbeitet und geändert**: Die Anzahl der Kundenprofile, die erfolgreich angereichert wurden.
+* **Unternehmen verarbeitet und geändert**: Die Anzahl der Kundenunternehmensprofile, die erfolgreich angereichert wurden.
 
-* **Kunden verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile, die erfolgreich erkannt aber nicht geändert wurden. Dies geschieht typischerweise, wenn die Eingabedaten gültig sind und durch die Anreicherung nicht verbessert werden können.
+* **Unternehmen verarbeitet und nicht geändert**: Die Anzahl der Kundenunternehmensprofile, die erfolgreich erkannt aber nicht geändert wurden. Dies geschieht typischerweise, wenn die Eingabedaten gültig sind und durch die Anreicherung nicht verbessert werden können.
 
-* **Kunden nicht verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile, die nicht erkannt wurden. Normalerweise für Eingabedaten, die ungültig sind oder von der Anreicherung nicht unterstützt werden.
+* **Unternehmen nicht verarbeitet und nicht geändert**: Die Anzahl der Kundenunternehmensprofile, die nicht erkannt wurden. Dies geschieht üblicherweise bei Eingabedaten, die ungültig sind oder von der Anreicherung nicht unterstützt werden.
 
-## <a name="next-steps"></a>Nächste Schritte,
+## <a name="next-steps"></a>Nächste Schritte
 
 [!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 

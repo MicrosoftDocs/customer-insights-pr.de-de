@@ -1,7 +1,7 @@
 ---
 title: Entitäten für die Datenvereinheitlichung abgleichen
-description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.
-ms.date: 11/24/2021
+description: 'Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.'
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863810"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Entitäten anpassen
 
 Die Abgleichsphase gibt an, wie Ihre Datensätze zu einem einheitlichen Kundenprofil-Datensatz kombiniert werden können. Nach Abschluss des [Kartenschritts](map-entities.md) während des Datenvereinigungsprozesses sind Sie bereit, Ihre Entitäten abzugleichen. Die Abgleichsphase erfordert mindestens zwei zugeordnete Entitäten.
@@ -35,7 +30,7 @@ Jede Übereinstimmung vereint zwei oder mehr Entitäten zu einer einzigen konsol
 
 :::image type="content" source="media/match-page.png" alt-text="Screenshot der Seite „Übereinstimmung” im Bereich „Vereinheitlichen” des Datenvereinigungsprozesses.":::
   
-Die primäre Entität *eCommerce:eCommerceContacts* wird mit der nächsten Entität *LoyaltyScheme:loyCustomers* abgeglichen. Das DataSet, das sich aus dem ersten Übereinstimmungsschritt ergibt, wird mit der folgenden Entität abgeglichen, wenn Sie mehr als zwei Entitäten haben.
+Die primäre Entität *eCommerce:eCommerceContacts* wird mit der nächsten Entität *LoyaltyScheme:loyCustomers* abgeglichen. Das DataSet, das sich aus dem ersten Vergleichsschritt ergibt, wird mit der folgenden Entität abgeglichen, wenn Sie mehr als zwei Entitäten haben.
 
 > [!IMPORTANT]
 > Die Entität, die Sie als Ihre primäre Entität wählen, dient als Grundlage für Ihren einheitlichen Profildatensatz. Zusätzliche Entitäten, die während der Übereinstimmungsphase ausgewählt werden, werden zu dieser Entität hinzugefügt. Dass bedeutet nicht, dass der vereinheitlichte Entität *alle* Daten dieser Entität enthält
@@ -108,7 +103,7 @@ Fügen Sie einer Übereinstimmungsregel weitere Bedingungen hinzu, um Entitäten
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Ändern Sie die Entitätsreihenfolge in Übereinstimmungsregeln
 
-Sie können Entitäten für Übereinstimmungsregeln neu anordnen, um die Reihenfolge zu ändern, in der sie verarbeitet werden. Regeln, die aufgrund einer geänderten Reihenfolge in Konflikt stehen, werden entfernt. Sie müssen entfernte Regeln mit einer aktualisierten Konfiguration neu erstellen.
+Sie können Entitäten für Vergleichsregeln neu anordnen, um die Reihenfolge zu ändern, in der sie verarbeitet werden. Regeln, die aufgrund einer geänderten Reihenfolge in Konflikt stehen, werden entfernt. Sie müssen entfernte Regeln mit einer aktualisierten Konfiguration neu erstellen.
 
 1. Gehen Sie zu **Daten** > **Zusammenführen** > **Abgleichen** und wählen Sie **Bearbeiten** aus.
 
@@ -130,17 +125,21 @@ Die Angabe von Deduplizierungsregeln ist nicht obligatorisch. Wenn keine solchen
 
 1. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Abgleichen**.
 
-1. Wählen Sie im Abschnitt **Zusammengeführte Duplikate** die Option **Entitäten einrichten**. Falls bereits Deduplizierungsregeln erstellt wurden, wählen Sie **Bearbeiten**.
+1. Im **Details zu deduplizierten Datensätzen**-Abschnitt wählen Sie **Entitäten festlegen** aus. Falls bereits Deduplizierungsregeln erstellt wurden, wählen Sie **Bearbeiten**.
 
 1. Wählen Sie im Bereich **Zusammenführungseinstellungen** die Entitäten aus, auf die Sie die Deduplizierung anwenden wollen.
 
-1. Geben Sie an, wie die doppelten Datensätze kombiniert werden sollen und wählen Sie eine von drei Optionen:
-   - **Am häufigsten**: Identifiziert den Datensatz mit den meisten ausgefüllten Attributfeldern als Gewinner-Datensatz. Dies ist die standardmäßige Zusammenführungsoption.
-   - **Aktuell**: Identifiziert den Gewinner-Datensatz auf der Basis der größten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
-   - **Letzer**: Identifiziert den Gewinner-Datensatz basierend auf der besten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
+   1. Geben Sie an, wie die doppelten Datensätze kombiniert werden sollen und wählen Sie eine von drei Optionen:
+      - **Am häufigsten**: Identifiziert den Datensatz mit den meisten ausgefüllten Attributfeldern als Gewinner-Datensatz. Dies ist die standardmäßige Zusammenführungsoption.
+      - **Aktuell**: Identifiziert den Gewinner-Datensatz auf der Basis der größten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
+      - **Letzer**: Identifiziert den Gewinner-Datensatz basierend auf der besten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
+
+   1. Wählen Sie optional **Erweitert** aus, um Deduplizierungsregeln für einzelne Attribute einer Entität zu definieren. Sie können beispielsweise wählen, ob Sie die neueste E-Mail UND die vollständigste Adresse aus verschiedenen Datensätzen behalten möchten. Erweitern Sie die Entität, um alle ihre Attribute anzuzeigen, und definieren Sie, welche Option für einzelne Attribute verwendet werden soll. Wenn Sie eine auf Aktualität basierende Option wählen, müssen Sie auch ein Datums-/Uhrzeitfeld angeben, das die Aktualität definiert. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Deduplizierungsregeln Schritt 1.](media/match-selfconflation.png "Deduplizierungsregeln Schritt 1")
+      > [!div class="mx-imgBorder"]
+      > ![Deduplizierungsregeln Schritt 1.](media/match-selfconflation.png "Deduplizierungsregeln Schritt 1")
+
+   1. Wählen Sie **Fertig** aus, um Ihre Zusammenführungseinstellungen für die Deduplizierung anzuwenden.
  
 1. Sobald die Entitäten ausgewählt sind und ihre Zusammenführungspräferenz eingestellt ist, wählen Sie **Regel hinzufügen**, um die Deduplizierungsregeln auf Entitätsebene zu definieren.
    - **Feld auswählen** listet alle verfügbaren Felder dieser Entität auf. Wählen Sie das Feld aus, das Sie auf Duplikate prüfen möchten. Wählen Sie Felder aus, die wahrscheinlich für jeden einzelnen Kunden eindeutig sind. Zum Beispiel eine E-Mail-Adresse oder die Kombination aus Name, Stadt und Telefonnummer.
@@ -158,7 +157,7 @@ Die Angabe von Deduplizierungsregeln ist nicht obligatorisch. Wenn keine solchen
 
 1. Alle benutzerdefinierten Übereinstimmungsregeln, die definiert wurden, überschreiben Deduplizierungsregeln. Wenn eine Deduplizierungsregel übereinstimmende Datensätze identifiziert und eine benutzerdefinierte Abgleichsregel so eingestellt ist, dass diese Datensätze nie abgeglichen werden, dann werden diese beiden Datensätze nicht abgeglichen.
 
-1. Nach dem [Ausführen des Abgleichs](#run-the-match-process) sehen Sie die Deduplizierungsstatistiken auf den Kacheln für wichtige Metriken.
+1. Nach dem [Ausführen des Vergleichsprozesses](#run-the-match-process) sehen Sie die Deduplizierungsstatistiken in den Schlüsselmetrikkacheln.
 
 ### <a name="deduplication-output-as-an-entity"></a>Deduplizierungsausgabe als Entität
 
@@ -218,13 +217,29 @@ Sie können die meisten Übereinstimmungsparameter neu konfigurieren und optimie
 
 - **Regel deaktivieren**, um eine Übereinstimmungsregel beizubehalten und sie gleichzeitig vom Übereinstimmungsprozess auszuschließen.
 
-- **Duplizieren Sie Ihre Regeln**, wenn Sie eine Übereinstimmungsregel definiert haben und eine ähnliche Regel mit Änderungen erstellen möchten, wählen Sie **Duplizieren**.
+- **Duplizieren Sie Ihre Regeln**, wenn Sie eine Vergleichsregel definiert haben und eine ähnliche Regel mit Änderungen erstellen möchten, wählen Sie **Duplizieren**.
 
 - **Regel löschen** durch Auswahl des Symbols **Löschen**.
 
-## <a name="specify-custom-match-conditions"></a>Benutzerdefinierte Übereinstimmungsbedingungen angeben
+## <a name="advanced-options"></a>Erweiterte Optionen
 
-Sie können Bedingungen angeben, die die standardmäßige Übereinstimmungslogik überschreiben. Die folgenden vier Optionen sind verfügbar: 
+### <a name="add-exceptions-to-a-rule"></a>Einer Regel Ausnahmen hinzufügen
+
+In den meisten Fällen führt der Entitätsvergleich zu eindeutigen Benutzerprofilen mit konsolidierten Daten. Um seltene Fälle von falsch positiven und falsch negativen Ergebnissen dynamisch anzugehen, können Sie Ausnahmen für eine Vergleichsregel definieren. Ausnahmen werden nach Verarbeitung der Vergleichsregeln angewendet und vermeiden den Vergleich aller Datensätze, die die Ausnahmekriterien erfüllen.
+
+Wenn Ihre Vergleichsregel beispielsweise Nachname, Stadt und Geburtsdatum kombiniert, würde das System Zwillinge mit demselben Nachnamen, die in derselben Stadt leben, als dasselbe Profil identifizieren. Sie können eine Ausnahme angeben, die die Profile nicht vergleicht, wenn der Vorname in den von Ihnen kombinierten Entitäten nicht identisch sind.
+
+1. Gehe zu **Daten** > **Vereinheitlichen** > **Abgleichen** und wählen Sie **Bearbeiten** zu der Regel, zu der Sie Bedingungen hinzufügen möchten.
+
+1. Im **Regel bearbeiten**-Bereich wählen Sie **Ausnahme hinzufügen**.
+
+1. Geben Sie die Ausnahmekriterien an. 
+
+1. Wählen Sie **Abgeschlossen** und speichern Sie die Regel.
+
+### <a name="specify-custom-match-conditions"></a>Benutzerdefinierte Vergleichsbedingungen angeben
+
+Sie können Bedingungen angeben, die die standardmäßige Vergleichslogik überschreiben. Die folgenden vier Optionen sind verfügbar: 
 
 |Option  |Beschreibung des Dataflows |Beispiel  |
 |---------|---------|---------|
@@ -239,9 +254,9 @@ Sie können Bedingungen angeben, die die standardmäßige Übereinstimmungslogik
 
 1. Gehen Sie im Bereich **Benutzerdefiniert** zur Registerkarte **Datensätze**.
 
-1. Wählen Sie die benutzerdefinierte Übereinstimmungsoption aus dem **Benutzerdefinierter Typ**-Dropdownmenü und dann **Vorlage herunterladen**. Sie benötigen für jede Übereinstimmungsoption eine separate Vorlage.
+1. Wählen Sie die benutzerdefinierte Vergleichsoption aus dem **Benutzerdefinierter Typ**-Dropdownmenü und dann **Vorlage herunterladen**. Sie benötigen für jede Vergleichsoption eine separate Vorlage.
 
-1. Eine Vorlage wird heruntergeladen. Öffnen Sie sie und geben Sie die Details ein. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die bei der benutzerdefinierten Übereinstimmung verwendet werden sollen. Wenn Sie bespielsweise einen Primärschlüssel *12345* von der Entität *Vertrieb* möchten, die immer mit dem Primärschlüssel *34567* der Entität *Kontakt* übereinstimmt, füllen Sie die Vorlage aus:
+1. Öffnen Sie die heruntergeladene Vorlagendatei und geben Sie die Details ein. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die beim benutzerdefinierten Vergleich verwendet werden sollen. Wenn Sie bespielsweise einen Primärschlüssel *12345* von der Entität *Vertrieb* möchten, die immer mit dem Primärschlüssel *34567* der Entität *Kontakt* übereinstimmt, füllen Sie die Vorlage aus:
     - Entität1: Verkauf
     - Entity1Key: 12345
     - Entität2: Kontakt
@@ -268,7 +283,7 @@ Sie können Bedingungen angeben, die die standardmäßige Übereinstimmungslogik
 
 1. Wählen Sie **Ausführen** auf der Seite **Abgleichen**, um den Abgleich zu starten. Andere angegebene Übereinstimmungsregeln werden von der benutzerdefinierten Übereinstimmungskonfiguration überschrieben.
 
-### <a name="known-issues"></a>Bekannte Probleme
+#### <a name="known-issues"></a>Bekannte Probleme
 
 - Bei der Selbstzusammenführung werden die normalisierten Daten in Deduplizierungsentitäten nicht angezeigt. Es wendet die Normalisierung jedoch intern während der Deduplizierung an. Dies gilt entwurfsbedingt für alle Normalisierungen. 
 - Wenn die Einstellung für den Semantiktyp in der Phase **Zuordnung** entfernt wird, wenn eine Alias-Zuordnungs- oder benutzerdefinierte Umgehungs-Übereinstimmungsregel verwendet wird, wird die Normalisierung nicht angewendet. Dies geschieht nur, wenn Sie den Semantiktyp löschen, nachdem Sie die Normalisierung in der Übereinstimmungsregel konfiguriert haben, da der Semantiktyp unbekannt ist.
