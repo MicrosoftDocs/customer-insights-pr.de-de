@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900257"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088146"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals
 
@@ -23,7 +23,7 @@ In diesem Artikel wird erläutert, wie Sie Dynamics 365 Customer Insights mit ei
 Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Berechtigungen haben. Anstatt dass sich Anwendungen als voll privilegierter Benutzer anmelden müssen, bietet Azure Dienstprinzipale an. Sie können Dienstprinzipale zum sicheren [Hinzufügen oder Bearbeiten eines Common Data Model-Ordners als Datenquelle](connect-common-data-model.md) bzw. [Erstellen oder Aktualisieren einer Umgebung](create-environment.md) verwenden.
 
 > [!IMPORTANT]
-> - Für das Data Lake Storage-Konto, das den Dienstprinzipal verwendet, muss der [hierarchische Namespace aktiviert sein](/azure/storage/blobs/data-lake-storage-namespace).
+> - Das Data Lake Storage-Konto, das den Dienstprinzipal verwendet, muss Gen2 sein und [Hierarchischer Namespace aktiviert](/azure/storage/blobs/data-lake-storage-namespace) haben. Azure Data Lake Gen1-Speicherkonten werden nicht unterstützt.
 > - Sie benötigen Administratorberechtigungen für Ihr Azure-Abonnement, um einen Dienstprinzipal zu erstellen.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Erstellen eines Azure-Dienstprinzipals für Customer Insights

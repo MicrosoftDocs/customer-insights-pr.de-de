@@ -1,7 +1,7 @@
 ---
 title: Entitäten für die Datenvereinheitlichung abgleichen
-description: 'Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.'
-ms.date: 01/28/2022
+description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098834"
 ---
-
 # <a name="match-entities"></a>Entitäten anpassen
 
 Die Abgleichsphase gibt an, wie Ihre Datensätze zu einem einheitlichen Kundenprofil-Datensatz kombiniert werden können. Nach Abschluss des [Kartenschritts](map-entities.md) während des Datenvereinigungsprozesses sind Sie bereit, Ihre Entitäten abzugleichen. Die Abgleichsphase erfordert mindestens zwei zugeordnete Entitäten.
@@ -24,13 +29,7 @@ Die Match-Seite besteht aus drei Abschnitten:
 
 ## <a name="specify-the-match-order"></a>Geben Sie die Reihenfolge der Übereinstimmung an
 
-Gehen Sie zu **Daten** > **Zusammenführen** > **Abgleichen** und wählen Sie **Reihenfolge einrichten**, um die Abgleichungsphase zu starten.
-
-Jede Übereinstimmung vereint zwei oder mehr Entitäten zu einer einzigen konsolidierten Entität. Gleichzeitig werden die eindeutigen Kundendatensätze geführt. Zum Beispiel haben wir zwei Entitäten ausgewählt: **eCommerce:eCommerceContacts** als primäre Einheit und **LoyaltyScheme:loyCustomers** als zweite Einheit. Die Reihenfolge der Entitäten gibt an, in welcher Reihenfolge das System versucht, die Datensätze abzugleichen.
-
-:::image type="content" source="media/match-page.png" alt-text="Screenshot der Seite „Übereinstimmung” im Bereich „Vereinheitlichen” des Datenvereinigungsprozesses.":::
-  
-Die primäre Entität *eCommerce:eCommerceContacts* wird mit der nächsten Entität *LoyaltyScheme:loyCustomers* abgeglichen. Das DataSet, das sich aus dem ersten Vergleichsschritt ergibt, wird mit der folgenden Entität abgeglichen, wenn Sie mehr als zwei Entitäten haben.
+Jede Übereinstimmung vereint zwei oder mehr Entitäten zu einer einzigen konsolidierten Entität. Gleichzeitig werden die eindeutigen Kundendatensätze geführt. Die Übereinstimmungsreihenfolge gibt die Reihenfolge an, in der das System versucht, die Datensätze abzugleichen.
 
 > [!IMPORTANT]
 > Die Entität, die Sie als Ihre primäre Entität wählen, dient als Grundlage für Ihren einheitlichen Profildatensatz. Zusätzliche Entitäten, die während der Übereinstimmungsphase ausgewählt werden, werden zu dieser Entität hinzugefügt. Dass bedeutet nicht, dass der vereinheitlichte Entität *alle* Daten dieser Entität enthält
@@ -38,9 +37,18 @@ Die primäre Entität *eCommerce:eCommerceContacts* wird mit der nächsten Entit
 > Es gibt zwei Überlegungen, die Ihnen bei der Auswahl der Hierarchie Ihrer Entitäten helfen können:
 >
 > - Wählen Sie die Entität mit den vollständigsten und zuverlässigsten Profildaten Ihrer Kunden als primäre Entität aus.
-> - Wählen Sie als primäre Entität die Entität aus, die mehrere Attribute mit anderen Entitäten gemeinsam hat (z. B. Name, Telefonnummer oder E-Mail-Adresse).
+> - Wählen Sie die Entität, die mehrere Attribute mit anderen Entitäten gemeinsam hat (z. B. Name, Telefonnummer oder E-Mail-Adresse) als primäre Entität.
 
-Nachdem Sie die Übereinstimmungsreihenfolge angegeben haben, sehen Sie die definierten Übereinstimmungspaare im Abschnitt **Übereinstimmende Datensatzdetails** über **Daten** > **Vereinheitlichen** > **Spiel**. Die Schlüsselmetriken bleiben leer, bis der Übereinstimmungsprozess abgeschlossen ist.
+1. Gehen Sie zu **Daten** > **Zusammenführen** > **Abgleichen** und wählen Sie **Reihenfolge einrichten**, um die Abgleichungsphase zu starten.
+1. Wählen Sie **Entitätsreihenfolge** aus. Wählen Sie zum Beispiel **eCommerce:eCommerceContacts** als primäre Entität und **LoyaltyScheme:loyCustomers** als zweite Instanz. 
+1. Um alle Datensätze in der Entität als eindeutigen Kunden zu führen und mit jeder folgenden Entität abzugleichen, wählen Sie **Include all**.
+1. Wählen Sie **Fertig** aus. 
+
+Nach Angabe der Zuordnungsreihenfolge werden die definierten Zuordnungspaare im Abschnitt **Details zu übereinstimmenden Datensätzen** unter **Daten** > **Vereinheitlichen** > **Zuordnen** angezeigt. Die Schlüsselmetriken sind leer, bis der Abgleichvorgang abgeschlossen ist.
+
+:::image type="content" source="media/match-page.png" alt-text="Screenshot der Seite „Übereinstimmung” im Bereich „Vereinheitlichen” des Datenvereinigungsprozesses.":::
+  
+Die primäre Entität *eCommerce:eCommerceContacts* wird mit der nächsten Entität *LoyaltyScheme:loyCustomers* abgeglichen. Das DataSet, das sich aus dem ersten Vergleichsschritt ergibt, wird mit der folgenden Entität abgeglichen, wenn Sie mehr als zwei Entitäten haben.
 
 ## <a name="define-rules-for-match-pairs"></a>Regeln für das abgeglichene Paar definieren
 
@@ -50,7 +58,7 @@ Die Warnung **Benötigt Regeln** neben einem Entitätsnamen weist darauf hin, da
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Screenshot des Abschnitts „Details zu übereinstimmenden Datensätzen” mit Steuerelement zum Hinzufügen hervorgehobener Regeln.":::
 
-1. Wählen Sie **Regeln hinzufügen** unter einer Entität im Abschnitt **Übereinstimmende Datensatzdetails** zum Definieren von Übereinstimmungsregeln.
+1. Wählen Sie **Regel hinzufügen** unter einer Entität im Abschnitt **Details zu übereinstimmenden Datensätzen** zum Definieren von Übereinstimmungsregeln.
 
 1. Konfigurieren Sie im Bereich **Regel erstellen** die Bedingungen für die Regel.
 
@@ -61,15 +69,15 @@ Die Warnung **Benötigt Regeln** neben einem Entitätsnamen weist darauf hin, da
    - **Entität/Feld (zweite Reihe)**: Wählen Sie ein Attribut aus, das sich auf das Attribut der in der ersten Zeile angegebenen Entität bezieht.
 
    - **Normalisieren**: Wählen Sie aus den folgenden Normalisierungsoptionen für die ausgewählten Attribute. 
-     - Leerzeichen: Entfernt alle Leerzeichen. *Hallo   Welt* wird *Hallo Welt*.
+     - Ziffern: Konvertiert andere Zahlensysteme, z. B. römische Ziffern, in arabische Ziffern. *VIII* wird *8*.
      - Symbole: Entfernt alle Symbole und Sonderzeichen. *Head&Shoulder* wird *HeadShoulder*.
      - Text in Kleinbuchstaben: Konvertiert alle Zeichen in Kleinbuchstaben. *ALL CAPS und Erster Buchstabe groß* wird *all caps und erster buchstabe groß*.
+     - Typ (Telefon, Name, Adresse, Organisation): Standardisiert Namen, Titel, Telefonnummern, Adressen usw. 
      - Unicode in ASCII: Konvertiert die Unicode-Notation in ASCII-Zeichen. */u00B2* wird *2*.
-     - Ziffern: Konvertiert andere Zahlensysteme, z. B. römische Ziffern, in arabische Ziffern. *VIII* wird *8*.
-     - Semantische Typen: Standardisiert Namen, Titel, Telefonnummern, Adressen usw. 
+     - Leerzeichen: Entfernt alle Leerzeichen. *Hallo   Welt* wird *Hallo Welt*.
 
    - **Präzision**: Legen Sie die Genauigkeit fest, die für diese Bedingung gelten soll. 
-     - **Basic** : Wählen Sie *Niedrig*, *Mittel*, *Hoch*, und *Genau*. Wählen Sie **Exakt**, um nur Datensätze abzugleichen, die zu 100 Prozent übereinstimmen. Wählen Sie eine der anderen Ebenen aus, um Datensätze abzugleichen, die nicht 100 Prozent identisch sind.
+     - **Basic** : Wählen Sie *Niedrig*, *Mittel*, *Hoch*, und *Genau*. Wählen Sie **Genau**, um nur Datensätze abzugleichen, die zu 100 Prozent übereinstimmen. Wählen Sie eine der anderen Ebenen aus, um Datensätze abzugleichen, die nicht 100 Prozent identisch sind.
      - **Benutzerdefiniert**: Legen Sie einen Prozentsatz fest, mit dem Datensätze übereinstimmen müssen. Das System stimmt nur mit Datensätzen überein, die diesen Schwellenwert überschreiten.
 
 1. Geben Sie einen **Namen** für die Regel an.
@@ -88,7 +96,7 @@ Fügen Sie einer Übereinstimmungsregel weitere Bedingungen hinzu, um Entitäten
 
 1. Wählen Sie im Bereich **Regel bearbeiten** die Option **Bedingung hinzufügen**.
 
-1. Wählen Sie **Abgeschlossen** und speichern Sie die Regel.
+1. Wählen Sie **Abgeschlossen**, um die Regel zu speichern.
 
 ### <a name="add-rules-to-a-match-pair"></a>Fügen Sie einem abgeglichenen Paar Regeln hinzu
 
@@ -111,7 +119,7 @@ Sie können Entitäten für Vergleichsregeln neu anordnen, um die Reihenfolge zu
 
    :::image type="content" source="media/reorder-match-rules.png" alt-text="Optionen, um zu ändern, in welcher Reihenfolge Entitäten in der Übereinstimmungsphase verarbeitet werden.":::
 
-1. Wählen Sie **Abgeschlossen** und speichern Sie die Regel.
+1. Wählen Sie **Abgeschlossen**, um die Regel zu speichern.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definieren Sie die Deduplizierung auf einer Match-Entität
 

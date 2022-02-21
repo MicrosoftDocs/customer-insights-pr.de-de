@@ -3,18 +3,18 @@ title: Testversion FAQ - Dynamics 365 Customer Insights
 description: Lösungen für häufig gestellte Fragen im Zusammenhang mit der Einrichtung und Verwaltung der Testversion von Customer Insights. Erfahren Sie, wie Sie plattform- und app-spezifische Probleme lösen können.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642870"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115967"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Häufig gestellte Fragen zur Testversion von Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "7642870"
 
 Diese App ist ein cloudbasierter Dienst, für den keine spezielle Software auf den Computern der Benutzer ausgeführt werden muss. Es ist nur ein aktueller Webbrowser erforderlich, obwohl gewisse Einschränkungen gelten. Um das beste Testerlebnis zu erzielen, vermeiden Sie es, im Inkognito-Modus auf die Testversion zuzugreifen, und wählen Sie den Teststandort in Ihrer Nähe. [Erfahren Sie mehr über die Anforderungen für Webanwendungen.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Wie melde ich mich für den Test an, ohne einen Microsoft 365-Mandanten zu haben?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Wie registriere ich mich ohne einen Microsoft 365-Mandanten für die Testversion?
 
 Sie können eine nicht beruflich genutzte E-Mail-Adresse eingeben und wir erstellen ein Konto und einen Mandanten für Sie.
 
@@ -43,7 +43,7 @@ Wenn Sie sich für den Test anmelden, erhalten Sie eine E-Mail mit den Einzelhei
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Wie füge ich weitere Benutzer zu einem Test hinzu?
 
-Um Benutzer hinzuzufügen, gehen Sie zum [Microsoft 365 Admin Center](https://admin.microsoft.com) und verwenden Sie das Test-Administratorkonto. Folgen Sie der [Anleitung des Admin Centers](/microsoft-365/admin/add-users/add-users), um Benutzer bis zum Limit der Testlizenz hinzuzufügen. Wenn der Benutzer, den Sie hinzufügen, bereits über ein Microsoft 365-Konto verfügt, weisen Sie ihm eine geeignete Sicherheitsrolle in der Test-Org zu. Weitere Informationen finden Sie unter [Zuweisen einer Sicherheitsrolle zu einem Benutzer](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Wenn Sie Benutzer hinzuzufügen möchten, navigieren Sie zum [Microsoft 365 Admin Center](https://admin.microsoft.com), und verwenden Sie das Administratorkonto der Testversion. Folgen Sie der [Anleitung des Admin Centers](/microsoft-365/admin/add-users/add-users), um Benutzer bis zum Limit der Testlizenz hinzuzufügen. Wenn der Benutzer, den Sie hinzufügen, bereits über ein Microsoft 365 -Konto verfügt, weisen Sie ihm in der Testorganisation eine geeignete Sicherheitsrolle zu. Weitere Informationen finden Sie unter [Zuweisen einer Sicherheitsrolle zu einem Benutzer](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Wie viele Benutzer kann ich zu meiner Testumgebung hinzufügen?
 
@@ -63,7 +63,7 @@ Sie können die Testversion direkt in der App verlängern. Sie können Ihre Test
 
 Wir empfehlen grundsätzlich, beim Upgrade auf die kostenpflichtige Version von Customer Insights mit Ihren eigenen Daten neu zu beginnen. 
 
-Wenn Sie nur Publikum Insights verwenden, können Sie optional Ihre Daten aus einer Testumgebung kopieren, wenn Sie Customer Insights erwerben. Sie müssen Administrator der Customer Insights-Testversion und der globale Administrator Ihres Microsoft 365-Mandanten oder Dynamics 365-Administrator in Ihrer Organisation sein, um die Einstellungen von einer Testumgebung in eine kostenpflichtige Umgebung zu migrieren. 
+Wenn Sie nur Publikum Insights verwenden, können Sie optional Ihre Daten aus einer Testumgebung kopieren, wenn Sie Customer Insights erwerben. Sie müssen der Administrator der Customer Insights-Testversion und der globale Administrator Ihres Microsoft 365-Mandanten oder der Dynamics 365-Administrator in Ihrer Organisation sein, um die Einstellungen von einer Testumgebung zu einer kostenpflichtigen Umgebung zu migrieren. 
 
 Nachdem Sie sich zum ersten Mal bei Ihrer kostenpflichtigen Instanz von Customer Insights angemeldet haben, werden Sie aufgefordert, eine neue Umgebung zu erstellen. In diesem Prozess können Sie die Konfiguration aus einer vorhandenen Umgebung kopieren und die meisten Einstellungen migrieren. Wenn Sie über die oben genannten Berechtigungen verfügen, wird die Testumgebung in dieser Liste angezeigt. Weitere Informationen finden Sie unter [Die Umgebungskonfiguration kopieren](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +82,9 @@ Nachdem Sie sich für die Testversion angemeldet haben, gelangen Sie zum Hauptbi
 
 Die meisten Funktionen der Customer Insights-Funktionen sind in der Testversion verfügbar.
 
-Die folgende Funktion ist nicht verfügbar: 
+Die folgenden Funktionen sind **nicht verfügbar**: 
 - Sie können keine neuen Umgebungen erstellen, die Ihr eigenes Azure Data Lake Storage Konto verwenden.
+- Sie können die Testumgebung nicht löschen. 
 
 ### <a name="how-long-does-the-trial-last"></a>Wie lange ist die Testversion gültig?
 

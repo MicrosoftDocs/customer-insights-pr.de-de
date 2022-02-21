@@ -1,7 +1,7 @@
 ---
 title: Kundenkarten-Add-In für Dynamics 365-Apps (enthält Video)
 description: Zeigen Sie mit diesem Add-In Daten aus Zielgruppenerkenntnissen in Dynamics 365-Apps an.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085216"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
 
 
@@ -113,5 +118,26 @@ Das Kundenkarten-Add-In wird nicht automatisch aktualisiert. Um auf die neueste 
 
 1. Nach dem Start des Upgradevorgangs wird eine Ladeanzeige angezeigt, bis das Upgrade abgeschlossen ist. Wenn es keine neuere Version gibt, wird beim Upgrade eine Fehlermeldung angezeigt.
 
+## <a name="troubleshooting"></a>Problembehandlung
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Steuerelemente aus dem Kundenkarten-Add-In finden keine Daten
+
+**Problem:**
+
+Selbst mit korrekt konfigurierten ID-Feldern können die Steuerelemente keine Daten für jeden Kunden finden.  
+
+**Lösung:**
+
+1. Stellen Sie sicher, dass Sie das Karten-Add-In gemäß den Anweisungen konfiguriert haben: [Konfigurieren des Kundenkarten-Add-Ins](#configure-the-customer-card-add-in) 
+
+1. Überprüfen Sie die Datenerfassungskonfiguration. Bearbeiten Sie die Datenquelle für das Dynamics 365-System, das die Kontakt-ID-GUID enthält. Wenn die GUID der Kontakt-ID in Großbuchstaben im Power Query-Editor angezeigt wird, versuchen Sie Folgendes: 
+    1. Bearbeiten Sie Datenquelle, um die Datenquelle im Power Query-Editor zu öffnen.
+    1. Wählen Sie die Spalte Kontakt-ID aus.
+    1. Wählen Sie **Transformieren** in der Kopfleiste, um verfügbare Aktionen anzuzeigen.
+    1. Wählen Sie **Kleinbuchstaben**. Überprüfen Sie, ob die GUIDs in der Tabelle jetzt in Kleinbuchstaben geschrieben sind.
+    1. Speichern Sie die Datenquelle.
+    1. Führen Sie Datenerfassung, Vereinheitlichung und nachgelagerte Prozesse aus, um die Änderungen an der GUID weiterzugeben. 
+
+Nach Abschluss der vollständigen Aktualisierung sollten die Steuerelemente des Kundenkarten-Add-Ins die erwarteten Daten anzeigen. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

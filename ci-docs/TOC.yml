@@ -2,6 +2,22 @@
   href: index.yml
 - name: Produktübersicht
   href: overview.md
+- name: Ausbildungskatalog
+  items:
+    - name: Starten Sie
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Einlesen von Daten
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Ein vereinheitlichtes Kundenprofil erstellen
+      href: /learn/modules/unified-customer-profile/
+    - name: Mit Zielgruppenerkenntnissen arbeiten
+      href: /learn/modules/working-with-customer-insights/
+    - name: Daten anreichern und Vorhersagen treffen
+      href: /learn/modules/enrich-data/
+    - name: Verwalten von externen Verbindungen
+      href: /learn/modules/configure-third-party-connections/
+    - name: Customer Insights verwalten
+      href: /learn/modules/administer-customer-data-platform/
 - name: Kostenlose Testversion
   items:
     - name: Für eine kostenlose Testversion anmelden
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: Mit Geschäftskonten arbeiten
       href: audience-insights/work-with-business-accounts.md
-    - name: Lernmodule
-      items:
-        - name: Einlesen von Daten
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Ein vereinheitlichtes Kundenprofil erstellen
-          href: /learn/modules/unified-customer-profile/
-        - name: Mit der App arbeiten
-          href: /learn/modules/working-with-customer-insights/
-        - name: Anreichern von Daten und Vorhersagen
-          href: /learn/modules/enrich-data/
     - name: Datenquellen
       items:
         - name: Übersicht über Datenquellen
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR-Rechte und -Anfragen
   href: dsr-rights-requests.md
+- name: Support erhalten
+  href: /power-platform/admin/get-help-support

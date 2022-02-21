@@ -1,7 +1,7 @@
 ---
 title: Neue und kommende Funktionen
-description: 'Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.'
-ms.date: 01/27/2022
+description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088284"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
 
@@ -21,6 +26,17 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Updates Januar 2022
+
+Die Updates im Januar 2022 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Stimmungsanalyse Ihres Kundenfeedbacks
+
+Customer Insights bietet eine neue KI-gestützte Funktion, um die Kundenstimmung zu synthetisieren und bestimmte Geschäftsaspekte als Möglichkeiten für gezielte Verbesserungen zu identifizieren. Durch die Analyse des schriftlichen Feedbacks Ihrer Kunden können Sie zu geringen Kosten genaue Erkenntnisse gewinnen. Stimmungsanalyse auf Basis von NLP-Modellen (Natural Language Processing), die zwei abgeleitete Erkenntnisse für jede Kunden-ID generieren. Eine Stimmungsbewertung (von –5 bis 5) und eine Liste anwendbarer Geschäftsaspekte. 
+
+Weitere Informationen finden Sie unter [Analysieren der Stimmung im Kundenfeedback (Vorschau)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Updates für Dezember 2021
@@ -37,7 +53,7 @@ Weitere Informationen finden Sie unter [Weiterleitung mit Azure Monitor in Dynam
 
 Verwenden Sie Daten aus Microsoft Office 365, um Ihre Kundenkontoprofile mit Erkenntnissen über Interaktionserkenntnisse durch Office 365-Apps anzureichern. Die Interaktionsdaten bestehen aus E-Mail- und Besprechungsaktivitäten, die auf Kontoebene aggregiert werden. Beispielsweise die Anzahl der E-Mails von einem Geschäftskonto oder die Anzahl der Besprechungen mit dem Konto. Es werden keine Daten über einzelne Benutzer weitergegeben. Diese Anreicherung ist in den folgenden Regionen verfügbar: Vereinigtes Königreich, Europa, Nordamerika.
 
-Weitere Informationen finden Sie unter [Kundenprofile mit Kundenbindungsdaten anreichern (Vorschau)](enrichment-office.md)
+Weitere Informationen finden Sie unter [Kundenprofile mit Kundenbindungsdaten anreichern (Vorschau)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Erweiterte Funktionen zur Datenvereinheitlichung
 
@@ -269,7 +285,7 @@ Die Updates im März 2021 umfassen verschiedene Funktionen, Leistungsverbesserun
 - **Erläuterungen zu Produktempfehlungen** – Wir haben Informationen hinzugefügt, in denen die Schlüsselfaktoren erläutert werden, die das KI-Modell zur Generierung von Produktempfehlungen gelernt hat, und inwieweit diese Faktoren zu den Produktempfehlungen beitragen. Diese Informationen werden dem Modellergebnisbildschirm hinzugefügt.    
    Weitere Informationen finden Sie unter [Überprüfen eines Vorhersagestatus und der Ergebnisse](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
-## <a name="february-2021-updates"></a>Updates von Februar 2021
+## <a name="february-2021-updates"></a>Updates Februar 2021
 
 Die Updates im Februar 2021 enthalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
 
