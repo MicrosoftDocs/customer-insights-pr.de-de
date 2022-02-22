@@ -59,6 +59,17 @@
       "ms.service": {
           "**.*": "customer-insights"
       }
+      "searchScope": {
+        "**.*": [
+          "customerInsights"
+        ],
+        "audience-insights/**.*": [
+          "customerInsights"
+        ],
+        "consent-management/**.*": [
+          "consentManagement"
+        ]
+      }
      },
     "template": [],
     "dest": "customer-insights",
