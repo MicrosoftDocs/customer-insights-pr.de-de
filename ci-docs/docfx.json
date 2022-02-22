@@ -58,7 +58,7 @@
     "fileMetadata": {
       "ms.service": {
           "**.*": "customer-insights"
-      }
+      },
       "searchScope": {
         "**.*": [
           "customerInsights"
