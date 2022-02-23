@@ -1,6 +1,6 @@
 ---
 title: Stimmungsanalyse für Kundenfeedback
-description: 'Erfahren Sie, wie Sie ein Stimmungsanalysemodell für Kundenfeedback in Dynamics 365 Customer Insights verwenden.'
+description: Erfahren Sie, wie Sie ein Stimmungsanalysemodell für Kundenfeedback in Dynamics 365 Customer Insights verwenden.
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008764"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Stimmung im Kundenfeedback analysieren (Vorschau)
 
 Kunden erwarten heutzutage qualitativ hochwertige Produkte, Dienstleistungen und Erlebnisse. Vor allem Kunden, die ihr Feedback teilen. Für Organisationen ist es eine große Herausforderung, ein wachsendes Datenvolumen zu analysieren, ohne die Genauigkeit zu verringern und die Arbeitskosten zu erhöhen. Dynamics 365 Customer Insights bietet ein Stimmungsanalysemodell für Kundenfeedback, mit dem Unternehmen ihre Daten genauer und zu geringeren Kosten analysieren können.

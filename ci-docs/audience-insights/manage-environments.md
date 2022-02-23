@@ -1,6 +1,6 @@
 ---
 title: Erstellen und Verwalten von Umgebungen
-description: 'Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.'
+description: Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
+ms.openlocfilehash: 8251cac9f95455b61eb0300b6c72cd4ab2969591
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046332"
 ---
-
 # <a name="manage-environments"></a>Umgebungen verwalten
 
 

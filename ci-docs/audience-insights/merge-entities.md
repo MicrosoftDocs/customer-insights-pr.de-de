@@ -1,6 +1,6 @@
 ---
 title: Entitäten bei der Datenvereinheitlichung zusammenführen
-description: 'Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.'
+description: Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.
 ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046562"
 ---
-
 # <a name="merge-entities"></a>Entitäten zusammenführen
 
 Die Zusammenführungsphase ist die letzte Phase des Datenvereinheitlichungsprozesses. Sein Zweck ist es, widersprüchliche Daten abzugleichen. Beispiele für widersprüchliche Daten könnten ein Kundenname sein, der in zwei Ihrer Datensätze gefunden wurde, der jedoch in jedem etwas anders angezeigt wird („Grant Marshall“ gegenüber "Grant Marshal"), oder eine Telefonnummer, die sich im Format (617-803-091X im Vergleich zu 617803091X unterscheidet). Die Zusammenführung dieser widersprüchlichen Datenpunkte erfolgt auf einer attributweisen Basis.
