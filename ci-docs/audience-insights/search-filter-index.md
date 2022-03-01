@@ -1,7 +1,7 @@
 ---
 title: Kundenprofile suchen und filtern
 description: Schnelles Auffinden von Informationen über einheitliche Kundenprofile und Filter für bestimmte Attribute.
-ms.date: 11/01/2021
+ms.date: 01/19/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732033"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469974"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Kundenprofile: Such- und Filterindex
 
 Das Ergebnis der Vereinheitlichung Ihrer Kundendaten ist eine Kundenprofileinheit, die eine einheitliche Sicht auf Ihren gesamten Kundenstamm bietet. Um schnell [Informationen über einen bestimmten Kunden oder eine bestimmte Kundengruppe zu finden](customer-profiles.md), können Sie die Funktionen **Suchen** und **Filter** auf der Seite **Kunden** konfigurieren. Lesen Sie weiter, um zu erfahren, wie Admins die Attribute auf der Seite **Such- und Filterindex** bearbeiten können, die den Benutzern zum Suchen und Filtern zur Verfügung stehen.
 
-   :::image type="content" source="media/search-filter.png" alt-text="Suchfilter":::
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!div class="mx-imgBorder"]
+> ![Suchfilter.](media/search-filter.png "Suchfilter")
 
 ## <a name="add-fields-and-specify-attributes"></a>Felder hinzufügen und Attribute angeben
 

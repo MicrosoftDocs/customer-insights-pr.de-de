@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977736"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304971"
 ---
 # <a name="connections-preview-overview"></a>Verbindungsübersicht (Vorschau)
 
@@ -47,7 +47,6 @@ Um Verbindungen hinzuzufügen, müssen Sie [Administratorberechtigungen](permiss
 1. Im Bereich **Verbindung herstellen** geben Sie die erforderlichen Details an. 
    1. Der **Anzeigename** und der Typ der Verbindung beschreiben eine Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel dieser Verbindung erklärt.
    1. Die genauen Felder hängen davon ab, zu welchem Dienst Sie eine Verbindung herstellen. Einzelheiten zu einem bestimmten Verbindungstyp finden Sie im Artikel über den Zieldienst.
-   1. Wenn Sie [Ihren eigenen Key Vault verwenden](use-azure-key-vault.md), um Geheimnisse zu speichern, aktivieren Sie **Key Vault verwenden** und wählen Sie das Geheimnis aus der Liste aus.
 
 1. Wählen Sie zum Erstellen der Verbindung **Speichern** aus.
 
@@ -94,6 +93,3 @@ Abgelöste Anreicherungen und Exporte werden inaktiv. Sie reaktivieren sie, inde
 
 1. Um den Löschvorgang zu bestätigen, wählen Sie **Entfernen**.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Stellen Sie Verbindungen mit Geheimnissen her, die von Ihrem eigenen Key Vault verwaltet werden
-
-Einige Verbindungen benötigen Geheimnisse wie API-Schlüssel oder Passwörter. Einige Verbindungen unterstützen Geheimnisse, die in Ihrem eigenen Key Vault gespeichert sind. Erfahren Sie mehr über unterstützte Verbindungen und die Einrichtung unter [Ihr eigener Key Vault für Zielgruppenerkenntnisse](use-azure-key-vault.md).

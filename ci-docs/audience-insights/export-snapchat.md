@@ -1,7 +1,7 @@
 ---
 title: Exportieren Sie Customer Insights-Daten in Snapchat
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Snapchat exportieren.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618659"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760530"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Exportieren von Segmenten nach Snapchat (Vorschau)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Segmentlisten in Snapchat exportieren (Vorschau)
 
 Exportieren Sie Segmente einheitlicher Kundenprofile in Snapchat und verwenden Sie sie für Marketingaktivitäten. 
 
@@ -29,7 +29,7 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in Snapchat und verwenden S
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
 - Der Export nach Snapchat ist auf Segmente beschränkt.
-- Der Export von Segmenten mit bis zu 1 Millionen Kundenprofilen nach Snapchat kann bis zu 15 Minuten dauern. 
+- Das Exportieren von bis zu 1 Million Profilen nach Snapchat kann bis zu 15 Minuten dauern. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Verbindung mit Snapchat einrichten
 
@@ -63,7 +63,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Geben Sie die [**Snapchat-Zielgruppen-ID**](https://businesshelp.snapchat.com/s/article/custom-audiences) ein.
 
-1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Der Export nach Snapchat ist auf Segmente beschränkt.
+1. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Der Export nach Snapchat ist auf Segmente beschränkt.
 
 1. Wählen Sie die Segemente aus, die Sie exportieren möchten. 
 

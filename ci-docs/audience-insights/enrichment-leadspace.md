@@ -1,79 +1,50 @@
 ---
 title: Anreicherung von Firmenprofilen mit der Drittanbieter-Anreicherung Leadspace
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von Leadspace.
-ms.date: 09/30/2021
-ms.reviewer: mhart
+ms.date: 11/24/2020
+ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
+ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673231"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4668722"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Anreicherung von Firmenprofilen mit Leadspace (Vorschau)
 
-Leadspace ist ein Data Science-Unternehmen, das eine B2B-Kundendatenplattform bereitstellt. Es ermöglicht Umgebungen mit einheitlichen Kundenprofilen basierend auf Konten, ihre Daten anzureichern. Bereichern von *Kundenprofilen* mit Attributen wie Unternehmensgröße, Standort oder Branche. Bereichern von *Kontaktprofilen* mit Attributen wie Titel, Persona oder E-Mail-Verifizierung.
+Leadspace ist ein datenwissenschaftliches Unternehmen, das eine B2B-Kundendatenplattform anbietet. Sie ermöglicht es Kunden mit einheitlichen Kundenprofilen für Unternehmen, ihre Daten anzureichern. Die Anreicherung umfasst zusätzliche Attribute wie Unternehmensgröße, Standort, Branche und mehr.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Anforderungen
 
 Um Leadspace zu konfigurieren, müssen die folgenden Voraussetzungen erfüllt sein:
 
-- Sie benötigen eine aktive Leadspace-Lizenz.
-- Sie haben [Vereinheitlichtes Kund*innenprofil](customer-profiles.md) basierend auf Konten.
-- Eine Leadspace-Verbindung wurde bereits von einem Administrator konfiguriert oder Sie haben [Administrator](permissions.md#administrator)-Berechtigungen und „dauerhaften Schlüssel“ (bezeichnet als **Leadspace-Token**). Kontaktieren Sie [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) direkt für Details über ihr Produkt.
+- Sie haben eine aktive Leadspace-Lizenz und den „dauerhaften Schlüssel“ (bezeichnet als **Leadspace-Token**). Gehen Sie direkt zu [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) für Details über ihr Produkt.
+- Sie haben [Administrator](permissions.md#administrator) Berechtigungen.
+- Sie haben [Einheitliche Kundenprofile](customer-profiles.md) für Unternehmen.
 
-## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
+## <a name="configuration"></a>Konfiguration
 
 1. Gehen Sie in Zielgruppen-Insights zu **Daten** > **Anreicherung**.
 
-1. Wählen Sie **Meine Daten anreichern** auf der Leadspace-Kachel und wählen Sie **Los geht's**.
+1. Wählen Sie **Meine Daten anreichern** auf der Leadspace-Kachel.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Screenshot der Leadspace-Kachel.":::
 
-1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie durch Auswahl von **Verbindung hinzufügen** und **Leadspace** eine Verbindung herstellen. 
+1. Wählen Sie **Starten** und geben Sie einen aktiven **Leadspace-Token** (unbefristeter Schlüssel) ein. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren. Bestätigen Sie beide Eingaben, indem Sie **Verbinden mit Leadspace** wählen.
 
-1. Wählen Sie **Mit Leadspace verbinden**, um die Verbindungsauswahl zu bestätigen.
-
-1. Wählen Sie **Weiter** und wählen Sie den **Kundendatensatz**, den Sie mit Unternehmensdaten von Leadspace anreichern möchten. Sie können die **Kundenentität** auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
-
-    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Screenshot bei Auswahl des Kundendatensatzes.":::
-
-1. Wählen Sie **Weiter** aus, und definieren Sie, welche Felder aus Ihren einheitlichen Profilen verwendet werden sollen, um nach übereinstimmenden Unternehmensdaten von Leadspace zu suchen. Das Feld **Firmenname** ist erforderlich. Für eine höhere Abgleichsgenauigkeit können bis zu zwei weitere Felder, **Firmen-Website** und **Firmenstandort**, hinzugefügt werden.
+1. Wählen Sie **Daten zuordnen** und legen Sie fest, welche Felder aus Ihren Unified Profiles verwendet werden sollen, um nach passenden Firmendaten von Leadspace zu suchen. Das Feld **Firmenname** ist erforderlich. Für eine höhere Abgleichsgenauigkeit können bis zu zwei weitere Felder, **Firmen-Website** und **Firmenstandort**, hinzugefügt werden.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace-Feld-Zuordnungsbereich.":::
-
-1. Wählen Sie **Weiter** aus, um die Feldzuordnung abzuschließen.
-
-1. Aktivieren Sie das Kontrollkästchen, wenn Sie *Kontaktprofile* haben, die Sie bereichern möchten. Zielgruppenerkenntnisse ordnet automatisch die erforderlichen Felder zu.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Anreicherung von Leadspace-Kontaktdatensätzen.":::
- 
-1. Geben Sie einen Namen für die Anreicherung ein und wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
-
-
-## <a name="configure-the-connection-for-leadspace"></a>Konfigurieren Sie die Verbindung für Leadspace 
-
-Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Sie **Verbindung hinzufügen** beim Konfigurieren einer Anreicherung *oder* gehen Sie zu **Administrator** > **Verbindungen** und wählen Sie **Einrichten** auf der Kachel „Leadspace“.
-
-1. Wählen Sie **Erste Schritte** aus. 
-
-1. Geben Sie einen Namen für die Verbindung in das Feld **Anzeigename** ein.
-
-1. Geben Sie ein gültiges Leadspace-Token an.
-
-1. Überprüfen Sie und geben Sie Ihre Zustimmung für **Datenschutz und Einhaltung** durch die Auswahl von **Ich stimme zu**.
-
-1. Wählen Sie **Überprüfen**, um die Konfiguration zu validieren.
-
-1. Wählen Sie nach Abschluss der Überprüfung **Speichern** aus.
    
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Verbindungskonfigurationsseite für Leadspace.":::
+1. Wählen Sie **Anwenden**, um die Zuordnung der Felder abzuschließen.
+
+1. Wählen Sie **Ausführen**, um die Firmenprofile anzureichern. Wie lange eine Anreicherung dauert, hängt von der Anzahl der vereinheitlichten Kundenprofile ab.
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
@@ -83,15 +54,11 @@ Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherun
 
 Weitere Informationen finden Sie unter [Leadspace-APIs](https://support.leadspace.com/hc/en-us/sections/201997649-API).
 
-## <a name="next-steps"></a>Nächste Schritte,
+## <a name="next-steps"></a>Nächste Schritte
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen Sie [Segmente](segments.md), [Maße](measures.md), und selbst [Exportdaten](export-destinations.md), um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 
 Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten an Leadspace aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird diese Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass Leadspace alle Datenschutz- oder Sicherheitsverpflichtungen einhält, die Sie haben können. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
-Ihr Dynamics 365 Customer Insights Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.

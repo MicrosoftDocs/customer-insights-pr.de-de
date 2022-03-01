@@ -1,7 +1,7 @@
 ---
 title: Semantische Zuordnungen (Vorschau)
 description: Überblick über semantische Zuordnungen und deren Verwendung.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881829"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622934"
 ---
-# <a name="semantic-mappings-preview"></a>Semantische Zuordnungen (Vorschau)
+# <a name="semantic-mappings"></a>Semantische Zuordnung
 
 Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinierten Schemata zuordnen. Diese Schemas helfen Zielgruppenerkenntnissen, Ihre Datenattribute besser zu verstehen. Semantische Zuordnungen und die bereitgestellten Daten ermöglichen neue Erkenntnisse und Funktionen in Zielgruppenerkenntnissen. Um Ihre Aktivitätsdaten den Schemata zuzuordnen, lesen Sie die [Aktivitäten](activities.md) Dokumentation.
 
@@ -75,7 +75,8 @@ Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinier
 
 1. Um eine semantische Zuordnung zu einem späteren Zeitpunkt auszuführen, wählen Sie die semantische Zuordnung aus und wählen Sie **Aktualisierung**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
 
 ## <a name="manage-existing-semantic-mappings"></a>Verwalten Sie vorhandene semantische Zuordnungen
 
@@ -90,41 +91,5 @@ Unter **Daten** > **Semantische Zuordnungen (Vorschau)**, können Sie alle Ihre 
 - **Umbenennen**: Öffnet einen Dialog, in dem Sie einen anderen Namen für die ausgewählte semantische Zuordnung eingeben können. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
 - **Löschen**: Öffnet einen Dialog, um das Löschen der ausgewählten semantischen Zuordnung zu bestätigen. Sie können auch mehrere semantische Zuordnungen gleichzeitig löschen, indem Sie die semantischen Zuordnungen und das Löschsymbol auswählen. Um den Löschvorgang zu bestätigen, wählen Sie **Löschen**.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Eine semantische Entitätszuordnung von ContactProfile zum Erstellen von Aktivitäten auf Kontaktebene verwenden
-
-Nach dem Erstellen einer semantischen Entitätszuordnung von *ContactProfile* können Sie Aktivitäten von Kontakten erfassen. Dadurch können Sie in der Aktivitätszeitleiste für ein Konto anzeigen, welcher Kontakt für jede Aktivität verantwortlich war. Die meisten Schritte folgen der typischen Aktivitätszuordnungskonfiguration.
-
-   > [!NOTE]
-   > Damit Aktivitäten auf Kontaktebene funktionieren, müssen sowohl das Attribut **AccountID** als auch das Attribut **ContactID** in Ihren Aktivitätsdaten enthalten sein.
-
-1. [Eine semantische Entitätszuordnung von *ContactProfile* definieren](#define-a-contactprofile-semantic-entity-mapping) Führen Sie außerdem die semantische Zuordnung aus.
-
-1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Aktivitäten**.
-
-1. Wählen Sie **Aktivität hinzufügen** aus, um eine neue Aktivität zu erstellen.
-
-1. Benennen Sie die Aktivität, wählen Sie die Quellaktivitätsentität und dann den Primärschlüssel der Aktivitätsentität aus.
-
-1. Erstellen Sie im Schritt **Beziehungen** eine indirekte Beziehung zwischen Ihren Aktivitätsquellendaten und Konten, indem Sie Ihre Kontaktdaten als vermittelnde Entität verwenden. Weitere Informationen finden Sie unter [direkte und indirekte Beziehungspfade](relationships.md#relationship-paths).
-   - Beispielbeziehung für eine Aktivität namens *Einkäufe*:
-      - **Aktivitätsdaten der Einkaufsquelle** > **Kontaktdaten** auf das Attribut **ContactID**
-      - **Kontaktdaten** > **Kontodaten** im Attribut **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Beispiel für die Einrichtung einer Beziehung":::
-
-1. Wählen Sie nach dem Einrichten der Beziehung(en) **Weiter** aus, und vervollständigen Sie Ihre Aktivitätszuordnungskonfiguration. Detaillierte Schritte zum Erstellen von Aktivitäten finden Sie unter [Eine Aktivität definieren](activities.md).
-
-1. Führen Sie Ihre Aktivitätszuordnungen aus.
-
-1. Ihre Aktivitäten auf Kontaktebene werden jetzt auf Ihrer Kundenzeitskala angezeigt.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Endergebnis nach der Konfiguration der Kontaktaktivitäten":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filterung der Aktivitätszeitskala auf Kontaktebene
-
-Nachdem Sie eine Aktivitätszuordnung auf Kontaktebene konfiguriert und ausgeführt haben, wird die Aktivitätszeitskala für Ihre Kunden aktualisiert. Je nach Ihrer *ContactProfile*-Konfiguration enthält sie die IDs oder Namen dieser Personen für die Aktivitäten, an denen sie beteiligt waren. Sie können Aktivitäten in der Zeitskala nach Kontakten filtern, um bestimmte Kontakte anzuzeigen, die Sie interessieren. Darüber hinaus können Sie alle Aktivitäten anzeigen, die keinem bestimmten Kontakt zugeordnet sind, indem Sie **Aktivitäten, die keinem Kontakt zugeordnet sind** auswählen.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Filteroptionen, die für Aktivitäten auf Kontaktebene verfügbar sind":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

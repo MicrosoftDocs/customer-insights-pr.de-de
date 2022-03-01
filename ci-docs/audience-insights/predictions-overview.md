@@ -1,20 +1,21 @@
 ---
 title: Übersicht über unterstützte Vorhersageszenarien
 description: Vorhersageszenarien und Optionen, die von der Anwendung Dynamics 365 Customer Insights abgedeckt werden.
-ms.date: 12/21/2021
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: get-started
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.custom: intro-internal
+ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978012"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036008"
 ---
 # <a name="predictions-overview"></a>Übersicht über Vorhersagen
 
@@ -23,21 +24,10 @@ Dynamics 365 Customer Insights ist mit einer Vielzahl von Optionen ausgestattet,
 ## <a name="out-of-box-models"></a>Sofort einsatzbereite Modelle
 
 Der einfachste Weg, um mit der Vorhersage von Daten zu beginnen, sind vordefinierte Modelle, die auch als sofort einsatzbereite Modelle bezeichnet werden. Sie benötigen nur bestimmte Daten und Strukturen, um schnell Erkenntnisse zu gewinnen. Gegenwärtig sind die folgenden Modelle verfügbar: 
-
-# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
-
-- [Langfristiger Kundenwert](predict-customer-lifetime-value.md) : Prognostiziert den potenziellen Umsatz eines Kunden während der gesamten Interaktion mit einem Unternehmen.
+- [Langfristiger Kundenwert](predict-customer-lifetime-value.md) : Prognostiziert den potenziellen Umsatz eines Kunden während der gesamten Interaktion mit einem Unternehmen. 
 - [Produktempfehlung](predict-product-recommendation.md) : Schlägt prädiktive Produktempfehlungen basierend auf dem Kaufverhalten und Kunden mit ähnlichen Kaufmustern vor.
 - [Abonnementabwanderung](predict-subscription-churn.md): Sagt vorher, ob das Risiko besteht, dass ein Kunde die Abonnementprodukte oder Services Ihres Unternehmens nicht länger verwendet.
 - [Transaktionsabwanderung](predict-transactional-churn.md) : Sagt vorher, ob ein Kunde Ihre Produkte oder Dienstleistungen in einem bestimmten Zeitrahmen nicht mehr kaufen wird.
-- [Stimmungsanalyse](sentiment-analysis.md) : Analysieren Sie die Stimmung des Kundenfeedbacks und identifizieren Sie häufig erwähnte Geschäftsaspekte.
-
-# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
-
-- [Transaktionsabwanderung](predict-transactional-churn.md) : Sagt vorher, ob ein Kunde Ihre Produkte oder Dienstleistungen in einem bestimmten Zeitrahmen nicht mehr kaufen wird.
-
----
-
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learning-Integration
 

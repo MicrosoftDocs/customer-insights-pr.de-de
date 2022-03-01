@@ -1,47 +1,46 @@
 ---
 title: Verwenden Sie Datenquellen zur Datenerfassung
 description: Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046587"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887893"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Die Funktionalität „Zielgruppen-Insights“ in Dynamics 365 Customer Insights verbindet sich mit Daten aus einer breiten Palette von Quellen. Das Herstellen einer Verbindung zu einem Datenquelle wird häufig als Prozess von *Datenerfassung* bezeichnet. Nach der Erfassung der Daten können Sie [vereinheitlichen](data-unification.md) und Aktionen durchführen.
 
 ## <a name="add-a-data-source"></a>Datenquelle hinzufügen
 
-Wie Sie je nach gewählter Option eine Datenquelle hinzufügen können, erfahren Sie in den entsprechenden Artikeln.
+In den ausführlichen Artikeln erfahren Sie, wie Sie ein Datenquelle hinzufügen, je nachdem, welche Option Sie auswählen.
 
-Die folgenden Datenquellen können hinzugefügt werden:
+Sie können ein Datenquelle auf drei Arten hinzufügen:
 
-- [Power Query-Connectors](connect-power-query.md)
-- [Common Data Model](connect-common-data-model.md)
-- [Microsoft Dataverse-Lake](connect-dataverse-managed-lake.md)
-
-> [!NOTE]
-> Wenn Sie die Testversion verwenden, enthält der Abschnitt mit den Importmethoden die Option **Customer Insights-Datenbibliothek**. Wählen Sie diese Option aus, um ein Beispiel-DataSet auszuwählen, das für verschiedene Branchen verfügbar ist. Weitere Informationen finden Sie unter [Dynamics 365 Customer Insights-Testversion](../trial-signup.md).
+- [Durch Dutzende von Power Query-Connectors](connect-power-query.md)
+- [Aus einem Common Data Model-Ordner](connect-common-data-model.md)
+- [Aus Ihrem eigenen Common Data Service-Lake](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Fügen Sie Daten aus lokalen Datenquellen hinzu
 
-Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Microsoft Power Platform Dataflows unterstützt. Beim Einrichten der Umgebung können Sie Dataflows in Customer Insights durch das [Bereitstellen der Microsoft Dataverse-Umgebungs-URL](create-environment.md) aktivieren.
+Das Aufnehmen von Daten aus lokalen Datenquellen in Zielgruppenerkenntnissen wird basierend auf Power Platform Dataflows unterstützt. Dataflows können in Customer Insights durch [Bereitstellung der Microsoft Dataverse-Umgebungs-URL](manage-environments.md#create-an-environment-in-an-existing-organization) beim Einrichten der Umgebung aktiviert werden.
 
-Datenquellen, die nach dem Verknüpfen einer Dataverse-Umgebung mit Customer Insights erstellt wurden, verwenden standardmäßig [Power Platform-Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Sie können Datenquellen, die vor der Verknüpfung einer Dataverse-Umgebung vorhanden waren, durch [Verwenden von lokalen Datengateways](/data-integration/gateway/service-gateway-app) entfernen und neu erstellen.
+Datenquellen, die nach dem Zuordnen einer Dataverse-Umgebung mit Customer Insights erstellt werden, verwenden [Power Platform Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) standardmäßig. Dataflows unterstützen die lokale Konnektivität mithilfe der Datengateways. Entfernen Sie Datenquellen, die vor einer Dataverse-Umgebungszuordnung vorhanden waren, und erstellen Sie sie neu, um Datengateways lokal zu verwenden.
 
-Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
+Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Datenquellenseite enthält Links zur Power Platform-Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Screenshot der Datenquellenseite mit Links, die auf die Power Platform-Umgebung verweisen.":::
 
 ## <a name="review-ingested-data"></a>Eingebundene Daten überprüfen
 
@@ -50,9 +49,16 @@ Sie sehen den Namen jeder aufgenommenen Datenquelle, ihren Status und das letzte
 > [!div class="mx-imgBorder"]
 > ![Datenquelle hinzugefügt](media/configure-data-datasource-added.png "Datenquelle hinzugefügt")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Status  |Beschreibung des Dataflows  |
+|---------|---------|
+|Erfolgreich   |Die Datenquelle wurde erfolgreich aufgenommen, wenn in der Spalte **Aufgefrischt** ein Zeitpunkt genannt wird.
+|Nicht gestartet   |Die Datenquelle hat noch keine Datenerfassung oder ist noch im Entwurfsmodus.         |
+|Wird aktualisiert    |Die Datenaufnahme ist im Gange. Sie können diesen Vorgang abbrechen, indem Sie **Aktualisierung beenden** in der Spalte **Aktionen** wählen. Wenn Sie die Aktualisierung einer Datenquelle stoppen, wird der letzte Aktualisierungsstatus wiederhergestellt.       |
+|Fehlerhaft     |Bei der Dateneingabe sind Fehler aufgetreten.         |
 
-Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite **Entitäten** überprüft werden. Weitere Informationen finden Sie unter [Entitäten](entities.md).
+Wählen Sie den Wert in der **Status**-Spalte einer beliebigen Datenquelle, um weitere Details zu überprüfen. Im **Fortschrittsdetails**-Bereich erweitern Sie **Datenquellen**. Wählen Sie **Details anzeigen**, um weitere Informationen zum Auffrischungsstatus zu prüfen, einschließlich Fehlerdetails und nachgelagerte Prozessaktualisierungen.
+
+Das Laden von Daten kann einige Zeit dauern. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite **Entitäten** überprüft werden. Weitere Informationen finden Sie unter [Entitäten](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Aktualisieren einer Datenquelle
 
@@ -62,9 +68,9 @@ Gehen Sie zu **Admin** > **System** > [**Planen**](system.md#schedule-tab), um g
 
 Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
 
-1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Datenquellen**.
+1. Gehen Sie in Zielgruppen-Insights zu **Daten** > **Datenquellen**
 
-2. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Aktualisieren** aus dem Dropdown-Menü.
+2. Wählen Sie die vertikalen Auslassungspunkte neben der Datenquelle, die Sie aktualisieren möchten, und wählen Sie **Auffrischen** aus der Dropdown-Liste.
 
 3. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
 
@@ -74,7 +80,7 @@ Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
 
 1. Gehen Sie in den Zielgruppen-Insights zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle, die Sie entfernen möchten, und wählen Sie **Löschen** aus dem Dropdown-Menü.
+2. Wählen Sie die vertikalen Auslassungspunkte neben der Datenquelle aus, die Sie entfernen möchten, und wählen Sie **Löschen** aus dem Dropdownmenü aus.
 
 3. Bestätigen Sie den Löschvorgang.
 

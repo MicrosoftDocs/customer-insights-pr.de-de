@@ -1,81 +1,69 @@
 ---
-title: Customer Insights-Daten nach SFTP-Hosts exportieren (enthält Video)
-description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu einem SFTP-Speicherort exportieren.
-ms.date: 03/03/2021
-ms.reviewer: mhart
+title: Customer Insights-Daten zu SFTP-Hosts exportieren
+description: Erfahren Sie, wie Sie die Verbindung zu einem SFTP-Host konfigurieren.
+ms.date: 01/27/2021
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ddba55b3ca159c0095371e46385dcf1d3ed4a63d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934886"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267997"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportieren von Segmenten und anderen Daten nach SFTP (Vorschau)
+# <a name="connector-for-sftp-preview"></a>Connector für SFTP (Vorschau)
 
-Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie an einen SFTP-Speicherort (Secure File Transfer Protocol) exportieren.
+Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie auf einen Secure File Transfer Protocol(SFTP)-Host exportieren.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
-
-## <a name="prerequisites-for-connection"></a>Voraussetzungen für die Verbindung
+## <a name="prerequisites"></a>Anforderungen
 
 - Verfügbarkeit eines SFTP-Hosts und entsprechender Anmeldeinformationen.
 
-## <a name="known-limitations"></a>Bekannte Einschränkungen
+## <a name="connect-to-sftp"></a>Mit SFTP verbinden
 
-- SFTP-Ziele hinter Firewalls werden derzeit nicht unterstützt. 
-- Die Laufzeit eines Exports hängt von Ihrer Systemleistung ab. Wir empfehlen zwei CPU-Kerne und 1 GB Speicher als minimale Konfiguration Ihres Servers. 
-- Das Exportieren von Entitäten mit bis zu 100 Millionen Kundenprofilen kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird. 
+1. Gehen Sie zu **Administrator** > **Exportziele**.
 
-## <a name="set-up-connection-to-sftp"></a>Verbindungen mit SFTP einrichten
+1. Wählen Sie **SFTP** und **einrichten** aus.
 
-1. Gehen Sie zu **Administrator** > **Verbindungen**.
-
-1. Wählen Sie **Verbindung hinzufügen** und dann **SFTP** aus, um die Verbindung zu konfigurieren.
-
-1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
-
-1. Wählen Sie aus, wer diese Verbindung verwenden kann. Wenn Sie keine Aktion ausführen, ist die Standardeinstellung Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Geben Sie Ihrem Ziel einen erkennbaren Namen im Feld **Anzeigename**.
 
 1. Geben Sie **Benutzername**, **Kennwort** und **Hostname** und **Exportordner** für Ihr SFTP-Konto an.
 
 1. Wählen Sie die **üerprüfen**, um die Verbindung zu testen.
 
-1. Wählen Sie, ob Sie Ihre Daten **Gzipped** oder **Entpackt** exportieren möchten, und das **Feldtrennzeichen** für die exportierten Dateien.
+1. Wählen Sie nach erfolgreicher Überprüfung aus, ob Sie Ihre Daten als **Gzipped** oder **Entpackt** exportieren möchten, und wählen Sie die **Feldtrennzeichen** für die exportierten Dateien aus.
 
 1. Wählen Sie **einverstanden**, um **Datenschutz und Compliance** zu bestätigen.
 
-1. Wählen Sie zum Abschließen der Verbindung **Speichern** aus.
+1. Wählen Sie **Weiter**, um die Konfiguration des Exports zu starten.
 
-## <a name="configure-an-export"></a>Konfigurieren Sie einen Export
-
-Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung dieses Typs haben. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
-
-1. Gehen Sie zu **Daten** > **Exporte**.
-
-1. Wählen Sie **Ziel hinzufügen**, um einen neuen Export zu erstellen.
-
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem SFTP-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
+## <a name="configure-the-export"></a>Export konfigurieren
 
 1. Wählen Sie die Entitäten für die zu exportierenden Beispielsegmente.
 
    > [!NOTE]
-   > Jede ausgewählte Entität wird beim Export in bis zu fünf Ausgabedateien aufgeteilt. 
+   > Jede ausgewählte Entität besteht beim Export aus bis zu fünf Ausgabedateien. 
 
 1. Wählen Sie **Speichern** aus.
 
-Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
+## <a name="export-the-data"></a>Exportieren der Daten
 
-Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt. Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand). 
+Sie könenn [Daten nach Bedarf exportieren](export-destinations.md). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md#schedule-tab) durchgeführt.
+
+## <a name="known-limitations"></a>Bekannte Einschränkungen
+
+- Die Laufzeit eines Exports hängt von Ihrer Systemleistung ab. Wir empfehlen zwei CPU-Kerne und 1 GB Speicher als minimale Konfiguration Ihres Servers. 
+- Das Exportieren von Entitäten mit bis zu 100 Millionen Kundenprofilen kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird. 
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 
 Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten über SFTP aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird solche Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass das Exportziel alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
 Ihr Dynamics 365 Customer Insights-Administrator kann dieses Exportziel jederzeit entfernen, um die Verwendung dieser Funktionalität einzustellen.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466347"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461102"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Verwenden Sie demografische Dimensionen zum Aufteilen von Verhaltensdaten
 
@@ -29,7 +29,7 @@ Durch die Verwendung einheitlicher demografischer Profildimensionen können Nutz
 - Eine Umgebung mit Bindungserkenntnissen, in der Kundenprofildaten mit der Umgebung mit Zielgruppenerkenntnissen verknüpft sind, in der die Kundenprofile erstellt werden. Weitere Informationen: [Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Kundenbindungserkenntnissen](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Nachdem Sie eine Verknüpfung zwischen den Umgebungen Zielgruppenerkenntnissen und Bindungserkenntnissen erstellt haben, möchten Sie möglicherweise nur Daten speziell für Kundenprofileigenschaften, die als Dimensionen in Bindungserkenntnissen nützlich sein können. Weitere Informationen unter [Aktivieren Sie vereinheitlichte Profilattribute und -segmente für Zielgruppenerkenntnisse](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Nachdem Sie eine Verknüpfung zwischen den Umgebungen Zielgruppenerkenntnissen und Bindungserkenntnissen erstellt haben, möchten Sie möglicherweise nur Daten speziell für Kundenprofileigenschaften, die als Dimensionen in Bindungserkenntnissen nützlich sein können. Weitere Informationen unter [Aktivieren Sie vereinheitlichte Profilattribute und -segmente für Zielgruppenerkenntnisse](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Einen neuen benutzerdefinierten Bericht erstellen
 

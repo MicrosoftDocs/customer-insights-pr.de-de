@@ -1,20 +1,20 @@
 ---
 title: Beziehungen zwischen Entitäten und Entitätspfaden
 description: Erstellen und verwalten Sie Beziehungen zwischen Entitäten aus mehreren Datenquellen.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623003"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171163"
 ---
 # <a name="relationships-between-entities"></a>Beziehungen zwischen Entitäten
 
@@ -68,20 +68,6 @@ Die Beziehung besteht aus einer *Quellentität* mit dem Fremdschlüssel und eine
 
 4. Wählen Sie **Speichern** aus, um die benutzerdefinierte Beziehung zu erstellen.
 
-## <a name="set-up-account-hierarchies"></a>Kontohierarchien einrichten
-
-Umgebungen, die für die Verwendung von Geschäftskonten als primäre Zielgruppe konfiguriert sind, können Kontohierarchien für zugehörige Geschäftskonten konfigurieren. Beispiel: ein Unternehmen mit separaten Geschäftsbereichen. 
-
-Organisationen erstellen Kontohierarchien, um Konten und ihre Beziehungen untereinander besser zu verwalten. Die Zielgruppenerkenntnis-Funktion unterstützt über- resp. untergeordnete Kontenhierarchien, die bereits in aufgenommenen Kundendaten vorhanden sind. Zum Beispiel Konten von Dynamics 365 Sales. Diese Hierarchien können auf der Seite **Beziehungen** unter Zielgruppenerkenntnissen auf der Registerkarte Kontohierarchie konfiguriert werden.
-
-1. Gehen Sie zu **Daten** > **Beziehungen**.
-1. Wählen Sie die Registerkarte **Kontohierarchie** aus.
-1. **Neue Kontohierarchie** auswählen. 
-1. In dem Bereich **Kontohierarchie** geben Sie einen Namen für die Hierarchie ein. Das System erstellt einen Namen für die Ausgabeentität. Sie können den Namen der Ausgabeentitäte ändern.
-1. Wählen Sie die Entität aus, die Ihre Kontohierarchie enthält. Es befindet sich normalerweise in derselben Entität, die die Konten enthält.
-1. Wählen Sie **Konto-ID** und **Übergeordnete Konto-ID** von der ausgewählten Entität aus 
-1. Wählen Sie **Speichern**, um die Einstellungen zu übernehmen und die Kontenhierarchie abzuschließen.
-
 ## <a name="view-relationships"></a>Anzeigen von Beziehungen
 
 Die Seite „Beziehungen“ listet alle erstellten Beziehungen auf. Jede Zeile steht für eine Beziehung, die auch Details zur Quellentität, Zielentität und Kardinalität enthält. 
@@ -96,7 +82,7 @@ Diese Seite bietet eine Reihe von Optionen für bestehende und neue Beziehungen:
 
 ### <a name="explore-the-relationship-visualizer"></a>Der Beziehungsvisualisierer
 
-Der Beziehungsvisualisierer zeigt ein Netzwerkdiagramm der bestehenden Beziehungen zwischen verbundenen Entitäten und ihrer Kardinalität an. Es visualisiert auch den Beziehungspfad.
+Der Beziehungsvisualisierer zeigt ein Netzwerkdiagramm der bestehenden Beziehungen zwischen verbundenen Entitäten und ihrer Kardinalität an.
 
 Um die Ansicht anzupassen, können Sie die Position der Felder ändern, indem Sie sie auf das Canvas ziehen.
 
@@ -106,56 +92,6 @@ Verfügbare Optionen:
 - **Als Bild exportieren**: Speichern Sie die aktuelle Ansicht als Bilddatei.
 - **Zum horizontalen/vertikalen Layout wechseln**: Ändern Sie die Ausrichtung der Entitäten und Beziehungen.
 - **Bearbeiten**: Aktualisieren Sie die Eigenschaften von benutzerdefinierten Beziehungen im Bearbeitungsbereich und speichern Sie die Änderungen.
-
-## <a name="relationship-paths"></a>Beziehungspfade
-
-Ein Beziehungspfad beschreibt die Entitäten, die mit Beziehungen zwischen einer Quell-Entität und einer Ziel-Entität verbunden sind. Es wird verwendet, wenn ein Segment oder eine Kennzahl erstellt wird, die andere Entitäten als die einheitliche Profilentität enthält, und es gibt mehrere Optionen, um die einheitliche Profilentität zu erreichen. 
-
-Ein Beziehungspfad teilt dem System mit, über welche Beziehungen auf die vereinheitlichte Profilentität zugegriffen werden soll. Unterschiedliche Beziehungspfade können zu unterschiedlichen Ergebnissen führen.
-
-Zum Beispiel hat die Entität *eCommerce_eCommerceEinkäufe* die folgenden Beziehungen zum einheitlichen Profil *benutzerdefinierte* Entität:
-
-- eCommerce_eCommercePurchases > Kunde
-- eCommerce_eCommercePurchases > eCommerce_eCommerceKontakte > POS_posPurchases > Kunde
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Kunde 
-
-Ein Beziehungspfad bestimmt, welche Entitäten Sie beim Erstellen von Regeln für Kennzahlen oder Segmente verwenden können. Die Auswahl der Option mit dem längsten Beziehungspfad führt wahrscheinlich zu weniger Ergebnissen, da die übereinstimmenden Datensätze Teil aller Entitäten sein müssen. In diesem Beispiel muss ein Kunde Waren über E-Commerce (eCommerce_eCommercePurchases) an einer Verkaufsstelle (POS_posPurchases) gekauft haben und an unserem Treueprogramm (loyaltyScheme_loyCustomers) teilnehmen. Wenn Sie sich für die erste Option entscheiden, erhalten Sie wahrscheinlich mehr Ergebnisse, da Kunden nur in einer weiteren Entität vorhanden sein müssen.
-
-### <a name="direct-relationship"></a>Direkte Beziehung
-
-Eine Beziehung wird als eine **direkte Beziehung** klassifiziert, wenn sich eine Quellentität auf eine Zielentität mit nur einer Beziehung bezieht.
-
-Wenn beispielsweise eine Aktivitätsentität namens *eCommerce_eCommercePurchases* mit einer Zielentität *eCommerce_eCommerceContacts* nur durch *ContactId* verbunden ist, ist das eine direkte Beziehung.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="Die Quellentität verbindet sich direkt mit der Zielentität.":::
-
-#### <a name="multi-path-relationship"></a>Multipfadbeziehung
-
-Eine **Multipfadbeziehung** ist eine spezielle Art von direkter Beziehung, die eine Quellentität mit mehr als einer Zielentität verbindet.
-
-Wenn sich beispielsweise eine Aktivitätsentität namens *eCommerce_eCommercePurchases* auf zwei Zielentitäten bezieht, *eCommerce_eCommerceContacts* und *loyaltyScheme_loyCustomers*, ist das eine Multipfadbeziehung.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="Die Quellentität verbindet sich über eine Multi-Hop-Beziehung direkt mit mehr als einer Zielentität.":::
-
-### <a name="indirect-relationship"></a>Indirekte Beziehung
-
-Eine Beziehung wird als eine **indirekte Beziehung** klassifiziert, wenn sich eine Quellentität auf eine oder mehrere zusätzliche Entitäten bezieht, bevor sie sich auf eine Zielentität bezieht.
-
-#### <a name="multi-hop-relationship"></a>Multi-Hop-Beziehung
-
-Eine *Multi-Hop-Beziehung* ist eine *indirekte Beziehung*, die es Ihnen ermöglicht, eine Quell-Entität mit einer Ziel-Entität über eine oder mehrere andere zwischengeschaltete Entitäten zu verbinden.
-
-Wenn sich beispielsweise eine Aktivitätsentität namens *eCommerce_eCommercePurchasesWest* mit einer Zwischenentität namens *eCommerce_eCommercePurchasesEast* verbindet und sich dann mit einer Zielentität namens *eCommerce_eCommerceContacts* verbindet, ist dies eine Multi-Hop-Beziehung.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="Die Quellentität verbindet sich direkt mit einer Zielentität mit einer Zwischenentität.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Multi-Hop-Multipfadbeziehung
-
-Multi-Hop- und Multipfadbeziehungen können zusammen verwendet werden, um **Multi-Hop-Multipfadbeziehungen** zu erstellen. Dieser spezielle Typ vereint die Funktionen von **Multi-Hop-** und **Multipfadbeziehungen**. Sie können eine Verbindung zu mehr als einer Zielentität herstellen, während Sie Zwischenentitäten verwenden.
-
-Wenn sich beispielsweise eine Aktivitätsentität namens *eCommerce_eCommercePurchasesWest* mit einer Zwischenentität namens *eCommerce_eCommercePurchasesEast* verbindet und sich dann mit zwei Zielentitäten namens *eCommerce_eCommerceContacts* und *loyaltyScheme_loyCustomers* verbindet, ist dies eine Multi-Hop-Multipfadbeziehung.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Die Quellentität stellt eine direkte Verbindung zu einer Zielentität und über eine Zwischenentität eine Verbindung zu einer anderen Zielentität her.":::
 
 ## <a name="manage-existing-relationships"></a>Verwalten bestehender Beziehungen 
 
@@ -169,6 +105,6 @@ Wählen Sie eine Beziehung aus und wählen Sie dann eine der folgenden Optionen 
 
 ## <a name="next-step"></a>Nächster Schritt
 
-System und benutzerdefinierte Beziehungen werden verwendet, um [Segmente zu erstellen](segments.md) und [Maße](measures.md) basierend auf mehreren Datenquellen, die nicht mehr isoliert sind.
+System- und benutzerdefinierte Beziehungen werden zur [Erstellung von Segmenten](segments.md) auf der Grundlage mehrerer Datenquellen verwendet, die nicht mehr in einem Silo gespeichert sind.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

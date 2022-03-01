@@ -1,7 +1,7 @@
 ---
 title: Anreicherung für erweiterte Adressen (enthält Video)
 description: Bereichern und normalisieren Sie Adressinformationen von Kundenprofilen mit Microsoft-Modellen.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010896"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934922"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Anreicherung von Kundenprofilen mit erweiterten Adressen
 
@@ -100,17 +100,17 @@ Wählen Sie **Ausführen** aus der Befehlsleiste aus, um den Anreicherungsprozes
 
 Nach Abschluss des Anreicherungsprozesses können Sie die neu angereicherten Kundenprofildaten unter **Meine Anreicherungen** überprüfen. Außerdem finden Sie den Zeitpunkt des letzten Updates und die Anzahl der angereicherten Profile.
 
-Sie können ein Beispiel der angereicherten Daten in der Kachel **Vorschau der angereicherten Kunden** sehen. Wählen Sie **Mehr anzeigen** und die **Daten**-Registerkarte aus, um auf eine detaillierte Ansicht jedes angereicherten Profils zuzugreifen.
+Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherungen ansehen**.
 
 ### <a name="overview-card"></a>Übersichtskarte
 
 Die Übersichtskarte zeigt Details zur Deckung der Anreicherung. 
 
-* **Adressen verarbeitet und geändert**: Die Anzahl der Kundenprofile mit Adressen, die erfolgreich angereichert wurden.
+* **Kunden verarbeitet und geändert**: Die Anzahl der Kundenprofile, die erfolgreich angereichert wurden.
 
-* **Adressen verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile mit Adressen, die erfolgreich erkannt aber nicht geändert wurden. Dies geschieht typischerweise, wenn die Eingabedaten gültig sind und durch die Anreicherung nicht verbessert werden können.
+* **Kunden verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile, die erfolgreich erkannt aber nicht geändert wurden. Dies geschieht typischerweise, wenn die Eingabedaten gültig sind und durch die Anreicherung nicht verbessert werden können.
 
-* **Adressen nicht verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile mit Adressen, die nicht erkannt wurden. Normalerweise für Eingabedaten, die ungültig sind oder von der Anreicherung nicht unterstützt werden.
+* **Kunden nicht verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile, die nicht erkannt wurden. Normalerweise für Eingabedaten, die ungültig sind oder von der Anreicherung nicht unterstützt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte,
 

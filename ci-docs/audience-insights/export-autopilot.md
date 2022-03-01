@@ -1,49 +1,42 @@
 ---
 title: Exportieren von Customer Insights-Daten zu Autopilot
-description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Autopilot exportieren.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Lernen Sie, wie Sie die Verbindung zu Autopilot konfigurieren.
+ms.date: 12/08/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 33a8cd1ae4a77ce2248bc2805d25687c9a2c2732
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618428"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269237"
 ---
-# <a name="export-segments-to-autopilot-preview"></a>Segmente nach Autopilot exportieren (Vorschau)
+# <a name="connector-for-autopilot-preview"></a>Konnektor für Autopilot (Vorschau)
 
 Exportieren Sie Segmente einheitlicher Kundenprofile in Autopilot und verwenden Sie sie für E-Mail-Marketing in Autopilot. 
 
-## <a name="prerequisites-for-a-connection"></a>Voraussetzungen für die Verbindung
+## <a name="prerequisites"></a>Anforderungen
 
 -   Sie haben ein [Autopilot-Konto](https://www.autopilothq.com/) und entsprechende Anmeldeinformationen für den Administrator.
 -   Sie haben [Konfigurierte Segmente](segments.md) in Zielgruppen-Insights.
 -   Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
 
-## <a name="known-limitations"></a>Bekannte Einschränkungen
+## <a name="connect-to-autopilot"></a>Mit AutoPilot verbinden
 
-- Sie können bis zu 100'000 Kundenprofile pro Export nach Autopilot exportieren.
-- Der Export zu Autopilot ist auf Segmente beschränkt.
-- Der Export von bis zu 100'000 Kundenprofilen nach Autopilot kann bis zu einigen Stunden dauern. 
-- Die Anzahl der Kundenprofile, die Sie nach Autopilot exportieren können, hängt von Ihrem Vertrag mit Autopilot ab.
+1. Gehen Sie zu **Administrator** > **Exportziele**.
 
-## <a name="set-up-connection-to-autopilot"></a>Richten Sie die Verbindung mit Autopilot ein
+1. Unter **Autopilot**, wählen Sie **Einrichten**.
 
-1. Gehen Sie zu **Administrator** > **Verbindungen**.
+1. Geben Sie Ihrem Exportziel einen erkennbaren Namen im Feld **Anzeigename**.
 
-1. Wählen Sie **Verbindung hinzufügen** und dann **Autopilot** aus, um die Verbindung zu konfigurieren.
+   :::image type="content" source="media/export-autopilot.PNG" alt-text="Konfigurationsbereich für die Autopilot-Verbindung.":::
 
-1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
-
-1. Wählen Sie aus, wer diese Verbindung verwenden kann. Wenn Sie keine Aktion ausführen, ist die Standardeinstellung Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Geben Sie Ihren [Autopilot-API-Schlüssel](https://autopilot.docs.apiary.io/#) ein.
+1. Geben Sie Ihren **Autopilot-API-Schlüssel** [Autopilot-API-Schlüssel](https://autopilot.docs.apiary.io/#) ein.
 
 1. Wählen Sie **einverstanden**, um **Datenschutz und Compliance** zu bestätigen.
 
@@ -51,27 +44,26 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in Autopilot und verwenden 
 
 1. Wählen Sie **Sich selbst als Exportbenutzer hinzufügen** und geben Sie Ihre Customer Insights Anmeldeinformationen an.
 
-1. Wählen Sie zum Abschließen der Verbindung **Speichern** aus.
+1. Wählen Sie **Weiter**, um die Konfiguration des Exports zu starten.
 
-## <a name="configure-an-export"></a>Konfigurieren Sie einen Export
+## <a name="configure-the-connector"></a>Konfigurieren Sie den Konnektor
 
-Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung dieses Typs haben. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
-
-1. Gehen Sie zu **Daten** > **Exporte**.
-
-1. Wählen Sie **Ziel hinzufügen**, um einen neuen Export zu erstellen.
-
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Autopilot-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
-
-1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Wiederholen Sie die gleichen Schritte für andere optionale Felder wie **Vorname**, **Nachname**.
+1. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Wiederholen Sie die gleichen Schritte für andere optionale Felder wie **Vorname**, **Nachname**.
 
 1. Wählen Sie die Segemente aus, die Sie exportieren möchten. Es wird dringend **empfohlen, nicht mehr als 100.000 Kundenprofile insgesamt** an Autopilot zu exportieren. 
 
 1. Wählen Sie **Speichern** aus.
 
-Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
+## <a name="export-the-data"></a>Exportieren der Daten
 
-Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt. Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand). 
+Sie könenn [Daten nach Bedarf exportieren](export-destinations.md). Der Export wird auch bei jeder [geplanten Aktualisierung](system.md#schedule-tab) durchgeführt.
+
+## <a name="known-limitations"></a>Bekannte Einschränkungen
+
+- Sie können insgesamt bis zu 100.000 Profile zu Autopilot exportieren.
+- Der Export zu Autopilot ist auf Segmente beschränkt.
+- Das Exportieren von bis zu 100.000 Profilen an Autopilot kann bis zu einigen Stunden dauern. 
+- Die Anzahl der Profile, die Sie zu Autopilot exportieren können, hängt von Ihrem Vertrag mit Autopilot ab und ist dort begrenzt.
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-Daten in Microsoft Dataverse
 description: Verwenden Sie Customer Insights-Entitäten als Tabellen in Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866933"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645217"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Arbeiten mit Customer Insights-Daten in Microsoft Dataverse
 
@@ -45,7 +45,6 @@ Einige Ausgabeentitäten aus Zielgruppenerkenntnissen sind als Tabellen in Datav
 - [CustomerMeasure](#customermeasure)
 - [Anreicherung](#enrichment)
 - [Vorhersage](#prediction)
-- [Segmentmitgliedschaft](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -122,16 +121,3 @@ Diese Tabelle enthält die Ausgabe der Modellvorhersagen.
 | Werte               | JSON-Zeichenfolge | Liste der vom Modell erzeugten Attribute |
 | msdynci_predictionid | GUID        | Deterministische, aus msdynci_identifier generierte GUID | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Segmentmitgliedschaft
-
-Diese Tabelle enthält Informationen zur Segmentmitgliedschaft der Kundenprofile.
-
-| Column        | Type | Beschreibung des Dataflows                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Kundenprofil-ID        |
-| SegmentProvider      | String       | App, die die Segmente veröffentlicht. Standard: Zielgruppenerkenntnisse         |
-| SegmentMembershipType | String       | Typ des Kunden in diesem Segmentmitgliedschaftsdatensatz. Unterstützt mehrere Typen wie Kunde, Kontakt oder Konto. Standard: Kunde  |
-| Segmente       | JSON-Zeichenfolge  | Liste einzigartiger Segmente, in denen das Kundenprofil Mitglied ist      |
-| msdynci_identifier  | String   | Eindeutiger Bezeichner des Segmentmitgliedschaftsdatensatzes. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministische GUID aus `msdynci_identifier` erstellt          |

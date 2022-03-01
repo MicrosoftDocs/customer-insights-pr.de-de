@@ -1,20 +1,20 @@
 ---
 title: Segmente in Zielgruppenerkenntnissen
 description: Übersicht über Segmente und wie man sie erstellt und verwaltet.
-ms.date: 11/01/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978058"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617374"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
@@ -26,7 +26,7 @@ Kundenprofile, die den Filtern einer Segmentdefinition entsprechen, werden als *
 
 Es gibt mehrere Wege, ein neues Segment zu erstellen: 
 
-# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+# <a name="individual-customers-b2c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 
 - Komplexes Segment mit Segmentbuilder: [Unsere eigenen erstellen](segment-builder.md#create-a-new-segment) 
 - Einfache Segmente mit einem Operator: [Schnelles Segment](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Es gibt mehrere Wege, ein neues Segment zu erstellen:
 - KI-gestützte Vorschläge basierend auf Maßnahmen oder Attributen: [Vorgeschlagene Segmente zur Verbesserung der Maßnahmen](suggested-segments.md) 
 - Vorschläge basierend auf Aktivitäten: [Vorgeschlagene Segmente basierend auf der Kundenaktivität](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+# <a name="business-accounts-b2b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
 - Komplexes Segment mit Segmentbuilder: [Unsere eigenen erstellen](segment-builder.md#create-a-new-segment)
 
@@ -65,7 +65,8 @@ Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
 
 Sie können alle Segmente auf einmal aktualisieren, indem Sie **Alles aktualisieren** auf der Seite **Segmente** wählen, oder Sie können ein oder mehrere Segmente aktualisieren, wenn Sie sie auswählen und **Aktualisieren** aus den Optionen wählen. Alternativ können Sie eine laufende Aktualisierung unter **Administrator** > **System** > **Zeitplan** konfigurieren.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
 
 ## <a name="export-segments"></a>Segmente exportieren
 
@@ -104,6 +105,5 @@ Der untere Teil enthält eine Liste der Segmentmitglieder.
 > Felder, die in dieser Liste erscheinen, basieren auf den Attributen der Entitäten Ihres Segments.
 >
 >Die Liste ist eine Vorschau der passenden Segmentmitglieder und zeigt die ersten 100 Datensätze Ihres Segments an, so dass Sie es schnell auswerten und seine Definitionen bei Bedarf überprüfen können. Um alle übereinstimmenden Datensätze zu sehen, müssen Sie [Segment](export-destinations.md) exportieren.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

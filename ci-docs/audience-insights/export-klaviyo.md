@@ -1,7 +1,7 @@
 ---
 title: Exportieren Sie Customer Insights-Daten nach Klaviyo
 description: Erfahren Sie, wie Sie die Verbindung und den Export zu Klaviyo konfigurieren.
-ms.date: 10/08/2021
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619072"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7385787"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Segmentlisten nach Klaviyo exportieren (Vorschau)
 
@@ -28,10 +28,10 @@ Exportieren Sie Segmente von einheitlichen Kundenprofilen nach Klaviyo und verwe
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 100'000 Kundenprofile pro Export nach Klaviyo exportieren.
+- Sie können bis zu 100'000 Profile pro Export nach Klaviyo exportieren.
 - Der Export nach Klaviyo ist auf Segmente beschränkt.
-- Der Export von Segmenten mit bis zu 1 Millionen Kundenprofilen nach Klaviyo kann bis zu 20 Minuten dauern. 
-- Die Anzahl der Kundenprofile, die Sie nach Klaviyo exportieren können, hängt von Ihrem Vertrag mit Klaviyo ab.
+- Das Exportieren von bis zu 1 Million Profilen nach Klaviyo kann bis zu 20 Minuten dauern. 
+- Die Anzahl der Profile, die Sie zu Klaviyo exportieren können, hängt von Ihrem Vertrag mit Klaviyo ab.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Richten Sie die Verbindung mit Klaviyo ein
 
@@ -67,7 +67,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Geben Sie Ihre [**Klaviyo Listen-ID ein**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Es ist erforderlcih, Segmente nach Klaviyo zu exportieren.
+3. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Es ist erforderlcih, Segmente nach Klaviyo zu exportieren.
 
 1. Wählen Sie **Speichern** aus.
 

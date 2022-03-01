@@ -2,30 +2,8 @@
   href: index.yml
 - name: Produktübersicht
   href: overview.md
-- name: Ausbildungskatalog
-  items:
-    - name: Starten Sie
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Einlesen von Daten
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Ein vereinheitlichtes Kundenprofil erstellen
-      href: /learn/modules/unified-customer-profile/
-    - name: Mit Zielgruppenerkenntnissen arbeiten
-      href: /learn/modules/working-with-customer-insights/
-    - name: Daten anreichern und Vorhersagen treffen
-      href: /learn/modules/enrich-data/
-    - name: Verwalten von externen Verbindungen
-      href: /learn/modules/configure-third-party-connections/
-    - name: Customer Insights verwalten
-      href: /learn/modules/administer-customer-data-platform/
-- name: Kostenlose Testversion
-  items:
-    - name: Für eine kostenlose Testversion anmelden
-      href: trial-signup.md
-    - name: FAQ zur Testversion
-      href: trial-FAQ.md
-- name: Beginnen Sie mit einer kostenpflichtigen Lizenz
-  href: paid-license.md
+- name: Eine Testversion erstellen
+  href: audience-insights/get-started-trial.md
 - name: Auf Ihre Umgebung zugreifen
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Zielgruppenerkenntnisse
@@ -41,11 +19,19 @@
         - name: Erste Schritte
           href: audience-insights/get-started.md
         - name: Neue Umgebung erstellen
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Zielgruppenerkenntnisse erkunden
           href: audience-insights/home.md
-    - name: Mit Geschäftskonten arbeiten
-      href: audience-insights/work-with-business-accounts.md
+    - name: Lernmodule
+      items:
+        - name: Einlesen von Daten
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Ein vereinheitlichtes Kundenprofil erstellen
+          href: /learn/modules/unified-customer-profile/
+        - name: Mit der App arbeiten
+          href: /learn/modules/working-with-customer-insights/
+        - name: Anreichern von Daten und Vorhersagen
+          href: /learn/modules/enrich-data/
     - name: Datenquellen
       items:
         - name: Übersicht über Datenquellen
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Kundenaktivitäten aufführen
           href: audience-insights/activities.md
-        - name: Semantische Zuordnungen definieren
-          href: audience-insights/semantic-mappings.md
     - name: Datenanreicherung
       items:
         - name: Kundenprofile bereichern
           href: audience-insights/enrichment-hub.md
-        - name: Marken und Interessen
+        - name: Marken- und Interessenaffinitäten
           href: audience-insights/enrichment-microsoft.md
         - name: Erweiterte Adressen
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Erweiterte Firmendaten
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Mit Azure Maps anreichern
           href: audience-insights/enrichment-azure-maps.md
         - name: Anreicherung mit HERE Technologies
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Anreichern mit Experian
           href: audience-insights/enrichment-experian.md
-        - name: Mit Office 365-Daten anreichern
-          href: audience-insights/enrichment-office.md
         - name: Anreichern mit benutzerdefiniertem SFTP-Import
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmente
@@ -134,10 +114,8 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Abonnementabwanderung vorhersagen
               href: audience-insights/predict-subscription-churn.md
-            - name: Transaktionsabwanderung vorhersagen
+            - name: Transaktionsbedingte Abwanderung vorhersagen
               href: audience-insights/predict-transactional-churn.md
-            - name: Stimmung im Kundenfeedback analysieren
-              href: audience-insights/sentiment-analysis.md
             - name: Verwenden von benutzerdefinierten Modellen aus Azure Machine Learning
               href: audience-insights/custom-models.md
             - name: Teilweise fehlende Daten vervollständigen
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Beispielanleitung für die Vorhersage der Abwanderung von Abonnenten
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Beispielanleitung für Transaktionsabwanderungs-Vorhersage
+            - name: Beispielanleitung für die Vorhersage von Transaktionsabwanderung
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Beispielanleitung für Produktempfehlungsvorhersage
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimente mit Azure Machine Learning
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimente mit Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Verwalten von Vorhersagen
           href: audience-insights/manage-predictions.md
         - name: Erstellen von Segmenten auf Grundlage von Vorhersagen
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Mehrere Umgebungen verwalten
           href: audience-insights/manage-environments.md
-        - name: Sicherheit
-          items:
-            - name: Bring Your Own Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: Verbinden mit einem ADLS-Speicherkonto über ein Service Principal
-              href: audience-insights/connect-service-principal.md
-            - name: Diagnoseprotokolle exportieren
-              href: audience-insights/diagnostics.md
+        - name: Verbinden mit einem ADLS-Speicherkonto über ein Service Principal
+          href: audience-insights/connect-service-principal.md
+        - name: Unterstützte Sprachen
+          href: audience-insights/supported-languages.md
     - name: Erweiterbarkeit
       items:
         - name: Integrieren Sie Webdaten aus Erkenntnissen zur Kundenbindung
@@ -262,52 +238,16 @@
           href: audience-insights/apis.md
         - name: API-Referenzen
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Zustimmungsverwaltung (Vorschauversion)
-  items:
-    - name: Hilfe-Hub
-      href: consent-management/index.yml
-    - name: Funktionalitätsübersicht
-      href: consent-management/overview.md
-    - name: Los geht's
-      items:
-        - name: Los geht's
-          href: consent-management/get-started.md
-        - name: Konzepte und Terminologie
-          href: consent-management/glossary.md
-    - name: Zustimmungsdaten importieren
-      items:
-        - name: Zustimmungsdaten importieren
-          href: consent-management/import-consent-data.md
-        - name: Zustimmungsdaten festlegen und Zustimmungseinstellungen anwenden
-          href: consent-management/set-consent-rules.md
-    - name: Zustimmungsdaten verwalten
-      items:
-        - name: Zustimmungsregeln in Zielgruppenerkenntnissen aktivieren
-          href: audience-insights/activate-consent.md
-        - name: Standardzustimmungsregeln in Zielgruppenerkenntnis-Segmenten verwalten
-          href: audience-insights/change-default-consent-rules.md
-    - name: Einstellungen und Benutzer verwalten
-      items:
-        - name: Systemeinstellungen konfigurieren
-          href: consent-management/system-settings.md
-        - name: Benutzer und Berechtigungen verwalten
-          href: consent-management/manage-users.md
-    - name: Zustimmungsdaten verwenden
-      items:
-        - name: Vorhersagen mit Zustimmungsdaten erstellen
-          href: consent-management/predictions-consent-data.md
 - name: Interaktionserkenntnisse (Vorschauversion)
   items:
     - name: Hilfe-Hub
       href: engagement-insights/index.yml
-    - name: Über Interaktionserkenntnisse
+    - name: Funktionalitätsübersicht
       href: engagement-insights/overview.md
     - name: Los geht's
       items:
         - name: Erste Schritte
           href: engagement-insights/get-started.md
-        - name: Umgebung erstellen
-          href: engagement-insights/create-new-environment.md
         - name: Arbeitsbereich erstellen
           href: engagement-insights/create-workspace.md
         - name: Erfassen Sie Ereignisse aus Websites und mobilen Apps
@@ -366,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionale Verfügbarkeit
       href: engagement-insights/regional-availability.md
-- name: Daten zwischen Funktionen teilen
+- name: Integrieren Sie Publikum und Einblicke in das Engagement
   items:
     - name: Kundenbindungserkenntnisse mit Zielgruppenerkenntnissen verknüpfen
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -379,4 +319,4 @@
 - name: DSR-Rechte und -Anfragen
   href: dsr-rights-requests.md
 - name: Support erhalten
-  href: /power-platform/admin/get-help-support
+  href: 'https://dynamics.microsoft.com/support/'

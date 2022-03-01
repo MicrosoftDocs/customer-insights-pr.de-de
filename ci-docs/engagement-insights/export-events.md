@@ -4,23 +4,23 @@ description: So exportieren Sie verfeinerte Ereignisse und Basisereignisse.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 04/30/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606209"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032384"
 ---
 # <a name="export-events"></a>Ereignisse exportieren
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Ein Ereignis repräsentiert das Benutzerverhalten. Es zeichnet auf, wann ein Benutzer eine Seite anzeigt (Anzeigeereignis) oder mit Inhalten interagiert (Aktionsereignis). Wenn Sie entscheiden können, welche Eigenschaften der Daten in einem Bericht angezeigt werden sollen, wird diese virtuelle Ansicht der Daten als *verfeinertes Ereignis* bezeichnet. Weitere Informationen finden Sie unter [Ereignisse erstellen und bearbeiten](refined-events.md).
+Ein Ereignis repräsentiert das Benutzerverhalten. Es zeichnet auf, wann ein Benutzer eine Seite anzeigt (Anzeigeereignis) oder mit Inhalten interagiert (Aktionsereignis). Wenn Sie entscheiden können, welche Eigenschaften der Daten in einem Bericht angezeigt werden sollen, wird diese virtuelle Ansicht der Daten als *verfeinertes Ereignis* bezeichnet. 
 
 - Sie können Ereignisse und verfeinerte Ereignisse in einen externen Speicher exportieren. 
 - Die Exporte sind ein Forward-Datenstrom. Sie können den Stream nicht nachfüllen. 
@@ -45,28 +45,26 @@ Vor dem Einrichten eines Exports benötigen Sie Zugriff auf und ein aktives Abon
 
 ## <a name="export-events"></a>Ereignisse exportieren
 
-Es gibt zwei Möglichkeiten, den Dialog **Ereignisse exportieren** anzuzeigen: 
+Zum Exportieren von Ereignissen stehen zwei Möglichkeiten zur Verfügung: 
 - Wechseln Sie zu **Daten** > **Exporte** und wählen Sie **Neuer Export** aus.
 - Gehen Sie zu **Daten** > **Ereignisse**, wählen Sie **Mehr [...]** neben dem Ereignis, das Sie exportieren möchten und wählen Sie **Export** aus dem Dropdown-Menü. 
 
-:::image type="content" source="media/new-export.png" alt-text="Einen neuen Export erstellen.":::
-
 Sie werden durch die Schritte zum Erstellen eines Exports geführt:
 
-1. Geben Sie einen **Exportnamen** ein und wählen Sie dann **Weiter**.
+1. Geben Sie einen **Exportnamen** an.
 
 1. In der Dropdown-Liste **Veranstaltungsauswahl** wählen Sie die Basisereignisse und die verfeinerten Ereignisse aus, die in den Export aufgenommen werden sollen. 
 
-1. In dem Abschnitt **Dateistruktur** wählen Sie die Frequenz aus (stündlich oder täglich), um neue Dateien im Zielspeicher zu erstellen, und wählen Sie dann **Weiter**. Ereignisse werden kontinuierlich exportiert, sobald sie eintreffen.
+1. Wählen Sie unter **Dateistruktur** die Kadenz aus, um neue Dateien im Zielspeicher zu erstellen. Ereignisse werden kontinuierlich exportiert, sobald sie eintreffen.
 
-1. In dem Dialog **Format wählen** wählen Sie das Format für Ihren Export aus. Wählen Sie zwischen **Gemeinsames Datenmodell**, **CSV**, und **JSON** Formaten. Um den Export mit anderen Dynamics 365 Anwendungen zu verwenden, empfehlen wir das **Common Data Model** Format.
+1. Wählen Sie das Format für Ihren Export aus. Sie können zwischen den Formaten **Common Data Model**, **CSV** und **JSON** wählen. Um den Export mit anderen Dynamics 365-Anwendungen zu verwenden, empfehlen wir das Common Data Model-Format.
 
-1. In dem Dialog **Ziel auswählen** spezifizieren Sie den Azure Data Lake Storage Gen 2-Standort.
+1. Geben Sie im Schritt **Ziel auswählen** den Speicherort des Azure Data Lake Storage Gen 2-Kontos an.
     1. **ADLS Gen 2-Kontoname** ist der Name des Speicherkontos, in dem Sie den Export speichern möchten. 
     1. **Ordnerpfad** definiert, wo der Export im Dateisystem und in der Verzeichnisstruktur des Speicherkontos gespeichert werden soll.
     1. **Freigegebener Schlüssel** ist im Azure-Portal für das Speicherkonto verfügbar.
 
-1. Überprüfen und bestätigen Sie die Auswahl, und klicken Sie dann auf Fertig stellen.
+1. Überprüfen und bestätigen Sie Ihre Auswahl.
 
 ## <a name="view-and-manage-exports"></a>Anzeigen und Verwalten von Exporten
 

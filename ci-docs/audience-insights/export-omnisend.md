@@ -1,7 +1,7 @@
 ---
 title: Exportieren von Customer Insights-Daten nach Omnisend
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und nach Omnisend exportieren.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619027"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124490"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportieren von Segmenten nach Omnisend (Vorschau)
 
@@ -28,9 +28,9 @@ Exportieren Sie Segmente einheitlicher Kundenprofile nach Omnisend und verwenden
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 1 Million Kundenprofile pro Export zu Omnisend exportieren und die Fertigstellung kann bis zu 4 Stunden dauern.
+- Sie können bis zu 1 Million Profile pro Export nach Omnisend exportieren. Dieser Vorgang kann bis zu 4 Stunden dauern.
 - Der Export nach Omnisend ist auf Segmente beschränkt.
-- Die Anzahl der Kundenprofile, die Sie nach Omnisend exportieren können, hängt von Ihrem Vertrag mit Omnisend ab.
+- Die Anzahl der Profile, die Sie nach Omnisend exportieren können, hängt von Ihrem Vertrag mit Omnisend ab.
 
 ## <a name="set-up-connection-to-omnisend"></a>Einrichten einer Verbindung mit Omnisend
 
@@ -62,7 +62,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Omnisend-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
 
-1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Der Export nach Omnisend ist auf Segmente beschränkt. Optional können Sie Vorname, Nachname, Adresse, Bundesland und Land / Region, Stadt und Postleitzahl exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
+1. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Der Export nach Omnisend ist auf Segmente beschränkt. Optional können Sie Vorname, Nachname, Adresse, Bundesland und Land/Region, Stadt und Postleitzahl exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
 
 1. Wählen Sie **Speichern** aus.
 

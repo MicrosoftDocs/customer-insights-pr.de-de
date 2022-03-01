@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618681"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304649"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Anreichern von Kundenprofilen mit benutzerdefinierten Daten (Vorschau)
 
@@ -45,8 +45,6 @@ Um den benutzerdefinierten SFTP-Import zu konfigurieren, müssen die folgenden V
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot bei der Eingabe des Datenorts.":::
 
-1. **Weiter** auswählen und dann Kunden-Dataset wählen. Dies können entweder alle Kundenprofile oder ein Segment sein.
-
 1. Wählen Sie **Weiter** und geben Sie einen Namen für die Anreicherung und einen Namen für die Ausgabeentität an. 
 
 1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
@@ -66,7 +64,7 @@ Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Si
 1. Nach Abschluss der Verifizierung kann die Verbindung durch Auswahl von **speichern** gespeichert werden.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian-Verbindungskonfigurationsseite.](media/enrichment-SFTP-connection.png "Experian Verbindungskonfigurationsseite")
+   > ![Experian Verbindungskonfigurationsseite](media/enrichment-SFTP-connection.png "Experian Verbindungskonfigurationsseite")
 
 
 ## <a name="defining-field-mappings"></a>Definieren von Feldzuordnungen 
@@ -123,8 +121,8 @@ Nachdem der Anreicherungsprozess abgeschlossen ist, können Sie Ihre neu importi
 
 Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherungen ansehen**.
 
-## <a name="next-steps"></a>Nächste Schritte,
+## <a name="next-steps"></a>Nächste Schritte
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bauen Sie auf Ihren angereicherten Kundendaten auf. Erstellen von [Segmenten](segments.md) und [Maßnahmen](measures.md), und [Exportieren Sie die Daten](export-destinations.md),  um Ihren Kunden personalisierte Erlebnisse zu bieten.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
