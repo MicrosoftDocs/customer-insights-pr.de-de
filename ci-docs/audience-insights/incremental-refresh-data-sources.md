@@ -3,20 +3,22 @@ title: Inkrementelle Aktualisierung für Power Query-basierte Datenquellen
 description: Aktualisieren Sie neue und aktualisierte Daten für große Datenquellen basierend auf Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900267"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353681"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementelle Aktualisierung für Datenquellen basierend auf Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementelle Aktualisierung für auf Power Query basierenden Datenquellen
 
 In diesem Artikel wird erläutert, wie die inkrementelle Aktualisierung für Datenquellen basierend auf Power Query konfiguriert wird.
 
@@ -28,9 +30,9 @@ Die inkrementelle Aktualisierung für Datenquellen bietet die folgenden Vorteile
 
 ## <a name="configure-incremental-refresh"></a>Inkrementelle Aktualisierung konfigurieren
 
-Zielgruppen-Insights ermöglicht eine inkrementelle Aktualisierung für Datenquellen, die über Power Query importiert wurden und eine inkrementelle Datenerfassung unterstützen. Azure SQL-Datenbanken mit Datums- und Zeitfeldern geben beispielsweise an, wann Datensätze zuletzt aktualisiert wurden.
+Zielgruppenerkenntnisse ermöglichen eine inkrementelle Aktualisierung für mit Power Query importierten Datenquellen, die eine inkrementelle Erfassung unterstützen. Azure SQL-Datenbanken mit Datums- und Zeitfeldern geben beispielsweise an, wann Datensätze zuletzt aktualisiert wurden.
 
-1. [Erstellen Sie eine neue Datenquelle basierend auf Power Query](connect-power-query.md).
+1. [Erstellen Sie eine neue Datenquelle basierend auf Power Query.](connect-power-query.md)
 
 1. Geben Sie dann einen **Namen** für die Datenquelle ein.
 

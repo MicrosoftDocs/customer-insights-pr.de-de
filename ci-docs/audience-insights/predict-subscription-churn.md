@@ -3,20 +3,19 @@ title: Abonnementabwanderung vorhersagen (enthält Video)
 description: Sagen Sie voraus, ob für einen Kunden das Risiko besteht, dass er die Abonnementprodukte oder -dienste Ihres Unternehmens nicht mehr nutzt.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967700"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354692"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Vorhersage der Abwanderung von Abonnenten (Vorschau)
+# <a name="subscription-churn-prediction"></a>Vorhersage von Abonnementabwanderung
 
 Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein Kunde möglicherweise die Abonnementprodukte oder -dienste Ihres Unternehmens nicht mehr nutzt. Sie können auf der Seite **Intelligenz** > **Vorhersagen** neue Abonnement-Wechselprognosen erstellen. Wählen Sie **Meine Vorhersagen**, um andere Vorhersagen anzuzeigen, die Sie erstellt haben.
 
@@ -63,7 +62,7 @@ Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein K
 ## <a name="create-a-subscription-churn-prediction"></a>Erstellen Sie eine Vorhersage zur Abonnementabwanderung.
 
 1. Gehen Sie in Zielgruppen-Insights zu **Intelligenz** > **Vorhersagen**.
-1. Wählen Sie die Kachel **Abonnement-Abwanderungsmodell (Vorschau)** und wählen Sie **Dieses Modell verwenden**.
+1. Wählen Sie die Kachel **Modell für Abonnementabwanderung** und **Dieses Modell verwenden**.
    > [!div class="mx-imgBorder"]
    > ![Abonnement-Abwanderungsmodell-Kachel mit der Schaltfläche „Dieses Modell verwenden“.](media/subscription-churn-usethismodel.PNG "Abonnement Abwanderungsmodell-Kachel mit Schaltfläche Dieses Modell verwenden")
 

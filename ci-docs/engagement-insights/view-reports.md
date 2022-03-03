@@ -4,17 +4,16 @@ description: Verwenden Sie die verfügbaren Berichte, um Echtzeitaktivitäten au
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 03b0b4bab0d5d9c2ae641c85aac8174ec1668d45
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036647"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229739"
 ---
 # <a name="view-reports"></a>Berichte anzeigen
 
@@ -92,12 +91,18 @@ Mobile Berichte sind in Echtzeit-Nutzungs-, App- und Benutzerkategorien gruppier
 
 - **Standorte** zeigt Informationen über App-Besucher nach Land, Region und Stadt an.
 
-## <a name="filter-by-time-or-value"></a>Filtern nach Zeit oder Wert
+## <a name="filter-by-time-or-date-range"></a>Nach Zeit oder Datumsbereich filtern
 
-Sie können die Zeitrahmen oder den Wert in einem Web- oder mobilen Bericht auswählen, um sich auf einen Wert oder Zeitraum zu konzentrieren. 
+Sie können den Zeitrahmen- oder Datumsbereich in einem Web- oder mobilen Bericht auswählen, um sich auf einen Wert oder Zeitraum zu konzentrieren. 
 
-- Um ein Zeitrahmen auszuwählen, wählen Sie **Mehr [...]** aus der Dropdown-Liste des Berichts. Die Auswahl des Zeitbereichs ist für einen Echtzeit-Nutzungsbericht deaktiviert. Der Zeitbereich für einen Echtzeit-Nutzungsbericht ist „jetzt“.
+- Um eine Zeitrahmen auszuwählen, wählen Sie in der oberen rechten Ecke der Berichtsansicht einen Wert aus der Dropdown-Liste des Berichts aus. Sie können auch einen **Festen Datumsbereich** auswählen. 
 
-- In den meisten Berichten wählen Sie einen Wert in einem Diagramm oder einer Liste aus, um den Bericht nach dem ausgewählten Wert zu filtern.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Nach Zeit oder Datumsbereich filtern.":::   
+
+- Wählen Sie für die meisten Berichte einen Wert in einem Diagramm oder einer Liste aus, um den Bericht zu filtern.
+
+> [!NOTE]
+> Die Auswahl des Zeitbereichs ist für einen Echtzeit-Nutzungsbericht deaktiviert. Der Zeitbereich für einen Echtzeit-Nutzungsbericht ist „jetzt“.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645263"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353712"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Erste Schritte mit der Zielgruppenerkenntnis-Funktion von Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ Wenn Sie sich zum ersten Mal bei Zielgruppenerkenntnissen anmelden, können Sie 
 
 Vereinheitlichte Profile sind die Grundlage, um Erkenntnisse zu gewinnen und Maßnahmen zu den Daten zu ergreifen. Bringen Sie Daten aus verschiedenen Quellen ein und führen Sie den Datenvereinheitlichungsprozess aus, um vereinheitlichte Profile zu kombinieren. Geben Sie Beziehungen zwischen den aufgenommenen Entitäten an. Verwenden Sie Anreicherungsfunktionen, um den Profilen Informationen hinzuzufügen. 
 
-1. Erfassen Sie Daten, indem Sie Datenquellen aus mehreren Optionen erstellen. Wählen zwischen [Power Query-Connectors](connect-power-query.md), einem [Common Data Model-Ordner](connect-common-data-model.md) oder [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Erfassen Sie Daten, indem Sie Datenquellen aus mehreren Optionen erstellen. Wählen zwischen [Power Query-Konnektoren](connect-power-query.md), einem [Common Data Model-Ordner](connect-common-data-model.md) oder [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Führen Sie den [Datenvereinheitlichungsprozess](data-unification.md) aus, indem Sie die Phasen [Zuordnung](map-entities.md), [Abgleich](match-entities.md) und [Zusammenführung](merge-entities.md) durchlaufen.
 

@@ -3,18 +3,20 @@ title: Benutzerdefinierte Maschinelles Lernen Modelle | Microsoft Docs
 description: Arbeiten Sie mit benutzerdefinierten Modellen aus Azure Machine Learning in Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881783"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355074"
 ---
 # <a name="custom-machine-learning-models"></a>Benutzerdefinierte Maschinelles Lernen Modelle
 
@@ -40,6 +42,8 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 
    > [!NOTE]
    > Daten werden zwischen Ihren Customer Insights-Instanzen und den ausgewählten Azure-Webdiensten oder -Pipelines im Workflow übertragen. Wenn Sie Daten an einen Azure-Service übertragen, stellen Sie sicher, dass der Service für die Verarbeitung von Daten auf die Weise und für den Standort konfiguriert ist, die erforderlich ist, um die rechtlichen Anforderungen für diese Daten für Ihr Unternehmen zu erfüllen.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Einen neuen Workflow hinzufügen
 

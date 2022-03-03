@@ -3,26 +3,28 @@ title: Beispielanleitung für die Abo-Abwanderungsvorhersage
 description: Verwenden Sie diese Beispielanleitung, um das Out-of-Box-Modell zur Vorhersage der Abonnement-Abwanderung auszuprobieren.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306302"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355612"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Anleitung zur Vorhersage von Abonnement-Abwanderung (Vorschau)
+# <a name="subscription-churn-prediction-sample-guide"></a>Beispielanleitung für die Abo-Abwanderungsvorhersage
 
 Wir führen Sie durch ein End-to-End-Beispiel für die Vorhersage der Abwanderung von Abonnenten anhand der unten bereitgestellten Beispieldaten. 
 
 ## <a name="scenario"></a>Szenario
 
-Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt. Beides wird über die Website von Contoso Kaffee vertrieben. Sie haben kürzlich ein Abo-Geschäft für Ihre Kunden gestartet, um regelmäßig Kaffee zu bekommen. Ihr Ziel ist es, zu verstehen, welche abonnierten Kunden ihr Abonnement in den nächsten Monaten kündigen könnten. Zu wissen, welche ihrer Kunden **wahrscheinlich abwandern**, kann ihnen helfen, Marketingaufwand zu sparen, indem sie sich darauf konzentrieren, diese Kunden zu halten.
+Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt, die es über seine Website Contoso Coffee verkauft. Sie haben kürzlich ein Abo-Geschäft für Ihre Kunden gestartet, um regelmäßig Kaffee zu bekommen. Ihr Ziel ist es, zu verstehen, welche abonnierten Kunden ihr Abonnement in den nächsten Monaten kündigen könnten. Zu wissen, welche ihrer Kunden **wahrscheinlich abwandern**, kann ihnen helfen, Marketingaufwand zu sparen, indem sie sich darauf konzentrieren, diese Kunden zu halten.
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -31,7 +33,7 @@ Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstel
 
 ## <a name="task-1---ingest-data"></a>Aufgabe 1 - Datenerfassung
 
-Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind. 
+Lesen Sie insbesondere die Artikel zu [Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query-Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Datenerfassung von Kundendaten aus der eCommerce-Plattform
 
@@ -168,7 +170,7 @@ Nach der Datenerfassung beginnen wir nun mit dem **Zuordnen, Abgleichen, Zusamme
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Aufgabe 3 - Konfigurieren der Abonnement-Abwanderungsprognose
 
-Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhersage für Abonnements durchführen. Detaillierte Schritte finden Sie im Artikel [Abonnement-Abwanderungsvorhersage (Vorschau)](predict-subscription-churn.md). 
+Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhersage für Abonnements durchführen. Detaillierte Schritte finden Sie im Artikel [Abonnementabwanderung vorhersagen](predict-subscription-churn.md). 
 
 1. Gehen Sie zu **Intelligenz** > **Erkennen** und wählen Sie das Modell **Kundenabwanderung**.
 

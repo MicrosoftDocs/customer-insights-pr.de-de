@@ -3,20 +3,24 @@ title: Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 description: Prognostizieren Sie das Umsatzpotenzial für aktive Kunden in der Zukunft.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035368"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355788"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Langfristiger Kundenwert(CLV)-Vorhersage (Vorschau)
+# <a name="customer-lifetime-value-clv-prediction"></a>Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 
 Prognostizieren Sie den potenziellen Wert (Umsatz), den einzelne aktive Kunden über einen definierten zukünftigen Zeitraum in Ihr Unternehmen einbringen werden. Mit dieser Funktion können Sie verschiedene Ziele erreichen: 
 - Identifizieren Sie hochwertige Kunden und verarbeiten Sie diese Erkenntnisse
@@ -65,7 +69,7 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
     - Vollständigkeit der Daten: Weniger als 20 % fehlende Werte in den erforderlichen Feldern in den Eingabedaten   
 
 > [!NOTE]
-> - Das Modell erfordert die Transaktionshistorie Ihrer Kunden. Derzeit kann nur eine Transaktionsverlaufsentität konfiguriert werden. Wenn mehrere Kaufentitäten/Transaktionsentitäten vorhanden sind, vereinigen Sie diese vor der Datenerfassung in Power Query.
+> - Das Modell erfordert die Transaktionshistorie Ihrer Kunden. Derzeit kann nur eine Transaktionsverlaufsentität konfiguriert werden. Wenn es mehrere Kauf/Transaktionsentitäten gibt, können Sie sie vor der Datenaufnahme in Power Query vereinen.
 > - Für zusätzliche Kundenaktivitätsdaten (optional) können Sie jedoch so viele Kundenaktivitätsentitäten hinzufügen, wie Sie für das Modell berücksichtigen möchten.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Langfristige Kundenwertvorhersage erstellen
@@ -74,7 +78,7 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
 
 1. Wählen Sie die **Langfristiger Kundenwert**-Kachel und dann **Modell verwenden**. 
 
-1. Im Bereich **Langfristiger Kundenwert (Vorschauversion)** wählen Sie **Erste Schritte**.
+1. Wählen Sie im Bereich **Langfristiger Kundenwert** **Erste Schritte** aus.
 
 1. **Dieses Modell benennen** und **Ausgabeentitätsname**, um sie von anderen Modellen oder Entitäten zu unterscheiden.
 

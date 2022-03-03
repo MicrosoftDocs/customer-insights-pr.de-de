@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Funktion Interaktionserkenntnisse in Dynamics 365 Customer Insights (Vorschau)
-summary: Sammeln Sie Daten für Ihre Websites. Verstehen Sie interaktiv, wie Kunden mit Ihren Websites interagieren und sie nutzen. Nutzen Sie die tiefe Integration der Funktionen Kundenbindungserkenntnisse und Zielgruppenerkenntnisse, um Ihre Echtzeit-Verhaltensanalysen mit Kundenprofilberichten zu bereichern. Bereichern Sie Kundenprofile mit Webaktivitäten, um Verhaltensdaten in Echtzeit zusammen mit relevanten Kundendaten abzurufen. Transformieren Sie Ihr Unternehmen, um aus Ihren Kundendaten einen unmittelbaren Nutzen zu ziehen.
+title: Ende der Interaktionserkenntnisse (Vorschauversion)
+summary: Die Vorschauversion von Dynamics 365 Customer Insights Interaktionserkenntnisse endete am 15. Februar 2022. Diese Änderung bedeutet, dass die Testversion von Customer Insights nicht mehr die Möglichkeit bietet, Trichter oder andere Berichtsfunktionen zu erstellen. Wir laden Sie ein, die vielen anderen Funktionen von Customer Insights, der Microsoft Kundendatenplattform (CDP), zu erkunden und zu bewerten. Bitte wenden Sie sich direkt an Ihr Microsoft-Kontoteam, wenn Sie Fragen zum Ende der Funktionsvorschau haben. Ihr Kontoteam wird Sie über bevorstehende Markteinführungen auf dem Laufenden halten. Vielen Dank!
 metadata:
   title: Dokumentation zur Funktion Interaktionserkenntnisse (Vorschauversion)
   description: Hilfe-Hub mit wichtigen Links zur Funktion Kundenbindungserkenntnisse.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494183"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350498"
 landingContent:
-- title: Info
+- title: Erfassen Sie
   linkLists:
   - linkListType: overview
     links:
-    - text: Funktionsvorteile
-      url: overview.md
-    - text: Glossar der Begriffe
-      url: glossary.md
-    - text: Neue und aktualisierte Funktionen
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
-- title: Onboarding
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Los geht's
-      url: get-started.md
-    - text: Arbeitsbereich erstellen
-      url: create-workspace.md
-    - text: Instrumentieren Sie Ihre Website
-      url: instrument-website.md
-- title: Ansicht und Filterbericht
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Berichte anzeigen
-      url: view-reports.md
-    - text: Bericht über vereinheitlichte Profile anzeigen
-      url: profile-reports.md
-    - text: Verwenden von Zielgruppensegmenten, um Berichte zu filtern
-      url: integrate-audience-insights-segments.md
-- title: Analysieren
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Verkaufstrichterberichte erstellen
-      url: funnel-reports.md
-    - text: Verhaltensdaten analysieren
-      url: curate-dimensions.md
-    - text: Benutzerdefinierte Berichte erstellen
-      url: custom-reports.md
-    - text: Detailliertere Ereignisse erstellen
-      url: refined-events.md
-    - text: Ereignisse exportieren
-      url: export-events.md
-- title: Entwicklerressourcen
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Entwicklerressourcen
-      url: developer-resources.md
-    - text: Web SDK-Beispiel
-      url: websdk-sample.md
-    - text: Erweiterte Web SDK-Szenarien
-      url: advanced-SDK-implementation.md
-    - text: Android SDK Beispiel
-      url: get-started-android.md
-    - text: iOS SDK-Beispiel
-      url: get-started-ios.md
-- title: Verwaltung
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Verwalten von Umgebungen und Arbeitsbereichen
-      url: manage-environments-workspaces.md
-    - text: Mit Zielgruppenerkenntnissen verbinden
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Verwalten von Cookies und Benutzereinwilligungen
-      url: user-consent-storage.md
-    - text: Löschen und Exportieren von Personendaten
-      url: delete-export-personal-data.md
-    - text: Dienstlimits
-      url: ../service-limits.md
+    - text: Treten Sie der Dynamics 365 Community bei
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Lassen Sie andere Benutzer von Ihren Ideen profitieren.
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Problem melden
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

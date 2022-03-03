@@ -1,32 +1,37 @@
 ---
 title: Segmente in Zielgruppenerkenntnissen
 description: Übersicht über Segmente und wie man sie erstellt und verwaltet.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617374"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355982"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
 Mit Segmenten können Sie Ihre Kunden anhand von demografischen, transaktionalen oder verhaltensbezogenen Attributen gruppieren. Sie können Segmente verwenden, um Werbekampagnen, Vertriebsaktivitäten und Kundensupportaktionen gezielt auf die Erreichung Ihrer Geschäftsziele auszurichten.
 
-Kundenprofile, die den Filtern einer Segmentdefinition entsprechen, werden als *Mitglieder* eines Segments bezeichnet. Es gelten einige [Serviceeinschränkungen](service-limits.md).
+Kundenprofile, die den Filtern einer Segmentdefinition entsprechen, werden als *Mitglieder* eines Segments bezeichnet. Es gelten einige [Serviceeinschränkungen](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-new-segment"></a>Ein neues Segment erstellen
 
 Es gibt mehrere Wege, ein neues Segment zu erstellen: 
 
-# <a name="individual-customers-b2c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 
 - Komplexes Segment mit Segmentbuilder: [Unsere eigenen erstellen](segment-builder.md#create-a-new-segment) 
 - Einfache Segmente mit einem Operator: [Schnelles Segment](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Es gibt mehrere Wege, ein neues Segment zu erstellen:
 - KI-gestützte Vorschläge basierend auf Maßnahmen oder Attributen: [Vorgeschlagene Segmente zur Verbesserung der Maßnahmen](suggested-segments.md) 
 - Vorschläge basierend auf Aktivitäten: [Vorgeschlagene Segmente basierend auf der Kundenaktivität](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
 - Komplexes Segment mit Segmentbuilder: [Unsere eigenen erstellen](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
 
 Sie können alle Segmente auf einmal aktualisieren, indem Sie **Alles aktualisieren** auf der Seite **Segmente** wählen, oder Sie können ein oder mehrere Segmente aktualisieren, wenn Sie sie auswählen und **Aktualisieren** aus den Optionen wählen. Alternativ können Sie eine laufende Aktualisierung unter **Administrator** > **System** > **Zeitplan** konfigurieren.
 
-> [!TIP]
-> Es gibt [sechs Arten von Status](system.md#status-types) für Aufgaben/Prozesse. Darüber hinaus [hängen die meisten Prozesse von anderen nachfolgenden Prozessen ab](system.md#refresh-policies). Sie können den Status eines Prozesses auswählen, um Details zum Fortschritt des gesamten Auftrags anzuzeigen. Nach der Auswahl von **Siehe Details** für eine der Aufgaben des Auftrags finden Sie zusätzliche Informationen: Verarbeitungszeit, das letzte Verarbeitungsdatum sowie alle mit der Aufgabe verbundenen Fehler und Warnungen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Segmente exportieren
 
@@ -106,4 +110,5 @@ Der untere Teil enthält eine Liste der Segmentmitglieder.
 >
 >Die Liste ist eine Vorschau der passenden Segmentmitglieder und zeigt die ersten 100 Datensätze Ihres Segments an, so dass Sie es schnell auswerten und seine Definitionen bei Bedarf überprüfen können. Um alle übereinstimmenden Datensätze zu sehen, müssen Sie [Segment](export-destinations.md) exportieren.
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

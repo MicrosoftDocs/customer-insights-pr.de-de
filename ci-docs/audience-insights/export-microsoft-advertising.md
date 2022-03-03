@@ -1,20 +1,19 @@
 ---
 title: Exportieren von Customer Insights-Daten nach Microsoft Advertising
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und nach Microsoft Advertising exportieren.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 8f009ed0258ded424340061e5320dd7df68c199f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124489"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226890"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Exportieren von Segmenten nach Microsoft Advertising (Vorschau)
 
@@ -29,9 +28,9 @@ Exportieren Sie Customer Insights-Segmente nach Microsoft Advertising, um Zielgr
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 500.000 Profile pro Export nach Microsoft Advertising exportieren.
+- Sie können bis zu 500'000 Kundenprofile pro Export nach Microsoft Advertising exportieren.
 - Der Export nach Microsoft Advertising ist auf Segmente beschränkt.
-- Das Exportieren von bis zu 500.000 Profilen nach Microsoft Advertising kann bis zu 10 Minuten dauern. 
+- Der Export von Segmenten mit bis zu 500'000 Kundenprofilen nach Microsoft Advertising kann bis zu 10 Minuten dauern. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Einrichten der Verbindung mit Microsoft Advertising (Vorschau)
@@ -68,7 +67,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Geben Sie Ihre **Kunden- und Konto-ID für Microsoft Advertising** ein. Sie finden die Kunden-ID (`cid`) und die Konto-ID (`aid`) in den Parametern der URL, wenn Sie bei Microsoft Advertising angemeldet sind.
 
-1. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** in Ihrem vereinheitlichten Kundenprofil das Feld mit einer E-Mail-Adresse eines Kunden aus. Der Export nach Microsoft Advertising ist auf Segmente beschränkt.
+1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld mit der E-Mail-Adresse eines Kunden aus. Der Export nach Microsoft Advertising ist auf Segmente beschränkt.
 
 1. Wählen Sie **Speichern** aus.
 

@@ -4,22 +4,21 @@ author: m-hartmann
 description: Machen Sie sich mit der Erst-Erfahrung in Dynamics 365 Customer Insights vertraut und erkunden Sie seine Fähigkeiten.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645687"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350130"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Erste Schritte nach dem Kauf von Customer Insights
 
 In diesem Artikel erfahren Sie, wie Sie Ihre ersten Schritte in Dynamics 365 Customer Insights vornehmen, nachdem Ihre Organisation ein Abonnement erworben hat. Wenn Sie Customer Insights erwerben möchten, finden Sie unsere Kontaktmöglichkeiten auf der [Dynamics 365 Customer Insights-Website](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Nach dem Kauf einer Abonnementlizenz für Customer Insights erhält der globale Administrator des Microsoft 365-Mandanten eine E-Mail, die ihn zum Erstellen der Umgebung auffordert. 
+Nach dem Kauf einer Abonnementlizenz für Customer Insights erhält der globale Administrator des Microsoft 365-Mandanten eine E-Mail, die ihn auffordert, die Umgebung zu erstellen. 
 
 Customer Insights wird pro Mandant lizenziert und umfasst mehrere Funktionen. Sie können mehr Kapazität und Lizenzen erwerben, um das Standardkontingent zu erhöhen. 
 - [Preisüberblick](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ Die Erstausführung hilft Ihnen bei der Auswahl Ihres ersten Schwerpunkts mit Cu
 
 ## <a name="create-your-own-environment"></a>Eigenen Umgebung erstellen
 
-Nach Ihrer ersten Anmeldung sehen Sie eine Umgebung mit Beispieldaten. Sie können diese Daten verwenden, um Funktionen zu erkunden und sich mit der App vertraut zu machen. Um Ihre eigenen Daten zu verwenden, müssen Sie eine Umgebung in der Funktion erstellen, in der Sie arbeiten möchten.
-
-- [Eine Umgebung für Zielgruppenerkenntnisse erstellen.](audience-insights/get-started-paid.md)
-- [Eine Umgebung für Kundenbindungserkenntnisse erstellen.](engagement-insights/create-new-environment.md) 
+Nach Ihrer ersten Anmeldung sehen Sie eine Umgebung mit Beispieldaten. Sie können diese Daten verwenden, um Funktionen zu erkunden und sich mit der App vertraut zu machen. Um Ihre eigenen Daten zu verwenden, müssen Sie [eine Umgebung schaffen](audience-insights/get-started-paid.md).
 
 
 

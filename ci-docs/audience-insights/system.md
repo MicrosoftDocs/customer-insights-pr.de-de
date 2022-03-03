@@ -2,19 +2,25 @@
 title: Systemkonfiguration in Zielgruppen-Insights
 description: Lernen Sie die Systemeinstellungen der Dynamics 365 Customer Insights-Zielgruppen-Insights Funktionalität kennen.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732360"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354228"
 ---
 # <a name="system-configuration"></a>Systemkonfiguration
 
@@ -85,6 +91,10 @@ Wählen Sie den Status eines Prozesses aus, um die Fortschrittsdetails des gesam
 ## <a name="schedule-tab"></a>Registerkarte „Zeitplan“
 
 Verwenden Sie die Registerkarte **Zeitplan**, um automatische Aktualisierungen aller Ihrer [eingespeicherten Datenquellen](data-sources.md) zu planen. Automatische Aktualisierungen sorgen dafür, dass Aktualisierungen aus Ihren Datenquellen in Ihren einheitlichen Kundenprofilen berücksichtigt werden.
+
+> [!NOTE]
+> Von Ihnen verwaltete Datenquellen werden nach ihren eigenen Zeitplänen aktualisiert. Um die Aktualisierung der von Ihnen verwalteten Datenquellen zu planen, konfigurieren Sie die Aktualisierungseinstellungen für dieses bestimmte Datenquelle über die Seite **Datenquellen**.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Dataflow-Aktualisierungseinstellungen.":::
 
 1. Gehen Sie in den Zielgruppen-Insights zu **Admin** > **System** und wählen Sie die Registerkarte **Zeitplan**.
 

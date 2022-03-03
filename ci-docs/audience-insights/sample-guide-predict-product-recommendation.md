@@ -3,26 +3,29 @@ title: Beispielanleitung für Produktempfehlungsvorhersage
 description: Verwenden Sie diese , um das Out-of-Box-Modell zur Vorhersage von Produktempfehlungen auszuprobieren.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129898"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354646"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Beispielanleitung für Produktempfehlungsvorhersage (Vorschau)
+# <a name="product-recommendation-prediction-sample-guide"></a>Beispielanleitung für Produktempfehlungsvorhersage
 
 Wir führen Sie durch ein End-to-End-Beispiel für die Vorhersage von Produktempfehlungen anhand der unten bereitgestellten Beispieldaten.
 
 ## <a name="scenario"></a>Szenario
 
-Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt. Beides wird über die Website von Contoso Kaffee vertrieben. Ihr Ziel ist es zu verstehen, welche Produkte sie ihren wiederkehrenden Kunden empfehlen sollten. Das Wissen darüber, was Kunden **wahrscheinlich eher kaufen**, kann ihnen helfen, Marketingbemühungen zu sparen, indem sie sich auf bestimmte Elemente konzentrieren.
+Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt, die es über seine Website Contoso Coffee verkauft. Ihr Ziel ist es zu verstehen, welche Produkte sie ihren wiederkehrenden Kunden empfehlen sollten. Das Wissen darüber, was Kunden **wahrscheinlich eher kaufen**, kann ihnen helfen, Marketingbemühungen zu sparen, indem sie sich auf bestimmte Elemente konzentrieren.
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -31,7 +34,7 @@ Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstel
 
 ## <a name="task-1---ingest-data"></a>Aufgabe 1 - Datenerfassung
 
-Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind.
+Lesen Sie insbesondere die Artikel zu [Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query-Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Datenerfassung von Kundendaten aus der eCommerce-Plattform
 
@@ -105,9 +108,9 @@ Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um 
 
 1. Gehen Sie auf die Registerkarte **Abgleichen** und wählen Sie **Reihenfolge festlegen**.
 
-2. In der Dropdown-Liste **Primär** wählen Sie **eCommerceContacts : eCommerce** als primäre Quelle und schließen alle Datensätze ein.
+2. Wählen Sie in der Dropdown-Liste **Primär** und wählen Sie **eCommerceKontakte: eCommerce** als Primärquelle aus, und wählen Sie dann Alle Datensätze einbinden aus.
 
-3. Wählen Sie in der Dropdown-Liste **Entität 2** die Option **loyCustomers : LoyaltyScheme** und schließen Sie alle Datensätze ein.
+3. Wählen Sie in der Dropdownliste **Entität 2** den Eintrag **loyCustomers: LoyaltyScheme** und dann Alle Datensätze berücksichtigen aus.
 
    ![Abgleich eCommerce und Loyalty vereinheitlichen.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um 
 
 5. Fügen Sie Ihre erste Bedingung mit FullName hinzu.
 
-   - Für eCommerceContacts wählen Sie **FullName** in der Dropdown-Liste.
-   - Für loyCustomers wählen Sie **FullName** im Dropdown.
+   - Für eCommerceKontakte wählen Sie **Vollständiger Name** in der Dropdown-Liste.
+   - Für loyCustomers wählen Sie **Vollständiger Name** in der Dropdown-Liste.
    - Wählen Sie das Dropdown-Menü **Normalisieren** und wählen Sie **Typ (Telefon, Name, Adresse, ...)**.
    - Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
 
 6. Geben Sie als Regelname **FullName, Email** ein.
 
    - Fügen Sie eine zweite Bedingung für E-Mail-Adressen hinzu, indem Sie **Bedingung hinzufügen** wählen.
-   - Für die Entität eCommerceContacts wählen Sie **EMail** im Dropdown.
-   - Für die Entität loyCustomers wählen Sie **EMail** im Drop-Down.
+   - Wählen Sie für eCommerce-Kontakte der Entität **Email** im Dropdown-Menü.
+   - Wählen Sie für loyCustomers der Entität **Email** im Dropdown-Menü.
    - Lassen Sie Normalisieren leer.
    - Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
 

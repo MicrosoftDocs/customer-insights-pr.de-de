@@ -1,21 +1,23 @@
 ---
 title: Customer Insights-Umgebungen erstellen
 description: Schritte zum Erstellen von Umgebungen mit einem lizenzierten Abonnement für Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088101"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354094"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Eine Umgebung für Zielgruppenerkenntnisse erstellen
 
@@ -76,12 +78,14 @@ Wenn Sie mehrere Umgebungen von Customer Insights erstellen und die Ausgabeentit
    
 Mit dem **Microsoft Dataverse** Schritt können Sie Customer Insights mit Ihrer Dataverse Umgebung verbinden.
 
-Benutzen Sie [Standardmäßige Vorhersage-Modelle](predictions-overview.md#out-of-box-models), konfigurieren Sie Datenfreigaben mit Dataverse. Oder Sie können die Datenaufnahme aus lokale Datenquellen aktivieren, indem Sie die Microsoft Dataverse Umgebungs-URL bereitstellen, die Ihre Organisation verwaltet. Wählen Sie **Datenfreigabe aktivieren** aus, um die Ausgabedaten von Customer Insights mit einem verwalteten Dataverse Data Lake zu teilen.
+Bieten Sie Ihre eigene Microsoft Dataverse-Umgebung, um Daten (Profile und Einblicke) mit auf Dataverse basierenden Geschäftsanwendungen zu teilen, wie Dynamics 365 Marketing oder modellgesteuerte Anwendungen in Power Apps. Lassen Sie dieses Feld leer, wenn Sie keine eigene Dataverse-Umgebung haben und wir stellen Ihnen eine zur Verfügung.
+
+Durch Verbindung zu Ihrer Dataverse-Umgebung können Sie auch [Daten aus lokalen Datenquellen mit Power Platform-Dataflows und Gateways erfassen](data-sources.md#add-data-from-on-premises-data-sources). Sie können auch [sofort einsatzbereite Vorhersage-Modelle](predictions-overview.md?tabs=b2c#out-of-box-models) durch Verbindung mit einer Dataverse-Umgebung verwenden.
 
 > [!IMPORTANT]
 > Customer Insights und Dataverse müssen sich in derselben Region befinden, um die Datenfreigabe zu ermöglichen.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Datenaustausch mit Microsoft Dataverse automatisch für neue Instanzen aktiviert.":::
 
 > [!NOTE]
 > Customer Insights unterstützt die folgenden Datenfreigabe-Szenarien nicht:

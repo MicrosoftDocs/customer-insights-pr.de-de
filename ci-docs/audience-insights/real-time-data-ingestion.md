@@ -2,19 +2,21 @@
 title: Datenerfassung in Echtzeit und Einschränkungen
 description: Allgemeine Informationen zu den Funktionalitäten von Zielgruppen-Insights in Echtzeit.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689174"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355474"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Datenerfassung in Echtzeit (Vorschau)
 
@@ -44,7 +46,7 @@ Da Echtzeitvorgänge nach der Datenvereinheitlichung stattfinden, gelten sie nur
 
 ## <a name="real-time-creation-of-activities"></a>Erstellung von Aktivitäten in Echtzeit
 
-Mit der Echtzeit-API können Sie eine neue Aktivität aus Ihrem Quellsystem (einen einzelnen Quelldatensatz) in einem einheitlichen Kundenprofil veröffentlichen. Die neue Aktivität ist innerhalb von Sekunden als vereinheitlichte Aktivität in der Zeitleiste dieses vereinheitlichten Kundenprofils verfügbar. Sie können die Zeitleiste in der Kundenkartenansicht oder einer anderen von Ihnen konfigurierten Zeitleistenintegration sehen.
+Mit der Echtzeit-API können Sie eine neue Aktivität aus Ihrem Quellsystem (einen einzelnen Quelldatensatz) in einem einheitlichen Kundenprofil veröffentlichen. Die neue Aktivität wird innerhalb von Sekunden als vereinheitlichte Aktivität in der Zeitleiste dieses vereinheitlichten Kundenprofils verfügbar sein. Sie können die Zeitleiste in der Kundenkartenansicht oder einer anderen von Ihnen konfigurierten Zeitleistenintegration sehen.
 
 > [!NOTE]
 >
@@ -54,7 +56,7 @@ Mit der Echtzeit-API können Sie eine neue Aktivität aus Ihrem Quellsystem (ein
 
 Es gibt zwei Möglichkeiten, sich mit der Echtzeit-API zu verbinden:
 
-- [indirekt](#connect-via-the-dynamics-365-customer-insights-connector) unter Verwendung des [Dynamics 365 Customer Insights-Connectors](https://docs.microsoft.com/connectors/customerinsights/)
+- [indirekt](#connect-via-the-dynamics-365-customer-insights-connector) unter Verwendung des [Dynamics 365 Customer Insights-Connectors](/connectors/customerinsights/)
 - [direkt](#connect-directly-to-the-real-time-api) mit Code
 
 Die folgenden Voraussetzungen gelten für beide Methoden:
@@ -66,13 +68,13 @@ Die folgenden Voraussetzungen gelten für beide Methoden:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Über den Dynamics 365 Customer Insights-Connector verbinden
 
-Die Echtzeit-API kann Daten von einem dedizierten Power Platform-Connector, dem [Dynamics 365 Customer Insights-Connector](https://docs.microsoft.com/connectors/customerinsights/), erfassen, ohne dass Code geschrieben und bereitgestellt werden muss.    
-Der Connector kann dieselben Echtzeitaktionen wie die API ausführen. Sie benötigen eine gültige Lizenz für Premium-Connectors. Weitere Informationen finden Sie unter [FAQs zur Power Apps- und Power Automate-Lizenzierung](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Die Echtzeit-API kann Daten von einem dedizierten Power Platform-Connector, dem [Dynamics 365 Customer Insights-Connector](/connectors/customerinsights/), erfassen, ohne dass Code geschrieben und bereitgestellt werden muss.    
+Der Connector kann dieselben Echtzeitaktionen wie die API ausführen. Sie benötigen eine gültige Lizenz für Premium-Connectors. Weitere Informationen finden Sie unter [FAQs zur Power Apps- und Power Automate-Lizenzierung](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps und/oder Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps und/oder Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Einzelheiten zum Erstellen von Flows finden Sie in der [Power Automate-Dokumentation](https://docs.microsoft.com/power-automate/).
+Einzelheiten zum Erstellen von Flows finden Sie in der [Power Automate-Dokumentation](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Eine direkte Verbindung zur Echtzeit-API herstellen
 
@@ -83,6 +85,7 @@ Details zu dieser API, einschließlich Parameter und Antworten, finden Sie im Ab
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Verstehen Sie Ihre Echtzeit-Nutzung mit Telemetrie
 
-Erhalten Sie einen Überblick über das Volumen der Anfragen an die Echtzeit-API und Informationen über mögliche Probleme des Systems. Sie können [auf die Echtzeit-Telemetrie zugreifen](system.md#api-usage-tab), indem Sie zu **Admin** > **System** > **API-Nutzung** gehen. In der Tabelle **Operationen** enthalten die Zeilen für API-Operationen, die die Echtzeit-Methoden verwenden, eine Schaltfläche zum Anzeigen der Echtzeit-API-Nutzung. Die Schaltfläche wird mit einem Fernglas-Symbol visualisiert. Wählen Sie die Schaltfläche, um einen Seitenbereich mit Nutzungsdetails für die Echtzeit-API-Nutzung in der aktuellen Umgebung zu öffnen.
+Erhalten Sie einen Überblick über das Volumen der Anfragen an die Echtzeit-API und Informationen über mögliche Probleme des Systems. Sie können [auf die Echtzeit-Telemetrie zugreifen](system.md#api-usage-tab). 
 
-Verwenden Sie den Selektor **Gruppieren nach**, um auszuwählen, wie Sie Ihre Echtzeit-Interaktionen auf einer Zeitachse von den letzten 24 Stunden bis zu den letzten 30 Tagen am besten darstellen. Sie können die Daten nach API-Methode, qualifiziertem Namen der Entität (aufgenommene Entität), erstellt von (Quelle des Ereignisses), Ergebnis (Erfolg oder Misserfolg) oder Fehlercodes gruppieren. Die Daten stehen als Historiendiagramm und als Tabelle zur Verfügung.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

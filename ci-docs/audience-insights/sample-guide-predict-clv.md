@@ -3,18 +3,17 @@ title: Beispielanleitung für die Vorhersage des langfristigen Kundenwerts
 description: Verwenden Sie diese Beispielanleitung, um das Modell zur Vorhersage des langfristigen Kundenwerts auszuprobieren.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306348"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354830"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Beispielanleitung für die Vorhersage des langfristigen Kundenwerts (Customer Lifetime Value, CLV)
 
@@ -22,7 +21,7 @@ In dieser Anleitung wird Ihnen ein End-to-End-Beispiel zur Vorhersage des CLV in
 
 ## <a name="scenario"></a>Szenario
 
-Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt. Die Produkte werden über Website Contoso Coffee vertrieben. Das Unternehmen möchte den Wert (Umsatz) verstehen, den seine Kunden in den nächsten 12 Monaten generieren können. Wenn der erwartete Wert für die nächsten 12 Monaten bekannt ist, kann das Unternehmen seine Marketingbemühungen auf hochwertige Kunden ausrichten.
+Contoso ist ein Unternehmen, das hochwertige Kaffees und Kaffeemaschinen herstellt. Es verkauft die Produkte über die Contoso Coffee-Website. Das Unternehmen möchte den Wert (Umsatz) verstehen, den seine Kunden in den nächsten 12 Monaten generieren können. Wenn der erwartete Wert für die nächsten 12 Monaten bekannt ist, kann das Unternehmen seine Marketingbemühungen auf hochwertige Kunden ausrichten.
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -31,7 +30,7 @@ Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstel
 
 ## <a name="task-1---ingest-data"></a>Aufgabe 1 - Datenerfassung
 
-Lesen Sie die Artikel [zur Datenerfassung](data-sources.md) und zum [Importieren von Datenquellen mit Power Query-Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind.
+Lesen Sie die Artikel zu [Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query-Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Datenerfassung von Kundendaten aus der eCommerce-Plattform
 
@@ -164,7 +163,7 @@ Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um 
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Aufgabe 3 – Konfigurieren der Vorhersage des langfristigen Kundenwerts
 
-Mit den vereinheitlichten Kundenprofilen können wir jetzt die Vorhersage des langfristigen Kundenwerts ausführen. Detaillierte Schritte finden Sie unter [Vorhersage des langfristigen Kundenwerts (Vorschau)](predict-customer-lifetime-value.md).
+Mit den vereinheitlichten Kundenprofilen können wir jetzt die Vorhersage des langfristigen Kundenwerts ausführen. Detaillierte Schritte finden Sie unter [Langfristiger Kundenwert (Vorhersage)](predict-customer-lifetime-value.md).
 
 1. Wechseln Sie zu **Intelligenz**  > **Vorhersagen** und wählen Sie **Kundenlebensdauerwert-Modell** aus.
 

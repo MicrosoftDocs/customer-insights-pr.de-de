@@ -1,20 +1,19 @@
 ---
 title: Power Apps-Konnektor
 description: Verbinden Sie sich mit Power Apps und Power Automate.
-ms.date: 08/21/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.date: 10/01/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405752"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229030"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps-Connector (Vorschau)
 
@@ -22,53 +21,55 @@ Bringen Sie einheitliche Kundenprofile in Ihre personalisierten Apps mit Power A
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Verbinden von Power Apps mit Dynamics 365 Customer Insights
 
-Customer Insights ist eine von vielen [verfügbaren Datenquellen in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights ist eine von vielen [verfügbaren Datenquellen in Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Siehe Power Apps-Dokumentation für weitere Informationen zu [Hinzufügen einer Datenverbindung zu einer App](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Wir empfehlen, dass Sie auch überprüfen, [wie Power Apps die Delegierung verwendet, um große Datenmengen in Canvas-Apps zu verarbeiten](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Siehe Power Apps-Dokumentation für weitere Informationen zu [Hinzufügen einer Datenverbindung zu einer App](/powerapps/maker/canvas-apps/add-data-connection). Wir empfehlen, dass Sie auch überprüfen, [wie Power Apps die Delegierung verwendet, um große Datenmengen in Canvas-Apps zu verarbeiten](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Verfügbare Entitäten
 
 Nach dem Hinzufügen von Customer Insights als Datenverbindung können Sie die folgenden Entitäten in Power Apps auswählen:
 
-- Kunde: zur Verwendung von Daten aus dem [einheitlichen Kundenprofil](customer-profiles.md).
-- Vereinheitlichte Kundenaktivität: um die [Aktivitätszeitachse](activities.md) in der App anzuzeigen.
+- **Kunde**: Zur Verwendung von Daten aus dem [Vereinheitlichtes Kund*innenprofil](customer-profiles.md).
+- **UnifiedActivity**: Um die [Aktivitätszeitachse](activities.md) in der App anzuzeigen.
+- **ContactProfile**: Um die Kontakte eines Kunden anzuzeigen. Diese Entität ist derzeit nur mit Zielgruppenerkenntnis-Umgebungen für Geschäftskonten verfügbar.
 
 ## <a name="limitations"></a>Einschränkungen
 
 ### <a name="retrievable-entities"></a>Abrufbare Entitäten
 
-Sie können nur die Entitäten **Kunde**, **UnifiedActivity** und **Segmente** durch den Power Apps-Konnektor aufrufen. Andere Entitäten werden angezeigt, da der zugrunde liegende Konnektor sie durch Trigger in Power Automate unterstützt.  
+Sie können nur die Entitäten **Kunde**, **UnifiedActivity**, **Segmente** und **Kontaktprofil** durch die Power Apps Konnektoren abrufen. Kontaktprofil ist derzeit nur mit Zielgruppenerkenntnis-Instanzen Geschäftskonten verfügbar. Andere Entitäten werden angezeigt, da der zugrunde liegende Konnektor sie durch Trigger in Power Automate unterstützt.
 
 ### <a name="delegation"></a>Stellvertretung
 
-Die Delegierung funktioniert für die Kundenentität und die UnifiedActivity-Entität. 
+Die Delegierung funktioniert für die **Kundenentität** und die **UnifiedActivity**-Entität. 
 
 - Delegation für die Entität **Kunde**: Um die Delegation für diese Entität zu verwenden, müssen die Felder in [Such- & Filterindex](search-filter-index.md) indiziert sein.  
-
 - Delegierung für **UnifiedActivity**: Die Delegierung für diese Entität funktioniert nur für die Felder **ActivityId** und **CustomerId**.  
+- Delegation für **KontaktProfil**: Delegation für diese Entität funktioniert nur für die Felder **Kontakt-ID** und **Kunden-ID**. KontaktProfil ist derzeit nur mit Zielgruppenerkenntnis-Umgebungen für Geschäftskonten verfügbar.
 
-- Weitere Informationen zur Delegierung finden Sie unter [Power Apps delegierbare Funktionen und Vorgänge](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Weitere Informationen zur Delegation finden Sie unter [Power Apps delegierbare Funktionen und Operationen](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Beispiel für Galeriesteuerelement
 
-Beispiel: Sie fügen Kundenprofile zu einem [Galerie-Steuerelement](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery) hinzu.
+Sie können Kundenprofile zu einer [Katalogsteuerelement](/powerapps/maker/canvas-apps/add-gallery) hinzufügen.
 
-1. Fügen Sie ein Steuerelement **Galerie** zu einer App hinzu, die Sie erstellen.
-
-> [!div class="mx-imgBorder"]
-> ![Ein Galerie-Element hinzufügen](media/connector-powerapps9.png "Ein Galerie-Element hinzufügen")
-
-1. Wählen Sie **Kunde** als Datenquelle für Artikel.
+1. Fügen Sie ein Steuerelement **Katalog** zu einer App hinzu, die Sie erstellen.
 
     > [!div class="mx-imgBorder"]
-    > ![Datenquelle auswählen](media/choose-datasource-powerapps.png "Wählen Sie eine Datenquelle")
+    > ![Ein Galerie-Element hinzufügen.](media/connector-powerapps9.png "Ein Katalog-Element hinzufügen.")
 
-1. Sie können das Datenfeld auf der rechten Seite ändern, um auszuwählen, welches Feld für die Kundeneinheit in der Galerie angezeigt werden soll.
+2. Wählen Sie **Kunde** als Datenquelle für Artikel.
 
-1. Wenn Sie ein beliebiges Feld des ausgewählten Kunden in der Galerie anzeigen möchten, füllen Sie die Eigenschaft Text eines Etiketts aus: **{Name_of_the_gallery}.Selected.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Datenquelle auswählen.](media/choose-datasource-powerapps.png "Wählen Sie eine Datenquelle.")
 
-    Beispiel: Gallery1.Selected.address1_city
+3. Sie können das Datenfeld auf der rechten Seite ändern, um auszuwählen, welches Feld für die Kundeneinheit in der Galerie angezeigt werden soll.
 
-1. Um die einheitliche Zeitachse für einen Kunden anzuzeigen, fügen Sie ein Gallery-Element und die Eigenschaft Items hinzu: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Wenn Sie ein beliebiges Feld des ausgewählten Kunden im Katalog anzeigen möchten, füllen Sie die Eigenschaft **Text** einer Beschriftung mithilfe von **{Name_of_the_gallery}.Ausgewählt.{property_name}** hinzu.  
+    - Beispiel: _Gallery1.Selected.address1_city_
 
-    Beispiel: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Um die einheitliche Zeitskala für einen Kunden anzuzeigen, fügen Sie ein Katalog-Element und die Eigenschaft **Elemente** mithilfe von **Filter (UnifiedActivity, CustomerID = {Customer_Id})** hinzu  
+    - Beispiel: _Filter('Unified Activity', CustomerId = Gallery1.Selected.CustomerId)_
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

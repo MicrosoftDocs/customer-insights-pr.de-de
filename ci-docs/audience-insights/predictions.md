@@ -1,24 +1,28 @@
 ---
 title: Vervollständigen Sie Teildaten mithilfe von Vorhersagen
 description: Verwenden Sie Vorhersagen, um unvollständige Kundendaten aufzufüllen.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645033"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354002"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Ergänzen von Teildaten mit Vorhersagen
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Teildaten mit Vorhersagen ergänzen (eingestellt)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Diese Funktion gilt als **veraltet** ab dem **5. November 2021**. Aktuelle Implementierungen funktionieren weiterhin, bis die Funktion entfernt wird, Sie können jedoch keine neuen Integrationen mithilfe der folgenden Anweisungen erstellen.
 
 Mit Vorhersagen können Sie auf einfache Weise Werte vorhersagen, die Ihr Verständnis für einen Kunden verbessern können. Auf der Seite **Intelligenz** > **Vorhersagen** können Sie **Meine Vorhersagen** auswählen, um Vorhersagen zu sehen, die Sie in anderen Teilen von Zielgruppen-Insights konfiguriert haben, und die Sie weiter anpassen können.
 
@@ -60,6 +64,8 @@ Weitere Informationen finden Sie unter [Eine neue Umgebung erstellen](create-env
    > ![Beispiel mit zugeordneten Feldwerten zu Kategorien.](media/intelligence-categorymapping.png "Beispiel für die Zuordnung von Feldwerten zu Kategorien")
 
 8. Wählen Sie **Abgeschlossen**, und die Vorhersage wird verarbeitet. Die Bearbeitung wird je nach Umfang und Komplexität der Daten einige Zeit in Anspruch nehmen. Die Ergebnisse werden in einer neuen Entität basierend auf dem **Name der Ausgabeentität** der Vorhersage bereitgestellt, die Sie erstellt haben.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Erstellen einer Vorhersage beim Erstellen eines Segments
 
@@ -110,7 +116,7 @@ Als Teil dieses Ablaufs wählen Sie ein bestimmtes Attribut aus, auf dem Ihr Seg
 
 ## <a name="edit-a-prediction"></a>Bearbeiten einer Vorhersage
 
-Nachdem Sie eine Vorhersage erstellt haben, können Sie das Modell im AI Builder anpassen, um die Effektivität Ihres Modells zu erhöhen.  
+Nachdem Sie ein Vorhersage erstellt haben, können Sie das Modell in AI Builder anpassen, um die Effektivität Ihres Modells zu steigern.  
 
 1. Gehen Sie in den Zielgruppen-Insights auf **Intelligenz** > **Vorhersagen** > **Meine Vorhersagen**.
 
@@ -118,14 +124,14 @@ Nachdem Sie eine Vorhersage erstellt haben, können Sie das Modell im AI Builder
 
 3. Markieren Sie die Auslassungspunkte in der Spalte **Aktionen** und wählen Sie **Ansicht**.
 
-4. Wählen Sie **Anpassen in AI Builder**.
+4. Klicken Sie auf **In AI Builder anpassen**.
 
 5. Aktualisieren Sie Ihr Modell im AI Builder. [Lernen Sie mehr über die Verwaltung von Modellen im AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Der nächste Lauf Ihrer Vorhersage wird das von Ihnen erstellte aktualisierte Modell verwenden.
 
 > [!NOTE]
-> Neue Modelle, die in AI Builder erstellt wurden, werden nicht in Zielgruppen-Insights angezeigt, es sei denn, das Modell wurde aus den oben aufgeführten Erfahrungen erstellt.
+> Neue, in AI Builder erstellte Modelle werden nicht in Zielgruppenerkenntnissen angezeigt, es sei denn, das Modell wurde aus den oben aufgeführten Erfahrungen erstellt.
 
 ## <a name="remove-a-prediction"></a>Eine Vorhersage entfernen
 

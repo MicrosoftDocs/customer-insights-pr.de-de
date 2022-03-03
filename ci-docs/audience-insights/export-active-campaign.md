@@ -1,20 +1,19 @@
 ---
 title: Exportieren Sie Customer Insights-Daten nach ActiveCampaign
 description: Erfahren Sie, wie Sie die Verbindung und den Export zu ActiveCampaign konfigurieren.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 089b9b0d76437e695f797f941ed384734d8f772e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314614"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227808"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmente nach ActiveCampaign exportieren (Vorschau)
 
@@ -28,9 +27,9 @@ Exportieren Sie Segmente von einheitlichen Kundenprofilen nach ActiveCampaign un
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 1 Million Profile pro Export zu ActiveCampaign exportieren und die Fertigstellung kann bis zu 90 Minuten dauern.
+- Sie können bis zu 1 Million Kundenprofile pro Export zu ActiveCampaign exportieren und die Fertigstellung kann bis zu 90 Stunden dauern.
 - Der Export nach ActiveCampaign ist auf Segmente beschränkt.
-- Die Anzahl der Profile, die Sie zu ActiveCampaign exportieren können, hängt von Ihrem Vertrag mit ActiveCampaign ab.
+- Die Anzahl der Kundenprofile, die Sie nach ActiveCampaign exportieren können, hängt von Ihrem Vertrag mit ActiveCampaign ab.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Richten Sie die Verbindung mit ActiveCampaign ein.
 
@@ -64,7 +63,7 @@ Sie können einen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung die
 
 1. Geben Sie Ihre [**ActiveCampaign Listen-ID ein**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-3. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Es ist erforderlcih, Segmente nach ActiveCampaign zu exportieren. Optional können Sie Vorname, Nachname, und Telefon exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie Attribut hinzufügen, um diese Felder zuzuordnen.
+1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Es ist erforderlcih, Segmente nach ActiveCampaign zu exportieren. Optional können Sie Vorname, Nachname, und Telefon exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie Attribut hinzufügen, um diese Felder zuzuordnen.
 
 1. Wählen Sie **Speichern** aus.
 

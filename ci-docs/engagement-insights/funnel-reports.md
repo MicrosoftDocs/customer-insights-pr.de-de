@@ -4,17 +4,16 @@ description: So verwenden Sie Verkaufstrichterberichte, um zu verstehen, wie Ihr
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498641"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226259"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Erstellen und Verwalten von Verkaufstrichter-Berichten
 
@@ -163,13 +162,23 @@ Sie können den Namen eines Verkaufstrichterberichts ändern, löschen oder die 
 
 Interaktionserkenntnisse bieten jetzt Verkaufstrichtererkenntnisse für Kunden. Nutzen Sie Verkaufstrichtererkenntnisse, um tiefere Einblicke in das Kundenverhalten zu den Schritten in Ihrem Verkaufstrichterbericht zu erhalten. Wenn Sie einen neuen Verkaufstrichterbericht erstellen und speichern, werden automatisch Verkaufstrichtererkenntnisse für Ihren Bericht generiert. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Verkaufstrichtererkenntnisse.":::
+
+> [!NOTE]
+> Verkaufstrichtererkenntnisse können nur für Verkaufstrichterschritte generiert werden, die **nicht** benutzerdefinierte Dimensionen enthalten. Um Verkaufstrichtererkenntnisse für alle Schritte in Ihrem Verkaufstrichter zu generieren, verwenden Sie vordefinierte Dimensionen von Interaktionserkenntnissen, um Ihre Verkaufstrichtererkenntnisse zu erstellen. 
+
 Sie können Verkaufstrichtererkenntnisse aus den folgenden Kategorien sowohl auf Haupt- als auch auf Schrittebene anzeigen: 
 
- - Konversionsrate 
+ - Konversionsrate
+ -    Die Konversionsrate zwischen Auschecken und Kauf beträgt 22 %.
  - Übergangszeit 
+ -    Die durchschnittliche Übergangszeit zwischen Warenkorb und Auschecken ist 23 Minuten. 
  - Abschlusszeit 
+ -    Die durchschnittliche Zeit, die Kunden zum Abschließen des Trichters benötigen, beträgt 47 Minuten. 
 
 Nutzen Sie diese Einblicke, um das Kundenverhalten genauer zu untersuchen und Absprungpunkte und Konvertierungen für Ihren Verkaufstrichterbericht besser zu verstehen. 
+
+Um Erkenntnisse über verschiedene Schritte hinweg zu vergleichen, wählen Sie **Schrittaufschlüsselung anzeigen** oder **Mit anderen Schritten vergleichen** über die Erkenntniskarten aus. Diese zeigen ein Balkendiagramm an, das Metriken für jeden Schritt des Trichters vergleicht. 
 
 Verkaufstrichtererkenntnisse werden alle 24 Stunden neu berechnet, oder wenn Sie den Verkaufstrichterbericht **speichern**. 
 

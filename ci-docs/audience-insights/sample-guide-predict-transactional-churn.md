@@ -3,26 +3,25 @@ title: Transaktionsabwanderungsvorhersage Beispielanleitung
 description: Verwenden Sie diese Anleitung, um das Out-of-Box-Modell zur Vorhersage von Transaktionsabwanderung auszuprobieren.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029444"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354600"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Anleitung zur Vorhersage der Transaktionsabwanderung (Vorschau)
+# <a name="transactional-churn-prediction-sample-guide"></a>Transaktionsabwanderungsvorhersage Beispielanleitung
 
-Diese Anleitung führt Sie durch ein End-to-End-Beispiel für die Vorhersage der Transaktionsabwanderung in Customer Insights unter Verwendung der unten angegebenen Daten. Alle in diesem Leitfaden verwendeten Daten sind keine echten Kundendaten und sind Teil des Contoso DataSets, das in der *Demo* Umgebung innerhalb Ihres Customer Insights-Abonnements gefunden werden kann.
+Diese Anleitung führt Sie durch ein End-to-End-Beispiel für die Vorhersage der Transaktionsabwanderung in Customer Insights unter Verwendung der unten angegebenen Daten. Alle in dieser Anleitung verwendeten Daten sind keine echten Kundendaten und gehören zum Contoso Dataset, das sich in der *Demo* Umgebung innerhalb Ihres Customer Insights-Abonnements befindet.
 
 ## <a name="scenario"></a>Szenario
 
-Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt. Beides wird über die Website von Contoso Kaffee vertrieben. Ihr Ziel ist es, zu wissen, welche Kunden, die normalerweise regelmäßig ihre Produkte kaufen, in den nächsten 60 Tagen keine aktiven Kunden mehr sein werden. Zu wissen, welche ihrer Kunden **wahrscheinlich abwandern**, kann ihnen helfen, Marketingaufwand zu sparen, indem sie sich darauf konzentrieren, diese Kunden zu halten.
+Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstellt, die es über seine Website Contoso Coffee verkauft. Ihr Ziel ist es, zu wissen, welche Kunden, die normalerweise regelmäßig ihre Produkte kaufen, in den nächsten 60 Tagen keine aktiven Kunden mehr sein werden. Zu wissen, welche ihrer Kunden **wahrscheinlich abwandern**, kann ihnen helfen, Marketingaufwand zu sparen, indem sie sich darauf konzentrieren, diese Kunden zu halten.
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -31,7 +30,7 @@ Contoso ist ein Unternehmen, das hochwertigen Kaffee und Kaffeemaschinen herstel
 
 ## <a name="task-1---ingest-data"></a>Aufgabe 1 - Datenerfassung
 
-Lesen Sie speziell die Artikel [über die Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind. 
+Lesen Sie insbesondere die Artikel zu [Datenerfassung](data-sources.md) und [Importieren von Datenquellen mit Power Query-Konnektoren](connect-power-query.md). Die folgenden Informationen setzen voraus, dass Sie mit der Datenerfassung im Allgemeinen vertraut sind. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Datenerfassung von Kundendaten aus der eCommerce-Plattform
 
@@ -149,7 +148,7 @@ Nach der Datenerfassung beginnen wir nun mit dem **Zuordnen, Abgleichen, Zusamme
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Aufgabe 3 - Konfigurieren der Vorhersage der Transaktionsabwanderung
 
-Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhersage für Abonnements durchführen. Detaillierte Schritte finden Sie im Artikel [Abonnement-Abwanderungsvorhersage (Vorschau)](predict-subscription-churn.md). 
+Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhersage für Abonnements durchführen. Detaillierte Schritte finden Sie im Artikel [Abonnementabwanderung vorhersagen](predict-subscription-churn.md). 
 
 1. Gehen Sie zu **Intelligenz** > **Erkennen** und wählen Sie das Modell **Kundenabwanderung**.
 

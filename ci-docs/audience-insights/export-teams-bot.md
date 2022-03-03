@@ -1,29 +1,28 @@
 ---
 title: Bot für Microsoft Teams
 description: Suchen Sie mit Hilfe eines Bots nach einheitlichen Kundenprofilen in Microsoft Teams.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405783"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232101"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teams Bot für Dynamics 365 Customer Insights (Vorschau)
 
 Verbinden Sie mit Microsoft Teams, um einen Bot in Teams-Kanälen nach vereinheitlichten Kundenprofilen suchen zu lassen.
 
 > [!div class="mx-imgBorder"]
-> ![Teams Bot zeigt einen Kundendatensatz an](media/teams-bot.png "Teams Bot zeigt einen Kundendatensatz an")
+> ![Der Teams-Bot zeigt einen Kundendatensatz an.](media/teams-bot.png "Teams Bot zeigt einen Kundendatensatz an")
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Anforderungen
 
 Um den Bot einzurichten und zu konfigurieren, müssen folgende Voraussetzungen erfüllt sein:
 
@@ -31,7 +30,10 @@ Um den Bot einzurichten und zu konfigurieren, müssen folgende Voraussetzungen e
 - Der [Vereinheitlichungsprozess](data-unification.md) ist abgeschlossen.
 - Felder werden dem [Index suchen und filtern](search-filter-index.md) hinzugefügt.
 - Customer Insights und Teams befinden sich in derselben Organisation.
+- In Ihrer Umgebung ist die primäre Zielgruppe auf einzelne Kunden festgelegt. Geschäftskonten werden nicht unterstützt.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Konfigurieren des Bots
 
 1. Gehen Sie in Zielgruppen-Insights zu **Admin** > **Ziele exportieren**.
@@ -52,3 +54,6 @@ Der Bot bietet Suchfunktionen für einheitliche Kundenprofile.
 - Wenn Ihr Unternehmen mehrere Customer Insights-Umgebungen in der gleichen Organisation unterhält, können Sie **switchinstance** eingeben, um zu wählen, mit welcher Umgebung Sie den Bot verbinden wollen.
 
 - Eingeben von **Hilfe**, um eine Liste der verfügbaren Befehle für den Bot anzuzeigen.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

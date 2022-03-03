@@ -2,18 +2,17 @@
 title: Verwenden Sie demografische Dimensionen zum Aufteilen von Verhaltensdaten (kuratierte Dimensionen)
 description: Verwenden Sie einheitliche profilkuratierte Dimensionen, um Zielgruppenerkenntnisse-Kundenprofileigenschaften zu ermöglichen.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461102"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233046"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Verwenden Sie demografische Dimensionen zum Aufteilen von Verhaltensdaten
 
@@ -29,7 +28,7 @@ Durch die Verwendung einheitlicher demografischer Profildimensionen können Nutz
 - Eine Umgebung mit Bindungserkenntnissen, in der Kundenprofildaten mit der Umgebung mit Zielgruppenerkenntnissen verknüpft sind, in der die Kundenprofile erstellt werden. Weitere Informationen: [Erstellen Sie eine Verknüpfung zwischen Zielgruppenerkenntnissen und Kundenbindungserkenntnissen](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Nachdem Sie eine Verknüpfung zwischen den Umgebungen Zielgruppenerkenntnissen und Bindungserkenntnissen erstellt haben, möchten Sie möglicherweise nur Daten speziell für Kundenprofileigenschaften, die als Dimensionen in Bindungserkenntnissen nützlich sein können. Weitere Informationen unter [Aktivieren Sie vereinheitlichte Profilattribute und -segmente für Zielgruppenerkenntnisse](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Nachdem Sie eine Verknüpfung zwischen den Umgebungen Zielgruppenerkenntnissen und Bindungserkenntnissen erstellt haben, möchten Sie möglicherweise nur Daten speziell für Kundenprofileigenschaften, die als Dimensionen in Bindungserkenntnissen nützlich sein können. Weitere Informationen unter [Aktivieren Sie vereinheitlichte Profilattribute und -segmente für Zielgruppenerkenntnisse](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Einen neuen benutzerdefinierten Bericht erstellen
 
