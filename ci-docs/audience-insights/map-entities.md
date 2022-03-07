@@ -1,23 +1,20 @@
 ---
-title: Entitäten und Attribute für die Datenvereinigung zuordnen
-description: Wählen Sie Entitäten, Attribute, Primärschlüssel und semantische Typen aus, um Daten dem vereinheitlichten Kund*innenprofil zuzuordnen.
-ms.date: 10/18/2020
+title: Zuordnen von Entitäten zur Datenvereinheitlichung
+description: Ordnen Sie Daten zu, um einheitliche Kundenprofile zu erstellen.
+ms.date: 09/25/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-map
-- ci-match
-- customerInsights
-ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354957"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595992"
 ---
 # <a name="map-entities-and-attributes"></a>Entitäten und Attribute zuordnen
 
@@ -38,14 +35,14 @@ Weitere Informationen über den allgemeinen Flow der Datenvereinheitlichung find
 3. Wählen Sie die Entitäten und Attribute aus, die Sie in den Phasen *Abgleichen* und *Zusammenführen* verwenden wollen. Sie können die erforderlichen Attribute einzeln aus einer Entität auswählen oder alle Attribute aus einer Entität einschließen, indem Sie das Kontrollkästchen **Alle Felder einschließen** auf Entitätsebene auswählen. Wir empfehlen die Auswahl von mindestens zwei Entitäten, die von dem Datenvereinheitlichungsprozess profitieren.
 
    > [!div class="mx-imgBorder"]
-   > ![Beispiel für das Hinzufügen von Entitäten.](media/data-manager-configure-map-add-entities-example.png "Beispiel für das Hinzufügen von Entitäten")
+   > ![Beispiel für das Hinzufügen von Entitäten](media/data-manager-configure-map-add-entities-example.png "Beispiel für das Hinzufügen von Entitäten")
 
    In diesem Beispiel fügen wir die Entitäten **eCommerceContacts** und **loyCustomers** hinzu. Durch Auswahl dieser Entitäten können Sie Erkenntnisse darüber gewinnen, welche der Online-Geschäftskunden Mitglieder des Treueprogramms sind.
    
    Sie können nach Schlüsselwörtern in allen Attributen und Entitäten suchen, um die erforderlichen Attribute auszuwählen, die Sie zuordnen möchten.
    
      > [!div class="mx-imgBorder"]
-   > ![Beispiel für Suchfelder.](media/data-manager-configure-map-search-fields-example.png "Beispiel für Suchfelder")
+   > ![Beispiel für Suchfelder](media/data-manager-configure-map-search-fields-example.png "Beispiel für Suchfelder")
 
 4. Wählen Sie **Anwenden**, um Ihre Auswahl zu bestätigen.
 
@@ -58,7 +55,7 @@ Nach Auswahl Ihrer Entitäten wird die Seite **Karte** die ausgewählten Entitä
 - **Semantischer Attributtyp**: Kategorien Ihrer Attribute, wie z. B. E-Mail-Adresse oder Name. Um KI-Modelle für intelligente Vorhersage der Semantik zu verwenden, Zeit zu sparen und die Genauigkeit zu verbessern, stellen Sie **Intelligentes Mapping** auf **AN**. Intelligentes Mapping hebt die KI-basierte Semantikempfehlung im **Typ**-Feld hervor. Wenn Sie es auf **AUS** stellen, sehen Sie unsere regulären Mappingempfehlungen. Sie können einen beliebigen semantischen Typ aus der Liste verfügbarer Optionen auswählen und die vorgeschlagene Auswahl außer Kraft setzen.
 
 > [!div class="mx-imgBorder"]
-> ![Attributtyp und Semantikvorhersage.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Attributtyp und Semantikvorhersage")
+> ![Attributtyp und Semantikvorhersage](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Attributtyp und Semantikvorhersage")
 
 Das Hinzufügen eines benutzerdefinierten semantischen Typs ist ebenfalls möglich. Wählen Sie das Typ-Feld für dieses Attribut und geben Sie Ihren benutzerdefinierten Namen des semantischen Typs ein. Auf diese Weise können Sie auch die Attributtypen ändern, die vom System identifiziert wurden.
 
@@ -67,7 +64,7 @@ Alle Attribute, für die ein semantischer Typ automatisch identifiziert wird, si
 Attribute, die nicht automatisch einem semantischen Typ zugeordnet werden, werden im Abschnitt **Definieren der Daten in den nicht zugeordneten Feldern** zusammengefasst. Wählen Sie das Feld für den semantischen Typ für die nicht zugeordneten Attribute aus, oder geben Sie Ihren benutzerdefinierten Attributtypnamen ein.
 
 > [!div class="mx-imgBorder"]
-> ![Primärschlüssel und Attributtyp.](media/data-manager-configure-map-add-attributes.png "Primärschlüssel und Attributtyp")
+> ![Primärschlüssel und Attributtyp](media/data-manager-configure-map-add-attributes.png "Primärschlüssel und Attributtyp")
 
 > [!NOTE]
 > Ein Feld sollte dem semantischen Typ Person.FullName zugeordnet sein, um den Kundennamen auf der Kundenkarte auszufüllen. Andernfalls erscheinen die Kundenkarten namenlos. 
@@ -79,7 +76,7 @@ Attribute, die nicht automatisch einem semantischen Typ zugeordnet werden, werde
 2. In dem Bereich **Felder bearbeiten** fügen Sie Attribute oder Entitäten hinzu oder entfernen sie diese. Verwenden Sie die Suche oder den Bildlauf, um Ihre Attribute und Objekte von Interesse zu finden und auszuwählen. Sie können ein Attribut oder eine Entität nicht entfernen, wenn sie bereits übereinstimmen.
 
    > [!div class="mx-imgBorder"]
-   > ![Hinzufügen oder Entfernen von Attributen.](media/configure-data-map-edit.png "Attribute hinzufügen oder entfernen")
+   > ![Attribute hinzufügen oder entfernen](media/configure-data-map-edit.png "Attribute hinzufügen oder entfernen")
 
 3. Wählen Sie **Übernehmen** aus.
 
@@ -97,7 +94,7 @@ Fahren Sie mit den Vereinigungsschritten fort und stellen Sie sicher, dass das A
 
 Bei Organisationen (Vorschau) sollte der Attributtyp auf „Organization.Name“ abgebildet werden
 > [!div class="mx-imgBorder"]
-> ![Primärschlüssel und Attributtyp B2B.](media/configure-data-map-edit-b2b.png "Primärschlüssel und Attributtyp B2B")
+> ![Primärschlüssel und Attributtyp B2B](media/configure-data-map-edit-b2b.png "Primärschlüssel und Attributtyp B2B")
 
 ## <a name="next-step"></a>Nächster Schritt
 

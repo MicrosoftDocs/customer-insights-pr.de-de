@@ -1,25 +1,26 @@
 ---
 title: Azure Machine Learning Experimente
 description: Verwenden Sie auf Azure Machine Learning basierende Modelle in Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 11/30/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c3bed3dca40be748140a8b339191e6a42725714
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228887"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597418"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Verwenden Sie auf Azure Machine Learning basierende Modelle
 
-Die vereinheitlichten Daten in Dynamics 365 Customer Insights sind eine Quelle für den Aufbau von Machine-Learning-Modellen, die zusätzliche Geschäftseinblicke generieren können. Customer Insights lässt sich in Azure Machine Learning integrieren, um Ihre eigenen benutzerdefinierten Modelle zu verwenden.
+Die vereinheitlichten Daten in Dynamics 365 Customer Insights sind eine Quelle für den Aufbau von Machine-Learning-Modellen, die zusätzliche Geschäftseinblicke generieren können. Customer Insights lässt sich mit Machine Learning Studio (Classic) und Azure Machine Learning integrieren, um Ihre eigenen benutzerdefinierten Modelle zu verwenden. Beispiele für Experimente, die auf Machine Learning Studio (Classic) basieren, finden Sie unter [Machine Learning Studio (Classic) Experimente](machine-learning-studio-experiments.md). 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Anforderungen
 
 - Zugriff auf Customer Insights
 - Ein aktives Azure-Enterprise-Abonnement
@@ -34,7 +35,7 @@ Die vereinheitlichten Daten in Dynamics 365 Customer Insights sind eine Quelle f
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Arbeiten Sie mit dem Azure Machine Learning Designer
 
-Der Azure Machine Learning-Designer stellt eine visuelle Canvas bereit, in die Sie Datasets und Module ziehen und ablegen können. Eine mit dem Designer erstellte Batch-Pipeline kann in Customer Insights integriert werden, wenn sie entsprechend konfiguriert ist. 
+Azure Machine Learning Designer bietet einen visuellen Canvas, in den Sie Datasets und Module ziehen können, ähnlich wie bei Machine Learning Studio (Classic). Eine mit dem Designer erstellte Batch-Pipeline kann in Customer Insights integriert werden, wenn sie entsprechend konfiguriert ist. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Arbeiten mit dem Azure Machine Learning SDK
 
@@ -51,7 +52,7 @@ Sie müssen Datasets erstellen, um Entitätsdaten aus Customer Insights für Ihr
      Öffnen Sie im Designer **Spalten in Dataset auswählen** und wählen Sie **Als Pipeline-Parameter festlegen**, wo Sie einen Namen für den Parameter angeben.
 
      > [!div class="mx-imgBorder"]
-     > ![Dataset-Parametrisierung im Designer.](media/intelligence-designer-dataset-parameters.png "Dataset-Parametrisierung im Designer")
+     > ![Dataset-Parametrisierung im Designer](media/intelligence-designer-dataset-parameters.png "Dataset-Parametrisierung im Designer")
    
 * Dataset-Parameter im SDK (Python)
    
@@ -77,7 +78,7 @@ Sie müssen Datasets erstellen, um Entitätsdaten aus Customer Insights für Ihr
 
 * Der Designer bietet das Modul [Daten exportieren](/azure/machine-learning/algorithm-module-reference/export-data), mit dem die Ausgabe einer Pipeline in den Azure-Speicher exportiert werden kann. Derzeit muss das Modul den Datenspeichertyp **Azure Blob Storage** verwenden und den **Datastore** und den relativen **Pfad** parametrisieren. Customer Insights überschreibt diese beiden Parameter während der Pipeline-Ausführung mit einem Datenspeicher und Pfad, auf den das Produkt Zugriff hat.
    > [!div class="mx-imgBorder"]
-   > ![Datenmodul-Konfiguration exportieren.](media/intelligence-designer-importdata.png "Daten exportieren Modul-Konfiguration")
+   > ![Datenmodul-Konfiguration exportieren](media/intelligence-designer-importdata.png "Daten exportieren Modul-Konfiguration")
    
 * Wenn Sie die Inferenzausgabe mit Code schreiben, können Sie die Ausgabe in den Pfad innerhalb eines *registrierten Datenspeichers* im Arbeitsbereich hochladen. Wenn der Pfad und der Datenspeicher in der Pipeline parametrisiert sind, kann Customer Insights die Inferenzausgabe lesen und importieren. Derzeit wird eine einfache tabellarische Ausgabe im csv-Format unterstützt. Der Pfad muss das Verzeichnis und den Dateinamen enthalten.
 

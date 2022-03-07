@@ -1,351 +1,446 @@
 ---
 title: Neue und kommende Funktionen
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 03/02/2022
+ms.date: 11/02/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
+ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232657"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "4650003"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Was ist neu an den Funktionalitäten der Zielgruppen-Insights von Dynamics 365 Customer Insights?
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
+Wir freuen uns, unsere neuesten Updates bekannt zu geben! In diesem Artikel werden Funktionen für die öffentliche Vorschau, Verbesserungen der allgemeinen Verfügbarkeit und Funktionsupdates zusammengefasst. Um die langfristig geplanten Funktionen zu sehen, werfen Sie einen Blick auf die [Dynamics 365 und Power Platform Freigabe-Pläne](https://docs.microsoft.com/dynamics365/release-plans/).
 
-Wir freuen uns, unsere neuesten Updates bekannt zu geben! In diesem Artikel werden Funktionen für die öffentliche Vorschau, Verbesserungen der allgemeinen Verfügbarkeit und Funktionsupdates zusammengefasst. Um die langfristig geplanten Funktionen zu sehen, werfen Sie einen Blick auf die [Dynamics 365 und Power Platform Freigabe-Pläne](/dynamics365/release-plans/).
+Sie können sich auch das folgende Video ansehen, um mehr über die geplanten Funktionalitäten zu erfahren.
+
+> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
 
 Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vor anderen sehen. Sofern nicht anders angegeben, müssen Sie keine Maßnahmen ergreifen, und wir aktualisieren die App automatisch ohne Ausfallzeiten.
 
 > [!TIP]
-> Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+> Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365  Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="november-2020-updates"></a>Aktualisierungen im November 2020
 
-## <a name="january-2022-updates"></a>Updates Januar 2022
+Die Updates im November 2020 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
 
-Die Updates im Januar 2022 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+### <a name="new-and-updated-features-in-november-2020"></a>Neue und aktualisierte Funktionen im November 2020
 
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Stimmungsanalyse Ihres Kundenfeedbacks
+#### <a name="data-enrichment"></a>Datenanreicherung
 
-Customer Insights bietet eine neue KI-gestützte Funktion, um die Kundenstimmung zu synthetisieren und bestimmte Geschäftsaspekte als Möglichkeiten für gezielte Verbesserungen zu identifizieren. Durch die Analyse des schriftlichen Feedbacks Ihrer Kunden können Sie zu geringen Kosten genaue Erkenntnisse gewinnen. Stimmungsanalyse auf Basis von NLP-Modellen (Natural Language Processing), die zwei abgeleitete Erkenntnisse für jede Kunden-ID generieren. Eine Stimmungsbewertung (von –5 bis 5) und eine Liste anwendbarer Geschäftsaspekte. 
-
-Weitere Informationen finden Sie unter [Analysieren der Stimmung im Kundenfeedback (Vorschau)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Updates für Dezember 2021
-
-Die Updates im Dezember 2021 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insights-Protokolle an Azure Monitor weiterleiten
-
-Customer Insights bietet eine direkte Integration in Azure Monitor. Diese Funktion umfasst Prüfereignisse und Betriebsereignisse. Mit Azure Monitor-Ressourcenprotokollen können Sie Protokolle überwachen und an Azure Storage bzw. Azure Log Analytics senden oder zu Azur Event Hubs streamen.
-
-Weitere Informationen finden Sie unter [Weiterleitung mit Azure Monitor in Dynamics 365 Customer Insights protokollieren (Vorschau)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Kundenprofile mit Interaktionsdaten anreichern
-
-Verwenden Sie Daten aus Microsoft Office 365, um Ihre Kundenkontoprofile mit Erkenntnissen über Interaktionserkenntnisse durch Office 365-Apps anzureichern. Die Interaktionsdaten bestehen aus E-Mail- und Besprechungsaktivitäten, die auf Kontoebene aggregiert werden. Beispielsweise die Anzahl der E-Mails von einem Geschäftskonto oder die Anzahl der Besprechungen mit dem Konto. Es werden keine Daten über einzelne Benutzer weitergegeben. Diese Anreicherung ist in den folgenden Regionen verfügbar: Vereinigtes Königreich, Europa, Nordamerika.
-
-Weitere Informationen finden Sie unter [Kundenprofile mit Kundenbindungsdaten anreichern (Vorschau)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Erweiterte Funktionen zur Datenvereinheitlichung
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Konfliktlösungsrichtlinien auf der Ebene der einzelnen Attribute aktivieren
-
-Wenn Sie Kundendatensätze innerhalb einer Entität deduplizieren, möchten Sie möglicherweise nicht einen vollständigen Datensatz als Gewinner auswählen. Wir ermöglichen Ihnen jetzt, die besten Felder aus verschiedenen Datensätzen basierend auf Regeln für jedes Attribut zusammenzuführen. Sie können beispielsweise wählen, ob Sie die neueste E-Mail UND die vollständigste Adresse aus verschiedenen Datensätzen behalten möchten. 
-
-Sie können jetzt separate Zusammenführungsregeln für einzelne Attribute definieren, während Sie Datensätze innerhalb einer einzelnen Entität deduplizieren und zusammenführen. Bisher konnten Sie nur eine einzige Zusammenführungsregel auswählen (Aufbewahrung von Datensätzen basierend auf der Vollständigkeit der Aktualitätsdaten), und diese Regel wurde auf Datensatzebene auf alle Attribute angewendet. Das ist nicht ideal, wenn sich einige der Daten, die Sie behalten möchten, in Datensatz A und andere gute Daten in Datensatz B befinden.
-
-Weitere Informationen finden Sie unter [Definieren der Deduplizierung auf einer übereinstimmenden Entität](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Benutzerdefinierte Regeln für den Abgleich
-
-Es gibt Zeiten, in denen Sie eine Ausnahme von allgemeinen Regeln angeben müssen, um Datensätze NICHT abzugleichen. Dies kann passieren, wenn mehrere Personen genügend Informationen teilen, sodass das System sie als eine einzelne Person abgleichen würde. Zum Beispiel Zwillinge mit demselben Nachnamen, die in derselben Stadt leben und das gleiche Geburtsdatum haben.
-
-Ausnahmen stellen sicher, dass eine fehlerhafte Datenvereinheitlichung in den Vereinheitlichungsregeln behandelt werden kann. Sie können einer Regel mehrere Ausnahmen hinzufügen.
-
-Weitere Informationen finden Sie unter [Hinzufügen von Ausnahmen zu einer Regel](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Zusätzliche Konfliktlösungsrichtlinien bereitstellen und die Gruppierung von Attributen aktivieren
-
-Mit dieser Funktion können Sie eine Gruppe von Feldern als eine Einheit behandeln. Zum Beispiel, wenn unsere Datensätze die Felder Adresse1, Adresse2, Stadt, Bundesland und Postleitzahl enthalten. Wir sollten wahrscheinlich nicht die Adresse2 eines anderen Datensatzes zusammenführen, weil wir glauben, dass unsere Daten dadurch vollständiger würden.
-
-Sie können jetzt eine Gruppe verwandter Felder kombinieren und eine einzelne Zusammenführungsrichtlinie auf die Gruppe anwenden. 
-
-Weitere Informationen finden Sie unter [Eine Gruppe von Feldern kombinieren](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Aktualisierungen im November 2021
-
-Die Updates im November 2021 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Jetzt in Dataverse verfügbare Segment-Mitgliedschaft
-
-Informationen zur Segmentmitgliedschaft für Kundenprofile sind jetzt zusammen mit den Kundenprofilen und Erkenntnissen in Dataverse verfügbar. Dynamics 365-Aktions-Apps und modellgesteuerte Apps können diese Daten verwenden, um nach Segmentmitgliedschaftsdetails für einen bestimmten Kunden zu suchen.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivitäten unterstützen Details auf Kontaktebene für Geschäftskonten
-
-Sie können jetzt Aktivitäten für Kontakte auf den Aktivitätszeitskalen Ihres Geschäftskontos konfigurieren, anzeigen und filtern, um besser zu verstehen, welche Kontokontakte an bestimmten Aktivitäten teilgenommen haben.
-
-## <a name="october-2021-updates"></a>Oktober 2021 Aktualisierungen
-
-Die Updates im Oktober 2021 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
-
-### <a name="b-to-b"></a>B2B
-
-Ab Oktober 2021 können Sie in Customer Insights mit Geschäftskonten und den dazugehörigen Kontakten arbeiten. Zuvor war die App hauptsächlich auf einzelne Verbraucher zugeschnitten. Mehrere Funktionsbereiche wurden aktualisiert, um B2B-Szenarien zusätzlich zu einem neuen Umgebungstyp zu unterstützen. Eine Übersicht über unterstützte B2B-Funktionen finden Sie unter [Mit Geschäftskonten in Zielgruppenerkenntnissen arbeiten](work-with-business-accounts.md).
-
-In den folgenden Abschnitten werden einige der Schlüsselbereiche hervorgehoben, die angepasst wurden, um Geschäftskonten und Privatkunden zu unterstützen.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Segmente basierend auf Geschäftskonten exportieren
-
-Alle Segmentexporte in Zielgruppenerkenntnissen sind im Kontext von Geschäftskonten verfügbar. Die meisten Segmentexporte erfordern zusätzliche Konfigurations- und [Kontaktinformationen](segment-builder.md#create-a-new-segment), die in den zugrunde liegenden Segmenten projiziert werden, um für Geschäftskonten gültig zu sein. Weitere Informationen finden Sie unter [Segmente exportieren](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Ads-Export mit Geschäftskonten verwenden
-
-Der LinkedIn Ads-Export steht jetzt für das Kontakt- und Unternehmens-Targeting im Kontext von Geschäftskonten zur Verfügung. Wenn Sie das Unternehmens-Targeting als Hauptfokus des LinkedIn-Exports auswählen, können Sie Segmente exportieren, die auf Geschäftskonten basieren, ohne Kontaktinformationen projizieren zu müssen. Weitere Informationen finden Sie in den Dokumentationen zum [LinkedIn Ads-Export](export-linkedin-ads.md) und dem Unterschied zwischen [Kontakt-Targeting](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) und [Unternehmens-Targeting](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Kennzahlen basierend auf Geschäftskonten und deren Hierarchie erstellen
-
-Mit dem Kennzahlen-Builder können Sie Kennzahlen rund um Geschäftskonten erstellen und optional die Hierarchieinformationen verwenden. Hierarchieinformationen werden verwendet, um eine Kennzahlberechnung für ein Konto und alle zugehörigen Unterkonten zusammenzufassen. Sie können beispielsweise Kennzahlen wie den Gesamtumsatz für jede Gruppe von Geschäftskonten erstellen, die durch ihre Hierarchie identifiziert werden. Weitere Informationen finden Sie unter [Definieren und Verwalten von Kennzahlen](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmente basierend auf Geschäftskonten und deren Hierarchie erstellen
-
-Mit dem Segment-Builder können Sie Segmente von Geschäftkonten erstellen, die optional Kontaktinformationen für jedes Konto in einem Segment enthalten. Wenn Sie eine Kontenhierarchie eingerichtet haben, können Sie Informationen zur Kontenhierarchie bei der Segmenterstellung verwenden. Weitere Informationen finden Sie unter [Eine neues Segment erstellen](segment-builder.md#create-a-new-segment).
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Geschäftskonten mit tiefen Einblicken in ihre Abwanderungstendenz beibehalten
-
-Das Vorhersagemodell zur Kundenabwanderung unterstützt jetzt auch Geschäftskonten. Sie können das Abwanderungsrisiko nicht nur für ein Konto bewerten, sondern auch für eine Kombination aus einem Konto und einer Produkt- oder Servicekategorie, die sie bei Ihnen kaufen. Dieser Zusatz hilft Ihnen zu verstehen, ob es wahrscheinlicher ist, dass ein Konto bei Ihnen im Allgemeinen oder nur für eine bestimmte Kategorie von Waren oder Services nicht mehr kauft. Um Sie bei der Verwendung dieses KI-Modells weiter zu unterstützen, werden auch Gründe aufgeführt, warum ein Konto wahrscheinlich abwandert. Weitere Informationen finden Sie unter [Transaktionsabwanderungs-Vorhersage (Vorschau)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Kontakte eines Geschäftskontos in der Kundenansicht anzeigen
-
-Wenn Geschäftskonten verwandten Konten zugeordnet sind, zeigt die Customer Insights-App diese verknüpften Kontakte als Teil der Kundendetailansicht an. Weitere Informationen finden Sie unter [Kundenprofile](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>Aktualisierungen September 2021
-
-Die Updates im September 2021 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
-
-### <a name="activities"></a>Aktivitäten
-
-- **Verbesserungen der Aktivitätszeitachse** Wir haben die Filter für die Aktivitätszeitleiste auf Kundenprofilen erweitert. Darüber hinaus können Sie den neuen Filterbereich verwenden, um nach Aktivitätstyp und Datum zu filtern. Datumsangaben können nach verschiedenen Bedingungen gefiltert werden. Weitere Informationen finden Sie unter [Aktivitätszeitachsen in Kundenprofilen anzeigen](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>Beziehungen
-
-- **Unterstützung von Multi-Hop-Beziehungen** Verwenden Sie Multi-Hop Beziehungen, wenn Sie Aktivitäten konfigurieren und Beziehungen zwischen Entitäten definieren. Multi-Hop Beziehungen verwendet eine Zwischenentität, um zwei Entitäten zu verbinden. Beim Konfigurieren einer Aktivität können Sie eine Multi-Hop-Beziehung verwenden, um Ihre Aktivitätsentität mit einer Zwischenentität und dann mit einer Kundenentität zu verbinden. Sie können Multi-Hop Beziehungen mit Multi-Pfad Beziehungen kombinieren. Weitere Informationen finden Sie im Abschnitt [Multi-Hop Beziehungen](relationships.md#multi-hop-relationship).
-
-- **Unterstützung von Multi-Pfad-Beziehungen** Verwenden Sie Multi-Pfad Beziehungen, wenn Sie Aktivitäten konfigurieren und Beziehungen zwischen Entitäten definieren. Multi-Pfad Beziehungen verbindet eine Quellentität mit mehr als einer Entität. Beim Konfigurieren einer Aktivität können Sie eine Multi-Pfad-Beziehung verwenden, um Ihre Aktivitätsentität mit einer Zwischenentität und dann mit einer Kundenentität zu verbinden. Sie können Multi-Pfad Beziehungen mit Multi-Hop Beziehungen kombinieren. Weitere Informationen finden Sie im Abschnitt [Multi-Pfad Beziehungen](relationships.md#multi-path-relationship).
-
-## <a name="august-2021-updates"></a>Aktualisierungen August 2021
-
-Die Updates im Juli und August 2021 beinhalten eine neue Funktion, Leistungssteigerungen und Fehlerbehebungen.
-
-### <a name="extensibility"></a>Erweiterbarkeit
-
-- **Segmente nach Klaviyo exportieren** Wir haben unsere [Exportziele ausgeweitet, sodass sie jetzt auch Klaviyo umfassen](export-klaviyo.md). Sie können Segmente jetzt exportieren, um Kampagnen zu generieren, E-Mail-Marketing auszuführen und mit spezifischen Kundengruppen mit Klaviyo zu arbeiten. 
-
-
-## <a name="june-2021-updates"></a>Updates Juni 2021
-
-Die Updates im Juni 2021 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
-
-### <a name="data-ingestion"></a>Dateneinbindung
-
-- **Verbesserte Aktualisierungen des Datenvereinheitlichungsfortschritts** Sie sehen jetzt detailliertere, verbesserte dynamische Statusaktualisierungen in den Schritten zum [Datenvereinheitlichungsprozess](data-unification.md). Mit dieser Funktion können Sie den detaillierten Fortschritt verfolgen, um den Prozessflow zu verstehen und Maßnahmen zu ergreifen, wenn ein Schritt Ihre Aufmerksamkeit erfordert.
-
-### <a name="extensibility"></a>Erweiterbarkeit
-
-- **Exportieren von Segmenten und anderen Daten in die Salesforce Marketing Cloud** Wir haben unsere Exportziele ausgeweitet, sodass sie jetzt die [Salesforce Marketing Cloud](export-salesforce.md) miteinschließen. Sie können jetzt Segmente und andere Datentypen über einen Marken-SFTP-Export in die Salesforce Marketing Cloud exportieren. Der Datenimport kann in Salesforce vollständig automatisiert und zur Erstellung effektiverer Marketingkampagnen verwendet werden.  
- 
-- **Segmente nach ActiveCampaign exportieren** Wir haben unsere Exportziele ausgeweitet, sodass sie jetzt auch [Aktive Kampagne](export-active-campaign.md) umfassen. Sie können Segmente jetzt exportieren, um Kampagnen zu generieren, E-Mail-Marketing auszuführen und mit spezifischen Kundengruppen in ActiveCampaign arbeiten.
- 
-- **Segmente nach Sendinblue exportieren** Wir haben unsere Exportziele ausgeweitet, sodass sie jetzt auch [Sendinblue](export-sendinblue.md) umfassen. Sie können Segmente jetzt exportieren, um Kampagnen zu generieren, E-Mail-Marketing auszuführen und mit spezifischen Kundengruppen mit Sendinblue arbeiten.
- 
-### <a name="ux-updates"></a>UX-Updates 
-
-- **Neue und verbesserte Kundenseite und Profildetailseite** Wir haben die Kundenseite und die Profildetailseiten zur Verbesserung der Benutzererfahrung und Leistung neu gestaltet. Mit diesen Änderungen können Sie Kunden anzeigen, sortieren, suchen und filtern. Filter werden jetzt in der URL dargestellt, um die Suchergebnisse nahtlos mit anderen Benutzern zu teilen. Suchergebnisse können auch als Segment gespeichert werden.    
-  Die Detailseite für Kundenprofile gruppiert Daten jetzt in verschiedene Unterabschnitte wie demografische Daten, IDs und andere Profilattribute, um die Lesbarkeit zu verbessern. Andere Abschnitte auf der Profildetailseite sind jetzt interaktiver. Zum Beispiel ermöglicht der Abschnitt „Aktivitäten“ jetzt das Filtern und Sortieren.
-
-
-## <a name="may-2021-updates"></a>Update Mai 2021
-
-Die Updates im Mai 2021 umfassen verschiedene Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
-
-### <a name="data-ingestion"></a>Dateneinbindung
-
-- **Anzeigen oder Ändern von Metadaten oder Entitätsdefinitionen beim Anhängen von Daten aus Ihrem Azure Data Lake Storage** – Sie können jetzt Metadaten oder Entitätsdefinitionen in Zielgruppenerkenntnissen anzeigen und bearbeiten, wenn Sie Daten aus einem Common Data Model-Ordner in Ihrem Azure Data Lake Storage anhängen. Diese Funktion bietet Echtzeit-Feedback, Modellprüfung und Fehlerüberprüfung. Sie können sowohl model.json als auch manifest.json nahtlos bearbeiten.
-
-### <a name="extensibility"></a>Erweiterbarkeit
-
-- **Verbesserte Segmentexporte, benutzerdefinierter Zeitplan und Duplizierung** – Sie können jetzt [alle Exporte für ein bestimmtes Segment](export-destinations.md#view-exports-and-export-details) in einer Liste anzeigen. Diese neue Ansicht hilft dabei, die Verwendung eines bestimmten Segments zu verwalten und bestehende Exporte anzupassen oder neue Exporte zu erstellen.    
-  Sie können [benutzerdefinierte Aktualisierungszeitpläne](export-destinations.md#schedule-and-run-exports) für einzelne Exporte oder mehrere Exporte gleichzeitig definieren. Bisher wurden alle Exporte bei jeder Systemaktualisierung ausgeführt.    
-  Anstatt einen neuen Export von Grund auf neu zu erstellen, können Sie auf der Grundlage eines bestehenden Exports damit beginnen, um Zeit zu sparen.
-
-- **Exportieren von Segmenten nach Microsoft Advertising** – Wir haben unsere Exportziele um Microsoft Advertising erweitert. Erstellen Sie Zielgruppen in Microsoft Advertising mit den Daten Ihres vereinheitlichten Kundenprofils und verwenden Sie diese Zielgruppen für Ihre Advertising-Kampagnen. Weitere Informationen finden Sie unter [Exportieren von Segmenten nach Microsoft Advertising](export-microsoft-advertising.md).
-
-- **Exportieren von Segmenten nach LinkedIn Ads** – Wir haben unsere Exportziele um LinkedIn Ads erweitert und ermöglichen Ihnen dadurch die Nutzung von Contact Targeting sowie Company Targeting über LinkedIn, indem Sie Ihre vereinheitlichten Kundenprofildaten exportieren. Weitere Informationen finden Sie unter [Exportieren von Segmenten nach LinkedIn Ads](export-linkedin-ads.md).
-
-
-- **Exportieren von Segmenten nach Omnisend** – Wir haben unsere Exportziele um Omnisend erweitert. Verwenden Sie die in Zielgruppenerkenntnissen erstellten Segmente, um Kampagnen zu generieren, E-Mail-Marketing bereitzustellen und spezifische Kundengruppen mit Omnisend zu nutzen. Weitere Informationen finden Sie unter [Exportieren von Segmenten nach Omnisend](export-omnisend.md).
-
-### <a name="predictions"></a>Vorhersagen
-
-- **Eingabedaten-Nutzungsbericht** – Der Eingabedaten-Nutzungsbericht bietet eine konsolidierte Ansicht der Fehler und Warnungen, die Ihre sofort einsatzbereiten Vorhersagen generieren. Er gibt auch Empfehlungen zur Verbesserung der Modellleistung.    
-  Der Bericht ist verfügbar, nachdem ein Modell seinen Trainingsprozess abgeschlossen hat. Er wird für jedes Modell separat erstellt, unabhängig davon, ob es erfolgreich abgeschlossen wurde oder nicht.
-  Derzeit ist diese Funktion nur für das Abwanderungsmodell für Transaktionen verfügbar. Weitere Informationen finden Sie unter [Eingabedaten-Nutzungsbericht](manage-predictions.md#input-data-usability-report).
-
-### <a name="relationships"></a>Beziehungen
-
-- **Beziehungsvisualisierer** – Die Beziehungsvisualisierungsansicht ermöglicht es Ihnen, alle vorhandenen Beziehungen zwischen Entitäten und ihrer Kardinalität anzuzeigen. Beziehungen sind jetzt in Gruppen organisiert: vom Benutzer erstellte, System- und geerbte Beziehungen. Sie können eine Ansicht auch als Bild exportieren. Weitere Informationen finden Sie unter [Anzeigen von Beziehungen](relationships.md#view-relationships). 
-
-## <a name="april-2021-updates"></a>Update April 2021
-
-Die Updates im April 2021 umfassen verschiedene Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
-
-### <a name="data-unification"></a>Datenvereinigung
- 
-- **Verbesserte Zusammenführungserfahrung für die Datenvereinigung**    
+- **Nutzen Sie Ihre eigenen Anreicherungsdaten über das Secure File Transfer Protocol (SFTP) für den benutzerdefinierten Import**
   
-   Wir haben jetzt eine verbesserte Benutzererfahrung bei der Zusammenführungskonfiguration des Datenvereinigungsprozesses. Die Änderungen umfassen die intuitive Reihenfolge der zusammengeführten Felder und detaillierte Statistiken zu kombinierten und Singleton-Feldern.
+  Mit SFTP Custom Import können Sie Anreicherungsdaten importieren, die nicht den Prozess der Datenvereinheitlichung durchlaufen müssen. Erfahren Sie mehr über den benutzerdefinierten SFTP-Import.
 
-- **Entität ordnet alle Quelldatensätze neu an und konfiguriert sie in der Kundenentität**  
-      
-   Sie können jetzt Entitäten im Datenvereinigungsprozess neu anordnen und aus einem vorhandenen Zusammenführungsplan entfernen. Es bietet Flexibilität, um die Entitäten im Anpassungs-Prozess entsprechend den Geschäftsanforderungen neu zu ordnen. Zusätzlich aktivieren wir die Einbeziehung aller nicht übereinstimmenden Datensätze in die endgültige *Kundenentität*, mit der sie ihre Kundenprofil DataSet-Definition bestimmen können.
-
-### <a name="enrichments"></a>Anreicherungen
-
- - **Neue Bereicherung: Erweiterte Adressen**    
-  
-   Wir freuen uns, eine neue Anreicherung einzuführen, um Adressen in Ihren Kundendaten zu verbessern. Adressen in Ihren Daten können unstrukturiert, unvollständig oder falsch sein. Diese Funktion verwendet die Modelle von Microsoft, um Ihre Adressen zu normalisieren und im Common Data Model-Format anzureichern, um eine bessere Genauigkeit und bessere Einblicke zu erzielen.
+  Weitere Informationen finden Sie unter [Kundenprofile mit eigenen Daten anreichern (Vorschau)](enrichment-SFTP-custom-import.md).
  
-   Weitere Informationen finden Sie unter [Anreicherung von Kundenprofilen mit erweiterten Adressen](enrichment-enhanced-addresses.md).
+- **Anreichern Sie Ihre Kundendaten mit Standortdaten von HERE Technologies**
 
-- **Geführte Konfigurationserfahrung für Anreicherungen**    
-  
-   Wir haben die Konfigurationserfahrung für Anreicherungen mit einer einfachen, geführten Erfahrung überarbeitet. Sie haben jetzt einen klaren schrittweisen Prozess zum Erstellen und Bearbeiten von Anreicherungen.
- 
-   Darüber hinaus haben wir die Konfiguration von Verbindungen für Anreicherungen von Drittanbietern getrennt, damit dieselbe Verbindung von mehreren Anreicherungen verwendet werden kann. Nur Administratoren können neue Verbindungen konfigurieren, aber die erstellten Verbindungen stehen sowohl Administratoren als auch Mitwirkenden immer zur Verfügung.    
+  Mit den Datenanreicherungsdiensten von HERE Technologies können Sie durch Adressnormalisierung, Extraktion von Breiten- und Längengraden und mehr ein genaueres Standortverständnis Ihrer Kunden aufbauen. Erfahren Sie mehr über die Anreicherung mit HERE Technologies.
 
-   Weitere Informationen finden Sie unter [Verbindungs-Überblick](connections.md).
-
-- **Mehrfachanreicherungen des gleichen Typs**    
-  
-   Wir ermöglichen Benutzern jetzt, mehrere Anreicherungen desselben Anreicherungstyps zu erstellen und zu verwalten. Beispielsweise können Sie jetzt zwei separate Adressanreicherungen erstellen, um zwei verschiedene Kundensegmente anzureichern. Es gelten Beschränkungen für die Anzahl der Anreicherungen desselben Typs, die je nach Anreicherungstyp variieren können.
-  
-   Weitere Informationen finden Sie unter [Anreicherung für Kundenprofile](enrichment-hub.md).
-
-## <a name="march-2021-updates"></a>Updates März 2021
-
-Die Updates im März 2021 umfassen verschiedene Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
-
-### <a name="activities"></a>Aktivitäten
-
-- **Aktivitätsassistent und semantische Typen**
-
-   Wir haben unsere Erfahrung mit Aktivitätszuordnungen verbessert und aktualisiert, um die Erstellung von Aktivitätszuordnungen zu steuern und zu vereinfachen. In dieser neuen Umgebung erhalten Benutzer eine geführte Erfahrung, um die einzelnen Schritte des Prozesses abzuschließen. Im Aktivitätszuordnungsschritt kann der Benutzer zusätzlich zur Auswahl aus vielen Aktivitätstypen festlegen, dass Daten semantisch für *Abonnement* und/oder *SalesOrderLine* nach Industriestandardschemata zugeordnet werden sollen, die für den nachgeschalteten Verbrauch verwendet werden können.   
-
-   Weitere Informationen finden Sie unter [Kundenaktivitäten](activities.md).
-
-### <a name="data-ingestion"></a>Dateneinbindung
-
-- **Stellen Sie mit Power Platform-Dataflows und Gateways eine Verbindung zu lokalen Datenquellen her** – Wir freuen uns, die Vorschau von Power Platform-Dataflows und lokalen Verbindungen mit Gateways in Customer Insights mit einer zugeordneten Power Platform- oder Dataverse-Umgebung bekannt zu geben. Alle neuen Datenquellen, die in einer Customer Insights-Umgebung mit einem Dataverse-Umgebungslink erstellt wurden, werden standardmäßig auf Power Platform-Dataflows umgestellt, um lokale Datenkonnektivität und eine Vielzahl von Connectors und Transformationsfunktionen bereitzustellen.
-
-### <a name="extensibility"></a>Erweiterbarkeit
-
-- **Exporte in Verbindungen und Exporten organisiert** – Wir haben den Namen der **Ziele exportieren**-Seite in **Verbindungen** geändert und eine separate Seite für **Exporte** hinzugefügt. Im Rahmen dieses Updates werden vorhandene Exporte in Paare einer Verbindung und einen Export über diese Verbindung umgewandelt. Administratoren haben jetzt mehr Klarheit über ausgehende Daten auf der **Verbindungen**-Seite. Alle Benutzerrollen haben Zugriff auf die **Exporte**-Seite, aber nur Administratoren können festlegen, dass Mitwirkende bestimmte Exporte mit gemeinsam genutzten Verbindungen bearbeiten können.     
-  Weitere Informationen finden Sie unter [Verbindungsübersicht](connections.md) und [Exportübersicht](export-destinations.md).
-
-- **Exportieren Sie Segmente in Campaign Monitor** – Wir haben unsere Exportziele um Campaign Monitor erweitert. Sie können jetzt Segmente aus Customer Insights in Campaign Monitor-Listen exportieren und als Basis für Ihre Marketingkampagnen verwenden.    
-   Weitere Informationen finden Sie unter [Exportieren nach Campaign Monitor](export-campaign-monitor.md).
-
-- **Exportieren Sie Segmente in Constant Contact** – Wir haben unsere Exportziele um Constant Contact erweitert. Sie können jetzt Segmente aus Customer Insights in Constant Contact-Listen exportieren und als Basis für Ihre Marketingkampagnen verwenden.   
-   Weitere Informationen finden Sie unter [Exportieren nach Constant Contact](export-constant-contact.md).
-
-- **Exportieren Sie Segmente in RollWorks** – Wir haben unsere Exportziele um RollWorks erweitert. Sie können jetzt Segmente aus Customer Insights zu RollWorks-Zielgruppen exportieren und sie als Grundlage für Ihre B2B-Werbung verwenden.    
-   Weitere Informationen finden Sie unter [Exportieren nach RollWorks](export-rollworks.md).
-
-- **Exportieren Sie Segmente in Snapchat** – Wir haben unsere Exportziele um Snapchat erweitert. Sie können jetzt Segmente aus Customer Insights in Snapchat-Zielgruppen exportieren und als Basis für Ihre Kampagnen verwenden.     
-   Weitere Informationen finden Sie unter [Exportieren nach Snapchat](export-snapchat.md).
-
-### <a name="predictions"></a>Vorhersagen
-
-- **Verwenden Sie Produktfilter in prädiktiven Produktempfehlungen** – Wir haben die Möglichkeit hinzugefügt, Produktfilter in unserem Produktempfehlungsmodell zu verwenden. Sie können jetzt ein Vorhersage erstellen, die nur eine Teilmenge Ihrer Produkte verwendet.    
-   Weitere Informationen finden Sie unter [Produktfilter konfigurieren](predict-product-recommendation.md#configure-product-filters).
-
-- **Erstellen Sie Segmente aus Modellvorhersagen** – Wir haben eine schnelle Möglichkeit zum Erstellen von Segmenten mit den Ergebnissen eines Vorhersage-Modells hinzugefügt. Auf der Modellergebnisseite können Sie ganz einfach ein neues Segment erstellen, indem Sie die neue **Segment erstellen**-Option auswählen.    
-  Weitere Informationen finden Sie unter [Erstellen Sie ein Segment basierend auf einem Vorhersage-Modell](prediction-based-segment.md).
-
-- **Erläuterungen zu Produktempfehlungen** – Wir haben Informationen hinzugefügt, in denen die Schlüsselfaktoren erläutert werden, die das KI-Modell zur Generierung von Produktempfehlungen gelernt hat, und inwieweit diese Faktoren zu den Produktempfehlungen beitragen. Diese Informationen werden dem Modellergebnisbildschirm hinzugefügt.    
-   Weitere Informationen finden Sie unter [Überprüfen eines Vorhersagestatus und der Ergebnisse](predict-product-recommendation.md#review-a-prediction-status-and-results).
-
-## <a name="february-2021-updates"></a>Updates Februar 2021
-
-Die Updates im Februar 2021 enthalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
-
-#### <a name="extensibility"></a>Erweiterbarkeit
-
-- **Segmente nach AdRoll exportieren**
-
-  Wir haben unsere Exportziele um AdRoll erweitert. Sie können jetzt Segmente aus Customer Insights in AdRoll-Zielgruppen exportieren und als Basis für Ihre Werbung verwenden. Für weitere Informationen, siehe [Konnektor für AdRoll](export-adroll.md).
-
-#### <a name="segments"></a>Segmente
- 
-- **Ein Segment duplizieren**
-  
-  Um ein neues Segment basierend auf einem vorhandenen zu erstellen, können Sie jetzt ein Segment duplizieren und das duplizierte Segment bearbeiten, um es weiter zu verfeinern. 
-
-- **Fügen Sie einem Segment zusätzliche Attribute hinzu**
-
-  Sie können jetzt Attribute in Ihre Segmentausgabe aufnehmen, auch wenn diese Attribute nicht Teil des Kundenprofils sind. Fügen Sie beispielsweise Abonnement-IDs in ein Segment ein, obwohl es Teil der Abonnemententität ist, die eine M: 1-Beziehung zur Kundenentität hat. Solange das Attribut zu einer Entität gehört, die sich auf die Kundenentität bezieht, können Sie diese Attribute jetzt einschließen.  
-
-#### <a name="predictions"></a>Vorhersagen
-
-- **Produktempfehlungsvorhersagen erstellen**
-
-  Zu verstehen, was Kunden am Kauf interessiert sind, ist einer der ersten Schritte, die erforderlich sind, um den Geschäftsumsatz zu verbessern und die Kundenbindung durch Personalisierung und Engagement zu stärken. Das Bereitstellen von Empfehlungen für Produkte, die nicht auf die Interessen Ihres Kunden abgestimmt sind, kann zu einem Gefühl der Trennung zwischen dem Kunden und Ihrem Unternehmen führen und letztendlich das potenzielle Umsatz- und Erfahrungspotential für einen Kunden insgesamt begrenzen. 
-
-  Mithilfe Ihrer eigenen Daten können Sie jetzt Vorhersagen darüber erstellen, welche Produkte Ihre Kunden voraussichtlich in Zukunft kaufen werden. Weitere Informationen finden Sie unter [Produktempfehlungsvorhersage](predict-product-recommendation.md).
-
-#### <a name="system-administration"></a>Systemverwaltung
-
-- **Die Kopierumgebung unterstützt mehr Arten von Datenquellen**
-
-  Administratoren können Umgebungskonfigurationen in eine neue Umgebung in derselben Organisation kopieren. Diese Funktion erweitert die Funktionalität „Umgebung kopieren“ auf Fälle, in denen Datenquellen basierend auf einem von Microsoft Dataverse verwalteten Data Lake oder einem Common Data Model-Ordner verwendet werden.
-
-## <a name="january-2021-updates"></a>Updates Januar 2021
-
-Die Updates im Januar 2021 enthalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
-
-#### <a name="extensibility"></a>Erweiterbarkeit
-
-- **Erweiterte Funktionalität und verbesserte Leistung für den SFTP-Export** Sie können jetzt alle Ausgabeentitäten aus Customer Insights auf einen SFTP-Host exportieren. Bisher war der Export auf Segmenteinheiten beschränkt. Darüber hinaus ermöglicht die Leistung des SFTP-Exports je nach Leistung Ihres SFTP-Hosts mehr Datenvolumen in kürzerer Zeit.    
-  Weitere Informationen finden Sie unter [Konnektor für SFTP (Vorschau)](export-sftp.md).  
-
-#### <a name="segments"></a>Segmente
-
-- **Maschinelles Lernen unterstützte vorgeschlagene Segmente, um die Metriken zu verbessern** Es gibt eine neue Möglichkeit, Segmente zu entdecken und zu erstellen. Das System verwendet ein KI-Modell, um Segmente vorzuschlagen, die dazu beitragen können, einen KPI (Kennzahl) zu verbessern, den Sie bereits verfolgen. Wir zeigen das Ausmaß des Einflusses von Attributen, die Sie auf eine Kennzahl oder ein anderes primäres Attribut auswählen. Diese Informationen helfen bei der Suche nach potenziellen Segmenten, die Chancen bieten.    
-  Weitere Informationen finden Sie unter [Vorgeschlagene Segmente (Vorschau)](suggested-segments.md).
+  Weitere Informationen finden Sie unter [Anreicherung von Kundenprofilen mit HERE Technologies](enrichment-here.md).
 
 #### <a name="data-unification"></a>Datenvereinigung
 
-- **Verbessertes Übereinstimmungserlebnis** Im Bereich der Datenvereinigung wurde die Übereinstimmungserfahrung aktualisiert. Hier können Sie die Übereinstimmungsregeln konfigurieren und anzeigen, einschließlich detaillierter Statistiken, um die Funktionsweise der Übereinstimmung weiter zu erläutern. Es gibt Optionen zum Deaktivieren einer Übereinstimmungsregel, sodass diese nicht mehr aktiv ist, während die Konfiguration beibehalten wird, Übereinstimmungsregeln per Drag & Drop verschoben werden und vieles mehr.
-  Weitere Informationen finden Sie unter [Entitäten abgleichen](match-entities.md).
+- **Flexibilität zur Aktivierung der Datenprofilierung für ausgewählte Entitäten und Felder aus Ihrem Speicherkonto**
 
-- **Die Deduplizierungsausgabe des Übereinstimmungsprozesses ist als Entität verfügbar** Die vom Übereinstimmungsprozess ausgegebenen Deduplizierungsprozesse werden jetzt zur weiteren Analyse in eine separate Entität geschrieben. Diese Entität besteht aus den Feldern, die im Deduplizierungsprozess verwendet werden, und dem Gewinnerdatensatz sowie den entsprechenden alternativen Datensätzen, die mit dem Gewinnerdatensatz zusammengeführt werden.
-  Weitere Informationen finden Sie unter [Deduplizierungsausgabe als Entität](match-entities.md#deduplication-output-as-an-entity).
+  Sie können angeben, welche Entitäten und Felder aus einem Common Data Model-Ordner in Ihrem Azure Data Lake-Speicherkonto Sie als Teil der Datenerfassung für die Datenprofilierung aktivieren möchten.
 
-#### <a name="system-administration"></a>Systemverwaltung
+  Weitere Informationen finden Sie unter [Verbinden Sie mit einem Common Data Model-Ordner](connect-common-data-model.md#connect-to-a-common-data-model-folder).
 
-- **Daten nahtlos in Microsoft Dataverse teilen** Sie können jetzt die Ausgabe von Customer Insights in Microsoft Dataverse-Anwendungen mit dem Microsoft Dataverse Managed Data Lake teilen. Sobald Sie eine Dataverse-Umgebung zu Customer Insights zuordnen, erhalten Sie die Option, die Datenfreigabe zu aktivieren.
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Aktivieren Sie Ihre Segmente über Google Ads**
+
+  Exportieren Sie Segmente aus in Google Ads-Zielgruppenlisten und verwenden Sie diese Listen für Werbung bei Google Search, Google Display Network, YouTube und Gmail. Erfahren Sie mehr über die Aktivierung Ihrer Segmente durch Google Ads.
+
+  Für weitere Informationen, siehe [Konnektor für Google Ads](export-google-ads.md).
+
+- **Aktivieren Sie Ihre Segmente über Marketo**
+
+  Exportieren Sie Segmente zu Marketo-Zielgruppen und verwenden Sie diese Zielgruppen für die Marketingautomatisierung. Erfahren Sie mehr über die Aktivierung Ihrer Segmente durch Marketo. 
+
+  Für weitere Informationen, siehe [Konnektor für Marketo](export-marketo.md).
+
+- **Aktivieren Sie Ihre Segmente über DotDigital**
+
+  Exportieren Sie Segmente zu DotDigital und nutzen Sie diese für Marketingzwecke. Erfahren Sie mehr über das Aktivieren Ihrer Segmente durch DotDigital. 
+
+  Weitere Informationen finden Sie unter [Konnektor für DotDigital](export-dotdigital.md).
+
+#### <a name="predictions"></a>Vorhersagen
+
+- **Transaktionsbedingte Abwanderung vorhersagen**
+
+  Mit der Funktion zur Vorhersage der Transaktionsabwanderung können Sie ohne die Hilfe eines Datenwissenschaftlers vorhersagen, wie wahrscheinlich es ist, dass ein Kunde den Kauf von Produkten oder Dienstleistungen abbricht.  Mit Hilfe des Prediction Score können Sie andere Informationen über Ihre Kunden, wie z. B. den Kundenwert, kombinieren, um Segmente mit hohem Abwanderungsrisiko oder Kunden mit hohem Wert zu erstellen. Verwenden Sie dieses Segment, um Kunden durch Marketingaktivitäten, Kundensupport und andere Szenarien direkt anzusprechen, um das Abwanderungsrisiko zu reduzieren.
+ 
+  Konfigurieren Sie die Definition von Abwanderung als ein für Ihr Unternehmen spezifisches Zeitfenster und definieren Sie, wann Kunden als abgewandert gelten. Ein Lebensmittelgeschäft könnte einen Kunden als abgewandert betrachten, wenn er in den letzten 30 Tagen nichts gekauft hat.
+ 
+  Wenn Sie mit dem Erstellen der Vorhersage fortfahren, geben wir Ihnen eine Anleitung, welche Daten benötigt werden, und ermöglichen Ihnen die Zuordnung von Daten über Ihr Unternehmen zu Feldern, die für die Vorhersage der Abwanderung Ihrer Kunden erforderlich sind. Sie können auch einen Zeitplan festlegen, um das Modell basierend auf neuen Informationen in Ihrem System neu zu trainieren, um sich an veränderte Geschäftsumstände anzupassen.
+ 
+  Weitere Informationen finden Sie unter [Transaktionale Abwanderungsvorhersage (Vorschau)](predict-transactional-churn.md).
+
+#### <a name="system-administration"></a>Systemadministrator
+
+- **Umgebung zurücksetzen**
+
+  Setzt alles in einer Umgebung einer ausgewählten Instanz zurück, um neu zu beginnen.
+
+  Weitere Informationen finden Sie unter [Zurücksetzen einer bestehenden Umgebung](manage-environments.md#reset-an-existing-environment).
+
+
+- **Verbinden Sie sich mit Ihrem Azure Data Lake-Speicherkonto über einen Service Principal**
+
+  Schreiben Sie Datenausgaben in Ihr Speicherkonto und lesen Sie Daten daraus, indem Sie ein Azure Service Prinzipal verwenden. Bestehende Speicherkonto-Verbindungen können weiterhin den Kontoschlüssel verwenden. Sie bieten auch eine Upgrade-Option, um das Service Prinzipal weiter zu verwenden. Neue Verbindungen basieren auf der Authentifizierungsmethode des Service-Prinzipals für Ihr Speicherkonto.
+
+  Weitere Informationen finden Sie unter [Verbinden Sie mit einem Azure Data Lake Storage Gen2-Konto mit einem Azure-Service-Principal für Zielgruppen-Insights](connect-service-principal.md).
+
+## <a name="october-2020-updates"></a>Oktober 2020 Aktualisierungen
+
+Die Updates im Oktober 2020 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
+
+### <a name="new-and-updated-features-in-october-2020"></a>Neue und aktualisierte Funktionen im Oktober 2020
+
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Exportieren Sie zu Mailchimp**
+
+Exportieren Sie Segmente zu bestehenden Zielgruppenlisten in Mailchimp, um Ihren Kunden ein personalisiertes E-Mail-Erlebnis zu bieten.
+
+Für weitere Informationen, siehe [Konnektor für Mailchimp](export-mailchimp.md).
+
+#### <a name="data-enrichment"></a>Datenanreicherung
+
+- **Deduplizieren Sie die Quelldatensätze in einer Entität Match**
+
+Geben Sie Deduplizierungsregeln für Entitäten an, die im Abgleichsprozess verwendet werden, um doppelte Datensätze zu identifizieren. Führen Sie diese in einem Datensatz zusammen und verknüpfen Sie alle Quelldatensätze mit diesem zusammengeführten Datensatz. Dieser deduplizierte Datensatz wird dann im Cross-Entity-Matching-Prozess verwendet.
+
+Weitere Informationen finden Sie unter [Definieren der Deduplizierung auf einer übereinstimmenden Entität](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="system-administration"></a>Systemadministrator
+
+- **Orchestration: Neue Aktualisierungsoption in Merge**
+
+Bis heute wurden beim Ausführen des Zusammenführungsprozesses alle nachgelagerten Prozesse ausgeführt, die von der Zusammenführung und nachfolgenden Prozessen abhängen. Sie können jetzt die Ausgabe des Merge-Prozesses (die vereinheitlichte Entität „Kunde“) überprüfen, bevor Sie sie in nachgelagerten Verarbeitungen wie Segmenten oder Kennzahlen verwenden.
+Auf der Seite „Zusammenführen“ können Sie nun auswählen, dass nur der Schritt „Zusammenführen“ ausgeführt werden soll und nur dieser Prozess ausgeführt wird. Um auch alle nachgelagerten Prozesse zu aktualisieren, können Sie Zusammenführen und nachgelagerte Prozesse ausführen wählen. 
+
+## <a name="september-2020-updates"></a>Aktualisierungen September 2020
+
+Die Updates im September 2020 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
+
+### <a name="new-and-updated-features-in-september-2020"></a>Neue und aktualisierte Funktionen im September 2020
+
+#### <a name="activities"></a>Aktivitäten
+
+- **Intelligente Vorhersage der Attributsemantik**
+
+Diese neue Funktion sagt die semantischen Typen von Eingabeattributen vorher, die an den Datenvereinigungsprozess weitergegeben werden. Es werden Modelle des maschinellen Lernens verwendet, die die Genauigkeit verbessern und Zeit sparen.
+
+#### <a name="enrichments"></a>Anreicherungen
+
+- **Demografische Anreicherung durch Experian**
+
+Die demografische Anreicherung durch Experian ist jetzt in der Vorschau verfügbar. Experian ist ein weltweit führender Anbieter von Kredit- und Marketingdienstleistungen für Verbraucher- und Geschäftskredite. Mit [den Datenanreicherungsdiensten von Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage) können Sie ein tieferes Verständnis Ihrer Kunden aufbauen, indem Sie Ihre Kundenprofile mit demografischen Daten wie Haushaltsgröße, Einkommen und mehr anreichern.
+
+Um diese Funktion nutzen zu können, müssen Sie über ein aktives Experian-Abonnement verfügen.
+
+Weitere Informationen finden Sie unter [Anreichern der Kundenprofile mit demografischen Daten von Experian](enrichment-experian.md)
+
+
+#### <a name="system-administration"></a>Systemadministrator
+
+- **Aufgabendetailsbereich**
+
+Im Bereich Aufgabendetails können Sie Details zu den vom System ausgeführten Aufgaben anzeigen. Dies ist eine praktische Möglichkeit, Probleme mit der Konfiguration zu identifizieren und Lösungen zu finden.
+Überprüfen Sie die Fehlermeldungen, um festzustellen, wie Sie potenzielle Probleme beheben.
+ 
+- **Verarbeitungsinformationen wurden zusätzlichen Seiten hinzugefügt**
+
+Diese Verbesserung fügt Informationen zum Status Ihrer Entitäten auf den Seiten **Entitäten** und **Kunden** hinzu.
+ 
+Darüber hinaus finden Sie auf beiden Seiten Details zum Fortschritt der Prozesse sowie Details zu den Aufgaben.
+
+- **Verbesserungen an der Systemstatusseite**
+
+Wir haben die Struktur der Statusdetailtabelle auf **System** > **Status** bei der Überprüfung von Datenexporten verbessert.
+ 
+Außerdem sind Fehler in der **Details**-Spalte jetzt detaillierter und nachvollziehbarer. 
+ 
+- **Abbrechen setzt den Auftrag auf den vorherigen Status zurück**
+
+Wenn Sie eine Aufgabe beispielsweise während des Abgleichprozesses abbrechen, wird sie auf ihren letzten Status zurückgesetzt. Wenn der Abgleichvorgang beispielsweise gestern abgeschlossen wurde und Sie ihn heute abbrechen, wird der erfolgreiche Status von gestern wiederhergestellt.
+
+
+## <a name="august-2020-updates"></a>Aktualisierungen August 2020
+
+Die Updates im August 2020 beinhalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
+
+### <a name="new-and-updated-features-in-august-2020"></a>Neue und aktualisierte Funktionen im August 2020
+
+#### <a name="data-unification"></a>Datenvereinigung
+
+- **Verbesserte Erfahrung für die Kartenphase während der Datenvereinigung**
+
+  Durch die Erfahrung mit der Kartenphase im Datenvereinigungsprozess können Sie Entitäten und Attribute auswählen und die Semantik nahtloser definieren.
+
+  Die Änderungen umfassen:
+  
+  - Es sind weniger Interaktionen erforderlich, um Entitäten und Felder hinzuzufügen
+  - Verbesserte Suchfunktionen auf der Kartenseite
+  - Visuelle und einfache Identifizierung des vorgeschlagenen Feldtyps
+
+#### <a name="enrichment"></a>Anreicherung
+
+- **Anreicherung der Interessenaffinitäten in weiteren Märkten verfügbar**
+
+  Wir erweitern die Verfügbarkeit der Anreicherung von Interessenaffinitäten über die USA hinaus auf fünf weitere Märkte: Kanada, Australien, Vereinigtes Köngirch, Frankreich und Deutschland. Mit dieser Erweiterung können Sie Ihre Kundendaten mit zusätzlichen Interessen anreichern, die für diese Märkte gelten. Wir reichern auch Ihre Kundenprofile an, die sich in diesen Märkten befinden, indem wir lokale proprietäre Daten von Microsoft Graph verwenden.
+  Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft-graph.md).
+
+
+## <a name="july-2020-updates"></a>Updates Juli 2020
+
+Die Updates im Juli 2020 enthalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
+
+### <a name="new-and-updated-features-in-july-2020"></a>Neue und aktualisierte Funktionen vom Juli 2020
+
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Power Automate-Auslöser für abgeschlossenen Vereinheitlichungsprozess**
+
+  Wir haben unsere Trigger für Power Automate erweitert , sodass Sie nun eine Benachrichtigung oder Aktion erstellen können, wenn eine Aktualisierung des Vereinheitlichungsprozesses (Zuordnung, Übereinstimmung, Zusammenführung) abgeschlossen ist.    
+  Weitere Informationen finden Sie unter [Power Automate-Connector](export-power-automate.md).
+
+#### <a name="enrichment"></a>Anreicherung
+
+- **Anreicherung der Markenaffinität in weiteren Märkten**
+
+  Wir weiten die Verfügbarkeit der Anreicherung der Markenaffinität über die USA hinaus auf fünf weitere Märkte aus: Kanada, Australien, Großbritannien, Frankreich und Deutschland. Mit dieser Erweiterung können Sie Ihre Kundendaten mit lokalen Marken in diesen Märkten anreichern. Wir reichern auch Ihre Kundenprofile an, die sich in diesen Märkten befinden, indem wir lokale proprietäre Daten von Microsoft Graph verwenden.
+  Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft-graph.md).
+
+## <a name="june-2020-updates"></a>Updates Juni 2020
+
+Die Updates im Juni 2020 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
+
+### <a name="new-and-updated-features-in-june-2020"></a>Neue und aktualisierte Funktionen vom Juni 2020
+
+#### <a name="enrichment"></a>Anreicherung
+
+- **Anreicherung mit Unternehmensdaten aus Leadspace**
+  
+  Definieren Sie Felder in einheitlichen Kundenprofilen, mit denen verwandte Unternehmensdaten aus Leadspace abgerufen werden. Nach dem Ausführen des Anreicherungsprozesses werden B2B-Profile mit zusätzlichen Attributen wie Unternehmensgröße, Standort, Branche und mehr angereichert.    
+  Diese Zusammenarbeit ermöglicht es Ihnen, die Qualität Ihrer Daten durch zusätzliche Informationen aus Drittanbieterdiensten zu verbessern. Um diese Anreicherung nutzen zu können, benötigen Sie eine Leadspace-Lizenz, um auf die B2B-Unternehmensdaten zugreifen zu können. Das System wird diese Lizenz verwenden, um Ihre Daten kontinuierlich anzureichern.    
+  Weitere Informationen finden Sie unter [Anreicherung von Unternehmensprofilen mit Leadspace](enrichment-leadspace.md).
+
+- **Enrichment Hub-Seite**
+
+  Alle verfügbaren Datenanreicherungen von Erst- und Drittanbietern werden am selben Ort konfiguriert. Das Konfigurieren der Datenanreicherung ist eine nahtlose Erfahrung, die von einem gemeinsamen Ort aus verwaltet wird.    
+  Weitere Informationen finden Sie unter [Anreicherung für Kundenprofile](enrichment-hub.md).
+
+- **Separate Anreicherung der Marken- und Interessenaffinität**
+
+  Die Marken- und Interessenaffinitäten sind jetzt als zwei unabhängige Anreicherungen verfügbar. Separate Anreicherungen bieten Ihnen die Flexibilität, sie je nach Ihren geschäftlichen Anforderungen oder Bedürfnissen individuell zu konfigurieren und zu verwalten.    
+  Weitere Informationen finden Sie unter [Anreichern von Kundenprofilen mit Marken- und Interessenaffinitäten](enrichment-microsoft-graph.md).
+
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Klickbare URLs für einheitliche Aktivitäten im Dynamics 365-Kundenkarten-Add-In**
+
+  Die vereinheitlichten Aktivitäten im Kundenkarten-Add-In zeigen jetzt klickbare URLs an, wenn solche URLs bei der Konfiguration von Aktivitäten definiert wurden.    
+  Weitere Informationen finden Sie unter [Kundenkontaktverlauf-Einblicke](customer-card-add-in.md).
+
+- **Marken- und Interessenaffinitäten sind im Dynamics 365-Kundenkarten-Add-In verfügbar**
+
+  Mit einem neuen Steuerelement im Dynamics 365-Kundenkarten-Add-In können Sie Marken- und Interessenanreicherungen für Ihre Kontakte in Kundenbindungs-Apps in Dynamics 365 anzeigen.    
+  Weitere Informationen finden Sie unter [Kundenkontaktverlauf-Einblicke](customer-card-add-in.md).
+
+- **Zusätzliche Power Automate-Trigger**
+
+  Wir haben unser Triggerangebot für Power Automate erweitert und die folgenden Trigger hinzugefügt:
+  - Erhalten Sie eine Benachrichtigung oder führen Sie eine Aktion aus, wenn eine automatische vollständige Aktualisierung (Datenquellen, Vereinheitlichung, Segmente, Kennzahlen, Exporte) abgeschlossen wird.
+  - Definieren Sie einen Schwellenwert für eine Unternehmenskennzahl. Sie können beispielsweise eine Benachrichtigung erstellen, die gesendet wird, wenn der definierte Schwellenwert überschritten wird. Darüber hinaus liefert der Trigger Informationen, mit denen Sie in Power Automate komplexere Workflows erstellen können.    
+  Weitere Informationen finden Sie unter [Power Automate-Connector](export-power-automate.md).
+
+- **Exportieren zum Facebook-Anzeigenmanager**
+  
+  Mit dieser Funktionalität können Sie Segmente in den Facebook Ads Manager exportieren. Segmente werden als benutzerdefinierte Zielgruppen exportiert, um einheitliche Kundenprofile in Facebook-Marketingkampagnen und -Anzeigen zu verwenden. Die benutzerdefinierten Zielgruppen können auch zur Erstellung von Kampagnen auf Instagram über den Facebook-Anzeigenmanager verwendet werden.    
+  Weitere Informationen finden Sie unter [Connector für den Facebook-Anzeigenmanager](export-facebook.md).
+
+#### <a name="predictions"></a>Vorhersagen
+
+- **Vorhersage von Abonnementabwanderung**
+
+  Folgen Sie einer geführten Erfahrung, um Abwanderungsprognosen in Abonnementbereichen wie Clouddiensten, Kundenmitgliedschaften und anderen Sektoren zu erstellen. 
+
+  Mit der Funktion zur Vorhersage von Abonnementabwanderungen können Sie die Wahrscheinlichkeit vorhersagen, mit der ein Kunde die Nutzung abonnementbasierter Produkte oder Services einstellt, ohne einen Datenwissenschaftler zu beauftragen. Mit der Vorhersagebewertung können Sie andere Informationen über Ihre Kunden kombinieren, um Segmente mit hohem Abwanderungsrisiko zu erstellen. Mit Hilfe dieses Segments können Sie Kunden im Marketing, im Kundensupport und in anderen Szenarien direkt ansprechen, um das Abwanderungsrisiko für bestimmte Kunden zu reduzieren und so den Umsatz zu steigern und die Kosten zu senken.
+
+  Innerhalb der Erfahrung können Sie die Definition der Abwanderung als zeitbasiertes Fenster konfigurieren, das speziell für Ihr Unternehmen Gültigkeit hat. Beispielsweise möchte ein Video-Streaming-Unternehmen mit einem monatlichen Abonnementprozess einen Kunden 15 Tage nach Ablauf seines Abonnements möglicherweise als abgewandert betrachten.
+
+  Während Sie mit Vorhersage fortfahren, werden wir Ihnen mitteilen, welche Daten benötigt werden, und Ihnen ermöglichen, Daten über Ihr Unternehmen Feldern zuzuordnen, die zur Vorhersage der Abwanderung für Ihre Kunden erforderlich sind. Wenn sich Unternehmensinformationen ändern, können Sie auch einen Zeitplan festlegen, um Ihr System mit neuen Informationen erneut zu trainieren und es an sich ändernde geschäftliche Verhältnisse anzupassen.    
+  Weitere Informationen finden Sie unter [Vorhersage von Abonnementabwanderung (Vorschau)](predict-subscription-churn.md).
+
+#### <a name="segments"></a>Segmente
+
+- **Ähnliche Kunden finden**
+  
+  Finden Sie mithilfe künstlicher Intelligenz ähnliche Kunden in Ihrem Kundenstamm. Ein mit Binärklassifizierung arbeitendes Machine Learning-Modell weist Kunden im erweiterten Segment eine Ähnlichkeitsbewertung zu. Die Bewertung basiert auf der Ähnlichkeit mit Kunden im Quellensegment. Abhängig von der Ähnlichkeitsbewertung werden Kundenprofile zu einem neu erstellten Segment hinzugefügt.
+
+  Dieser Vorgang, der im digitalen Marketing manchmal als Lookalike-Modellierung bezeichnet wir, verwendet ein KI-Modell, um Kunden zu finden, die einem anderen Segment Ihrer Kunden ähneln, indem zusätzliche Attribute berücksichtigt werden. Sie können nicht nur die Attribute auswählen, sondern auch die maximale Anzahl von Kunden angeben, die in diesem neuen Segment enthalten sein sollen. Das KI-Modell berechnet dann Ähnlichkeitsbewertungen für jeden Kunden basierend auf Ihren ausgewählten Attributen und findet Kunden mit der höheren durchschnittlichen Ähnlichkeitsbewertung. Das resultierende Segment umfasst Kunden, die Ähnlichkeit mit dem Kunden in Ihrem ursprünglichen Segment aufweisen.    
+  Weitere Informationen finden Sie unter [Ähnliche Kunden](find-similar-customer-segments.md).
+
+- **Segmentüberlappung und Unterscheidungsmerkmale**
+
+  Durch Segmentüberlappung können Sie sehen, wie viele und welche Kunden zwei oder mehr Segmenten gemeinsam haben. Zum Beispiel können Sie sehen, wie sich ein Segment mit Kunden mit hohen Ausgaben mit einem Segment mit Kunden mit hoher Zufriedenheit überlappt, oder ein Segment mit abwandernden Kunden mit einem Segment mit unzufriedenen Kunden. Darüber hinaus können Sie anhand eines zusätzlichen Attributs Ihrer Wahl analysieren, wie sich die Überlappung ändert.
+
+  Unterscheidungsmerkmale der Segmente verdeutlichen, was ein Segment vom Rest Ihrer Kunden oder von einem anderen Segment unterscheidet. Sie müssen lediglich ein Segment identifizieren, woraufhin das System Profilattribute und -kennzahlen identifiziert, die das Segment in Form einer Rangliste von Unterscheidungsmerkmalen von anderen Segmenten unterscheiden – vom stärksten bis zum schwächsten Unterscheidungsmerkmal.    
+  Weitere Informationen finden Sie unter [Segmenteinblicke (Vorschau)](segment-insights.md).
+
+- **Segmentlebensdauer**
+  
+  Definieren Sie einen Zeitplan zum Aktivieren oder Deaktivieren eines Segments.    
+  Weitere Informationen finden Sie unter [Verwalten vorhandener Segmente](segments.md#manage-existing-segments).
+
+## <a name="may-2020-updates"></a>Update Mai 2020
+
+Die Updates im Mai 2020 enthalten mehrere Funktionen, Leistungsverbesserungen und Fehlerkorrekturen.
+
+### <a name="new-and-updated-features-in-may-2020"></a>Neue und aktualisierte Funktionen im Mai 2020
+
+#### <a name="data-ingestion"></a>Dateneinbindung
+
+- **Datenerfassung in Echtzeit: Verlaufsansichten**
+
+  Wenn Sie unsere API zum Aufnehmen von Echtzeit-Updates verwenden, können Sie einen aggregierten Verlauf von bis zu 30 Tagen für diese Updates anzeigen. Sie haben Zugriff auf Aggregate aller erfolgreichen oder fehlgeschlagenen API-Aufrufe, einschließlich deren Ergebnis, Quellsystem und anderer nützlicher Metadaten.    
+  Weitere Informationen finden Sie unter [Echtzeit-Dateneingabe](real-time-data-ingestion.md).
+
+- **Datenerfassung in Echtzeit: Profilaktualisierungen**
+
+  Mit dieser Erweiterung der Echtzeit-Datenerfassung können Sie innerhalb von Sekunden Änderungen an bestimmten Benutzerprofilfeldern anzeigen.    
+  Neben der Echtzeitfunktionalität für Aktivitäten unterstützt das System Aktualisierungen von Profilfeldern mit geringer Latenz. Echtzeitaktualisierungen für Profilfelder haben eine Ablaufzeit und sind daher kein Ersatz für geplante Aktualisierungen.    
+  Weitere Informationen finden Sie unter [Echtzeit-Dateneingabe](real-time-data-ingestion.md).
+
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Aktualisierte Zeitleiste und Paginierung im Kundenkarten-Add-In**
+
+  Die Zeitleiste der Kundenkarten-Add-In-Lösung entspricht der Aktivitäts-Zeitleiste. Die Paginierung der Zeitleiste verbesserte sich und zeigte bis zu 50 Aktivitäten gleichzeitig an. Außerdem können zusätzliche Aktivitäten in die Zeitskala geladen werden.    
+  Weitere Informationen finden Sie unter [Kundenkontaktverlauf-Einblicke](customer-card-add-in.md).
+
+- **Power Automate Auslöser für Segmentwechsel**
+
+  Auslöser für Power Automate definiert, woraus Sie einen Flow erstellen können. Mit dem neu hinzugefügten Auslöser können Sie einen Schwellenwert für ein Segment definieren. Sie können beispielsweise eine Benachrichtigung erstellen, die gesendet wird, wenn der definierte Schwellenwert überschritten wird.    
+  Weitere Informationen finden Sie unter [Power Automate-Connector](export-power-automate.md).
+
+- **Unterstützung für mehrere Mandanten für benutzerdefinierte Modelle**
+
+  Konfigurieren Sie Workflows für benutzerdefinierte Modelle mit einem Webdienst eines anderen Azure Maschinelles Lernen-Mandanten. Sie können sich beim Erstellen eines neuen Workflows für benutzerdefinierte Modelle beim Azure Machine Learning Mandant anmelden. Diese Funktion ist eine Ergänzung zu der vorhandenen Funktion zur Integration in Ihren eigenen benutzerdefinierten Azure Machine Learning Webdienst.    
+  Weitere Informationen finden Sie unter [Benutzerdefinierte Machine Learning Modelle](custom-models.md).
+
+#### <a name="segments"></a>Segmente
+
+- **Automatisierung von Entitätspfaden**
+
+  Wenn Sie ein Segment erstellen, müssen Sie den Pfad der Entitäten definieren. Diese Funktion macht einen ersten Schritt zur Automatisierung der Entitätspfaddefinition, damit Sie sich auf die Segmentierungskriterien konzentrieren können, die Sie berücksichtigen.    
+  Wenn die Entität, nach der Sie Ihre Kunden segmentieren möchten, in direktem Zusammenhang mit der einheitlichen Kundenentität steht, müssen Sie den Entitätspfad nicht mehr definieren. Wenn es jedoch mehr als einen möglichen Entitätspfad gibt, müssen Sie ihn dennoch manuell definieren.
+
+- **Aktionen für mehrere Segmente**
+  
+  Benutzer können mehrere Segmente auswählen und mit einem einzigen Klick Aktionen ausführen, z. B. das Aktualisieren der Segmente.    
+
+- **Aktualisieren von Segmenten**
+
+  Benutzer können ein einzelnes Segment aktualisieren oder nur die Segmente auswählen, die sie aktualisieren möchten.    
+
+  
+- **Verbesserungen an zusammengesetzten Segmenten**
+
+  Benutzer können Segmente erstellen, bearbeiten und löschen, die auf anderen Segmenten basieren. Zum Beispiel ein Segment, das auf einem anderen Segment aufgebaut ist, das auf einem dritten Segment aufgebaut wurde.    
+
+- **Seite mit Segmentliste**
+
+  Das neue Design der Segmentseite verwendet ein Listenformat, mit dem Sie mehrere Segmente gleichzeitig anzeigen können. Ein Suchfeld wird hinzugefügt, um Segmente schnell zu finden. Benutzer können jetzt Aktionen wie das gleichzeitige Herunterladen oder Löschen auf mehrere Segmente anwenden. Ein neues Trenderlebnis wird eingeführt, um signifikante Änderungen an Segmenten schnell zu erkennen.    
+  Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
+
+#### <a name="system-administration"></a>Systemadministrator
+
+- **Customer Insights verfügbar in Microsoft Dynamics 365 Online Government**
+
+  Mit immer mehr Kanälen für Interaktionen werden Bürgerdaten über unzählige Systeme verteilt, was zu isolierten Daten und einer fragmentierten Ansicht von Informationen über Bürgerinteraktionen führt. Ohne eine vollständige Übersicht über die kanalübergreifenden Interaktionen der einzelnen Bürger ist es für Regierungen unmöglich, in großem Maßstab zu modernisieren. Microsoft ist bestrebt, die Technologiebedürfnisse der Regierung zu unterstützen, um den Erwartungen der Bürger nach konsistenten und reaktionsschnellen Erfahrungen gerecht zu werden.    
+  Mit 2020 Release Wave 1, wird Dynamics 365 Customer Insights für die Government Community Cloud (GCC) verfügbar sein, eine Umgebung, die den höheren Compliance-Anforderungen der US-Regierungsbehörden gerecht wird. Agenturen erhalten eine einheitliche Sicht auf die Bürger und verwenden vorgefertigte KI, um Erkenntnisse abzuleiten, die die Interaktion verbessern, Mitarbeiter befähigen und Communities transformieren. Gleichzeitig wird die IT-Komplexität verringert und die Compliance- und Sicherheitsstandards der USA eingehalten. Dynamics 365 Government erfüllt die anspruchsvollen Anforderungen des US-amerikanischen Federal Risk and Authorization Management-Programms (FedRAMP) und ermöglicht es den US-Bundesbehörden, von den Kosteneinsparungen und der strengen Sicherheit der Microsoft Cloud zu profitieren.
+
+## <a name="april-2020-updates"></a>Update April 2020
+
+Die Updates im April 2020 beinhalten verschiedene Funktionen, Leistungsverbesserungen und Fehlerbehebungen.
+
+### <a name="new-and-updated-features-in-april-2020"></a>Neue und aktualisierte Funktionen im April 2020
+
+#### <a name="activities"></a>Aktivitäten
+
+- **Ordnen Sie die Aktivitätsentität dem Standardaktivitätstyp zu**
+  
+  Die Konfiguration und Speicherung von Aktivitäten basiert derzeit auf einem statischen Entwurf, um sie in einer Zeitleiste anzuzeigen. Die semantische Bedeutung von Aktivitäten, die in KI-Modellen für mehrere Anwendungsfälle geeignet ist, wird derzeit nicht vollständig genutzt. Wir planen, die Aktivitätszeitleiste dynamischer zu gestalten, basierend auf dem Aktivitätstyp und einem besseren semantischen Verständnis der Aktivitäten. Diese Funktion zielt darauf ab, den Aktivitätstyp zu identifizieren, der im Common Data Model für jede aufgenommene Aktivität definiert ist.
+  Weitere Informationen finden Sie unter [Kundenaktivitäten](activities.md).
+
+#### <a name="data-ingestion"></a>Dateneinbindung
+
+- **Datenerfassung in Echtzeit: Aktivitäten**
+  
+  Die Datenerfassung in Echtzeit stellt Daten sofort für den Verbrauch bereit, bis die nachfolgende geplante Aktualisierung diese Daten aus der Datenquelle zieht.    
+  Weitere Informationen finden Sie unter [Echtzeit-Dateneingabe](real-time-data-ingestion.md).
+
+- **Verbesserungen bei der Datenaufbereitung**
+  
+  Erfahren Sie mehr über die in einer Entität aufgenommenen Daten. Mit der Datenzusammenfassung können Sie die Datenqualitätsmerkmale verstehen, die dazu beitragen können, geeignete Maßnahmen zu ergreifen.    
+  Weitere Informationen finden Sie unter [Entitätsdaten erkunden](entities.md#exploring-a-specific-entitys-data).
+
+- **Nehmen Sie Analysedaten von Dynamics 365 mit Common Data Service** auf
+  
+  Common Data Service ist als Möglichkeit zum Erstellen von Datenquellen verfügbar. Bestehende Dynamics 365-Kunden können analytische Entitäten von Common Data Service in Customer Insights aufnehmen. Eine einzige Datenquelle kann gleichzeitig denselben Common Data Service-verwalteten Lake in einer Customer Insights Umgebung nutzen.    
+  Weitere Informationen finden Sie unter [Verbindung zu Daten in einem Common Data Service verwalteten Data Lake](connect-common-data-service-lake.md).
+
+#### <a name="extensibility"></a>Erweiterbarkeit
+
+- **Exportieren nach LiveRamp**
+
+  Aktivieren Sie Ihre Daten in LiveRamp ®, um eine Verbindung mit über 500 Plattformen in digitalen, sozialen und TV-Ökosystemen herzustellen. Nutzen Sie Ihre Daten in LiveRamp, um Werbekampagnen auszurichten, zu unterdrücken und zu personalisieren.    
+  Weitere Informationen finden Sie unter [Live Ramp&reg; Connector](export-liveramp.md).
+
+- **Add-In für Customer Insights-Teams**
+  
+  Der Bot bietet Suchfunktionen für einheitliche Kundenprofile. Es wird eine Karte mit bis zu 15 Feldern aus dem resultierenden Kundenprofil angezeigt. Mehrere Übereinstimmungen geben eine Liste mit Ergebnissen zurück, in der Sie ein Profil auswählen können.    
+  Weitere Informationen finden Sie unter [Teams Bot für Customer Insights](export-teams-bot.md).
+
+#### <a name="measures"></a>Kennzahlen
+
+- **Maßnahmdn-Listenseite**
+  
+  Zu den Verbesserungen auf der Seite Maßnahmen gehört die Unterstützung von Aktionen für eine einzelne Maßnahme und für mehrere Maßnahmen gleichzeitig. Darüber hinaus finden Sie ein Suchfeld, in dem Sie Maßnahmen schnell finden und verfolgen können.    
+  Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
+
+- **Verbesserungen an zusammengesetzten Maßnahmen**
+  
+  Benutzer können Maßnahmen erstellen, bearbeiten und löschen, die auf anderen Maßnahmen. Zum Beispiel eine Maßnahmen, die auf einer anderen Maßnahmen aufgebaut ist, die auf einer dritten Maßnahmen aufgebaut wurde.
+
+#### <a name="segments"></a>Segmente
+
+- **Weitere Operator**
+  
+  Der In-Set-Operator ermöglicht Kunden die Segmentierung nach mehreren möglichen Zeichenfolgenwerten. Bevor dieser Operator hinzugefügt wurde, mussten Sie solche Segmente mit mehreren ODER-Bedingungen erstellen. Mit dem Operator In-Set können Sie dies mit einer einzigen Bedingung tun.    
+  Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
+
+#### <a name="system-administration"></a>Systemadministrator
+
+- **Kopieren Sie die Konfigurationseinstellungen in eine neue Umgebung**
+  
+  Kopieren Sie Ihre Konfiguration von einer Umgebung in eine andere. Während Sie eine neue Umgebung erstellen, können Sie eine vorhandene Umgebung auswählen, aus der Sie die Konfiguration kopieren möchten. Wir unterstützen derzeit Datenquellen, Datenvereinigung, Beziehungen, zu kopierende Kennzahlen und Segmente. Anmeldeinformationen und tatsächliche Daten von Datenquelle werden nicht kopiert.    
   Weitere Informationen finden Sie unter [Umgebungen verwalten](manage-environments.md).
-
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

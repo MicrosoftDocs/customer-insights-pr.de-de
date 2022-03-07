@@ -1,19 +1,20 @@
 ---
 title: Exportieren von Customer Insights-Daten zu SendGrid
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu SendGrid exportieren.
-ms.date: 10/08/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
+author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 65d60e7e70e3444b0695b905431bab9a0269ceef
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: a4c64cf77c682e07f3d0759c43355336b5806fc8
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231571"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759764"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Segmente nach SendGrid exportieren (Vorschau)
 
@@ -28,10 +29,10 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in SendGrid-Kontaktlisten u
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Bis zu 100'000 Kundenprofile insgesamt an SendGrid.
+- Insgesamt bis zu 100.000 Profile an SendGrid.
 - Der Export zu SendGrid ist auf Segmente beschränkt.
-- Der Export von bis zu 100'000 Kundenprofilen an SendGrid kann bis zu einigen Stunden dauern. 
-- Die Anzahl der Kundenprofile, die Sie nach SendGrid exportieren können, hängt von Ihrem Vertrag mit SendGrid ab.
+- Das Exportieren von bis zu 100.000 Profilen an SendGrid kann bis zu einigen Stunden dauern. 
+- Die Anzahl der Profile, die Sie zu SendGrid exportieren können, hängt von Ihrem Vertrag mit SendGrid ab und ist dort begrenzt.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Verbindung mit SendGrid einrichten
 
@@ -65,7 +66,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Geben Sie Ihre **[SendGrid-Listen-ID](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)** ein.
 
-1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Wiederholen Sie die gleichen Schritte für andere optionale Felder wie **Vorname**, **Nachname**, **Land / Region**, **Bundesland / Kanton**, **Stadt** und **Postleitzahl**.
+1. Wählen Sie im Bereich **Datenabgleich** im Feld **E-Mail** das Feld in Ihrem vereinheitlichten Kundenprofil, das die E-Mail-Adresse eines Kunden darstellt. Wiederholen Sie die gleichen Schritte für andere optionale Felder wie **Vorname**, **Nachname**, **Land/Region**, **Bundesland/Kanton**, **Stadt** und **Postleitzahl**.
 
 1. Wählen Sie die Segemente aus, die Sie exportieren möchten. Es wird dringend **empfohlen, nicht mehr als 100.000 Kundenprofile insgesamt** an SendGrid zu exportieren. 
 

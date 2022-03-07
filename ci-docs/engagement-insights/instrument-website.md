@@ -1,25 +1,26 @@
 ---
 title: Hinzufügen von Code zu Ihrer Website
-description: So fügen Sie einen Codeausschnitt hinzu, um Dynamics 365 Customer Insights-Ereignisse auf Ihrer Website zu erfassen.
+description: So fügen Sie einen Codeausschnitt hinzu, um Ereignisse auf Ihrer Website zu erfassen.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/27/2021
+ms.date: 04/30/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 99e1c04877993a9cd81912e3d400402aab06a7de
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: b5467da775a621c436bd9ddedb272506acc1e2b31dcf7c87feb5dd11e2daae2b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231021"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035093"
 ---
-# <a name="install-the-web-sdk-on-a-website"></a>Installieren des Web-SDK auf einer Website
+# <a name="install-the-code-snippet-on-a-website"></a>Installieren des Codeausschnitts auf einer Website
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Dieser Artikel beschreibt, wie ein Administrator das Web Software Development Toolkit (SDK) auf einer Website installiert. Kurz nach der Instrumentierung Ihrer Website werden Ereignisse in Ihrem Arbeitsbereich angezeigt. Weitere Informationen finden Sie unter [Verwalten von Arbeitsbereichen und Umgebungen](manage-environments-workspaces.md). Informationen zum Erfassen von Ereignissen in mobilen Apps finden Sie unter [Übersicht über Entwicklerressourcen](developer-resources.md).
+Dieser Artikel beschreibt, wie ein Administrator den Codeausschnitt auf einer Website installiert. Kurz nachdem Sie das Skript zu Ihrer Website hinzugefügt haben, werden Ereignisse in Ihrem Arbeitsbereich angezeigt. Weitere Informationen finden Sie unter [Verwalten von Arbeitsbereichen und Umgebungen](manage-environments-workspaces.md). Informationen zum Erfassen von Ereignissen in mobilen Apps finden Sie unter [Übersicht über Entwicklerressourcen](developer-resources.md).
 
 
 ### <a name="prerequisites"></a>Anforderungen
@@ -28,30 +29,19 @@ Dieser Artikel beschreibt, wie ein Administrator das Web Software Development To
 * Ihre Website oder Ihr Projekt muss online gehostet werden, um Aktivitätsdaten zu senden. Von einer lokalen Datei gesendete Daten werden vom Server nicht akzeptiert.
 
 
-## <a name="add-web-sdk-to-your-website"></a>Hinzufügen des Web-SDK auf Ihrer Website
-
-Wechseln Sie zu **Administrator** > **Arbeitsbereich** und wählen Sie **Installationsanleitung** aus. Zur Installation des Web-SDK stehen zwei Möglichkeiten zur Verfügung. Die erste besteht darin, einen Download-Link zu verwenden, und die zweite besteht darin, ein Node Package Manager (NPM)-Paket zu installieren.
-
-### <a name="option-1-using-the-download-link"></a>Option 1: Verwenden des Downloadlinks
-
+## <a name="add-code-to-your-website"></a>Hinzufügen von Code zu Ihrer Website
+1.  Wechseln Sie zu **Administrator** > **Arbeitsbereich** und wählen Sie **Installationsanleitung** aus.
 1. Wählen Sie **Code kopieren** aus, um den Codeausschnitt zu kopieren. Standardmäßig ist der Erfassungsschlüssel für Ihren Arbeitsbereich in den Codeausschnitt eingebettet.
-  :::image type="content" source="media/copy-code.png" alt-text="Screenshot der Seite mit dem Codeausschnitt.":::
-
-1. Fügen Sie den kopierten Code zu Ihrer Website hinzu, nahe <head> dem Tag und vor jedem anderen Skript oder CSS-Tag.
-1. Veröffentlichen Sie Ihre aktualisierte Website und warten Sie einige Minuten, um den eingehenden Webverkehr zu erfassen.
-1. Um Ihre Daten anzuzeigen, wählen Sie Ihren Arbeitsbereich im Navigationsbereich des Arbeitsbereichsumschalters aus. Wählen Sie dann einen der Berichte im Bereich **Entdecken** aus.
-
-### <a name="option-2-using-the-npm-package-recommended-for-javascript-based-web-apps"></a>Option 2: Verwenden des NPM-Pakets (empfohlen für JavaScript-basierte Web-Apps)
-
-1. Gehen Sie zu unserem [NPM-Webpaket](https://www.npmjs.com/package/engagementinsights-web), und befolgen Sie die Anweisungen zum Installieren und Einrichten des Web-SDK-NPM-Pakets.
-1. Veröffentlichen Sie Ihre aktualisierte Website und warten Sie einige Minuten, um den eingehenden Webverkehr zu erfassen.
-1. Um Ihre Daten anzuzeigen, wählen Sie Ihren Arbeitsbereich im Navigationsbereich des Arbeitsbereichsumschalters aus. Wählen Sie dann einen der Berichte im Bereich **Entdecken** aus.
+:::image type="content" source="media/copy-code.png" alt-text="Screenshot der Seite mit dem Codeausschnitt.":::
+3. Fügen Sie den kopierten Codeausschnitt zu Ihrer Website hinzu, und zwar nahe <head> dem Tag und vor jedem anderen Skript oder CSS-Tag.
+4.  Veröffentlichen Sie Ihre aktualisierte Website und warten Sie einige Minuten, um den eingehenden Webverkehr zu erfassen.
+5.  Um Ihre Daten anzuzeigen, wählen Sie Ihren Arbeitsbereich im Navigationsbereich des Arbeitsbereichsumschalters aus. Wählen Sie dann einen der Berichte im Bereich **Entdecken** aus.
 
 ## <a name="configuration-options"></a>Konfigurationsoptionen
 
 Sie können die folgenden Konfigurationsoptionen im Codeausschnitt ändern:
 
-- **ingestionKey**: Der Erfassungsschlüssel zum Senden von Ereignissen an Ihren Arbeitsbereich. Sie können den Erfassungsschlüssel ändern, um Ereignisse an einen anderen Arbeitsbereich zu senden. Ein Erfassungsschlüssel ist für jeden Arbeitsbereich eindeutig.
+- **ingestionKey**: Der Erfassungsschlüssel zum Senden von Ereignissen an Ihren Arbeitsbereich. Sie können den Erfassungsschlüssel ändern, um Ereignisse an einen anderen Arbeitsbereich zu senden. Ein Erfassungsschlüssel ist für jeden Arbeitsbereich eindeutig. 
 - **autoCapture**: Gibt an, ob Seitenaufrufe und Interaktionen mit der Website erfasst werden. Es gibt zwei Optionen:
     - **view**: Auf *true* festlegen, um Seitenaufrufe zu erfassen. Seitenaufrufe werden als *Anzeige*[ereignisse](glossary.md#event) erfasst, ein Typ eines [Basisereignisses](glossary.md#base-event).
     - **click**: Auf *true* festlegen, um Besucherinteraktionen auf der Website zu erfassen. Interaktionen werden als *Aktions*[ereignisse](glossary.md#event) erfasst, ein Typ eines [Basisereignisses](glossary.md#base-event).

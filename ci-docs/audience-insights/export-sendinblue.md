@@ -3,17 +3,18 @@ title: Exportieren Sie Customer Insights-Daten nach Sendinblue
 description: Erfahren Sie, wie Sie die Verbindung und den Export zu Sendinblue konfigurieren.
 ms.date: 10/08/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8d870ff31ce2d441e619ac18899c4d1b6c69ca41
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231418"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617784"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmente nach Sendinblue exportieren (Vorschau)
 
