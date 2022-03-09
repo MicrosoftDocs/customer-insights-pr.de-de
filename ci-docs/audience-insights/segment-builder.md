@@ -2,19 +2,23 @@
 title: Erstellen von Segmenten mithilfe des Segment-Builders
 description: Erstellen Sie Kundensegmente, um sie auf der Grundlage verschiedener Attribute zu gruppieren.
 ms.date: 10/18/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+searchScope:
+- ci-segments
+- ci-segment-builder
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673549"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354554"
 ---
 # <a name="create-segments"></a>Segmente erstellen
 

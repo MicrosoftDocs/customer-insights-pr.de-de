@@ -1,24 +1,28 @@
 ---
-title: Kundenkarten-Add-In für Dynamics 365 Apps
+title: Kundenkarten-Add-In für Dynamics 365-Apps (enthält Video)
 description: Zeigen Sie mit diesem Add-In Daten aus Zielgruppenerkenntnissen in Dynamics 365-Apps an.
-ms.date: 09/30/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+searchScope:
+- ci-customers-page
+- ci-search-filter
+- ci-customer-card
+- customerInsights
+ms.openlocfilehash: d67d8e2cb30cf20de204bfb293bb8ce81c7bb2f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792026"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353864"
 ---
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics 365. Wenn das Kundenkarten-Add-In in einer unterstützten Dynamics 365 App installiert ist, können Sie Kundenprofilfelder, Erkenntnisse und Aktivitätszeitachse anzeigen. Das Add-In ruft Daten aus Customer Insights ab, ohne die Daten in der verbundenen Dynamics 365-App zu beeinflussen.
 
@@ -27,14 +31,14 @@ Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics
 ## <a name="prerequisites"></a>Anforderungen
 
 - Das Add-In funktioniert nur mit modellgetriebenen Dynamics 365-Apps wie Vertrieb oder Kundenservice, Version 9.0 und höher.
-- Damit Ihre Dynamics 365 Daten den Kundenprofilen der Zielgruppenerkenntnissen zugeordnet werden können, müssen sie [von der Dynamics 365-App mit dem Microsoft Dataverse Konnektor](connect-power-query.md) eingebunden werden.
+- Damit Ihre Dynamics 365 Daten den Kundenprofilen der Zielgruppenerkenntnissen zugeordnet werden können, empfehlen wir sie [von der Dynamics 365-App mit dem Microsoft Dataverse-Konnektor](connect-power-query.md) einzubinden. Wenn Sie eine andere Methode zum Erfassen von Dynamics 365-Kontakten (oder -Konten) verwenden, müssen Sie sicherstellen, dass das Feld `contactid` (oder`accountid`) [im Zuordnungsschritt des Datenvereinigungsprozesses als Primärschlüssel für diese Datenquelle](map-entities.md#select-primary-key-and-semantic-type-for-attributes) festgelegt ist. 
 - Alle Dynamics 365-Benutzer des Kundenkarten-Add-Ins müssen in Zielgruppenerkenntnissen [als Benutzer hinzugefügt](permissions.md) sein, um die Daten zu sehen.
 - [Konfigurierte Such- und Filterfunktionen](search-filter-index.md) In Zielgruppenerkenntnissen sind erforderlich, damit die Suche nach Daten funktioniert.
 - Jedes Add-In-Steuerelement basiert auf bestimmten Daten in Zielgruppenerkenntnissen. Einige Daten und Steuerelemente sind nur in Umgebungen bestimmter Typen verfügbar. Die Add-In-Konfiguration informiert Sie, wenn ein Steuerelement aufgrund des ausgewählten Umgebungstyps nicht verfügbar ist. Erhalten Sie weitere Informationen zu [Umgebungen, die Fälle verwenden](work-with-business-accounts.md).
   - **Measure-Steuerelement**: Erfordert [konfigurierte Measures](measures.md) vom Typ Kundenattribute.
-  - **Intelligenz-Steuerelement**: Erfordert Daten, die mit [Vorhersagen](predictions.md) oder [kundenspezifischen Modellen](custom-models.md) generiert wurden.
+  - **Intelligenzsteuerung**: Erfordert Daten, die mit [Vorhersagen oder kundenspezifischen Modellen](predictions-overview.md) generiert wurden.
   - **Kundendetail-Steuerelement**: Alle Felder aus dem Profil sind im vereinheitlichtes Kund*innenprofil verfügbar.
-  - **Anreicherungs-Steuerelement**: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt diese Anreicherungen: [Marken](enrichment-microsoft.md), die von Microsoft bereitgestellt wurden, [Interessen](enrichment-microsoft.md), die von Microsoft bereitgestellt wurden.
+  - **Anreicherungs-Steuerelement**: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt die folgenden Anreicherungen: Von Microsoft bereitgestellte [Marken](enrichment-microsoft.md), [Interessen](enrichment-microsoft.md) und [Office-Bindungsdaten](enrichment-office.md).
   - **Kontakt-Steuerelement**: Erfordert die Definition einer semantischen Entität des Typs Kontakte.
   - **Zeitskala-Steuerelement**: Erfordert [Konfigurierte Aktivitäten](activities.md).
 
@@ -118,5 +122,26 @@ Das Kundenkarten-Add-In wird nicht automatisch aktualisiert. Um auf die neueste 
 
 1. Nach dem Start des Upgradevorgangs wird eine Ladeanzeige angezeigt, bis das Upgrade abgeschlossen ist. Wenn es keine neuere Version gibt, wird beim Upgrade eine Fehlermeldung angezeigt.
 
+## <a name="troubleshooting"></a>Problembehandlung
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Steuerelemente aus dem Kundenkarten-Add-In finden keine Daten
+
+**Problem:**
+
+Selbst mit korrekt konfigurierten ID-Feldern können die Steuerelemente keine Daten für jeden Kunden finden.  
+
+**Lösung:**
+
+1. Stellen Sie sicher, dass Sie das Karten-Add-In gemäß den Anweisungen konfiguriert haben: [Konfigurieren des Kundenkarten-Add-Ins](#configure-the-customer-card-add-in) 
+
+1. Überprüfen Sie die Datenerfassungskonfiguration. Bearbeiten Sie die Datenquelle für das Dynamics 365-System, das die Kontakt-ID-GUID enthält. Wenn die GUID der Kontakt-ID in Großbuchstaben im Power Query-Editor angezeigt wird, versuchen Sie Folgendes: 
+    1. Bearbeiten Sie Datenquelle, um die Datenquelle im Power Query-Editor zu öffnen.
+    1. Wählen Sie die Spalte Kontakt-ID aus.
+    1. Wählen Sie **Transformieren** in der Kopfleiste, um verfügbare Aktionen anzuzeigen.
+    1. Wählen Sie **Kleinbuchstaben**. Überprüfen Sie, ob die GUIDs in der Tabelle jetzt in Kleinbuchstaben geschrieben sind.
+    1. Speichern Sie die Datenquelle.
+    1. Führen Sie Datenerfassung, Vereinheitlichung und nachgelagerte Prozesse aus, um die Änderungen an der GUID weiterzugeben. 
+
+Nach Abschluss der vollständigen Aktualisierung sollten die Steuerelemente des Kundenkarten-Add-Ins die erwarteten Daten anzeigen. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

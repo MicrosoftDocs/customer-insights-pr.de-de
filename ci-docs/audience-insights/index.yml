@@ -4,18 +4,17 @@ summary: Erfassen, vereinheitlichen und organisieren Sie Kundendaten aus mehrere
 metadata:
   title: Zielgruppen-Insights-Dokumentation
   description: Hilfe-Hub mit wichtigen Links für Zielgruppen-Insights.
-  ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.date: 03/02/2022
+  ms.openlocfilehash: 44fac5d82313c491cf838404d9641e2d14261366
+  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4405786"
+  ms.lasthandoff: 02/16/2022
+  ms.locfileid: "8231836"
 landingContent:
 - title: Über Zielgruppen-Insights
   linkLists:
@@ -25,38 +24,54 @@ landingContent:
       url: overview.md
     - text: Neue und aktualisierte Funktionen
       url: whats-new-audience-insights.md
-    - text: Community-Seite
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Datenquellen aufnehmen
-  linkLists:
-  - linkListType: how-to-guide
+    - text: Zielgruppenerkenntnisse entdecken
+      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
+  - linkListType: learn
     links:
-    - text: Datenquellen hinzufügen
-      url: data-sources.md
-    - text: Inkrementelle Aktualisierung
-      url: incremental-refresh-data-sources.md
-    - text: Entitäten verstehen
-      url: entities.md
+    - text: Customer Insights-Lernpfad
+      url: /learn/paths/build-customer-insights/
 - title: Daten vereinheitlichen
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Zuordnung
-      url: map-entities.md
-    - text: Abgleichen
-      url: match-entities.md
-    - text: Mergen
-      url: merge-entities.md
-- title: Kundenprofile werden verfeinert
+    - text: Übersicht über Datenquellen
+      url: data-sources.md
+    - text: Vereinheitlichungs-Übersicht
+      url: data-unification.md
+    - text: Entitäten verstehen
+      url: entities.md
+  - linkListType: learn
+    links:
+    - text: Einheitliches Profil erstellen
+      url: /learn/modules/unified-customer-profile/
+- title: Erkenntnisse gewinnen
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Kundenprofile bereichern
+      url: enrichment-hub.md
     - text: Konfigurieren von Beziehungen
       url: relationships.md
+    - text: Vollständige Daten mit Vorhersagen
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Anreichern und Vorhersagen von Daten
+      url: /learn/modules/enrich-data/
+- title: Auf Ihren Daten aufbauen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Segmente erstellen
+      url: segments.md
+    - text: Measures erstellen
+      url: measures.md
     - text: Kundenaktivitäten aufführen
       url: activities.md
-    - text: Bringen Sie Ihre eigenen Machine-Learning-Modelle mit
-      url: custom-models.md
+  - linkListType: learn
+    links:
+    - text: Mit der App arbeiten
+      url: /learn/modules/working-with-customer-insights/
 - title: Kundendaten exportieren
   linkLists:
   - linkListType: how-to-guide
@@ -65,8 +80,12 @@ landingContent:
       url: export-destinations.md
     - text: Kundenkarten in Dynamics 365 Apps
       url: customer-card-add-in.md
-    - text: Power BI-Connector
+    - text: Power BI-Connector
       url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Verwalten von externen Verbindungen
+      url: /learn/modules/configure-third-party-connections/
 - title: Verwalten Sie die App
   linkLists:
   - linkListType: how-to-guide
@@ -77,3 +96,7 @@ landingContent:
       url: permissions.md
     - text: Mehrere Umgebungen verwalten
       url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Customer Insights verwalten
+      url: /learn/modules/administer-customer-data-platform/

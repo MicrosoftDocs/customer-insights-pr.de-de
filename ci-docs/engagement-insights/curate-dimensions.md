@@ -2,18 +2,17 @@
 title: Verwenden Sie demografische Dimensionen zum Aufteilen von Verhaltensdaten (kuratierte Dimensionen)
 description: Verwenden Sie einheitliche profilkuratierte Dimensionen, um Zielgruppenerkenntnisse-Kundenprofileigenschaften zu ermöglichen.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466347"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233046"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Verwenden Sie demografische Dimensionen zum Aufteilen von Verhaltensdaten
 

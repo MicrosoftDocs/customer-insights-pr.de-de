@@ -1,24 +1,26 @@
 ---
 title: Erstellen und Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.
-ms.date: 10/14/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645125"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354278"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Umgebungen wechseln
 
@@ -39,6 +41,22 @@ Sie können einige Details vorhandener Umgebungen bearbeiten.
 3. In dem Kästchen **Umgebung bearbeiten** können Sie die Umgebungseinstellungen aktualisieren.
 
 Weitere Informationen zu Umgebungseinstellungen finden Sie unter [Schaffen Sie eine neue Umgebung](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Mit Microsoft Dataverse verbinden
+   
+Mit dem **Microsoft Dataverse** Schritt können Sie Customer Insights mit Ihrer Dataverse Umgebung verbinden.
+
+Benutzen Sie [Standardmäßige Vorhersage-Modelle](predictions-overview.md#out-of-box-models), konfigurieren Sie Datenfreigaben mit Dataverse. Oder Sie können die Datenaufnahme aus lokale Datenquellen aktivieren, indem Sie die Microsoft Dataverse Umgebungs-URL bereitstellen, die Ihre Organisation verwaltet.
+
+> [!IMPORTANT]
+> Customer Insights und Dataverse müssen sich in derselben Region befinden, um die Datenfreigabe zu ermöglichen.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Konfigurationsoptionen zum Aktivieren der Datenfreigabe mit Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights unterstützt die folgenden Datenfreigabe-Szenarien nicht:
+> - Wenn Sie alle Daten selbst speichern in Azure Data Lake Storage können Sie die Datenfreigabe mit einem verwalteten Dataverse Data Lake nicht aktivieren.
+> - Wenn Sie die Datenfreigabe mit einem verwalteten Dataverse Data Lake aktivieren, können Sie keine [vorhergesagten oder fehlenden Werten in einer Entität erstellen](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Umgebungskonfiguration kopieren
 
@@ -67,7 +85,8 @@ Die folgenden Daten werden *nicht* kopiert:
 
 - Kundenprofile.
 - Anmeldeinformationen für die Datenquelle. Sie müssen die Anmeldeinformationen für jede Datenquelle angeben und die Datenquellen manuell aktualisieren.
-- Datenquellen aus dem Ordner Common Data Model und Dataverse verwalteten Data Lake. Sie müssen diese Datenquellen manuell mit demselben Namen wie in der Quellumgebung erstellen.
+
+- Datenquellen aus dem Common Data Model-Ordner und Dataverse-verwalteter Data Lake. Sie müssen diese Datenquellen manuell mit demselben Namen wie in der Quellumgebung erstellen.
 
 Wenn Sie eine Umgebung kopieren, wird eine Bestätigungsmeldung angezeigt, dass die neue Umgebung erstellt wurde. Wählen Sie **Gehen Sie zu Datenquellen**, um die Liste der Datenquellen anzuzeigen.
 

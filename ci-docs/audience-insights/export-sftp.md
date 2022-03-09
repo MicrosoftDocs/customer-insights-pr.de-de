@@ -1,24 +1,25 @@
 ---
-title: Customer Insights-Daten zu SFTP-Hosts exportieren
+title: Customer Insights-Daten nach SFTP-Hosts exportieren (enthält Video)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu einem SFTP-Speicherort exportieren.
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 000b44dc8e5cc419132bd17e359fbdd5879caf1b
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 7b09da093d6332c5081da1beadc1df59f63c31d2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124318"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231153"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportieren von Segmenten und anderen Daten nach SFTP (Vorschau)
 
 Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie an einen SFTP-Speicherort (Secure File Transfer Protocol) exportieren.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Voraussetzungen für die Verbindung
 
@@ -26,6 +27,7 @@ Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie 
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- SFTP-Ziele hinter Firewalls werden derzeit nicht unterstützt. 
 - Die Laufzeit eines Exports hängt von Ihrer Systemleistung ab. Wir empfehlen zwei CPU-Kerne und 1 GB Speicher als minimale Konfiguration Ihres Servers. 
 - Das Exportieren von Entitäten mit bis zu 100 Millionen Kundenprofilen kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird. 
 

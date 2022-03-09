@@ -1,34 +1,36 @@
 ---
 title: Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Dienstprinzipals
 description: Verwenden Sie einen Azure-Dienstprinzipal, um eine Verbindung zu Ihrem eigenen Data Lake herzustellen.
-ms.date: 09/08/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: d593880b06bd21e96826039a67382b75a4296a87
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645171"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354187"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals
 
-Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Berechtigungen haben. Anstatt dass sich Anwendungen als voll privilegierter Benutzer anmelden müssen, bietet Azure Dienstprinzipale an. Lesen Sie weiter, um zu erfahren, wie Sie Dynamics 365 Customer Insights mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals anstelle von Speicherkontoschlüsseln verbinden. 
+In diesem Artikel wird erläutert, wie Sie Dynamics 365 Customer Insights mit einem Azure Data Lake Storage-Konto verbinden, indem Sie einen Azure-Dienstprinzipal anstelle von Speicherkontoschlüsseln verwenden. 
 
-Sie können den Dienstprinzipal verwenden, um sicher [einen Common Data Model Ordner als Datenquelle hinzuzufügen oder zu bearbeiten](connect-common-data-model.md), oder [eine Umgebung zu erstellen oder zu aktualisieren](create-environment.md).
+Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Berechtigungen haben. Anstatt dass sich Anwendungen als voll privilegierter Benutzer anmelden müssen, bietet Azure Dienstprinzipale an. Sie können Dienstprinzipale zum sicheren [Hinzufügen oder Bearbeiten eines Common Data Model-Ordners als Datenquelle](connect-common-data-model.md) bzw. [Erstellen oder Aktualisieren einer Umgebung](create-environment.md) verwenden.
 
 > [!IMPORTANT]
-> - Für das Data Lake Storage-Konto, das den Dienstprinzipal verwendet, muss der [hierarchische Namespace aktiviert sein](/azure/storage/blobs/data-lake-storage-namespace).
-> - Sie benötigen Admin-Berechtigungen für Ihr Azure-Abonnement, um das Service-Prinzipal zu erstellen.
+> - Das Data Lake Storage-Konto, das den Dienstprinzipal verwendet, muss Gen2 sein und [Hierarchischer Namespace aktiviert](/azure/storage/blobs/data-lake-storage-namespace) haben. Azure Data Lake Gen1-Speicherkonten werden nicht unterstützt.
+> - Sie benötigen Administratorberechtigungen für Ihr Azure-Abonnement, um einen Dienstprinzipal zu erstellen.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Erstellen eines Azure-Dienstprinzipals für Customer Insights
 
-Bevor Sie einen neuen Dienstprinzipal für Zielgruppenerkenntnisse oder Bindungserkenntnisse erstellen, prüfen Sie, ob dieser bereits in Ihrer Organisation vorhanden ist.
+Überprüfen Sie vor dem Erstellen eines neuen Dienstprinzipals für Customer Insights, ob dieser bereits in Ihrer Organisation vorhanden ist.
 
 ### <a name="look-for-an-existing-service-principal"></a>Suchen Sie nach einem vorhandenen Service-Prinzipal
 
@@ -90,7 +92,7 @@ Es kann bis zu 15 Minuten dauern, bis die Änderungen propagiert werden.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Geben Sie die Azure Ressourcen-ID oder die Azure Abonnementdetails im Anhang des Speicherkontos für Zielgruppenerkenntnisse ein
 
-Sie können ein Data Lake Storage-Konto in Zielgruppenerkenntnissen anhängen um [Ausgabedaten zu speichern](manage-environments.md) oder [als Datenquelle zu nutzen](connect-common-data-service-lake.md). Mit dieser Option können Sie zwischen einem ressourcenbasierten oder einem abonnementbasierten Ansatz wählen. Befolgen Sie je nach gewähltem Ansatz das Verfahren in einem der folgenden Abschnitte.
+Sie können ein Data Lake Storage-Konto in Zielgruppenerkenntnissen anhängen um [Ausgabedaten zu speichern](manage-environments.md) oder [als Datenquelle zu nutzen](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). Mit dieser Option können Sie zwischen einem ressourcenbasierten oder einem abonnementbasierten Ansatz wählen. Befolgen Sie je nach gewähltem Ansatz das Verfahren in einem der folgenden Abschnitte.
 
 ### <a name="resource-based-storage-account-connection"></a>Ressourcen-basierte Speicherkonto-Verbindung
 

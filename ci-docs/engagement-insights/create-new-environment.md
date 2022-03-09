@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648116"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225422"
 ---
 # <a name="create-a-new-environment"></a>Neue Umgebung erstellen 
 
@@ -42,11 +41,11 @@ Eine Umgebung ist ein Bereich, in dem Sie Ihre Arbeitsbereiche und Verbindungen 
 
 1. Geben Sie einen **Arbeitsbereichsnamen** ein, mit dem Sie Daten für bestimmte Websites oder Apps sammeln können. Weitere Informationen finden Sie unter [Einen Arbeitsbereich erstellen](create-workspace.md).
 
-1. Wählen Sie den **Arbeitsbereich-Typ** (Web oder Mobile), den Sie erstellen möchten. 
+1. Wählen Sie den **Arbeitsbereichstyp** (Web oder Mobil) aus, den Sie erstellen möchten. 
 
 1. Wählen Sie **Erweiterte Einstellungen anzeigen**, um diese optionalen Einstellungen zu aktivieren oder zu deaktivieren:
 
-   - Umschalten von **Unbekannt bis bekannt** auf aktiviert, um Webereignisse mit Benutzern zu verknüpfen, die sich zuvor authentifiziert haben. Weitere Informationen finden Sie unter [Erkennen Sie Webereignisse von zuvor authentifizierten Besuchern](unknown-to-known.md)
+   - Umschalten von **Unbekannt bis bekannt** auf aktiviert, um Webereignisse mit Benutzern zu verknüpfen, die sich zuvor authentifiziert haben. Weitere Informationen finden Sie unter [Erkennen Sie Webereignisse von zuvor authentifizierten Besuchern](unknown-to-known.md).
    - Umschalten von **Bot-Verkehr filtern** auf aktiviert, um den Webverkehr von Bots für diesen Arbeitsbereich zu entfernen. 
 
 1. Wählen Sie **Abgeschlossen** aus, wenn Sie fertig sind. 

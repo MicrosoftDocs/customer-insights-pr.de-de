@@ -2,21 +2,25 @@
 title: Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 description: Prognostizieren Sie das Umsatzpotenzial für aktive Kunden in der Zukunft.
 ms.date: 02/05/2021
-ms.reviewer: wameng
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268593"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355788"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Langfristiger Kundenwert(CLV)-Vorhersage (Vorschau)
+# <a name="customer-lifetime-value-clv-prediction"></a>Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 
 Prognostizieren Sie den potenziellen Wert (Umsatz), den einzelne aktive Kunden über einen definierten zukünftigen Zeitraum in Ihr Unternehmen einbringen werden. Mit dieser Funktion können Sie verschiedene Ziele erreichen: 
 - Identifizieren Sie hochwertige Kunden und verarbeiten Sie diese Erkenntnisse
@@ -38,11 +42,11 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
 - Kundenkennung: Eindeutige Kennung, um Transaktionen einem einzelnen Kunden zuzuordnen
 
 - Transaktionsverlauf: Protokoll historischer Transaktionen mit dem folgenden semantischen Datenschema
-    - Transaktions-ID: Eindeutiger Bezeichner der einzelnen Transaktionen
-    - Transaktionsdatum: Datum, vorzugsweise ein Zeitstempel jeder Transaktion
-    - Transaktionsbetrag: Geldwert (z. B. Umsatz oder Gewinnspanne) jeder Transaktion
-    - Bezeichnung, die Retouren zugewiesen ist (optional): Boolescher Wert, der angibt, ob es sich bei der Transaktion um eine Retoure handelt 
-    - Produkt-ID (optional): Produkt-ID des an der Transaktion beteiligten Produkts
+    - **Transaktions-ID**: Eindeutiger Bezeichner der einzelnen Transaktionen
+    - **Transaktionsdatum**: Datum, vorzugsweise ein Zeitstempel jeder Transaktion
+    - **Transaktionsbetrag**: Geldwert (z. B. Umsatz oder Gewinnspanne) jeder Transaktion
+    - **Bezeichnung, die Retouren zugewiesen ist** (optional): Boolescher Wert, der angibt, ob es sich bei der Transaktion um eine Retoure handelt 
+    - **Produkt-ID** (optional): Produkt-ID des an der Transaktion beteiligten Produkts
 
 - Zusätzliche Daten (optional), zum Beispiel
     - Webaktivitäten: Website-Besuchsverlauf, E-Mail-Verlauf
@@ -53,10 +57,20 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
     - Kundenidentifikatoren zur Zuordnung von Aktivitäten zu Ihren Kunden
     - Aktivitätsinformationen, die den Namen und das Datum der Aktivität enthalten
     - Das semantische Datenschema für Aktivitäten umfasst: 
-        - Primärschlüssel: Ein eindeutiger Identifikator für eine Aktivität
-        - Zeitstempel: Das Datum und die Uhrzeit des Ereignisses, identifiziert durch den Primärschlüssel
-        - Ereignis (Aktivitätsname): Der Name des Ereignisses, das Sie verwenden möchten
-        - Details (Betrag oder Wert): Details zur Kundenaktivität
+        - **Primärschlüssel**: Ein eindeutiger Identifikator für eine Aktivität
+        - **Zeitstempel**: Das Datum und die Uhrzeit des Ereignisses, identifiziert durch den Primärschlüssel
+        - **Ereignis (Aktivitätsname)**: Der Name des Ereignisses, das Sie verwenden möchten
+        - **Details (Betrag oder Wert)**: Details zur Kundenaktivität
+
+- Vorgeschlagene Datencharakteristik:
+    - Ausreichende historische Daten: Mindestens ein Jahr Transaktionsdaten. Vorzugsweise zwei bis drei Jahre Transaktionsdaten, um CLV für ein Jahr vorherzusagen.
+    - Mehrere Einkäufe pro Kunde: Idealerweise mindestens zwei bis drei Transaktionen pro Kunden-ID, vorzugsweise über mehrere Daten hinweg.
+    - Anzahl der Kunden: Mindestens 100 einzigartige Kunden, vorzugsweise mehr als 10.000 Kunden. Das Modell schlägt mit weniger als 100 Kunden und unzureichenden historischen Daten fehl
+    - Vollständigkeit der Daten: Weniger als 20 % fehlende Werte in den erforderlichen Feldern in den Eingabedaten   
+
+> [!NOTE]
+> - Das Modell erfordert die Transaktionshistorie Ihrer Kunden. Derzeit kann nur eine Transaktionsverlaufsentität konfiguriert werden. Wenn es mehrere Kauf/Transaktionsentitäten gibt, können Sie sie vor der Datenaufnahme in Power Query vereinen.
+> - Für zusätzliche Kundenaktivitätsdaten (optional) können Sie jedoch so viele Kundenaktivitätsentitäten hinzufügen, wie Sie für das Modell berücksichtigen möchten.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Langfristige Kundenwertvorhersage erstellen
 
@@ -64,7 +78,7 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
 
 1. Wählen Sie die **Langfristiger Kundenwert**-Kachel und dann **Modell verwenden**. 
 
-1. Im Bereich **Langfristiger Kundenwert (Vorschauversion)** wählen Sie **Erste Schritte**.
+1. Wählen Sie im Bereich **Langfristiger Kundenwert** **Erste Schritte** aus.
 
 1. **Dieses Modell benennen** und **Ausgabeentitätsname**, um sie von anderen Modellen oder Entitäten zu unterscheiden.
 
@@ -76,7 +90,7 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
    Standardmäßig ist die Einheit auf Monate eingestellt. Sie können sie in Jahre ändern, um weiter in die Zukunft zu schauen.
 
    > [!TIP]
-   > Um den CLV für den von Ihnen festgelegten Zeitraum genau vorherzusagen, benötigen Sie einen vergleichbaren Zeitraum historischer Daten. Wenn Sie beispielsweise Vorhersagen für die nächsten 12 Monate treffen möchten, wird empfohlen, dass Sie über historische Daten für mindestens 18 bis 24 Monate verfügen.
+   > Um den CLV für den von Ihnen festgelegten Zeitraum genau vorherzusagen, benötigen Sie einen vergleichbaren Zeitraum historischer Daten. Wenn Sie beispielsweise CLV-Vorhersagen für die nächsten 12 Monate treffen möchten, wird empfohlen, dass Sie über historische Daten für mindestens 18 bis 24 Monate verfügen.
 
 1. Geben Sie an, was **Aktive Kunden** für Ihr Geschäft bedeuten. Legen Sie den Zeitrahmen fest, in dem ein Kunde mindestens eine Transaktion gehabt haben muss, um als aktiv zu gelten. Das Modell sagt CLV nur für aktive Kunden voraus. 
    - **Kaufintervall durch das Modell berechnen lassen (empfohlen)** : Das Modell analysiert Ihre Daten und ermittelt einen Zeitraum basierend auf historischen Einkäufen.
@@ -139,7 +153,6 @@ Daten, die wichtige Kundeninteraktionen widerspiegeln (wie Web, Kundenservice un
 
 1. Klicken Sie auf **Weiter**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Überprüfen Sie die Modellkonfiguration und führen Sie sie aus
 
 1. Im Schritt **Überprüfen Sie die Modelldetails** überprüfen Sie die Konfiguration der Vorhersage. Sie können zu jedem Teil der Vorhersagekonfiguration zurückkehren, indem Sie unter dem angezeigten Wert **Bearbeiten** wählen. Sie können auch einen Konfigurationsschritt aus der Fortschrittsanzeige auswählen.
@@ -160,11 +173,10 @@ Daten, die wichtige Kundeninteraktionen widerspiegeln (wie Web, Kundenservice un
 - **Status:** Status des Vorhersagelaufs.
     - **In Warteschlange:** Die Vorhersage wartet auf den Abschluss anderer Prozesse.
     - **Wird aktualisiert:** Die Vorhersage läuft gerade, um Ergebnisse zu erstellen, die in die Ausgabe-Entität fließen.
-    - **Fehlgeschlagen:** Der Vorhersagelauf ist fehlgeschlagen. [Betrachten Sie die Protokolle](#troubleshoot-a-failed-prediction) für weitere Details.
+    - **Fehlgeschlagen:** Der Vorhersagelauf ist fehlgeschlagen. [Betrachten Sie die Protokolle](manage-predictions.md#troubleshoot-a-failed-prediction) für weitere Details.
     - **Erfolgreich:** Die Vorhersage ist erfolgreich. Wählen Sie **Anzeigen** unter den vertikalen Ellipsen, um die Ergebnisse der Vorhersage anzuzeigen.
 - **Bearbeitet:** Das Datum, an dem die Konfiguration für die Vorhersage geändert wurde.
 - **Zuletzt aktualisiert:** Das Datum, an dem die Vorhersage in der Ausgabe-Entität aktualisiert wurde.
-
 
 ### <a name="review-prediction-results"></a>Überprüfen Sie die Ergebnisse der Vorhersage
 
@@ -181,24 +193,24 @@ Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite.
   Anhand der Definition von Kunden mit hohem Wert, die bei der Konfiguration von Vorhersage angegeben wurden, bewertet das System, wie sich das KI-Modell bei der Vorhersage von Kunden mit hohem Wert im Vergleich zu einem Basismodell verhält.    
 
   Die Stufen werden nach den folgenden Regeln ermittelt:
-  - A, wenn das Modell im Vergleich zum Basismodell mindestens 5 % mehr hochwertige Kunden genau vorhergesagt hat.
-  - B, wenn das Modell im Vergleich zum Basismodell zwischen 0-5 % mehr hochwertige Kunden genau vorhergesagt hat.
-  - C, wenn das Modell im Vergleich zum Basismodell wenigerhochwertige Kunden genau vorhergesagt hat.
+  - **A**, wenn das Modell im Vergleich zum Basismodell mindestens 5 % mehr hochwertige Kunden genau vorhergesagt hat.
+  - **B**, wenn das Modell im Vergleich zum Basismodell zwischen 0-5 % mehr hochwertige Kunden genau vorhergesagt hat.
+  - **C**, wenn das Modell im Vergleich zum Basismodell weniger hochwertige Kunden genau vorhergesagt hat.
 
   Im Bereich **Modellbewertung** werden weitere Details zur Leistung des KI-Modells und zum Basismodell angezeigt. Das Basismodell verwendet einen nicht auf KI basierenden Ansatz, um den langfristigen Kundenwert zu berechnen, der hauptsächlich auf historischen Einkäufen von Kunden basiert.     
   Die Standardformel zur Berechnung des CLV anhand des Basismodells:    
 
-  *CLV für jeden Kunden = durchschnittlicher monatlicher Einkauf des Kunden im aktiven Kundenfenster * Anzahl der Monate im CLV-Vorhersagezeitraum * Gesamtbindungsrate aller Kunden*
+  _**CLV für jeden Kunden** = durchschnittlicher monatlicher Einkauf des Kunden im aktiven Kundenfenster * Anzahl der Monate im CLV-Vorhersagezeitraum * Gesamtbindungsrate aller Kunden_
 
   Das KI-Modell wird anhand von zwei Modellleistungsmetriken mit dem Basismodell verglichen.
   
   - **Erfolgsrate bei der Vorhersage von Kunden mit hohem Wert**
 
-  Sehen Sie den Unterschied bei der Vorhersage hochwertiger Kunden mithilfe des KI-Modells im Vergleich zum Basismodell. Zum Beispiel bedeutet eine Erfolgsquote von 84 %, dass das KI-Modell von allen hochwertigen Kunden in den Trainingsdaten 84 % genau erfassen konnte. Wir vergleichen diese Erfolgsrate dann mit der Erfolgsrate des Basismodells, um die relative Änderung zu melden. Dieser Wert wird verwendet, um dem Modell eine Stufe zuzuweisen.
+    Sehen Sie den Unterschied bei der Vorhersage hochwertiger Kunden mithilfe des KI-Modells im Vergleich zum Basismodell. Zum Beispiel bedeutet eine Erfolgsquote von 84 %, dass das KI-Modell von allen hochwertigen Kunden in den Trainingsdaten 84 % genau erfassen konnte. Wir vergleichen diese Erfolgsrate dann mit der Erfolgsrate des Basismodells, um die relative Änderung zu melden. Dieser Wert wird verwendet, um dem Modell eine Stufe zuzuweisen.
 
   - **Fehlermetriken**
     
-  Mit einer anderen Metrik können Sie die Gesamtleistung des Modells in Bezug auf Fehler bei der Vorhersage zukünftiger Werte überprüfen. Wir verwenden die RMSE-Metrik (Root Mean Squared Error), um diesen Fehler zu bewerten. RMSE ist eine Standardmethode zur Messung des Fehlers eines Modells bei der Vorhersage quantitativer Daten. Der RMSE des KI-Modells wird mit dem RMSE des Basismodells verglichen und der relative Unterschied angegeben.
+    Mit einer anderen Metrik können Sie die Gesamtleistung des Modells in Bezug auf Fehler bei der Vorhersage zukünftiger Werte überprüfen. Wir verwenden die RMSE-Metrik (Root Mean Squared Error), um diesen Fehler zu bewerten. RMSE ist eine Standardmethode zur Messung des Fehlers eines Modells bei der Vorhersage quantitativer Daten. Der RMSE des KI-Modells wird mit dem RMSE des Basismodells verglichen und der relative Unterschied angegeben.
 
   Das KI-Modell priorisiert das genaue Ranking der Kunden nach dem Wert, den sie für Ihr Unternehmen bringen. Daher wird nur die Erfolgsrate der Vorhersage hochwertiger Kunden verwendet, um die endgültige Modellstufe abzuleiten. Die RMSE-Metrik reagiert empfindlich auf Ausreißer. In Szenarien, in denen Sie einen kleinen Prozentsatz von Kunden mit außerordentlich hohen Kaufwerten haben, liefert die RMSE-Gesamtmetrik möglicherweise nicht das vollständige Bild der Modellleistung.   
 
@@ -206,28 +218,8 @@ Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite.
 
 - **Einflussreichste Faktoren**: Beim Erstellen Ihrer CLV-Vorhersage werden verschiedene Faktoren berücksichtigt, die auf den für das KI-Modell bereitgestellten Eingabedaten basieren. Für jeden dieser Faktoren wird ihre Bedeutung für die aggregierten Vorhersagen, die ein Modell erstellt, berechnet. Sie können diese Faktoren verwenden, um Ihre Vorhersageergebnisse zu validieren. Diese Faktoren bieten auch mehr Einblick in die einflussreichsten Faktoren, die zur Vorhersage des CLV bei all Ihren Kunden beigetragen haben.
 
-## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage
+## <a name="manage-predictions"></a>Verwalten von Vorhersagen
 
-Vorhersagen werden automatisch nach der gleichen [Planung der Datenaktualisierungen](system.md#schedule-tab) aktualisiert, wie in den Einstellungen konfiguriert. Sie können sie auch manuell aktualisieren.
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie aktualisieren möchten.
-3. Wählen Sie **Aktualisieren** aus.
-
-## <a name="delete-a-prediction"></a>Löschen einer Vorhersage
-
-Das Löschen einer Vorhersage entfernt auch deren Ausgabe-Entität.
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, die Sie löschen möchten.
-3. Klicken Sie auf **Löschen**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Fehlersuche bei einer fehlgeschlagenen Vorhersage
-
-1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
-2. Wählen Sie die vertikalen Auslassungspunkte neben der Vorhersage, für die Sie Fehlerprotokolle anzeigen möchten.
-3. Wählen Sie **Logs**.
-4. Überprüfen Sie alle Fehler. Es gibt verschiedene Arten von Fehlern, die auftreten können, und sie beschreiben, welcher Zustand den Fehler verursacht hat. Ein Fehler, für den es nicht genügend Daten gibt, um eine genaue Vorhersage zu treffen, wird normalerweise durch das Laden zusätzlicher Daten in Zielgruppenerkenntnisse behoben.
-
+Es ist möglich, Vorhersagen zu optimieren, zu korrigieren, zu aktualisieren oder zu löschen. Sehen Sie sich einen Eingabedaten-Nutzungsberichts an, um herauszufinden, wie Sie Vorhersagen schneller und zuverlässiger machen. Weitere Informationen finden Sie unter [Verwalten von Vorhersagen](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

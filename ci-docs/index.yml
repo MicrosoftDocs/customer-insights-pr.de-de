@@ -5,14 +5,13 @@ metadata:
   description: Finden Sie relevante Artikel, um mit Hilfsinhalten zu beginnen.
   ms.author: mhart
   ms.date: 03/02/2022
-  ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107198"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350468"
 title: Dokumentation zu Dynamics 365 Customer Insights
 summary: Finden Sie hilfreiche Ressourcen für den Einstieg und erfahren Sie mehr über die Funktionen und Möglichkeiten von Customer Insights.
 landingContent:
@@ -44,7 +43,7 @@ landingContent:
     links:
     - text: Starten Sie
       url: /learn/modules/get-started-customer-data-platform/
-- title: Verwalten von Zielgruppe Insights
+- title: Customer Insights verwalten
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -68,53 +67,3 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Problem melden
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Daten zwischen Funktionen teilen
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Eine Verbindung zwischen Funktionen erstellen
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: Segmente zur Verwendung in Berichten erstellen
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: Profileigenschaften für interaktive Analysen verwenden
-      url: engagement-insights/curate-dimensions.md
-- title: Exportieren von Zielgruppen-Insights-Daten
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Exportziele festlegen
-      url: audience-insights/export-destinations.md
-    - text: Kundenkarten in Dynamics 365 Apps
-      url: audience-insights/customer-card-add-in.md
-    - text: Power BI-Connector
-      url: audience-insights/export-power-bi.md
-- title: Über Engagements Insights (Vorschau)
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Funktionalitätsübersicht
-      url: engagement-insights/overview.md
-    - text: Begriffe und Konzepte
-      url: engagement-insights/glossary.md
-    - text: Los geht's
-      url: engagement-insights/get-started.md
-- title: Berichte für Kundenbindungseinblicke (Vorschau)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Berichte anzeigen
-      url: engagement-insights/view-reports.md
-    - text: Erstellen von benutzerdefinierten Berichten
-      url: engagement-insights/custom-reports.md
-    - text: Bericht über vereinheitlichte Profile anzeigen
-      url: engagement-insights/profile-reports.md
-- title: Ereignisse für Kundenbindungseinblicke (Vorschau)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Erzeugen von verfeinerten Ereignissen
-      url: engagement-insights/refined-events.md
-    - text: Ereignisse exportieren
-      url: engagement-insights/export-events.md
-    - text: Löschen und Exportieren von Personendaten
-      url: engagement-insights/delete-export-personal-data.md

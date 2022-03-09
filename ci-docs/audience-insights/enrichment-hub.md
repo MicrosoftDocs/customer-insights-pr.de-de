@@ -1,56 +1,96 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
 description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
-ms.date: 11/02/2020
-ms.reviewer: kishorem
-ms.service: customer-insights
+ms.date: 02/07/2022
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6b73aa93ec1a98f2b8d20d02e88bc6304f887078
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.custom: intro-internal
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269467"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355382"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
 Nutzen Sie Daten aus Quellen wie Microsoft und anderen Partnern zur Anreicherung Ihrer Kundendaten.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Enrichment Hub-Seite":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Enrichment Hub-Seite.":::
 
-Gehen Sie in Zielgruppen-Insights zu **Daten** > **Anreicherung**, um mit Anreicherungsoptionen zu arbeiten.    
+Gehen Sie in Zielgruppen-Insights zu **Daten** > **Anreicherung**, um mit Anreicherungsoptionen zu arbeiten.  
+
 Um Anreicherungen erstellen oder bearbeiten zu können, benötigen Sie die Berechtigungen eines Teilnehmers oder Administrators. Weitere Informationen finden Sie unter [Berechtigungen](permissions.md).
 
-Auf der Registerkarte **Entdecken** finden Sie die folgenden Anreicherungen:
+Auf der Registerkarte **Entdecken** finden Sie alle unterstützten Anreicherungsoptionen.
 
-- [Marken](enrichment-microsoft-graph.md) bereitgestellt von Microsoft Graph
-- [Interessen](enrichment-microsoft-graph.md) bereitgestellt von Microsoft Graph
+# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
+
+- [Marken](enrichment-microsoft.md) bereitgestellt von Microsoft
+- [Interessen](enrichment-microsoft.md) bereitgestellt von Microsoft
+- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
+- [Demografiedaten](enrichment-experian.md) von Experian bereitgestellt
+- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
+- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies 
+
+# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+
 - [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
-- [Demografische Daten](enrichment-experian.md) bereitgestellt von Experian
-- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies
-- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP)
+- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
+- [Erweiterte Unternehmensdaten](enrichment-enhanced-company-data.md) bereitgestellt von Microsoft
+- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies 
+- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
+- [Kontobindungsdaten](enrichment-office.md), die von Microsoft bereitgestellt werden
+
+---
 
 Auf der Registerkarte **Meine Anreicherungen** können Sie die von Ihnen konfigurierten Anreicherungen sehen und ihre Eigenschaften bearbeiten.
 
 ## <a name="manage-existing-enrichments"></a>Vorhandene Anreicherungen verwalten
 
-Gehen Sie zu **Meine Anreicherungen**, um alle konfigurierten Anreicherungen zu sehen. Jede Anreicherung wird als Zeile dargestellt, die zusätzliche Informationen zur Anreicherung enthält.
+Gehen Sie zur Registerkarte **Meine Anreicherungen**, um alle konfigurierten Anreicherungen anzuzeigen. Jede Anreicherung wird als Zeile dargestellt, die zusätzliche Informationen zur Anreicherung enthält.
 
-Wählen Sie eine Anreicherung aus, um die verfügbaren Optionen anzuzeigen. Alternativ können Sie die Auslassungspunkte (...) in einem Listenelement auswählen, um die Optionen anzuzeigen.
+Wählen Sie die Anreicherung aus, um die verfügbaren Optionen anzuzeigen. Sie können auch die Auslassungspunkte (...) in einem Listenelement auswählen, um die Optionen anzuzeigen. Wenn Sie mehrere Anreicherungen konfiguriert haben, finden Sie diese schnell über das Suchfeld.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Optionen zum Verwalten von Anreicherungen in der Liste der Anreicherungen":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Optionen zum Verwalten von Anreicherungen in der Liste der Anreicherungen.":::
 
 - **Anzeige** von Anreicherungsdetails mit der Anzahl der angereicherten Kundenprofile.
 - **Bearbeiten** der Anreicherungskonfiguration.
 - **Ausführen** der Bereicherung, um Kundenprofile mit den neuesten Daten zu aktualisieren.
 - **Deaktivieren** einer vorhandenen Anreicherung, um zu verhindern, dass sie bei jeder geplanten Aktualisierung automatisch aktualisiert wird. Die Daten der letzten erfolgreichen Aktualisierung sind weiterhin verfügbar. **Aktivieren** eine inaktiven Anreicherung, um die automatische Aktualisierung bei jeder geplanten Aktualisierung neu zu starten.
-- **Löschen** einer Anreicherung.
+- **Löschen** Sie die Anreicherung.
 
-Sie können mehrere Anreicherungen gleichzeitig ausführen oder deaktivieren, indem Sie sie in der Liste auswählen. Anzeige- und Bearbeitungsoptionen sind nicht als Massenaktion verfügbar und funktionieren jeweils nur für eine Anreicherung.
+Führen Sie mehrere Anreicherungen gleichzeitig aus oder deaktivieren Sie sie, indem Sie sie in der Liste auswählen. Ansichts- und Bearbeitungsoptionen sind nicht als Massenaktion verfügbar. Sie funktionieren jeweils nur für eine Anreicherung.
 
+## <a name="enrichments-and-connections"></a>Anreicherungen und Verbindungen
+
+Anreicherungen von Drittanbietern werden mithilfe von [Verbindungen](connections.md) konfiguriert, die ein Administrator mit Anmeldeinformationen einrichtet und die Zustimmung zur Datenübertragung erteilt. Die Verbindung kann von Administratoren und Beitragenden zur Konfiguration von Anreicherungen verwendet werden.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Mehrfachanreicherungen des gleichen Typs
+
+Die zu bereichernde Entität wird während der Anreicherungskonfiguration angegeben, sodass Sie nur eine Teilmenge Ihrer Profile anreichern können. Anreichern von Daten beispielsweise nur für ein bestimmtes Segment. Sie können mehrere Anreicherungen desselben Typs konfigurieren und dieselbe Verbindung wiederverwenden. Bei einigen Anreicherungen ist die Anzahl der Anreicherungen desselben Typs, die erstellt werden können, begrenzt. Die Grenzwerte und die aktuelle Verwendung sind auf der Seite **Anreicherung** zu sehen.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Anzeigen des Fortschritts des Anreicherungsprozesses
+
+Sie finden Details zur Verarbeitung einer Anreicherung, einschließlich ihres Status und potenzieller Probleme, während der Aktualisierung oder nach Abschluss einer Aktualisierung. Verstehen Sie, welche Prozesse beteiligt sind, um eine Anreicherung zu aktualisieren, und wie lange es dauerte, die Prozesse auszuführen. Der Anreicherungsstatus wird unterstützt für Experian, Leadspace, HERE Technologies, SFTP Import und Azure Maps.
+
+Anzeigen des Status der Bereicherung
+
+1. Gehen Sie zu **Daten** > **Anreicherung**. 
+1. Wählen Sie auf der Registerkarte **Meine Anreicherungen** den Status einer Anreicherung aus, um einen Seitenbereich zu öffnen. 
+1. Erweitern Sie im Bereich **Fortschrittsdetails** den Abschnitt **Anreicherungen**. 
+1. Wählen Sie unter der Bereicherung, deren Fortschritt Sie sehen möchten, **Details anzeigen**. 
+1. Im Bereich **Aufgabendetails** wählen Sie **Details anzeigen**, um die Prozesse anzuzeigen, die an der Aktualisierung der Anreicherung beteiligt sind, und deren Status. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
