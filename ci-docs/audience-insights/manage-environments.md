@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie sich für den Dienst anmelden und wie Sie Umgebungen verwalten können.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354278"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376875"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
-
-
 
 ## <a name="switch-environments"></a>Umgebungen wechseln
 
@@ -98,9 +96,29 @@ Nachdem Sie die Datenquellen aktualisiert haben, gehen Sie zu **Daten** > **Vere
 
 Wenn die Datenvereinheitlichung abgeschlossen ist, gehen Sie zu **Maßnahmen** und **Segmente**, um sie auch zu aktualisieren.
 
+## <a name="change-the-owner-of-an-environment"></a>Den Besitzer einer Umgebung ändern
+
+Während mehrere Benutzer Administratorberechtigungen in Customer Insights haben können, ist nur ein Benutzer der Eigentümer einer Umgebung. Standardmäßig erstellt zunächst der Administrator eine Umgebung. Als Administrator einer Umgebung können Sie einem anderen Benutzer mit Administratorberechtigungen die Eigentümerschaft zuweisen.
+
+1. Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus.
+
+1. Wählen Sie das Symbol **Bearbeiten** aus.
+
+1. In dem Kästchen **Umgebung bearbeiten** gehen Sie zum Schritt **Grundinformation**.
+
+1. In dem Feld **Eigentümer der Umgebung ändern** wählen Sie den neuen Eigentümer der Umgebung aus.  
+
+1. Wählen Sie **Überprüfen und beenden** und dann **Aktualisieren**, um die Änderungen zu übernehmen. 
+
+## <a name="claim-ownership-of-an-environment"></a>Beanspruchen Sie den Besitz einer Umgebung
+
+Wenn der Eigentümer einer Umgebung die Organisation verlässt oder sein Benutzerkonto gelöscht wird, hat die Umgebung keinen Eigentümer. Ein Benutzer mit Administratorberechtigungen kann die Eigentümerschaft beanspruchen und der neue Eigentümer werden. Sie können weiterhin die Umwelt besitzen oder [den Besitz auf einen anderen Administrator übertragen](#change-the-owner-of-an-environment). 
+
+Um den Besitz zu beanspruchen, wählen Sie die Schaltfläche **In Besitz nehmen** aus, die oben auf jeder Seite in Customer Insights angezeigt wird, wenn der ursprüngliche Eigentümer die Organisation verlassen hat.
+
 ## <a name="reset-an-existing-environment"></a>Zurücksetzen einer bestehenden Umgebung
 
-Als Administrator können Sie eine Umgebung auf einen leeren Zustand zurücksetzen, wenn Sie alle Konfigurationen löschen und die aufgenommenen Daten entfernen möchten.
+Als Besitzer einer Umgebung können Sie eine Umgebung auf einen leeren Zustand zurücksetzen, wenn Sie nur die Konfigurationen und eingebundene Daten entfernen, die Umgebung jedoch behalten möchten.
 
 1.  Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus. 
 
@@ -112,7 +130,7 @@ Als Administrator können Sie eine Umgebung auf einen leeren Zustand zurücksetz
 
 ## <a name="delete-an-existing-environment"></a>Löschen Sie eine vorhandene Umgebung
 
-Als Administrator können Sie eine von Ihnen verwaltete Umgebung löschen.
+Als Besitzer einer Umgebung können Sie eine von Ihnen verwaltete Umgebung löschen.
 
 1.  Wählen Sie die **Umgebung**-Auswahl in der Kopfzeile der App aus.
 

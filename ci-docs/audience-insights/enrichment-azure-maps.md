@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 2cc44f7b453d2aca328c397b14787c8a02c5e490
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226448"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376645"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Anreicherung von Kundenprofilen mit Azure Maps (Vorschau)
 
@@ -25,7 +25,7 @@ Um die Azure Maps-Datenanreicherung zu konfigurieren, müssen die folgenden Vora
 
 - Sie haben ein aktives Azure Maps-Abonnement. Um ein Abonnement zu erhalten, können Sie [sich registrieren oder eine kostenlose Testversion erhalten](https://azure.microsoft.com/services/azure-maps/).
 
-- Eine Azure Maps-[Verbindung](connections.md) ist verfügbar, *oder* Sie haben [Administratorberechtigungen](permissions.md#administrator) und einen aktiven Azure Maps-API-Schlüssel.
+- Eine Azure Maps-[Verbindung](connections.md) ist verfügbar, *oder* Sie haben [Administratorberechtigungen](permissions.md#admin) und einen aktiven Azure Maps-API-Schlüssel.
 
 ## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 

@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355152"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376921"
 ---
 # <a name="match-entities"></a>Entitäten anpassen
 
@@ -180,7 +180,19 @@ Eine Deduplizierungsausgabeentität enthält die folgenden Informationen:
   - Deduplication_WinnerId: Dieses Feld enthält die Gewinner-ID der identifizierten Gruppen oder Cluster. Wenn „Deduplication_WinnerId“ mit dem Primärschlüsselwert für einen Datensatz identisch ist, bedeutet dies, dass der Datensatz der Gewinnerdatensatz ist.
 - Felder zum Definieren der Deduplizierungsregeln.
 - Regel- und Bewertungsfelder geben an, welche der Deduplizierungsregeln angewendet und welche Bewertung vom Übereinstimmungsalgorithmus zurückgegeben wurde.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Angereicherte Entitäten einschließen (Vorschau)
+
+Wenn Sie Entitäten auf der Ebene Datenquelle angereichert haben, wählen Sie sie aus, bevor Sie den Abgleichsprozess ausführen. Die angereicherten Entitäten können Ihre Vereinigungsergebnisse verbessern. Weitere Informationen finden Sie unter [Anreicherungen für Datenquellen](data-sources-enrichment.md). 
+
+Die angereicherte Entität enthält die ursprünglichen Datenquelle-Felder und die angereicherten Felder. Wenn Sie sich also dafür entscheiden, mit der angereicherten Entität zu arbeiten, wird die vorhandene Konfiguration nicht beeinträchtigt. Möglicherweise müssen Sie jedoch die Übereinstimmungsregeln aktualisieren, um stattdessen die angereicherten Felder zu verwenden.
+
+1. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Anpassen** und wähle Sie **Verwenden Sie angereicherte Entitäten** oben auf der Seite.
+
+1. Von dem Bereich **Verwenden Sie angereicherte Entitäten** wählen Sie im Bereich eine oder mehrere angereicherte Entitäten aus.
+
+1. Wählen Sie **Fertig** aus. Überall dort, wo die Quellentität verwendet wird (z. B. Match-Reihenfolge oder Regeln), wird sie automatisch in die angereicherte Entität geändert.
+  
 ## <a name="run-the-match-process"></a>Den Abgleichprozess ausführen
 
 Nachdem Sie die Abgleichsregeln konfiguriert haben, einschließlich der Regeln für den entitätsübergreifenden Abgleich und die Deduplizierung, können Sie den Abgleichprozess ausführen. 

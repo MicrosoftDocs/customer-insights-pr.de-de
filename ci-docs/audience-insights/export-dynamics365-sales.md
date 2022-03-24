@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355016"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455837"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmente in Dynamics 365 Sales verwenden (Vorschau)
 
@@ -31,7 +31,7 @@ Verwenden Sie Ihre Kundendaten, um Marketinglisten zu erstellen, Workflows zu ve
 
 ## <a name="prerequisite-for-connection"></a>Voraussetzungen für die Verbindung
 
-1. Kontaktdatensätze müssen in Dynamics 365 Sales vorhanden sein, bevor Sie ein Segment von Customer Insights nach Sales exportieren können. Lesen Sie mehr darüber, wie Sie Kontakte in [Dynamics 365 Sales mit Microsoft Dataverse](connect-power-query.md) erfassen können.
+1. Kontaktdatensätze müssen in Dynamics 365 Sales vorhanden sein, bevor Sie ein Segment von Customer Insights nach Sales exportieren können. Lesen Sie mehr darüber, wie Sie Kontakte von [Dynamics 365 Sales mithilfe von Microsoft Dataverse](connect-dataverse-managed-lake.md) erfassen können.
 
    > [!NOTE]
    > Durch das Exportieren von Segmenten aus Zielgruppenerkenntnissen nach Sales werden keine neuen Kontaktdatensätze in den Sales-Instanzen erstellt. Die Kontaktdatensätze von Sales müssen in Zielgruppenerkenntnissen aufgenommen und als Datenquelle verwendet werden. Sie müssen auch in die einheitliche Kundenentität aufgenommen werden, um Kunden-IDs Kontakt-IDs zuzuordnen, bevor Segmente exportiert werden können.

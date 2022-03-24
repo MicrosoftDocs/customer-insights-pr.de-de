@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350130"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455997"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Erste Schritte nach dem Kauf von Customer Insights
 
@@ -39,7 +39,4 @@ Die Erstausführung hilft Ihnen bei der Auswahl Ihres ersten Schwerpunkts mit Cu
 
 ## <a name="create-your-own-environment"></a>Eigenen Umgebung erstellen
 
-Nach Ihrer ersten Anmeldung sehen Sie eine Umgebung mit Beispieldaten. Sie können diese Daten verwenden, um Funktionen zu erkunden und sich mit der App vertraut zu machen. Um Ihre eigenen Daten zu verwenden, müssen Sie [eine Umgebung schaffen](audience-insights/get-started-paid.md).
-
-
-
+Nach Ihrer ersten Anmeldung sehen Sie eine Umgebung mit Beispieldaten. Sie können diese Daten verwenden, um Funktionen zu erkunden und sich mit der App vertraut zu machen. Um Ihre eigenen Daten zu verwenden, müssen Sie [eine Umgebung schaffen](/dynamics365/customer-insights/audience-insights/create-environment).

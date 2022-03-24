@@ -1,7 +1,7 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
 description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
-ms.date: 02/07/2022
+ms.date: 02/18/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355382"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372714"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
@@ -42,6 +42,7 @@ Auf der Registerkarte **Entdecken** finden Sie alle unterstützten Anreicherungs
 - [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
 - [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies 
+- [Identität](enrichment-liveramp.md) bereitgestellt von LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
@@ -80,6 +81,10 @@ Anreicherungen von Drittanbietern werden mithilfe von [Verbindungen](connections
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mehrfachanreicherungen des gleichen Typs
 
 Die zu bereichernde Entität wird während der Anreicherungskonfiguration angegeben, sodass Sie nur eine Teilmenge Ihrer Profile anreichern können. Anreichern von Daten beispielsweise nur für ein bestimmtes Segment. Sie können mehrere Anreicherungen desselben Typs konfigurieren und dieselbe Verbindung wiederverwenden. Bei einigen Anreicherungen ist die Anzahl der Anreicherungen desselben Typs, die erstellt werden können, begrenzt. Die Grenzwerte und die aktuelle Verwendung sind auf der Seite **Anreicherung** zu sehen.
+
+## <a name="enrich-data-sources-before-unification"></a>Reichern Sie Datenquellen vor der Vereinheitlichung an
+
+Sie können Ihre Kundendaten vor der Datenvereinheitlichung anreichern, um die Qualität eines Datenabgleichs zu verbessern. Weitere Informationen finden Sie unter [Datenquellen anreichern](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Anzeigen des Fortschritts des Anreicherungsprozesses
 

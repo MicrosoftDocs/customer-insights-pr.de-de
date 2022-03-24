@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355890"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376507"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Bring Your Own Azure Key Vault (Vorschau)
 
@@ -31,7 +31,7 @@ Um den Schlüsseltresor in Zielgruppenerkenntnissen zu konfigurieren, müssen di
 
 - Sie müssen ein aktives Azure Abonnement haben.
 
-- Sie verfügen in Zielgruppenerkenntnissenn über die Benutzerrolle [Administrator](permissions.md#administrator). Erfahren Sie mehr über [Benutzerberechtigungen in Zielgruppenerkenntnissen](permissions.md#assign-roles-and-permissions).
+- Sie verfügen in Zielgruppenerkenntnissenn über die Benutzerrolle [Administrator](permissions.md#admin). Erfahren Sie mehr über [Benutzerberechtigungen in Zielgruppenerkenntnissen](permissions.md#assign-roles-and-permissions).
 
 - Sie haben [Mitwirkenden](/azure/role-based-access-control/built-in-roles#contributor) und [Benutzerzugriff-Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)-Rollen im Schlüsseltresor oder der Ressourcengruppe, zu der der Schlüsseltresor gehört. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Azure-Rollenzuweisungen über das Azure-Portal](/azure/role-based-access-control/role-assignments-portal). Wenn Sie nicht über die Rolle Benutzerzugriff Administrator für den Schlüsseltresor verfügen, müssen Sie die rollenbasierten Zugriffssteuerungsberechtigungen für den Azure-Dienstprinzipal für Dynamics 365 Customer Insights separat einrichten. Folgen Sie den Schritten, um einen [Azure-Dienstprinzipals](connect-service-principal.md) für den zu verknüpfenden Schlüsseltresor zu verwenden.
 

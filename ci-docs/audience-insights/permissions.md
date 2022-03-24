@@ -1,7 +1,7 @@
 ---
 title: Verwalten von Benutzerberechtigungen
 description: Erfahren Sie mehr über Berechtigungen und Benutzerrollen.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355936"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376737"
 ---
 # <a name="user-permissions"></a>Benutzerberechtigungen
 
@@ -48,7 +48,7 @@ Es gibt drei Arten von Rollen:
 - Verwalten Sie die Konfiguration und reichern Sie Kundenprofile über die Seite **Anreicherung** an (nur für First-Party-Anreicherungen).
 - Verwalten und erstellen Sie Exporte basierend auf Verbindungen, die mit Mitwirkenden geteilt werden. [Erfahren Sie mehr darüber, wie Administratoren Mitwirkenden erlauben, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrator
+## <a name="admin"></a>Administrator
 
 - Alle dem Beitragenden zur Verfügung stehenden Berechtigungen.
 - Ändern Sie die Einstellungen auf der Seite **System**, einschließlich der Arbeitssprache und der Aktualisierungszeitpläne für Ihre Systemprozesse.
@@ -60,6 +60,12 @@ Es gibt drei Arten von Rollen:
 - Installieren und verwenden Sie das **Kundenkarten-Add-in**.
 - Fügen Sie den **Power Apps-Konnektor** hinzu und verwenden Sie ihn.
 - Aktivieren Sie die Verwendung der [Customer Insights APIs](apis.md).
+- [Umgebungsbesitz zuweisen](manage-environments.md#change-the-owner-of-an-environment) an einen anderen Administrator.
+
+## <a name="admin-owner"></a>Admin (Besitzer)
+
+- Alle Berechtigungen, die dem Administrator zur Verfügung stehen.
+- Die Umgebung [zurücksetzen und löschen](manage-environments.md#reset-an-existing-environment).
 
 ## <a name="assign-roles-and-permissions"></a>Rollen und Berechtigungen zuweisen
 

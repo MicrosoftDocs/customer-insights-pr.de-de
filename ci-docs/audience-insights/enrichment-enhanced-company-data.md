@@ -8,16 +8,18 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229402"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376321"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Anreicherung von Unternehmensprofilen mit verbesserten Unternehmensdaten
 
 Verwenden Sie Microsofts Modelle und zusammengestellte Unternehmensdaten, um Ihre Unternehmensprofile zu korrigieren, zu ergänzen und zu standardisieren. Wir werden das [Common Data Model-Format](/common-data-model/schema/core/applicationcommon/account) verwenden, um eine bessere Genauigkeit und bessere Einblicke zu erzielen.
+
+Sie können auch [Unternehmensdaten auf Datenquellen anreichern](data-sources-enrichment.md), um die Übereinstimmungsgenauigkeit im Datenvereinheitlichungsprozess zu verbessern. 
 
 ## <a name="how-we-enhance-company-data"></a>Verbessern von Unternehmensdaten
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354407"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376415"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Protokollweiterleitung in Dynamics 365 Customer Insights mit Azure Monitor (Vorschauversion)
 
@@ -37,7 +37,7 @@ Customer Insights sendet die folgenden Ereignisprotokolle:
 Zum Konfigurieren der Diagnose in Customer Insights müssen die folgenden Voraussetzungen erfüllt sein:
 
 - Sie verfügen über ein aktives [Azure-Abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Sie verfügen über [Administrator](permissions.md#administrator)-Berechtigungen in Customer Insights.
+- Sie verfügen über [Administrator](permissions.md#admin)-Berechtigungen in Customer Insights.
 - Sie verfügen über die Rollen **Mitwirkender** und **Benutzerzugriffsadministrator** für die Zielressource in Azure. Die Ressource kann ein Azure Storage-Konto, ein Azure Event Hub oder ein Azure Log Analytics-Arbeitsbereich sein. Weitere Informationen finden Sie unter [Azure-Rollenzuweisungen über das Azure-Portal hinzufügen oder entfernen](/azure/role-based-access-control/role-assignments-portal).
 - Die [Zielanforderungen](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) für Azure Storage, Azure Event Hub oder Azure Log Analytics sind erfüllt.
 - Sie verfügen mindestens über die Rolle **Leser** in der Ressourcengruppe, zu der die Ressource gehört.
@@ -132,7 +132,7 @@ API-Ereignisse und Workflow-Ereignisse haben eine gemeinsame Struktur und unters
 | `resultSignature` | String    | Optional          | Ergebnisstatus des Ereignisses Wenn der Vorgang einem REST-API-Aufruf entspricht, ist dies der HTTP-Statuscode.        | `200`             |
 | `durationMs`      | Lang      | Optional          | Dauer des Vorgangs in Millisekunden     | `133`     |
 | `callerIpAddress` | String    | Optional          | IP-Adresse des Aufrufers, wenn der Vorgang einem API-Aufruf entspricht, der von einer öffentlich verfügbaren IP-Adresse stammt.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Optional          | JSON-Objekt, das die Identität des Benutzers oder der Anwendung beschreibt, die den Vorgang ausgeführt hat.       | Weitere Informationen finden Sie im Abschnitt [Identität](#identity-schema).     |  |
+| `identity`        | String    | Optional          | JSON-Objekt, das die Identität des Benutzers oder der Anwendung beschreibt, die den Vorgang ausgeführt hat.       | Weitere Informationen finden Sie im Abschnitt [Identität](#identity-schema).     |  
 | `properties`      | String    | Optional          | JSON-Objekt mit mehr Eigenschaften für die jeweilige Ereigniskategorie.      | Weitere Informationen finden Sie im Abschnitt [Eigenschaften](#api-properties-schema).    |
 | `level`           | String    | Erforderlich          | Schweregrad des Ereignisses    | `Informational`, `Warning`, `Error` oder `Critical`.           |
 | `uri`             | String    | Optional          | Absoluter Anforderungs-URI    |               |
@@ -239,7 +239,7 @@ Workflow-Ereignisse haben die folgenden Eigenschaften.
 | `properties.startTimestamp`                  | Ja      | Ja  | UTC-Zeitstempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Ja      | Ja  | UTC-Zeitstempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Ja      | Ja  | UTC-Zeitstempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Ja      | Ja  | Customer Insights-`instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Ja      | Ja  | Customer Insights-`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | Nr.       | Ja  | - Für OperationType = `Export` ist der Bezeichner die GUID der Exportkonfiguration. <br> - Für OperationType =`Enrichment` ist es die GUID der Anreicherung <br> - Für OperationType `Measures` und `Segmentation` ist der Bezeichner der Entitätsname. |
 | `properties.friendlyName`                    | Nr.       | Ja  | Benutzerfreundlicher Name des Exports oder der verarbeiteten Entität                                                                                                                                                                                           |
 | `properties.error`                           | Nr.       | Ja  | Optional. Fehlermeldung mit mehr Details                                                                                                                                                                                                                  |
