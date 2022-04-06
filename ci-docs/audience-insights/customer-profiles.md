@@ -9,23 +9,20 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-customer-card
-- ci-activities
-- ci-activities-wizard
-- customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354880"
+  - ci-customers-page
+  - ci-customer-card
+  - ci-activities
+  - ci-activities-wizard
+  - customerInsights
 ---
+
 # <a name="customer-profiles"></a>Kundenprofile
 
 Die **Kunden**-Seite zeigt eine kombinierte Ansicht Ihrer Vereinheitlichtes Kund*innenprofile. Die Kundenprofile sind verfügbar, sobald Sie [die einheitliche Kundenentität erstellt haben](data-unification.md). Auf der Seite können Sie nach Kunden suchen und den Index für diese Suche definieren.
 
-Bei den Kunden kann es sich um Einzelpersonen oder Unternehmen handeln. Jedes Kundenprofil wird durch eine Kachel dargestellt. Verwenden Sie die Paginierungssteuerelemente, um mehr Datensätze zu erhalten. Die Karte zeigt Felder aus der Entität *Kunde* im Sinne des **Such- und Filterindex** an. Wählen Sie eine Kachel aus, um Daten für den ausgewählten Kunden auf einer speziellen Seite namens [Kundendetailseite](customer-profiles.md#customer-details-page) anzuzeigen.
+Bei den Kunden kann es sich um Einzelpersonen oder Unternehmen handeln. Jedes Kundenprofil wird durch eine Kachel dargestellt. Verwenden Sie die Paginierungssteuerelemente, um mehr Datensätze zu erhalten. Die Karte zeigt Felder aus der Entität *Kunde* im Sinne des **Such- und Filterindex** an. Die Reihenfolge der Felder innerhalb jeder Karte wird vom System ausgewählt.
+
+Wählen Sie eine Kachel aus, um Daten für den ausgewählten Kunden auf einer speziellen Seite namens [Kundendetailseite](customer-profiles.md#customer-details-page) anzuzeigen.
 
 > [!div class="mx-imgBorder"] 
 > ![Kundenseite mit Ergebniskacheln](media/customers-page-result-tiles-B2C.png "Kundenseite mit Ergebniskacheln")

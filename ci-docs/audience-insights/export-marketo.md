@@ -1,6 +1,6 @@
 ---
 title: Customer Insights Daten nach Marketo exportieren
-description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Marketo exportieren.
+description: 'Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Marketo exportieren.'
 ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,13 +8,8 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231978"
 ---
+
 # <a name="export-segments-to-marketo-preview"></a>Segmente nach Marketo exportieren (Vorschau)
 
 Exportieren Sie Segmente von vereinheitlichten Kundenprofilen, um Kampagnen zu erstellen, E-Mail-Marketing zu betreiben und bestimmte Kundengruppen mit Marketo zu nutzen.
@@ -63,7 +58,7 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Geben Sie Ihre **[Marketo-Listen-ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** ein. Die Listen-ID ist ein rein numerischer Wert. Wenn Ihre Marketo-Listen-ID beispielsweise ST12345A7 lautet, entfernen Sie das Zeichen vor und nach den Ziffern und geben Sie `12345` ein. 
 
-1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. 
+1. In dem Abschnitt **Datenabgleich** wählen Sie mindestens ein Feld aus, das die E-Mail-Adresse eines Kunden oder die Marketo-ID eines Kunden darstellt. 
 
 1. Optional können Sie **Vorname**, **Nachname**, **Stadt**, **Bundesland** und **Land / Region** exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
 

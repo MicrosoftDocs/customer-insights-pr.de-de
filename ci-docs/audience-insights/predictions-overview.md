@@ -1,20 +1,15 @@
 ---
 title: Übersicht über unterstützte Vorhersageszenarien
-description: Vorhersageszenarien und Optionen, die von der Anwendung Dynamics 365 Customer Insights abgedeckt werden.
-ms.date: 12/21/2021
+description: 'Vorhersageszenarien und Optionen, die von der Anwendung Dynamics 365 Customer Insights abgedeckt werden.'
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228243"
 ---
+
 # <a name="predictions-overview"></a>Übersicht über Vorhersagen
 
 Dynamics 365 Customer Insights ist mit einer Vielzahl von Optionen ausgestattet, die KI und Machine Learning nutzen, um Daten vorherzusagen. 
@@ -36,6 +31,11 @@ Der einfachste Weg, um mit der Vorhersage von Daten zu beginnen, sind vordefinie
 - [Transaktionsabwanderung](predict-transactional-churn.md) : Sagt vorher, ob ein Kunde Ihre Produkte oder Dienstleistungen in einem bestimmten Zeitrahmen nicht mehr kaufen wird.
 
 ---
+
+> [!TIP]
+> Wir empfehlen, dass Sie Standardmodelle regelmäßig mit aktualisierten Daten aktualisieren, um sicherzustellen, dass sie Ihren geschäftlichen Anwendungsfall genau darstellen. Daten werden ad hoc aktualisiert, wenn das System neue oder aktualisierte Datenquellen aufnimmt. Modelle werden jedoch nur in diesem Fall neu bewertet und verwenden weiterhin die vorhandenen Trainingsdaten.
+> 
+> Sie können durch Festlegen des Zeitplans für das Neutraining des Modells in der Konfigurationsoberfläche einen **Zeitplan aktualisieren**. Das Modell wird nach diesem Zeitplan, den Sie jederzeit ändern können, erneut trainiert und neu bewertet.
 
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learning-Integration

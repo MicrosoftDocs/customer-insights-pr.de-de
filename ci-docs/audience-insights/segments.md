@@ -1,7 +1,7 @@
 ---
 title: Segmente in Zielgruppenerkenntnissen
 description: Übersicht über Segmente und wie man sie erstellt und verwaltet.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -9,18 +9,13 @@ ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-enrichment-details
-- ci-segments
-- ci-segment-details
-- customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355982"
+  - ci-customers-page
+  - ci-enrichment-details
+  - ci-segments
+  - ci-segment-details
+  - customerInsights
 ---
+
 # <a name="segments-overview"></a>Übersicht über Segmente
 
 Mit Segmenten können Sie Ihre Kunden anhand von demografischen, transaktionalen oder verhaltensbezogenen Attributen gruppieren. Sie können Segmente verwenden, um Werbekampagnen, Vertriebsaktivitäten und Kundensupportaktionen gezielt auf die Erreichung Ihrer Geschäftsziele auszurichten.
@@ -68,7 +63,9 @@ Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
 
 ## <a name="refresh-segments"></a>Aktualisieren von Segmenten
 
-Sie können alle Segmente auf einmal aktualisieren, indem Sie **Alles aktualisieren** auf der Seite **Segmente** wählen, oder Sie können ein oder mehrere Segmente aktualisieren, wenn Sie sie auswählen und **Aktualisieren** aus den Optionen wählen. Alternativ können Sie eine laufende Aktualisierung unter **Administrator** > **System** > **Zeitplan** konfigurieren.
+Sie können alle Segmente auf einmal aktualisieren, indem Sie **Alles aktualisieren** auf der Seite **Segmente** wählen, oder Sie können ein oder mehrere Segmente aktualisieren, wenn Sie sie auswählen und **Aktualisieren** aus den Optionen wählen. Alternativ können Sie eine laufende Aktualisierung unter **Administrator** > **System** > **Zeitplan** konfigurieren. Wenn eine wiederkehrende Aktualisierung konfiguriert ist, gelten die folgenden Regeln:
+- Alle Segmente mit dem Typ **Dynamisch** oder **Erweiterung** werden automatisch mit der eingestellten Kadenz aktualisiert. Wenn die Aktualisierung abgeschlossen ist, zeigt der **Status** an, ob beim Aktualisieren des Segments Probleme aufgetreten sind. **Zuletzt aktualisiert** zeigt einen Zeitstempel der letzten erfolgreichen Aktualisierung an. Wenn ein Fehler auftritt, wählen Sie den Fehler aus, um die Details dazu anzuzeigen.
+- Segmente mit dem Typ **Statisch** werden *nicht* automatisch aktualisiert werden. **Zuletzt aktualisiert** zeigt einen Zeitstempel der letzten Ausführung oder manuellen Aktualisierung der statischen Segmente an.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

@@ -1,6 +1,6 @@
 ---
 title: Dynamics 365 Customer Insights mit Azure Monitor überwachen
-description: Erfahren Sie, wie Sie Protokolle an Microsoft Azure Monitor senden.
+description: 'Erfahren Sie, wie Sie Protokolle an Microsoft Azure Monitor senden.'
 ms.date: 12/14/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -9,15 +9,10 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376415"
+  - ci-system-diagnostic
+  - customerInsights
 ---
+
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Protokollweiterleitung in Dynamics 365 Customer Insights mit Azure Monitor (Vorschauversion)
 
 Dynamics 365 Customer Insights bietet eine direkte Integration in Azure Monitor. Mit Azure Monitor-Ressourcenprotokollen können Sie Protokolle überwachen und an [Azure Storage](https://azure.microsoft.com/services/storage/) bzw. [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) senden oder zu [Azur Event Hubs](https://azure.microsoft.com/services/event-hubs/) streamen.
@@ -230,7 +225,7 @@ Workflow-Ereignisse haben die folgenden Eigenschaften.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Ja      | Ja  | Immer `WorkflowEvent`, wodurch das Ereignis als Workflow-Ereignis markiert wird.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Ja      | Ja  | Bezeichner der Workflowausführung Alle Workflow- und Aufgabenereignisse innerhalb der Workflow-Ausführung haben dieselbe `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Ja      | Ja  | Bezeichner des Vorgangs, siehe [Vorgangstypen].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Ja      | Ja  | Bezeichner des Vorgangs, siehe [Vorgangstypen](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Ja      | Nr.   | Nur Workflow Anzahl der vom Workflow ausgelösten Aufgaben                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Ja      | Nr.   | Optional. Nur Workflow-Ereignisse Die Azure Active Directory [objectId des Benutzers](/azure/marketplace/find-tenant-object-id#find-user-object-id), der den Workflow ausgelöst hat, siehe auch `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ja      | Nr.   | `full` oder `incremental` Aktualisierung.                                                                                                                                                                                                                            |

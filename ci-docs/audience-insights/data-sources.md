@@ -1,7 +1,7 @@
 ---
 title: Verwenden Sie Datenquellen zur Datenerfassung
-description: Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.
-ms.date: 12/06/2021
+description: 'Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.'
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -9,16 +9,11 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354048"
+  - ci-data-sources
+  - ci-create-data-source
+  - customerInsights
 ---
+
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
 
@@ -47,7 +42,18 @@ Datenquellen, die nach dem Verknüpfen einer Dataverse-Umgebung mit Customer Ins
 
 Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
 
+> [!IMPORTANT]
+> Stellen Sie sicher, dass Ihre Gateways auf die neueste Version aktualisiert sind. Sie können ein Update installieren und ein Gateway über eine Eingabeaufforderung, die auf der Gateway-Anzeige angezeigt wird, direkt installieren oder neu konfigurieren oder [die neueste Version herunterladen](https://powerapps.microsoft.com/downloads/). Wenn Sie nicht die neueste Gateway-Version verwenden, schlägt die Datenflussaktualisierung mit Fehlermeldungen wie **Das Schlüsselwort wird nicht unterstützt: Konfigurationseigenschaften. Parametername: Schlüsselwort** fehl.
+
 ## <a name="review-ingested-data"></a>Eingebundene Daten überprüfen
+Wenn Ihre Umgebung Power Platform Dataflows enthält, enthält die Seite **Datenquellen** drei Abschnitte: 
+- **Geteilt**: Datenquellen, die von allen Customer Insights-Administratoren verwaltet werden können. Power BI Dataflows, Ihr eigenes Speicherkonto und das Anhängen an a Dataverse-verwaltete Data Lake sind Beispiele für gemeinsam genutzte Datenquellen.
+- **Von mir verwaltet**: Power Platform Dataflows erstellt und können nur von Ihnen verwaltet werden. Andere Customer Insights-Administratoren können diese Datenflows nur anzeigen, aber nicht bearbeiten, aktualisieren oder löschen.
+- **Von anderen verwaltet**: Power Platform Dataflows, die von anderen Administratoren erstellt wurden. Sie können sie nur anzeigen. Fürt den Besitzer des Dataflows auf, an den Sie sich für Unterstützung wenden können.
+> [!NOTE]
+> Alle Entitäten können von anderen Benutzern angezeigt und verwendet werden. Die Benutzerkontextualität gilt nur für die Datenquellen und nicht für die Entitäten, die aus diesen Datenflüssen resultieren.
+
+Wenn keine Power Platform Datenflows verwendet werden, sehen Sie keine Gruppen oder Abschnitte. Die Seite **Datenquellen** enthält nur eine Liste aller Datenquellen.
 
 Sie sehen den Namen jeder aufgenommenen Datenquelle, ihren Status und das letzte Mal, dass die Daten für diese Quelle aktualisiert wurden. Sie können die Liste der Datenquellen nach jeder Spalte sortieren.
 

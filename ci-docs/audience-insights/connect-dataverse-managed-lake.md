@@ -1,7 +1,7 @@
 ---
 title: Verbindung mit Tabellen in Microsoft Dataverse herstellen
 description: Importieren Sie Daten aus einem verwalteten Microsoft Dataverse-Data Lake.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -9,18 +9,11 @@ ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
 searchScope:
-- ci-dataverse
-- customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354140"
+  - ci-dataverse
+  - customerInsights
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Verbindung zu Daten in einem Microsoft Dataverse verwalteten Data Lake
-
-
 
 In diesem Artikel erfahren Sie, wie Dataverse-Benutzer schnell eine Verbindung zu analytischen Entitäten in einem von Microsoft Dataverse verwalteten Lake herstellen können. 
 
@@ -29,7 +22,8 @@ In diesem Artikel erfahren Sie, wie Dataverse-Benutzer schnell eine Verbindung z
 
 ## <a name="important-considerations"></a>Wichtige Überlegungen
 
-In Online-Diensten gespeicherte Daten, wie z.B. Azure Data Lake Storage, können an einem anderen Ort gespeichert werden als dort, wo die Daten verarbeitet oder in Dynamics 365 Customer Insights gespeichert werden. Durch das Importieren von oder Verbinden mit Daten, die in Online-Diensten gespeichert sind, erklären Sie sich damit einverstanden, dass Daten an das Microsoft Trust Center übertragen und dort mit Dynamics 365 Customer Insights gespeichert werden können. [Erfahren Sie mehr im Microsoft Trust Center.](https://www.microsoft.com/trust-center).
+1. In Online-Diensten gespeicherte Daten, wie z.B. Azure Data Lake Storage, können an einem anderen Ort gespeichert werden als dort, wo die Daten verarbeitet oder in Dynamics 365 Customer Insights gespeichert werden. Durch das Importieren von oder Verbinden mit Daten, die in Online-Diensten gespeichert sind, erklären Sie sich damit einverstanden, dass Daten an das Microsoft Trust Center übertragen und dort mit Dynamics 365 Customer Insights gespeichert werden können. [Erfahren Sie mehr im Microsoft Trust Center.](https://www.microsoft.com/trust-center).
+2. Nur Dataverse Entitäten mit [Änderungsnachverfolgung](/power-platform/admin/enable-change-tracking-control-data-synchronization) aktiviert sind sichtbar. Diese Entitäten können in den Dataverse-verwalteten Data Lake exportiert und in Customer Insights verwendet werden. Dataverse Tabellen haben standardmäßig die Änderungsnachverfolgung aktiviert. Sie müssen die Änderungsnachverfolgung für benutzerdefinierte Tabellen aktivieren. Um zu prüfen, ob eine Dataverse Tabelle für die Änderungsverfolgung aktiviert ist, gehen Sie zu [Power Apps](https://make.powerapps.com) > **Daten** > **Tabellen**. Finden Sie die Tabelle Ihres Interesses und wählen Sie sie aus. Gehen Sie zu **Einstellungen** > **Erweiterte Optionen** und überprüfen Sie die Einstellung **Änderungsnachverfolgung**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Verbindung zu einem Dataverse verwalteten Lake
 

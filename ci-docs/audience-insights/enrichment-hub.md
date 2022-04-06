@@ -1,7 +1,7 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
-description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
-ms.date: 02/18/2022
+description: 'Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.'
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,17 +10,12 @@ ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-- ci-enrichments
-- ci-enrichment-details
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372714"
+  - ci-enrichments
+  - ci-enrichment-details
+  - ci-enrichment-wizard
+  - customerInsights
 ---
+
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
 Nutzen Sie Daten aus Quellen wie Microsoft und anderen Partnern zur Anreicherung Ihrer Kundendaten.
@@ -97,5 +92,19 @@ Anzeigen des Status der Bereicherung
 1. Erweitern Sie im Bereich **Fortschrittsdetails** den Abschnitt **Anreicherungen**. 
 1. Wählen Sie unter der Bereicherung, deren Fortschritt Sie sehen möchten, **Details anzeigen**. 
 1. Im Bereich **Aufgabendetails** wählen Sie **Details anzeigen**, um die Prozesse anzuzeigen, die an der Aktualisierung der Anreicherung beteiligt sind, und deren Status. 
+
+## <a name="enrichment-results"></a>Anreicherungsergebnisse
+
+Nach einem abgeschlossenen Anreicherungslauf können Sie die Anreicherungsergebnisse überprüfen.
+
+1. Gehen Sie zu **Daten** > **Anreicherung**. 
+1. Wählen Sie die Anricherung, zu der Sie Informationen möchten.
+
+Alle Anreicherungen zeigen grundlegende Informationen wie die Anzahl der angereicherten Profile, eine Vorschau der generierten Anreicherungsentität und die Anzahl der angereicherten Profile im Laufe der Zeit. Falls vorhanden stellt **Anzahl der Kunden, angereichert nach Feld** Detailinformationen zur  Abdeckung jedes angereicherten Felds dar.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Anreicherungsergebnisse pro Seite.":::
+
+Einige Anreicherungen zeigen auch spezifische Informationen zur Art der Anreicherung an. Weitere Informationen finden Sie in der Dokumentation der entsprechenden Anreicherung.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

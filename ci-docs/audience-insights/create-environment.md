@@ -1,24 +1,19 @@
 ---
 title: Customer Insights-Umgebungen erstellen
 description: Schritte zum Erstellen von Umgebungen mit einem lizenzierten Abonnement für Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354094"
+  - ci-home
+  - customerInsights
 ---
+
 # <a name="create-an-environment-in-audience-insights"></a>Eine Umgebung für Zielgruppenerkenntnisse erstellen
 
 Dieser Artikel erklärt, wie Sie eine neue Umgebung erstellen, nachdem Ihre Organisation ein Dynamics 365 Customer Insights-Abonnement gekauft hat. 
@@ -83,14 +78,16 @@ Bieten Sie Ihre eigene Microsoft Dataverse-Umgebung, um Daten (Profile und Einbl
 Durch Verbindung zu Ihrer Dataverse-Umgebung können Sie auch [Daten aus lokalen Datenquellen mit Power Platform-Dataflows und Gateways erfassen](data-sources.md#add-data-from-on-premises-data-sources). Sie können auch [sofort einsatzbereite Vorhersage-Modelle](predictions-overview.md?tabs=b2c#out-of-box-models) durch Verbindung mit einer Dataverse-Umgebung verwenden.
 
 > [!IMPORTANT]
-> Customer Insights und Dataverse müssen sich in derselben Region befinden, um die Datenfreigabe zu ermöglichen.
+> 1. Customer Insights und Dataverse müssen sich in derselben Region befinden, um die Datenfreigabe zu ermöglichen.
+> 1. Sie müssen eine globale Administratorrolle in der Dataverse Umgebung haben. Überprüfen Sie, ob dieses [Dataverse Umfeld mit](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) bestimmten Sicherheitsgruppen verknüpft ist und stellen Sie sicher, dass Sie zu diesen Sicherheitsgruppen hinzugefügt werden.
+> 1. Es ist noch keine vorhandene Customer Insights Umgebung mit dieser Dataverse Umgebung verknüpt. Lernen wie man eine [bestehende Verbindung in einer Dataverse Umgebung](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment) entfernt.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="Datenaustausch mit Microsoft Dataverse automatisch für neue Instanzen aktiviert.":::
 
-> [!NOTE]
-> Customer Insights unterstützt die folgenden Datenfreigabe-Szenarien nicht:
-> - Wenn Sie alle Daten selbst speichern in Azure Data Lake Storage können Sie die Datenfreigabe mit einem verwalteten Dataverse Data Lake nicht aktivieren.
-> - Wenn Sie die Datenfreigabe mit einem verwalteten Dataverse Data Lake aktivieren, können Sie keine [vorhergesagten oder fehlenden Werten in einer Entität erstellen](predictions.md).
+Weitere Informationen zum Aktivieren der Datenfreigabe für Microsoft Dataverse über Ihre eigene Azure Data Lake Storage finden Sie unter [mit Microsoft Dataverse verbinden](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights unterstützt die folgenden Datenfreigabe-Szenarien nicht:
+- Wenn Sie die Datenfreigabe mit einem verwalteten Dataverse Data Lake aktivieren, können Sie keine [vorhergesagten oder fehlenden Werten in einer Entität erstellen](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Schritt 4: Einstellungen abschließen
 
