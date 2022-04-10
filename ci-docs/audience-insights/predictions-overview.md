@@ -1,6 +1,6 @@
 ---
 title: Übersicht über unterstützte Vorhersageszenarien
-description: 'Vorhersageszenarien und Optionen, die von der Anwendung Dynamics 365 Customer Insights abgedeckt werden.'
+description: Vorhersageszenarien und Optionen, die von der Anwendung Dynamics 365 Customer Insights abgedeckt werden.
 ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,8 +8,13 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487498"
 ---
-
 # <a name="predictions-overview"></a>Übersicht über Vorhersagen
 
 Dynamics 365 Customer Insights ist mit einer Vielzahl von Optionen ausgestattet, die KI und Machine Learning nutzen, um Daten vorherzusagen. 

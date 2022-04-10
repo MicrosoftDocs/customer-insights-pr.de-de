@@ -1,6 +1,6 @@
 ---
 title: Verwenden Sie Datenquellen zur Datenerfassung
-description: 'Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.'
+description: Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.
 ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
@@ -9,11 +9,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-data-sources
-  - ci-create-data-source
-  - customerInsights
+- ci-data-sources
+- ci-create-data-source
+- customerInsights
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464048"
 ---
-
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
 

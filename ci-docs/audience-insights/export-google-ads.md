@@ -1,6 +1,6 @@
 ---
 title: Customer Insights-Daten zu Google Ads exportieren
-description: 'Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Google Ads exportieren.'
+description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Google Ads exportieren.
 ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -8,8 +8,13 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523799"
 ---
-
 # <a name="export-segments-to-google-ads-preview"></a>Segmente in Google Ads exportieren (Vorschau)
 
 Exportieren Sie Segmente von einheitlichen Kundenprofilen in eine Google Ads Publikum-Liste und verwenden Sie sie, um in der Google-Suche, in Gmail, YouTube, und im Google Display-Netzwerk zu werben. 

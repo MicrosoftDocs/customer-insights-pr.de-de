@@ -1,6 +1,6 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
-description: 'Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.'
+description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
 ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -10,12 +10,17 @@ ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-  - ci-enrichments
-  - ci-enrichment-details
-  - ci-enrichment-wizard
-  - customerInsights
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491957"
 ---
-
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
 Nutzen Sie Daten aus Quellen wie Microsoft und anderen Partnern zur Anreicherung Ihrer Kundendaten.

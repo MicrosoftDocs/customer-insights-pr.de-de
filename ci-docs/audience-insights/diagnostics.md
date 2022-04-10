@@ -1,6 +1,6 @@
 ---
 title: Dynamics 365 Customer Insights mit Azure Monitor überwachen
-description: 'Erfahren Sie, wie Sie Protokolle an Microsoft Azure Monitor senden.'
+description: Erfahren Sie, wie Sie Protokolle an Microsoft Azure Monitor senden.
 ms.date: 12/14/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -9,10 +9,15 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-  - ci-system-diagnostic
-  - customerInsights
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523668"
 ---
-
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Protokollweiterleitung in Dynamics 365 Customer Insights mit Azure Monitor (Vorschauversion)
 
 Dynamics 365 Customer Insights bietet eine direkte Integration in Azure Monitor. Mit Azure Monitor-Ressourcenprotokollen können Sie Protokolle überwachen und an [Azure Storage](https://azure.microsoft.com/services/storage/) bzw. [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) senden oder zu [Azur Event Hubs](https://azure.microsoft.com/services/event-hubs/) streamen.
