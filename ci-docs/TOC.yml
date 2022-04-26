@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Zielgruppenerkenntnisse erkunden
           href: audience-insights/home.md
+        - name: Mit Tags und Spalten arbeiten
+          href: audience-insights/work-with-tags-columns.md
         - name: Mit Geschäftskonten arbeiten
           href: audience-insights/work-with-business-accounts.md
     - name: Datenquellen

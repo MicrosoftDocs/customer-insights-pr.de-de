@@ -1,22 +1,22 @@
 ---
 title: Kennzahlen aus Vorlagen erstellen
 description: Definieren Sie Kennzahlen mithilfe von Vorlagen für gängige Anwendungsfälle.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359915"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529400"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Verwenden Sie eine Vorlage, um eine Kennzahl zu erstellen
 
@@ -51,7 +51,9 @@ Verfügbare Kennzahlenvorlagen:
 
 1. Überprüfen Sie die erforderlichen Daten und wählen Sie **Los geht's** aus, wenn Sie alle Daten an Ort und Stelle haben.
 
-1. Im Bereich **Name bearbeiten** legen Sie den Namen für Ihre Kennzahl und die Ausgabeentität fest. 
+1. Wählen Sie **Details bearbeiten** neben Messungsname. Benennen Sie die Messung. Fügen Sie optional [Tags](work-with-tags-columns.md#manage-tags) zur Messung hinzu.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialogfeld „Details bearbeiten“":::
 
 1. Wählen Sie **Fertig** aus.
 

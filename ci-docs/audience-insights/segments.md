@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508565"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529538"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
@@ -51,20 +51,26 @@ Gehen Sie zur Seite **Segmente**, um alle Ihre gespeicherten Segmente anzuzeigen
 
 Jedes Segment wird durch eine Zeile dargestellt, die zusätzliche Informationen über das Segment enthält.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Ausgewähltes Segment mit Optionen-Dropdown-Liste und verfügbaren Optionen.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Ausgewähltes Segment mit Optionen-Dropdown-Liste und verfügbaren Optionen." lightbox="media/segments-selected-segment.png":::
 
-Die folgende Aktion ist verfügbar, wenn Sie ein Segment auswählen:
+Die folgenden Aktionen sind verfügbar, wenn Sie ein Segment auswählen:
 
 - **Anzeigen** der Segmentdetails, einschließlich Trend der Anzahl der Mitglieder, Vorschau der Segmentmitglieder.
+- **Download** die Liste der Mitglieder als .CSV-Datei herunterladen.
 - **Bearbeiten** des Segments, um seine Eigenschaften zu ändern.
 - **Duplikat erstellen** eines Segments. Sie können die Eigenschaften sofort bearbeiten oder das Duplikat einfach speichern.
 - **Aktualisieren** des Segments, um die neuesten Daten einzuschließen.
-- **Aktivieren** oder **Deaktivieren** des Segments. Segmente haben zwei mögliche Status – aktiv oder inaktiv. Diese Status sind nützlich, wenn Sie ein Segment bearbeiten. Für inaktive Segmente ist die Segmentdefinition vorhanden, enthält jedoch noch keine Kunden. Wenn Sie ein Segment aktivieren, ändert sich sein Status von inaktiv in aktiv und es wird nach Kunden gesucht, die der Segmentdefinition entsprechen. Wenn eine [geplante Aktualisierung](system.md#schedule-tab) konfiguriert ist, haben inaktive Segmente den **Status** aufgelistet als **Übersprungen**. Dies zeigt an, dass nicht einmal eine Aktualisierung versucht wurde. Wenn ein inaktives Segment aktiviert wird, wird es aktualisiert und in geplante Aktualisierungen einbezogen.
+- **Aktivieren** oder **Deaktivieren** des Segments. Für inaktive Segmente ist die Segmentdefinition vorhanden, enthält jedoch noch keine Kunden. Ein aktives Segment sucht nach Kunden, die der Segmentdefinition entsprechen. Wenn eine [geplante Aktualisierung](system.md#schedule-tab) konfiguriert ist, haben inaktive Segmente den **Status** aufgelistet als **Übersprungen**. Dies zeigt an, dass nicht einmal eine Aktualisierung versucht wurde. Wenn ein inaktives Segment aktiviert wird, wird es aktualisiert und in geplante Aktualisierungen einbezogen.
   Alternativ können Sie die Funktionalität **Planen Sie später** im Auswahlmenü unter **Aktivieren/Deaktivieren** zur Angabe eines zukünftigen Datums und einer zukünftigen Uhrzeit für die Aktivierung und Deaktivierung eines bestimmten Segments verwenden.
+- **[Finden Sie ähnliche Kunden](find-similar-customer-segments.md)** aus dem Segment.
 - **Umbenennen** des Segments.
+- **Tag** zu [Tags verwalten](work-with-tags-columns.md#manage-tags) für das Segment.
 - **Download** die Liste der Mitglieder als .CSV-Datei herunterladen.
 - **Exporte verwalten**, um exportbezogene Segmente anzuzeigen und zu verwalten. [Weitere Informationen zu Exporten.](export-destinations.md)
 - **Löschen** des Segments.
+- **Spalten** zu [Passen Sie die Spalten an](work-with-tags-columns.md#customize-columns) diese Anzeige.
+- **Filter** zu [nach Tags filtern](work-with-tags-columns.md#filter-on-tags).
+- **Suchname**, um nach Segmentnamen zu suchen.
 
 ## <a name="refresh-segments"></a>Aktualisieren von Segmenten
 

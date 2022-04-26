@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225514"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552055"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector für Power BI (Vorschau)
 
@@ -72,6 +72,6 @@ Versuchen Sie nach dem Entfernen des duplizierten Beziehungen, den Power BI-Konn
 
 Beim Laden von Entitäten, die Felder mit einem Datumsformat wie MM/TT/JJJJ enthalten, können Fehler aufgrund nicht übereinstimmender Gebietsschemaformate auftreten. Diese Diskrepanz tritt auf, wenn Ihre Power BI Desktop-Datei auf ein anderes Gebietsschema als Englisch (Vereinigte Staaten) eingestellt ist, da Datumsfelder in Zielgruppenerkenntnissen im amerikanischen Format gespeichert werden.
 
-Die Power BI Desktop-Datei hat eine einzelne Gebietsschemaeinstellung, die beim Abrufen von Daten angewendet wird. Damit diese Datumsfelder richtig interpretiert werden, legen Sie das Gebietsschema der .BPI-Datei auf Englisch (Vereinigte Staaten) fest. [Erfahren Sie, wie Sie das Gebietsschema einer Power BI Desktop-Datei ändern](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Die Power BI Desktop-Datei hat eine einzelne Gebietsschemaeinstellung, die beim Abrufen von Daten angewendet wird. Damit diese Datumsfelder richtig interpretiert werden, legen Sie das Gebietsschema der .BPI-Datei auf Englisch (Vereinigte Staaten) fest. [Erfahren Sie, wie Sie das Gebietsschema einer Power BI Desktop-Datei ändern](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

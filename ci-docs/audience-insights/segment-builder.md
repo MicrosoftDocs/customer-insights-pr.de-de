@@ -1,37 +1,36 @@
 ---
 title: Erstellen von Segmenten mithilfe des Segment-Builders
 description: Erstellen Sie Kundensegmente, um sie auf der Grundlage verschiedener Attribute zu gruppieren.
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354554"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529584"
 ---
 # <a name="create-segments"></a>Segmente erstellen
 
-Sie können komplexe Filter mit Bezug zur einheitlichen Kundenentität und den verwandten Entitäten festlegen. Jedes Segment erstellt nach der Verarbeitung eine Reihe von Kundendatensätzen, die Sie exportieren und für die Sie Maßnahmen ergreifen können. Segmente werden auf der Seite **Segmente** verwaltet. Sie können [neue Segmente erstellen](#create-a-new-segment) mit dem Segmentgenerator oder aus anderen Bereichen der App [schnell Segmente erstellen](#quick-segments). 
+Sie können komplexe Filter mit Bezug zur einheitlichen Kundenentität und den verwandten Entitäten festlegen. Jedes Segment erstellt nach der Verarbeitung eine Reihe von Kundendatensätzen, die Sie exportieren und für die Sie Maßnahmen ergreifen können. Segmente werden auf der Seite **Segmente** verwaltet. Sie können [neue Segmente erstellen](#create-a-new-segment) mit dem Segmentgenerator oder aus anderen Bereichen der App [schnell Segmente erstellen](#quick-segments).
 
 > [!TIP]
-> - Schnelle Sgmente werden nur in Umgebungen für **individuelle Kunden** unterstützt.    
-> - Segmente basierend auf **individuelle Kunden** schließen automatisch verfügbare Kontaktinformationen für Segmentmitglieder ein. In Umgebungen für **Geschäftskonten** basieren Seg,emte auf Konten (Gesellschaften oder Tochtergesellschaften). Um Kontaktinformationen in ein Segment aufzunehmen, verwenden Sie die **Projektattribute** Funktionalität im Segmentersteller.
->    - Stellen Sie sicher, dass die Kontaktdatenquellen [semantisch der ContactProfile-Entität zugeordnet](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) werden.
+> - Schnelle Sgmente werden nur in Umgebungen für **individuelle Kunden** unterstützt.
+> - Segmente basierend auf **individuelle Kunden** schließen automatisch verfügbare Kontaktinformationen für Segmentmitglieder ein. In Umgebungen für **Geschäftskonten** basieren Seg,emte auf Konten (Gesellschaften oder Tochtergesellschaften). Um Kontaktinformationen in ein Segment aufzunehmen, verwenden Sie die **Projektattribute** Funktionalität im Segmentersteller. Stellen Sie sicher, dass die Kontaktdatenquellen [semantisch der ContactProfile-Entität zugeordnet](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) werden.
 
 ## <a name="segment-builder"></a>Segmentgenerator
 
-Die folgende Abbildung veranschaulicht die verschiedenen Aspekte des Segmentgenerators. Sie zeigt ein Segment, das zu einer Gruppe von Kunden führt. Die Kunden bestellten Waren in einem bestimmten Zeitrahmen und sammelten Prämienpunkte oder gaben einen bestimmten Geldbetrag aus. 
+Die folgende Abbildung veranschaulicht die verschiedenen Aspekte des Segmentgenerators. Sie zeigt ein Segment, das zu einer Gruppe von Kunden führt. Die Kunden bestellten Waren in einem bestimmten Zeitrahmen und sammelten Prämienpunkte oder gaben einen bestimmten Geldbetrag aus.
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Elemente des Segment-Builders." lightbox="media/segment-builder-overview.png":::
 
@@ -65,11 +64,11 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
 
 1. Auf der Segment-Ersteller-Seite definieren oder erstellen Sie Regeln. Eine Regel besteht aus einer oder mehreren Bedingungen, die eine Menge von Kunden definieren.
 
-1. Im Abschnitt **Regel 1** wählen Sie ein Attribut einer Entität aus, nach der Kunden gefiltert werden sollen. Es gibt zwei Möglichkeiten, Attribute auszuwählen: 
+1. Wählen Sie im Abschnitt **Regel 1** ein Attribut einer Entität aus, nach der Sie Kunden filtern möchten. Es gibt zwei Möglichkeiten, Attribute auszuwählen:
    - Überprüfen Sie die Liste der verfügbaren Entitäten und Attribute im Bereich **Zu Regel hinzufügen**, und wählen Sie das Symbol **+** neben dem hinzuzufügenden Attribut aus. Wählen Sie aus, ob Sie das Attribut zu einer vorhandenen Regel hinzufügen oder zum Erstellen einer neuen Regel verwenden möchten.
    - Geben Sie den Namen des Attributs in den Regelabschnitt ein, um passende Vorschläge anzuzeigen.
 
-1. Wählen Sie die Operatoren aus, um die übereinstimmenden Werte der Bedingung anzugeben. Ein Attribut kann einen von vier Datentypen als Wert haben: numerisch, Zeichenfolge, Datum oder boolesch. Je nach Datentyp des Attributs stehen unterschiedliche Operatoren zur Angabe der Bedingung zur Verfügung. Für Segmente mit Geschäftskonten stehen zwei spezielle Operatoren zur Verfügung, um potenzielle Hierarchien zwischen den aufgenommenen Konten einzubeziehen. Verwenden Sie die Operatoren *Untergeordnet von* und *Übergeordnet von*, um zugehörige Konten einzubeziehen. 
+1. Wählen Sie die Operatoren aus, um die übereinstimmenden Werte der Bedingung anzugeben. Ein Attribut kann einen von vier Datentypen als Wert haben: numerisch, Zeichenfolge, Datum oder boolesch. Je nach Datentyp des Attributs stehen unterschiedliche Operatoren zur Angabe der Bedingung zur Verfügung. Für Segmente mit Geschäftskonten stehen zwei spezielle Operatoren zur Verfügung, um potenzielle Hierarchien zwischen den aufgenommenen Konten einzubeziehen. Verwenden Sie die Operatoren *Untergeordnet von* und *Übergeordnet von*, um zugehörige Konten einzubeziehen.
 
 1. Wählen Sie **Bedingung hinzufügen**, um einer Regel weitere Bedingungen hinzuzufügen. Um eine Regel unter der aktuellen Regel zu erstellen, wählen Sie **Unterregel hinzufügen**.
 
@@ -77,7 +76,7 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potenzieller Beziehungspfad beim Erstellen einer Regel basierend auf einer Entität, die der vereinheitlichten Kundenentität zugeordnet ist.":::
 
-   Zum Beispiel hat die Entität *eCommerce_eCommercePurchase* im Screenshot vier Optionen, die der Entität *Kunde* zugeordnet werden können: 
+   Zum Beispiel hat die Entität *eCommerce_eCommercePurchase* im Screenshot vier Optionen, die der Entität *Kunde* zugeordnet werden können:
    - eCommerce_eCommercePurchases > eCommerce_eCommerceKontakte > Kunde
    - eCommerce_eCommercePurchases > Kunde
    - eCommerce_eCommercePurchases > eCommerce_eCommerceKontakte > POS_posPurchases > Kunde
@@ -101,11 +100,11 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
       - **Überschneiden** überschneidet die beiden Gruppen. Nur Daten, die beiden Gruppen *angehören*, verbleiben in der vereinheitlichten Gruppe.
       - **Außer** kombiniert die beiden Gruppen. Nur Daten in Gruppe A, die *nicht* Daten in Gruppe B angehören, werden beibehalten.
 
-1. Segmente generieren standardmäßig die Ausgabeentität, die alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie der Ausgabeentität weitere Attribute dieser Entitäten hinzufügen. Wählen Sie, **Projektattribute**, um die Attribute auszuwählen, die an die Ausgabeentität angehängt werden. 
+1. Segmente generieren standardmäßig die Ausgabeentität, die alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie der Ausgabeentität weitere Attribute dieser Entitäten hinzufügen. Wählen Sie, **Projektattribute**, um die Attribute auszuwählen, die an die Ausgabeentität angehängt werden.
 
    > [!IMPORTANT]
    > Bei Segmenten, die auf Geschäftskonten basieren, müssen Details zu einem oder mehreren Kontakten jedes Kontos aus der *ContactProfile*-Entität in das Segment aufgenommen werden, damit dieses Segment aktiviert oder an Ziele exportiert werden kann, für die Kontaktinformationen erforderlich sind. Weitere Informationen über die *ContactProfile*-Entität finden Sie unter [Semantische Zuordnungen](semantic-mappings.md).
-   > Eine Beispielausgabe für ein Segment basierend auf Geschäftskonten mit projizierten Attributen von Kontakten könnte wie folgt aussehen: 
+   > Eine Beispielausgabe für ein Segment basierend auf Geschäftskonten mit projizierten Attributen von Kontakten könnte wie folgt aussehen:
    >
    > |Kennung  |Firmenname  |Einnahmen  |Kontaktname  | Rolle des Kontakts|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
 
    > [!NOTE]
    > - **Projektattribute** funktioniert nur für Entitäten, die eine 1:n-Beziehung mit der Kundenentität haben. Beispielsweise kann ein Kunde mehrere Abonnements haben.
-   > - Wenn das Attribut, das Sie projizieren möchten, mehr als einen Hop von der Entität *Kunde* entfernt ist, wie durch die Beziehung definiert, sollte dieses Attribut in jeder Regel der Segmentabfrage verwendet werden, die Sie erstellen. 
-   > - Wenn das Attribut, das Sie projizieren möchten, nur einen Hop von der Entität *Kunde* entfernt ist, muss dieses Attribut nicht in jeder Regel der Segmentabfrage vorhanden sein, die Sie erstellen. 
+   > - Wenn das Attribut, das Sie projizieren möchten, mehr als einen Hop von der Entität *Kunde* entfernt ist, wie durch die Beziehung definiert, sollte dieses Attribut in jeder Regel der Segmentabfrage verwendet werden, die Sie erstellen.
+   > - Wenn das Attribut, das Sie projizieren möchten, nur einen Hop von der Entität *Kunde* entfernt ist, muss dieses Attribut nicht in jeder Regel der Segmentabfrage vorhanden sein, die Sie erstellen.
    > - **Projizierte Attribute** werden bei Verwendung von festgelegten Operatoren berücksichtigt.
 
-1. Bevor Sie das Segment speichern und ausführen, wählen Sie **Details bearbeiten** neben dem Segmentnamen. Geben Sie einen Namen für Ihr Segment ein, und aktualisieren Sie den vorgeschlagenen **Ausgabeentitätsnamen** für das Segment. Sie können dem Segment auch eine Beschreibung hinzufügen.
+1. Wählen Sie **Details bearbeiten** neben Segment ohne Titel. Geben Sie einen Namen für Ihr Segment ein, und aktualisieren Sie den vorgeschlagenen **Ausgabeentitätsnamen** für das Segment. Fügen Sie optional eine Beschreibung und [Tags](work-with-tags-columns.md#manage-tags) zum Segment hinzu.
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialogfeld „Details bearbeiten“":::
 
 1. Wählen Sie **Ausführen**, um das Segment zu speichern, aktivieren Sie es und beginnen Sie mit der Verarbeitung Ihres Segments basierend auf allen Regeln und Bedingungen. Andernfalls wird es als inaktives Segment gespeichert.
-   
+
 1. Wählen Sie **Zurück zu Segmenten**, um zur Seite **Segmente** zurückzukehren.
 
 1. Standardmäßig wird das Segment als dynamisches Segment erstellt. Dies bedeutet, dass das Segment während der Systemaktualisierung aktualisiert wird. Um die [automatische Aktualisierung anzuhalten](segments.md#manage-existing-segments), wählen Sie das Segment und dann die Option **Statisch machen** aus. Statische Segmente können jederzeit [manuell aktualisiert](segments.md#refresh-segments) werden.
@@ -132,7 +133,7 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
 > [!TIP]
 > - Der Segmentgenerator schlägt beim Festlegen der Operatoren für die Bedingungen keine gültigen Werte aus Entitäten vor. Sie können zu **Daten** > **Entitäten** wechseln, und die Entitätsdaten herunterladen, um zu sehen, welche Werte verfügbar sind.
 > - Mit datumsbasierten Bedingungen können Sie zwischen festen Datumsangaben und einem variablen Datumsbereich wechseln.
-> - Wenn Sie mehrere Regeln für Ihr Segment haben, wird neben der Regel, die Sie bearbeiten, eine vertikale blaue Linie angezeigt. 
+> - Wenn Sie mehrere Regeln für Ihr Segment haben, wird neben der Regel, die Sie bearbeiten, eine vertikale blaue Linie angezeigt.
 > - Sie können Regeln und Bedingungen an andere Stellen in der Segmentdefinition verschieben. Wählen Sie neben einer Regel oder Bedingung [...] aus, und legen Sie fest, wie und wohin sie verschoben werden soll.
 > - Mit den Steuerelementen **Rückgängig machen** und **Wiederholen** in der Befehlsleiste können Sie Änderungen rückgängig machen.
 
@@ -153,10 +154,9 @@ Mit schnellen Segmenten können Sie schnell einfache Segmente mit einem einzigen
 
 4. Das System liefert Ihnen eine **geschätzte Segmentgröße**. Sie können wählen, ob Sie das von Ihnen definierte Segment generieren oder es zunächst erneut aufrufen, um eine andere Segmentgröße zu erhalten.
 
-    > [!div class="mx-imgBorder"]
-    > ![Name und Schätzung für ein schnelles Segment.](media/quick-segment-name.png "Name und Schätzung für ein schnelles Segment")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="Name und Schätzung für ein schnelles Segment.":::
 
-5. Geben Sie einen **Name** für Ihr Segment an. Geben Sie optional einen **Anzeigename** ein.
+5. Geben Sie einen **Namen** und **Ausgabeentitätsname** für Ihr Segment ein. Fügen Sie optional [Tags](work-with-tags-columns.md#manage-tags) hinzu.
 
 6. Wählen Sie **Speichern**, um Ihr Segment zu erstellen.
 

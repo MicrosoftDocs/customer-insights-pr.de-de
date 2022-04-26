@@ -1,23 +1,23 @@
 ---
 title: Ähnliche Kunden mit KI finden (enthält Video)
 description: Finden Sie ähnliche Kundensegmente mit künstlicher Intelligenz.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355244"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561569"
 ---
 # <a name="similar-customers-preview"></a>Ähnliche Kunden (Vorschau)
 
@@ -36,6 +36,8 @@ Mit dieser Funktion können Sie mithilfe künstlicher Intelligenz ähnliche Kund
 
 1. Überprüfen Sie den vorgeschlagenen Namen für Ihr neues Segment und ändern Sie ihn gegebenenfalls.
 
+1. Fügen Sie optional [Tags](work-with-tags-columns.md#manage-tags) zum neuen Segment hinzu.
+
 1. Überprüfen Sie die Felder, die Ihr neues Segment definieren. Diese Felder definieren die Basis, auf der das System versucht, ähnliche Kunden wie Ihr Quellsegment zu finden. Das System wählt standardmäßig empfohlene Felder aus.
   Felder, die die Modellleistung erheblich reduzieren können, werden automatisch ausgeschlossen:
   
@@ -44,9 +46,9 @@ Mit dieser Funktion können Sie mithilfe künstlicher Intelligenz ähnliche Kund
 
 1. Wählen Sie aus, ob Sie **Alle Kunden** einschließen möchten oder nur Kunden in einem **Spezifisch vorhandenen Segment** in Ihrem neuen Segment.
 
-1. Schließen Sie Kunden in Ihrem Quellensegment aus, indem Sie das Kontrollkästchen auswählen **Alle im Quellensegment ausschließen**.
-
 1. Standardmäßig schlägt das System vor, nur 20 % der Zielgruppe in Ihre Ausgabe aufzunehmen. Bearbeiten Sie diesen Schwellenwert nach Bedarf. Durch Erhöhen des Schwellenwerts wird die Genauigkeit verringert.
+
+1. Beziehen Sie Kunden in Ihr Quellensegment ein, indem Sie das Kontrollkästchen **Mitglieder aus dem Quellsegment zusätzlich zu Kunden mit ähnlichen Attributen einbeziehen** auswählen.
 
 1. Wählen Sie **Ausführen** am Ende der Seite, um eine binäre Klassifizierungsaufgabe (eine Methode von Maschinellem Lernen) zu starten, die das DataSet analysiert.
 
@@ -67,7 +69,7 @@ Sie können [mit der Ausgabe eines ähnlichen Segments arbeiten](segments.md), w
 
 Um ein ähnliches Segment zu aktualisieren, wählen Sie es auf der Seite **Segmente** aus und wählen Sie **Aktualisierung** in der Aktionsleiste.
 
-Durch Bearbeiten eines ähnlichen Segments werden Ihre Daten erneut verarbeitet. Das zuvor erstellte Segment wird mit aktualisierten Daten aktualisiert.    
+Durch Bearbeiten eines ähnlichen Segments werden Ihre Daten erneut verarbeitet. Das zuvor erstellte Segment wird mit aktualisierten Daten aktualisiert.
 Um ein ähnliches Segment zu bearbeiten, wählen Sie es auf der Seite **Segmente** aus und wählen Sie **Bearbeitung** in der Aktionsleiste. Übernehmen Sie Ihre Änderungen und wählen Sie **Ausführen**, um die Verarbeitung zu starten.
 
 ## <a name="delete-a-similar-segment"></a>Löschen Sie ein ähnliches Segment
@@ -84,6 +86,5 @@ Das Modell der binären Klassifizierung Maschinelles Lernen weist Kunden im ähn
 - Ähnlichkeitswerte zwischen 0,85 – 1 sind Kunden, die das System klassifiziert als *sehr ähnlich*
 
 Kunden mit Ähnlichkeitswerten unter 0,4 werden nicht in die Modellausgabe einbezogen. Das System betrachtet sie nicht als ähnlich genug für das Quellensegment.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

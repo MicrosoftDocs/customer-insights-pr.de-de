@@ -1,12 +1,12 @@
 ---
 title: Kennzahlen verstehen und steuern
 description: Erfahren Sie, wie Kennzahlen dabei helfen, die Leistung Ihres Unternehmens zu analysieren und widerzuspiegeln.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359777"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529676"
 ---
 # <a name="measures-overview"></a>Kennzahlenübersicht
 
@@ -27,7 +27,7 @@ Mithilfe von Kennzahlen können Sie das Kundenverhalten und die Geschäftsleistu
 
 Kennzahlen werden mit dem [Kennzahlen-Builder](measure-builder.md) erstellt, einer Datenabfrageplattform mit verschiedenen Operatoren und einfachen Zuordnungsoptionen. Sie können die Daten filtern, Ergebnisse gruppieren und [Entitätsbeziehungspfade](relationships.md) erkennen und zeigen eine Vorschau der Ausgabe anzeigen. Sie können [vordefinierte Vorlagen](measure-templates.md) verwenden, um häufig verwendete Kennzahlen effizient zu konfigurieren.
 
-Verwenden Sie die Kennzahlenerstellung, um Geschäftsaktivitäten zu planen, indem Sie Kundendaten abfragen und Erkenntnisse extrahieren. Erstellen Sie beispielsweise eine Kennzahl für *Gesamtausgaben pro Kunde* und *Gesamtrendite pro Kunde* hilft bei der Identifizierung einer Gruppe von Kunden mit hohen Ausgaben und hoher Rendite. Sie können basierend auf diesen Kennzahlen [ein Segment erstellen](segments.md), um die nächstbesten Maßnahmen voranzutreiben. 
+Verwenden Sie die Kennzahlenerstellung, um Geschäftsaktivitäten zu planen, indem Sie Kundendaten abfragen und Erkenntnisse extrahieren. Erstellen Sie beispielsweise eine Kennzahl für *Gesamtausgaben pro Kunde* und *Gesamtrendite pro Kunde* hilft bei der Identifizierung einer Gruppe von Kunden mit hohen Ausgaben und hoher Rendite. Sie können basierend auf diesen Kennzahlen [ein Segment erstellen](segments.md), um die nächstbesten Maßnahmen voranzutreiben.
 
 ## <a name="manage-your-measures"></a>Verwalten von Kennzahlen
 
@@ -35,18 +35,17 @@ Die Liste der Kennzahlen finden Sie auf der Seite **Kennzahlen**.
 
 Sie finden Informationen zu Kennzahlentyp, Ersteller, Erstellungsdatum, Status und Zustand. Wenn Sie eine Kennzahl aus der Liste auswählen, können Sie eine Vorschau der Ausgabe anzeigen und eine CSV-Datei herunterladen.
 
-Um alle Ihre Kennzahlen gleichzeitig zu aktualisieren, wählen Sie **Alle aktualisieren** aus, ohne eine bestimmte Kennzahl auszuwählen.
+:::image type="content" source="media/measures-actions.png" alt-text="Maßnahmen zur Verwaltung einzelner Kennzahlen."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Maßnahmen zur Verwaltung einzelner Kennzahlen.":::
+Die folgenden Aktionen sind verfügbar, wenn Sie eine Kennzahl auswählen:
 
-Wählen Sie eine Kennzahl aus den folgenden Optionen in der Liste aus:
-
-- Wählen Sie den Kennzahlnamen aus, um dessen Details anzuzeigen.
 - **Bearbeiten** der Konfiguration der Kennzahl.
-- **Aktualisieren** Sie die Maßnahme basierend auf den neuesten Daten.
+- **Duplizieren** einer Messung. Sie können die Eigenschaften sofort bearbeiten oder das Duplikat einfach speichern.
+- **Aktualisieren** Sie die Maßnahme basierend auf den neuesten Daten. Um alle Ihre Kennzahlen gleichzeitig zu aktualisieren, wählen Sie alle Kennzahlen und dann **Aktualisieren** aus.
 - **Umbenennen** der Kennzahl.
-- **Löschen** der Kennzahl.
 - **Aktivieren** oder **Deaktivieren**. Inaktive Maßnahmen werden während einer [geplanten Aktualisierung](system.md#schedule-tab) nicht aktualisiert.
+- **Tag** zu [Tags verwalten](work-with-tags-columns.md#manage-tags) für das Segment.
+- **Löschen** der Kennzahl.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
