@@ -1,39 +1,41 @@
 ---
-title: Produktübersicht
+title: Dynamics 365 Customer Insights Produktübersicht
 author: m-hartmann
-description: Verschaffen Sie sich einen Überblick über Dynamics 365 Customer Insights und seine Möglichkeiten.
+description: Verschaffen Sie sich einen Überblick über Dynamics 365 Customer Insights und seine wichtigsten Funktionen.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560432"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641899"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produktübersicht für Dynamics 365 Customer Insights
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) ist ein Teil der Microsoft Kundendatenplattform (CDP), die dabei hilft, personalisierte Kundenerlebnisse zu liefern. Die Funktionen der Plattform bieten Einblicke, wer Ihre Kunden sind und wie sie mit Ihrer Plattform interagieren. Vereinheitlichen Sie Kundendaten über mehrere Quellen hinweg, um eine einheitliche Ansicht der Kunden zu erhalten.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) ist die Kundendatenplattform (CDP) von Microsoft, mit der Sie personalisierte Kundenerlebnisse schaffen können. Die Anwendung bietet eine ganzheitliche Sicht auf die Kunden mit einer beispiellosen Geschwindigkeit bis zur Erkenntnis. Verschaffen Sie sich den umfassendsten Überblick über Ihre Kunden, indem Sie Kundendaten mit Vorgängen und IoT-Daten in Echtzeit zusammenführen. Bereichern Sie Kundenprofile mit Daten aus ersten und dritten Quellen. 
 
-[Zielgruppenerkenntnisse](audience-insights/overview.md) helfen Ihnen, Ihr Unternehmen in eine kundenorientierte Organisation zu verwandeln. Marketing-, Vertriebs- und Serviceprofis verfügen über die erforderlichen Erkenntnisse, um Erfahrungen zu personalisieren. Verbinden Sie Daten aus Transaktions-, Verhaltens- und Beobachtungsquellen, um eine 360-Grad-Kundenansicht zu erstellen. Sehen Sie Ergebnisse schneller mit einer CDP, die darauf ausgelegt ist, Insights zu liefern, auf die Sie reagieren können. 
-
-[Interaktionserkenntnisse](engagement-insights/overview.md) war eine Vorschaufunktion in Customer Insights, die sich auf das Sammeln von Web- und Mobilereignissen für zusätzliche Einblicke konzentriert. Die Vorschau endete am 15. Februar 2022.
+Customer Insights hilft Ihnen, Ihr Unternehmen in ein kundenorientiertes Unternehmen zu verwandeln, indem Sie Ihre Marketing-, Vertriebs- und Servicefachleute in die Lage versetzen, 1:1-Interaktionen in großem Umfang anzupassen. Schlüsselfertige Integrationen mit Anwendungen von Microsoft und Drittanbietern können genutzt werden, um Echtzeit-Einsichten zu aktivieren und so sinnvolle Maßnahmen zu ergreifen.
  
-## <a name="choose-a-capability"></a>Eine Funktion auswählen
+Verbinden Sie Daten aus Transaktions-, Verhaltens- und demografischen Datenquellen, um eine 360-Grad-Kundensicht zu erstellen. Gewinnen Sie mit vorgefertigten KI-Modellen sofortige Einblicke oder erstellen, testen und stellen Sie angepasste KI/ML-Modelle mit fortschrittlichen Analyselösungen in unbegrenztem Umfang bereit.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Customer Insights-Seite, auf der Sie zu Zielgruppenerkenntnissen oder Interaktionserkenntnissen navigieren können.":::
-
-So wählen Sie eine Funktion aus
-
-1. Wählen Sie im Navigationsbereich **Alle Apps**, um das **Fokus auswählen**-Fenster zu öffnen.
-1. Wählen sie **Jetzt starten**, um zur Fähigkeit Ihrer Wahl zu navigieren.
+Behalten Sie die volle Kontrolle über Ihre Kundendaten, um ein Höchstmaß an Data-Governance und Compliance zu gewährleisten - mit einer Self-Service-CDP auf Unternehmensniveau, die auf Microsoft Azure aufbaut. Unterstützen Sie die Datenschutzgrundverordnung (DSGVO) und andere gesetzliche Anforderungen und Branchenstandards durch integrierte Tools für Datenschutz, Sicherheit, Governance und Zustimmungsmanagement.
 
 ## <a name="pricing-and-licensing"></a>Preisgestaltung und Lizenzierung
+Customer Insights wird pro Mandant lizenziert und umfasst sowohl business-to-consumer (B2C) als auch business-to-business (B2B) Funktionalitäten. Sie können zusätzliche Kapazitäten mit Add-on-Lizenzen kaufen, um die Anzahl der Profile und Konten zu erhöhen.
 
-Customer Insights wird pro Mandant lizenziert und umfasst mehrere Funktionen. Sie können zusätzliche Kapazität und Lizenz erwerben, um das Standardkontingent zu erhöhen. 
 - [Preisüberblick](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Kapazitäten und Berechtigungen: [Dynamics 365-Lizenzierungshandbuch](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Microsoft Website zur Volumenlizenzierung](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Testen Sie Customer Insights und legen Sie los
+
+Starten Sie noch heute einen [kostenlosen Test von Customer Insights](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d), um die Anwendung mit Ihren eigenen Kundendaten zu testen. [Finden Sie heraus, wie Sie schnell auf viele der wichtigsten Funktionen der Anwendung zugreifen und sie erkunden können](trial-signup.md). 
+
+Stöbern Sie in [Lernressourcen](https://dynamics.microsoft.com/ai/customer-insights/resources/), darunter Analystenberichte, On-Demand-Webinare und Kundenberichte.
+
+Erfahren Sie, wie Sie mit unserer [Anleitung für den Einstieg](get-started.md) ein tieferes Verständnis für Ihre Kunden entwickeln können.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229494"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641807"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Häufig gestellte Fragen zur Testversion von Dynamics 365 Customer Insights
 
@@ -62,13 +62,13 @@ Sie können die Testversion direkt in der App verlängern. Sie können Ihre Test
 
 Wir empfehlen grundsätzlich, beim Upgrade auf die kostenpflichtige Version von Customer Insights mit Ihren eigenen Daten neu zu beginnen. 
 
-Wenn Sie nur Publikum Insights verwenden, können Sie optional Ihre Daten aus einer Testumgebung kopieren, wenn Sie Customer Insights erwerben. Sie müssen der Administrator der Customer Insights-Testversion und der globale Administrator Ihres Microsoft 365-Mandanten oder der Dynamics 365-Administrator in Ihrer Organisation sein, um die Einstellungen von einer Testumgebung zu einer kostenpflichtigen Umgebung zu migrieren. 
+Optional können Sie, wenn Sie nur Customer Insights verwenden, Ihre Daten aus einer Test Umgebung kopieren, wenn Sie Customer Insights kaufen. Sie müssen der Administrator der Customer Insights-Testversion und der globale Administrator Ihres Microsoft 365-Mandanten oder der Dynamics 365-Administrator in Ihrer Organisation sein, um die Einstellungen von einer Testumgebung zu einer kostenpflichtigen Umgebung zu migrieren. 
 
-Nachdem Sie sich zum ersten Mal bei Ihrer kostenpflichtigen Instanz von Customer Insights angemeldet haben, werden Sie aufgefordert, eine neue Umgebung zu erstellen. In diesem Prozess können Sie die Konfiguration aus einer vorhandenen Umgebung kopieren und die meisten Einstellungen migrieren. Wenn Sie über die oben genannten Berechtigungen verfügen, wird die Testumgebung in dieser Liste angezeigt. Weitere Informationen finden Sie unter [Die Umgebungskonfiguration kopieren](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Nachdem Sie sich zum ersten Mal bei Ihrer kostenpflichtigen Instanz von Customer Insights angemeldet haben, werden Sie aufgefordert, eine neue Umgebung zu erstellen. In diesem Prozess können Sie die Konfiguration aus einer vorhandenen Umgebung kopieren und die meisten Einstellungen migrieren. Wenn Sie über die oben genannten Berechtigungen verfügen, wird die Testumgebung in dieser Liste angezeigt. Weitere Informationen finden Sie unter [Die Umgebungskonfiguration kopieren](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Welche Beschränkungen und Kontingente gelten für den Test?
 
-- Sie können Ihr eigenes Azure Data Lake Storage Konto nicht verwenden, um Ausgabedaten während einer Testversion von Zielgruppenerkenntnissen zu speichern. Sie können jedoch Daten aus einem Data Lake Storage-Konto erfassen.
+- Während eines Tests von Customer Insights können Sie Ihr eigenes Azure Data Lake storage-Konto nicht zum Speichern von Ausgabedaten verwenden. Sie können jedoch Daten aus einem Data Lake Storage-Konto erfassen.
 - Sie können bis zu 3 GB Daten in der Dataverse Umgebung speichern, die automatisch bereitgestellt wird, wenn Sie eine Customer Insights Testversion starten.
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights spezifische Fragen
