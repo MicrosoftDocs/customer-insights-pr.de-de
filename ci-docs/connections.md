@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646170"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755308"
 ---
 # <a name="connections-preview-overview"></a>Verbindungsübersicht (Vorschau)
 
@@ -24,15 +24,15 @@ Verbindungen sind der Schlüssel, um die gemeinsame Nutzung von Daten zu und von
 
 Gehen Sie zu **Administrator** > **Verbindungen**, um Verbindungen zu erstellen und anzuzeigen.
 
-Die Registerkarte **Verbindungen** zeigt Ihnen alle aktiven Verbindungen. Die Liste zeigt eine Zeile für jede Verbindung. 
+Die Registerkarte **Verbindungen** zeigt Ihnen alle aktiven Verbindungen. Die Liste zeigt eine Zeile für jede Verbindung.
 
 Verschaffen Sie sich einen schnellen Überblick, erhalten Sie eine Beschreibung, und finden Sie heraus, was Sie mit den einzelnen Erweiterungsoptionen auf der Registerkarte **Entdecken** tun können.
 
-### <a name="exports"></a>Exporte
+## <a name="exports"></a>Exporte
 
 Nur Administratoren können neue Verbindungen konfigurieren, sie können jedoch Mitwirkenden Zugriff gewähren, um vorhandene Verbindungen zu verwenden. Administratoren steuern, wohin Daten gehen können, und die Mitwirkenden definieren die Nutzlast und Häufigkeit, die ihren Anforderungen entsprechen. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Anreicherungen
+## <a name="enrichments"></a>Anreicherungen
 
 Nur Administratoren können neue Verbindungen konfigurieren, aber die erstellten Verbindungen stehen sowohl Administratoren als auch Mitwirkenden immer zur Verfügung. Administratoren verwalten Anmeldeinformationen und stimmen der Datenübertragung zu. Die Verbindungen können dann sowohl von Administratoren als auch von Mitwirkenden zur Bereicherung verwendet werden.
 
@@ -46,9 +46,9 @@ Um Verbindungen hinzuzufügen, müssen Sie [Administratorberechtigungen](permiss
 
 1. Wählen Sie zu **Verbindung hinzufügen**, um eine neue Verbindung zu erstellen. Wählen Sie aus dem Dropdown-Menü aus, welche Art von Verbindung Sie erstellen möchten.
 
-1. Im Bereich **Verbindung herstellen** geben Sie die erforderlichen Details an. 
+1. Im Bereich **Verbindung herstellen** geben Sie die erforderlichen Details an.
    1. Der **Anzeigename** und der Typ der Verbindung beschreiben eine Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel dieser Verbindung erklärt.
-   1. Die genauen Felder hängen davon ab, zu welchem Dienst Sie eine Verbindung herstellen. Einzelheiten zu einem bestimmten Verbindungstyp finden Sie im Artikel über den Zieldienst.
+   1. Die genauen Felder hängen davon ab, mit welchem Dienst Sie sich verbinden. Einzelheiten zu einem bestimmten Verbindungstyp finden Sie im Artikel über den Zieldienst.
    1. Wenn Sie [Ihren eigenen Key Vault verwenden](use-azure-key-vault.md), um Geheimnisse zu speichern, aktivieren Sie **Key Vault verwenden** und wählen Sie das Geheimnis aus der Liste aus.
 
 1. Wählen Sie zum Erstellen der Verbindung **Speichern** aus.
@@ -59,7 +59,7 @@ Sie können auch auf einer Kachel **Installieren** in der Registerkarte **Entdec
 
 Beim Einrichten oder Bearbeiten einer Exportverbindung legen Sie fest, welche Benutzer diese bestimmte Verbindung zum Definieren von [Exporten](export-destinations.md) verwenden dürfen. Standardmäßig steht Benutzern mit der Rolle „Administrator“ eine Verbindung zur Verfügung. Sie können diese Einstellung unter **Wählen Sie aus, wer diese Verbindung verwenden kann** ändern und Benutzern mit der Rolle „Mitwirkender“ erlauben, diese Verbindung zu verwenden.
 
-- Mitwirkende können die Verbindung nicht anzeigen oder bearbeiten. Sie sehen nur den Anzeigenamen und seinen Typ, wenn Sie einen Export erstellen.
+- Mitwirkende können die Verbindung nicht anzeigen oder bearbeiten. Sie sehen nur den Anzeigename und den Typ, wenn sie einen Export erstellen.
 - Durch die Freigabe einer Verbindung können Mitwirkende eine Verbindung verwenden. Mitwirkende sehen gemeinsame Verbindungen, wenn sie Exporte einrichten. Sie können jeden Export verwalten, der diese bestimmte Verbindung verwendet.
 - Sie können diese Einstellung ändern, während Sie die Exporte beibehalten, die bereits von Mitwirkenden definiert wurden.
 
@@ -77,7 +77,7 @@ Beim Einrichten oder Bearbeiten einer Exportverbindung legen Sie fest, welche Be
 
 ## <a name="remove-a-connection"></a>Verbindung entfernen
 
-Wenn die Verbindung, die Sie entfernen, von Anreicherungen oder Exporten verwendet wird, müssen Sie diese zuerst trennen oder entfernen. Das Dialogfeld „Entfernen“ führt Sie zu den relevanten Anreicherungen oder Exporten. 
+Wenn die Verbindung, die Sie entfernen, von Anreicherungen oder Exporten verwendet wird, müssen Sie sie zuerst trennen oder entfernen. Das Dialogfeld „Entfernen“ führt Sie zu den relevanten Anreicherungen oder Exporten.
 
 Abgelöste Anreicherungen und Exporte werden inaktiv. Sie reaktivieren sie, indem Sie ihnen eine weitere Verbindung auf den Seiten [Anreicherungen](enrichment-hub.md) oder [Exporte](export-destinations.md) hinzufügen.
 
@@ -91,7 +91,7 @@ Abgelöste Anreicherungen und Exporte werden inaktiv. Sie reaktivieren sie, inde
 
    1. Wenn über diese Verbindung Anreicherungen oder Exporte erfolgen, klicken Sie auf die Schaltfläche, um zu sehen, was die Verbindung verwendet.
       - **Exporte:** Sie können die Exporte entweder entfernen oder trennen, um die Verbindung zu entfernen. Um einen Export zu trennen, können Administratoren die **Trennen**-Aktion verwenden. Diese Aktion ist für einzelne und mehrere ausgewählte Exporte verfügbar. Wenn Sie die Verbindung trennen, behalten Sie die Exportkonfiguration bei, sie wird jedoch erst ausgeführt, wenn eine weitere Verbindung hinzugefügt wird.
-      - **Anreicherungen:** Sie können die Anreicherungen entweder entfernen oder deaktivieren, um die Verbindung zu entfernen. 
+      - **Anreicherungen:** Sie können die Anreicherungen entweder entfernen oder deaktivieren, um die Verbindung zu entfernen.
    1. Wenn die Verbindung keine Abhängigkeiten mehr aufweist, kehren Sie zu **Administrator** > **Verbindungen** zurück, und versuchen Sie erneut, die Verbindung zu entfernen.
 
 1. Um den Löschvorgang zu bestätigen, wählen Sie **Entfernen**.

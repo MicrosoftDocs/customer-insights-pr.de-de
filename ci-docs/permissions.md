@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653567"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740902"
 ---
 # <a name="user-permissions"></a>Benutzerberechtigungen
 
@@ -41,7 +41,7 @@ Es gibt drei Arten von Rollen:
 
 - Alle dem Betrachter zur Verfügung stehenden Berechtigungen.
 - Laden und transformieren Sie die Daten mithilfe der Seite **Datenquellen**.
-- Vervollständigen Sie die Abschnitte *Datenvereinheitlichung* (**Zuordnen**, **Abgleichen** und **Zusammenführen**), die zu der vereinheitlichten Entität „Kundenprofil“ führen.
+- Schließen Sie die ***Datenvereinheitlichung** ab, die zu der Entität „Unified customer profile“ führt.
 - Definieren Sie **Beziehungen** und **Aktivitäten**.
 - Erstellen Sie Segmente mit der Seite **Segmente**.
 - Legen Sie Kennzahlen mit Hilfe der Seite **Kennzahlen** an.

@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646031"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755635"
 ---
 # <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
-
-
 
 Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics 365. Wenn das Kundenkarten-Add-In in einer unterstützten Dynamics 365 App installiert ist, können Sie Kundenprofilfelder, Erkenntnisse und Aktivitätszeitachse anzeigen. Das Add-In ruft Daten aus Customer Insights ab, ohne die Daten in der verbundenen Dynamics 365-App zu beeinflussen.
 
@@ -31,7 +29,7 @@ Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics
 ## <a name="prerequisites"></a>Anforderungen
 
 - Das Add-In funktioniert nur mit modellgetriebenen Dynamics 365-Apps wie Vertrieb oder Kundenservice, Version 9.0 und höher.
-- Damit Ihre Dynamics 365-Daten den Customer Insights-Kundenprofilen zugeordnet werden können, empfehlen wir, sie [über den Konnektor Microsoft Dataverse in die Dynamics 365 App einzubinden](connect-power-query.md). Wenn Sie eine andere Methode zum Erfassen von Dynamics 365-Kontakten (oder -Konten) verwenden, müssen Sie sicherstellen, dass das Feld `contactid` (oder`accountid`) [im Zuordnungsschritt des Datenvereinigungsprozesses als Primärschlüssel für diese Datenquelle](map-entities.md#select-primary-key-and-semantic-type-for-attributes) festgelegt ist. 
+- Damit Ihre Dynamics 365-Daten den Customer Insights-Kundenprofilen zugeordnet werden können, empfehlen wir, sie [über den Konnektor Microsoft Dataverse in die Dynamics 365 App einzubinden](connect-power-query.md). Wenn Sie eine andere Methode zum Erfassen von Dynamics 365-Kontakten (oder -Konten) verwenden, müssen Sie sicherstellen, dass das Feld `contactid` (oder`accountid`) [im Zuordnungsschritt des Datenvereinigungsprozesses als Primärschlüssel für diese Datenquelle](map-entities.md#select-primary-key-and-semantic-type-for-attributes) festgelegt ist.
 - Alle Dynamics 365 Benutzer des Kundenkarten-Add-Ins müssen [als Benutzer](permissions.md) in Customer Insights hinzugefügt werden, um die Daten zu sehen.
 - [Konfigurierte Such- und Filter Funktionalitäten](search-filter-index.md) in Customer Insights sind erforderlich, damit das Nachschlagefeld für die Daten funktioniert.
 - Jedes Steuerelement des Add-Ins ist auf bestimmte Daten in Customer Insights angewiesen. Einige Daten und Steuerelemente sind nur in Umgebungen bestimmter Typen verfügbar. Die Add-In-Konfiguration informiert Sie, wenn ein Steuerelement aufgrund des ausgewählten Umgebungstyps nicht verfügbar ist. Erhalten Sie weitere Informationen zu [Umgebungen, die Fälle verwenden](work-with-business-accounts.md).
@@ -132,16 +130,16 @@ Selbst mit korrekt konfigurierten ID-Feldern können die Steuerelemente keine Da
 
 **Lösung:**
 
-1. Stellen Sie sicher, dass Sie das Karten-Add-In gemäß den Anweisungen konfiguriert haben: [Konfigurieren des Kundenkarten-Add-Ins](#configure-the-customer-card-add-in) 
+1. Stellen Sie sicher, dass Sie das Karten-Add-In gemäß den Anweisungen konfiguriert haben: [Konfigurieren des Kundenkarten-Add-Ins](#configure-the-customer-card-add-in)
 
-1. Überprüfen Sie die Datenerfassungskonfiguration. Bearbeiten Sie die Datenquelle für das Dynamics 365-System, das die Kontakt-ID-GUID enthält. Wenn die GUID der Kontakt-ID in Großbuchstaben im Power Query-Editor angezeigt wird, versuchen Sie Folgendes: 
+1. Überprüfen Sie die Datenerfassungskonfiguration. Bearbeiten Sie die Datenquelle für das Dynamics 365-System, das die Kontakt-ID-GUID enthält. Wenn die GUID der Kontakt-ID in Großbuchstaben im Power Query-Editor angezeigt wird, versuchen Sie Folgendes:
     1. Bearbeiten Sie Datenquelle, um die Datenquelle im Power Query-Editor zu öffnen.
     1. Wählen Sie die Spalte Kontakt-ID aus.
     1. Wählen Sie **Transformieren** in der Kopfleiste, um verfügbare Aktionen anzuzeigen.
     1. Wählen Sie **Kleinbuchstaben**. Überprüfen Sie, ob die GUIDs in der Tabelle jetzt in Kleinbuchstaben geschrieben sind.
     1. Speichern Sie die Datenquelle.
-    1. Führen Sie Datenerfassung, Vereinheitlichung und nachgelagerte Prozesse aus, um die Änderungen an der GUID weiterzugeben. 
+    1. Führen Sie Datenerfassung, Vereinheitlichung und nachgelagerte Prozesse aus, um die Änderungen an der GUID weiterzugeben.
 
-Nach Abschluss der vollständigen Aktualisierung sollten die Steuerelemente des Kundenkarten-Add-Ins die erwarteten Daten anzeigen. 
+Nach Abschluss der vollständigen Aktualisierung sollten die Steuerelemente des Kundenkarten-Add-Ins die erwarteten Daten anzeigen.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

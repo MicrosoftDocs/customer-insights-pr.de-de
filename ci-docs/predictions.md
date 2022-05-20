@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647123"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740718"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Teildaten mit Vorhersagen ergänzen (eingestellt)
 
@@ -37,7 +37,7 @@ Bevor Ihre Organisation die Vorhersagefunktion verwenden kann, müssen die folge
 
 1. Ihre Organisation hat eine Instanz [in Microsoft Dataverse eingerichtet](/ai-builder/build-model#prerequisites) und sie befindet sich in derselben Organisation wie Customer Insights.
 
-2. Ihre Zielgruppenerkenntnis-Umgebung ist mit Ihrer Dataverse-Instanz verknüpft.
+2. Ihre Customer Insights-Umgebung wird an Ihre Dataverse-Instanz angehängt.
 
 Weitere Informationen finden Sie unter [Eine neue Umgebung erstellen](create-environment.md).
 

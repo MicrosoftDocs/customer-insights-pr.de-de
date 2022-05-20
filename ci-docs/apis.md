@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646131"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755449"
 ---
 # <a name="work-with-customer-insights-apis"></a>Arbeiten Sie mit Customer Insights APIs
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights stellt APIs bereit, um Ihre eigenen Anwendungen b
 > [!IMPORTANT]
 > Details zu diesen APIs finden Sie in der [Customer Insights APIs Referenz](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Sie enthalten zusätzliche Informationen über Operationen, Parameter und Antworten.
 
-In diesem Artikel wird beschrieben, wie Sie auf die Customer Insights-APIs zugreifen, eine Azure-App-Registrierung erstellen und mit den verfügbaren Clientbibliotheken beginnen.
+In diesem Artikel wird beschrieben, wie Sie auf die Customer Insights-APIs zugreifen, eine Azure-App-Registrierung erstellen und mit Clientbibliotheken beginnen.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Probieren Sie die Customer Insights APIs aus
 
@@ -83,13 +83,13 @@ Sie können die Anwendungs-/Client-ID für diese App-Registrierung mit der Micro
 
 Weitere Informationen über MSAL finden Sie unter [Übersicht über die Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Weitere Informationen zur App-Registrierung in Azure finden Sie unter [Registrieren Sie eine Anwendung](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Weitere Informationen zur App-Registrierung in Azure finden Sie unter [Registrieren Sie eine Anwendung](/graph/auth-register-app-v2).
 
 Informationen zur Verwendung der APIs in unseren Clientbibliotheken finden Sie unter [Customer Insights-Clientbibliotheken](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Server-zu-Server-Anwendungsberechtigungen
 
-Der [Abschnitt App-Registrierung](#create-a-new-app-registration-in-the-azure-portal) beschreibt, wie Sie eine App registrieren, bei der sich ein Benutzer zur Authentifizierung anmelden muss. Lernen Sie, wie Sie eine App-Registrierung erstellen, die keine Benutzerinteraktion benötigt und auf einem Server ausgeführt werden kann.
+Der [Abschnitt App-Registrierung](#create-a-new-app-registration-in-the-azure-portal) beschreibt, wie Sie eine App registrieren, bei der sich ein Benutzer zur Authentifizierung anmelden muss. Erfahren Sie, wie Sie eine App-Registrierung erstellen, die keine Benutzerinteraktion erfordert und auf einem Server ausgeführt werden kann.
 
 1. Gehen Sie bei Ihrer App-Registrierung im Azure-Portal zu **API-Berechtigungen**.
 
@@ -112,6 +112,10 @@ Der [Abschnitt App-Registrierung](#create-a-new-app-registration-in-the-azure-po
    Öffnen Sie Customer Insights, gehen Sie zu **Admin** > **Berechtigungen** und wählen Sie **Benutzer hinzufügen**.
 
 1. Suchen Sie nach dem Namen Ihrer App-Registrierung, wählen Sie ihn aus den Suchergebnissen und wählen Sie **Speichern**.
+
+## <a name="sample-queries"></a>Beispielabfragen
+
+Wir haben eine kurze Liste von OData-Beispielabfragen zusammengestellt, um mit den APIs zu arbeiten: [Beispiele für OData-Abfragen](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights Client-Bibliotheken
 
@@ -147,7 +151,7 @@ Lernen Sie, wie Sie mit den C# Client-Bibliotheken von NuGet.org arbeiten könne
 
 1. Rufen Sie mit dem Client die „Erweiterungsmethoden“ auf—zum Beispiel `GetAllInstancesAsync`. Wenn der Zugriff auf die zugrundeliegende `Microsoft.Rest.HttpOperationResponse` bevorzugt wird, verwenden Sie die „http-Message-Methoden“,— z. B. `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Die Antwort wird wahrscheinlich vom Typ `object` sein, da die Methode mehrere Typen zurückgeben kann (zum Beispiel `IList<InstanceInfo>` und `ApiErrorResult`). Um den Rückgabetyp zu prüfen, können Sie die Objekte sicher in die Antworttypen umwandeln, die auf der [API-Detailseite](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) für diese Operation angegeben sind.    
+1. Die Antwort wird wahrscheinlich vom Typ `object` sein, da die Methode mehrere Typen zurückgeben kann (zum Beispiel `IList<InstanceInfo>` und `ApiErrorResult`). Um den Rückgabetyp zu überprüfen, verwenden Sie die Objekte in den Antworttypen, die auf der [API-Detailseite](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) für diese Operation angegeben sind.    
    
    Wenn mehr Informationen über die Anfrage benötigt werden, verwenden Sie die **http-Message-Methoden** für den Zugriff auf das raw response-Objekt.
 

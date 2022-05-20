@@ -1,23 +1,22 @@
 ---
 title: Einwilligungsregeln für Segmente aktivieren
 description: Folgen Sie diesen Schritten, um Zustimmungsdaten zu verknüpfen und Zustimmungsprüfungen in Dynamics 365 Customer Insights zu aktivieren. Ein Administrator kann auch Einwilligungsprüfungen deaktivieren.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646050"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755169"
 ---
 # <a name="activate-consent-rules"></a>Zustimmungsregeln aktivieren
 
-[Das Zustimmungscenter (Vorschau)](consent-management/overview.md) hilft Ihnen, Zustimmungsdaten aus verschiedenen Quellen zu harmonisieren. Verwenden Sie die vereinheitlichte Entität *Zustimmung*, um standardmäßige Zustimmungsüberprüfungen anzuwenden. Nachdem Sie Zustimmungsdaten in das Zustimmungscenter importiert und die Regeln für die Daten konfiguriert haben, wird die Entität *Zustimmung* automatisch mit Dynamics 365 Customer Insights synchronisiert.
+[Das Zustimmungscenter (Vorschau)](consent-management/overview.md) hilft Ihnen, Zustimmungsdaten aus verschiedenen Quellen zu harmonisieren. Verwenden Sie die vereinheitlichte Entität *Zustimmung*, um standardmäßige Zustimmungsüberprüfungen anzuwenden. Nachdem Sie Zustimmungsdaten importiert und die Zuordnungsregeln konfiguriert haben, wird die Entität *Zustimmung* automatisch mit Dynamics 365 Customer Insights synchronisiert.
 
 ## <a name="enable-consent-checks"></a>Zustimmungsüberprüfungen aktivieren
 

@@ -1,7 +1,7 @@
 ---
 title: Startseite in Customer Insights
 description: Starten Sie die Erkundung der App auf der Startseite.
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647200"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743412"
 ---
 # <a name="explore-customer-insights"></a>Erkunden von Customer Insights
 
 Sie können [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) unter der folgenden URL aufrufen: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-Die **Zuhause**-Seite zeigt eine Übersicht über Segmente, Kennzahlen und Anreicherungsdaten (falls konfiguriert) nach Abschluss der Phasen [Zuordnung](map-entities.md), [Abgleichung](match-entities.md) und [Zusammenführung](merge-entities.md).
+Die **Homepage** zeigt Anleitungen für den Konfigurationsprozess für Schlüsselfunktionen und bietet einen Überblick über Segmente, Kennzahlen und Anreicherungsdaten.
 
 :::image type="content" source="media/home-page.png" alt-text="Screenshot des Startbildschirms mit Beispielerkenntnissen.":::
 
-Wichtige Steuerelemente in Customer Insights:
+## <a name="left-side-pane"></a>Linker Seitenbereich
 
-- Linker Fensterbereich: Wechseln Sie zwischen der primären Zielgruppe, wenn Sie eine B2C- und eine B2B-Umgebung haben
+Verwenden Sie den linken Bereich, um zwischen den verschiedenen Bereichen von Customer Insights zu navigieren. 
 
-- Linker Bereich: Navigieren Sie zwischen verschiedenen Bereichen und wählen Sie die primäre Zielgruppe
+Wenn Sie mit Geschäftskonten und Privatkunden arbeiten, können Sie Ihre primäre Zielgruppe auswählen, um Ihren Fokus entsprechend zu setzen. 
 
-- Kopfzeile: Ändern Sie die Umgebung, in der Sie arbeiten, und verwalten Sie Umgebungen als Administrator
+## <a name="application-header"></a>Anwendungskopf
 
-- Kopfzeile: Legen Sie persönliche Einstellungen für Customer Insights fest und erhalten Sie Hilfeoptionen
+Die **Umgebungsauswahl** zeigt die Umgebung, in der Sie arbeiten, und lässt Sie Umgebungen als Administrator erstellen oder verwalten.
 
-Jetzt können Sie die folgenden Abschnitte auf der Startseite anzeigen:
+Das Smiley-Symbol ist das Steuerelement für **Feedback**. Wählen Sie es aus, um uns Ihre Erfahrungen mit Customer Insights mitzuteilen. Wir hören aktiv auf Ihr Feedback und danken Ihnen im Voraus, dass Sie uns wissen lassen, was Ihnen gefällt und wie wir uns verbessern können.
 
-- **Aktuelle Segmente** zeigt Kundengruppen basierend auf demografischen, Verhaltens- oder Transaktionsattributen an, die Sie definiert haben. [Segmente erstellen](segments.md) hilft Ihnen, Ihren Kundenstamm zu gruppieren und Ihre Geschäftsaktivitäten besser auszurichten.
+Das Steuerelement **Einstellungen**, das durch ein Zahnradsymbol dargestellt wird, ermöglicht es Ihnen, Sitzungsdetails für Customer Insights zu sammeln und globale Einstellungen für Ihr Microsoft 365-Profil zu konfigurieren. 
 
-- **Aktuelle geschäftliche Messungen** zeigt Kacheln mit [Key Performance Indicators (KPIs)](measures.md), die Sie definiert haben. Zum Beispiel die durchschnittliche Abwanderungswahrscheinlichkeit eines Kunden oder die durchschnittlichen Onlineausgaben pro Kunde.
+**Hilfeoptionen**, die mit einem Fragezeichensymbol angezeigt werden, bieten kontextbezogene Hilfelinks und andere hilfreiche Ressourcen.
 
-- **Aktuelle Anreicherungen** listet die Ergebnisse der kürzlich abgeschlossenen Anreicherungsausführungen auf. Durch [Anreicherungen](enrichment-hub.md) werden Informationen über Ihren Kundenstamm hinzugefügt. Zum Beispiel durch das Verständnis der Interessen und Marken, für die sie eine Affinität haben.
+Ihr Profilbild öffnet den **Konto-Manager** für Ihr Microsoft 365-Profil. Wählen Sie **Mein Konto**, um Ihre persönlichen Einstellungen zu verwalten.
+
+## <a name="getting-started-with-customer-insights-section"></a>Erste Schritte mit dem Abschnitt „Customer Insights“
+
+Dieser Abschnitt enthält Karten, die Sie durch den Einrichtungsprozess Ihrer Customer Insights-Umgebung führen. 
+
+1. Die Karte **Daten hinzufügen** unterstützt Sie beim Datenimport. Customer Insights unterstützt [mehrere Optionen, um Daten über Ihre Kunden einzugeben](data-sources.md). Wählen Sie **Datenquellen hinzufügen**, um anzufangen.
+1. Sobald der anfängliche Datenimport erfolgreich abgeschlossen ist, können Sie die Karte **Daten vereinheitlichen** zur Harmonisierung der Daten verwenden und [einheitliche Kundenprofile](data-unification.md) aus unterschiedlichen Quellen erstellen. 
+1. Nachdem einheitliche Kundenprofile vorhanden sind, ist es an der Zeit, die Optionen für **Daten analysieren** zu prüfen und zusätzliche Einblicke zu erhalten. Probieren Sie es aus und erstellen Sie [geschäftliche Kennzahlen](measures.md), um KPIs zu verfolgen, [definieren Sie Segmente](segments.md), um bestimmte Zielgruppen zu erreichen, oder [konfigurieren Sie Vorhersagen](predictions-overview.md) mit Hilfe von KI.
+1. Nachdem Ihre Kundendaten importiert, vereinheitlicht und sauber strukturiert sind, verwenden Sie unsere [verschiedenen Exportziele](export-destinations.md), um mit den Daten zu arbeiten. Wählen Sie **Verbindungen hinzufügen**, um Ihre Lieblingsdienste zu verbinden. Exportieren Sie die Daten beispielsweise nach Dynamics 365 Marketing, um ausgehende Marketingkampagnen zu erstellen oder Kundenkontaktverläufe zu erstellen. 
+
+## <a name="your-customer-insights-section"></a>Ihr Abschnitt mit Kundenerkenntnissen
+
+- **Segmente** zeigt Kundengruppen basierend auf demografischen, Verhaltens- oder Transaktionsattributen an, die Sie definiert haben. [Segmente erstellen](segments.md) hilft Ihnen, Ihren Kundenstamm zu gruppieren und Ihre Geschäftsaktivitäten besser auszurichten.
+
+- **Geschäftskennzahlen** zeigt Kacheln mit [Key Performance Indicators (KPIs)](measures.md), die Sie definiert haben. Zum Beispiel die durchschnittliche Abwanderungswahrscheinlichkeit eines Kunden oder die durchschnittlichen Onlineausgaben pro Kunde.
+
+- **Anreicherungen** listet die Ergebnisse der kürzlich abgeschlossenen Anreicherungsausführungen auf. Durch [Anreicherungen](enrichment-hub.md) werden Informationen über Ihren Kundenstamm hinzugefügt. Zum Beispiel durch das Verständnis der Interessen und Marken, für die sie eine Affinität haben.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

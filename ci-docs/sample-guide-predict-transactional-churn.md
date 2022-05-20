@@ -1,19 +1,19 @@
 ---
 title: Transaktionsabwanderungsvorhersage Beispielanleitung
 description: Verwenden Sie diese Anleitung, um das Out-of-Box-Modell zur Vorhersage von Transaktionsabwanderung auszuprobieren.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647263"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741318"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Transaktionsabwanderungsvorhersage Beispielanleitung
 
@@ -86,69 +86,13 @@ Lesen Sie insbesondere die Artikel zu [Datenerfassung](data-sources.md) und [Imp
 
 1. Speichern Sie die Datenquelle.
 
-
 ## <a name="task-2---data-unification"></a>Aufgabe 2 - Daten vereinheitlichen
 
-Nach der Datenerfassung beginnen wir nun mit dem **Zuordnen, Abgleichen, Zusammenführen** Prozess, um ein einheitliches Kundenprofil zu erstellen. Weitere Informationen finden Sie unter [Datenvereinheitlichung](data-unification.md).
-
-### <a name="map"></a>Zuordnung
-
-1. Nach der Datenerfassung ordnen Sie die Kontakte aus den eCommerce- und Loyalty-Daten den gemeinsamen Datentypen zu. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Karten**.
-
-1. Wählen Sie die Entitäten, die das Kundenprofil darstellen - **eCommerceContacts** und **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Vereinheitlichen Sie E-Commerce- und Treue-Datenquellen.":::
-
-1. Wählen Sie **KontaktId** als Primärschlüssel für **eCommerceKontakte** und **LoyaltyID** als Primärschlüssel für **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Vereinheitlichen Sie LoyaltyId als Primärschlüssel.":::
-
-### <a name="match"></a>Abgleichen
-
-1. Gehen Sie auf die Registerkarte **Abgleichen** und wählen Sie **Reihenfolge festlegen**.
-
-1. Wählen Sie in der Dropdown-Liste **Primär** und wählen Sie **eCommerceKontakte: eCommerce** als Primärquelle aus, und wählen Sie dann Alle Datensätze einbinden aus.
-
-1. Wählen Sie in der Dropdownliste **Entität 2** den Eintrag **loyCustomers: LoyaltyScheme** und dann Alle Datensätze berücksichtigen aus.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Abgleich eCommerce und Loyalty vereinheitlichen.":::
-
-1. Wählen Sie **Eine neue Regel erstellen**
-
-1. Fügen Sie Ihre erste Bedingung mit FullName hinzu.
-
-   * Für eCommerceKontakte wählen Sie **Vollständiger Name** in der Dropdown-Liste.
-   * Für loyCustomers wählen Sie **Vollständiger Name** in der Dropdown-Liste.
-   * Wählen Sie das Dropdown-Menü **Normalisieren** und wählen Sie **Typ (Telefon, Name, Adresse, ...)**.
-   * Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
-
-1. Geben Sie als Regelname **FullName, Email** ein.
-
-   * Fügen Sie eine zweite Bedingung für E-Mail-Adressen hinzu, indem Sie **Bedingung hinzufügen** wählen.
-   * Wählen Sie für eCommerce-Kontakte der Entität **Email** im Dropdown-Menü.
-   * Wählen Sie für loyCustomers der Entität **Email** im Dropdown-Menü. 
-   * Lassen Sie Normalisieren leer. 
-   * Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Übereinstimmungsregel für Name und E-Mail vereinheitlichen.":::
-
-7. Wählen Sie **Speichern** und **Ausführen**.
-
-### <a name="merge"></a>Mergen
-
-1. Gehen Sie auf die Registerkarte **Zusammenführen**.
-
-1. Ändern Sie auf der **ContactId** für die Entität **loyCustomers** den Anzeigenamen in **ContactIdLOYALTY**, um sie von den anderen aufgenommenen IDs zu unterscheiden.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Contactid aus Treue-ID umbenennen:":::
-
-1. Wählen Sie **Speichern** und **Ausführen**, um den Zusammenführungsprozess zu starten.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Aufgabe 3 - Konfigurieren der Vorhersage der Transaktionsabwanderung
 
-Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhersage für Abonnements durchführen. Detaillierte Schritte finden Sie im Artikel [Abonnementabwanderung vorhersagen](predict-subscription-churn.md). 
+Mit den Unified customer profiles können wir jetzt die Transaktionsabwanderungs-Vorhersage ausführen. Detaillierte Schritte finden Sie im Artikel [Transaktionsabwanderungs-Vorhersage](predict-transactional-churn.md). 
 
 1. Gehen Sie zu **Intelligenz** > **Erkennen** und wählen Sie das Modell **Kundenabwanderung**.
 
@@ -180,7 +124,7 @@ Mit den vereinheitlichten Kundenprofilen können wir nun die Abwanderungsvorhers
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Aufgabe 4 - Überprüfung der Modellergebnisse und Erklärungen
 
-Lassen Sie das Modell das Training und das Scoring der Daten abschließen. Sie können nun die Erklärungen zum Abonnement-Abwanderungsmodell überprüfen. Weitere Informationen finden Sie unter [Überprüfen eines Vorhersagestatus und der Ergebnisse](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Lassen Sie das Modell das Training und das Scoring der Daten abschließen. Sie können jetzt die Erläuterungen zum Abwanderungsmodell überprüfen. Weitere Informationen finden Sie unter [Überprüfen eines Vorhersagestatus und der Ergebnisse](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Aufgabe 5 - Erzeugen eines Segments von Kunden mit hohem Abwanderungsrisiko
 
@@ -188,18 +132,16 @@ Das Ausführen des Produktionsmodells erstellt eine neue Entität, die Sie in **
 
 Sie können ein neues Segment basierend auf der vom Modell erstellten Entität erstellen.
 
-1.  Gehen Sie zu **Segmente**. Wählen Sie **Neu** und wählen Sie **Erstellen aus** > **Intelligenz**. 
+1.  Gehen Sie zu **Segmente**. Wählen Sie **Neu** aus und wechseln Sie dann zu **Erstellen aus** > **Intelligenz**. 
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Erstellen eines Segments mit der Modellausgabe.":::
 
-1. Wählen Sie den Endpunkt **OOBSubscriptionChurnPrediction** und definieren Sie das Segment: 
+1. Wählen Sie den Endpunkt **OOBeCommerceChurnPrediction**, und definieren Sie das Segment: 
    - Feld: ChurnScore
    - Operator: größer als
    - Wert: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Abonnement-Abwanderungssegment einrichten.":::
 
-Sie haben jetzt ein Segment, das dynamisch aktualisiert wird und Kunden mit hohem Abwanderungsrisiko für dieses Abo-Geschäft identifiziert.
+Sie haben jetzt ein dynamisch aktualisiertes Segment, das Kunden mit hohem Abwanderungsrisiko identifiziert.
 
 Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
 

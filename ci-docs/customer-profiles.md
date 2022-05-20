@@ -1,7 +1,7 @@
 ---
 title: Anzeigen von Kundenprofilen
 description: Erhalten Sie eine kombinierte Ansicht Ihrer vereinheitlichten Kundendaten.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646021"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755781"
 ---
 # <a name="customer-profiles"></a>Kundenprofile
 
@@ -29,7 +29,7 @@ Bei den Kunden kann es sich um Einzelpersonen oder Unternehmen handeln. Jedes Ku
 
 Wählen Sie eine Kachel aus, um Daten für den ausgewählten Kunden auf einer speziellen Seite namens [Kundendetailseite](customer-profiles.md#customer-details-page) anzuzeigen.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Kundenseite mit Ergebniskacheln](media/customers-page-result-tiles-B2C.png "Kundenseite mit Ergebniskacheln")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Wählen Sie eine Kachel aus, um Daten für den ausgewählten Kunden auf einer sp
 
 ## <a name="search-for-customers"></a>Suche nach Kunden
 
-Suchen Sie nach Kunden, indem Sie einen Namen oder ein anderes Attribut in das Suchfeld eingeben. Die Suche funktioniert nur innerhalb der _Kunde_ Entität, die während des Datenvereinigungsprozesses erstellt wurde.
+Suchen Sie nach Kunden, indem Sie einen Namen oder ein anderes Attribut in das Suchfeld eingeben. Die Suche funktioniert nur innerhalb der *Kunde* Entität, die während des Datenvereinigungsprozesses erstellt wurde.
 
 Als Admin können Sie die durchsuchbaren Attribute über die Seite **Such- und Filterindex** konfigurieren. Weitere Informationen finden Sie unter [Such- und Filterindex verwalten](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Kunden filtern
 
-Sie können Kunden nach den _Kunden_ Entitätsfeldern filtern. Ähnlich wie bei der Suche muss Ihr Admin zunächst die Felder mit Hilfe der Seite **Such- und Filterindex** als filterbar definieren.
+Sie können Kunden nach den *Kunden* Entitätsfeldern filtern. Ähnlich wie bei der Suche muss Ihr Admin zunächst die Felder mit Hilfe der Seite **Such- und Filterindex** als filterbar definieren.
 
 1. Wählen Sie **Filter anzeigen** auf der Seite **Kunden** aus.
 
@@ -55,24 +55,25 @@ Sie können Kunden nach den _Kunden_ Entitätsfeldern filtern. Ähnlich wie bei 
 
 Wählen Sie eine der Kundenkacheln, um die **Kundendetailseite** zu öffnen. Diese Ansicht enthält vereinheitlichte Informationen für den ausgewählten Kunden. Die Kundendaten umfassen die folgenden Inhalte:
 
-**Kachel Kundenprofil**: Diese Kachel zeigt die verschiedenen Werte aus der vereinheitlichten Entität _Kunde_ an. Wenn ein Feld keinen Wert für das ausgewählte Kundenprofil hat, wird es nicht angezeigt. Die Kachel ist in Abschnitte gegliedert:  
-  - Der erste Abschnitt zeigt einen vordefinierten Satz von Feldern, gefolgt von allen Feldern, die Teil des Such- und Filterindex sind. Alle adressbezogenen Felder werden in einer Zeile zusammengefasst, wenn das Profil solche Felder enthält. 
-  - **Kontakte für diesen Kunden**: In Umgebungen für Geschäftskonten werden im zweiten Abschnitt alle zugehörigen Kontakte für diesen Kunden angezeigt. Jeder Kontakt wird mit seinen Feldern angezeigt. Leere Felder werden ausgeblendet.
-  - **Weitere Felder**: Zeigt die restlichen Felder des ausgewählten Kunden an, außer IDs. 
-  - **IDs**: Listet alle IDs unter ihrem entsprechenden Entitätsnamen auf. Felder werden durch ihre Semantik als IDs identifiziert, die sie als solche kategorisieren.
+**Kachel Kundenprofil**: Diese Kachel zeigt die verschiedenen Werte aus der vereinheitlichten Entität *Kunde* an. Wenn ein Feld keinen Wert für das ausgewählte Kundenprofil hat, wird es nicht angezeigt. Die Kachel ist in Abschnitte gegliedert:
+
+- Der erste Abschnitt zeigt einen vordefinierten Satz von Feldern, gefolgt von allen Feldern, die Teil des Such- und Filterindex sind. Alle adressbezogenen Felder werden in einer Zeile zusammengefasst, wenn das Profil solche Felder enthält.
+- **Kontakte für diesen Kunden**: In Umgebungen für Geschäftskonten werden im zweiten Abschnitt alle zugehörigen Kontakte für diesen Kunden angezeigt. Jeder Kontakt wird mit seinen Feldern angezeigt. Leere Felder werden ausgeblendet.
+- **Weitere Felder**: Zeigt die restlichen Felder des ausgewählten Kunden an, außer IDs.
+- **IDs**: Listet alle IDs unter ihrem entsprechenden Entitätsnamen auf. Felder werden durch ihre Semantik als IDs identifiziert, die sie als solche kategorisieren.
 
 **Aktivitätszeitachse**: Zeigt Daten an, wenn Sie Aktivitäten konfiguriert haben. Die Zeitskalaansicht enthält chronologisch sortierte Aktivitäten des ausgewählten Kunden, beginnend mit der letzten Aktivität. Weitere Informationen finden Sie unter [Kundenaktivitäten](activities.md).
 
-**Erkenntnisse**:  
-  - **Kennzahlen**: Zeigt an, ob Sie eine oder mehrere Kennzahlen für Kundenattributkennzahlen konfiguriert haben. Sie enthalten berechnete KPIs rund um Ihre Kunden auf der Ebene des einzelnen Kunden. Weitere Informationen finden Sie unter [Kennzahlen definieren und verwalten](measures.md).
+**Erkenntnisse**:
 
-  - **Potenzielle Interessen, potenzielle Marken**: Zeigt an, ob Sie eine Anreicherung mit Marken- oder Interessenaffinität konfiguriert haben. Es repräsentiert potenzielle Interessen und Affinitäten zu Marken anhand anderer Kunden, deren Profil dem ausgewählten Kundenprofil ähnlich ist. Weitere Informationen finden Sie unter [Kundenprofile mit Marken- und Interessenaffinitäten anreichern](enrichment-microsoft.md).
+- **Kennzahlen**: Zeigt an, ob Sie eine oder mehrere Kennzahlen für Kundenattributkennzahlen konfiguriert haben. Sie enthalten berechnete KPIs rund um Ihre Kunden auf der Ebene des einzelnen Kunden. Weitere Informationen finden Sie unter [Kennzahlen definieren und verwalten](measures.md).
+
+- **Potenzielle Interessen, potenzielle Marken**: Zeigt an, ob Sie eine Anreicherung mit Marken- oder Interessenaffinität konfiguriert haben. Es repräsentiert potenzielle Interessen und Affinitäten zu Marken anhand anderer Kunden, deren Profil dem ausgewählten Kundenprofil ähnlich ist. Weitere Informationen finden Sie unter [Kundenprofile mit Marken- und Interessenaffinitäten anreichern](enrichment-microsoft.md).
 
 Um zur Kundensuchseite zurückzukehren, wählen Sie **Zurück zu Kunden**.
 
 ## <a name="next-steps"></a>Nächste Schritte,
 
 [Weitere Datenquellen hinzufügen](data-sources.md), [Vereinheitlichte Profile bereichern](enrichment-hub.md), oder [Segmente erstellen](segments.md), um mit einheitlichen Kundenprofilen in anderen Anwendungen zu arbeiten.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,110 +1,83 @@
 ---
-title: Entitäten und Attribute für die Datenvereinigung zuordnen
-description: Wählen Sie Entitäten, Attribute, Primärschlüssel und semantische Typen aus, um Daten dem vereinheitlichten Kund*innenprofil zuzuordnen.
-ms.date: 10/18/2020
+title: Wählen von Quellfeldern für die Datenvereinheitlichung
+description: Der erste Schritt im Vereinheitlichungsprozess ist die Auswahl von Entitäten, Attributen, Primärschlüsseln und semantischen Typen, um Daten dem Unified customer profile zuzuordnen.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646080"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740994"
 ---
-# <a name="map-entities-and-attributes"></a>Entitäten und Attribute zuordnen
+# <a name="select-source-fields-for-data-unification"></a>Wählen von Quellfeldern für die Datenvereinheitlichung
 
-**Zuordnen** ist die erste Stufe im Prozess der Datenvereinheitlichung. Das Mapping besteht aus drei Phasen:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Entitätsauswahl*: Identifizieren Sie die kombinierbaren Entitäten, die zu einem Datensatz mit vollständigeren Informationen über Ihre Kunden führen.
-- *Attributauswahl*: Identifizieren Sie für jede Entität die Spalten, die Sie in den Phasen *Abgleich* und *Zusammenführung* kombinieren und abstimmen möchten. Diese Spalten werden *Attribute* genannt.
-- *Auswahl des Primärschlüssels und des semantischen Typs*: Identifizieren Sie für jede Entität ein Attribut, das Sie als Primärschlüssel für diese Entität definieren möchten, und identifizieren Sie für jedes Attribut einen semantischen Typ, der dieses Attribut am besten beschreibt.
+Der erste Schritt bei der Vereinheitlichung ist die Auswahl der Entitäten und Felder in Ihren DataSets, die Sie vereinheitlichen möchten. Wählen Sie Entitäten aus, die kundenbezogene Details wie Name, Adresse, Telefonnummer und E-Mail enthalten. Sie können eine oder mehrere Entitäten auswählen.
 
-Weitere Informationen über den allgemeinen Flow der Datenvereinheitlichung finden Sie unter [Vereinheitlichung](data-unification.md).
+## <a name="select-entities-and-fields"></a>Entitäten und Felder auswählen
 
-## <a name="select-the-first-entities"></a>Wählen Sie die ersten Entitäten
+1. Gehen Sie zu **Daten** > **Vereinheitlichen**.
 
-1. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Karten**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Screenshot der Unify-Angebotsseite für die erste Ausführung, wobei „Erste Schritte“ hervorgehoben ist.":::
 
-2. Beginnen Sie die Mappingphase, indem Sie **Entitäten auswählen** wählen.
+1. Wählen Sie **Erste Schritte** aus.
 
-3. Wählen Sie die Entitäten und Attribute aus, die Sie in den Phasen *Abgleichen* und *Zusammenführen* verwenden wollen. Sie können die erforderlichen Attribute einzeln aus einer Entität auswählen oder alle Attribute aus einer Entität einschließen, indem Sie das Kontrollkästchen **Alle Felder einschließen** auf Entitätsebene auswählen. Wir empfehlen die Auswahl von mindestens zwei Entitäten, die von dem Datenvereinheitlichungsprozess profitieren.
+1. Auf der Seite **Quellfelder** wählen Sie **Entitäten und Felder auswählen**. Der Bereich **Entitäten und Felder auswählen** wird angezeigt.
 
-   > [!div class="mx-imgBorder"]
-   > ![Beispiel für das Hinzufügen von Entitäten.](media/data-manager-configure-map-add-entities-example.png "Beispiel für das Hinzufügen von Entitäten")
+1. Wählen Sie mindestens eine Entität.
 
-   In diesem Beispiel fügen wir die Entitäten **eCommerceContacts** und **loyCustomers** hinzu. Durch Auswahl dieser Entitäten können Sie Erkenntnisse darüber gewinnen, welche der Online-Geschäftskunden Mitglieder des Treueprogramms sind.
-   
-   Sie können nach Schlüsselwörtern in allen Attributen und Entitäten suchen, um die erforderlichen Attribute auszuwählen, die Sie zuordnen möchten.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Beispiel für Suchfelder.](media/data-manager-configure-map-search-fields-example.png "Beispiel für Suchfelder")
+1. Identifizieren Sie für jede ausgewählte Entität die Felder, die Sie verwenden möchten, um Kundendatensätze und Felder abzugleichen, die in das einheitliche Profil aufgenommen werden sollen. Diese Felder werden *Attribute* genannt. Sie können die erforderlichen Attribute einzeln aus einer Entität auswählen oder alle Attribute einer Entität einbeziehen, indem Sie das Kontrollkästchen auf Entitätsebene aktivieren. Sie können nach Schlüsselwörtern in allen Attributen und Entitäten suchen, um die erforderlichen Attribute auszuwählen, die Sie zuordnen möchten.
 
-4. Wählen Sie **Anwenden**, um Ihre Auswahl zu bestätigen.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Screenshot der ausgewählten Entitäten und Attribute":::
+
+   In diesem Beispiel fügen wir die Entitäten **Contacts** und **CustomerLoyalty** hinzu. Durch Auswahl dieser Entitäten können Sie Erkenntnisse darüber gewinnen, welche der Online-Geschäftskunden Mitglieder des Treueprogramms sind.
+
+1. Wählen Sie **Anwenden**, um Ihre Auswahl zu bestätigen. Die ausgewählten Entitäten und Attribute werden angezeigt.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Wählen Sie den Primärschlüssel und den semantischen Typ für Attribute aus
 
-Nach Auswahl Ihrer Entitäten wird die Seite **Karte** die ausgewählten Entitäten zu Ihrer Überprüfung auflisten. Definieren Sie den Primärschlüssel für eine Entität und identifizieren Sie den semantischen Typ für ein Attribut in der Entität.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Screenshot ausgewählter Entitäten mit nicht ausgewähltem Primärschlüssel." lightbox="media/m3_select_primary.png":::
 
-- **Primärschlüssel**: Wählen Sie ein Attribut als Primärschlüssel für jede Ihrer Entitäten aus. Damit ein Attribut ein gültiger Primärschlüssel ist, sollte es keine doppelten Werte, fehlenden Werte oder Nullwerte enthalten. Zeichenfolgen-, Integer- und GUID-Datentypattribute werden als Primärschlüssel unterstützt und in einem Feld angezeigt, aus dem Sie auswählen können.
+Führen Sie für jede Entität die folgenden Schritte aus.
 
-- **Semantischer Attributtyp**: Kategorien Ihrer Attribute, wie z. B. E-Mail-Adresse oder Name. Um KI-Modelle für intelligente Vorhersage der Semantik zu verwenden, Zeit zu sparen und die Genauigkeit zu verbessern, stellen Sie **Intelligentes Mapping** auf **AN**. Intelligentes Mapping hebt die KI-basierte Semantikempfehlung im **Typ**-Feld hervor. Wenn Sie es auf **AUS** stellen, sehen Sie unsere regulären Mappingempfehlungen. Sie können einen beliebigen semantischen Typ aus der Liste verfügbarer Optionen auswählen und die vorgeschlagene Auswahl außer Kraft setzen.
+1. Wählen Sie den **Primärschlüssel**. Der Primärschlüssel ist ein für die Entität eindeutiges Attribut. Damit ein Attribut ein gültiger Primärschlüssel ist, sollte es keine doppelten Werte, fehlenden Werte oder Nullwerte enthalten. Als Primärschlüssel werden String-, Integer- und GUID-Datentypattribute unterstützt.
 
-> [!div class="mx-imgBorder"]
-> ![Attributtyp und Semantikvorhersage.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Attributtyp und Semantikvorhersage")
+1. Stellen Sie sicher, dass **Intelligente Zuordnung** aktiviert ist, damit Sie KI-Modelle für eine intelligente Vorhersage der Semantik verwenden, Zeit sparen und die Genauigkeit verbessern können. Intelligentes Mapping hebt die KI-basierte Semantikempfehlung im **Typ**-Feld hervor. Sie können die vorgeschlagene Auswahl überschreiben, indem Sie einen beliebigen Semantiktyp aus der Liste der verfügbaren Optionen auswählen.
 
-Das Hinzufügen eines benutzerdefinierten semantischen Typs ist ebenfalls möglich. Wählen Sie das Typ-Feld für dieses Attribut und geben Sie Ihren benutzerdefinierten Namen des semantischen Typs ein. Auf diese Weise können Sie auch die Attributtypen ändern, die vom System identifiziert wurden.
+1. Wählen Sie für jedes Attribut einen semantischen **Typ** aus, der dieses Attribut am besten beschreibt, z. B. Name, Stadt oder E-Mail-Adresse.
 
-Alle Attribute, für die ein semantischer Typ automatisch identifiziert wird, sind im Abschnitt **Überprüfen zugeordneter Felder** zusammengefasst. Überprüfen Sie diese Attribute und ihre semantischen Typen, da sie verwendet werden, um Ihre Entitäten im Zusammenführungsschritt der Datenvereinigung zu kombinieren.
+   > [!NOTE]
+   > Ein Feld sollte dem semantischen Typ *Person.FullName* zugeordnet werden, um den Kundennamen in die Kundenkarte einzutragen. Andernfalls erscheinen die Kundenkarten namenlos.
 
-Attribute, die nicht automatisch einem semantischen Typ zugeordnet werden, werden im Abschnitt **Definieren der Daten in den nicht zugeordneten Feldern** zusammengefasst. Wählen Sie das Feld für den semantischen Typ für die nicht zugeordneten Attribute aus, oder geben Sie Ihren benutzerdefinierten Attributtypnamen ein.
+   1. Um den Attributtyp zu ändern, der vom System identifiziert wurde, wählen Sie einen anderen Typ. Wenn der Typ nicht vorhanden ist, erstellen Sie einen benutzerdefinierten semantischen Typ, indem Sie das Feld **Typ** für das Attribut auswählen und den Namen Ihres benutzerdefinierten semantischen Typs eingeben.
 
-> [!div class="mx-imgBorder"]
-> ![Primärschlüssel und Attributtyp.](media/data-manager-configure-map-add-attributes.png "Primärschlüssel und Attributtyp")
+   1. Um öffentlich zugänglichen Profilbildern oder Logos ein Attribut hinzuzufügen, das eine URL enthält, wählen Sie die Entität und das Feld aus, das die URL enthält. Geben Sie im Feld **Typ** Folgendes ein:
+      - Für eine Person: Person.ProfileImage
+      - Für eine Organisation: Organization.LogoImage
 
-> [!NOTE]
-> Ein Feld sollte dem semantischen Typ Person.FullName zugeordnet sein, um den Kundennamen auf der Kundenkarte auszufüllen. Andernfalls erscheinen die Kundenkarten namenlos. 
+   1. Geben Sie für ein Kontonamensattribut „Organization.Name“ in das Feld **Typ** ein.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Hinzufügen und Entfernen von Attributen und Entitäten
+1. Überprüfen Sie die Attribute, bei denen ein semantischer Typ automatisch identifiziert wird. Diese Attribute sind unter **Zugeordnete Felder überprüfen** aufgelistet. Im Schritt **Vereinheitlichte Kundenfelder** können nur Attribute des gleichen Typs kombiniert werden. Semantische Typen werden verwendet, um Erkenntnisse automatisch vorzuschlagen. Stellen Sie sicher, dass die ausgewählten Typen für alle ausgewählten Entitäten konsistent sind.
 
-1. Wählen -Sie auf **Vereinheitlichen** > **Karte** **Felder bearbeiten**.
+1. Wählen Sie für Attribute, die nicht automatisch einem Semantiktyp zugeordnet werden, ein Semantiktypfeld aus, geben Sie Ihren benutzerdefinierten Attributtypnamen ein, oder lassen Sie sie nicht zugeordnet. Diese Attribute sind unter **Daten in nicht zugeordneten Feldern definieren** aufgelistet.
 
-2. In dem Bereich **Felder bearbeiten** fügen Sie Attribute oder Entitäten hinzu oder entfernen sie diese. Verwenden Sie die Suche oder den Bildlauf, um Ihre Attribute und Objekte von Interesse zu finden und auszuwählen. Sie können ein Attribut oder eine Entität nicht entfernen, wenn sie bereits übereinstimmen.
+1. Nachdem Sie die Schritte für jede Entität abgeschlossen haben, wählen Sie **Quellfelder speichern**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Hinzufügen oder Entfernen von Attributen.](media/configure-data-map-edit.png "Attribute hinzufügen oder entfernen")
+1. Wählen Sie **Weiter** aus.
 
-3. Wählen Sie **Übernehmen** aus.
-
-## <a name="add-images-to-profiles"></a>Hinzufügen von Bildern zu Profilen
-
-Wenn eine Entität URLs zu öffentlich verfügbaren Profilbildern oder Logos enthält, können Sie diese dem einheitlichen Kundenprofil hinzufügen.
-
-Wählen Sie die Entität aus und suchen Sie das Feld, das die URL zum Profilbild enthält. Geben Sie im Eingabefeld **Typ** manuell den folgenden Wert ein: 
-- Für eine Person: Person.ProfileImage
-- Für eine Organisation: Organization.LogoImage
-
-Fahren Sie mit den Vereinigungsschritten fort und stellen Sie sicher, dass das Attribut, das die Bild-URL enthält, auch im Schritt [Zusammenführen](merge-entities.md) zusammengeführt wird.
-
-## <a name="set-attributes-for-organizations"></a>Setzen Sie Attribute für Organisationen
-
-Bei Organisationen (Vorschau) sollte der Attributtyp auf „Organization.Name“ abgebildet werden
-> [!div class="mx-imgBorder"]
-> ![Primärschlüssel und Attributtyp B2B.](media/configure-data-map-edit-b2b.png "Primärschlüssel und Attributtyp B2B")
-
-## <a name="next-step"></a>Nächster Schritt
-
-Als Teil des Datenvereinheitlichungsprozesses gehen Sie auf die Seite **Abgleich**. Besuchen Sie [**Abgleichen**](match-entities.md) um mehr über diese Phase zu erfahren.
-
-> [!TIP]
-> Sehen Sie sich das folgende Video an: [Einstieg: Erstellen eines einheitlichen Kundenprofils](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Nächster Schritt: Duplikate entfernen](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

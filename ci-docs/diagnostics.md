@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646001"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755261"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Protokollweiterleitung in Dynamics 365 Customer Insights mit Azure Monitor (Vorschauversion)
 
@@ -27,7 +27,7 @@ Customer Insights sendet die folgenden Ereignisprotokolle:
 - **Überwachungsereignisse**
   - **APIEvent** – ermöglicht Änderungsnachverfolgung über die Dynamics 365 Customer Insights-Benutzeroberfläche.
 - **Betriebliche Ereignisse**
-  - **WorkflowEvent** – Der Workflow ermöglicht die Einrichtung von [Datenquellen](data-sources.md), die [Vereinheitlichung](data-unification.md), die [Anreicherung](enrichment-hub.md) und schließlich den [Export](export-destinations.md) von Daten in andere Systeme. Alle diese Schritte können einzeln durchgeführt werden (z. B. das Auslösen eines einzelnen Exportvorgangs) oder orchestriert (z. B. die Datenaktualisierung aus Datenquellen, die den Vereinheitlichungsprozess auslösen, der zusätzliche Anreicherungen abruft und die Daten nach Abschluss in ein anderes System exportiert). Weitere Informationen finden Sie im [WorkflowEvent-Schema](#workflow-event-schema).
+  - **WorkflowEvent** – Der Workflow ermöglicht die Einrichtung von [Datenquellen](data-sources.md), die [Vereinheitlichung](data-unification.md), die [Anreicherung](enrichment-hub.md) und schließlich den [Export](export-destinations.md) von Daten in andere Systeme. Alle diese Schritte können einzeln ausgeführt werden (z. B. einen einzelnen Export auslösen). Dies kann auch orchestriert ausgeführt werden (z. B. Datenaktualisierung aus Datenquellen, die den Vereinheitlichungsprozess auslöst, der Anreicherungen abruft und die Daten nach Abschluss in ein anderes System exportiert). Weitere Informationen finden Sie im [WorkflowEvent-Schema](#workflow-event-schema).
   - **APIEvent** – alle API-Aufrufe an die Kundeninstanz an Dynamics 365 Customer Insights. Weitere Informationen finden Sie im [APIEvent-Schema](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Diagnoseeinstellungen einrichten
@@ -182,7 +182,7 @@ Das `identity`-JSON-Objekt hat die folgende Struktur.
 
 ### <a name="workflow-event-schema"></a>Workflow-Ereignisschema
 
-Der Workflow enthält mehrere Schritte. [Datenquellen einbinden](data-sources.md), Daten [vereinheitlichen](data-unification.md), [anreichern](enrichment-hub.md) und [exportieren](export-destinations.md). Alle diese Schritte können einzeln oder mit folgenden Prozessen orchestriert ausgeführt werden. 
+Der Workflow enthält mehrere Schritte. [Datenquellen einbinden](data-sources.md), Daten [vereinheitlichen](data-unification.md), [anreichern](enrichment-hub.md) und [exportieren](export-destinations.md). Alle diese Schritte können einzeln oder mit folgenden Prozessen orchestriert ausgeführt werden.
 
 #### <a name="operation-types"></a>Vorgangstypen
 
@@ -215,7 +215,7 @@ Der Workflow enthält mehrere Schritte. [Datenquellen einbinden](data-sources.md
 | `time`          | Zeitstempel | Erforderlich          | Zeitstempel des Ereignisses (UTC)                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Erforderlich          | ResourceId der Instanz, die das Ereignis ausgegeben hat                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Erforderlich          | Name des Vorgangs, der durch dieses Ereignis dargestellt wird. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Weitere Informationen finden Sie unter [Vorgangstypen](#operation-types). | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Erforderlich          | Protokollkategorie des Ereignisses Immer `Operational` für Workflow-Ereignisse                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Erforderlich          | Protokollkategorie des Ereignisses Immer `Operational` für Workflow-Ereignisse                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Erforderlich          | Status des Ereignisses `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Lang      | Optional          | Dauer des Vorgangs in Millisekunden                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Optional          | JSON-Objekt mit mehr Eigenschaften für die jeweilige Ereigniskategorie.                                                                                        | Weitere Informationen finden Sie im Unterabschnitt [Workflow-Eigenschaften](#workflow-properties-schema)                                                                                                       |

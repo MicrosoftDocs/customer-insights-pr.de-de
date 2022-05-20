@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 85995cbd7f797810bfb6ecdc8a24d56542f0b5a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646030"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741364"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Arbeiten mit Customer Insights-Daten in Microsoft Dataverse
 
@@ -54,7 +54,7 @@ Einige Entitäten aus Customer Insights sind als Tabellen in Dataverse verfügba
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Diese Tabelle enthält das einheitliche Kundenprofil von Customer Insights. Das Schema für ein einheitliches Kundenprofil hängt von den Entitäten und Attributen ab, die bei der Zusammenführung verwendet werden. Ein Kundenprofilschema enthält normalerweise eine Teilmenge der Attribute aus der [Common Data Model-Definition von CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Diese Tabelle enthält das einheitliche Kundenprofil von Customer Insights. Das Schema für ein Unified customer profile hängt von den Entitäten und Attributen ab, die im Datenvereinheitlichungsprozess verwendet werden. Ein Kundenprofilschema enthält normalerweise eine Teilmenge der Attribute aus der [Common Data Model-Definition von CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
 
 ### <a name="alternatekey"></a>AlternateKeys
 

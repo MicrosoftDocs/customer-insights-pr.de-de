@@ -1,19 +1,19 @@
 ---
 title: Beispielanleitung für die Vorhersage des langfristigen Kundenwerts
 description: Verwenden Sie diese Beispielanleitung, um das Modell zur Vorhersage des langfristigen Kundenwerts auszuprobieren.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647120"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740810"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Beispielanleitung für die Vorhersage des langfristigen Kundenwerts (Customer Lifetime Value, CLV)
 
@@ -102,64 +102,7 @@ Lesen Sie die Artikel zu [Datenerfassung](data-sources.md) und [Importieren von 
 
 ## <a name="task-2---data-unification"></a>Aufgabe 2 - Daten vereinheitlichen
 
-Nach dem Erfassen der Daten beginnen wir nun mit der Datenvereinheitlichung, um ein vereinheitlichtes Kundenprofil zu erstellen. Weitere Informationen finden Sie unter [Datenvereinheitlichung](data-unification.md).
-
-### <a name="map"></a>Zuordnung
-
-1. Nach der Datenerfassung ordnen Sie die Kontakte aus den eCommerce- und Loyalty-Daten den gemeinsamen Datentypen zu. Gehen Sie zu **Daten** > **Vereinheitlichen** > **Karten**.
-
-1. Wählen Sie die Entitäten, die das Kundenprofil darstellen - **eCommerceContacts** und **loyCustomers**. Wählen Sie dann **Übernehmen** aus.
-
-   ![Vereinheitlichen Sie E-Commerce- und Treue-Datenquellen.](media/unify-ecommerce-loyalty.png)
-
-1. Wählen Sie **KontaktId** als Primärschlüssel für **eCommerceKontakte** und **LoyaltyID** als Primärschlüssel für **loyCustomers**.
-
-   ![Vereinheitlichen Sie LoyaltyId als Primärschlüssel.](media/unify-loyaltyid.png)
-
-1. Wählen Sie **Speichern** aus.
-
-### <a name="match"></a>Abgleichen
-
-1. Gehen Sie auf die Registerkarte **Abgleichen** und wählen Sie **Reihenfolge festlegen**.
-
-1. Wählen Sie in der Dropdown-Liste **Primär** und wählen Sie **eCommerceKontakte: eCommerce** als Primärquelle aus, und wählen Sie dann Alle Datensätze einbinden aus.
-
-1. Wählen Sie in der Dropdownliste **Entität 2** den Eintrag **loyCustomers: LoyaltyScheme** und dann Alle Datensätze berücksichtigen aus.
-
-   ![Abgleich eCommerce und Loyalty vereinheitlichen.](media/unify-match-order.png)
-
-1. Wählen Sie **Regel hinzufügen** aus.
-
-1. Fügen Sie Ihre erste Bedingung mit FullName hinzu.
-
-   - Für eCommerceKontakte wählen Sie **Vollständiger Name** in der Dropdown-Liste.
-   - Für loyCustomers wählen Sie **Vollständiger Name** in der Dropdown-Liste.
-   - Wählen Sie aus der Dropdownliste **Normalisieren** und wählen Sie **Typ (Telefon, Name, Adresse, ...)**.
-   - Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
-
-1. Geben Sie als Regelname **FullName, Email** ein.
-
-   - Fügen Sie eine zweite Bedingung für E-Mail-Adressen hinzu, indem Sie **Bedingung hinzufügen** wählen.
-   - Wählen Sie für eCommerce-Kontakte der Entität **Email** im Dropdown-Menü.
-   - Wählen Sie für loyCustomers der Entität **Email** im Dropdown-Menü.
-   - Lassen Sie Normalisieren leer.
-   - Setzen Sie **Präzisionsstufe**: **Basis** und **Wert**: **Hoch**.
-
-   ![Übereinstimmungsregel für Name und E-Mail vereinheitlichen.](media/unify-match-rule.png)
-
-1. Wählen Sie **Fertig** aus.
-
-1. Wählen Sie **Speichern** und **Ausführen**.
-
-### <a name="merge"></a>Zusammenführen
-
-1. Gehen Sie auf die Registerkarte **Zusammenführen**.
-
-1. Ändern Sie auf der **ContactId** für die Entität **loyCustomers** den Anzeigenamen in **ContactIdLOYALTY**, um sie von den anderen aufgenommenen IDs zu unterscheiden.
-
-   ![Contactid aus Treue-ID umbenennen:](media/unify-merge-contactid.png)
-
-1. Wählen Sie **Speichern** und **Merge- und Downstream-Prozesse ausführen** aus.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Aufgabe 3 – Konfigurieren der Vorhersage des langfristigen Kundenwerts
 

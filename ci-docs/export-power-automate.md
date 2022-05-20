@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647220"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741178"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate-Connector (Vorschau)
 
@@ -25,14 +25,14 @@ Lösen Sie bei Änderungen an den Daten automatisch bestimmte Ereignisse aus. Ve
 
 ## <a name="power-automate-triggers"></a>Power Automate Auslöser
 
-Verwenden Sie Trigger, um Cloud-Flows zu erstellen und sich wiederholende Aufgaben wie Benachrichtigungen oder erweiterte Aktionen zu automatisieren. 
+Verwenden Sie Trigger, um Cloud-Flows zu erstellen und sich wiederholende Aufgaben wie Benachrichtigungen oder erweiterte Aktionen zu automatisieren.
 
-- Auslösen, wenn die Aktualisierung einer Datenquelle fehlschlägt. 
+- Auslösen, wenn die Aktualisierung einer Datenquelle fehlschlägt.
 - Auslösen, wenn eine Datenquellenaktualisierung erfolgreich ist.
 - Auslösen, wenn ein Schwellenwert in einem Segment überschritten wird. Der Auslöser ist auf das Überschreiten des Schwellenwerts beschränkt.
 - Auslösen, wenn ein Schwellenwert bei einer Geschäftsmaßnahme überschritten wird. Nur Unternehmenskennzahlen ohne Dimension werden unterstützt. Der Auslöser ist auf das Überschreiten des Schwellenwerts beschränkt.
 - Auslöser, wenn eine vollständige Aktualisierung von (Datenquellen, Segmenten, Kennzahlen,...) abgeschlossen ist.
-- Wird ausgelöst, wenn eine Aktualisierung des Vereinigungsprozesses (Zuordnung, Übereinstimmung, Zusammenführung) abgeschlossen ist.
+- Ein Trigger kann ausgelöst werden, wenn eine Aktualisierung des Vereinheitlichungsprozesses abgeschlossen ist.
 
 [Konfigurieren Sie Ihre Auslöser in Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

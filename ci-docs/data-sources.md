@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646020"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739207"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
@@ -35,9 +35,6 @@ Die folgenden Datenquellen können hinzugefügt werden:
 - [Aus einem Common Data Model-Ordner](connect-common-data-model.md)
 - [Aus Ihrem eigenen Microsoft Dataverse-Lake](connect-dataverse-managed-lake.md)
 - [Aus einer Azure Synapse Analytics-Datenbank](connect-synapse.md)
-
-> [!NOTE]
-> Wenn Sie die Testversion verwenden, enthält der Abschnitt mit den Importmethoden die Option **Customer Insights-Datenbibliothek**. Wählen Sie diese Option aus, um ein Beispiel-DataSet auszuwählen, das für verschiedene Branchen verfügbar ist. Weitere Informationen finden Sie unter [Dynamics 365 Customer Insights-Testversion](trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Fügen Sie Daten aus lokalen Datenquellen hinzu
 

@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646140"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755497"
 ---
 # <a name="customer-activities"></a>Kundenaktivitäten
 
-Kombinieren Sie Kundenaktivitäten von [verschiedene Datenquellen](data-sources.md) in Dynamics 365 Customer Insights, um eine Zeitleiste zu erstellen, in der die Aktivitäten chronologisch aufgelistet sind. Fügen Sie die Zeitleiste in Dynamics 365-Apps mit der [Kundenkarten-Add-In](customer-card-add-in.md)-Lösung oder in einem Power BI-Dashboard ein.
+Kombinieren Sie Kundenaktivitäten aus [verschiedene Datenquellen](data-sources.md) in Dynamics 365 Customer Insights. Erstellen Sie eine Zeitskala, die die Aktivitäten chronologisch auflistet. Schließen Sie die Zeitskala in Dynamics 365-Apps mit der Lösung [Kundenkarten-Add-In](customer-card-add-in.md).
 
 ## <a name="define-an-activity"></a>Definieren Sie eine Aktivität
 
@@ -78,7 +78,7 @@ Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine K
 
 1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. Sie können **Abschließen und überprüfen** auswählen, um die Aktivität jetzt mit dem Aktivitätstyp **Andere** zu speichern. 
 
-1. Im Schritt **Aktivitätstyp** wählen Sie Schritt für Schritt den Aktivitätstyp und optional aus, ob Sie einige der Aktivitätstypen für die Verwendung in anderen Bereichen von Customer Insights semantisch zuordnen möchten. Zurzeit können die Aktivitätstypen *Feedback*, *Treue*, *SalesOrder*, *SalesOrderLine* und *Abonnement* semantisch zugeordnet werden, nachdem die Felder für die Zuordnung definiert wurden. Wenn ein Aktivitätstyp für die neue Aktivität nicht relevant ist, können Sie *Andere* oder *Neu erstellen* für einen benutzerdefinierten Aktivitätstyp auswählen.
+1. Im Schritt **Aktivitätstyp** wählen Sie Schritt für Schritt den Aktivitätstyp und optional aus, ob Sie einige der Aktivitätstypen für die Verwendung in anderen Bereichen von Customer Insights semantisch zuordnen möchten. Momentan unterstützen Sie Aktivitätstypen *Feedback*, *Treue*, *SalesOrder*, *SalesOrderLine* und *Abonnement* die Semantik, nachdem der Zuordnung der Felder zugestimmt wurde. Wenn ein Aktivitätstyp für die neue Aktivität nicht relevant ist, können Sie *Andere* oder *Neu erstellen* für einen benutzerdefinierten Aktivitätstyp auswählen.
 
 1. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu wechseln. 
 
@@ -110,7 +110,7 @@ Nachdem Sie Kundenaktivitäten konfiguriert haben, wählen Sie **In Aktivitätsz
 
 Um die Zeitskala für einen Kunden zu öffnen, gehen Sie zu **Kunden** und wählen Sie das Kundenprofil aus, das Sie anzeigen möchten.
 
-Wenn ein Kunde an einer von Ihnen konfigurierten Aktivität teilgenommen hat, finden Sie diese im Abschnitt **Aktivitätszeitachse**.
+Wenn ein Kunde an einer konfigurierten Aktivität teilgenommen hat, finden Sie diese im Abschnitt **Aktivitätszeitachse**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Zeigen Sie konfigurierte Aktivitäten in Kundenprofilen an.":::
 

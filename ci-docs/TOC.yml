@@ -66,12 +66,18 @@
   items:
     - name: Datenvereinheitlichungsübersicht
       href: data-unification.md
-    - name: Entitäten und Attribute zuordnen
+    - name: Auswählen von Quellfeldern
       href: map-entities.md
-    - name: Entitäten anpassen
+    - name: Entfernen doppelter Datensätze
+      href: remove-duplicates.md
+    - name: Abgleich-Bedingungen
       href: match-entities.md
-    - name: Entitäten zusammenführen
+    - name: Vereinheitlichen von Kundenfeldern
       href: merge-entities.md
+    - name: Überprüfen der Datenvereinheitlichung
+      href: review-unification.md
+    - name: Aktualisieren der Vereinigungseinstellungen
+      href: data-unification-update.md
 - name: Datenanreicherung
   items:
     - name: Kundenprofile bereichern
@@ -282,6 +288,8 @@
       href: apis.md
     - name: API-Referenzen
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData-Beispielabfragen
+      href: odata-examples.md
 - name: Verwaltung von Zustimmungen (Vorschau)
   items:
     - name: Hilfe-Hub

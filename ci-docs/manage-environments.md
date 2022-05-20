@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647140"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741040"
 ---
 # <a name="manage-environments"></a>Umgebungen verwalten
 
@@ -127,9 +127,9 @@ Sie sehen eine Liste aller verfügbaren Umgebungen in Ihrer Organisation, aus de
 Folgende Konfigurationseinstellungen werden kopiert:
 
 - Aufgenommene/importierte Datenquellen
-- Datenvereinheitlichung (Map, Match, Merge) Konfiguration
+- Konfiguration der Datenvereinheitlichung
 - Segmente
-- Kennzahlen
+- Measures
 - Beziehungen
 - Aktivitäten
 - Index suchen & filtern
