@@ -1,7 +1,7 @@
 ---
 title: Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Dienstprinzipals
 description: Verwenden Sie einen Azure-Dienstprinzipal, um eine Verbindung zu Ihrem eigenen Data Lake herzustellen.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739161"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833384"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals
 
-In diesem Artikel wird erläutert, wie Sie Dynamics 365 Customer Insights mit einem Azure Data Lake Storage-Konto verbinden, indem Sie einen Azure-Dienstprinzipal anstelle von Speicherkontoschlüsseln verwenden. 
+In diesem Artikel wird erläutert, wie Sie Dynamics 365 Customer Insights mit einem Azure Data Lake Storage-Konto verbinden, indem Sie einen Azure-Dienstprinzipal anstelle von Speicherkontoschlüsseln verwenden.
 
 Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Berechtigungen haben. Anstatt dass sich Anwendungen als voll privilegierter Benutzer anmelden müssen, bietet Azure Dienstprinzipale an. Sie können Dienstprinzipale zum sicheren [Hinzufügen oder Bearbeiten eines Common Data Model-Ordners als Datenquelle](connect-common-data-model.md) bzw. [Erstellen oder Aktualisieren einer Umgebung](create-environment.md) verwenden.
 
 > [!IMPORTANT]
+>
 > - Das Data Lake Storage-Konto, das den Dienstprinzipal verwendet, muss Gen2 sein und [Hierarchischer Namespace aktiviert](/azure/storage/blobs/data-lake-storage-namespace) haben. Azure Data Lake Gen1-Speicherkonten werden nicht unterstützt.
-> - Sie benötigen Administratorberechtigungen für Ihr Azure-Abonnement, um einen Dienstprinzipal zu erstellen.
+> - Sie benötigen Administratorberechtigungen für Ihren Azure-Mandanten, um einen Dienstprinzipal zu erstellen.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Erstellen eines Azure-Dienstprinzipals für Customer Insights
 
@@ -38,29 +39,15 @@ Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Be
 
 2. Wählen Sie unter **Azure-Dienste** **Azure Active Directory** aus.
 
-3. Unter **Verwalten**, wählen Sie **Unternehmensanwendungen**.
+3. Wählen Sie unter **Verwalten** **Microsoft-Anwendung** aus.
 
 4. Fügen Sie einen Filter hinzu für **Anwendungs-ID beginnt mit** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff`, oder suchen Sie nach dem Namen `Dynamics 365 AI for Customer Insights`.
 
-5. Wenn Sie einen übereinstimmenden Datensatz finden, bedeutet dies, dass der Dienstprinzipal bereits vorhanden ist. 
-   
+5. Wenn Sie einen übereinstimmenden Datensatz finden, bedeutet dies, dass der Dienstprinzipal bereits vorhanden ist.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Screenshot, der einen vorhandenen Dienstprinzipal zeigt.":::
-   
-6. Wenn keine Ergebnisse zurückgegeben werden, erstellen Sie einen neuen Dienstprinzipal.
 
-### <a name="create-a-new-service-principal"></a>Erstellen Sie ein neues Service-Prinzipal
-
-1. Neueste Version von Azure Active Directory PowerShell für Graph. Weitere Informationen finden Sie unter [Installieren von Azure Active Directory PowerShell für Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. Wählen Sie auf Ihrem PC die Windows-Taste auf Ihrer Tastatur und suchen Sie nach **Windows PowerShell** und wählen Sie **Als Administrator ausführen**.
-   
-   1. Geben Sie in dem sich öffnenden PowerShell-Fenster `Install-Module AzureAD` ein.
-
-2. Erstellen Sie den Dienstprinzipal für Customer Insights mit dem Azure AD PowerShell-Modul.
-
-   1. Geben Sie im PowerShell-Fenster `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure` ein. Ersetzen Sie *[Ihre Directory ID]* durch die tatsächliche Verzeichnis-ID Ihres Azure Abonnements, in dem Sie den Dienstprinzipal erstellen möchten. Der Parameter für den Umgebungsnamen `AzureEnvironmentName` ist optional.
-  
-   1. Geben Sie `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"` ein. Mit diesem Befehl erstellen Sie das Dienstprinzipal für Customer Insights auf dem ausgewählten Azure Abonnement. 
+6. Wenn keine Ergebnisse zurückgegeben werden, können Sie [einen neuen Dienstprinzipal erstellen](#create-a-new-service-principal). In den meisten Fällen ist er bereits vorhanden, und Sie müssen dem Dienstprinzipal nur Berechtigungen erteilen, um auf das Speicherkonto zuzugreifen.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Erteilen Sie dem Service Principal Berechtigungen für den Zugriff auf das Speicherkonto
 
@@ -77,9 +64,9 @@ Gehen Sie zum Azure-Portal, um Berechtigungen für das Dienstprinzipal für das 
 1. Im Bereich **Rollenzuweisung hinzufügen** legen Sie die folgenden Eigenschaften fest:
    - Rolle: **Storage Blob Data Beitragender**
    - Weisen Sie den Zugriff zu: **Benutzer, Gruppe oder Prinzipal des Dienstes**
-   - Wählen Sie Mitglieder: **Dynamics 365 AI Customer Insights** (das [Dienstprinzipal](#create-a-new-service-principal), das Sie zuvor in diesem Verfahren erstellt haben)
+   - Wählen Sie Mitglieder: **Dynamics 365 AI Customer Insights** (das [Dienstprinzipal](#create-a-new-service-principal), das Sie zuvor in diesem Verfahren gesucht haben)
 
-1.  Wählen Sie **Überprüfen + zuweisen**.
+1. Wählen Sie **Überprüfen + zuweisen**.
 
 Es kann bis zu 15 Minuten dauern, bis die Änderungen propagiert werden.
 
@@ -91,7 +78,7 @@ Sie können ein Data Lake Storage-Konto in Customer Insights anhängen, um [Ausg
 
 1. Gehen Sie zum [Azure Admin-Portal](https://portal.azure.com), melden Sie sich bei Ihrem Abonnement an und öffnen Sie das Speicherkonto.
 
-1. Gehen Sie im linken Bereich zu **Einstellungen** > **Eigenschaften**.
+1. Gehen Sie im linken Bereich zu **Einstellungen** > **Endpunkte**.
 
 1. Kopieren Sie den Wert der Ressourcen-ID des Speicherkontos.
 
@@ -115,5 +102,18 @@ Sie können ein Data Lake Storage-Konto in Customer Insights anhängen, um [Ausg
 
 1. Fahren Sie mit den übrigen Schritten in Customer Insights fort, um das Speicherkonto anzuhängen.
 
+### <a name="create-a-new-service-principal"></a>Erstellen Sie ein neues Service-Prinzipal
+
+1. Neueste Version von Azure Active Directory PowerShell für Graph. Weitere Informationen finden Sie unter [Installieren von Azure Active Directory PowerShell für Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. Drücken Sie auf Ihrem PC die Windows-Taste auf Ihrer Tastatur und suchen Sie nach **Windows PowerShell** und wählen Sie **Als Administrator ausführen**.
+
+   1. Geben Sie in dem sich öffnenden PowerShell-Fenster `Install-Module AzureAD` ein.
+
+2. Erstellen Sie den Dienstprinzipal für Customer Insights mit dem Azure AD PowerShell-Modul.
+
+   1. Geben Sie im PowerShell-Fenster `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure` ein. Ersetzen Sie *[Ihre Directory ID]* durch die tatsächliche Verzeichnis-ID Ihres Azure Abonnements, in dem Sie den Dienstprinzipal erstellen möchten. Der Parameter für den Umgebungsnamen `AzureEnvironmentName` ist optional.
+  
+   1. Geben Sie `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"` ein. Mit diesem Befehl erstellen Sie das Dienstprinzipal für Customer Insights auf dem ausgewählten Azure Abonnement.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

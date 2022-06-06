@@ -1,7 +1,7 @@
 ---
 title: Verbinden Sie Common Data Model-Daten mit einem Azure Data Lake-Konto
 description: Arbeiten Sie mit Common Data Model-Daten unter Verwendung von Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646161"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833356"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
 
@@ -46,16 +46,16 @@ In diesem Artikel erfahren Sie, wie Sie mit Ihrem Azure Data Lake Storage-Gen2-K
 
 1. Wählen Sie **Azure Data Lake Storage** aus, geben Sie einen **Namen** für Datenquelle ein, und wählen Sie dann **Weiter** aus.
 
-   - Wählen Sie bei entsprechender Aufforderung einen der zu Ihrer Branche gehörenden Beispieldatensätze und anschließend **Weiter** aus. 
+   - Wählen Sie bei entsprechender Aufforderung einen der zu Ihrer Branche gehörenden Beispieldatensätze und anschließend **Weiter** aus.
 
 1. Sie können zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie sich mit einem Azure Dienstprinzipal mit einem Azure Data Lake Storage Gen2 Konto](connect-service-principal.md). Geben Sie die **Serveradresse** ein, und wählen Sie **Anmelden** und dann **Weiter** aus.
    > [!div class="mx-imgBorder"]
    > ![Dialogfeld zum Eingeben neuer Verbindungsdetails für Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Sie benötigen eine der folgenden Rollen entweder für den Container oder das oben genannte Speicherkonto, um eine Verbindung zu einem Datenquelle herstellen und einen solchen erstellen zu können:
-   >  - Speicher-Blob-Datenleser
-   >  - Speicher-Blob-Datenbesitzer
-   >  - Storage-Blob-Daten-Mitwirkender
+   > Sie benötigen entweder eine der folgenden Rollen, um den Container auf dem Speicherkonto zu erstellen und Datenquelle zu erstellen:
+   >
+   >  - Datenleser des Speicher-Blobs reicht aus, um von einem Speicherkonto zu lesen und die Daten in Customer Insights zu übernehmen. 
+   >  - Storage Blob-Datenmitwirkender oder Besitzer ist erforderlich, wenn Sie die Manifestdateien direkt in Customer Insights bearbeiten möchten.
 
 1. Wählen Sie im Dialog **Wählen Sie einen gemeinsamen Datenmodell-Ordner** die Datei manifest.json aus, aus der Daten importiert werden sollen, und wählen Sie **Weiter**.
    > [!NOTE]
@@ -65,11 +65,11 @@ In diesem Artikel erfahren Sie, wie Sie mit Ihrem Azure Data Lake Storage-Gen2-K
    > [!div class="mx-imgBorder"]
    > ![Dialogfeld mit einer Liste von Entitäten aus einer model.json-Datei.](media/review-entities.png)
 
-8. Geben Sie an, für welche Datenentitäten die Datenprofilerstellung aktiviert werden soll, und wählen Sie dann **Speichern** aus. Die Datenprofilerstellung ermöglicht Analysen und andere Funktionen. Sie können die gesamte Entität auswählen, wodurch alle Attribute der Entität ausgewählt werden, oder Sie können bestimmte Attribute Ihrer Wahl auswählen. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
+1. Geben Sie an, für welche Datenentitäten die Datenprofilerstellung aktiviert werden soll, und wählen Sie dann **Speichern** aus. Die Datenprofilerstellung ermöglicht Analysen und andere Funktionen. Sie können die gesamte Entität auswählen, wodurch alle Attribute der Entität ausgewählt werden, oder Sie können bestimmte Attribute Ihrer Wahl auswählen. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
    > [!div class="mx-imgBorder"]
    > ![Dialogfeld, das eine Datenprofilierung zeigt.](media/dataprofiling-entities.png)
 
-9. Nachdem Sie Ihre Auswahl gespeichert haben, wird die Seite **Datenquellen** geöffnet. Sie sollten nun die Ordnerverbindung Common Data Model als Datenquelle sehen.
+1. Nachdem Sie Ihre Auswahl gespeichert haben, wird die Seite **Datenquellen** geöffnet. Sie sollten nun die Ordnerverbindung Common Data Model als Datenquelle sehen.
 
 > [!NOTE]
 > Eine model.json- oder manifest.json-Datei kann nur mit einer Datenquelle in derselben Umgebung verknüpft werden. Allerdings kann dieselbe model.json- oder manifest.json-Datei für Datenquellen in mehreren Umgebungen verwendet werden.
@@ -80,7 +80,7 @@ Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie neben der Datenquelle, die Sie aktualisieren möchten, die Auslassungspunkte aus.
+2. Wählen Sie neben dem Datenquelle, das Sie aktualisieren möchten, die vertikalen Auslassungspunkte (&vellip;).
 
 3. Wählen Sie eine Option **Bearbeiten** in der Liste aus.
 
@@ -93,13 +93,6 @@ Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den
 
    > ![Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake zu einem vorhandenen Speicherkonto.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Sie benötigen eine der folgenden Rollen entweder für den Container oder das oben genannte Speicherkonto, um eine Verbindung zu einem Datenquelle herstellen und einen solchen erstellen zu können:
-   >  - Speicher-Blob-Datenleser
-   >  - Speicher-Blob-Datenbesitzer
-   >  - Storage-Blob-Daten-Mitwirkender
-
-
 6. Wählen Sie optional eine andere model.json- oder manifest.json-Datei mit einer anderen Gruppe von Entitäten aus dem Container.
 
 7. Optional können Sie zusätzliche Entitäten zum Einlesen auswählen. Sie können auch bereits ausgewählte Entitäten entfernen, wenn es keine Abhängigkeiten gibt.
@@ -107,7 +100,6 @@ Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den
    > [!IMPORTANT]
    > Wenn Abhängigkeiten von der vorhandenen model.json- oder manifest.json-Datei und der Gruppe von Entitäten bestehen, wird eine Fehlermeldung angezeigt und Sie können keine andere model.json- oder manifest.json-Datei auswählen. Entfernen Sie diese Abhängigkeiten, bevor Sie die model.json- oder manifest.json-Datei ändern, oder erstellen Sie eine neue Datenquelle mit der model.json- oder manifest.json-Datei, die Sie verwenden möchten, um das Entfernen der Abhängigkeiten zu vermeiden.
 
-8. Optional können Sie zusätzliche Attribute oder Entitäten auswählen, um die Datenprofilierung zu aktivieren oder bereits ausgewählte zu deaktivieren.   
-
+8. Optional können Sie zusätzliche Attribute oder Entitäten auswählen, um die Datenprofilierung zu aktivieren oder bereits ausgewählte zu deaktivieren.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

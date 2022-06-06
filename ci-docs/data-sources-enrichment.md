@@ -1,19 +1,19 @@
 ---
 title: Datenquellanreicherung
 description: Reichern Sie Datenquellen an, bevor Sie den Datenvereinheitlichungsprozess durchlaufen.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755685"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800280"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Anreicherung für Datenquellen (Vorschau)
 
@@ -27,7 +27,7 @@ Sie müssen über Teilnehmer- oder Administrator-Berechtigungen verfügen, um An
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-1. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle aus, die Sie anreichern möchten und wählen Sie **Anreichern**.
+1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben dem Datenquelle aus, die Sie anreichern möchten und wählen Sie **Anreichern**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Datenquellanreicherungsseite.":::
 
@@ -41,11 +41,12 @@ Die folgenden Anreicherungen sind aktuell für Datenquellen verfügbar. Sehen Si
 
 - [Erweiterte Adressen](enrichment-enhanced-addresses.md)
 - [Erweiterte Firmendaten](enrichment-enhanced-company-data.md)
+- [Identifizierungsdaten aus LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Verwalten Sie vorhandene Datenquelle-Anreicherungen
 
 Gehen Sie zur Registerkarte **Meine Anreicherungen**, um alle konfigurierten Anreicherungen anzuzeigen.
 
-Wählen Sie die Anreicherung aus, um die verfügbaren Optionen anzuzeigen. Sie können auch die Auslassungspunkte (...) in einem Listenelement auswählen, um die Optionen anzuzeigen. Wenn Sie mehrere Anreicherungen konfiguriert haben, finden Sie diese schnell über das Suchfeld.
+Wählen Sie die Anreicherung aus, um die verfügbaren Optionen anzuzeigen. Sie können auch die vertikalen Auslassungspunkte (&vellip;) auf einem Listenelement auswählen, um die Optionen anzuzeigen. Wenn Sie mehrere Anreicherungen konfiguriert haben, finden Sie diese schnell über das Suchfeld.
 
 Sie können eine Datenquelle-Anreicherung anzeigen, bearbeiten, ausführen oder löschen. Weitere Informationen finden Sie unter [Verwaltung der vorhandenen Anreicherungen](enrichment-hub.md).

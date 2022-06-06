@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741132"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833538"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Erste Schritte mit Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Customer Insights kann Ihnen helfen, Ihre Kunden besser zu verstehen. Verbinden 
 
 ## <a name="step-1-create-an-environment"></a>Schritt 1: Eine Umgebung erstellen
 
-Um zu beginnen, müssen Sie zunächst eine Umgebung erstellen, in der Sie arbeiten können. Wenn Ihre Organisation bereits eine Lizenz erworben hat, finden Sie mehr Informationen unter [Erstellen Sie eine Umgebung](create-environment.md). Um einen Test für Customer Insights zu starten, siehe [Einrichten einer Testumgebung](trial-signup.md).
+Erstellen Sie zunächst eine Umgebung, in der Sie arbeiten können. Wenn Ihre Organisation bereits eine Lizenz erworben hat, finden Sie mehr Informationen unter [Erstellen Sie eine Umgebung](create-environment.md). Um einen Test für Customer Insights zu starten, siehe [Einrichten einer Testumgebung](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Schritt 2: Erkunden Sie Customer Insights
 
@@ -33,13 +33,13 @@ Wenn Sie sich zum ersten Mal bei Customer Insights anmelden, können Sie Einstel
 
 1. [Melden Sie sich bei Customer Insights](https://home.ci.ai.dynamics.com) mit Ihrem Microsoft Azure Active Directory (AAD) Benutzerkonto an.
 
-1. [Ändern Sie die Umgebung](manage-environments.md#switch-environments), um Demodaten zu sehen und [erforschen Sie Customer Insights](home.md).
+1. Ändern Sie die Umgebung, um Demodaten zu sehen und [erforschen Sie Customer Insights](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Schritt 3: Erfassen, vereinheitlichen und Beziehungen für Ihre Daten einrichten
 
-Vereinheitlichte Profile sind die Grundlage, um Erkenntnisse zu gewinnen und Maßnahmen zu den Daten zu ergreifen. Bringen Sie Daten aus verschiedenen Quellen ein und führen Sie den Datenvereinheitlichungsprozess aus, um vereinheitlichte Profile zu kombinieren. Geben Sie Beziehungen zwischen den aufgenommenen Entitäten an. Verwenden Sie Anreicherungsfunktionen, um den Profilen Informationen hinzuzufügen.
+Vereinheitlichte Profile sind die Grundlage, um Erkenntnisse zu gewinnen und Maßnahmen zu den Daten zu ergreifen. Bringen Sie Daten aus verschiedenen Quellen ein und führen Sie den Datenvereinheitlichungsprozess aus, um vereinheitlichte Profile zu kombinieren. Geben Sie Beziehungen zwischen den aufgenommenen Entitäten an und verwenden Sie Anreicherungsfunktionen, um Informationen zu den Profilen hinzuzufügen.
 
-1. Erfassen Sie Daten, indem Sie Datenquellen aus mehreren Optionen erstellen. Wählen zwischen [Power Query-Konnektoren](connect-power-query.md), einem [Common Data Model-Ordner](connect-common-data-model.md) oder [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Erfassen Sie Daten, indem Sie Datenquellen aus mehreren Optionen erstellen. Wählen zwischen [Power Query-Konnektoren](connect-power-query.md), einem [Common Data Model-Ordner](connect-common-data-model.md) oder [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Führen Sie den [Datenvereinheitlichungsprozess](data-unification.md) durch Identifizierung der [Quellfelder](map-entities.md) aus, entfernen Sie [Duplikate](remove-duplicates.md), [Abgleich-Bedingungen](match-entities.md) und [vereinheitlichende Felder](merge-entities.md).
 
@@ -47,7 +47,7 @@ Vereinheitlichte Profile sind die Grundlage, um Erkenntnisse zu gewinnen und Ma�
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Schritt 4: Verbessern Sie vereinheitlichten Profile mit Vorhersagen, Aktivitäten und Maßnahmen
 
-Mit der Einrichtung vereinheitlichter Profile können Sie Ihre Daten erweitern und die bereitgestellten Informationen weiter verbessern.
+Verbessern Sie mit der Einrichtung einheitlicher Profile Ihre Daten und erweitern Sie die bereitgestellten Informationen weiter.
 
 1. Wählen Sie aus einer wachsenden Bibliothek von Anreicherungsanbietern, um [Ihre Kundendaten anzureichern](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Mit der Einrichtung vereinheitlichter Profile können Sie Ihre Daten erweitern u
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Schritt 5: Segmente erstellen und Daten über verschiedene Exportoptionen aktivieren
 
-Da Ihre Daten nun vollständig sind und eine Vielzahl von Informationen über Ihre Kunden enthalten, ist es an der Zeit, nach Möglichkeiten zu suchen, diese Daten zu verarbeiten.
+Nachdem Ihre Daten nun vollständig sind und eine Vielzahl von Informationen über Ihre Kunden enthalten, suchen Sie nach Möglichkeiten, um diese Daten zu verarbeiten.
 
 1. [Erstellen Sie Segmente](segments.md), also Teilmengen Ihres Kundenstamms, um sicherzustellen, dass Ihre Aktionen für die Zielkunden relevant sind.
 

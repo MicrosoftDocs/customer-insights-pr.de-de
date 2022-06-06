@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740718"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800649"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Teildaten mit Vorhersagen ergänzen (eingestellt)
 
@@ -95,7 +95,7 @@ Als Teil dieses Ablaufs wählen Sie ein bestimmtes Attribut aus, auf dem Ihr Seg
 
 2. Wählen Sie die Vorhersage aus, die Sie überprüfen möchten.
 
-3. Markieren Sie die Auslassungspunkte in der Spalte **Aktionen** und wählen Sie **Ansicht**.
+3. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der **Aktionen**-Spalte und wählen Sie **Ansicht**.
 
 4. Sie sehen eine Reihe von Datenpunkten in der Ansicht Ihrer Vorhersage.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Nachdem Sie ein Vorhersage erstellt haben, können Sie das Modell in AI Builder 
 
 2. Wählen Sie die Vorhersage aus, die Sie bearbeiten möchten.
 
-3. Markieren Sie die Auslassungspunkte in der Spalte **Aktionen** und wählen Sie **Ansicht**.
+3. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der **Aktionen**-Spalte und wählen Sie **Ansicht**.
 
 4. Klicken Sie auf **In AI Builder anpassen**.
 
@@ -139,7 +139,7 @@ Der nächste Lauf Ihrer Vorhersage wird das von Ihnen erstellte aktualisierte Mo
 
 2. Wählen Sie die Vorhersage aus, die Sie löschen möchten.
 
-3. Markieren Sie die Auslassungspunkte in der Spalte **Aktionen** und wählen Sie **Löschen**.
+3. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der **Aktionen**-Spalte und wählen Sie **Löschen**.
 
 4. Bestätigen Sie den Löschvorgang.
 
@@ -152,8 +152,8 @@ Wenn Sie den Dataverse-Anfügevorgang aufgrund eines Fehlers nicht abschließen 
 
 - App-Berechtigungen werden nicht gewährt.
     1. Wechseln Sie zu [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
-    1. **Umgebungen** auswählen.
-    1. Wählen Sie die Auslassungspunkte neben der Umgebung aus, zu der Sie die Berechtigung hinzufügen möchten, und wählen Sie **Einstellungen** aus.
+    1. Wählen Sie **Umgebungen**.
+    1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben der Umgebung, der Sie die Berechtigung hinzufügen möchten, und wählen Sie sie **Einstellungen**.
     1. Erweitern Sie **Benutzer + Berechtigungen** und wählen Sie **Benutzer** aus.
     1. Wählen Sie **+ Neu** und **Benutzer** aus.
     1. Wenn es noch nicht ausgewählt ist, wählen Sie **Anwendungsbenutzer** aus, und geben Sie die folgenden Informationen ein:

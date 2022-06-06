@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755261"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807580"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Protokollweiterleitung in Dynamics 365 Customer Insights mit Azure Monitor (Vorschauversion)
 
@@ -38,7 +38,7 @@ Zum Konfigurieren der Diagnose in Customer Insights müssen die folgenden Voraus
 
 - Sie verfügen über ein aktives [Azure-Abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Sie verfügen über [Administrator](permissions.md#admin)-Berechtigungen in Customer Insights.
-- Sie verfügen über die Rollen **Mitwirkender** und **Benutzerzugriffsadministrator** für die Zielressource in Azure. Die Ressource kann ein Azure Storage-Konto, ein Azure Event Hub oder ein Azure Log Analytics-Arbeitsbereich sein. Weitere Informationen finden Sie unter [Azure-Rollenzuweisungen über das Azure-Portal hinzufügen oder entfernen](/azure/role-based-access-control/role-assignments-portal).
+- Sie verfügen über die Rollen **Mitwirkender** und **Benutzerzugriffsadministrator** für die Zielressource in Azure. Die Ressource kann ein Azure Data Lake Storage-Konto, ein Azure-Ereignishub oder ein Azure Log Analytics-Arbeitsbereich sein. Weitere Informationen finden Sie unter [Azure-Rollenzuweisungen über das Azure-Portal hinzufügen oder entfernen](/azure/role-based-access-control/role-assignments-portal). Diese Berechtigung ist beim Konfigurieren von Diagnoseeinstellungen in Customer Insights erforderlich und kann nach erfolgreicher Einrichtung geändert werden.
 - Die [Zielanforderungen](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) für Azure Storage, Azure Event Hub oder Azure Log Analytics sind erfüllt.
 - Sie verfügen mindestens über die Rolle **Leser** in der Ressourcengruppe, zu der die Ressource gehört.
 

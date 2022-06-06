@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653476"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763578"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Bring Your Own Azure Key Vault (Vorschau)
 
@@ -89,9 +89,9 @@ Die folgenden Berechtigungen werden Customer Insights für einen verknüpften Ke
 
 | Art        | Berechtigungen          |
 | ----------- | -------------------- |
-| Schlüssel         | [Schlüssel erhalten](/rest/api/keyvault/get-keys), [Schlüssel abrufen](/rest/api/keyvault/get-key)                                 |
-| Geheimnis      | [Geheimnisse abrufen](/rest/api/keyvault/get-secrets), [Geheimnis abrufen](/rest/api/keyvault/get-secret)                     |
-| Zertifikat | [Zertifikate abrufen](/rest/api/keyvault/get-certificates), [Zertifikat abrufen](/rest/api/keyvault/get-certificate) |
+| Schlüssel         | [Schlüssel erhalten](/rest/api/keyvault/keys/get-keys/get-keys), [Schlüssel abrufen](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Geheimnis      | [Geheimnisse abrufen](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Geheimnis abrufen](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Zertifikat | [Zertifikate abrufen](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Zertifikat abrufen](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Die vorstehenden Werte sind die Mindestwerte, die während der Ausführung aufgelistet und gelesen werden müssen.
 

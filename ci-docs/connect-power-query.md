@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646181"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800144"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden mit einer Power Query-Datenquelle
 
@@ -76,7 +76,7 @@ Konnektoren mit einem Häkchen in der Spalte **Customer Insights (Dataflows)** s
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie die vertikalen Auslassungspunkte neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Bearbeiten** aus dem Dropdown-Menü.
+2. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Bearbeiten** aus dem Dropdown-Menü.
 
    > [!div class="mx-imgBorder"]
    > ![Optionen bearbeiten.](media/edit-option-data-sources.png "Optionen bearbeiten")

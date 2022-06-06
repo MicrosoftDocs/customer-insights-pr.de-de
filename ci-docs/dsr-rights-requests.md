@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641515"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808560"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Daten-abhängige Rechteanforderungen unter DSGVO
 
@@ -41,7 +41,7 @@ Ein Administrator von Customer Insights kann die folgenden Schritte ausführen, 
 1. Melden Sie sich bei Dynamics 365 Customer Insights an.
 2. Gehen Sie zu **Daten** > **Datenquellen**
 3. Für jede Datenquelle in der Liste, die gelöschte Kundendaten enthält:
-   1. Wählen Sie (...) und wählen Sie dann **Aktualisieren**.
+   1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) und dann **Aktualisieren** aus.
    2. Überprüfen Sie den Status der Datenquelle unter **Status**. Ein Häkchen bedeutet, dass die Aktualisierung erfolgreich war. Ein Warndreieck bedeutet, dass etwas schief gelaufen ist. Wenn ein Warndreieck angezeigt wird, wenden Sie sich an D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Ein Administrator von Customer Insights kann die folgenden Schritte ausführen, 
 Ein Customer Insights-Administrator kann folgende Schritte durchführen, um Customer Insights-Benutzerdaten zu löschen:
 
 1. Melden Sie sich bei Dynamics 365 Customer Insights an.
-2. Gehen Sie zu **Admin** > **Berechtigungen**.
+2. Gehen Sie zu **Administrator** > **Sicherheit** > **Berechtigungen**.
 3. Markieren Sie das Kontrollkästchen für den Benutzer, den Sie löschen möchten.
 4. Klicken Sie auf **Entfernen**.
 

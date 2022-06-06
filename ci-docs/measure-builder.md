@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647283"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800325"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Kennzahlen-Builder verwenden, um Kennzahlen von Grund auf neu zu erstellen
 
@@ -88,7 +88,7 @@ Sie können Kennzahlen auf der Ebene einzelner Kunden (Kundenattribut, Kundenken
 
 1. Wählen Sie aus **Neue Berechnung**, um weitere Berechnungen für die Kennzahl hinzuzufügen. Sie können nur Entitäten im selben Entitätspfad für neue Berechnungen verwenden. Weitere Berechnungen werden als neue Spalten in der Kennzahlausgabeeinheit angezeigt.
 
-1. Wählen Sie **...** für die Berechnung aus, um **Duplikat**, **Umbenennen** oder **Entfernen** zur Berechnung einer Kennzahl auszuwählen.
+1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Berechnung aus, um **Duplikat**, **Umbenennen** oder **Entfernen** für eine Berechnung aus einer Kennzahl auszuführen.
 
 1. Im Bereich **Vorschau** sehen Sie das Datenschema der Kennzahlausgabeentität, einschließlich Filter und Dimensionen. Die Vorschau reagiert dynamisch auf Änderungen in der Konfiguration.
 
@@ -158,7 +158,7 @@ Sie können Kennzahlen auf der Ebene einzelner Konten (Kundenkennzahl) oder auf 
    1. Wählen Sie **Beziehungspfad** und wählen Sie den Entitätspfad aus, der zum Identifizieren Ihrer Kennzahl verwendet werden soll. Wenn es nur einen einzigen Weg zur Entität *Kunde* gibt, wird dieses Steuerelement nicht angezeigt.
    1. Wählen **Fertig**, um Ihre Auswahl anzuwenden.
 
-1. Wählen Sie **...** für die Berechnung aus, um **Duplikat**, **Umbenennen** oder **Entfernen** zur Berechnung einer Kennzahl auszuwählen.
+1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Berechnung aus, um **Duplikat**, **Umbenennen** oder **Entfernen** für eine Berechnung aus einer Kennzahl auszuführen.
 
 1. Im Bereich **Vorschau** sehen Sie das Datenschema der Kennzahlausgabeentität, einschließlich Filter und Dimensionen. Die Vorschau reagiert dynamisch auf Änderungen in der Konfiguration.
 

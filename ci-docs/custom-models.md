@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646091"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800419"
 ---
 # <a name="custom-machine-learning-models"></a>Benutzerdefinierte Maschinelles Lernen Modelle
 
@@ -92,7 +92,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 
 ## <a name="edit-a-workflow"></a>Einen Workflow bearbeiten
 
-1. Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben und wählen **Bearbeiten**.
+1. Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben und wählen **Bearbeiten**.
 
 1. Sie können den erkennbaren Namen Ihres Workflows im Feld **Anzeigename** aktualisieren, aber Sie können den konfigurierten Webdienst oder die Pipeline nicht ändern. Klicken Sie auf **Weiter**.
 
@@ -108,7 +108,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 
 ## <a name="run-a-workflow"></a>Ausführen eines Workflows
 
-1. Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben.
+1. Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben.
 
 1. **Ausführen** auswählen.
 
@@ -116,7 +116,7 @@ Ihr Workflow läuft auch automatisch bei jeder geplanten Aktualisierung. Mehr er
 
 ## <a name="delete-a-workflow"></a>Löschen eines Workflows
 
-1. Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben.
+1. Auf der Seite **Benutzerdefinierte Modelle** wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Spalte **Aktionen** neben einem Workflow, den Sie zuvor erstellt und ausgewählt haben.
 
 1. Wählen Sie **Löschen** und bestätigen Sie Ihre Löschung.
 

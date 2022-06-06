@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743412"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768349"
 ---
 # <a name="explore-customer-insights"></a>Erkunden von Customer Insights
 
@@ -28,9 +28,9 @@ Die **Homepage** zeigt Anleitungen für den Konfigurationsprozess für Schlüsse
 
 ## <a name="left-side-pane"></a>Linker Seitenbereich
 
-Verwenden Sie den linken Bereich, um zwischen den verschiedenen Bereichen von Customer Insights zu navigieren. 
+Verwenden Sie den linken Bereich, um zwischen den verschiedenen Bereichen von Customer Insights zu navigieren.
 
-Wenn Sie mit Geschäftskonten und Privatkunden arbeiten, können Sie Ihre primäre Zielgruppe auswählen, um Ihren Fokus entsprechend zu setzen. 
+Wenn Sie mit Geschäftskonten und Privatkunden arbeiten, können Sie Ihre primäre Zielgruppe auswählen, um Ihren Fokus entsprechend zu setzen.
 
 ## <a name="application-header"></a>Anwendungskopf
 
@@ -38,7 +38,7 @@ Die **Umgebungsauswahl** zeigt die Umgebung, in der Sie arbeiten, und lässt Sie
 
 Das Smiley-Symbol ist das Steuerelement für **Feedback**. Wählen Sie es aus, um uns Ihre Erfahrungen mit Customer Insights mitzuteilen. Wir hören aktiv auf Ihr Feedback und danken Ihnen im Voraus, dass Sie uns wissen lassen, was Ihnen gefällt und wie wir uns verbessern können.
 
-Das Steuerelement **Einstellungen**, das durch ein Zahnradsymbol dargestellt wird, ermöglicht es Ihnen, Sitzungsdetails für Customer Insights zu sammeln und globale Einstellungen für Ihr Microsoft 365-Profil zu konfigurieren. 
+Das Steuerelement **Einstellungen**, das durch ein Zahnradsymbol dargestellt wird, ermöglicht es Ihnen, Sitzungsdetails für Customer Insights zu sammeln und globale Einstellungen für Ihr Microsoft 365-Profil zu konfigurieren.
 
 **Hilfeoptionen**, die mit einem Fragezeichensymbol angezeigt werden, bieten kontextbezogene Hilfelinks und andere hilfreiche Ressourcen.
 
@@ -46,7 +46,7 @@ Ihr Profilbild öffnet den **Konto-Manager** für Ihr Microsoft 365-Profil. Wäh
 
 ## <a name="getting-started-with-customer-insights-section"></a>Erste Schritte mit dem Abschnitt „Customer Insights“
 
-Dieser Abschnitt enthält Karten, die Sie durch den Einrichtungsprozess Ihrer Customer Insights-Umgebung führen. 
+Dieser Abschnitt enthält Karten, die Sie durch den Einrichtungsprozess Ihrer Customer Insights-Umgebung führen.
 
 1. Die Karte **Daten hinzufügen** unterstützt Sie beim Datenimport. Customer Insights unterstützt [mehrere Optionen, um Daten über Ihre Kunden einzugeben](data-sources.md). Wählen Sie **Datenquellen hinzufügen**, um anzufangen.
 1. Sobald der anfängliche Datenimport erfolgreich abgeschlossen ist, können Sie die Karte **Daten vereinheitlichen** zur Harmonisierung der Daten verwenden und [einheitliche Kundenprofile](data-unification.md) aus unterschiedlichen Quellen erstellen. 

@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647080"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800095"
 ---
 # <a name="create-segments"></a>Segmente erstellen
 
@@ -134,8 +134,9 @@ Während Sie ein Segment erstellen, können Sie einen Entwurf speichern. In der 
 > - Der Segmentgenerator schlägt beim Festlegen der Operatoren für die Bedingungen keine gültigen Werte aus Entitäten vor. Sie können zu **Daten** > **Entitäten** wechseln, und die Entitätsdaten herunterladen, um zu sehen, welche Werte verfügbar sind.
 > - Mit datumsbasierten Bedingungen können Sie zwischen festen Datumsangaben und einem variablen Datumsbereich wechseln.
 > - Wenn Sie mehrere Regeln für Ihr Segment haben, wird neben der Regel, die Sie bearbeiten, eine vertikale blaue Linie angezeigt.
-> - Sie können Regeln und Bedingungen an andere Stellen in der Segmentdefinition verschieben. Wählen Sie neben einer Regel oder Bedingung [...] aus, und legen Sie fest, wie und wohin sie verschoben werden soll.
+> - Sie können Regeln und Bedingungen an andere Stellen in der Segmentdefinition verschieben. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben einer Regel oder Bedingung und wählen Sie aus, wie und wohin sie verschoben werden soll.
 > - Mit den Steuerelementen **Rückgängig machen** und **Wiederholen** in der Befehlsleiste können Sie Änderungen rückgängig machen.
+> - Nachdem Sie ein Segment erstellt haben, können Sie bei einigen Segmenten [die Nutzung des Segments verfolgen](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Schnelle Segmente
 

@@ -1,110 +1,137 @@
 ---
-title: Customer Insights-Umgebungen erstellen
-description: Schritte zum Erstellen von Umgebungen mit einem lizenzierten Abonnement für Dynamics 365 Customer Insights.
-ms.date: 04/25/2022
+title: Vorgehensweise – Neue Umgebung erstellen
+description: Schritte zum Erstellen von Umgebungen mit Dynamics 365 Customer Insights.
+ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
-ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "8712901"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833557"
 ---
-# <a name="create-an-environment-in-customer-insights"></a>Erstellen Sie eine Umgebung in Customer Insights
+# <a name="how-to-create-a-new-environment"></a>Vorgehensweise: Neue Umgebung erstellen
 
-Dieser Artikel erklärt, wie Sie eine neue Umgebung erstellen, nachdem Ihre Organisation ein Dynamics 365 Customer Insights-Abonnement gekauft hat. 
+Nach dem [Kauf einer Abonnementlizenz für Dynamics 365 Customer Insights](paid-license.md) erhält der globale Administrator des Microsoft 365-Mandanten eine E-Mail, die ihn auffordert, die Umgebung zu erstellen. Gehen Sie zu [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start), um anzufangen. In diesem Szenario können Sie direkt zu [Schritt 1: Geben Sie grundlegende Informationen an](#step-1-provide-basic-information) gehen.
 
-Unternehmen können mehrere Umgebungen für jede Customer Insights-Lizenz erstellen. Wenn Ihre Organisation mehr als eine Lizenz erwirbt, [Kontaktieren Sie unser Support-Team](https://go.microsoft.com/fwlink/?linkid=2079641), um die Anzahl der verfügbaren Umgebungen zu erhöhen. Weitere Informationen zur Kapazität und zu Add-On-Kapazitäten finden Sie in der [Lizenzierungsanleitung für Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+Nachdem die erste Umgebung erstellt wurde, kann der globale Administrator des Microsoft 365-Mandanten [Benutzer aus der Organisation als Administratoren hinzufügen](permissions.md). In Zukunft können diese Administratoren Benutzer und Umgebungen verwalten. Wenn Ihre Organisation mehr als eine Lizenz für Customer Insights erwirbt, [kontaktieren Sie unser Support-Team](https://go.microsoft.com/fwlink/?linkid=2079641), um die Anzahl der verfügbaren Umgebungen zu erhöhen. Weitere Informationen zur Kapazität und zu Add-On-Kapazitäten finden Sie in der [Lizenzierungsanleitung für Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-> [!NOTE]
+> [!TIP]
 > Wenn Sie den Dienst ausprobieren möchten, lesen Sie [Testumgebung einrichten](trial-signup.md).
 
-## <a name="create-a-new-environment"></a>Neue Umgebung erstellen
+## <a name="prerequisites"></a>Anforderungen
 
-Nach dem Kauf einer Abonnementlizenz für Customer Insights erhält der globale Administrator des Microsoft 365-Mandanten eine E-Mail, die ihn auffordert, die Umgebung zu erstellen. Gehen Sie zu [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start), um anzufangen. 
+Sie benötigen [Administratorberechtigungen](permissions.md) in Customer Insights, um Umgebungen zu erstellen oder zu verwalten.
 
-Eine geführte Erfahrung hilft Ihnen durch die Schritte, um alle erforderlichen Informationen für eine neue Umgebung zu sammeln. Sie benötigen [Administratorberechtigungen](permissions.md) in Customer Insights, um Umgebungen zu erstellen oder zu verwalten.
+## <a name="start-the-environment-creation-process"></a>Starten Sie den Umgebungserstellungsprozess
 
 1. Öffnen Sie die Umgebungsauswahl und wählen Sie **+ Neu**.
   
    :::image type="content" source="media/environment-picker.png" alt-text="Wählen Sie die Umgebung aus.":::
 
-1. Folgen Sie der geführten Erfahrung, die in den folgenden Abschnitten beschrieben wird.
+1. Befolgen Sie die in den folgenden Abschnitten beschriebenen Anleitungen, um alle erforderlichen Informationen für eine neue Umgebung bereitzustellen. Wenn Sie zuvor eine Umgebung konfiguriert haben, können Sie auch [die Konfiguration kopieren](#copy-the-environment-configuration).
 
-### <a name="step-1-provide-environment-information"></a>Schritt 1: Geben Sie Umgebungsinformationen an
+## <a name="step-1-provide-basic-information"></a>Schritt 1: Geben Sie grundlegende Informationen an
 
-In dem Schritt **Grundinformation** wählen Sie aus, ob Sie eine Umgebung von Grund auf neu erstellen möchten oder [Daten aus einer anderen Umgebung kopieren](manage-environments.md#copy-the-environment-configuration).
+In dem Schritt **Grundinformation** wählen Sie aus, ob Sie eine Umgebung von Grund auf neu erstellen möchten oder [Daten aus einer anderen Umgebung kopieren](#copy-the-environment-configuration).
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Dialog zum Erstellen einer neuen Customer Insights-Umgebung.":::
 
 Geben Sie die folgenden Informationen an:
-   - **Name**: Der Name für diese Umgebung. Dieses Feld ist bereits ausgefüllt, wenn Sie eine bestehende Umgebung kopiert haben, aber Sie können es ändern.
-   - **Wählen Sie Ihr Unternehmen**: Wählen Sie die primäre Zielgruppe für die neue Umgebung. Sie können mit einzelnen Verbrauchern (B2C) oder mit [Geschäftskonten](work-with-business-accounts.md) (B2B) arbeiten.
-   - **Typ**: Wählen Sie, ob Sie eine Produktions- oder eine Sandbox-Umgebung erstellen möchten. Sandbox-Umgebungen lassen keine geplante Datenaktualisierung zu und sind für die Vorimplementierung und das Testen gedacht. Sandbox-Umgebungen verwenden dieselbe primäre Zielgruppe wie die aktuell ausgewählte Produktionsumgebung.
-   - **Region**: Die Region, in der der Dienst bereitgestellt und gehostet wird.
 
-### <a name="step-2-configure-data-storage"></a>Schritt 2: Datenschritt konfigurieren
+- **Name**: Der Name für diese Umgebung. Dieses Feld ist bereits ausgefüllt, wenn Sie eine bestehende Umgebung kopiert haben, aber Sie können es ändern.
+- **Wählen Sie Ihr Unternehmen**: Wählen Sie die primäre Zielgruppe für die neue Umgebung. Sie können mit einzelnen Verbrauchern (B2C) oder mit [Geschäftskonten](work-with-business-accounts.md) (B2B) arbeiten. Wenn Ihre Organisation hauptsächlich mit Einzelpersonen Geschäfte macht, wie z. B. ein Einzelhändler oder ein Café, wählen Sie einzelne Verbraucher aus. Falls Ihre wichtigste Zielgruppe andere Unternehmen sind, wie z. B. ein Autohersteller oder eine Papierfirma, wählen Sie Geschäftskonten.
+- **Typ**: Wählen Sie, ob Sie eine Produktions- oder eine Sandbox-Umgebung erstellen möchten. Sandbox-Umgebungen lassen keine geplante Datenaktualisierung zu und sind für die Vorimplementierung und das Testen gedacht. Sandbox-Umgebungen verwenden dieselbe primäre Zielgruppe wie die aktuell ausgewählte Produktionsumgebung.
+- **Region**: Die Region, in der der Dienst bereitgestellt und gehostet wird. Um [Ihr eigenes Azure Data Lake Storage-Konto zu verwenden](own-data-lake-storage.md) oder [mit einer bestehenden Microsoft Dataverse-Organisation zu verbinden](customer-insights-dataverse.md), muss sich die Customer Insights-Umgebung in derselben Region befinden.
+
+## <a name="step-2-configure-data-storage"></a>Schritt 2: Datenschritt konfigurieren
 
 Im Schritt **Datenspeicherung** wählen Sie, wo die Customer Insights Daten gespeichert werden sollen.
 
-Sie haben zwei Möglichkeiten: **Customer Insights-Speicher** (ein Azure Data Lake, der vom Customer Insights-Team verwaltet wird) und **Azure Data Lake Storage** (Ihr eigener Azure Data Lake Storage). Standardmäßig ist die Speicheroption „Customer Insights“ ausgewählt.
+Dafür gibt es zwei Optionen:
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Wählen Sie die Azure Data Lake Storage, um Ihre Daten zu speichern.":::
+- **Customer Insights-Speicher**: Der Datenspeicher wird vom Customer Insights-Team verwaltet. Dies ist die Standardoption, und sofern keine besonderen Anforderungen zum Speichern von Daten in Ihrem eigenen Speicherkonto bestehen, empfehlen wir die Verwendung dieser Option.
+- **Azure Data Lake Storage**: Geben Sie ein eigenes Azure Data Lake Storage-Konto an, um die Daten zu speichern, sodass Sie die volle Kontrolle darüber haben, wo die Daten gespeichert werden. Weitere Informationen finden Sie unter [Eigenes Azure Data Lake Storage-Konto verwenden](own-data-lake-storage.md).
 
-Durch das Speichern von Daten in Azure Data Lake Storage stimmen Sie zu, dass Daten an den entsprechenden geografischen Standort für dieses Azure-Speicherkonto übertragen und dort gespeichert werden. Dieser Speicherort kann sich vom Speicherort der Daten in Dynamics 365 Customer Insights unterscheiden. Weitere Informationen finden Sie im [Microsoft Trust Center](https://www.microsoft.com/trust-center).
+:::image type="content" source="media/data-storage-environment.png" alt-text="Wählen Sie die bevorzugte Option, um Ihre Daten zu speichern.":::
 
-> [!NOTE]
-> Customer Insights unterstützt derzeit Folgendes:  
-> - Azure Data Lake Storage Konten aus derselben Azure-Region, die Sie beim Erstellen der Umgebung ausgewählt haben.
-> - Azure Data Lake Storage Konten der Gen2, die *hierarchischer Namensraum* aktiviert haben. Azure Data Lake Gen1-Speicherkonten werden nicht unterstützt.
+## <a name="step-3-connect-to-microsoft-dataverse"></a>Schritt 3: Mit Microsoft Dataverse verbinden
 
-Für die Azure Data Lake Storage Option können Sie zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Stellen Sie eine Verbindung mit einem Azure Data Lake Storage-Konto mithilfe eines Azure-Dienstprinzipals her](connect-service-principal.md). Auf dem Speicherkonto muss ein Container mit dem Namen `customerinsights` vorhanden sein.
+Mit dem **Microsoft Dataverse** Schritt können Sie Customer Insights mit Ihrer Dataverse Umgebung verbinden. Teilen Sie Daten mit Dataverse, um sie mit Geschäftsanwendungen zu nutzen, die auf Dataverse basieren, wie Dynamics 365 Marketing oder modellgesteuerte Anwendungen in Power Apps.
 
-Wenn Systemprozesse wie die Datenaufnahme abgeschlossen sind, erstellt das System entsprechende Ordner in dem von Ihnen angegebenen Speicherkonto. Datendateien und *model.json*-Dateien werden erstellt und Ordnern basierend auf dem Prozessnamen hinzugefügt.
+Lassen Sie dieses Feld leer, wenn Sie keine eigene Dataverse-Umgebung haben und wir erstellen eine für Sie.
 
-Wenn Sie mehrere Umgebungen von Customer Insights erstellen und die Ausgabeentitäten aus diesen Umgebungen in Ihrem Speicherkonto speichern, erstellt Customer Insights separate Ordner für jede Umgebung mit `ci_environmentID` im Behältnis.
+Weitere Informationen finden Sie unter [Mit Customer Insights-Daten in Microsoft Dataverse arbeiten](customer-insights-dataverse.md).
 
-### <a name="step-3-connect-to-microsoft-dataverse"></a>Schritt 3: Mit Microsoft Dataverse verbinden
-   
-Mit dem **Microsoft Dataverse** Schritt können Sie Customer Insights mit Ihrer Dataverse Umgebung verbinden.
-
-Bieten Sie Ihre eigene Microsoft Dataverse-Umgebung, um Daten (Profile und Einblicke) mit auf Dataverse basierenden Geschäftsanwendungen zu teilen, wie Dynamics 365 Marketing oder modellgesteuerte Anwendungen in Power Apps. Lassen Sie dieses Feld leer, wenn Sie keine eigene Dataverse-Umgebung haben und wir stellen Ihnen eine zur Verfügung.
-
-Durch Verbindung zu Ihrer Dataverse-Umgebung können Sie auch [Daten aus lokalen Datenquellen mit Power Platform-Dataflows und Gateways erfassen](data-sources.md#add-data-from-on-premises-data-sources).
-
-> [!IMPORTANT]
-> 1. Customer Insights und Dataverse müssen sich in derselben Region befinden, um die Datenfreigabe zu ermöglichen.
-> 1. Sie müssen eine globale Administratorrolle in der Dataverse Umgebung haben. Überprüfen Sie, ob dieses [Dataverse Umfeld mit](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) bestimmten Sicherheitsgruppen verknüpft ist und stellen Sie sicher, dass Sie zu diesen Sicherheitsgruppen hinzugefügt werden.
-> 1. Es ist noch keine vorhandene Customer Insights Umgebung mit dieser Dataverse Umgebung verknüpt. Lernen wie man eine [bestehende Verbindung in einer Dataverse Umgebung](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment) entfernt.
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Datenaustausch mit Microsoft Dataverse automatisch für neue Instanzen aktiviert.":::
-
-Weitere Informationen zum Aktivieren der Datenfreigabe für Microsoft Dataverse über Ihre eigene Azure Data Lake Storage finden Sie unter [mit Microsoft Dataverse verbinden](manage-environments.md#connect-to-microsoft-dataverse).
-
-Customer Insights unterstützt die folgenden Datenfreigabe-Szenarien nicht:
-- Wenn Sie die Datenfreigabe mit einem verwalteten Dataverse Data Lake aktivieren, können Sie keine [vorhergesagten oder fehlenden Werten in einer Entität erstellen](predictions.md).
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Datenaustausch mit Microsoft Dataverse automatisch für neue Umgebungen aktiviert.":::
 
 ### <a name="step-4-finalize-the-settings"></a>Schritt 4: Einstellungen abschließen
 
-In dem Schritt **Überprüfen**  gehen Sie alle angegebenen Einstellungen durch. Wenn alles fertig aussieht, wählen Sie **Erstellen**, um die Umgebung einzurichten. 
+In dem Schritt **Überprüfen** gehen Sie alle angegebenen Einstellungen durch. Wenn alles fertig aussieht, wählen Sie **Erstellen**, um die Umgebung einzurichten.
 
-Sie können die meisten Einstellungen auch später ändern. Weitere Informationen finden Sie unter [Umgebungen verwalten](manage-environments.md).
+Sie können die einige Einstellungen auch später ändern. Weitere Informationen finden Sie unter [Umgebungen verwalten](manage-environments.md).
 
 ## <a name="work-with-your-new-environment"></a>Arbeiten Sie mit Ihrer neuen Umgebung
 
-Lesen Sie die folgenden Artikel, um Ihnen den Einstieg in die Konfiguration von Customer Insights zu erleichtern: 
+Lesen Sie die folgenden Artikel, um Ihnen den Einstieg in die Konfiguration von Customer Insights zu erleichtern:
 
 - [Weitere Benutzer hinzufügen und Berechtigungen zuweisen](permissions.md).
 - [Erfassen Sie Ihre Datenquellen](data-sources.md) und führen sie sie mit dem [Datenvereinheitlichungsprozess](data-unification.md) aus, um [einheitliche Kundenprofile](customer-profiles.md) zu erhalten.
 - [Reichern Sie die einheitlichen Kundenprofile an](enrichment-hub.md) oder [führen Sie Vorhersagemodelle aus](predictions-overview.md).
 - [Erstellen Sie Segmente](segments.md), um Kunden zu gruppieren und [Maßnahmen](measures.md), um KPIs zu überprüfen.
 - [Verbindungen](connections.md) und [Exporte](export-destinations.md) einrichten, um Teilmengen Ihrer Daten in anderen Anwendungen zu verarbeiten.
+
+## <a name="copy-the-environment-configuration"></a>Umgebungskonfiguration kopieren
+
+Als Administrator können Sie die Konfiguration aus einer vorhandenen Umgebung kopieren, wenn Sie eine neue erstellen.
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Screenshot der Einstellungsoptionen in den Umgebungseinstellungen.":::
+
+Sie sehen eine Liste aller verfügbaren Umgebungen in Ihrer Organisation, aus der Sie Daten kopieren können.
+
+Folgende Konfigurationseinstellungen werden kopiert:
+
+- Mit Power Query importierte Datenquellen
+- Konfiguration der Datenvereinheitlichung
+- Segmente
+- Measures
+- Beziehungen
+- Aktivitäten
+- Such- und Filterindex
+- Exporte
+- Zeitplan aktualisieren
+- Anreicherungen
+- Vorhersagemodelle
+- Zuweisungen von Rollen
+
+## <a name="set-up-a-copied-environment"></a>Einrichten einer kopierten Umgebung
+
+Wenn Sie die Umgebungskonfiguration kopieren, müssen Sie einige zusätzliche Schritte ausführen, um die Anmeldeinformationen zu bestätigen:
+
+- Kundenprofile. Authentifizieren und erfassen Sie zunächst Ihre Datenquellen und führen Sie die Datenvereinheitlichung aus, um die Kundenprofile neu zu erstellen.
+- Anmeldeinformationen für die Datenquelle. Sie müssen die Anmeldeinformationen für jedes Datenquelle angeben, um die Datenquellen manuell zu authentifizieren und zu aktualisieren.
+- Datenquellen aus dem Common Data Model-Ordner und Dataverse. Sie müssen diese Datenquellen manuell mit demselben Namen wie in der Quellumgebung erstellen.
+- Verbindungsgeheimnisse, die für Exporte und Anreicherungen verwendet werden. Sie müssen die Verbindungen erneut authentifizieren und anschließend Anreicherungen und Exporte erneut aktivieren.
+
+Sie sehen eine Bestätigungsnachricht, wenn die kopierte Umgebung erstellt wurde. Wählen Sie **Gehen Sie zu Datenquellen**, um die Liste der Datenquellen anzuzeigen.
+
+Alle Datenquellen zeigen einen Status **Anmeldeinformationen erforderlich**. Bearbeiten Sie die Datenquellen und geben Sie die Anmeldeinformationen ein, um sie zu aktualisieren.
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="Liste der Datenquellen, die kopiert wurden und eine Authentifizierung benötigen.":::
+
+Nachdem Sie die Datenquellen aktualisiert haben, gehen Sie zu **Daten** > **Vereinheitlichen**. Hier finden Sie Einstellungen aus der Quellumgebung. Bearbeiten Sie sie nach Bedarf oder wählen Sie **Ausführen**, um den Datenvereinheitlichungsprozess zu starten und die einheitliche Kundenentität zu erstellen.
+
+Wenn die Datenvereinheitlichung abgeschlossen ist, gehen Sie zu **Maßnahmen** und **Segmente**, um sie auch zu aktualisieren.
+
+Bevor Sie Exporte und Anreicherungen reaktivieren, gehen Sie zu **Administrator** > **Verbindungen**, um die Verbindungen in Ihrer neuen Umgebung erneut zu authentifizieren.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
