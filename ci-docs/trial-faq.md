@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833767"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011886"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Häufig gestellte Fragen zur Testversion von Dynamics 365 Customer Insights
 
@@ -66,9 +66,9 @@ Optional können Sie, wenn Sie nur Customer Insights verwenden, Ihre Daten aus e
 
 Nachdem Sie sich zum ersten Mal bei Ihrer kostenpflichtigen Instanz von Customer Insights angemeldet haben, werden Sie aufgefordert, eine neue Umgebung zu erstellen. In diesem Prozess können Sie die Konfiguration aus einer vorhandenen Umgebung kopieren und die meisten Einstellungen migrieren. Wenn Sie über die oben genannten Berechtigungen verfügen, wird die Testumgebung in dieser Liste angezeigt. Weitere Informationen finden Sie unter [Die Umgebungskonfiguration kopieren](create-environment.md#copy-the-environment-configuration).
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>Welche Beschränkungen und Kontingente gelten für den Test?
+### <a name="what-are-the-trial-limits-and-quotas"></a>Welche Beschränkungen und Kontingente gelten für die Testversion?
 
-- Während eines Tests von Customer Insights können Sie Ihr eigenes Azure Data Lake storage-Konto nicht zum Speichern von Ausgabedaten verwenden. Sie können jedoch Daten aus einem Data Lake Storage-Konto erfassen.
+- Während eines Tests von Customer Insights können Sie Ihr eigenes Azure Data Lake Storage Konto nicht zum Speichern von Ausgabedaten verwenden. Sie können jedoch Daten aus einem Data Lake Storage-Konto erfassen.
 - Sie können bis zu 3 GB Daten in der Dataverse Umgebung speichern, die automatisch bereitgestellt wird, wenn Sie eine Customer Insights Testversion starten.
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights spezifische Fragen

@@ -3,17 +3,17 @@ title: Verwenden Sie Ihr eigenes Azure Data Lake Storage Gen2-Konto
 author: mukeshpo
 description: Informieren Sie sich über die Voraussetzungen für die Verwendung Ihres eigenen Azure Data Lake Storage Kontos zum Speichern von Customer Insights-Daten.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833921"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011932"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Verwenden Sie Ihr eigenes Azure Data Lake Storage Gen2-Konto
 
@@ -37,6 +37,7 @@ Stellen Sie beim Erstellen einer neuen Umgebung sicher, dass das Data Lake Stora
 1. Wählen Sie aus, wie Sie mit dem **Speicherkonto verbinden** möchten. Sie können zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Stellen Sie eine Verbindung mit einem Azure Data Lake Storage-Konto mithilfe eines Azure-Dienstprinzipals her](connect-service-principal.md).
    - Wählen Sie für **Azure-Abonnement** das **Abonnement**, **Ressourcengruppe** und **Speicherkonto** aus, das den `customerinsights`-Container enthält.
    - Geben Sie für **Kontoschlüssel** den **Kontonamen** und den **Kontoschlüssel** für das Data Lake Storage-Konto an. Die Verwendung dieser Authentifizierungsmethode impliziert, dass Sie informiert werden, wenn Ihre Organisation die Schlüssel rotiert. Sie müssen [die Umgebungskonfiguration mit dem neuen Schlüssel aktualisieren](manage-environments.md#edit-an-existing-environment), wenn dieser rotiert wird.
+1. Wählen Sie aus, ob Sie Azure Private Link verwenden möchten, um eine Verbindung mit dem Speicherkonto herzustellen und mit einem zweistufigen Verfahren [die Verbindung zu Private Link herstellen](security-overview.md#private-links-tab).
 
 Wenn Systemprozesse wie die Datenaufnahme abgeschlossen sind, erstellt das System entsprechende Ordner im Speicherkonto. Datendateien und *model.json*-Dateien werden erstellt und Ordnern basierend auf dem Prozessnamen hinzugefügt.
 

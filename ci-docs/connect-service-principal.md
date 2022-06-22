@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833384"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011840"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinden Sie sich mit einem Azure Data Lake Storage Konto mithilfe eines Azure Dienstprinzipals
 
@@ -51,7 +51,13 @@ Automatisierte Tools, die Azure-Dienste nutzen, sollten immer eingeschränkte Be
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Erteilen Sie dem Service Principal Berechtigungen für den Zugriff auf das Speicherkonto
 
-Gehen Sie zum Azure-Portal, um Berechtigungen für das Dienstprinzipal für das Speicherkonto zu erteilen, das Sie in Customer Insights verwenden möchten.
+Gehen Sie zum Azure-Portal, um Berechtigungen für das Dienstprinzipal für das Speicherkonto zu erteilen, das Sie in Customer Insights verwenden möchten. Dem Speicherkonto oder Container muss eine der folgenden Rollen zugewiesen werden:
+
+|Anmeldeinformation|Anforderungen|
+|----------|------------|
+|Angemeldeter Benutzer|**Rolle**: Storage Blob-Datenleser, Storage Blob Teilnehmer oder Storage Blob Besitzer.<br>**Ebene**: Berechtigungen können für das Speicherkonto oder den Container erteilt werden.</br>|
+|Customer Insights Dienstprinzipal -<br>Verwenden von Azure Data Lake Storage als Datenquelle</br>|Option 1<ul><li>**Rolle**: Storage Blob-Datenleser, Storage Blob Daten     Teilnehmer oder Storage Blob Datenbesitzer.</li><li>**Ebene**: Berechtigungen sollten für das Speicherkonto oder den Container erteilt werden.</li></ul>Option 2 *(ohne den Dienstprinzipalzugriff auf das Speicherkonto freizugeben)*<ul><li>**Rolle 1**: Storage Blob-Datenleser, Storage Blob Datenteilnehmer oder Storage Blob Datenbesitzer.</li><li>**Ebene**: Berechtigungen sollten für den Container erteilt werden.</li><li>**Rolle 2**: Speicherblob-Datendelegator.</li><li>**Ebene**: Berechtigungen sollten für das Speicherkonto oder den Container erteilt werden.</li></ul>|
+|Customer Insights Dienstprinzipal - <br>Azure Data Lake Storage als Ausgang oder Ziel verwenden</br>|Option 1<ul><li>**Rolle**: Storage Blob-Mitwirkender oder Storage Blob Besitzer.</li><li>**Ebene**: Berechtigungen sollten für das Speicherkonto oder den Container erteilt werden.</li></ul>Option 2 *(ohne den Dienstprinzipalzugriff auf das Speicherkonto freizugeben)*<ul><li>**Rolle**: Storage Blob-Mitwirkender oder Storage Blob Besitzer.</li><li>**Ebene**: Berechtigungen sollten für den Container erteilt werden.</li><li>**Rolle 2**: Speicherblob-Datendelegator.</li><li>**Ebene**: Berechtigungen sollten für das Speicherkonto oder den Container erteilt werden.</li></ul>|
 
 1. Gehen Sie zum [Azure-Admin-Portal](https://portal.azure.com) und melden Sie sich bei Ihrer Organisation an.
 
@@ -62,7 +68,7 @@ Gehen Sie zum Azure-Portal, um Berechtigungen für das Dienstprinzipal für das 
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Screenshot, der das Azure-Portal beim Hinzufügen einer Rollenzuweisung zeigt.":::
 
 1. Im Bereich **Rollenzuweisung hinzufügen** legen Sie die folgenden Eigenschaften fest:
-   - Rolle: **Storage Blob Data Beitragender**
+   - Rolle: Storage Blob-Datenleser, Storage Blob Mitbesitzer oder Storage Blob Besitzer basierend auf Anmeldeinfromationen, die oben aufgeführt sind.
    - Weisen Sie den Zugriff zu: **Benutzer, Gruppe oder Prinzipal des Dienstes**
    - Wählen Sie Mitglieder: **Dynamics 365 AI Customer Insights** (das [Dienstprinzipal](#create-a-new-service-principal), das Sie zuvor in diesem Verfahren gesucht haben)
 

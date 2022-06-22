@@ -1,7 +1,7 @@
 ---
 title: Daten aus Azure Synapse Analytics erfassen
 description: Verwenden Sie eine Datenbank in Azure Synapse als Datenquelle in Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646171"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011426"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Eine Azure Synapse-Datenquelle verbinden (Vorschauversion)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Eine Azure Synapse Analytics-Datenquelle verbinden (Vorschauversion)
 
 Azure Synapse Analytics ist ein Analysedienst für Unternehmen, der Erkenntnisse über Data Warehouses und Big-Data-Systeme hinweg verkürzt. Azure Synapse Analytics vereint die besten SQL-Technologien für Data Warehousing in Unternehmen, Spark-Technologien für Big Data, Data Explorer für Protokoll‑ und Zeitreihenanalysen, Pipelines für die Datenintegration und ETL/ELT sowie eine tiefe Integration mit anderen Azure-Diensten wie Power BI, Cosmos DB und AzureML.
 
@@ -24,16 +24,14 @@ Weitere Informationen finden Sie unter [Azure Synapse-Überblick](/azure/synapse
 
 ## <a name="prerequisites"></a>Anforderungen
 
-Die folgenden Voraussetzungen müssen erfüllt sein, um die Verbindung von Dynamics 365 Customer Insights zu Azure Synapse zu konfigurieren.
-
 > [!IMPORTANT]
 > Stellen Sie sicher, dass Sie alle **Rollenzuweisungen** wie beschrieben festlegen.  
 
-## <a name="prerequisites-in-customer-insights"></a>Voraussetzungen in Customer Insights
+**In Customer Insights**:
 
 * Sie verfügen über eine **Administrator**-Rolle in Customer Insights. Erfahren Sie mehr über [Benutzerberechtigungen in Customer Insights](permissions.md#assign-roles-and-permissions).
 
-In Azure: 
+**In Azure**:
 
 - Ein aktives Azure-Abonnement.
 
@@ -47,7 +45,7 @@ In Azure:
 
 - Im Azure Synapse Workspace, braucht der *Dienstprinzipal für Customer Insights* die Zuweisung einer **Synapse Administrator** Rolle. Weitere Informationen finden Sie unter [So richten Sie die Zugriffssteuerung für Ihren Synapse-Arbeitsbereich ein](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Herstellen einer Verbindung mit Data Lake-Datenbanken in Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Herstellen einer Verbindung mit Data Lake-Datenbanken in Azure Synapse Analytics
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
@@ -55,14 +53,16 @@ In Azure:
 
 1. Wählen Sie die Methode **Azure Synapse Analytics (Vorschauversion)**.
 
-1. Geben Sie einen **Namen** für die Datenquelle und wählen Sie **Weiter**, um die Datenquelle zu erstellen. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Dialogfeld zum Herstellen einer Verbindung mit Synapse Analytics-Daten":::
+  
+1. Geben Sie einen **Namen** und eine optionale **Beschreibung** für die neue Datenquelle ein.
 
 1. Wählen Sie eine [verfügbare Verbindung](connections.md) mit Azure Synapse Analytics aus oder erstellen Sie eine neue.
 
-1. Wählen Sie eine **Lake-Datenbank** aus dem Arbeitsbereich, der in der ausgewählten Azure Synapse Analytics-Verbindung verbunden ist, und Wählen Sie **Weiter**.
+1. Wählen Sie eine **Datenbank** aus dem Arbeitsbereich, der in der ausgewählten Azure Synapse Analytics-Verbindung verbunden ist, und wählen Sie **Weiter**.
 
-1. Wählen Sie die zu erfassenden Entitäten aus der verbundenen Datenbank aus. 
+1. Wählen Sie die zu erfassenden Entitäten aus der verbundenen Datenbank aus und wählen Sie **Weiter**.
 
-1. Wählen Sie optional die Datenentitäten aus, für die die Datenprofilerstellung zugelassen werden soll. 
+1. Wählen Sie optional die Datenentitäten aus, für die die Datenprofilerstellung zugelassen werden soll.
 
-1. Wählen Sie **Speichern**, um Ihre Auswahl zu übernehmen und die Erfassung der Daten aus Ihrer neu erstellten Datenquelle zu starten, die mit den Lake-Datenbanktabellen in Azure Synapse Analytics verknüpft ist.
+1. Wählen Sie **Speichern**, um Ihre Auswahl zu übernehmen und die Erfassung der Daten aus Ihrer neu erstellten Datenquelle zu starten, die mit den Lake-Datenbanktabellen in Azure Synapse Analytics verknüpft ist. Die Seite **Datenquellen** öffnet sich und zeigt die neue Datenquelle im Status **Wird aktualisiert** an.

@@ -1,7 +1,7 @@
 ---
 title: Anzeigen von Kundenprofilen
 description: Erhalten Sie eine kombinierte Ansicht Ihrer vereinheitlichten Kundendaten.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755781"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947045"
 ---
 # <a name="customer-profiles"></a>Kundenprofile
 
@@ -55,9 +55,9 @@ Sie können Kunden nach den *Kunden* Entitätsfeldern filtern. Ähnlich wie bei 
 
 Wählen Sie eine der Kundenkacheln, um die **Kundendetailseite** zu öffnen. Diese Ansicht enthält vereinheitlichte Informationen für den ausgewählten Kunden. Die Kundendaten umfassen die folgenden Inhalte:
 
-**Kachel Kundenprofil**: Diese Kachel zeigt die verschiedenen Werte aus der vereinheitlichten Entität *Kunde* an. Wenn ein Feld keinen Wert für das ausgewählte Kundenprofil hat, wird es nicht angezeigt. Die Kachel ist in Abschnitte gegliedert:
+**Kachel Kundenprofil**: Diese Kachel zeigt die verschiedenen Werte aus der vereinheitlichten Entität *Kunde* an. Wenn ein Feld keinen Wert für das ausgewählte Kundenprofil hat, wird es nicht angezeigt, ausgenommen für das Adressfeld. Die Kachel ist in Abschnitte gegliedert:
 
-- Der erste Abschnitt zeigt einen vordefinierten Satz von Feldern, gefolgt von allen Feldern, die Teil des Such- und Filterindex sind. Alle adressbezogenen Felder werden in einer Zeile zusammengefasst, wenn das Profil solche Felder enthält.
+- Der erste Abschnitt zeigt einen vordefinierten Satz von Feldern, gefolgt von allen Feldern, die Teil des Such- und Filterindex sind. Alle adressbezogenen Felder werden in einer Zeile zusammengefasst, wenn das Profil solche Felder enthält, selbst wenn das Profil keine Adressinformationen enthält.
 - **Kontakte für diesen Kunden**: In Umgebungen für Geschäftskonten werden im zweiten Abschnitt alle zugehörigen Kontakte für diesen Kunden angezeigt. Jeder Kontakt wird mit seinen Feldern angezeigt. Leere Felder werden ausgeblendet.
 - **Weitere Felder**: Zeigt die restlichen Felder des ausgewählten Kunden an, außer IDs.
 - **IDs**: Listet alle IDs unter ihrem entsprechenden Entitätsnamen auf. Felder werden durch ihre Semantik als IDs identifiziert, die sie als solche kategorisieren.

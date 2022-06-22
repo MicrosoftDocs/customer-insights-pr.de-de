@@ -1,88 +1,80 @@
 ---
 title: Verwenden Sie Datenquellen zur Datenerfassung
 description: Erfahren Sie, wie Daten aus unterschiedlichen Quellen importiert werden.
-ms.date: 03/18/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800465"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011748"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
+Dynamics 365 Customer Insights stellt eine Verbindung zu Daten aus einer breiten Palette von Quellen her. Das Herstellen einer Verbindung zu einem Datenquelle wird häufig als Prozess von *Datenerfassung* bezeichnet. Nachdem Sie die Daten aufgenommen haben, können Sie die Daten [vereinheitlichen](data-unification.md), Erkenntnisse generieren und die Daten für den Aufbau personalisierter Erlebnisse aktivieren.
 
+## <a name="add-data-sources"></a>Datenquellen hinzufügen
 
-Dynamics 365 Customer Insights stellt eine Verbindung zu Daten aus einer breiten Palette von Quellen her. Das Herstellen einer Verbindung zu einem Datenquelle wird häufig als Prozess von *Datenerfassung* bezeichnet. Nach der Erfassung der Daten können Sie [vereinheitlichen](data-unification.md) und Aktionen durchführen.
+Sie können Datenquellen in Customer Insights anhängen oder importieren. Die folgenden Links enthalten Anweisungen zum Hinzufügen von Datenquellen.
 
-## <a name="add-a-data-source"></a>Datenquelle hinzufügen
+**Eine Datenquelle einblenden**
 
-Wie Sie je nach gewählter Option eine Datenquelle hinzufügen können, erfahren Sie in den entsprechenden Artikeln.
+Wenn Sie Daten in einem der Azure-Datendienste von Microsoft vorbereitet haben, kann Customer Insights problemlos eine Verbindung zu Datenquelle herstellen, ohne die Daten erneut erfassen zu müssen. Wählen Sie eine der folgenden Optionen aus:
+- [Azure Data Lake Storage (CSV- oder Parquet-Dateien in einem Common Data Model-Ordner)](connect-common-data-model.md)
+- [Azure Synapse Analytics (Lake Datenbanken)](connect-synapse.md)
+- [Microsoft Dataverse Data Lake](connect-dataverse-managed-lake.md)
 
-Die folgenden Datenquellen können hinzugefügt werden:
+**Importieren und transformieren**
 
-- [Durch Dutzende von Power Query-Konnektoren](connect-power-query.md)
-- [Aus einem Common Data Model-Ordner](connect-common-data-model.md)
-- [Aus Ihrem eigenen Microsoft Dataverse-Lake](connect-dataverse-managed-lake.md)
-- [Aus einer Azure Synapse Analytics-Datenbank](connect-synapse.md)
+Wenn Sie lokale Datenquellen, Microsoft- oder Drittanbieterdaten verwenden, importieren und transformieren Sie die Daten mithilfe von Power Query Konnektoren.
+- [Power Query-Connectors](connect-power-query.md)
 
-## <a name="add-data-from-on-premises-data-sources"></a>Fügen Sie Daten aus lokalen Datenquellen hinzu
+## <a name="review-data-sources"></a>Datenquellen bewerten
 
-Das Einbinden von Daten aus lokalen Datenquellen wird auf der Grundlage von Microsoft Power Platform-Datenflows unterstützt. Beim Einrichten der Umgebung können Sie Dataflows in Customer Insights durch das [Bereitstellen der Microsoft Dataverse-Umgebungs-URL](create-environment.md) aktivieren.
-
-Datenquellen, die nach dem Verknüpfen einer Dataverse-Umgebung mit Customer Insights erstellt wurden, verwenden standardmäßig [Power Platform-Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Sie können Datenquellen, die vor der Verknüpfung einer Dataverse-Umgebung vorhanden waren, durch [Verwenden von lokalen Datengateways](/data-integration/gateway/service-gateway-app) entfernen und neu erstellen.
-
-Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
-
-> [!IMPORTANT]
-> Stellen Sie sicher, dass Ihre Gateways auf die neueste Version aktualisiert sind. Sie können ein Update installieren und ein Gateway über eine Eingabeaufforderung, die auf der Gateway-Anzeige angezeigt wird, direkt installieren oder neu konfigurieren oder [die neueste Version herunterladen](https://powerapps.microsoft.com/downloads/). Wenn Sie nicht die neueste Gateway-Version verwenden, schlägt die Datenflussaktualisierung mit Fehlermeldungen wie **Das Schlüsselwort wird nicht unterstützt: Konfigurationseigenschaften. Parametername: Schlüsselwort** fehl.
-
-## <a name="review-ingested-data"></a>Eingebundene Daten überprüfen
-Wenn Ihre Umgebung Power Platform Dataflows enthält, enthält die Seite **Datenquellen** drei Abschnitte: 
-- **Geteilt**: Datenquellen, die von allen Customer Insights-Administratoren verwaltet werden können. Power BI Dataflows, Ihr eigenes Speicherkonto und das Anhängen an a Dataverse-verwaltete Data Lake sind Beispiele für gemeinsam genutzte Datenquellen.
+Wenn Ihre Umgebung für die Verwendung von Customer Insights-Speicher konfiguriert wurde und Sie lokale Datenquellen verwenden, verwenden Sie Power Platform Dataflows. Mit Power Platform Dataflows können Sie freigegebene Datenquellen und von anderen verwaltete Datenquellen anzeigen. Die Seite **Datenquellen** listet die Datenquellen in drei Abschnitten auf:
+- **Geteilt**: Datenquellen, die von allen Customer Insights-Administratoren verwaltet werden können. Power Platform Dataflows, Ihr eigenes Speicherkonto und das Anhängen an einen Dataverse verwaltete Data Lake sind Beispiele für gemeinsam genutzte Datenquellen.
 - **Von mir verwaltet**: Power Platform Dataflows erstellt und können nur von Ihnen verwaltet werden. Andere Customer Insights-Administratoren können diese Datenflows nur anzeigen, aber nicht bearbeiten, aktualisieren oder löschen.
 - **Von anderen verwaltet**: Power Platform Dataflows, die von anderen Administratoren erstellt wurden. Sie können sie nur anzeigen. Fürt den Besitzer des Dataflows auf, an den Sie sich für Unterstützung wenden können.
 > [!NOTE]
-> Alle Entitäten können von anderen Benutzern angezeigt und verwendet werden. Die Benutzerkontextualität gilt nur für die Datenquellen und nicht für die Entitäten, die aus diesen Datenflüssen resultieren.
+> Alle Entitäten können von anderen Benutzern angezeigt und verwendet werden. Während Datenquellen dem Benutzer gehören, der sie erstellt hat, können die aus der Datenaufnahme resultierenden Entitäten von jedem Benutzer von Customer Insights verwendet werden.
 
-Wenn keine Power Platform Datenflows verwendet werden, sehen Sie keine Gruppen oder Abschnitte. Die Seite **Datenquellen** enthält nur eine Liste aller Datenquellen.
+Wenn Ihre Umgebung keine Power Platform Dataflows verwendet, enthält die Seite **Datenquellen** nur eine Liste aller Datenquellen. Keine Abschnitte angezeigt.
 
-Sie sehen den Namen jeder aufgenommenen Datenquelle, ihren Status und das letzte Mal, dass die Daten für diese Quelle aktualisiert wurden. Sie können die Liste der Datenquellen nach jeder Spalte sortieren.
+Gehen Sie zu **Daten** > **Datenquellen**, um den Namen für jede aufgenommene Datenquelle, den Status und das letzte Mal, dass die Daten für diese Datenquelle aktualisiert wurden, anzuzeigen. Sie können die Liste der Datenquellen nach jeder Spalte sortieren.
 
-> [!div class="mx-imgBorder"]
-> ![Datenquelle hinzugefügt](media/configure-data-datasource-added.png "Datenquelle hinzugefügt")
+:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Datenquelle hinzugefügt":::
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite **Entitäten** überprüft werden. Weitere Informationen finden Sie unter [Entitäten](entities.md).
 
-## <a name="refresh-a-data-source"></a>Aktualisieren einer Datenquelle
+## <a name="refresh-data-sources"></a>Datenquellen aktualisieren
 
-Datenquellen können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. 
+Datenquellen können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. [Lokale Datenquellen](connect-power-query.md#add-data-from-on-premises-data-sources) Aktualisierung nach ihren eigenen Zeitplänen, die während der Datenaufnahme eingerichtet werden. Für angehängte Datenquellen verbraucht die Datenaufnahme die neuesten Daten, die von diesem Datenquelle verfügbar sind.
 
-Gehen Sie zu **Admin** > **System** > [**Planen**](system.md#schedule-tab), um geplante Aktualisierungen aller Ihrer aufgenommenen Datenquellen zu konfigurieren.
+Gehen Sie zu **Administrator** > **System** > [**Zeitplan**](system.md#schedule-tab), um vom System geplante Aktualisierungen Ihrer aufgenommenen Datenquellen zu konfigurieren.
 
 Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Aktualisieren** aus dem Dropdown-Menü.
+1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Aktualisieren** aus dem Dropdown-Menü. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
 
-3. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
-
-4. Wählen Sie **Auffrischung stoppen**, wenn Sie eine bestehende Auffrischung abbrechen wollen und die Datenquelle in ihren letzten Auffrischungsstatus zurückkehren soll.
+1. Wählen Sie **Auffrischung stoppen**, wenn Sie eine bestehende Auffrischung abbrechen wollen und die Datenquelle in ihren letzten Auffrischungsstatus zurückkehren soll.
 
 ## <a name="delete-a-data-source"></a>Löschen einer Datenquelle
+
+Ein Datenquelle kann nur gelöscht werden, wenn die Daten in keiner Verarbeitung wie Vereinheitlichung, Einblicke, Aktivierungen oder Exporte verwendet werden.
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 

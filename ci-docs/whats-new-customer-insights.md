@@ -1,19 +1,19 @@
 ---
-title: Neue und kommende Funktionen
+title: Neue und aktualisierte Funktionen
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833629"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843346"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Neuerungen in Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Update Mai 2022
+
+Die Updates im Mai 2022 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="updated-data-unification-experience"></a>Aktualisierte Erfahrung mit der Datenvereinheitlichung
+
+ Mit der Datenvereinheitlichung können Sie ehemals unterschiedliche Datenquellen in einem einzigen Master-DataSet vereinen, das eine einheitliche Ansicht dieser Daten bietet. Daten können in einer einzelnen Entität oder mehreren Entitäten vereinheitlicht werden. Wählen Sie zuerst [Entitäten und Quellfelder aus](map-entities.md), [entfernen Sie doppelte Datensätze](remove-duplicates.md), legen Sie Regeln fest für [passenden Bedingungen](match-entities.md), und definieren Sie, welche [Felder in die einheitlichen Kundenprofile aufgenommen werden sollen](merge-entities.md).
+
+Weitere Informationen finden Sie unter [Datenvereinheitlichung-Übersicht](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Aktualisierte Homepage in Customer Insights
+
+Die **Homepage** zeigt Anleitungen für den Konfigurationsprozess für Schlüsselfunktionen und bietet einen Überblick über Segmente, Kennzahlen und Anreicherungsdaten. Wir haben die Erfahrung aktualisiert, um relevantere Informationen auf einen Blick bereitzustellen.
+
+Weitere Informationen finden Sie unter [Customer Insights erkunden](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Verfolgen Sie die Nutzung eines Segments
+
+Sie können nun [die Nutzung eines Segments in Apps nachverfolgen](segments.md#track-usage-of-a-segment), die auf derselben Dataverse Organisation basieren, die mit Customer Insights verbunden ist. Für [Customer Insights-Segmente, die in Kundenkontaktverläufe von Dynamics 365 Marketing verwendet werden](/dynamics365/marketing/real-time-marketing-ci-profile) informiert Sie das System über die Nutzung dieses Segments.
+
+### <a name="export-to-criteo"></a>Nach Criteo exportieren
+
+Criteo ist eine Online-Plattform, die Benutzern hilft, digitale Werbung zu verwalten. Exportieren Sie Segmente von Unified Customer Profiles, um Kampagnen zu erstellen, E-Mail-Marketing zu betreiben und bestimmte Kundengruppen mit Criteo zu nutzen.
+
+Weitere Informationen finden Sie unter [Segmente nach Criteo exportieren (Vorschauversion)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Verfeinerte Dokumentationsstruktur für die Umgebungserstellung
+
+Wir haben die Hilfedokumente zur Erstellung und Verwaltung von Umgebungen in Customer Insights erneut durchgesehen. Die Artikel sind jetzt im Inhaltsverzeichnis unter dem Knoten Umgebungen gruppiert. Die neu strukturierten Artikel bieten mehr Anleitungen für die verschiedenen Möglichkeiten zum Einrichten von Umgebungen und haben eine klarere Struktur. Wenn Sie uns Feedback geben möchten, teilen Sie uns dies über die Steuerelemente am Ende der Hilfeartikel mit.
+
+Weitere Informationen finden Sie unter [So geht es. Eine neue Umgebung erstellen](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Update April 2022
 

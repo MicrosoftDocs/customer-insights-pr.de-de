@@ -1,19 +1,19 @@
 ---
 title: Anreicherung mit dem benutzerdefinierten SFTP-Import
 description: Allgemeine Informationen über das SFTP Custom Import Enrichment.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646000"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953718"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Anreichern von Kundenprofilen mit benutzerdefinierten Daten (Vorschau)
 
@@ -21,54 +21,13 @@ Der benutzerdefinierte Import über das Secure File Transfer Protocol(SFTP) erm�
 
 ## <a name="prerequisites"></a>Anforderungen
 
-Um den benutzerdefinierten SFTP-Import zu konfigurieren, müssen die folgenden Voraussetzungen erfüllt sein:
+- Dateiname und Speicherort (Pfad) der zu importierenden Datei auf dem SFTP-Host ist bekannt.
 
-- Sie haben den Dateinamen und den Speicherort (Pfad) der zu importierenden Datei auf dem SFTP-Host.
-- Da ist eine *model.json*-Datei, die [das Common Data Model-Schema](/common-data-model/) für die zu importierenden Daten angibt. Diese Datei muss sich im selben Verzeichnis befinden wie die zu importierende Datei.
-- Eine SFTP-Verbindung wurde bereits von einem Administrator konfiguriert *oder* Sie haben [Administrator](permissions.md#admin)-Berechtigungen. Sie benötigen die Benutzeranmeldeinformationen, die URL und die Portnummer für den SFTP-Speicherort, von dem Sie Daten importieren möchten.
+- Eine *model.json* Datei, die das Common Data Model-Schema für die zu importierenden Daten angibt, ist verfügbar. Diese Datei muss sich im selben Verzeichnis befinden wie die zu importierende Datei.
 
+- Eine SFTP [Verbindung](connections.md) ist [konfiguriert](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="configure-the-import"></a>Konfiguration des Datenimports
-
-1. Wechseln Sie zu **Daten** > **Anreicherung** und wählen Sie die Registerkarte **Entdecken** aus.
-
-1. Wählen Sie **Meine Daten anreichern** auf der **Benutzerdefinierter SFTP-Import**-Kachel und wählen Sie **Los geht's**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Benutzerdefinierter SFTP-Import-Kachel":::
-
-1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie eine Verbindung herstellen, indem Sie **Verbindung hinzufügen** und dann **SFTP benutzerdefinierter Import** aus der Dropdown-Liste auswählen.
-
-1. Wählen Sie **Verbindung mit dem benutzerdefinierten Import herstellen** aus, um die ausgewählte Verbindung zu bestätigen.
-
-1.  Wählen Sie **Weiter** und geben Sie einen **Pfad** und einen **Dateinamen** für die Datendatei an, die Sie importieren möchten.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot bei der Eingabe des Datenorts.":::
-
-1. **Weiter** auswählen und dann Kunden-Dataset wählen. Dies können entweder alle Kundenprofile oder ein Segment sein.
-
-1. Wählen Sie **Weiter** und geben Sie einen Namen für die Anreicherung und einen Namen für die Ausgabeentität an. 
-
-1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurieren Sie die Verbindung für den benutzerdefinierten SFTP-Import 
-
-Sie müssen ein Administrator sein, um Verbindungen zu konfigurieren. Wählen Sie **Verbindung hinzufügen** beim Konfigurieren einer Anreicherung *oder* gehen Sie zu **Administrator** > **Verbindungen** und wählen Sie **Einrichten** auf der Kachel „Benutzerdefinierter Import“.
-
-1. Geben Sie einen Namen für die Verbindung in das Feld **Anzeigename** ein.
-
-1. Geben Sie einen gültigen Benutzernamen, ein Kennwort und eine Host-URL für den SFTP-Server ein, auf dem sich die zu importierenden Daten befinden.
-
-1. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren.
-
-1. Wählen Sie **Überprüfen**, um die Konfiguration zu validieren.
-
-1. Nach Abschluss der Verifizierung kann die Verbindung durch Auswahl von **speichern** gespeichert werden.
-
-   > [!div class="mx-imgBorder"]
-   > ![Experian-Verbindungskonfigurationsseite.](media/enrichment-SFTP-connection.png "Experian Verbindungskonfigurationsseite")
-
-
-## <a name="defining-field-mappings"></a>Definieren von Feldzuordnungen 
+## <a name="file-schema-example"></a>Schemadatei-Beispiel
 
 Das Verzeichnis, das die zu importierende Datei auf dem SFTP-Server enthält, muss auch eine *model.json*-Datei enthalten. Diese Datei definiert das Schema, das zum Importieren der Daten verwendet werden soll. Das Schema muss verwendet werden, um [Common Data Model](/common-data-model/) zu verwenden, um die Feldzuordnung anzugeben. Ein einfaches Beispiel für eine model.json-Datei sieht wie folgt aus:
 
@@ -82,12 +41,12 @@ Das Verzeichnis, das die zu importierende Datei auf dem SFTP-Server enthält, mu
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,13 +73,56 @@ Das Verzeichnis, das die zu importierende Datei auf dem SFTP-Server enthält, mu
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurieren Sie die Verbindung für den benutzerdefinierten SFTP-Import
+
+Sie müssen [Administrator](permissions.md#admin) in Customer Insights sein und über die Benutzeranmeldeinformationen, die URL und die Portnummer für den SFTP-Speicherort verfügen, von dem Sie Daten importieren möchten.
+
+1. Wählen Sie **Verbindung hinzufügen** beim Konfigurieren einer Anreicherung oder gehen Sie zu **Administrator** > **Verbindungen** und wählen Sie **Einrichten** auf der Kachel Benutzerdefinierter Import.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Benutzerdefinierte Import-Verbindungskonfigurationsseite.":::
+
+1. Geben Sie einen Namen für die Verbindung ein.
+
+1. Geben Sie einen gültigen Benutzernamen, ein Kennwort und eine Host-URL für den SFTP-Server ein, auf dem sich die zu importierenden Daten befinden.
+
+1. Überprüfen Sie und geben Sie Ihre Zustimmung für [Datenschutz und Einhaltung](#data-privacy-and-compliance) durch die Auswahl von **Ich stimme zu**.
+
+1. Wählen Sie **Verifizieren**, um die Konfiguration zu bestätigen, und wählen Sie dann **Speichern**.
+
+### <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
+
+Wenn Sie Dynamics 365 Customer Insights für die Übermittlung von Daten einen benutzerdefiniertem Import verwenden, lassen Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights zu, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird solche Daten auf Ihre Anweisung übertragen, aber Sie sind dafür verantwortlich, sicherzustellen, dass die Daten alle Datenschutz- oder Sicherheitsverpflichtungen erfüllen, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
+Ihr Dynamics 365 Customer Insights Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
+
+## <a name="configure-the-import"></a>Konfiguration des Datenimports
+
+1. Wechseln Sie zu **Daten** > **Anreicherung** und wählen Sie die Registerkarte **Entdecken** aus.
+
+1. Wählen Sie **Meine Daten anreichern** auf der Kachel **SFTP benutzerdefinierter Import** aus.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Benutzerdefinierter SFTP-Import-Kachel":::
+
+1. Prüfen Sie die Übersicht und wählen Sie dann **Weiter** aus.
+
+1. Wählen Sie die Verbindung aus. Wenden Sie sich an einen Administrator, falls keiner verfügbar ist.
+
+1. Wählen Sie das **Kunden Dataset** und wählen Sie das Profil oder Segment aus, das Sie anreichern möchten. Die Entität *Kunde* reichert alle Ihre Kundenprofile an, währen ein Segment nur Kundenprofile anreichert, die in diesem Segment enthalten sind.
+
+1. Wählen Sie **Weiter** aus.
+
+1. Geben Sie den **Pfad** und den **Dateiname** der Datendatei ein, die Sie importieren möchten.
+
+1. Wählen Sie **Weiter** aus.
+
+1. Geben Sie einen **Namen** für die Anreicherung und einen Namen für die **Ausgabeentität** an.
+
+1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
+
+1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
+
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
-Wählen Sie **Ausführen** aus der Befehlsleiste aus, um den Anreicherungsprozess zu starten. Sie können das System die Anreicherung auch automatisch als Teil von einer [geplante Aktualisierung](system.md#schedule-tab) ausführen lassen. Die Verarbeitungszeit hängt von der Größe der zu importierenden Daten und der Verbindung zum SFTP-Server ab.
-
-Nachdem der Anreicherungsprozess abgeschlossen ist, können Sie Ihre neu importierten benutzerdefinierten Anreicherungsdaten unter **Meine Anreicherungen** überprüfen. Außerdem finden Sie den Zeitpunkt des letzten Updates und die Anzahl der angereicherten Profile.
-
-Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherungen ansehen**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Nächste Schritte,
 

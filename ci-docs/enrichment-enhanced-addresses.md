@@ -1,7 +1,7 @@
 ---
 title: Anreicherung für erweiterte Adressen (enthält Video)
 description: Bereichern und normalisieren Sie Adressinformationen von Kundenprofilen mit Microsoft-Modellen.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645990"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953810"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Anreicherung von Kundenprofilen mit erweiterten Adressen
 
@@ -53,17 +53,17 @@ Adressinformationen können in einem nicht standardmäßigen Format vorliegen un
 
 ### <a name="limitations"></a>Einschränkungen
 
-Erweiterte Adressen funktionieren nur mit den Werten, die bereits in Ihren aufgenommenen Adressdaten vorhanden sind. Das Modell führt folgende Aktionen nicht aus: 
+Erweiterte Adressen funktionieren nur mit den Werten, die bereits in Ihren aufgenommenen Adressdaten vorhanden sind. Das Modell führt folgende Aktionen nicht aus:
 
 1. Überprüfen, ob die Adresse eine gültige Adresse ist
 2. Überprüfen, ob Werte wie Postleitzahlen oder Straßennamen gültig sind
 3. Werte ändern, die nicht erkennt wurden
 
-Das Modell verwendet auf maschinellem Lernen basierende Techniken, um Adressen zu verbessern. Wir wenden zwar einen hohen Konfidenzschwellenwert an, wenn das Modell einen Eingabewert ändert, wie bei jedem auf maschinellem Lernen basierenden Modell, aber eine 100-prozentige Genauigkeit kann nicht garantiert werden.
+Das Modell verwendet auf maschinellem Lernen basierende Techniken, um Adressen zu verbessern. Wie bei jedem auf maschinellem Lernen basierenden Modell kann eine 100-prozentige Genauigkeit nicht garantiert werden.
 
 ## <a name="supported-countries-or-regions"></a>Unterstützte Länder oder Regionen
 
-Wir unterstützen derzeit die Anreicherung von Adressen in diesen Ländern oder Regionen: 
+Wir unterstützen derzeit die Anreicherung von Adressen in diesen Ländern oder Regionen:
 
 - Australien
 - Kanada
@@ -72,52 +72,48 @@ Wir unterstützen derzeit die Anreicherung von Adressen in diesen Ländern oder 
 - Italien
 - Japan
 - Großbritannien
-- Vereinigte Staaten
-
-Adressen müssen einen Wert für ein Land / eine Region enthalten. Wir verarbeiten keine Adressen für Länder oder Regionen, die nicht unterstützt werden, und Adressen, für die kein Land oder keine Region angegeben ist.
+- USA
 
 ## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 
-1. Gehen Sie zu **Daten** > **Anreicherung**.
+1. Wechseln Sie zu **Daten** > **Anreicherung** und wählen Sie die Registerkarte **Entdecken** aus.
 
 1. Wählen Sie **Meine Daten anreichern** auf der Kachel **Erweiterte Adressen** aus.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Screenshot der Kachel Erweiterte Adressen.":::
 
-1. Wählen Sie **Kunden-Dataset** und wählen Sie die Entität mit den Adressen aus, die Sie anreichern möchten. Sie können die Entität *Kunde* auswählen, um Adressen in all Ihren Kundenprofilen anzureichern, oder wählen Sie eine Segmententität aus, um Adressen nur in Kundenprofilen anzureichern, die in diesem Segment enthalten sind.
+1. Prüfen Sie die Übersicht und wählen Sie dann **Weiter** aus.
+
+1. Wählen Sie das **Kunden Dataset** und wählen Sie das Profil oder Segment aus, das Sie anreichern möchten. Die Entität *Kunde* reichert alle Ihre Kundenprofile an, währen ein Segment nur Kundenprofile anreichert, die in diesem Segment enthalten sind.
 
 1. Wählen Sie aus, wie Adressen in Ihrem Datenset formatiert werden. Wählen Sie **Einzelattributadresse** aus, wenn Adressen in Ihren Daten ein einzelnes Feld verwenden. Wählen Sie **Mehrattributadresse** aus, wenn Adressen in Ihren Daten mehr als ein einzelnes Feld verwenden.
+
+1. Wählen Sie **Weiter** und ordnen Sie die Adressfelder Ihrer einheitlichen Kundenentität zu.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Erweiterte Adressfeld-Zuordnungsseite.":::
 
    > [!NOTE]
    > Das Land / die Region ist sowohl in Einzelattribut- als auch in Mehrfachattributadressen obligatorisch. Adressen, die keine gültigen oder unterstützten Länder-/Regionswerte enthalten, werden nicht angereichert.
 
-1.  Ordnen Sie die Adressfelder Ihrer einheitlichen Kundenentität zu.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Erweiterte Adressfeld-Zuordnungsseite.":::
-
 1. Wählen Sie **Weiter** aus, um die Feldzuordnung abzuschließen.
 
-1. Geben Sie einen Namen für die Anreicherung und einen Namen für die Ausgabeentität an.
+1. Geben Sie einen **Namen** für die Anreicherung und einen Namen für die **Ausgabeentität** an.
 
 1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
-Wählen Sie **Ausführen** aus der Befehlsleiste aus, um den Anreicherungsprozess zu starten. Sie können das System die Anreicherung auch automatisch als Teil von einer [geplante Aktualisierung](system.md#schedule-tab) ausführen lassen. Die Bearbeitungszeit hängt von der Größe Ihrer Kundendaten ab.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Nach Abschluss des Anreicherungsprozesses können Sie die neu angereicherten Kundenprofildaten unter **Meine Anreicherungen** überprüfen. Außerdem finden Sie den Zeitpunkt des letzten Updates und die Anzahl der angereicherten Profile.
-
-Sie können ein Beispiel der angereicherten Daten in der Kachel **Vorschau der angereicherten Kunden** sehen. Wählen Sie **Mehr anzeigen** und die **Daten**-Registerkarte aus, um auf eine detaillierte Ansicht jedes angereicherten Profils zuzugreifen.
+Die **Anzahl der Kunden, angereichert nach Feld** stellt Detailinformationen zur Abdeckung jedes angereicherten Felds dar.
 
 ### <a name="overview-card"></a>Übersichtskarte
 
-Die Übersichtskarte zeigt Details zur Deckung der Anreicherung. 
+Die Karte **Kundenänderungen-Übersicht** zeigt Details zur Deckung der Anreicherung:
 
-* **Adressen verarbeitet und geändert**: Die Anzahl der Kundenprofile mit Adressen, die erfolgreich angereichert wurden.
-
-* **Adressen verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile mit Adressen, die erfolgreich erkannt aber nicht geändert wurden. Dies geschieht typischerweise, wenn die Eingabedaten gültig sind und durch die Anreicherung nicht verbessert werden können.
-
-* **Adressen nicht verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile mit Adressen, die nicht erkannt wurden. Normalerweise für Eingabedaten, die ungültig sind oder von der Anreicherung nicht unterstützt werden.
+- **Adressen verarbeitet und geändert**: Die Anzahl der Kundenprofile mit Adressen, die erfolgreich angereichert wurden.
+- **Adressen verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile mit Adressen, die erfolgreich erkannt aber nicht geändert wurden. Dies geschieht typischerweise, wenn die Eingabedaten gültig sind und durch die Anreicherung nicht verbessert werden können.
+- **Adressen nicht verarbeitet und nicht geändert**: Die Anzahl der Kundenprofile mit Adressen, die nicht erkannt wurden. Normalerweise für Eingabedaten, die ungültig sind oder von der Anreicherung nicht unterstützt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte,
 

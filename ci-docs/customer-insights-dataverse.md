@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833675"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011519"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Arbeiten mit Customer Insights-Daten in Microsoft Dataverse
 
 Customer Insights bietet die Option, Ausgabeentitäten als [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) verfügbar zu machen. Diese Integration ermöglicht durch einen Low-Code-/No-Code-Ansatz die einfache Datenfreigabe und eine benutzerdefinierte Entwicklung. Die [Ausgabeeinheiten](#output-entities) sind als Tabellen in einer Dataverse Umgebung verfügbar. Sie können die Daten für jede andere Anwendung auf der Grundlage von Dataverse Tabellen verwenden. Diese Tabellen ermöglichen Szenarien wie automatisierte Workflows durch Power Automate oder Apps erstellen mit Power Apps.
 
-Durch Verbindung zu Ihrer Dataverse-Umgebung können Sie auch [Daten aus lokalen Datenquellen mit Power Platform-Dataflows und Gateways erfassen](data-sources.md#add-data-from-on-premises-data-sources).
+Durch Verbindung zu Ihrer Dataverse-Umgebung können Sie auch [Daten aus lokalen Datenquellen mit Power Platform-Dataflows und Gateways erfassen](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -57,7 +57,7 @@ Das Aktivieren der Datenfreigabe mit Microsoft Dataverse, wenn Ihre Umgebung [Ih
 Es gibt zwei Einschränkungen bei der Verwendung von Dataverse mit dem eigenen Azure Data Lake Storage-Konto:
 
 - Es gibt eine Eins-zu-Eins-Zuordnung zwischen einer Dataverse Organisation und einem Azure Data Lake Storage Konto. Wenn eine Dataverse Organisation mit einem Speicherkonto verbunden ist, kann sie keine Verbindung mit einem anderen Speicherkonto herstellen. Diese Einschränkung verhindert, dass Dataverse nicht mehrere Speicherkonten füllt.
-- Die Datenfreigabe funktioniert nicht, wenn eine Azure Private Link-Einrichtung erforderlich ist, um auf Ihr Azure Data Lake Storage-Konto zuzugreifen, da es sich hinter einer Firewall befindet. Dataverse unterstützt derzeit keine Verbindung zu privaten Endpunkten über Private Link.
+- Die Datenfreigabe funktioniert nicht, wenn eine Azure Private Link-Einrichtung erforderlich ist, um auf Ihr Azure Data Lake Storage Konto zuzugreifen, da es sich hinter einer Firewall befindet. Dataverse unterstützt derzeit keine Verbindung zu privaten Endpunkten über Private Link.
 
 ### <a name="set-up-powershell"></a>PowerShell einrichten
 

@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800280"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011472"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Anreicherung für Datenquellen (Vorschau)
 
@@ -29,9 +29,11 @@ Sie müssen über Teilnehmer- oder Administrator-Berechtigungen verfügen, um An
 
 1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben dem Datenquelle aus, die Sie anreichern möchten und wählen Sie **Anreichern**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Datenquellanreicherungsseite.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Datenquellenseite mit hervorgehobener Anreicherung":::
 
    Die Registerkarte **Entdecken** zeigt die [unterstützten Datenquellen Anreicherungsoptionen](#supported-data-source-enrichments) an.
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Datenquellanreicherungsseite.":::
 
 1. Wählen Sie **Bereichern Sie meine Daten**, um eine Datenquelle-Anreicherung zu konfigurieren. Der Ausgabeentitätsname wird automatisch aufgefüllt.
 

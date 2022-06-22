@@ -1,5 +1,5 @@
 ---
-title: Kundenprofile mit Daten von Microsoft anreichern
+title: Reichern Sie Kundenprofile mit Marken- und Interessendaten von Microsoft an
 description: Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Affinitäten und Share of Voice anzureichern.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646141"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953764"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Anreichern von Kundenprofilen mit Affinitäten und Share of Voice (Vorschau)
 
 Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Markenaffinitäten, Interessenaffinitäten und Share of Voice (SoV) anzureichern. Diese Affinitäten und SoV basieren auf Daten von Personen in ähnlichen Bevölkerungsgruppen wie Ihre Kunden. Diese Informationen helfen Ihnen, Ihre Kunden basierend auf ihren Affinitäten oder SoV zu bestimmten Marken und Interessen besser zu verstehen und zu segmentieren.
-
-Gehen Sie zu **Daten** > **Anreicherung**, um [Anreicherungen zu konfigurieren und anzuzeigen](enrichment-hub.md).
-
-Um Markenaffinitäten und SoV-Anreicherung zu konfigurieren, gehen Sie zur **Erkunden**-Registerkarte und wählen **Meine Daten anreichern** auf der **Marken**-Kachel.
-
-Um Interessenaffinitäten und SoV-Anreicherung zu konfigurieren, gehen Sie zur **Erkunden**-Registerkarte und wählen **Meine Daten anreichern** auf der **Interessen**-Kachel.
-
-   > [!div class="mx-imgBorder"]
-   > ![Marken- und Interessenkacheln.](media/BrandsInterest-tile-Hub.png "Marken und Interessenkacheln")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Wie wir Affinitäten und SoV bestimmen
 
@@ -45,7 +36,6 @@ Wir verwenden die Online-Suchdaten von Microsoft, um Affinitäten und SoV für M
 Für jedes erweiterte Kundenprofil geben wir zwei verwandte Werte an: Affinitätsstufe und Affinitätsbewertung. Mithilfe dieser Werte können Sie bestimmen, wie stark die Affinität für das demografische Segment dieses Profils, für eine Marke oder ein Interesse im Vergleich zu anderen demografischen Segmenten ist.
 
 *Affinitätsstufe* besteht aus vier Ebenen und *Affinitätsbewertung* wird auf einer 100-Punkte-Skala berechnet, die den Affinitätsstufen zugeordnet ist.
-
 
 |Affinitätsstufe |Affinitätsbewertung  |
 |---------|---------|
@@ -64,78 +54,65 @@ Wir berechnen SoV auf einer 100-Punkte-Skala. Der Gesamt-SoV über alle Marken o
 
 Wir unterstützen derzeit die folgenden Länder-/Regionenoptionen: Australien, Kanada (Englisch), Frankreich, Deutschland, Großbritannien oder USA (Englisch).
 
-Um ein Land oder eine Region auszuwählen, öffnen Sie **Markenanreicherung** oder **Interessenanreicherung** und wählen Sie **Veränderung** neben **Land/Region** aus. In dem Bereich **Länder-/Regionseinstellungen** wählen Sie eine Option und wählen Sie **Anwenden**.
+## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 
-### <a name="implications-related-to-country-selection"></a>Auswirkungen auf die Länderauswahl
+1. Wechseln Sie zu **Daten** > **Anreicherung** und wählen Sie die Registerkarte **Entdecken** aus.
 
-- Wenn Sie [Ihre eigenen Marken auswählen](#define-your-brands-or-interests), liefert das System Vorschläge basierend auf dem ausgewählten Land oder der ausgewählten Region.
+   - Um Markenaffinitäten und SoV-Anreicherung zu konfigurieren, gehen Sie zur Kachel **Meine Daten anreichern** auf der **Marken**-Kachel.
 
-- Wenn Sie [eine Branche auswählen](#define-your-brands-or-interests), erhalten Sie die relevantesten Marken oder Interessen basierend auf dem ausgewählten Land oder der ausgewählten Region.
+   - Um Interessenaffinitäten und SoV-Anreicherung zu konfigurieren, gehen Sie zur Kachel **Meine Daten anreichern** auf der **Interessen**-Kachel.
 
-- Wenn Sie [Profile anreichern](#refresh-enrichment), reichern wir alle Kundenprofile an, für die wir Daten für die ausgewählten Marken und Interessen erhalten, einschließlich Profile, die sich nicht in dem ausgewählten Land oder der ausgewählten Region befinden. Wenn Sie beispielsweise Deutschland ausgewählt haben, bereichern wir Profile in den USA, wenn Daten für die ausgewählten Marken und Interessen in den USA verfügbar sind.
+   > [!div class="mx-imgBorder"]
+   > ![Marken- und Interessenkacheln.](media/BrandsInterest-tile-Hub.png "Marken und Interessenkacheln")
 
-## <a name="configure-enrichment"></a>Anreicherung konfigurieren
+1. Prüfen Sie die Übersicht und wählen Sie dann **Weiter** aus.
 
-Eine geführte Erfahrung hilft Ihnen bei der Konfiguration der Anreicherungen. 
+1. Um Ihr Land oder Ihre Region zu ändern, wählen Sie **Ändern** neben **Land/Region** aus. In dem **Länder-/Regionseinstellungen** Bereich, wählen Sie ein [unterstütztes Land/eine Region](#supported-countriesregions) und wählen Sie **Anwenden**.
 
-### <a name="define-your-brands-or-interests"></a>Definieren Sie Ihre Marken oder Interessen
+   > [!NOTE]
+   > Wenn Sie Ihre eigenen Marken auswählen, liefert das System Vorschläge basierend auf dem ausgewählten Land oder der ausgewählten Region. Wenn Sie eine Branche auswählen, erhalten Sie die relevantesten Marken oder Interessen basierend auf dem ausgewählten Land oder der ausgewählten Region.
 
-Wählen Sie bis zu fünf Marken oder Interessen mit einer oder beiden dieser Optionen aus:
+1. Wählen Sie bis zu fünf Marken oder Interessen mit einer oder beiden dieser Optionen aus:
 
-- **Branche**: Wählen Sie Ihre Branche aus der Dropdown-Liste aus und wählen Sie dann aus den Top-Marken oder -Interessen für diese Branche aus.
-- **Eigene auswählen**: Geben Sie eine Marke oder ein Interesse ein, die bzw. das für Ihr Unternehmen relevant ist, und wählen Sie dann aus den passenden Vorschlägen aus. Wenn wir keine Marke oder kein Interesse auflisten, nach dem Sie suchen, senden Sie uns Feedback über den Link **Vorschlagen**.
+   - **Branche**: Wählen Sie Ihre Branche aus der Dropdown-Liste aus und wählen Sie dann aus den Top-Marken oder -Interessen für diese Branche aus.
+   - **Eigene auswählen**: Geben Sie eine Marke oder ein Interesse ein, die bzw. das für Ihr Unternehmen relevant ist, und wählen Sie dann aus den passenden Vorschlägen aus. Wenn wir keine Marke oder kein Interesse auflisten, nach dem Sie suchen, senden Sie uns Feedback über den Link **Vorschlagen**.
 
-### <a name="review-enrichment-preferences"></a>Anreicherungseinstellungen überprüfen
+1. Wählen Sie **Weiter** und überprüfen Sie Ihre standardmäßigen Anreicherungseinstellungen und aktualisieren Sie sie nach Bedarf.
 
-Überprüfen Sie Ihre Standardeinstellungen für die Anreicherung und aktualisieren Sie sie nach Bedarf.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Screenshot des Fensters „Anreicherungseinstellungen“.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Screenshot des Fensters „Anreicherungseinstellungen“.":::
+1. Wählen Sie **Weiter** aus.
 
-### <a name="select-entity-to-enrich"></a>Anzureichernde Entität auswählen
+1. Wählen Sie **Kunden Dataset** und wählen Sie das Profil oder Segment aus, das Sie mit Daten von Microsoft anreichern möchten. Die Entität *Kunde* reichert alle Ihre Kundenprofile an, währen ein Segment nur Kundenprofile anreichert, die in diesem Segment enthalten sind.
 
-Wählen Sie **Entität anreichern** und dann das Dataset aus, das Sie mit Daten von Microsoft anreichern möchten. Sie können die Kundenentität auswählen, um alle Ihre Kundenprofile anzureichern, oder eine Segmententität auswählen, um nur Kundenprofile anzureichern, die in diesem Segment enthalten sind.
+1. Wählen Sie **Weiter** aus.
 
-### <a name="map-your-fields"></a>Ihre Felder zuordnen
+1. Ordnen Sie Ihre Felder aus Ihrer einheitlichen Kundenentität den Microsoft-Daten zu.
 
-Ordnen Sie Felder Ihrer einheitlichen Kundenentität zu, um das demografische Segment zu definieren, das das System zur Anreicherung Ihrer Kundendaten verwenden soll. Ordnen Sie Land / Region und mindestens Geburtsdatum oder Geschlechtsattribute zu. Sie müssen außerdem mindestens einen Ort (und ein Bundesland/Kanton) bzw. eine Postleitzahl zuordnen. Wählen Sie **Bearbeiten**, um die Zuordnung der Felder zu definieren und wählen Sie dann **Anwenden**, wenn Sie fertig sind. Wählen Sie **Speichern** aus, um die Feldzuordnung abzuschließen.
+   > [!NOTE]
+   > Es sind mindestens die Attribute Geburtsdatum oder Geschlecht erforderlich. Land/Region und mindestens Stadt (und Staat/Provinz) oder Postleitzahl sind erforderlich. Wir empfehlen, dass das Geburtsdatum während der Datenerfassung in den DateTime-Typ konvertiert wird. Alternativ kann es eine Zeichenfolge im [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) Format yyyy-MM-dd oder yyyy-MM-ddTHH:mm:ss sein.
 
-Die folgenden Formate und Werte werden unterstützt (Bei Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden):
+1. Wählen Sie **Weiter** aus, um die Feldzuordnung abzuschließen.
 
-- **Geburtsdatum**: Wir empfehlen, das Geburtsdatum während der Datenaufnahme in den DateTime-Typ zu konvertieren. Alternativ kann es eine Zeichenfolge im [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) Format yyyy-MM-dd oder yyyy-MM-ddTHH:mm:ss sein.
-- **Geschlecht**: Männlich, weiblich, unbekannt.
-- **Postleitzahl**: Fünfstellige Postleitzahl für die USA, Standardpostleitzahl überall sonst.
-- **Stadt**: Name der Stadt in Englisch.
-- **Bundesland/Kanton** : Zwei-Buchstaben-Abkürzung für die USA und Kanada. Zwei oder drei Buchstaben Abkürzung für Australien. Gilt nicht für Frankreich, Deutschland oder Großbritannien.
-- **Land / Region**:
+1. Benennen Sie die Anreicherung. Der **Ausgabeentitätsname** wird automatisch ausgewählt.
 
-  - USA: Vereinigte Staaten von Amerika, USA, USA, USA, Amerika
-  - CA: Kanada, CA
-  - GB: Vereinigtes Königreich, Großbritannien, Großbritannien, GB, Vereinigtes Königreich Großbritannien und Nordirland, Vereinigtes Königreich Großbritannien
-  - AU: Australien, AU, Commonwealth of Australia
-  - FR: – Frankreich, FR, Republik Frankreich
-  - DE: Deutschland, Deutsch, Deutschland, Allemagne, DE, Bundesrepublik Deutschland, Republik Deutschland
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Seite zur Überprüfung und Benennung von Interessen.":::
 
-## <a name="review-and-name-the-enrichment"></a>Überprüfen und benennen Sie die Anreicherung
+1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
 
-Schließlich können Sie die Informationen überprüfen und einen Namen für die Anreicherung angeben.
+1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Seite zur Überprüfung und Benennung von Interessen.":::
-
-## <a name="refresh-enrichment"></a>Anreicherung aktualisieren
-
-Führen Sie die Anreicherung aus, nachdem Sie Marken, Interessen und die Feldzuordnung für die Demografie konfiguriert haben. Um den Prozess zu starten, wählen Sie **Ausführen** auf der Seite der Marken- oder Interessenkonfiguration. Darüber hinaus können Sie das System die Anreicherung im Rahmen einer geplanten Aktualisierung automatisch ausführen lassen.
-
-Abhängig von der Menge Ihrer Kundendaten kann es einige Minuten dauern, bis ein Anreicherungslauf abgeschlossen ist.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Wenn Sie Profile anreichern, reichern wir alle Kundenprofile an, für die wir Daten für die ausgewählten Marken und Interessen erhalten, einschließlich Profile, die sich nicht in dem ausgewählten Land oder der ausgewählten Region befinden. Wenn Sie beispielsweise Deutschland ausgewählt haben, bereichern wir Profile in den USA, wenn Daten für die ausgewählten Marken und Interessen in den USA verfügbar sind.
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
-Nachdem Sie den Anreicherungsprozess ausgeführt haben, gehen Sie zu **Meine Anreicherungen**, um die Gesamtzahl der angereicherten Kunden und eine Aufschlüsselung der Marken oder Interessen in den angereicherten Kundenprofilen zu überprüfen.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Vorschau der Ergebnisse nach Ausführung des Anreicherungsprozesses.":::
 
-Sie finden ein Diagramm mit der Anzahl der angereicherten Kundenprofile im Zeitverlauf und Vorschauen der angereicherten Entitäten. Überprüfen Sie die angereicherten Daten, indem Sie **Mehr anzeigen** in den Diagrammen **Affinitätsebene** oder **Share of Voice** auswählen. Angereicherte Daten für Marken gehen an die **BrandAffinityFromMicrosoft**- und **BrandShareOfVoiceFromMicrosoft**-Entitäten. Daten für Interessen befinden sich in denn Entitäten **InterestAffinityFromMicrosoft** und **InterestShareOfVoiceFromMicrosoft**. Sie finden diese Entitäten auch in der Gruppe **Anreicherung** unter **Daten** > **Entitäten**.
+Zu den Ergebnissen gehören **Affinitätsebene** oder **Voice teilen** Diagramme.
+
+Die aus den Anreicherungen entstandenen Entitäten sind in der Gruppe **Anreicherung** unter **Daten** > **Entitäten** aufgeführt. Angereicherte Daten für Marken gehen an die **BrandAffinityFromMicrosoft**- und **BrandShareOfVoiceFromMicrosoft**-Entitäten. Daten für Interessen befinden sich in denn Entitäten **InterestAffinityFromMicrosoft** und **InterestShareOfVoiceFromMicrosoft**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Siehe Anreicherungsdaten auf der Kundenkarte
 

@@ -1,19 +1,19 @@
 ---
 title: Anträge zu den Rechten des Datensubjekts (DSR) gemäß der DSGVO | Microsoft Docs
 description: Beantworten von Datensubjekt-Anforderungen für Dynamics 365 Customer Insights
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808560"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947367"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Daten-abhängige Rechteanforderungen unter DSGVO
 
@@ -77,11 +77,5 @@ Ein Mandanten-Administrator kann diese Schritte befolgen, um Daten zu exportiere
 1. Senden Sie eine E-Mail an D365CI@microsoft.com, wobei Sie die E-Mail-Adresse des Benutzers in der Anfrage angeben. Das Customer Insights-Team sendet eine E-Mail an die registrierte Admin-E-Mail-Adresse des Mandanten und bittet um eine Bestätigung für den Datenexport.
 2. Bestätigen Sie die Meldung, um die Daten für den angeforderten Benutzer zu exportieren.
 3. Erhalten Sie die exportierten Daten über die E-Mail-Adresse des Mandantenverwalters.
-
-## <a name="consent-management-preview"></a>Zustimmungsverwaltung (Vorschauversion)
-
-Die Zustimmungsverwaltungsfunktion erfasst Benutzerdaten nicht direkt. Sie importiert und verarbeitet nur Zustimmungsdaten, die von Benutzern in anderen Anwendungen bereitgestellt werden.
-
-Um Zustimmungsdaten zu bestimmten Benutzern zu entfernen, entfernen Sie sie aus den Datenquellen, die in die Zustimmungsverwaltungsfunktion aufgenommen wurden. Nach der Aktualisierung der Datenquelle werden die entfernten Daten auch im Zustimmungscenter gelöscht. Anwendungen, die die Einwilligungsentität verwenden, löschen auch Daten, die aus der Quelle nach einer [Aktualisierung](system.md#refresh-processes) entfernt wurden. Wir empfehlen, Datenquellen schnell zu aktualisieren, nachdem Sie auf eine Anfrage einer betroffenen Person, Daten des Benutzers aus allen anderen Prozessen und Anwendungen zu entfernen, reagiert haben.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

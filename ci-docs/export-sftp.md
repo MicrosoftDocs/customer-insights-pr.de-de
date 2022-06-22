@@ -1,19 +1,19 @@
 ---
 title: Customer Insights-Daten nach SFTP-Hosts exportieren (enthält Video)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu einem SFTP-Speicherort exportieren.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646111"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947183"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportieren von Segmenten und anderen Daten nach SFTP (Vorschau)
 
@@ -28,8 +28,8 @@ Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
 - SFTP-Ziele hinter Firewalls werden derzeit nicht unterstützt. 
-- Die Laufzeit eines Exports hängt von Ihrer Systemleistung ab. Wir empfehlen zwei CPU-Kerne und 1 GB Speicher als minimale Konfiguration Ihres Servers. 
-- Das Exportieren von Entitäten mit bis zu 100 Millionen Kundenprofilen kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird. 
+- Die Laufzeit eines Exports hängt von Ihrer Systemleistung ab. Wir empfehlen zwei CPU-Kerne und 1 GB Speicher als minimale Konfiguration Ihres Servers.
+- Das Exportieren von Entitäten mit bis zu 100 Millionen Kundenprofilen kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird.
 
 ## <a name="set-up-connection-to-sftp"></a>Verbindungen mit SFTP einrichten
 
@@ -64,13 +64,17 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 1. Wählen Sie die Entitäten für die zu exportierenden Beispielsegmente.
 
    > [!NOTE]
-   > Jede ausgewählte Entität wird beim Export in bis zu fünf Ausgabedateien aufgeteilt. 
+   > Jede ausgewählte Entität wird beim Export in bis zu fünf Ausgabedateien aufgeteilt.
 
 1. Wählen Sie **Speichern** aus.
 
 Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
 
-Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt. Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand). 
+Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt.
+Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Der Export von Entitäten, die eine große Datenmenge enthalten, kann bei jedem Export zu mehreren CSV-Dateien im selben Ordner führen. Das Aufteilen von Exporten erfolgt aus Leistungsgründen, um die Zeit zu minimieren, die für den Abschluss eines Exports benötigt wird.
 
 ## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
 

@@ -6,22 +6,22 @@ ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641899"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947091"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Produktübersicht für Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) ist die Kundendatenplattform (CDP) von Microsoft, mit der Sie personalisierte Kundenerlebnisse schaffen können. Die Anwendung bietet eine ganzheitliche Sicht auf die Kunden mit einer beispiellosen Geschwindigkeit bis zur Erkenntnis. Verschaffen Sie sich den umfassendsten Überblick über Ihre Kunden, indem Sie Kundendaten mit Vorgängen und IoT-Daten in Echtzeit zusammenführen. Bereichern Sie Kundenprofile mit Daten aus ersten und dritten Quellen. 
 
 Customer Insights hilft Ihnen, Ihr Unternehmen in ein kundenorientiertes Unternehmen zu verwandeln, indem Sie Ihre Marketing-, Vertriebs- und Servicefachleute in die Lage versetzen, 1:1-Interaktionen in großem Umfang anzupassen. Schlüsselfertige Integrationen mit Anwendungen von Microsoft und Drittanbietern können genutzt werden, um Echtzeit-Einsichten zu aktivieren und so sinnvolle Maßnahmen zu ergreifen.
- 
+
 Verbinden Sie Daten aus Transaktions-, Verhaltens- und demografischen Datenquellen, um eine 360-Grad-Kundensicht zu erstellen. Gewinnen Sie mit vorgefertigten KI-Modellen sofortige Einblicke oder erstellen, testen und stellen Sie angepasste KI/ML-Modelle mit fortschrittlichen Analyselösungen in unbegrenztem Umfang bereit.
 
-Behalten Sie die volle Kontrolle über Ihre Kundendaten, um ein Höchstmaß an Data-Governance und Compliance zu gewährleisten - mit einer Self-Service-CDP auf Unternehmensniveau, die auf Microsoft Azure aufbaut. Unterstützen Sie die Datenschutzgrundverordnung (DSGVO) und andere gesetzliche Anforderungen und Branchenstandards durch integrierte Tools für Datenschutz, Sicherheit, Governance und Zustimmungsmanagement.
+Behalten Sie die volle Kontrolle über Ihre Kundendaten, um ein Höchstmaß an Data-Governance und Compliance zu gewährleisten - mit einer Self-Service-CDP auf Unternehmensniveau, die auf Microsoft Azure aufbaut. Unterstützen Sie die Datenschutz-Grundverordnung (DSGVO) und andere gesetzliche Anforderungen und Branchenstandards durch integrierte Tools für Datenschutz, Sicherheit, Governance und Zustimmungsmanagement.
 
 ## <a name="pricing-and-licensing"></a>Preisgestaltung und Lizenzierung
 Customer Insights wird pro Mandant lizenziert und umfasst sowohl business-to-consumer (B2C) als auch business-to-business (B2B) Funktionalitäten. Sie können zusätzliche Kapazitäten mit Add-on-Lizenzen kaufen, um die Anzahl der Profile und Konten zu erhöhen.

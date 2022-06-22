@@ -1,105 +1,186 @@
 ---
 title: Verbinden Sie Common Data Model-Daten mit einem Azure Data Lake-Konto
 description: Arbeiten Sie mit Common Data Model-Daten unter Verwendung von Azure Data Lake Storage.
-ms.date: 05/24/2022
-ms.subservice: audience-insights
+ms.date: 05/30/2022
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833356"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011556"
 ---
-# <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
+# <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbindung mit Daten in Azure Data Lake Storage herstellen
 
-In diesem Artikel erfahren Sie, wie Sie mit Ihrem Azure Data Lake Storage-Gen2-Konto Daten aus einem Common Data Model-Ordner in Dynamics 365 Customer Insights einbinden können.
+Daten aufnehmen in Dynamics 365 Customer Insights mit Ihrem Azure Data Lake Storage Gen2-Konto. Die Datenaufnahme kann vollständig oder inkrementell erfolgen.
 
-## <a name="important-considerations"></a>Wichtige Überlegungen
+## <a name="prerequisites"></a>Anforderungen
 
-- Daten in Azure Data Lake müssen dem Common Data Model-Standard entsprechen. Andere Formate werden derzeit nicht unterstützt.
+- Datenerfassung unterstützt ausschließlich Azure Data Lake Storage *Gen2* Konten. Sie können keine Data Lake Storage Gen1-Konten für die Datenerfassung verwenden.
 
-- Die Datenerfassung unterstützt ausschließlich Azure Data Lake *Gen2* Speicherkonten. Sie können keine Azure Data Lake Gen1-Speicherkonten für die Datenerfassung verwenden.
-
-- Bei dem Azure Data Lake-Speicherkonto muss [hierarchischer Namespace aktiviert](/azure/storage/blobs/data-lake-storage-namespace) sein.
+- Die Azure Data Lake Storage Konten müssen [hierarchischer Namespace aktiviert haben](/azure/storage/blobs/data-lake-storage-namespace). Die Daten müssen in einem hierarchischen Ordnerformat gespeichert werden, das den Stammordner definiert und Unterordner für jede Entität hat. Die Unterordner können Ordner mit vollständigen Daten oder inkrementellen Daten enthalten.
 
 - Um sich mit einem Azure Service Prinzipal zu authentifizieren, stellen Sie sicher, dass es in Ihrem Mandanten konfiguriert ist. Weitere Informationen finden Sie unter [Verbinden Sie sich mit einem Azure Dienstprinzipal mit einem Azure Data Lake Storage Gen2 Konto](connect-service-principal.md).
 
-- Der Azure Data Lake, mit dem Sie sich verbinden und von dem Sie Daten aufnehmen möchten, muss sich in derselben Azure-Region befinden wie die Dynamics 365 Customer Insights-Umgebung. Verbindungen zu einem Common Data Model-Ordner aus einem Data Lake in einer anderen Azure-Region werden nicht unterstützt. Um die Azure-Region der Umgebung zu erfahren, gehen Sie zu **Admin** > **System** > **Über** in Customer Insights.
+- Der Azure Data Lake Storage, zu dem Sie eine Verbindung herstellen und von dem Sie Daten aufnehmen, muss sich in derselben Azure-Region wie die Dynamics 365 Customer Insights-Umgebung befinden. Verbindungen zu einem Common Data Model-Ordner aus einem Data Lake in einer anderen Azure-Region werden nicht unterstützt. Um die Azure-Region der Umgebung zu erfahren, gehen Sie zu **Admin** > **System** > **Über** in Customer Insights.
 
 - Daten, die in Online-Diensten gespeichert sind, können an einem anderen Ort gespeichert werden als dort, wo die Daten verarbeitet oder in Dynamics 365 Customer Insights gespeichert werden. Durch das Importieren von oder Verbinden mit Daten, die in Online-Diensten gespeichert sind, erklären Sie sich damit einverstanden, dass Daten an das Microsoft Trust Center übertragen und dort mit Dynamics 365 Customer Insights gespeichert werden können. [Erfahren Sie mehr im Microsoft Trust Center.](https://www.microsoft.com/trust-center).
 
-## <a name="connect-to-a-common-data-model-folder"></a>Mit einem „Common Data Model“-Ordner verbinden
+- Der Customer Insights-Dienstprinzipal muss sich in einer der folgenden Rollen befinden, um auf das Speicherkonto zugreifen zu können. Weitere Informationen finden Sie unter [Gewähren Sie dem Dienstprinzipal Berechtigungen für den Zugriff auf das Speicherkonto](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+  - Speicher-Blob-Datenleser
+  - Speicher-Blob-Datenbesitzer
+  - Storage-Blob-Daten-Mitwirkender
+
+- Daten in Ihrem Data Lake Storage sollten dem Common Data Model-Standard für die Speicherung Ihrer Daten folgen und über das Common Data Model-Manifest verfügen, um das Schema der Datendateien (*.csv oder *.parquet) darzustellen. Das Manifest muss die Details der Entitäten wie Entitätsspalten und Datentypen sowie den Speicherort und den Dateityp der Datendatei enthalten. Weitere Informationen unter [Common Data Model-Manifest](/common-data-model/sdk/manifest). Wenn das Manifest nicht vorhanden ist, können Admin-Benutzer mit Zugriff auf Storage Blob Data Owner oder Storage Blob Data Teilnehmer das Schema beim Erfassen der Daten definieren.
+
+## <a name="connect-to-azure-data-lake-storage"></a>Mit Azure Data Lake Storage verbinden
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
 1. Wählen Sie **Datenquelle hinzufügen**.
 
-1. Wählen Sie **Azure Data Lake Storage** aus, geben Sie einen **Namen** für Datenquelle ein, und wählen Sie dann **Weiter** aus.
+1. **Azure Data Lake Storage-Konten** auswählen.
 
-   - Wählen Sie bei entsprechender Aufforderung einen der zu Ihrer Branche gehörenden Beispieldatensätze und anschließend **Weiter** aus.
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Sie können zwischen einer ressourcenbasierten Option und einer abonnementbasierten Option für die Authentifizierung wählen. Weitere Informationen finden Sie unter [Verbinden Sie sich mit einem Azure Dienstprinzipal mit einem Azure Data Lake Storage Gen2 Konto](connect-service-principal.md). Geben Sie die **Serveradresse** ein, und wählen Sie **Anmelden** und dann **Weiter** aus.
-   > [!div class="mx-imgBorder"]
-   > ![Dialogfeld zum Eingeben neuer Verbindungsdetails für Azure Data Lake.](media/enter-new-storage-details.png)
+1. Geben Sie einen **Namen** und eine optionale **Beschreibung** für die neue Datenquelle ein. Der Name identifiziert eindeutig die Datenquelle und wird in nachgelagerten Prozessen referenziert und kann nicht geändert werden.
+
+1. Wählen Sie eine der folgenden Optionen für **Verbinden Sie Ihren Speicher**. Weitere Informationen finden Sie unter [Verbinden Sie Customer Insights mit einem Azure Data Lake Storage Gen2 Konto mit einem Azure Dienstprinzipal](connect-service-principal.md).
+
+   - **Azure-Ressource**: Geben Sie die **Ressourcen-ID** ein. Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren**. Weitere Informationen finden Sie unter [Private Links](security-overview.md#private-links-tab).
+   - **Azure-Abonnement**: Wählen Sie das **Abonnement** und dann die **Ressourcengruppe** und das **Speicherkonto** aus. Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren**. Weitere Informationen finden Sie unter [Private Links](security-overview.md#private-links-tab).
+  
    > [!NOTE]
-   > Sie benötigen entweder eine der folgenden Rollen, um den Container auf dem Speicherkonto zu erstellen und Datenquelle zu erstellen:
+   > Sie benötigen entweder eine der folgenden Rollen für den Container oder das Speicherkonto, um die Datenquelle zu erstellen:
    >
    >  - Datenleser des Speicher-Blobs reicht aus, um von einem Speicherkonto zu lesen und die Daten in Customer Insights zu übernehmen. 
-   >  - Storage Blob-Datenmitwirkender oder Besitzer ist erforderlich, wenn Sie die Manifestdateien direkt in Customer Insights bearbeiten möchten.
-
-1. Wählen Sie im Dialog **Wählen Sie einen gemeinsamen Datenmodell-Ordner** die Datei manifest.json aus, aus der Daten importiert werden sollen, und wählen Sie **Weiter**.
+   >  - Storage Blob-Datenmitwirkender oder Besitzer ist erforderlich, wenn Sie die Manifestdateien direkt in Customer Insights bearbeiten möchten.  
+  
+1. Wählen Sie den Namen des **Containers**, der die Daten und das Schema (model.json- oder Manifest.json-Datei) enthält, aus denen Daten importiert werden sollen, und wählen Sie **Weiter**.
    > [!NOTE]
-   > Jede model.json- oder manifest.json-Datei, die mit einer anderen Datenquelle in der Umgebung verbunden ist, wird nicht in der Liste angezeigt.
+   > Jede model.json- oder manifest.json-Datei, die mit einer anderen Datenquelle in der Umgebung verbunden ist, wird nicht in der Liste angezeigt. Allerdings kann dieselbe model.json- oder manifest.json-Datei für Datenquellen in mehreren Umgebungen verwendet werden.
 
-1. In der ausgewählten model.json- oder manifest.json-Datei wird eine Liste der verfügbaren Entitäten angezeigt. Überprüfen Sie die Liste der verfügbaren Entitäten, treffen Sie eine Auswahl, und wählen Sie anschließend **Speichern** aus. Alle ausgewählten Entitäten werden von der neuen Datenquelle aufgenommen.
-   > [!div class="mx-imgBorder"]
-   > ![Dialogfeld mit einer Liste von Entitäten aus einer model.json-Datei.](media/review-entities.png)
+1. Um ein neues Schema zu erstellen, gehen Sie zu [Erstellen Sie eine neue Schemadatei](#create-a-new-schema-file).
 
-1. Geben Sie an, für welche Datenentitäten die Datenprofilerstellung aktiviert werden soll, und wählen Sie dann **Speichern** aus. Die Datenprofilerstellung ermöglicht Analysen und andere Funktionen. Sie können die gesamte Entität auswählen, wodurch alle Attribute der Entität ausgewählt werden, oder Sie können bestimmte Attribute Ihrer Wahl auswählen. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
-   > [!div class="mx-imgBorder"]
-   > ![Dialogfeld, das eine Datenprofilierung zeigt.](media/dataprofiling-entities.png)
+1. Um ein vorhandenes Schema zu verwenden, navigieren Sie zu dem Ordner, der die Datei model.json oder Manifest.cdm.json enthält. Sie können innerhalb eines Verzeichnisses suchen, um die Datei zu finden.
 
-1. Nachdem Sie Ihre Auswahl gespeichert haben, wird die Seite **Datenquellen** geöffnet. Sie sollten nun die Ordnerverbindung Common Data Model als Datenquelle sehen.
+1. Wählen Sie die json-Datei und wählen Sie **Weiter** aus. Eine Liste mit verfügbaren Entitäten wird angezeigt.
 
-> [!NOTE]
-> Eine model.json- oder manifest.json-Datei kann nur mit einer Datenquelle in derselben Umgebung verknüpft werden. Allerdings kann dieselbe model.json- oder manifest.json-Datei für Datenquellen in mehreren Umgebungen verwendet werden.
+   :::image type="content" source="media/review-entities.png" alt-text="Dialogfeld mit einer Liste der auszuwählenden Entitäten":::
 
-## <a name="edit-a-common-data-model-folder-data-source"></a>Bearbeiten eines allgemeinen Datenmodellordners Datenquelle
+1. Wählen Sie die Entitäten aus, die Sie einschließen möchten.
 
-Sie können den Zugriffsschlüssel für das Speicherkonto aktualisieren, das den Ordner Common Data Model enthält. Sie können auch die model.json- oder manifest.json-Datei ändern. Um eine Verbindung zu einem anderen Container als Ihrem Speicherkonto herzustellen oder den Kontonamen zu ändern, [erstellen Sie eine neue Datenquellenverbindung](#connect-to-a-common-data-model-folder).
+   :::image type="content" source="media/ADLS_required.png" alt-text="Dialogfeld mit der Anzeige Erforderlich für Primärschlüssel":::
+
+   > [!TIP]
+   > Um die Entitäten in einer JSON-Bearbeitungsschnittstelle zu bearbeiten, wählen Sie **Mehr anzeigen** > **Schemadatei bearbeiten**. Nehmen Sie Ihre Änderungen vor, und **speichern** Sie sie.
+
+1. Für ausgewählte Entitäten, die eine inkrementelle Aufnahme erfordern, wird **Erforderlich** unter **Inkrementelle Aktualisierung** angezeigt. Für jede dieser Entitäten siehe [Konfigurieren Sie eine inkrementelle Aktualisierung für Azure Data Lake-Datenquellen](incremental-refresh-data-sources.md).
+
+1. Für ausgewählte Entitäten, für die kein Primärschlüssel definiert wurde, wird **Erforderlich** unter **Primärschlüssel** angezeigt. Für jede dieser Entitäten:
+   1. Wählen Sie **Erforderlich**. Der Bereich **Entität bearbeiten** wird angezeigt.
+   1. Wählen Sie den **Primärschlüssel**. Der Primärschlüssel ist ein für die Entität eindeutiges Attribut. Damit ein Attribut ein gültiger Primärschlüssel ist, sollte es keine doppelten Werte, fehlenden Werte oder Nullwerte enthalten. Als Primärschlüssel werden String-, Integer- und GUID-Datentypattribute unterstützt.
+   1. Ändern Sie optional das Partitionsmuster.
+   1. Wählen Sie **Schließen**, um den Bereich zu speichern und zu schließen.
+
+1. Wählen Sie die Anzahl der **Attribute** für jede enthaltene Entität aus. Die Seite **Attribute verwalten** wird angezeigt.
+
+   :::image type="content" source="media/dataprofiling-entities.png" alt-text="Dialogfeld zur Auswahl der Datenprofilerstellung.":::
+
+   1. Erstellen Sie neue Attribute, bearbeiten oder löschen Sie vorhandene Attribute. Sie können den Namen und das Datenformat ändern oder einen semantischen Typ hinzufügen.
+   1. Um Analysen und andere Funktionen zu aktivieren, wählen Sie **Datenprofilierung** für die gesamte Entität oder für bestimmte Attribute aus. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
+   1. Wählen Sie **Fertig** aus.
+
+1. Wählen Sie **Save** (Speichern). Die Seite **Datenquellen** öffnet sich und zeigt die neue Datenquelle im Status **Wird aktualisiert** an.
+
+### <a name="create-a-new-schema-file"></a>Erstellen einer neuen Schema-Datei
+
+1. **Neue Schemadatei** auswählen.
+
+1. Geben Sie einen Namen für die Datei ein, und wählen Sie anschließend **Speichern** aus.
+
+1. Wählen Sie **Neue Entität** aus. Der Bereich **Neu Entität** wird angezeigt.
+
+1. Geben Sie den Entitätsnamen ein und wählen Sie den **Speicherort der Datendateien** aus.
+   - **Mehrere .csv- oder .parquet-Dateien** : Navigieren Sie zum Stammordner, wählen Sie den Mustertyp aus und geben Sie den Ausdruck ein.
+   - **Einzelne .csv- oder .parquet-Dateien**: Navigieren Sie zur .csv- oder .parquet-Datei und wählen Sie sie aus.
+
+   :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Dialogfeld zum Erstellen einer neuen Entität mit hervorgehobenem Speicherort der Datendateien.":::
+
+1. Wählen Sie **Save** (Speichern).
+
+   :::image type="content" source="media/ADLS_new_entity_define_attributes.png" alt-text="Dialogfeld zum Definieren oder automatischen Generieren von Attributen.":::
+
+1. Wählen Sie **Definieren Sie die Attribute**, um die Attribute manuell hinzuzufügen, oder wählen **automatisch generieren** aus. Um die Attribute zu definieren, geben Sie einen Namen ein, wählen Sie das Datenformat und optional den semantischen Typ. Für automatisch generierte Attribute:
+
+   1. Nachdem die Attribute automatisch generiert wurden, wählen Sie **Überprüfen Sie die Attribute** aus. Die Seite **Attribute verwalten** wird angezeigt.
+
+   1. Stellen Sie sicher, dass das Datenformat für jedes Attribut korrekt ist.
+
+   1. Um Analysen und andere Funktionen zu aktivieren, wählen Sie **Datenprofilierung** für die gesamte Entität oder für bestimmte Attribute aus. Standardmäßig ist keine Entität für die Datenprofilierung aktiviert.
+
+      :::image type="content" source="media/dataprofiling-entities.png" alt-text="Dialogfeld zur Auswahl der Datenprofilerstellung.":::
+
+   1. Wählen Sie **Fertig** aus. Die Seite **Entitäten und Felder auswählen** wird angezeigt.
+
+1. Fahren Sie mit dem Hinzufügen von Entitäten und Attributen fort, falls zutreffend.
+
+1. Nachdem alle Entitäten hinzugefügt wurden, wählen Sie **Einschließen** aus, um die Entitäten in die Aufnahme von Datenquelle aufzunehmen.
+
+   :::image type="content" source="media/ADLS_required.png" alt-text="Dialogfeld mit der Anzeige Erforderlich für Primärschlüssel":::
+
+1. Für ausgewählte Entitäten, die eine inkrementelle Aufnahme erfordern, wird **Erforderlich** unter **Inkrementelle Aktualisierung** angezeigt. Für jede dieser Entitäten siehe [Konfigurieren Sie eine inkrementelle Aktualisierung für Azure Data Lake-Datenquellen](incremental-refresh-data-sources.md).
+
+1. Für ausgewählte Entitäten, für die kein Primärschlüssel definiert wurde, wird **Erforderlich** unter **Primärschlüssel** angezeigt. Für jede dieser Entitäten:
+   1. Wählen Sie **Erforderlich**. Der Bereich **Entität bearbeiten** wird angezeigt.
+   1. Wählen Sie den **Primärschlüssel**. Der Primärschlüssel ist ein für die Entität eindeutiges Attribut. Damit ein Attribut ein gültiger Primärschlüssel ist, sollte es keine doppelten Werte, fehlenden Werte oder Nullwerte enthalten. Als Primärschlüssel werden String-, Integer- und GUID-Datentypattribute unterstützt.
+   1. Ändern Sie optional das Partitionsmuster.
+   1. Wählen Sie **Schließen**, um den Bereich zu speichern und zu schließen.
+
+1. Wählen Sie **Save** (Speichern). Die Seite **Datenquellen** öffnet sich und zeigt die neue Datenquelle im Status **Wird aktualisiert** an.
+
+
+## <a name="edit-an-azure-data-lake-storage-data-source"></a>Eine Azure Data Lake Storage Datenquelle bearbeiten
+
+Sie können die Option *Stellen Sie eine Verbindung mit dem Speicherkonto her* aktualisieren. Weitere Informationen finden Sie unter [Verbinden Sie Customer Insights mit einem Azure Data Lake Storage Gen2 Konto mit einem Azure Dienstprinzipal](connect-service-principal.md). Um eine Verbindung zu einem anderen Container als Ihrem Speicherkonto herzustellen oder den Kontonamen zu ändern, [erstellen Sie eine neue Datenquellenverbindung](#connect-to-azure-data-lake-storage).
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie neben dem Datenquelle, das Sie aktualisieren möchten, die vertikalen Auslassungspunkte (&vellip;).
+1. Wählen Sie neben der Datenquelle, die Sie aktualisieren möchten, **Bearbeiten** aus.
 
-3. Wählen Sie eine Option **Bearbeiten** in der Liste aus.
+   :::image type="content" source="media/data_sources_edit_ADLS.png" alt-text="Dialogfeld zum Bearbeiten von Azure Data Lake Datenquelle.":::
 
-4. Aktualisieren Sie optional den **Zugriffsschlüssel** und wählen Sie **Weiter** aus.
+1. Ändern Sie eine der folgenden Informationen:
 
-   ![Dialog, um einen Zugriffsschlüssel für eine vorhandene Datenquelle zu bearbeiten und zu aktualisieren.](media/edit-access-key.png)
+   - **Beschreibung des Dataflows**
+   - **Verbinden Sie Ihren Speicher** und Verbindungsinformationen. Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
+      > [!NOTE]
+      > Dem Speicherkonto oder Container muss eine der folgenden Rollen zugewiesen werden:
+        > - Speicher-Blob-Datenleser
+        > - Speicher-Blob-Datenbesitzer
+        > - Storage-Blob-Daten-Mitwirkender
 
-5. Optional können Sie von einer Kontoschlüssel-Verbindung zu einer ressourcenbasierten oder abonnementbasierten Verbindung aktualisieren. Weitere Informationen finden Sie unter [Verbinden Sie sich mit einem Azure Dienstprinzipal mit einem Azure Data Lake Storage Gen2 Konto](connect-service-principal.md). Sie können die **Container**-Informationen beim Aktualisieren der Verbindung nicht ändern.
-   > [!div class="mx-imgBorder"]
+   - Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren** aus. Weitere Informationen finden Sie unter [Private Links](security-overview.md#private-links-tab).
 
-   > ![Dialogfeld zum Eingeben von Verbindungsdetails für Azure Data Lake zu einem vorhandenen Speicherkonto.](media/enter-existing-storage-details.png)
+1. Wählen Sie **Weiter** aus.
+1. Ändern Sie eine der folgenden Informationen:
+   - Navigieren Sie zu einer anderen model.json- oder Manifest.json-Datei mit einem anderen Satz von Entitäten aus dem Container.
+   - Um weitere Entitäten zur Aufnahme hinzuzufügen, wählen Sie **Neue Entität** aus.
+   - Um bereits ausgewählte Entitäten zu entfernen, wenn keine Abhängigkeiten vorhanden sind, wählen Sie die Entität und **Löschen** aus.
+      > [!IMPORTANT]
+      > Wenn Abhängigkeiten von der vorhandenen model.json- oder manifest.json-Datei und der Gruppe von Entitäten bestehen, wird eine Fehlermeldung angezeigt und Sie können keine andere model.json- oder manifest.json-Datei auswählen. Entfernen Sie diese Abhängigkeiten, bevor Sie die model.json- oder manifest.json-Datei ändern, oder erstellen Sie eine neue Datenquelle mit der model.json- oder manifest.json-Datei, die Sie verwenden möchten, um das Entfernen der Abhängigkeiten zu vermeiden.
+   - Um den Speicherort der Datendatei oder den Primärschlüssel zu ändern, wählen Sie **Bearbeiten** aus.
+   - Informationen zum Ändern der inkrementellen Aufnahmedaten finden Sie unter [Konfigurieren Sie eine inkrementelle Aktualisierung für Azure Data Lake-Datenquellen](incremental-refresh-data-sources.md)
 
-6. Wählen Sie optional eine andere model.json- oder manifest.json-Datei mit einer anderen Gruppe von Entitäten aus dem Container.
+1. Wählen Sie **Attribute** zum Hinzufügen oder Ändern von Attributen oder zum Aktivieren von Datenprofilen. Wählen Sie dann **Fertig**.
 
-7. Optional können Sie zusätzliche Entitäten zum Einlesen auswählen. Sie können auch bereits ausgewählte Entitäten entfernen, wenn es keine Abhängigkeiten gibt.
-
-   > [!IMPORTANT]
-   > Wenn Abhängigkeiten von der vorhandenen model.json- oder manifest.json-Datei und der Gruppe von Entitäten bestehen, wird eine Fehlermeldung angezeigt und Sie können keine andere model.json- oder manifest.json-Datei auswählen. Entfernen Sie diese Abhängigkeiten, bevor Sie die model.json- oder manifest.json-Datei ändern, oder erstellen Sie eine neue Datenquelle mit der model.json- oder manifest.json-Datei, die Sie verwenden möchten, um das Entfernen der Abhängigkeiten zu vermeiden.
-
-8. Optional können Sie zusätzliche Attribute oder Entitäten auswählen, um die Datenprofilierung zu aktivieren oder bereits ausgewählte zu deaktivieren.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Klicken Sie auf **Speichern**, um Ihre Änderungen zu übernehmen und zur Seite **Datenquellen** zurückzukehren.

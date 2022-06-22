@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800172"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011702"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Verbindung zu Daten in einem Microsoft Dataverse verwalteten Data Lake
 
-In diesem Artikel erfahren Sie, wie Dataverse-Benutzer schnell eine Verbindung zu analytischen Entitäten in einem von Microsoft Dataverse verwalteten Lake herstellen können. 
+Microsoft Dataverse Benutzer können sich schnell mit analytischen Einheiten in einem Microsoft Dataverse verwalteten Lake verbinden.
 
 > [!NOTE]
 > Sie müssen ein Administrator für die Dataverse-Organisation sein, um fortzufahren und die Liste der im verwalteten Lake verfügbaren Entitäten anzuzeigen.
@@ -32,40 +32,34 @@ In diesem Artikel erfahren Sie, wie Dataverse-Benutzer schnell eine Verbindung z
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Verbindung zu einem Dataverse verwalteten Lake
 
-1. Wechseln Sie in Customer Insights zu **Daten** > **Datenquellen**.
+1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie **Datenquelle hinzufügen**.
+1. Wählen Sie **Datenquelle hinzufügen**.
 
-3. Wählen Sie **Microsoft Dataverse** und **Weiter** aus.
+1. Wählen Sie **Microsoft Dataverse** aus.
 
-4. Geben Sie einen **Namen** für das Team ein und wählen Sie **Weiter**. 
+1. Geben Sie einen **Namen** und eine optionale **Beschreibung** für die neue Datenquelle ein.
 
-5. Geben Sie die **Serveradresse** für die Dataverse-Organisation an und wählen Sie **Anmelden** aus.
+1. Geben Sie die **Serveradresse** für die Dataverse-Organisation an und wählen Sie **Anmelden** aus.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Bildschirm im Datenerfassungsschritt, in dem ein Benutzer die Dataverse-Umgebungs-URL eingeben kann.":::
-
-6. Wählen Sie die Tabellen, die Sie als Entitäten in Customer Insights einbinden möchten, aus der verfügbaren Liste aus.    
+1. Wählen Sie die Tabellen, die Sie als Entitäten in Customer Insights einbinden möchten, aus der verfügbaren Liste aus.
 
    > [!NOTE]
    > Wenn einige Tabellen bereits ausgewählt sind, liegt dies eventuell daran, dass sie von anderen Dynamics 365-Anwendungen (wie Dynamics 365 Sales Insights oder Customer Service Insights) verwendet werden. Die Auswahl kann nicht mehr geändert werden. Diese Tabellen sind als Entitäten verfügbar, sobald die Datenquelle erstellt wurde.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialogfeld mit einer Liste von Entitäten in der Dataverse-Umgebung.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialogfeld mit einer Liste von Entitäten in der Dataverse-Umgebung.":::
 
-7. Speichern Sie Ihre Auswahl, um mit der Synchronisierung der ausgewählten Tabellen aus Dataverse zu beginnen. Die neu hinzugefügte Verbindung finden Sie auf der Seite **Datenquellen**. Sie wird zur Aktualisierung in die Warteschlange gestellt und zeigt die Entitätsanzahl als 0 an, bis alle ausgewählten Tabellen synchronisiert sind.
+1. Speichern Sie Ihre Auswahl, um mit der Synchronisierung der ausgewählten Tabellen aus Dataverse zu beginnen. Die neu hinzugefügte Verbindung finden Sie auf der Seite **Datenquellen**. Sie wird zur Aktualisierung in die Warteschlange gestellt und zeigt die Entitätsanzahl als 0 an, bis alle ausgewählten Tabellen synchronisiert sind.
 
 Nur eine Datenquelle einer Umgebung kann gleichzeitig denselben Dataverse verwalteten Lake verwenden.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Bearbeiten von einer Dataverse verwalteten Datenquelle
 
-Sie bearbeiten die Entitätsauswahl erst, nachdem Sie die Datenquelle erstellt haben. Zum Beispiel, wenn zusätzliche Entitäten zu Dataverse hinzugefügt wurden, und Sie sie auch importieren möchten.    
+Sie bearbeiten die Entitätsauswahl erst, nachdem Sie die Datenquelle erstellt haben. Zum Beispiel, wenn zusätzliche Entitäten zu Dataverse hinzugefügt wurden, und Sie sie auch importieren möchten.
 Um eine Verbindung zu einem anderen Dataverse Data Lake herzustellen, [erstelle Sie eine neue Datenquelle](#connect-to-a-dataverse-managed-lake).
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-2. Wählen Sie neben dem Datenquelle, das Sie aktualisieren möchten, die vertikalen Auslassungspunkte (&vellip;).
+1. Wählen Sie neben der Datenquelle, die Sie aktualisieren möchten, **Bearbeiten** aus.
 
-3. Wählen Sie eine Option **Bearbeiten** in der Liste aus.
-
-4. Wählen Sie zusätzliche Entitäten aus der verfügbaren Liste der Entitäten aus und wählen Sie **Speichern**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Wählen Sie zusätzliche Entitäten aus der verfügbaren Liste der Entitäten aus und wählen Sie **Speichern**.

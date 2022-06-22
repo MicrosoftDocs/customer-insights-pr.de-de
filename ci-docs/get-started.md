@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833538"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011978"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Erste Schritte mit Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Wenn Sie sich zum ersten Mal bei Customer Insights anmelden, können Sie Einstel
 
 Vereinheitlichte Profile sind die Grundlage, um Erkenntnisse zu gewinnen und Maßnahmen zu den Daten zu ergreifen. Bringen Sie Daten aus verschiedenen Quellen ein und führen Sie den Datenvereinheitlichungsprozess aus, um vereinheitlichte Profile zu kombinieren. Geben Sie Beziehungen zwischen den aufgenommenen Entitäten an und verwenden Sie Anreicherungsfunktionen, um Informationen zu den Profilen hinzuzufügen.
 
-1. Erfassen Sie Daten, indem Sie Datenquellen aus mehreren Optionen erstellen. Wählen zwischen [Power Query-Konnektoren](connect-power-query.md), einem [Common Data Model-Ordner](connect-common-data-model.md) oder [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Erfassen Sie Daten, indem Sie Datenquellen aus mehreren Optionen erstellen. Wählen zwischen [Azure Data Lake Storage, inklusive Common Data Model](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md) oder [Power Query Konnektoren](connect-power-query.md).
 
 1. Führen Sie den [Datenvereinheitlichungsprozess](data-unification.md) durch Identifizierung der [Quellfelder](map-entities.md) aus, entfernen Sie [Duplikate](remove-duplicates.md), [Abgleich-Bedingungen](match-entities.md) und [vereinheitlichende Felder](merge-entities.md).
 

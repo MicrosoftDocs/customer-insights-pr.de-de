@@ -1,7 +1,7 @@
 ---
 title: Anreichern von vereinheitlichten Kundenprofilen
 description: Verwenden Sie Funktionalitäten, um Ihre Kundendaten anzureichern.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800604"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954040"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Anreicherung für Kundenprofile (Vorschau)
 
@@ -35,29 +35,29 @@ Auf der Registerkarte **Entdecken** finden Sie alle unterstützten Anreicherungs
 
 # <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 
+- [AbiliTec Identität](enrichment-liveramp.md) bereitgestellt von LiveRamp AbiliTec
 - [Marken](enrichment-microsoft.md) bereitgestellt von Microsoft
-- [Interessen](enrichment-microsoft.md) bereitgestellt von Microsoft
-- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
 - [Demografiedaten](enrichment-experian.md) von Experian bereitgestellt
-- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
-- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies 
-- [Identität](enrichment-liveramp.md) bereitgestellt von LiveRamp AbiliTec
+- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft
+- [Interessen](enrichment-microsoft.md) bereitgestellt von Microsoft
+- [Standortdaten](enrichment-azure-maps.md) bereitgestellt von Microsoft Azure Maps
+- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies
+- [SFTP benutzerdefinierte Daten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
-- [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
-- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft 
-- [Erweiterte Unternehmensdaten](enrichment-enhanced-company-data.md) bereitgestellt von Microsoft
-- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies 
-- [Kundendaten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) bereitgestellt von Microsoft
-- [Firmendaten](enrichment-dnb.md) von Dun & Bradstreet bereitgestellt
 - [Kontobindungsdaten](enrichment-office.md), die von Microsoft bereitgestellt werden
+- [Firmendaten](enrichment-dnb.md) von Dun & Bradstreet bereitgestellt
+- [Unternehmensdaten](enrichment-leadspace.md) werden von Leadspace bereitgestellt
+- [Erweiterte Adressen](enrichment-enhanced-addresses.md) bereitgestellt von Microsoft
+- [Erweiterte Unternehmensdaten](enrichment-enhanced-company-data.md) bereitgestellt von Microsoft
+- [Standortdaten](enrichment-azure-maps.md) bereitgestellt von Microsoft Azure Maps
+- [Standortdaten](enrichment-here.md), bereitgestellt von HERE Technologies
+- [SFTP benutzerdefinierte Daten](enrichment-SFTP-custom-import.md) über Secure File Transfer Protocol (SFTP)
 
 ---
 
-Auf der Registerkarte **Meine Anreicherungen** können Sie die von Ihnen konfigurierten Anreicherungen sehen und ihre Eigenschaften bearbeiten.
+Auf der Registerkarte **Meine Anreicherungen** können Sie die von Ihnen konfigurierten Anreicherungen sehen und ihre Eigenschaften bearbeiten. Sie können auch [Segmente](segments.md) oder [Maße](measures.md) aus Anreicherungen erstellen.
 
 ## <a name="manage-existing-enrichments"></a>Vorhandene Anreicherungen verwalten
 
@@ -81,36 +81,45 @@ Anreicherungen von Drittanbietern werden mithilfe von [Verbindungen](connections
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mehrfachanreicherungen des gleichen Typs
 
-Die zu bereichernde Entität wird während der Anreicherungskonfiguration angegeben, sodass Sie nur eine Teilmenge Ihrer Profile anreichern können. Anreichern von Daten beispielsweise nur für ein bestimmtes Segment. Sie können mehrere Anreicherungen desselben Typs konfigurieren und dieselbe Verbindung wiederverwenden. Bei einigen Anreicherungen ist die Anzahl der Anreicherungen desselben Typs, die erstellt werden können, begrenzt. Die Grenzwerte und die aktuelle Verwendung sind auf der Seite **Anreicherung** zu sehen.
+Die zu bereichernde Entität wird während der Anreicherungskonfiguration angegeben, sodass Sie nur eine Teilmenge Ihrer Profile anreichern können. Anreichern von Daten beispielsweise nur für ein bestimmtes Segment. Sie können mehrere Anreicherungen desselben Typs konfigurieren und dieselbe Verbindung wiederverwenden. Bei einigen Anreicherungen ist die Anzahl der Anreicherungen desselben Typs, die erstellt werden können, begrenzt. Die Grenzen und die aktuelle Nutzung sind auf jeder Kachel auf der Registerkarte **Entdecken** der Seite **Anreicherung** zu sehen.
 
 ## <a name="enrich-data-sources-before-unification"></a>Reichern Sie Datenquellen vor der Vereinheitlichung an
 
 Sie können Ihre Kundendaten vor der Datenvereinheitlichung anreichern, um die Qualität eines Datenabgleichs zu verbessern. Weitere Informationen finden Sie unter [Datenquellen anreichern](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Anzeigen des Fortschritts des Anreicherungsprozesses
+## <a name="run-or-refresh-enrichments"></a>Anreicherungen ausführen oder aktualisieren
+
+1. Um den Anreicherungsprozess zu starten, wählen Sie **Ausführen** aus. Oder Sie können das System die Anreicherung auch automatisch als Teil von einer [geplante Aktualisierung](system.md#schedule-tab) ausführen lassen. Die Bearbeitungszeit hängt von der Größe Ihrer Kundendaten ab.
+
+1. [Sehen Sie sich den Fortschritt des Anreicherungsprozesses an](#see-the-progress-of-the-enrichment-process).
+
+1. Gehen Sie nach Abschluss des Anreicherungsprozesses zu **Meine Bereicherung**, um die neu angereicherten Kundenprofildaten, den Zeitpunkt der letzten Aktualisierung und die Anzahl der angereicherten Profile zu überprüfen.
+
+1. Wählen Sie die anzuzeigende Bereicherung aus den [Anreicherungsergebnissen](#enrichment-results) aus.
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Anzeigen des Fortschritts des Anreicherungsprozesses
 
 Sie finden Details zur Verarbeitung einer Anreicherung, einschließlich ihres Status und potenzieller Probleme, während der Aktualisierung oder nach Abschluss einer Aktualisierung. Verstehen Sie, welche Prozesse beteiligt sind, um eine Anreicherung zu aktualisieren, und wie lange es dauerte, die Prozesse auszuführen. Der Anreicherungsstatus wird unterstützt für Experian, Leadspace, HERE Technologies, SFTP Import und Azure Maps.
 
-Anzeigen des Status der Bereicherung
-
-1. Gehen Sie zu **Daten** > **Anreicherung**. 
-1. Wählen Sie auf der Registerkarte **Meine Anreicherungen** den Status einer Anreicherung aus, um einen Seitenbereich zu öffnen. 
-1. Erweitern Sie im Bereich **Fortschrittsdetails** den Abschnitt **Anreicherungen**. 
-1. Wählen Sie unter der Bereicherung, deren Fortschritt Sie sehen möchten, **Details anzeigen**. 
-1. Im Bereich **Aufgabendetails** wählen Sie **Details anzeigen**, um die Prozesse anzuzeigen, die an der Aktualisierung der Anreicherung beteiligt sind, und deren Status. 
+1. Gehen Sie zu **Daten** > **Anreicherung**.
+1. In der Registerkarte **Meine Bereicherung** wählen Sie auf der Registerkarte den Status der Anreicherung aus, um ein Seitenfenster zu öffnen.
+1. Erweitern Sie im Bereich **Fortschrittsdetails** den Abschnitt **Anreicherungen**.
+1. Wählen Sie unter der Bereicherung, deren Fortschritt Sie sehen möchten, **Details anzeigen**.
+1. Im Bereich **Aufgabendetails** wählen Sie **Details anzeigen**, um die Prozesse anzuzeigen, die an der Aktualisierung der Anreicherung beteiligt sind, und deren Status.
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
 Nach einem abgeschlossenen Anreicherungslauf können Sie die Anreicherungsergebnisse überprüfen.
 
-1. Gehen Sie zu **Daten** > **Anreicherung**. 
-1. Wählen Sie die Anricherung, zu der Sie Informationen möchten.
+1. Gehen Sie zu **Daten** > **Anreicherung**.
+1. In der Registerkarte **Meine Bereicherung** wählen Sie auf der Registerkarte die Anreicherung aus, zu der Sie Informationen wünschen.
 
-Alle Anreicherungen zeigen grundlegende Informationen wie die Anzahl der angereicherten Profile, eine Vorschau der generierten Anreicherungsentität und die Anzahl der angereicherten Profile im Laufe der Zeit. Falls vorhanden stellt **Anzahl der Kunden, angereichert nach Feld** Detailinformationen zur  Abdeckung jedes angereicherten Felds dar.
+Alle Anreicherungen zeigen grundlegende Informationen wie die Anzahl der angereicherten Profile, eine Vorschau der generierten Anreicherungsentität und die Anzahl der angereicherten Profile im Laufe der Zeit. Die **Angereicherte Kundenvorschau** Kaachel zeigt ein Beispiel der generierten Anreicherungsentität. Um eine detaillierte Ansicht zu sehen, wählen Sie die Registerkarte **Mehr anzeigen** und  **Daten** aus, um auf eine detaillierte Ansicht jedes angereicherten Profils zuzugreifen.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Anreicherungsergebnisse pro Seite.":::
 
-Einige Anreicherungen zeigen auch spezifische Informationen zur Art der Anreicherung an. Weitere Informationen finden Sie in der Dokumentation der entsprechenden Anreicherung.
+Falls vorhanden stellt **Anzahl der Kunden, angereichert nach Feld** Detailinformationen zur  Abdeckung jedes angereicherten Felds dar.
 
+Einige Anreicherungen zeigen auch spezifische Informationen zur Art der Anreicherung an. Weitere Informationen finden Sie in der verwandten Dokumentation.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,95 +1,95 @@
 ---
 title: Anreichern von Kundenprofilen mit Standortdaten aus Azure Maps
 description: Allgemeine Informationen zur Azure Maps-Erstanbieter-Anreicherung.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755353"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953627"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Anreicherung von Kundenprofilen mit Azure Maps (Vorschau)
 
-Azure Maps bietet standortbezogene Daten und Dienste, um Erfahrungen basierend auf räumlichen Daten mit integrierter Standortintelligenz bereitzustellen. Die Datenanreicherungsdienste von Azure Maps verbessern die Genauigkeit der Standortinformationen Ihrer Kunden. Sie bieten Funktionen wie die Adressnormalisierung und die Extraktion von Breiten- und Längengraden nach Dynamics 365 Customer Insights.
+Azure Maps stellt standortzentrierte Daten und Dienste bereit, um Erfahrungen basierend auf Geodaten mit integrierter Standortintelligenz zu bieten. Die Datenanreicherungsdienste von Azure Maps verbessern die Genauigkeit der Standortinformationen Ihrer Kunden. Sie bieten Funktionen wie die Adressnormalisierung und die Extraktion von Breiten- und Längengraden nach Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Anforderungen
 
-Um die Azure Maps-Datenanreicherung zu konfigurieren, müssen die folgenden Voraussetzungen erfüllt sein:
+- Sie müssen ein aktives Azure Abonnement haben. Für ein Abonnement [melden Sie sich an oder fordern Sie eine kostenlose Testversion an](https://azure.microsoft.com/services/azure-maps/).
 
-- Sie haben ein aktives Azure Maps-Abonnement. Um ein Abonnement zu erhalten, können Sie [sich registrieren oder eine kostenlose Testversion erhalten](https://azure.microsoft.com/services/azure-maps/).
-
-- Eine Azure Maps-[Verbindung](connections.md) ist verfügbar, *oder* Sie haben [Administratorberechtigungen](permissions.md#admin) und einen aktiven Azure Maps-API-Schlüssel.
-
-## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
-
-1. Gehen Sie zu **Daten** > **Anreicherung**. 
-
-1. Wählen Sie in der Kachel **Standort** **Meine Daten anreichern**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure Maps-Kachel.":::
-
-1. Wählen Sie eine [Verbindung](connections.md) aus der Dropdownliste aus. Wenden Sie sich an einen Administrator, wenn keine Azure Maps-Verbindung verfügbar ist. Wenn Sie ein Administrator sind, können Sie [die Verbindung für Azure Maps konfigurieren](#configure-the-connection-for-azure-maps). 
-
-1. Wählen Sie **Weiter** aus, um die Auswahl zu bestätigen.
-
-1. Wählen Sie das **Kundendataset**, das Sie mit Standortdaten aus Azure Maps anreichern möchten. Sie können die Entität **Kunde** auswählen, um all Ihre vereinheitlichten Kundenprofile anzureichern. Oder wählen Sie eine Segmententität aus, um nur die in diesem Segment enthaltenen Kundenprofile anzureichern.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Screenshot bei Auswahl des Kundendatasets.":::
-
-1. Wählen Sie aus, ob Sie Felder der primären und/oder sekundären Adresse zuordnen möchten. Sie können eine Feldzuordnung für beide Adressen angeben und die Profile für beide Adressen separat anreichern, z. B. für eine Privatadresse und eine Geschäftsadresse. Wählen **Weiter** aus.
-
-1. Definieren Sie, welche Art von Feldern aus Ihren vereinheitlichten Profilen verwendet werden sollen, um nach übereinstimmenden Standortdaten aus Azure Maps zu suchen. Die Felder **Straße 1** und **Postleitzahl** sind für die ausgewählte primäre oder sekundäre Adresse erforderlich. Um eine höhere Übereinstimmungsgenauigkeit zu erzielen, können Sie weitere Felder hinzufügen.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Azure Maps Anreicherungs-Konfigurationsseite.":::
-
-1. Wählen Sie **Weiter** aus, um die Feldzuordnung abzuschließen.
-
-1. Bewerten Sie, ob Sie **Erweiterte Einstellungen** ändern möchten. Diese Einstellungen werden bereitgestellt, um maximale Flexibilität für fortgeschrittene Anwendungsfälle zu bieten, aber die Standardwerte sind in den meisten Fällen ausreichend:
-   - **Adresstypen**: Das Standardverhalten ist, dass die Anreicherung die beste Adressübereinstimmung zurückgibt, auch wenn sie unvollständig ist. Um nur vollständige Adressen zu erhalten – zum Beispiel Adressen, die die Hausnummer enthalten – deaktivieren Sie alle Kontrollkästchen außer **Punktadressen**. 
-   - **Sprache**: Standardmäßig werden Adressen in der Sprache der Region zurückgegeben, zu der die Adresse bestimmt wurde. Um eine standardisierte Adresssprache anzuwenden, wählen Sie die Sprache aus dem Dropdown-Menü aus. Wählen Sie zum Beispiel **Englisch** aus, wird **Copenhagen, Denmark** anstelle von **København, Danmark** zurückgegeben.
-
-1. Benennen Sie die Anreicherung.
-
-1. Überprüfen Sie die Einstellungen, und wählen Sie dann **Anreicherung speichern** aus.
+- Eine Azure Maps [Verbindung](connections.md) wird von einem Administrator [konfiguriert](#configure-the-connection-for-azure-maps).
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Konfigurieren der Verbindung für Azure Maps
 
-Sie müssen ein Administrator in Customer Insights sein, um Verbindungen zu konfigurieren. Wählen Sie **Verbindung hinzufügen** beim Konfigurieren einer Anreicherung, oder gehen Sie zu **Administrator** > **Verbindungen**, und wählen Sie **Einrichten** auf der Azure Maps-Kachel aus.
+Sie müssen [Administrator](permissions.md#admin) in Customer Insights sein und einen aktiven Azure Maps API-Schlüssel besitzen.
 
-1. Geben Sie im Feld **Anzeigename** einen Namen für die Verbindung ein.
+1. Wählen Sie **Verbindung hinzufügen** beim Konfigurieren einer Anreicherung, oder gehen Sie zu **Administrator** > **Verbindungen**, und wählen Sie **Einrichten** auf der Azure Maps-Kachel aus.
 
-1. Geben Sie einen gültigen Azure Maps-API-Schlüssel an.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure Maps Verbindungs-Konfigurationsseite.":::
 
-1. Prüfen und geben Sie Ihre Zustimmung zum **Datenschutz und Einhaltung von Vorschriften**, indem Sie das Kontrollkästchen **Ich stimme zu** markieren.
+1. Geben Sie einen Namen für die Verbindung und einen gültigen Azure Maps API-Schlüssel ein.
 
-1. Wählen Sie **Überprüfen**, um die Konfiguration zu validieren.
+1. Überprüfen Sie und geben Sie Ihre Zustimmung für [Datenschutz und Einhaltung](#data-privacy-and-compliance) durch die Auswahl von **Ich stimme zu**.
 
-1. Wählen Sie nach Abschluss der Überprüfung **Speichern** aus.
+1. Wählen Sie **Verifizieren**, um die Konfiguration zu bestätigen, und wählen Sie dann **Speichern**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure Maps Verbindungs-Konfigurationsseite.":::
+### <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
+
+Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an Azure Maps zu übermitteln, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogene Daten. Microsoft wird solche Daten auf Ihre Anweisung übertragen, aber Sie sind dafür verantwortlich, sicherzustellen, dass Azure Maps alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?linkid=396732).
+Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
+
+## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
+
+1. Wechseln Sie zu **Daten** > **Anreicherung** und wählen Sie die Registerkarte **Entdecken** aus.
+
+1. Wählen Sie **Meine Daten anreichern** auf der Kachel **Standort** aus der Microsoft Azure Maps-Kachel aus.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure Maps-Kachel.":::
+
+1. Prüfen Sie die Übersicht und wählen Sie dann **Weiter** aus.
+
+1. Wählen Sie die Verbindung aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
+
+1. Wählen Sie **Weiter** aus.
+
+1. Wählen Sie **Kunden Dataset** und wählen Sie das Profil oder Segment aus, das Sie mit Daten von Microsoft anreichern möchten. Die Entität *Kunde* reichert alle Ihre Kundenprofile an, währen ein Segment nur Kundenprofile anreichert, die in diesem Segment enthalten sind.
+
+1. Definieren Sie, welche Art von Feldern aus Ihren einheitlichen Profilen für den Abgleich verwendet werden sollen: die primäre und/oder sekundäre Adresse. Sie können eine Feldzuordnung für beide Adressen angeben und die Profile für beide Adressen separat anreichern. Zum Beispiel für eine Privatadresse und eine Geschäftsadresse. Wählen Sie **Weiter** aus.
+
+1. Ordnen Sie Ihre Felder für die Standortdaten Azure Maps zu. Die Felder **Straße 1** und **Postleitzahl** sind für die ausgewählte primäre und/oder sekundäre Adresse erforderlich. Fügen Sie für eine höhere Übereinstimmungsgenauigkeit weitere Felder hinzu.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Azure Maps-Attributzuordnung.":::
+
+1. Wählen Sie **Weiter** aus, um die Feldzuordnung abzuschließen.
+
+1. **Erweiterte Einstellungen** bewerten, die maximale Flexibilität für erweiterte Anwendungsfälle bieten. Die folgenden Standardwerte müssen jedoch normalerweise nicht geändert werden.
+
+   - **Art der Adressen**: Die beste Adressübereinstimmung wird zurückgegeben, auch wenn sie unvollständig ist. Um nur vollständige Adressen zu erhalten – zum Beispiel Adressen, die die Hausnummer enthalten – deaktivieren Sie alle Kontrollkästchen außer **Punktadressen**.
+   - **Sprache**: Adressen werden in der Sprache basierend auf der Adressregion zurückgegeben. Um eine standardisierte Adresssprache anzuwenden, wählen Sie die Sprache aus dem Dropdown-Menü aus. Wenn Sie beispielsweise **Englisch** auswählen, wird **Kopenhagen, Dänemark** statt **København, Danmark** zurückgegeben.
+   - **Maximale Anzahl von Ergebnissen**: Anzahl der Ergebnisse pro Adresse.
+
+1. Wählen Sie **Weiter** aus.
+
+1. Geben Sie einen **Namen** für die Anreicherung und einen Namen für die **Ausgabeentität** an.
+
+1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
+
+1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
 
 ## <a name="enrichment-results"></a>Anreicherungsergebnisse
 
-Wählen Sie **Ausführen** aus der Befehlsleiste aus, um den Anreicherungsprozess zu starten. Sie können das System die Anreicherung auch automatisch als Teil von einer [geplante Aktualisierung](system.md#schedule-tab) ausführen lassen. Die Bearbeitungszeit hängt von der Größe Ihrer Kundendaten und den API-Antwortzeiten ab.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Nachdem der Anreicherungsprozess abgeschlossen ist, können Sie die neu angereicherten Kundenprofildaten unter **Meine Anreicherungen** anzeigen. Außerdem finden Sie den Zeitpunkt des letzten Updates und die Anzahl der angereicherten Profile.
-
-Eine Detailansicht jedes angereicherten Profils erhalten Sie unter **Anreicherungen ansehen**.
+Die **Anzahl der Kunden, angereichert nach Feld** stellt Detailinformationen zur Abdeckung jedes angereicherten Felds dar.
 
 ## <a name="next-steps"></a>Nächste Schritte,
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
-
-Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an Azure Maps zu übermitteln, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogene Daten. Microsoft wird solche Daten auf Ihre Anweisung übertragen, aber Sie sind dafür verantwortlich, sicherzustellen, dass Azure Maps alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?linkid=396732).
-Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
