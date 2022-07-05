@@ -1,5 +1,5 @@
 ---
-title: Anreicherung mit dem benutzerdefinierten SFTP-Import
+title: Kundenprofile mit SFTP-Kundenimport anreichern (Vorschauversion)
 description: Allgemeine Informationen über das SFTP Custom Import Enrichment.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953718"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081031"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Anreichern von Kundenprofilen mit benutzerdefinierten Daten (Vorschau)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Kundenprofile mit SFTP-Kundenimport anreichern (Vorschauversion)
 
 Der benutzerdefinierte Import über das Secure File Transfer Protocol(SFTP) ermöglicht es Ihnen, Daten zu importieren, die nicht den Prozess der Datenvereinheitlichung durchlaufen müssen. Es ist eine flexible, sichere und einfache Möglichkeit, Ihre Daten einzubringen. Der benutzerdefinierte SFTP-Import kann in Kombination mit dem [SFTP-Export](export-sftp.md) verwendet werden, mit dem Sie die Kundenprofildaten exportieren können, die für die Anreicherung benötigt werden. Die Daten können dann verarbeitet und angereichert werden, und der angepasste SFTP-Import kann verwendet werden, um die angereicherten Daten wieder auf Dynamics 365 Customer Insights zu bringen.
 
@@ -120,7 +120,7 @@ Ihr Dynamics 365 Customer Insights Administrator kann diese Anreicherung jederze
 
 1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

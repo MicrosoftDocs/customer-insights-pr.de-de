@@ -1,5 +1,5 @@
 ---
-title: Segment Insights für bestehende Segmente
+title: Segment-Insights (Vorschauversion)
 description: Erhalten Sie Insights zu bestehenden Segmenten, um Unterschiede und Gemeinsamkeiten zu erkennen.
 ms.date: 06/10/2020
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 526b593ba9b038de3d3c27f6a7683ca76b3f2319
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646101"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051590"
 ---
-# <a name="segment-insights-preview"></a>Segment-Insights (Vorschau)
+# <a name="segment-insights-preview"></a>Segment-Insights (Vorschauversion)
 
 Entdecken Sie zusätzliche Informationen und Einblicke in Ihre vorhandenen Segmente. Finden Sie heraus, was zwei Segmente unterscheidet oder was sie gemeinsam haben.
 
@@ -29,7 +29,7 @@ Sie können auch analysieren, wie sich die Überlappung für bestimmte Attribute
 
 ### <a name="run-an-overlap-analysis"></a>Führen Sie eine Überlappungsanalyse durch
 
-1. Gehen Sie zu **Segmente** und wählen Sie die Registerkarte **Einblicke (Vorschau)**.
+1. Gehen Sie zu **Segmente** und wählen Sie die Registerkarte **Einblicke (Vorschauversion)**.
 
 1. Wählen **Neu** und wählen Sie die Option **Überlappung** im Feld **Wählen Sie Insights-Typ**.
 
@@ -43,7 +43,7 @@ Sie können auch analysieren, wie sich die Überlappung für bestimmte Attribute
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Anzeigen und Optimieren einer Überlappungsanalyse
 
-Nach Abschluss der Analyse finden Sie Details zu diesem Einblick unter **Segmente** > **Erkenntnisse (Vorschau)**.
+Nach Abschluss der Analyse finden Sie Details zu diesem Einblick unter **Segmente** > **Erkenntnisse (Vorschauversion)**.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/segment-overlap.png" alt-text="Erkenntnisdetails zur Segmentüberlappung.":::
@@ -60,7 +60,7 @@ Mithilfe von Segmentunterscheidungsmerkmalen können Sie herausfinden, was ein S
 
 ### <a name="run-a-differentiator-analysis"></a>Führen Sie eine Differenzierungsanalyse durch
 
-1. Gehen Sie zu **Segmente** und wählen Sie die Registerkarte **Einblicke (Vorschau)**.
+1. Gehen Sie zu **Segmente** und wählen Sie die Registerkarte **Einblicke (Vorschauversion)**.
 
 1. Wählen **Neu** und wählen Sie die Option **Überlappung** im Feld **Wählen Sie Insights-Typ**.
 
@@ -76,7 +76,7 @@ Mithilfe von Segmentunterscheidungsmerkmalen können Sie herausfinden, was ein S
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Anzeigen und Optimieren einer Differenzierungsanalyse
 
-Nach Abschluss der Analyse finden Sie Details zu diesem Einblick unter **Segmente** > **Erkenntnisse (Vorschau)**.
+Nach Abschluss der Analyse finden Sie Details zu diesem Einblick unter **Segmente** > **Erkenntnisse (Vorschauversion)**.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/segment-differentiators.png" alt-text="Segmentdifferenziator Erkenntnisdetails.":::

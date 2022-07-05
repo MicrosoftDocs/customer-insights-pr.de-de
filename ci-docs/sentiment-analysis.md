@@ -1,5 +1,5 @@
 ---
-title: Stimmungsanalyse für Kundenfeedback
+title: Stimmung für Kundenfeedback analysieren (Vorschauversion)
 description: Erfahren Sie, wie Sie ein Stimmungsanalysemodell für Kundenfeedback in Dynamics 365 Customer Insights verwenden.
 ms.date: 12/23/2021
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647043"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055535"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Stimmung im Kundenfeedback analysieren (Vorschau)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Stimmung im Kundenfeedback analysieren (Vorschauversion)
 
 Kunden erwarten heutzutage qualitativ hochwertige Produkte, Dienstleistungen und Erlebnisse. Vor allem Kunden, die ihr Feedback teilen. Für Organisationen ist es eine große Herausforderung, ein wachsendes Datenvolumen zu analysieren, ohne die Genauigkeit zu verringern und die Arbeitskosten zu erhöhen. Dynamics 365 Customer Insights bietet ein Stimmungsanalysemodell für Kundenfeedback, mit dem Unternehmen ihre Daten genauer und zu geringeren Kosten analysieren können.
 
@@ -80,7 +80,7 @@ Die folgenden Datenattribute sind erforderlich:
 
 1. Wählen Sie auf der Kachel **Kundenstimmungsanalyse** die Option **Modell verwenden** aus.
 
-1. Wählen Sie im Bereich **Kundenstimmungsanalyse (Vorschau)** **Erste Schritte** aus.
+1. Wählen Sie im Bereich **Kundenstimmungsanalyse (Vorschauversion)** **Erste Schritte** aus.
 
 1. Geben Sie im Schritt **Modellname** einen **Namen** für Ihre Analyse ein. 
 

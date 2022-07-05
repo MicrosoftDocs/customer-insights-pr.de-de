@@ -1,5 +1,5 @@
 ---
-title: Aktivitätsbasierte Segmentvorschläge.
+title: Vorgeschlagene Segmente basierend auf Aktivität (Vorschauversion)
 description: Mit Maschinellem Lernen können Sie anhand der Kundenaktivität neue und interessante Segmente finden.
 ms.date: 05/11/2021
 ms.reviewer: mhart
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 85c3cef3a8d531b31b64a7e5decbdc122c4383fc
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647040"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054339"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Segmentvorschläge basierend auf Aktivitätsdaten (Vorschau)
+# <a name="suggested-segments-based-on-activity-data-preview"></a>Segmentvorschläge basierend auf Aktivitätsdaten (Vorschauversion)
 
 Entdecken Sie interessante Segmente Ihrer Kunden anhand von Kundenaktivitätsdaten, die in Customer Insights erfasst werden. Beispiele für Aktivitätsdaten sind Transaktionen, Support-Anrufdauer, Käufe oder Rückgaben. Um Segmente vorzuschlagen, werden Aktivitätsdaten auf Aktualität, Häufigkeit und Geldwert (oder Dauer) analysiert. Alternativ können Sie [vorgeschlagene Segmente generieren, um eine Kennzahl zu verbessern oder besser zu verstehen, was ein Attribut beeinflusst](suggested-segments.md).
 
@@ -55,7 +55,7 @@ Vorschläge werden basierend auf den ausgewählten Eingabedaten generiert.
 
 1. Gehen Sie zu **Segmente**.
 
-1. Wählen Sie die Registerkarte **Vorschläge (Vorschau)** aus.
+1. Wählen Sie die Registerkarte **Vorschläge (Vorschauversion)** aus.
 
 1. Wählen Sie **Neue Vorschläge suchen** und wählen Sie **Kundenverhalten sehen oder antizipieren** aus. Wählen Sie **Start** um die Anleitung zu befolgen.
 
@@ -75,7 +75,7 @@ Nachdem Sie die Vorschläge generiert haben, können Sie sie nach der Dimension 
 
 ## <a name="view-details-of-a-suggested-segment"></a>Vorgeschlagene Segmentdetails anzeigen
 
-Sobald die Vorschläge generiert wurden, finden Sie sie unter **Segmente** > **Vorschläge (Vorschau)** in dem Bereich **Aktivitätsbasierte Vorschläge**.
+Sobald die Vorschläge generiert wurden, finden Sie sie unter **Segmente** > **Vorschläge (Vorschauversion)** in dem Bereich **Aktivitätsbasierte Vorschläge**.
 
 :::image type="content" source="media/suggested-segments-details.png" alt-text="Erweiterter Seitenbereich mit detaillierten Daten eines vorgeschlagenen Segments.":::
 
@@ -83,7 +83,7 @@ Wählen Sie **Siehe Vorschlag** auf einem vorgeschlagenen Segment, um die Detail
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Speichern Sie einen Vorschlag als Segment
 
-1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschau)**.
+1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschauversion)**.
 
 1. Wählen Sie das Segment aus, das Sie speichern möchten. 
 
@@ -93,7 +93,7 @@ Wählen Sie **Siehe Vorschlag** auf einem vorgeschlagenen Segment, um die Detail
 
 ## <a name="refresh-or-edit-a-set-of-suggestions"></a>Aktualisieren oder bearbeiten Sie eine Reihe von Vorschlägen
 
-1. Gehen Sie zu **Segmente** > **Vorschläge (Vorschau)** und suchen Sie nach dem Segment in dem Bereich **Aktivitätsbasierte Vorschläge**.
+1. Gehen Sie zu **Segmente** > **Vorschläge (Vorschauversion)** und suchen Sie nach dem Segment in dem Bereich **Aktivitätsbasierte Vorschläge**.
 
 1. Wählen Sie **Vorschläge aktualisieren**, um die Vorschläge zu aktualisieren und gleichzeitig die konfigurierten Attribute beizubehalten. Oder wählen Sie **Vorschläge bearbeiten**, um die konfigurierten Attribute zu ändern. Das System führt den Prozess erneut aus, generiert Segmentvorschläge basierend auf den neuesten Daten und ersetzt die aktuellen Vorschläge.
 

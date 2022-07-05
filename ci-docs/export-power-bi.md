@@ -1,5 +1,5 @@
 ---
-title: Power BI-Connector
+title: Power BI-Connector (Vorschauversion)
 description: Lernen Sie, wie der Dynamics 365 Customer Insights-Connector in Power BI verwendet wird.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647160"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051268"
 ---
-# <a name="connector-for-power-bi-preview"></a>Connector für Power BI (Vorschau)
+# <a name="power-bi-connector-preview"></a>Power BI-Connector (Vorschauversion)
 
-Erstellen Sie Visualisierungen für Ihre Daten mit dem Power BI Desktop. Generieren Sie zusätzliche Erkenntnisse und erstellen Sie Berichte mit Ihren einheitlichen Kundendaten.
+Erstellen Sie Visualisierungen für Ihre Daten mit Microsoft Power BI Desktop. Generieren Sie zusätzliche Erkenntnisse und erstellen Sie Berichte mit Ihren einheitlichen Kundendaten.
 
 ## <a name="prerequisites"></a>Anforderungen
 

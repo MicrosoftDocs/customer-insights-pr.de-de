@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-Daten nach SFTP-Hosts exportieren (enthält Video)
+title: Daten zu SFTP-Hosts exportieren (Vorschauversion) (enthält Video)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu einem SFTP-Speicherort exportieren.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947183"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081529"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportieren von Segmenten und anderen Daten nach SFTP (Vorschau)
+# <a name="export-data-to-sftp-preview"></a>Daten zu SFTP exportieren (Vorschauversion)
 
 Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie an einen SFTP-Speicherort (Secure File Transfer Protocol) exportieren.
 

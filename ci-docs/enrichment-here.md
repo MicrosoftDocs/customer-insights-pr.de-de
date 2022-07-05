@@ -1,5 +1,5 @@
 ---
-title: Anreicherung mit der Anreicherung von Drittanbietern HERE Technologies
+title: Kundenprofile mit Daten aus HERE Technologies anreichern (Vorschauversion)
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953672"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052050"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Anreicherung von Kundenprofilen mit HERE Technologies (Vorschau)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Kundenprofile mit Daten aus HERE Technologies anreichern (Vorschauversion)
 
 HERE Technologies ist ein Unternehmen für Standortplattformen, das ortsbezogene Daten und Dienste anbietet. Die Datenanreicherungsdienste von HERE Technologies verbessern die Genauigkeit der Standortinformationen Ihrer Kunden. Es bietet Adressnormalisierung, Extraktion von Längen- und Breitengraden und mehr.
 
@@ -72,7 +72,7 @@ Ihr Dynamics 365 Customer Insights Administrator kann diese Anreicherung jederze
 
 1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

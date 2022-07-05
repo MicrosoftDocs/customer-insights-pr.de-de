@@ -1,5 +1,5 @@
 ---
-title: Kundenkarten-Add-In für Dynamics 365-Apps (enthält Video)
+title: Kundenkarten-Add-In für Dynamics 365-Apps (Vorschauversion) (enthält Video)
 description: Zeigen Sie mit diesem Add-In Kundenprofildaten aus Customer Insights in Dynamics 365 Apps an.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755635"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080982"
 ---
-# <a name="customer-card-add-in-preview"></a>Kundenkarten-Add-in (Vorschau)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Kundenkarten-Add-In für Dynamics 365-Apps (Vorschauversion)
 
 Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics 365. Wenn das Kundenkarten-Add-In in einer unterstützten Dynamics 365 App installiert ist, können Sie Kundenprofilfelder, Erkenntnisse und Aktivitätszeitachse anzeigen. Das Add-In ruft Daten aus Customer Insights ab, ohne die Daten in der verbundenen Dynamics 365-App zu beeinflussen.
 
@@ -50,7 +50,7 @@ Möglicherweise müssen Sie sich mit Ihren Administratoranmeldeinformationen anm
 
 1. Als Administrator gehen Sie in modellgesteuerten Anwendungen in Dynamics 365 zum Abschnitt **Einstellungen** und wählen **Lösungen**.
 
-1. Wählen Sie den Link **Anzeigename** für die Lösung **Dynamics 365 Customer Insights-Kundenkarten-Add-in (Vorschau)** aus.
+1. Wählen Sie den Link **Anzeigename** für die Lösung **Dynamics 365 Customer Insights-Kundenkarten-Add-in (Vorschauversion)** aus.
 
    > [!div class="mx-imgBorder"]
    > ![Anzeigename auswählen.](media/select-display-name.png "Anzeigename auswählen.")

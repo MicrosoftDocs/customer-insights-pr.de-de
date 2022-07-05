@@ -1,5 +1,5 @@
 ---
-title: Exportieren von Customer Insights-Daten nach Omnisend
+title: Exportieren von Segmenten nach Omnisend (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und nach Omnisend exportieren.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 70bd94ea5e4060094c3d215e3fc263a98df51229
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 15918b2e2550869115d30ea4d84b4549c3c7d1ca
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647163"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052280"
 ---
-# <a name="export-segments-to-omnisend-preview"></a>Exportieren von Segmenten nach Omnisend (Vorschau)
+# <a name="export-segments-to-omnisend-preview"></a>Exportieren von Segmenten nach Omnisend (Vorschauversion)
 
 Exportieren Sie Segmente einheitlicher Kundenprofile nach Omnisend und verwenden Sie sie für Marketingaktivitäten.
 

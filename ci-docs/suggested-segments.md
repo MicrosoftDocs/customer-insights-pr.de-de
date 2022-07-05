@@ -1,5 +1,5 @@
 ---
-title: Vorgeschlagene Segmente auf Basis von maschinellem Lernen
+title: Vorgeschlagene Segmente (Vorschauversion)
 description: Mit maschinellem Lernen können Sie neue und interessante Segmente anhand von Kundenattributen finden.
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 5c7c6cc8231f758713b989bbe782aa03a4b78fa9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647023"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081528"
 ---
-# <a name="suggested-segments-preview"></a>Vorgeschlagene Segmente (Vorschau)
+# <a name="suggested-segments-preview"></a>Vorgeschlagene Segmente (Vorschauversion)
 
 Entdecken Sie mithilfe eines KI-Modells interessante Segmente Ihrer Kunden. Diese auf maschinellem Lernen basierende Funktion schlägt Segmente vor, die auf Kennzahlen oder Kundenattributen basieren. Dies kann dazu beitragen, Ihre KPIs zu verbessern oder den Einfluss von Attributen im Kontext anderer Attribute besser zu verstehen. 
 
@@ -60,7 +60,7 @@ Ein kategoriales Attribut wie *Kundenzufriedenheit* als primäres Attribut führ
 
 1. Gehen Sie zu **Segmente**.
 
-1. Wählen Sie die Registerkarte **Vorschläge (Vorschau)** aus.
+1. Wählen Sie die Registerkarte **Vorschläge (Vorschauversion)** aus.
 
 1. Wählen Sie **Neue Vorschläge erhalten**, um die geführte Erfahrung zu beginnen.
 
@@ -77,13 +77,13 @@ Ein kategoriales Attribut wie *Kundenzufriedenheit* als primäres Attribut führ
 
 ## <a name="view-details-of-a-suggested-segment"></a>Vorgeschlagene Segmentdetails anzeigen
 
-Sobald das KI-Modell die Vorschläge generiert hat, finden Sie sie unter **Segmente** > **Vorschläge (Vorschau)**.
+Sobald das KI-Modell die Vorschläge generiert hat, finden Sie sie unter **Segmente** > **Vorschläge (Vorschauversion)**.
  
 Wählen Sie ein vorgeschlagenes Segment aus, um die Details dieses Vorschlags zu überprüfen. Sie können auch die Attributwerte oder Regeln überprüfen, die das KI-Modell gelernt hat, um das ausgewählte Segment vorzuschlagen.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Speichern Sie einen Vorschlag als Segment
 
-1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschau)**.
+1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschauversion)**.
 
 1. Wählen Sie das Segment aus, das Sie speichern möchten. 
 
@@ -93,7 +93,7 @@ Wählen Sie ein vorgeschlagenes Segment aus, um die Details dieses Vorschlags zu
 
 ## <a name="refresh-or-edit-a-set-of-suggestions"></a>Aktualisieren oder bearbeiten Sie eine Reihe von Vorschlägen
 
-1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschau)**.
+1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschauversion)**.
 
 1. Wählen Sie **Vorschläge aktualisieren**, um die Vorschläge zu aktualisieren und gleichzeitig die konfigurierten Attribute beizubehalten. Oder wählen Sie **Attribute bearbeiten**, um die konfigurierten Attribute zu ändern. Das System führt das KI-Modell erneut aus, generiert Segmentvorschläge basierend auf den neuesten Daten und ersetzt die aktuellen Vorschläge.
 

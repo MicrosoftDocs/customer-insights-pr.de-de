@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646060"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051682"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>Verwenden Sie eine Vorlage, um eine Kennzahl zu erstellen
+# <a name="create-measures-from-templates"></a>Kennzahlen aus Vorlagen erstellen
 
 Sie können vordefinierte Vorlagen häufig verwendeter [Kennzahlen](measures.md) verwenden, um sie zu erstellen. Detaillierte Beschreibungen der Vorlagen und eine geführte Erfahrung helfen Ihnen bei der effizienten Erstellung von Kennzahlen. Vorlagen bauen auf zugeordneten Daten aus der *Einheitliche Aktivität*-Entität auf. Stellen Sie also sicher, dass Sie [Kundenaktivitäten](activities.md) konfiguriert haben, bevor Sie eine Kennzahl aus einer Vorlage erstellen.
 

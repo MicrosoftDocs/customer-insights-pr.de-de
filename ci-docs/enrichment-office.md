@@ -1,5 +1,5 @@
 ---
-title: Kundenprofile mit Daten aus Microsoft Office 365 anreichern
+title: Kundenprofile mit Daten aus Microsoft Office 365 anreichern (Vorschauversion)
 description: Verwenden Sie proprietäre Daten von Microsoft Office, um Ihre Kundenprofile mit Engagementdaten anzureichern.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954132"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055673"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Kundenprofile mit Interaktionsdaten anreichern (Vorschauversion)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Kundenprofile mit Daten aus Microsoft Office 365 anreichern (Vorschauversion)
 
 Verwenden Sie Daten aus Microsoft Office 365, um Ihre Kundenkontoprofile mit Erkenntnissen über Interaktionserkenntnisse durch Office 365-Apps anzureichern. Die Interaktionsdaten bestehen aus E-Mail- und Besprechungsaktivitäten, die auf Kontoebene aggregiert werden. Beispielsweise die Anzahl der E-Mails von einem Geschäftskonto oder die Anzahl der Besprechungen mit dem Konto. Es werden keine Daten über einzelne Benutzer zur Verfügung gestellt.
 
@@ -75,7 +75,7 @@ Um den Anreicherungsprozess zu starten, wählen Sie **Ausführen** aus.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Dies ist die *Office* Entität. Die *Office_UserEntity* enthält die Active Directory-IDs für die E-Mail-Adressen, die während der Anreicherungskonfiguration ausgewählt wurden.
 

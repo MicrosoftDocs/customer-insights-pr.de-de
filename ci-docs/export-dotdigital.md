@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-Daten nach DotDigital exportieren
+title: Exportieren von Segmenten nach DotDigital (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu DotDigital exportieren.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f63a0f5f5f93e96681a88fd758381c012a404f43
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af0cce4edb9d47247c79ae08491366349da98b1c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645971"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081609"
 ---
-# <a name="export-segments-to-dotdigital-preview"></a>Exportieren von Segmenten nach DotDigital (Vorschau)
+# <a name="export-segments-to-dotdigital-preview"></a>Exportieren von Segmenten nach DotDigital (Vorschauversion)
 
 Exportieren Sie Segmente von vereinheitlichten Kundenprofilen in DotDigital-Adressbücher und verwenden Sie diese für Kampagnen, E-Mail-Marketing und zum Aufbau von Kundensegmenten mit DotDigital. 
 

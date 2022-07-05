@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647343"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055213"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 
-Prognostizieren Sie den potenziellen Wert (Umsatz), den einzelne aktive Kunden über einen definierten zukünftigen Zeitraum in Ihr Unternehmen einbringen werden. Mit dieser Funktion können Sie verschiedene Ziele erreichen: 
+Prognostizieren Sie den potenziellen Wert (Umsatz), den einzelne aktive Kunden über einen definierten zukünftigen Zeitraum in Ihr Unternehmen einbringen werden. Mit dieser Funktion können Sie verschiedene Ziele erreichen:
 - Identifizieren Sie hochwertige Kunden und verarbeiten Sie diese Erkenntnisse
 - Erstellen Sie strategische Kundensegmente basierend auf ihrem potenziellen Wert, um personalisierte Kampagnen mit gezielten Verkaufs-, Marketing- und Supportbemühungen durchzuführen
 - Leiten Sie die Produktentwicklung an, indem Sie sich auf Funktionen konzentrieren, die den Kundennutzen steigern

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-Daten in einen Azure Blob Storage exportieren
+title: Exportieren von Daten in einen Azure Blob Storage (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zum Azure Blob Storage exportieren.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947137"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055489"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportieren Sie die Segmentliste und andere Daten in den Azure Blob Storage (Vorschau)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Exportieren von Daten in einen Azure Blob Storage (Vorschauversion)
 
 Speichern Sie Ihre Customer Insights-Daten in einem Azure Blob Storage, oder verwenden Sie es, um Ihre Daten in andere Anwendungen zu übertragen.
 

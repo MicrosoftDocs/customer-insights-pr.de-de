@@ -1,5 +1,5 @@
 ---
-title: Neue und aktualisierte Funktionen
+title: Neuerungen in Dynamics 365 Customer Insights
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843346"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054017"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Neuerungen in Dynamics 365 Customer Insights
 
@@ -60,11 +60,11 @@ Weitere Informationen finden Sie unter [So geht es. Eine neue Umgebung erstellen
 
 Die Updates im April 2022 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Ergänzung um Dun&Bradstreet-Daten (Vorschau)
+### <a name="dun--bradstreet-enrichment-preview"></a>Ergänzung um Dun&Bradstreet-Daten (Vorschauversion)
 
 Dun & Bradstreet bietet kommerzielle Daten, Analysen und Erkenntnisse für Unternehmen. Sie ermöglicht es Kunden mit einheitlichen Kundenprofilen für Unternehmen, ihre Daten anzureichern. Die Anreicherung umfasst Attribute wie DUNS-Nummer, Größe der Firma, Standort, Branche und mehr.
 
-Weitere Informationen finden Sie unter [Anreicherung von Firmenprofilen mit Dun & Bradstreet (Vorschau)](enrichment-dnb.md).
+Weitere Informationen finden Sie unter [Anreicherung von Firmenprofilen mit Dun & Bradstreet (Vorschauversion)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definieren des Kennzahlentyps beim Erstellen einer neuen Kennzahl
 
@@ -105,7 +105,7 @@ For more information, see [Aktivieren der Datenfreigabe für Dataverse über Ihr
 
 Wir bauen unser Ökosystem an Exportdestinationen mit neuen Verbindungen weiter aus. Sie können jetzt Segmente nach Iterable und Braze exportieren, um deren Aktivierungsdienste zu nutzen.
 
-Weitere Informationen finden Sie unter [Segmente nach Iterable exportieren (Vorschau)](export-iterable.md) und [Segmente nach Braze exportieren (Vorschau)](export-braze.md).
+Weitere Informationen finden Sie unter [Segmente nach Iterable exportieren (Vorschauversion)](export-iterable.md) und [Segmente nach Braze exportieren (Vorschauversion)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Verbesserungen am Marketo- und Google Ads-Export
 
@@ -124,13 +124,13 @@ Sofort einsatzbereite Vorhersage-Modelle, einschließlich **Abonnement-Churn**, 
 
 Weitere Informationen finden Sie unter [Vorhersage-Übersicht](predictions-overview.md).
 
-### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Neu Datenquelle: Integration mit Azure Synapse Analytics (Vorschau)
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Neu Datenquelle: Integration mit Azure Synapse Analytics (Vorschauversion)
 
 Azure Synapse Analytics ist ein Analysedienst für Unternehmen, der Erkenntnisse über Data Warehouses und Big-Data-Systeme hinweg verkürzt.
 
 Organisationen, die bereits Azure Synapse Analytics verwenden, kann diese Daten in Customer Insights aufnehmen. 
 
-Weitere Informationen finden Sie unter [Verbindung zu Azure Synapse Datenquellen (Vorschau)](connect-synapse.md).
+Weitere Informationen finden Sie unter [Verbindung zu Azure Synapse Datenquellen (Vorschauversion)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>LiveRamp-Anreicherung (Vorschauversion)
 
@@ -138,7 +138,7 @@ LiveRamp bietet Identitätsauflösung und Konsolidierung von Kundendaten. Sie k�
 
 Weitere Informationen finden Sie unter [Kundenprofile mit Identitätsdaten von LiveRamp (Vorschauversion)](enrichment-liveramp.md).
 
-### <a name="enrichment-for-data-sources-preview"></a>Anreicherung für Datenquellen (Vorschau)
+### <a name="enrichment-for-data-sources-preview"></a>Anreicherung für Datenquellen (Vorschauversion)
 
 Verwenden Sie Daten aus Quellen wie Microsoft und anderen Partnern, um Ihre Kundendaten vor der Datenvereinheitlichung anzureichern. Datenquellen-Anreicherungen tragen zu einer höheren Datenvollständigkeit und -qualität bei, die dazu beitragen können, bessere Ergebnisse zu erzielen, sobald Sie Ihre Daten vereinheitlicht haben.
 
@@ -180,7 +180,7 @@ Die Updates im Januar 2022 beinhalten neue Funktionen, Leistungssteigerungen und
 
 Customer Insights bietet eine neue KI-gestützte Funktion, um die Kundenstimmung zu synthetisieren und bestimmte Geschäftsaspekte als Möglichkeiten für gezielte Verbesserungen zu identifizieren. Durch die Analyse des schriftlichen Feedbacks Ihrer Kunden können Sie zu geringen Kosten genaue Erkenntnisse gewinnen. Stimmungsanalyse auf Basis von NLP-Modellen (Natural Language Processing), die zwei abgeleitete Erkenntnisse für jede Kunden-ID generieren. Eine Stimmungsbewertung (von –5 bis 5) und eine Liste anwendbarer Geschäftsaspekte. 
 
-Weitere Informationen finden Sie unter [Analysieren der Stimmung im Kundenfeedback (Vorschau)](sentiment-analysis.md).
+Weitere Informationen finden Sie unter [Analysieren der Stimmung im Kundenfeedback (Vorschauversion)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

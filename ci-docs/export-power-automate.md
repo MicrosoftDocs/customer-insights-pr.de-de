@@ -1,5 +1,5 @@
 ---
-title: Power Automate Connector | Microsoft Docs
+title: Power Automate-Konnektor (Vorschauversion) | Microsoft-Dokumentation
 description: Flows in Microsoft Power Automate aus Dynamics 365 Customer Insights erstellen.
 ms.date: 06/24/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741178"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081061"
 ---
-# <a name="power-automate-connector-preview"></a>Power Automate-Connector (Vorschau)
+# <a name="power-automate-connector-preview"></a>Power Automate-Connector (Vorschauversion)
 
-Lösen Sie bei Änderungen an den Daten automatisch bestimmte Ereignisse aus. Verwalten Sie komplexere Flows direkt in [Power Automate](https://flow.microsoft.com/).
+Lösen Sie bei Änderungen an den Daten automatisch bestimmte Ereignisse aus. Verwalten Sie komplexere Flows direkt in [Microsoft Power Automate](https://flow.microsoft.com/).
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
@@ -46,7 +46,7 @@ Der Power Automate-Anschluss bietet andere Aktionen als die verfügbaren Auslös
 
 1. Auf der **Power Automate**-Kachel wählen Sie **Einrichten**.
 
-1. Der Customer Insights-Konnektor (Vorschau) in Power Automate wird geöffnet. **Anmelden** bei Power Automate.
+1. Der Customer Insights-Konnektor (Vorschauversion) in Power Automate wird geöffnet. **Anmelden** bei Power Automate.
 
 1. Wählen Sie einen der verfügbaren Trigger und fügen Sie Ihrem neuen Flow weitere Schritte hinzu. Weitere Informationen finden Sie unter [Cloud-Flow in Power Automate erstellen](/power-automate/get-started-logic-flow).
 

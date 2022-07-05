@@ -1,5 +1,5 @@
 ---
-title: Verbinden Sie Common Data Model-Daten mit einem Azure Data Lake-Konto
+title: Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
 description: Arbeiten Sie mit Common Data Model-Daten unter Verwendung von Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011556"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081012"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbindung mit Daten in Azure Data Lake Storage herstellen
 

@@ -1,5 +1,5 @@
 ---
-title: Reichern Sie Kundenprofile mit Marken- und Interessendaten von Microsoft an
+title: Reichern Sie Kundenprofile mit Marken- und Interessendaten von Microsoft an (Vorschauversion)
 description: Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Affinitäten und Share of Voice anzureichern.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953764"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081508"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Anreichern von Kundenprofilen mit Affinitäten und Share of Voice (Vorschau)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Reichern Sie Kundenprofile mit Marken- und Interessendaten von Microsoft an (Vorschauversion)
 
 Verwenden Sie proprietäre Daten von Microsoft, um Ihre Kundendaten mit Markenaffinitäten, Interessenaffinitäten und Share of Voice (SoV) anzureichern. Diese Affinitäten und SoV basieren auf Daten von Personen in ähnlichen Bevölkerungsgruppen wie Ihre Kunden. Diese Informationen helfen Ihnen, Ihre Kunden basierend auf ihren Affinitäten oder SoV zu bestimmten Marken und Interessen besser zu verstehen und zu segmentieren.
 
@@ -104,7 +104,7 @@ Wir unterstützen derzeit die folgenden Länder-/Regionenoptionen: Australien, K
 
    Wenn Sie Profile anreichern, reichern wir alle Kundenprofile an, für die wir Daten für die ausgewählten Marken und Interessen erhalten, einschließlich Profile, die sich nicht in dem ausgewählten Land oder der ausgewählten Region befinden. Wenn Sie beispielsweise Deutschland ausgewählt haben, bereichern wir Profile in den USA, wenn Daten für die ausgewählten Marken und Interessen in den USA verfügbar sind.
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

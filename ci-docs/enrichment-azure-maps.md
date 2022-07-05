@@ -1,5 +1,5 @@
 ---
-title: Anreichern von Kundenprofilen mit Standortdaten aus Azure Maps
+title: Kundenprofile mit Standortdaten von Azure Maps anreichern (Vorschauversion)
 description: Allgemeine Informationen zur Azure Maps-Erstanbieter-Anreicherung.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953627"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052606"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Anreicherung von Kundenprofilen mit Azure Maps (Vorschau)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Kundenprofile mit Standortdaten von Azure Maps anreichern (Vorschauversion)
 
 Azure Maps stellt standortzentrierte Daten und Dienste bereit, um Erfahrungen basierend auf Geodaten mit integrierter Standortintelligenz zu bieten. Die Datenanreicherungsdienste von Azure Maps verbessern die Genauigkeit der Standortinformationen Ihrer Kunden. Sie bieten Funktionen wie die Adressnormalisierung und die Extraktion von Breiten- und Längengraden nach Dynamics 365 Customer Insights.
 
@@ -70,7 +70,7 @@ Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederze
 
 1. **Erweiterte Einstellungen** bewerten, die maximale Flexibilität für erweiterte Anwendungsfälle bieten. Die folgenden Standardwerte müssen jedoch normalerweise nicht geändert werden.
 
-   - **Art der Adressen**: Die beste Adressübereinstimmung wird zurückgegeben, auch wenn sie unvollständig ist. Um nur vollständige Adressen zu erhalten – zum Beispiel Adressen, die die Hausnummer enthalten – deaktivieren Sie alle Kontrollkästchen außer **Punktadressen**.
+   - **Art der Adressen**: Die beste Adressübereinstimmung wird zurückgegeben, auch wenn sie unvollständig ist. Um nur vollständige Adressen zu erhalten&mdash; zum Beispiel Adressen, die die Hausnummer enthalten&mdash; deaktivieren Sie alle Kontrollkästchen außer **Punktadressen**.
    - **Sprache**: Adressen werden in der Sprache basierend auf der Adressregion zurückgegeben. Um eine standardisierte Adresssprache anzuwenden, wählen Sie die Sprache aus dem Dropdown-Menü aus. Wenn Sie beispielsweise **Englisch** auswählen, wird **Kopenhagen, Dänemark** statt **København, Danmark** zurückgegeben.
    - **Maximale Anzahl von Ergebnissen**: Anzahl der Ergebnisse pro Adresse.
 
@@ -82,7 +82,7 @@ Ihr Dynamics 365 Customer Insights-Administrator kann diese Anreicherung jederze
 
 1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

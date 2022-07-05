@@ -1,5 +1,5 @@
 ---
-title: Exportieren von Customer Insights-Daten nach Microsoft Advertising
+title: Exportieren von Segmenten nach Microsoft Advertising (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und nach Microsoft Advertising exportieren.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14479e915dd6ae76e018b59bee5980a600bb222d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ca37159ec6473ad5c331a0ce1aa8424d277529ff
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647440"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081549"
 ---
-# <a name="export-segments-to-microsoft-advertising-preview"></a>Exportieren von Segmenten nach Microsoft Advertising (Vorschau)
+# <a name="export-segments-to-microsoft-advertising-preview"></a>Exportieren von Segmenten nach Microsoft Advertising (Vorschauversion)
 
 Exportieren Sie Customer Insights-Segmente nach Microsoft Advertising, um Zielgruppen für Customer Match zu erstellen. Verwenden Sie diese Zielgruppen für Ihre Werbekampagnen.
 
@@ -33,7 +33,7 @@ Exportieren Sie Customer Insights-Segmente nach Microsoft Advertising, um Zielgr
 - Der Export von Segmenten mit bis zu 500'000 Kundenprofilen nach Microsoft Advertising kann bis zu 10 Minuten dauern. 
 
 
-## <a name="set-up-the-connection-to-microsoft-advertising"></a>Einrichten der Verbindung mit Microsoft Advertising (Vorschau)
+## <a name="set-up-the-connection-to-microsoft-advertising"></a>Einrichten der Verbindung mit Microsoft Advertising (Vorschauversion)
 
 1. Gehen Sie zu **Administrator** > **Verbindungen**.
 

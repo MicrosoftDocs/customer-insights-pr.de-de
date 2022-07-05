@@ -1,5 +1,5 @@
 ---
-title: Daten aus Azure Synapse Analytics erfassen
+title: Eine Azure Synapse-Datenquelle verbinden (Vorschauversion)
 description: Verwenden Sie eine Datenbank in Azure Synapse als Datenquelle in Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011426"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052698"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Eine Azure Synapse Analytics-Datenquelle verbinden (Vorschauversion)
 
@@ -59,7 +59,7 @@ Weitere Informationen finden Sie unter [Azure Synapse-Überblick](/azure/synapse
 
 1. Wählen Sie eine [verfügbare Verbindung](connections.md) mit Azure Synapse Analytics aus oder erstellen Sie eine neue.
 
-1. Wählen Sie eine **Datenbank** aus dem Arbeitsbereich, der in der ausgewählten Azure Synapse Analytics-Verbindung verbunden ist, und wählen Sie **Weiter**.
+1. Wählen Sie eine **Datenbank** aus dem Arbeitsbereich, der in der ausgewählten Azure Synapse Analytics-Verbindung verbunden ist, und wählen Sie **Weiter**. Derzeit unterstützen wir nur den Datenbanktyp *Lake-Datenbank*.
 
 1. Wählen Sie die zu erfassenden Entitäten aus der verbundenen Datenbank aus und wählen Sie **Weiter**.
 

@@ -1,5 +1,5 @@
 ---
-title: Anreicherung mit der Experian Anreicherung von Drittanbietern
+title: Anreichern von Kundenprofilen mit demografischen Daten von Experian (Vorschauversion)
 description: Allgemeine Informationen zur Experian Anreicherung durch Dritte.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954086"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053020"
 ---
-# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Anreichern von Kundenprofilen mit demografischen Daten von Experian (Vorschau)
+# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Anreichern von Kundenprofilen mit demografischen Daten von Experian (Vorschauversion)
 
 Experian ist ein weltweit führender Anbieter von Kredit‑ und Marketingdienstleistungen für Verbraucher‑ und Geschäftskredite. Mit den Datenanreicherungsdiensten von Experian können Sie ein tieferes Verständnis Ihrer Kunden aufbauen, indem Sie Ihre Kundenprofile mit demografischen Daten wie Haushaltsgröße, Einkommen und mehr bereichern.
 
@@ -79,7 +79,7 @@ Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten zu übermitteln an 
 
 1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

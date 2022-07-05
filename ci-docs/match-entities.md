@@ -1,5 +1,5 @@
 ---
-title: Entitäten für die Datenvereinheitlichung abgleichen
+title: Übereinstimmungsbedingungen für die Datenvereinheitlichung
 description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.
 recommendations: false
 ms.date: 05/05/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: bc470dd932c2c981adc5840bb52d60f8dfe0de61
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740948"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081051"
 ---
-# <a name="match-conditions"></a>Abgleich-Bedingungen
+# <a name="match-conditions-for-data-unification"></a>Übereinstimmungsbedingungen für die Datenvereinheitlichung
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
@@ -30,7 +30,7 @@ Dieser Schritt der Vereinheitlichung definiert die Abgleichreihenfolge und -rege
 > [!NOTE]
 > Sobald Sie Ihre Vergleichsbedingungen erstellt und **Weiter** ausgewählt haben, können Sie eine ausgewählte Entität oder ein ausgewähltes Attribut nicht entfernen. Wählen Sie bei Bedarf **Zurück**, um die ausgewählten Entitäten und Attribute zu überprüfen, bevor Sie fortfahren.
 
-## <a name="include-enriched-entities-preview"></a>Angereicherte Entitäten einschließen (Vorschau)
+## <a name="include-enriched-entities-preview"></a>Angereicherte Entitäten einschließen (Vorschauversion)
 
 Wenn Sie Entitäten auf der Ebene der Datenquelle angereichert haben, um Ihre Vereinigungsergebnisse zu verbessern, wählen Sie sie aus. Weitere Informationen finden Sie unter [Anreicherungen für Datenquellen](data-sources-enrichment.md). Wenn Sie angereicherte Entitäten auf der Seite **Doppelte Datensätze** ausgewählt haben, müssen Sie sie nicht erneut auswählen.
 

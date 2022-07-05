@@ -1,5 +1,5 @@
 ---
-title: Semantische Zuordnungen (Vorschau)
+title: Semantische Zuordnungen (Vorschauversion)
 description: Überblick über semantische Zuordnungen und deren Verwendung.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647060"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081708"
 ---
-# <a name="semantic-mappings-preview"></a>Semantische Zuordnungen (Vorschau)
+# <a name="semantic-mappings-preview"></a>Semantische Zuordnungen (Vorschauversion)
 
 Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinierten Schemata zuordnen. Diese Schemata helfen Customer Insights, Ihre Datenattribute besser zu verstehen. Semantische Zuordnungen und die bereitgestellten Daten ermöglichen neue Einblicke und Funktionen in Customer Insights. Um Ihre Aktivitätsdaten den Schemata zuzuordnen, lesen Sie die [Aktivitäten](activities.md) Dokumentation.
 
@@ -26,7 +26,7 @@ Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinier
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definieren Sie eine semantische Entitätszuordnung von ContactProfile
 
-1. Gehen Sie zu **Daten** > **Semantische Zuordnungen (Vorschau)**.
+1. Gehen Sie zu **Daten** > **Semantische Zuordnungen (Vorschauversion)**.
 
 1. Wählen Sie **Semantische Zuordnung hinzufügen** um das geführte Erlebnis zu starten.
 
@@ -81,7 +81,7 @@ Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinier
 
 ## <a name="manage-existing-semantic-mappings"></a>Verwalten Sie vorhandene semantische Zuordnungen
 
-Unter **Daten** > **Semantische Zuordnungen (Vorschau)**, können Sie alle Ihre gespeicherten semantischen Zuordnungen anzeigen und verwalten. Jede semantische Zuordnung wird durch eine separate Zeile dargestellt. Sie finden Details über die Quellentität, den semantischen Typ, den Zuordnungs-Typ und seinen Status.
+Unter **Daten** > **Semantische Zuordnungen (Vorschauversion)**, können Sie alle Ihre gespeicherten semantischen Zuordnungen anzeigen und verwalten. Jede semantische Zuordnung wird durch eine separate Zeile dargestellt. Sie finden Details über die Quellentität, den semantischen Typ, den Zuordnungs-Typ und seinen Status.
 
 :::image type="content" source="media/semantic-mapping-options.png" alt-text="Optionen zum Verwalten von semantischen Zuordnungen.":::
 

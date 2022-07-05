@@ -1,19 +1,19 @@
 ---
-title: Exportieren Sie Customer Insights-Daten nach Azure Synapse Analytics
+title: Daten zu Azure Synapse Analytics exportieren (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung zu Azure Synapse Analytics konfigurieren.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741502"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081588"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Daten zu Azure Synapse Analytics exportieren (Vorschauversion)
 
@@ -72,13 +72,13 @@ Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung di
 
 1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Abschnitt **Azure Synapse Analytics** aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine [Verbindungen](connections.md) dieses Typs zur Verfügung.
 
-1. Geben Sie einen erkennbaren **Anzeigename** für Ihren Export und einen **Datenbanknamen** ein.
+1. Geben Sie einen erkennbaren **Anzeigename** für Ihren Export und einen **Datenbanknamen** ein. Der Export erstellt eine neue [Azure Synapse Lake-Datenbank](/azure/synapse-analytics/database-designer/concepts-lake-database) in dem in der Verbindung definierten Arbeitsbereich.
 
 1. Wählen Sie die Entitäten aus, die Sie zu Azure Synapse Analytics exportieren möchten.
    > [!NOTE]
    > Datenquellen basierend auf einem [Common Data Model-Ordner](connect-common-data-model.md) werden nicht unterstützt.
 
-2. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern** aus.
 
 Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
 

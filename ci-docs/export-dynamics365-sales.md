@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-Daten nach Dynamics 365 Sales exportieren
+title: Segmente zu Dynamics 365 Sales exportieren (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu Dynamics 365 Sales exportieren.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646160"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081042"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmente in Dynamics 365 Sales verwenden (Vorschau)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Segmente zu Dynamics 365 Sales exportieren (Vorschauversion)
 
 Verwenden Sie Ihre Kundendaten, um Marketinglisten zu erstellen, Workflows zu verfolgen und Werbeaktionen mit Dynamics 365 Sales zu senden.
 

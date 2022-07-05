@@ -1,5 +1,5 @@
 ---
-title: Anreicherung von Firmenprofilen mit Dun & Bradstreet
+title: Anreicherung von Firmenprofilen mit Dun & Bradstreet (Vorschauversion)
 description: Allgemeine Informationen über die Anreicherung von Dun & Bradstreet durch Dritte.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953890"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081082"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Anreicherung von Firmenprofilen mit Dun & Bradstreet (Vorschau)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Anreicherung von Firmenprofilen mit Dun & Bradstreet (Vorschauversion)
 
 Dun & Bradstreet bietet kommerzielle Daten, Analysen und Erkenntnisse für Unternehmen. Sie ermöglicht es Kunden mit einheitlichen Kundenprofilen für Unternehmen, ihre Daten anzureichern. Die Anreicherung umfasst Attribute wie DUNS-Nummer, Größe der Firma, Standort, Branche und mehr.
 
@@ -102,7 +102,7 @@ Wir unterstützen derzeit die folgenden Länder-/Regionsoptionen: Kanada (Englis
 
 1. Wählen Sie **Ausführen**, um den Anreicherungsprozess zu starten oder zu schließen, um zur Seite **Anreicherung** zurückzukehren.
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

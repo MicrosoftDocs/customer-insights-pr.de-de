@@ -1,5 +1,5 @@
 ---
-title: Segmente in Customer Insights
+title: Übersicht über Segmente
 description: Übersicht über Segmente und wie man sie erstellt und verwaltet.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800741"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050946"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
@@ -91,7 +91,7 @@ Sie können ein Segment von der Segmentseite oder der [Exportseite](export-desti
 
 1. Wählen Sie **Exporte verwalten** aus der Dropdown-Liste Aktionen.
 
-1. Die Seite **Exporte (Vorschau) für Segment** wird angezeigt. Sie sehen alle konfigurierten Exporte gruppiert danach, ob sie das aktuelle Segment enthalten oder nicht.
+1. Die Seite **Exporte (Vorschauversion) für Segment** wird angezeigt. Sie sehen alle konfigurierten Exporte gruppiert danach, ob sie das aktuelle Segment enthalten oder nicht.
 
    1. Um das ausgewählte Segment zu einem Export hinzuzufügen, **bearbeiten** Sie den jeweiligen Export, um das entsprechende Segment auszuwählen, speichern Sie dann. In Umgebungen für einzelne Kunden können Sie stattdessen den Export in der Liste auswählen und **Segment hinzufügen** auswählen, um das gleiche Ergebnis zu erzielen.
 

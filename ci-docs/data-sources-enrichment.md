@@ -1,5 +1,5 @@
 ---
-title: Datenquellanreicherung
+title: Anreicherung für Datenquellen (Vorschauversion)
 description: Reichern Sie Datenquellen an, bevor Sie den Datenvereinheitlichungsprozess durchlaufen.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011472"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080981"
 ---
-# <a name="enrichment-for-data-sources-preview"></a>Anreicherung für Datenquellen (Vorschau)
+# <a name="enrichment-for-data-sources-preview"></a>Anreicherung für Datenquellen (Vorschauversion)
 
 Verwenden Sie Daten aus Quellen wie Microsoft und anderen Partnern, um Ihre Kundendaten vor der Datenvereinheitlichung anzureichern. Datenquellen-Anreicherungen tragen zu einer höheren Datenvollständigkeit und -qualität bei, die dazu beitragen können, bessere Ergebnisse zu erzielen, sobald Sie Ihre Daten vereinheitlicht haben. Beispielsweise erhöht die Verwendung eines normalisierten und standardisierten Formats für Adressen die Qualität der Übereinstimmungsergebnisse. Eine Liste der unterstützten Anreicherungen finden Sie unter [unterstützte Datenquellen-Anreicherungsoptionen](#supported-data-source-enrichments).
 

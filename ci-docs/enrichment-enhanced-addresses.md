@@ -1,5 +1,5 @@
 ---
-title: Anreicherung für erweiterte Adressen (enthält Video)
+title: Kundenprofile mit erweiterten Adressen anreichern (enthält Video)
 description: Bereichern und normalisieren Sie Adressinformationen von Kundenprofilen mit Microsoft-Modellen.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953810"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080971"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Anreicherung von Kundenprofilen mit erweiterten Adressen
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Kundenprofile mit erweiterten Adressen anreichern
 
 Adressen in Ihren Daten können unstrukturiert, unvollständig oder falsch sein. Verwenden Sie die Modelle von Microsoft, um Ihre Adressen im [Common Data Model-Format](/common-data-model/schema/core/applicationcommon/address) für bessere Genauigkeit und Einsichten zu normalisieren und anzureichern.
 
@@ -101,7 +101,7 @@ Wir unterstützen derzeit die Anreicherung von Adressen in diesen Ländern oder 
 
 1. Wählen Sie **Anreicherung speichern**, nachdem Sie Ihre Auswahl überprüft haben.
 
-## <a name="enrichment-results"></a>Anreicherungsergebnisse
+## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

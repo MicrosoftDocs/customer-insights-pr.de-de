@@ -1,5 +1,5 @@
 ---
-title: LiveRamp Connector
+title: Segmente nach LiveRamp exportieren (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu LiveRamp exportieren.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 973f69c94c625fe4ec543ca5fb57289c4102ea97
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3e30a16dcb276fa6c951ad0b42ed0a4792f87ce3
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647403"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050762"
 ---
-# <a name="export-segments-to-liverampreg-preview"></a>Segmente nach LiveRamp&reg; exportieren (Vorschau)
+# <a name="export-segments-to-liverampreg-preview"></a>Segmente nach LiveRamp&reg; exportieren (Vorschauversion)
 
 Aktivieren Sie Ihre Daten in LiveRamp, um sich mit über 500 Plattformen in digitalen, sozialen und TVs zu verbinden. Arbeiten Sie mit Ihren Daten in LiveRamp, um Werbekampagnen auszurichten, zu Unterdrücken und zu personalisieren.
 

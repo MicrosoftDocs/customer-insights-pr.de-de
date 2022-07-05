@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800325"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081649"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Kennzahlen-Builder verwenden, um Kennzahlen von Grund auf neu zu erstellen
+# <a name="create-new-measures-with-the-measure-builder"></a>Neue Kennzahlen mit dem Kennzahlen-Builder erstellen
 
 In diesem Artikel wird erklärt, wie Sie eine neue [Kennzahl](measures.md) von Grund auf neu erstellen. Mit dem Kennzahlen-Builder können Sie Berechnungen mit mathematischen Operatoren, Aggregationsfunktionen und Filtern definieren. Sie können eine Kennzahl mit Attributen von Entitäten erstellen, die sich auf die vereinheitlichte Entität *Kunde* beziehen.
 

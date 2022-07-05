@@ -1,5 +1,5 @@
 ---
-title: Exportieren Sie Customer Insights-Daten nach ActiveCampaign
+title: Segmente nach ActiveCampaign exportieren
 description: Erfahren Sie, wie Sie die Verbindung und den Export zu ActiveCampaign konfigurieren.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646211"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054707"
 ---
-# <a name="export-segments-to-activecampaign-preview"></a>Segmente nach ActiveCampaign exportieren (Vorschau)
+# <a name="export-segments-to-activecampaign-preview"></a>Segmente nach ActiveCampaign exportieren (Vorschauversion)
 
 Exportieren Sie Segmente von einheitlichen Kundenprofilen nach ActiveCampaign und verwenden Sie sie für Marketingaktivitäten.
 
 ## <a name="prerequisites"></a>Anforderungen
 
--   Sie haben ein [ActiveCampaign-Konto](https://www.activecampaign.com/) und entsprechende Administrator-Anmeldeinformationen.
--   Sie haben [Konfigurierte Segmente](segments.md) in Customer Insights.
--   Vereinheitlichte Kundenprofile in den exportierten Segmenten enthalten ein Feld mit einer E-Mail-Adresse.
+- Sie haben ein [ActiveCampaign-Konto](https://www.activecampaign.com/) und entsprechende Administrator-Anmeldeinformationen.
+- Sie haben [Konfigurierte Segmente](segments.md) in Customer Insights.
+- Vereinheitlichte Kundenprofile in den exportierten Segmenten enthalten ein Feld mit einer E-Mail-Adresse.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-Daten zu AdRoll exportieren
+title: Exportieren von Segmenten nach AdRoll (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu AdRoll exportieren.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646081"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081568"
 ---
-# <a name="export-segments-to-adroll-preview"></a>Exportieren von Segmenten nach AdRoll (Vorschau)
+# <a name="export-segments-to-adroll-preview"></a>Exportieren von Segmenten nach AdRoll (Vorschauversion)
 
 Exportieren Sie Segmente einheitlicher Kundenprofile nach AdRoll und verwenden Sie sie für Werbezwecke. 
 
 ## <a name="prerequisites-for-a-connection"></a>Voraussetzungen für die Verbindung
 
--   Sie haben ein [AdRoll-Konto](https://www.adroll.com/) und die entsprechenden Anmeldeinformationen.
--   Sie haben [Konfigurierte Segmente](segments.md) in Customer Insights.
--   Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
+- Sie haben ein [AdRoll-Konto](https://www.adroll.com/) und die entsprechenden Anmeldeinformationen.
+- Sie haben [Konfigurierte Segmente](segments.md) in Customer Insights.
+- Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
