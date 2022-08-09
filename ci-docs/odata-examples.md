@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081725"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121561"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>OData-Abfragebeispiele für Customer Insights-APIs
 
@@ -23,7 +23,7 @@ Dieser Artikel listet einige häufig angeforderte Beispielabfragen auf, die Ihne
 
 Sie müssen die Abfragebeispiele ändern, damit sie in den Zielumgebungen funktionieren: 
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}`, wobei {instanceId} die GUID der Customer Insights-Umgebung ist, die Sie abfragen möchten. Der [ListAllInstances-Vorgang](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) lässt Sie die {InstanceId} finden, auf die Sie Zugriff haben.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data`, wobei {instanceId} die GUID der Customer Insights-Umgebung ist, die Sie abfragen möchten. Der [ListAllInstances-Vorgang](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) lässt Sie die {InstanceId} finden, auf die Sie Zugriff haben.
 - {CID}: GUID eines einheitlichen Kundendatensatzes. Beispiel: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Identifikator des Primärschlüssels eines Kundendatensatzes in einer Datenquelle. Beispiel: `CNTID_1002`
 - {DSname}: Zeichenfolge mit dem Entitätsnamen einer Datenquelle, die in Customer Insights aufgenommen wird. Beispiel: `Website_contacts`.
@@ -39,9 +39,10 @@ Die folgende Tabelle enthält eine Reihe von Beispielabfragen für die Entität 
 |Alternativschlüssel    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternative Schlüssel bleiben in der einheitlichen Kundenentität bestehen       |
 |Auswählen   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |In    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Alternativschlüssel + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Alternativschlüssel + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Suche  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Gibt die Top-10-Ergebnisse für eine Suchzeichenfolge zurück      |
 |Segmentmitgliedschaft  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Gibt eine voreingestellte Anzahl von Zeilen aus der Segmentierungsentität zurück.      |
+|Segmentzugehörigkeit für einen Kunden | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Gibt das Kundenprofil zurück, wenn er Mitglied des angegebenen Segments ist     |
 
 ## <a name="unified-activity"></a>Vereinheitlichte Aktivität
 

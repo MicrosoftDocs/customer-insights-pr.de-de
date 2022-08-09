@@ -1,7 +1,7 @@
 ---
 title: Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 description: Prognostizieren Sie das Umsatzpotenzial für aktive Kunden in der Zukunft.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055213"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186439"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Benutzerdefinierte Lebensdauer-Wert(CLV)-Vorhersage
 
 Prognostizieren Sie den potenziellen Wert (Umsatz), den einzelne aktive Kunden über einen definierten zukünftigen Zeitraum in Ihr Unternehmen einbringen werden. Mit dieser Funktion können Sie verschiedene Ziele erreichen:
+
 - Identifizieren Sie hochwertige Kunden und verarbeiten Sie diese Erkenntnisse
 - Erstellen Sie strategische Kundensegmente basierend auf ihrem potenziellen Wert, um personalisierte Kampagnen mit gezielten Verkaufs-, Marketing- und Supportbemühungen durchzuführen
 - Leiten Sie die Produktentwicklung an, indem Sie sich auf Funktionen konzentrieren, die den Kundennutzen steigern
 - Optimieren Sie die Vertriebs- oder Marketingstrategie und weisen Sie das Budget für die Kundenansprache genauer zu
-- Erkennen und belohnen Sie hochwertige Kunden durch Treue- oder Prämienprogramme 
+- Erkennen und belohnen Sie hochwertige Kunden durch Treue- oder Prämienprogramme
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -35,7 +36,7 @@ Prognostizieren Sie den potenziellen Wert (Umsatz), den einzelne aktive Kunden �
 
 Da das Konfigurieren und Ausführen eines CLV-Modells nicht viel Zeit in Anspruch nimmt, sollten Sie mehrere Modelle mit unterschiedlichen Eingabeeinstellungen erstellen und die Modellergebnisse vergleichen, um festzustellen, welches Modellszenario Ihren Geschäftsanforderungen am besten entspricht.
 
-###  <a name="data-requirements"></a>Datenanforderungen
+### <a name="data-requirements"></a>Datenanforderungen
 
 Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeichnet, für eine höhere Modellleistung empfohlen. Je mehr Daten das Modell verarbeiten kann, desto genauer ist die Vorhersage. Wir empfehlen Ihnen daher, weitere Daten zur Kundenaktivität zu erfassen, sofern verfügbar.
 
@@ -52,11 +53,12 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
     - Webaktivitäten: Website-Besuchsverlauf, E-Mail-Verlauf
     - Loyalitätsaktivitäten: Sammeln von Treueprämienpunkten und Einlösungsverlauf
     - Kundenservice-Protokoll, Serviceanruf, Beschwerde oder Rückgabeverlauf
+    - Kundenprofilinformationen
 - Daten über Kundenaktivitäten (optional):
     - Aktivitätskennungen zur Unterscheidung von Aktivitäten desselben Typs
     - Kundenidentifikatoren zur Zuordnung von Aktivitäten zu Ihren Kunden
     - Aktivitätsinformationen, die den Namen und das Datum der Aktivität enthalten
-    - Das semantische Datenschema für Aktivitäten umfasst: 
+    - Das semantische Datenschema für Aktivitäten umfasst:
         - **Primärschlüssel**: Ein eindeutiger Identifikator für eine Aktivität
         - **Zeitstempel**: Das Datum und die Uhrzeit des Ereignisses, identifiziert durch den Primärschlüssel
         - **Ereignis (Aktivitätsname)**: Der Name des Ereignisses, das Sie verwenden möchten
@@ -66,7 +68,7 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
     - Ausreichende historische Daten: Mindestens ein Jahr Transaktionsdaten. Vorzugsweise zwei bis drei Jahre Transaktionsdaten, um CLV für ein Jahr vorherzusagen.
     - Mehrere Einkäufe pro Kunde: Idealerweise mindestens zwei bis drei Transaktionen pro Kunden-ID, vorzugsweise über mehrere Daten hinweg.
     - Anzahl der Kunden: Mindestens 100 einzigartige Kunden, vorzugsweise mehr als 10.000 Kunden. Das Modell schlägt mit weniger als 100 Kunden und unzureichenden historischen Daten fehl
-    - Vollständigkeit der Daten: Weniger als 20 % fehlende Werte in den erforderlichen Feldern in den Eingabedaten   
+    - Vollständigkeit der Daten: Weniger als 20 % fehlende Werte in den erforderlichen Feldern in den Eingabedaten
 
 > [!NOTE]
 > - Das Modell erfordert die Transaktionshistorie Ihrer Kunden. Derzeit kann nur eine Transaktionsverlaufsentität konfiguriert werden. Wenn es mehrere Kauf/Transaktionsentitäten gibt, können Sie sie vor der Datenaufnahme in Power Query vereinen.
@@ -120,13 +122,13 @@ Die folgenden Daten sind erforderlich und werden, sofern als optional gekennzeic
 
       :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Bild des Konfigurationsschritts zum Definieren der Beziehung zur Kundenentität.":::
 
-1. Klicken Sie auf **Weiter**.
+1. Wählen Sie **Weiter** aus.
 
-### <a name="add-optional-data"></a>Optionale Daten hinzufügen
+### <a name="add-optional-activity-data"></a>Aktivitätsdaten (optional) hinzufügen
 
-Daten, die wichtige Kundeninteraktionen widerspiegeln (wie Web, Kundenservice und Ereignisprotokolle), fügen den Transaktionsdatensätzen Kontext hinzu. Weitere Muster in Ihren Kundenaktivitätsdaten können die Genauigkeit der Vorhersagen verbessern. 
+Daten, die wichtige Kundeninteraktionen widerspiegeln (wie Web, Kundenservice und Ereignisprotokolle), fügen den Transaktionsdatensätzen Kontext hinzu. Weitere Muster in Ihren Kundenaktivitätsdaten können die Genauigkeit der Vorhersagen verbessern.
 
-1. Im Schritt **Zusätzliche Daten (optional)** wählen Sie **Daten hinzufügen**. Wählen Sie die Kundenaktivitätsentität, die die Kundenaktivitätsinformationen liefert, wie in den [Voraussetzungen](#prerequisites) beschrieben.
+1. In dem **Zusätzliche Daten (optional)** Schritt, auswählen **Daten hinzufügen** unter **Verbessern Sie die Modellerkenntnisse mit zusätzlichen Aktivitätsdaten**. Wählen Sie die Kundenaktivitätsentität, die die Kundenaktivitätsinformationen liefert, wie in den [Voraussetzungen](#prerequisites) beschrieben.
 
 1. Ordnen Sie die semantischen Felder den Attributen innerhalb Ihrer Entität „Kundenaktivität“ zu und wählen Sie **Nächste**.
 
@@ -135,17 +137,36 @@ Daten, die wichtige Kundeninteraktionen widerspiegeln (wie Web, Kundenservice un
 1. Wählen Sie einen Aktivitätstyp aus, der dem Typ der Kundenaktivität entspricht, die Sie hinzufügen. Wählen Sie aus vorhandenen Aktivitätstypen oder fügen Sie einen neuen Aktivitätstyp hinzu.
 
 1. Konfigurieren Sie die Beziehung von Ihrer Kundenaktivitätsentität zur *Kunde*-Entität.
-    
+
     1. Wählen Sie das Feld, das den Kunden in der Kundenaktivitätstabelle identifiziert. Es kann sich direkt auf die primäre Kunden-ID Ihrer Entität *Kunde* beziehen.
     1. Wählen Sie das Feld *Kunde*-Entität, das sich auf Ihre primäre *Kundenentität* bezieht.
     1. Geben Sie einen Namen ein, der die Beziehung beschreibt.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Abbildung des Schritts im Konfigurationsablauf zum Hinzufügen zusätzlicher Daten und zum Konfigurieren der Aktivität mit ausgefüllten Beispielen":::
 
-1. Wählen Sie **Speichern** aus.    
+1. Wählen Sie **Speichern** aus.
     Fügen Sie weitere Daten hinzu, wenn Sie andere Kundenaktivitäten einbeziehen möchten.
 
-1. Klicken Sie auf **Weiter**.
+1. Optionale Kundendaten hinzufügen oder **Weiter** auswählen.
+
+### <a name="add-optional-customer-data"></a>Optionale Kundendaten hinzufügen
+
+Wählen Sie aus 18 häufig verwendeten Kundenprofilattributen aus, die Sie als Eingabe in das Modell aufnehmen möchten. Diese Attribute können zu personalisierteren, relevanteren und umsetzbareren Modellergebnissen für Ihre geschäftlichen Anwendungsfälle führen.
+
+Beispiel: Contoso Coffee möchte den Customer Lifetime Value vorhersagen, um hochwertige Kunden mit einem personalisierten Angebot im Zusammenhang mit der Einführung ihrer neuen Espressomaschine anzusprechen. Contoso verwendet das CLV-Modell und fügt alle 18 Kundenprofilattribute hinzu, um zu sehen, welche Faktoren ihre wertvollsten Kunden beeinflussen. Sie stellen fest, dass der Standort des Kunden der einflussreichste Faktor für diese Kunden ist.
+Mit diesen Informationen organisieren sie eine lokale Veranstaltung zur Einführung der Espressomaschine und arbeiten mit lokalen Anbietern zusammen, um personalisierte Angebote und ein besonderes Erlebnis bei der Veranstaltung zu erhalten. Ohne diese Informationen hätte Contoso möglicherweise nur generische Marketing-E-Mails gesendet und die Gelegenheit verpasst, für dieses lokale Segment seiner hochwertigen Kunden zu personalisieren.
+
+1. In dem **Zusätzliche Daten (optional)** Schritt, auswählen **Daten hinzufügen** unter **Verbessern Sie die Modellerkenntnisse mit zusätzlichen Kundendaten**.
+
+1. Für **Entität** wählen Sie **Kunde: CustomerInsights**, um die einheitliche Kundenprofiltabelle auszuwählen, die den Kundenattributdaten zugeordnet ist. Für **Kunden-ID** wählen Sie **System.Customer.CustomerId**.
+
+1. Ordnen Sie weitere Felder zu, wenn die Daten in Ihren einheitlichen Kundenprofilen verfügbar sind.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Beispiel für zugeordnete Felder für Kundenprofildaten.":::
+
+1. Auswählen von **Speichern** nach dem Zuordnen der Attribute, die das Modell verwenden sollte, um den Kunden Lebensdauerwert vorherzusagen.
+
+1. Wählen Sie **Weiter** aus.
 
 ### <a name="set-update-schedule"></a>Zeitplanaktualisierung festlegen
 

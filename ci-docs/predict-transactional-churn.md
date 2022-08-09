@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647500"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171094"
 ---
 # <a name="transaction-churn-prediction"></a>Transaktionsabwanderung vorhersagen
 
@@ -240,7 +240,7 @@ Fügen Sie eine Liste Ihrer Geschäftskunden und Konten hinzu, die Sie als Bench
    - **Vorhersagename**: Name der Vorhersage, der beim Erstellen der Vorhersage angegeben wird.
    - **Vorhersagetyp**: Typ des für die Vorhersage verwendeten Modells
    - **Ausgabeentität**: Name der Entität zum Speichern der Ausgabe der Vorhersage. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.
-     In der Ausgabeentität ist *ChurnScore* die vorhergesagte Abwanderungswahrscheinlichkeit und *IsChurn* eine binäre Bezeichnung basierend auf *ChurnScore* mit Grenzwert 0,5. Der Standardschwellenwert funktioniert möglicherweise nicht für Ihr Szenario. [Erstellen Sie ein neues Segment](segments.md#create-a-new-segment) mit Ihrem bevorzugten Grenzwert.
+     In der Ausgabeentität ist *ChurnScore* die vorhergesagte Abwanderungswahrscheinlichkeit und *IsChurn* eine binäre Bezeichnung basierend auf *ChurnScore* mit Grenzwert 0,5. Der Standardschwellenwert funktioniert möglicherweise nicht für Ihr Szenario. [Erstellen Sie ein neues Segment](segments.md#create-a-segment) mit Ihrem bevorzugten Grenzwert.
      Nicht alle Kunden sind notwendigerweise aktive Kunden. Einige von ihnen hatten möglicherweise lange Zeit keine Aktivität mehr und werden aufgrund Ihrer Abwanderungsdefinition bereits als aufgewühlt angesehen. Die Vorhersage des Abwanderungsrisikos für Kunden, die bereits abgewandert sind, ist nicht sinnvoll, da sie nicht die Publikum von Interesse sind.
    - **Vorhersagefeld**: Dieses Feld wird nur für einige Arten von Vorhersagen ausgefüllt und wird nicht für die Abwanderungsvorhersage verwendet.
    - **Status:** Status des Vorhersagelaufs.

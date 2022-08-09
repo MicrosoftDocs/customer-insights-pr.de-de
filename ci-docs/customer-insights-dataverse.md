@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit Customer Insights-Daten in Microsoft Dataverse
 description: Erfahren Sie, wie Sie Customer Insights und Microsoft Dataverse verbinden und die Ausgabeentitäten verstehen, die in Dataverse exportiert werden.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011519"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153403"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Arbeiten mit Customer Insights-Daten in Microsoft Dataverse
 
@@ -31,13 +31,25 @@ Durch Verbindung zu Ihrer Dataverse-Umgebung können Sie auch [Daten aus lokalen
 - Es ist noch keine andere Customer Insights Umgebung mit dieser Dataverse Umgebung verknüpt, die Sie verbinden möchten. Lernen wie man eine [bestehende Verbindung in einer Dataverse Umgebung](#remove-an-existing-connection-to-a-dataverse-environment) entfernt.
 - Eine Microsoft Dataverse Umgebung kann nur eine Verbindung zu einem einzigen Speicherkonto herstellen. Dies gilt nur, wenn Sie die Umgebung entsprechend konfigurieren, dass Ihr [Azure Data Lake Storage](own-data-lake-storage.md) verwendet wird.
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse-Speicherkapazität, Anspruch
+
+Ein Customer Insights-Abonnement berechtigt Sie zu zusätzlicher Kapazität für die vorhandene [Dataverse-Speicherkapazität](/power-platform/admin/capacity-storage). Die zusätzliche Kapazität hängt von der Anzahl der Profile ab, die Ihr Abonnement verwendet.
+
+**Beispiel**:
+
+Angenommen, Sie erhalten 15 GB Datenbankspeicher und 20 GB Dateispeicher pro 100.000 Kundenprofile. Wenn Ihr Abonnement 300.000 Kundenprofile umfasst, beträgt Ihre Gesamtspeicherkapazität 45 GB (3 x 15 GB) Datenbankspeicher und 60 GB Dateispeicher (3 x 20 GB). Wenn Sie ein B2B-Abonnement mit 30.000 Konten haben, beträgt Ihre Gesamtspeicherkapazität 45 GB (3 x 15 GB) Datenbankspeicher und 60 GB Dateispeicher (3 x 20 GB).
+
+Die Protokollkapazität ist nicht inkrementell und für Ihre Organisation festgelegt.
+
+Weitere Informationen zu Kapazitätsberechtigungen finden Sie im [Dynamics 365-Lizenzierungshandbuch](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Verbinden Sie eine Dataverse Umgebung mit Customer Insights
 
 Der **Microsoft Dataverse**-Schritt lässt Sie Customer Insights mit Ihrer Dataverse Umgebung verbinden, während [eine Customer Insights-Umgebung erstellt wird](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="Datenaustausch mit Microsoft Dataverse automatisch für neue Umgebungen aktiviert.":::
 
-Administratoren können Customer Insights konfigurieren, um eine vorhandene Dataverse Umgebung zu verbinden. Indem Sie die URL der Dataverse-Umgebung bereitstellen, verknüpfen Sie sie mit ihrer neuen Customer Insights Umgebung.
+Administratoren können Customer Insights konfigurieren, um eine vorhandene Dataverse Umgebung zu verbinden. Indem Sie die URL der Dataverse-Umgebung bereitstellen, verbinden Sie sie mit ihrer neuen Customer Insights Umgebung. Nach dem Herstellen der Verbindung zwischen Customer Insights und Dataverse, ändern Sie nicht den Organisationsnamen für die Dataverse-Umgebung. Der Name der Organisation wird in der Dataverse-URL verwendet und ein geänderter Name unterbricht die Verbindung mit Customer Insights.
 
 Wenn Sie keine vorhandene Dataverse Umgebung verwenden möchten, erstellt das System eine neue Umgebung für die Customer Insights-Daten in Ihrem Mandanten. [Power Platform Administratoren können kontrollieren, wer Umgebungen erstellen darf](/power-platform/admin/control-environment-creation). Wenn Sie eine neue Customer Insights-Umgebung einrichten und der Administrator die Erstellung von Dataverse-Umgebungen für alle außer Administratoren deaktiviert hat, können Sie möglicherweise keine neue Umgebung erstellen.
 
@@ -84,7 +96,7 @@ Um die PowerShell-Skripte auszuführen, müssen Sie PowerShell zunächst entspre
 
     2. `ByolSetup.ps1`
         - Sie brauchen die *Speicherblob-Datenbesitzer* Berechtigungen auf Speicherkonto-/Containerebene zum Ausführen dieses Skripts, oder dieses Skript erstellt eines für Sie. Ihre Rollenzuweisung kann nach erfolgreicher Ausführung des Skripts manuell entfernt werden.
-        - Dieses PowerShell-Skript fügt die erforderliche Tool-basierte Zugriffssteuerung (RBAC) für den Microsoft Dataverse Dienst und alle Dataverse-basierte Geschäftsanwendungen hinzu. Außerdem wird die Zugriffssteuerungsliste (ACL) im CustomerInsights-Container für die Sicherheitsgruppen, die mit dem `CreateSecurityGroups.ps1` Skript erstellt wurden aktualisiert. Die Gruppe Mitwirkender erhält die *rwx* Berechtigung, während die Lesergruppe nur die *r-x* Berechtigung erhält.
+        - Dieses PowerShell-Skript fügt die erforderliche rollenbasierte Zugriffssteuerung für den Microsoft Dataverse Dienst und alle Dataverse-basierte Geschäftsanwendungen hinzu. Außerdem wird die Zugriffssteuerungsliste (ACL) im CustomerInsights-Container für die Sicherheitsgruppen, die mit dem `CreateSecurityGroups.ps1` Skript erstellt wurden aktualisiert. Die Gruppe Mitwirkender erhält die *rwx* Berechtigung, während die Lesergruppe nur die *r-x* Berechtigung erhält.
         - Führen Sie dieses PowerShell-Skript in Windows PowerShell aus, indem Sie die Azure-Abonnement-ID angeben, die Ihre Azure Data Lake Storage, Speicherkontoname, Ressourcengruppenname und die Leser und Teilnehmer Sicherheitsgruppen-ID-Werte enthält. Öffnen Sie das PowerShell-Skript in einem Editor, um zusätzliche Informationen und die implementierte Logik zu überprüfen.
         - Kopieren Sie die Ausgabezeichenfolge, nachdem Sie das Skript erfolgreich ausgeführt haben. Die Ausgabezeichenfolge sieht wie folgt aus: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

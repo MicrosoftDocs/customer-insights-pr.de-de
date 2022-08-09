@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012024"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207136"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Inkrementelle Aktualisierung für Power Query und Azure Data Lake-Datenquellen
 
-In diesem Artikel wird erläutert, wie die inkrementelle Aktualisierung für Datenquellen basierend auf Power Query oder Azure Data Lake konfiguriert wird.
-
-Die inkrementelle Aktualisierung für Datenquellen bietet die folgenden Vorteile:
+Die inkrementelle Aktualisierung von Datenquellen basierend auf Power Query oder Azure Data Lake bietet die folgenden Vorteile:
 
 - **Schneller aktualisiert** – Nur geänderte Daten werden aktualisiert. Beispielsweise können Sie nur die letzten fünf Tage eines historischen DataSet aktualisieren.
 - **Erhöhte Zuverlässigkeit** – Bei kleineren Aktualisierungen müssen Sie die Verbindungen zu flüchtigen Quellsystemen nicht so lange aufrechterhalten, um das Risiko von Verbindungsproblemen zu verringern.
@@ -73,6 +71,7 @@ Customer Insights ermöglicht eine inkrementelle Aktualisierung für verbundene 
 
    1. Navigieren Sie zum Stammordner, der die .csv- oder .parquet-Dateien für vollständige Daten, inkrementelle Daten-Upserts und inkrementelle Datenlöschungen enthält.
    1. Geben Sie die Erweiterung für die vollständigen Daten und beide inkrementellen Dateien ein (\.csv bzw \.Parquet).
+   1. Wählen Sie für .csv-Dateien das Spaltentrennzeichen und wenn Sie die erste Zeile der Datei als Spaltenüberschrift haben möchten.
    1. Wählen Sie **Save** (Speichern).
 
 1. Für **Zuletzt aktualisiert** wählen Sie das Attribut date timestamp aus.

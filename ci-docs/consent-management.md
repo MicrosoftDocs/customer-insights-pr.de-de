@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947498"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188046"
 ---
 # <a name="use-customer-consent"></a>Zustimmung des Kunden verwenden
 
@@ -50,13 +50,13 @@ Beispieltabelle einer einfachen Einwilligungsdatenbank mit mehreren Einwilligung
 
 ## <a name="import-and-unify-consent-data"></a>Einwilligungsdaten importieren und vereinheitlichen
 
-Sie können Zustimmungsdaten auf die gleiche Weise importieren, wie Sie andere Datenquellen in Customer Insights aufnehmen. Weitere Informationen zu unterstützten Datenquellen und deren Import finden Sie unter [Übersicht Datenquellen](data-sources.md).
+Importieren Sie Zustimmungsdaten auf die gleiche Weise, wie Sie andere Datenquellen in Customer Insights aufnehmen. Weitere Informationen zu unterstützten Datenquellen und deren Import finden Sie unter [Übersicht Datenquellen](data-sources.md).
 
 Weitere Informationen zum Vereinheitlichen Ihrer Datenquellen finden Sie unter [Übersicht über die Datenvereinheitlichung](data-unification.md).
 
 ## <a name="use-consent-data"></a>Zustimmungsdaten verwenden
 
-Sobald Ihre Zustimmungsdaten Teil Ihrer einheitlichen Kundenprofile sind, können Sie sie in Customer Insights verwenden. Erstellen Sie beispielsweise ein Segment mit einer Regel, um sicherzustellen, dass Sie die Privatsphäre- und Datenschutzpräferenzen Ihrer Kunden respektieren. Regeln, die Einwilligungspräferenzen unterstützen, werden verwendet, um Benutzer basierend auf Profilattributen aus einem Segment auszuschließen. Hinzufügen einer Regel zu einem Segment, die Kundenprofile ausschließt, die keine Zustimmung zur Kontaktaufnahme gegeben haben.
+Sobald Ihre Zustimmungsdaten Teil Ihrer einheitlichen Kundenprofile sind, können Sie sie in Customer Insights verwenden. Erstellen Sie beispielsweise ein Segment mit einer Regel, um sicherzustellen, dass Sie die Privatsphäre- und Datenschutzpräferenzen Ihrer Kunden respektieren. Regeln, die Einwilligungspräferenzen unterstützen, werden verwendet, um Benutzer basierend auf Profilattributen aus einem Segment auszuschließen. Fügen Sie eine Regel zu einem Segment hinzu, die Kundenprofile ausschließt, die keine Zustimmung zur Kontaktaufnahme gegeben haben.
 
 Unter Bezugnahme auf die Beispieltabelle oben könnte ein Segment diese Regel enthalten: `Consent option=Newsletter & Consent value=True`. Diese Konfiguration führt zu einem Segment, das Kontaktpräferenzen berücksichtigt, um einen Newsletter zu senden.
 
@@ -71,3 +71,5 @@ Es ist wichtig, den Zustimmungsstatus für Ihre Kunden auf dem neuesten Stand zu
 Stellen Sie mit anderen Worten sicher, dass die Quelldaten, die in Customer Insights importiert werden, immer die neuesten Informationen enthalten.
 
 Weitere Informationen finden Sie unter [Segmente manuell aktualisieren](segments.md#refresh-segments) oder [konfigurieren Sie eine geplante Aktualisierung](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

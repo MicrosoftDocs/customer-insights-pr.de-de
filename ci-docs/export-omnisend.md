@@ -1,19 +1,19 @@
 ---
 title: Exportieren von Segmenten nach Omnisend (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und nach Omnisend exportieren.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 15918b2e2550869115d30ea4d84b4549c3c7d1ca
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052280"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196163"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportieren von Segmenten nach Omnisend (Vorschauversion)
 
@@ -21,31 +21,33 @@ Exportieren Sie Segmente einheitlicher Kundenprofile nach Omnisend und verwenden
 
 ## <a name="prerequisites"></a>Anforderungen
 
--   Sie haben ein [Omnisend-Konto](https://www.omnisend.com/) und entsprechende Administrator-Anmeldeinformationen.
--   Sie haben [Konfigurierte Segmente](segments.md) in Customer Insights.
--   Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
+- Ein [Omnisend-Konto](https://www.omnisend.com/) und entsprechende Administrator-Anmeldeinformationen.
+- Ein [Omnisend-API-Schlüssel](https://support.omnisend.com/en/articles/1061890-generating-api-key).
+- [Konfigurierte Segmente](segments.md) in Customer Insights.
+- Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 1 Million Kundenprofile pro Export zu Omnisend exportieren und die Fertigstellung kann bis zu 4 Stunden dauern.
-- Der Export nach Omnisend ist auf Segmente beschränkt.
-- Die Anzahl der Kundenprofile, die Sie nach Omnisend exportieren können, hängt von Ihrem Vertrag mit Omnisend ab.
+- Bis zu 1 Million Kundenprofile pro Export zu Omnisend exportieren und die Fertigstellung kann bis zu vier Stunden dauern. Die Anzahl der Kundenprofile, die Sie nach Omnisend exportieren können, hängt von Ihrem Vertrag mit Omnisend ab.
+- Nur Segmente.
 
 ## <a name="set-up-connection-to-omnisend"></a>Einrichten einer Verbindung mit Omnisend
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Gehen Sie zu **Administrator** > **Verbindungen**.
 
-1. Wählen Sie **Verbindung hinzufügen** und dann **Omnisend** aus, um die Verbindung zu konfigurieren.
+1. Wählen Sie **Verbindung hinzufügen** und wählen Sie **Omnisend**.
 
 1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
 
 1. Wählen Sie aus, wer diese Verbindung verwenden kann. Standardmäßig sind es nur Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Geben Sie Ihren [Omnisend-API-Schlüssel](https://support.omnisend.com/en/articles/1061890-generating-api-key) ein.
+1. Geben Sie Ihren Omnisend-API-Schlüssel ein.
 
-1. Wählen Sie **einverstanden**, um **Datenschutz und Compliance** zu bestätigen.
+1. Überprüfen Sie [Datenschutz und Konformität](connections.md#data-privacy-and-compliance) und wählen **Ich stimme zu** aus.
 
-1. Wählen Sie **Verbinden** aus, um die Verbindung zu Omnisend zu initialisieren.
+1. Wählen Sie **Verbinden**, um die Verbindung zu initialisieren.
 
 1. Wählen Sie **Sich selbst als Exportbenutzer hinzufügen** und geben Sie Ihre Customer Insights Anmeldeinformationen an.
 
@@ -53,25 +55,24 @@ Exportieren Sie Segmente einheitlicher Kundenprofile nach Omnisend und verwenden
 
 ## <a name="configure-an-export"></a>Konfigurieren Sie einen Export
 
-Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung dieses Typs haben. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Gehen Sie zu **Daten** > **Exporte**.
 
-1. Wählen Sie **Ziel hinzufügen**, um einen neuen Export zu erstellen.
+1. Wählen Sie **Export hinzufügen**.
 
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Omnisend-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
+1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Omnisend-Abschnitt aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
 
-1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Der Export nach Omnisend ist auf Segmente beschränkt. Optional können Sie Vorname, Nachname, Adresse, Bundesland und Land / Region, Stadt und Postleitzahl exportieren, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
+1. Geben Sie einen Namen für den Export ein.
 
-1. Wählen Sie **Speichern** aus.
+1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt.
 
-Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
+1. Optional können Sie **Vorname**, **Nachname**, **Adresse**, **Bundesland/Region**, **Land**, **Stadt** und **Postleitzahl**, um personalisiertere E-Mails zu erstellen. Wählen Sie **Attribut hinzufügen**, um diese Felder zuzuordnen.
 
-Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt. Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand). 
+1. Wählen Sie die Segemente aus, die Sie exportieren möchten.
 
+1. Wählen Sie **Save** (Speichern).
 
-## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an Omnisend zu übertragen, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft überträgt diese Daten auf Ihre Anweisung. Sie sind jedoch dafür verantwortlich, dass Omnisend alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Ihr Dynamics 365 Customer Insights-Administrator kann dieses Exportziel jederzeit entfernen, um die Verwendung dieser Funktionalität einzustellen.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

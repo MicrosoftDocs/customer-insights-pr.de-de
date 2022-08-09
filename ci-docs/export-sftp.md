@@ -1,84 +1,89 @@
 ---
 title: Daten zu SFTP-Hosts exportieren (Vorschauversion) (enthält Video)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu einem SFTP-Speicherort exportieren.
-ms.date: 06/09/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b12d25ecbd2e5fb31d7d5a6bb775dc3e7c1bf007
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081529"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207228"
 ---
-# <a name="export-data-to-sftp-preview"></a>Daten zu SFTP exportieren (Vorschauversion)
+# <a name="export-data-to-sftp-hosts-preview"></a>Daten zu SFTP-Hosts exportieren (Vorschauversion)
 
 Verwenden Sie Ihre Kundendaten in Anwendungen von Drittanbietern, indem Sie sie an einen SFTP-Speicherort (Secure File Transfer Protocol) exportieren.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
-## <a name="prerequisites-for-connection"></a>Voraussetzungen für die Verbindung
+## <a name="prerequisites"></a>Anforderungen
 
 - Verfügbarkeit eines SFTP-Hosts und entsprechender Anmeldeinformationen.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- SFTP-Ziele hinter Firewalls werden derzeit nicht unterstützt. 
+- SFTP-Ziele hinter Firewalls werden derzeit nicht unterstützt.
 - Die Laufzeit eines Exports hängt von Ihrer Systemleistung ab. Wir empfehlen zwei CPU-Kerne und 1 GB Speicher als minimale Konfiguration Ihres Servers.
-- Das Exportieren von Entitäten mit bis zu 100 Millionen Kundenprofilen kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird.
+- Bis zu 100 Millionen Kundenprofile, kann 90 Minuten dauern, wenn die empfohlene Mindestkonfiguration von zwei CPU-Kernen und 1 GB Speicher verwendet wird.
+- Wenn Sie einen SSH-Schlüssel zur Authentifizierung verwenden, stellen Sie sicher, dass Sie [Ihren privaten Schlüssel erstellen](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) als PEM- oder SSH.COM-Format haben. Wenn Sie Putty verwenden, konvertieren Sie Ihren privaten Schlüssel, indem Sie ihn als Open SSH exportieren. Die folgenden privaten Schlüsselformate werden unterstützt:
+  - RSA im OpenSSL-PEM‑ und ssh.com-Format
+  - DSA im OpenSSL-PEM‑ und ssh.com-Format
+  - ECDSA 256/384/521 im OpenSSL-PEM-Format
+  - ED25519 und RSA im OpenSSH-Schlüsselformat
 
 ## <a name="set-up-connection-to-sftp"></a>Verbindungen mit SFTP einrichten
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Gehen Sie zu **Administrator** > **Verbindungen**.
 
-1. Wählen Sie **Verbindung hinzufügen** und dann **SFTP** aus, um die Verbindung zu konfigurieren.
+1. Wählen Sie **Verbindung hinzufügen** aus, und klicken Sie dann auf **SFTP**.
 
 1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
 
-1. Wählen Sie aus, wer diese Verbindung verwenden kann. Wenn Sie keine Aktion ausführen, ist die Standardeinstellung Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Wählen Sie aus, wer diese Verbindung verwenden kann. Standardmäßig sind es nur Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Geben Sie **Benutzername**, **Kennwort** und **Hostname** und **Exportordner** für Ihr SFTP-Konto an.
+1. Wählen Sie aus, ob Sie sich über SSH oder Benutzername/Passwort für Ihre Verbindung authentifizieren möchten, und geben Sie die erforderlichen Details an. Wenn Sie einen SSH-Schlüssel zur Authentifizierung verwenden, stellen Sie sicher, dass Sie [Ihren privaten Schlüssel erstellen](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) als PEM- oder SSH.COM-Format haben. Wenn Sie Putty verwenden, konvertieren Sie Ihren privaten Schlüssel, indem Sie ihn als Open SSH exportieren. Die folgenden privaten Schlüsselformate werden unterstützt:
+   - RSA im OpenSSL-PEM‑ und ssh.com-Format
+   - DSA im OpenSSL-PEM‑ und ssh.com-Format
+   - ECDSA 256/384/521 im OpenSSL-PEM-Format
+   - ED25519 und RSA im OpenSSH-Schlüsselformat
 
 1. Wählen Sie die **üerprüfen**, um die Verbindung zu testen.
 
-1. Wählen Sie, ob Sie Ihre Daten **Gzipped** oder **Entpackt** exportieren möchten, und das **Feldtrennzeichen** für die exportierten Dateien.
-
-1. Wählen Sie **einverstanden**, um **Datenschutz und Compliance** zu bestätigen.
+1. Überprüfen Sie [Datenschutz und Konformität](connections.md#data-privacy-and-compliance) und wählen **Ich stimme zu** aus.
 
 1. Wählen Sie zum Abschließen der Verbindung **Speichern** aus.
 
 ## <a name="configure-an-export"></a>Konfigurieren Sie einen Export
 
-Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung dieses Typs haben. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Gehen Sie zu **Daten** > **Exporte**.
 
-1. Wählen Sie **Ziel hinzufügen**, um einen neuen Export zu erstellen.
+1. Wählen Sie **Export hinzufügen**.
 
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem SFTP-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
+1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem SFTP-Abschnitt aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
+
+1. Geben Sie einen Namen für den Export ein.
+
+1. Wählen Sie, ob Sie Ihre Daten **Gzipped** oder **Entpackt** exportieren möchten, und das **Feldtrennzeichen** für die exportierten Dateien.
 
 1. Wählen Sie die Entitäten für die zu exportierenden Beispielsegmente.
 
    > [!NOTE]
-   > Jede ausgewählte Entität wird beim Export in bis zu fünf Ausgabedateien aufgeteilt.
+   > Jede ausgewählte Entität wird beim Export in bis maximal fünf Ausgabedateien aufgeteilt.
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Save** (Speichern).
 
-Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
-
-Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt.
-Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!TIP]
 > Der Export von Entitäten, die eine große Datenmenge enthalten, kann bei jedem Export zu mehreren CSV-Dateien im selben Ordner führen. Das Aufteilen von Exporten erfolgt aus Leistungsgründen, um die Zeit zu minimieren, die für den Abschluss eines Exports benötigt wird.
-
-## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
-
-Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten über SFTP aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird solche Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass das Exportziel alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
-Ihr Dynamics 365 Customer Insights-Administrator kann dieses Exportziel jederzeit entfernen, um die Verwendung dieser Funktionalität einzustellen.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

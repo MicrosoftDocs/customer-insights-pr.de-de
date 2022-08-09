@@ -1,51 +1,51 @@
 ---
 title: Exportieren von Segmenten nach RollWorks (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zu RollWorks exportieren.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 83c3f2437b9822d29d1d2f99ead96815b1b0881a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055167"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195611"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Exportieren von Segmenten nach RollWorks (Vorschauversion)
 
-Exportieren Sie Segmente einheitlicher Kundenprofile in RollWorks und verwenden Sie sie für Marketingaktivitäten. 
+Exportieren Sie Segmente einheitlicher Kundenprofile in RollWorks und verwenden Sie sie für Marketingaktivitäten.
 
-## <a name="prerequisites-for-a-connection"></a>Voraussetzungen für die Verbindung
+## <a name="prerequisites"></a>Anforderungen
 
--   Sie haben ein [RollWorks-Konto](https://www.rollworks.com/) und entsprechende Administrator-Anmeldeinformationen.
--   Sie haben [Konfigurierte Segmente](segments.md) in Customer Insights.
--   Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
+- Ein [RollWorks-Konto](https://www.rollworks.com/) und entsprechende Administrator-Anmeldeinformationen.
+- Ein [RollWorks-Werbe-ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+- [Konfigurierte Segmente](segments.md) in Customer Insights.
+- Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 250'000 Kundenprofile pro Export nach RollWorks exportieren.
-- Sie können keine Segmente mit weniger als 100 Kundenprofilen nach RollWorks exportieren. 
-- Der Export nach RollWorks ist auf Segmente beschränkt.
-- Der Export von Segmenten mit bis zu 250,000 Millionen Kundenprofilen nach RollWorks kann bis zu 10 Minuten dauern. 
-- Die Anzahl der Kundenprofile, die Sie nach RollWorks exportieren können, hängt von Ihrem Vertrag mit RollWorks ab.
+- Export von Segmenten mit bis zu 250.000 Kundenprofilen nach RollWorks kann bis zu 10 Minuten dauern. Die Anzahl der Kundenprofile, die Sie nach RollWorks exportieren können, hängt von Ihrem Vertrag mit RollWorks ab.
+- Nur Segmente.
 
 ## <a name="set-up-connection-to-rollworks"></a>Verbindung mit RollWorks einrichten
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Gehen Sie zu **Administrator** > **Verbindungen**.
 
-1. Wählen Sie **Verbindung hinzufügen** und dann **RollWorks** aus, um die Verbindung zu konfigurieren.
+1. Wählen Sie **Verbindung hinzufügen** und wählen Sie **RollWorks**.
 
 1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
 
-1. Wählen Sie aus, wer diese Verbindung verwenden kann. Wenn Sie keine Aktion ausführen, ist die Standardeinstellung Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Wählen Sie aus, wer diese Verbindung verwenden kann.  Standardmäßig sind es nur Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Wählen Sie **einverstanden**, um **Datenschutz und Compliance** zu bestätigen.
+1. Überprüfen Sie [Datenschutz und Konformität](connections.md#data-privacy-and-compliance) und wählen **Ich stimme zu** aus.
 
-1. Wählen Sie **Verbinden** aus, um die Verbindung zu RollWorks zu initialisieren.
+1. Wählen Sie **Verbinden**, um die Verbindung zu initialisieren.
 
 1. Wählen Sie **Mit RollWorks authentifizieren** aus, und geben Sie Ihre Administratoranmeldeinformationen für RollWorks an.
 
@@ -55,29 +55,24 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in RollWorks und verwenden 
 
 ## <a name="configure-an-export"></a>Konfigurieren Sie einen Export
 
-Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung dieses Typs haben. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Gehen Sie zu **Daten** > **Exporte**.
 
-1. Wählen Sie **Ziel hinzufügen**, um einen neuen Export zu erstellen.
+1. Wählen Sie **Export hinzufügen**.
 
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem RollWorks-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
+1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem RollWorks-Abschnitt aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
 
-1. Geben Sie Ihre **RollWorks-Werbe-ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) ein.
+1. Geben Sie einen Namen für den Export ein.
 
-1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Der Export nach RollWorks ist auf Segmente beschränkt.
+1. Geben Sie Ihre **RollWorks-Werbetreibenden-ID** ein.
 
-1. Wählen Sie die Segemente aus, die Sie exportieren möchten. Wählen Sie ein Segment mit mindestens 100 Mitgliedern aus. Sie können keine kleineren Segmente exportieren. Zusätzlich beträgt die maximale Größe eines zu exportierenden Segments 250.000 Mitglieder pro Export. 
+1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt.
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie die Segemente aus, die Sie exportieren möchten.
 
-Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
+1. Wählen Sie **Save** (Speichern).
 
-Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt. Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand). 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-
-## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
-
-Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an RollWorks zu übertragen, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft überträgt diese Daten auf Ihre Anweisung. Sie sind jedoch dafür verantwortlich, dass RollWorks alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Ihr Dynamics 365 Customer Insights-Administrator kann dieses Exportziel jederzeit entfernen, um die Verwendung dieser Funktionalität einzustellen.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

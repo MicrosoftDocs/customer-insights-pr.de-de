@@ -104,22 +104,26 @@
       href: enrichment-here.md
     - name: SFTP benutzerdefinierter Import
       href: enrichment-SFTP-custom-import.md
-- name: Einheitliche Profile
+- name: Kundenprofile und Aktivitäten
   items:
-    - name: Vereinheitlichte Kundenprofile überprüfen
+    - name: Anzeigen von Kundenprofilen
       href: customer-profiles.md
-    - name: Vereinheitlichte Kundenprofile filtern
+    - name: Den Such‑ und Filterindex verwalten
       href: search-filter-index.md
     - name: Kundenaktivitäten definieren
       href: activities.md
     - name: Verwenden der Einwilligungsverwaltung
       href: consent-management.md
+    - name: Webdaten zur Personalisierung verwenden
+      href: unknown-to-known.md
 - name: Segmente
   items:
     - name: Übersicht über Segmente
       href: segments.md
-    - name: Segmente erstellen
+    - name: Mit Segment Builder erstellen
       href: segment-builder.md
+    - name: Mit Schnellerstellungssegmente erstellen
+      href: segment-quick.md
     - name: Maßnahmenbasierte Segmentvorschläge
       href: suggested-segments.md
     - name: Aktivitätsbasierte Segmentvorschläge
@@ -132,9 +136,9 @@
   items:
     - name: Kennzahlenübersicht
       href: measures.md
-    - name: Eine neue Kennzahl erstellen
+    - name: Mit Measure Builder erstellen
       href: measure-builder.md
-    - name: Eine Kennzahlvorlage verwenden
+    - name: Mit Vorlagen erstellen
       href: measure-templates.md
 - name: Vorhersagen
   items:
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Active Campaigns
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Autopilot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Campaign Monitor
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Microsoft Advertising
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks

@@ -1,5 +1,5 @@
 ---
-title: Neue Kennzahlen mit dem Kennzahlen-Builder erstellen
+title: Kennzahlen mit dem Kennzahlen-Builder erstellen
 description: Erstellen Sie Kennzahlen von Grund auf neu, um wichtige Metriken zu Ihrem Unternehmen zu analysieren.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -11,24 +11,22 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fac00b8a1b4ca6e09dd29abe46dfe240adcc029e
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081649"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170848"
 ---
-# <a name="create-new-measures-with-the-measure-builder"></a>Neue Kennzahlen mit dem Kennzahlen-Builder erstellen
+# <a name="create-measures-with-measure-builder"></a>Kennzahlen mit dem Kennzahlen-Builder erstellen
 
-In diesem Artikel wird erklärt, wie Sie eine neue [Kennzahl](measures.md) von Grund auf neu erstellen. Mit dem Kennzahlen-Builder können Sie Berechnungen mit mathematischen Operatoren, Aggregationsfunktionen und Filtern definieren. Sie können eine Kennzahl mit Attributen von Entitäten erstellen, die sich auf die vereinheitlichte Entität *Kunde* beziehen.
+Mit dem Kennzahlen-Builder können Sie Berechnungen mit mathematischen Operatoren, Aggregationsfunktionen und Filtern definieren. Definieren Sie eine Kennzahl mit Attributen von Entitäten erstellen, die sich auf die vereinheitlichte Entität *Kunde* beziehen.
 
 Das Erstellen von Kennzahlen in B2C‑ und B2B-Umgebungen funktioniert auf die gleiche Weise. Wenn Ihre B2B-Umgebung allerdings [Konten mit Hierarchien verwendet](relationships.md#set-up-account-hierarchies), können Sie die Kennzahl über zugehörige Firmen aggregieren.
 
-Sie können auch schnell eine Kennzahl erstellen, indem Sie aus einer Reihe häufig verwendeter und vordefinierter Kennzahlen auswählen. Weitere Informationen finden Sie unter [Vorlage zum Erstellen einer Kennzahl verwenden](measure-templates.md).
-
 # <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
 
-Sie können Kennzahlen auf der Ebene einzelner Kunden (Kundenattribut, Kundenkennzahl) oder auf der Ebene des Unternehmens/der Organisation (Geschäftskennzahl) erstellen. Kundenattribut und Kundenkennzahl sind zwei Typen, mit denen Sie die Leistung pro Kunde verfolgen können. Zum Beispiel die Gesamtausgaben jedes Kunden. Geschäftskennzahlen ermöglichen es Ihnen, die Leistung pro Unternehmen zu verfolgen. Beispielsweise der Gesamtumsatz des Unternehmens.
+Sie können Kennzahlen auf der Ebene einzelner Kunden (Kundenattribut, Kundenkennzahl) oder auf der Ebene des Unternehmens/der Organisation (Geschäftskennzahl) erstellen. Mit Kundenattribut und Kundenkennzahl können Sie denen Sie die Leistung pro Kunde verfolgen können. Zum Beispiel die Gesamtausgaben jedes Kunden. Geschäftskennzahlen zum Verfolgen der Leistung pro Unternehmen. Beispielsweise der Gesamtumsatz des Unternehmens.
 
 - Kundenattribut: Generiert eine Ausgabe als neues Attribut, das als neue Spalte in der vom System generierten Entität namens *Kunde_Kennzahl* gespeichert wird. Beim Aktualisieren eines Kundenattributs werden alle anderen Kundenattribute in der Entität *Kunde_Kennzahl* gleichzeitig aktualisiert. Darüber hinaus werden Kundenattribute in der Kundenprofilkarte angezeigt. Sobald sie einmal ausgeführt oder gespeichert wurden, können Sie das Kundenattribut nicht in eine Kundenkennzahl ändern.
 
@@ -38,9 +36,15 @@ Sie können Kennzahlen auf der Ebene einzelner Kunden (Kundenattribut, Kundenken
 
 1. Gehen Sie zu **Kennzahlen**.
 
-1. Wählen Sie **Neu** und dann **Eigene erstellen** aus.
+1. Wählen Sie **Neu** > **Eigene erstellen**.
 
    :::image type="content" source="media/measure-b2c.png" alt-text="Leerer Konfigurationsbildschirm für eine B2C-Kennzahl." lightbox="media/measure-b2c.png":::
+
+1. Wählen Sie **Details bearbeiten** neben Takt ohne Titel. Benennen Sie die Messung. Fügen Sie optional [Tags](work-with-tags-columns.md#manage-tags) zur Messung hinzu.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialogfeld „Details bearbeiten“":::
+
+1. Wählen Sie **Fertig** aus.
 
 1. Um die Leistung auf Unternehmensebene zu verfolgen, schalten Sie **Art messen** zu **Geschäftsebene**. **Kundenebene** ist standardmäßig ausgewählt. **Kundenebene** fügt automatisch das *CustomerId* Attribut zu Dimensionen hinzu während **Geschäftsebene** es automatisch entfernt.
 
@@ -56,13 +60,13 @@ Sie können Kennzahlen auf der Ebene einzelner Kunden (Kundenattribut, Kundenken
    - **ArgMax**: findet den Datensatz, der den Maximalwert einer Zielfunktion angibt
    - **ArgMin**: findet den Datensatz, der den Mindestwert einer Zielfunktion angibt
 
-1. WählenSie **Attribute hinzufügen**, um die Daten auszuwählen, die Sie zum Erstellen dieser Kennzahl benötigen.
+1. Wählen Sie **Attribute hinzufügen**, um die Daten auszuwählen, die Sie zum Erstellen dieser Kennzahl benötigen.
 
    1. Die **Attribute**-Registerkarte auswählen.
    1. Datenentität: Wählen Sie die Entität aus, die das Attribut enthält, das Sie messen möchten.
    1. Datenattribut: Wählen Sie das Attribut aus, das Sie in der Aggregationsfunktion zur Berechnung der Kennzahl verwenden möchten. Sie können jeweils nur ein Attribut auswählen.
-   1. Sie können auch ein Datenattribut aus einer vorhandenen Kennzahl auswählen, indem Sie die Registerkarte **Kennzahlen** auswählen oder Sie können auch nach einem Entitäts- oder Kennzahlnamen suchen.
-   1. WählenSie **Hinzufügen**, um das ausgewählte Attribut zur Kennzahl hinzuzufügen.
+   1. Sie können auch optional ein Datenattribut aus einer vorhandenen Kennzahl auswählen, indem Sie die Registerkarte **Kennzahlen** auswählen oder Sie können auch nach einem Entitäts- oder Kennzahlnamen suchen.
+   1. Wählen Sie **Hinzufügen**.
 
 1. Um komplexere Kennzahlen zu erstellen, können Sie weitere Attribute hinzufügen oder mathematische Operatoren für Ihre Kennzahlfunktion verwenden.
 
@@ -70,39 +74,33 @@ Sie können Kennzahlen auf der Ebene einzelner Kunden (Kundenattribut, Kundenken
   
    1. In dem Abschnitt **Attribute hinzufügen** des Bereichs **Filter** wählen Sie im Bereich das Attribut aus, das Sie zum Erstellen von Filtern verwenden möchten.
    1. Legen Sie die Filteroperatoren fest, um den Filter für jedes ausgewählte Attribut zu definieren.
-   1. Wählen Sie **Anwenden**, um den Filter zur Kennzahl hinzuzufügen.
+   1. Wählen Sie **Übernehmen** aus.
 
 1. Wählen Sie **Dimension**, um weitere Felder auszuwählen, die als Spalten zur Kennzahlausgabeentität hinzugefügt werden.
 
    1. Wählen Sie **Dimensionen bearbeiten** aus, um Datenattribute hinzuzufügen, nach denen Sie die Kennzahlen gruppieren möchten. Zum Beispiel Stadt oder Geschlecht.
-   > [!TIP]
-   > Wenn Sie **Kundenebene** als **Messungstyp** auswählen, ist das *CustomerId* Attribut bereits hinzugefügt. Wenn Sie das Attribut entfernen, wird **Messungstyp** auf **Geschäftsebene** umgeschaltet.
-   1. Wählen Sie **Fertig**, um die Dimensionen zur Kennzahl hinzuzufügen.
+      > [!TIP]
+      > Wenn Sie **Kundenebene** als **Messungstyp** auswählen, ist das *CustomerId* Attribut bereits hinzugefügt. Wenn Sie das Attribut entfernen, wird **Messungstyp** auf **Geschäftsebene** umgeschaltet.
+   1. Wählen Sie **Fertig** aus.
 
 1. Wenn Ihre Daten Werte enthalten, die Sie durch eine ganze Zahl ersetzen müssen, wählen Sie **Regeln**. Konfigurieren Sie die Regel und stellen Sie sicher, dass Sie nur ganze Zahlen als Ersatz auswählen. Ersetzen Sie beispielsweise *Null* mit *0*.
 
 1. Wenn zwischen der von Ihnen zugeordneten Datenentität und der *Kunden* Entität mehrere Pfade vorhanden sind, müssen Sie einen der identifizierten [Entitätsbeziehungspfade auswählen](relationships.md). Die Kennzahlenergebnisse können je nach ausgewähltem Pfad variieren.
 
    1. Wählen Sie **Beziehungspfad** und wählen Sie den Entitätspfad aus, der zum Identifizieren Ihrer Kennzahl verwendet werden soll. Wenn es nur einen einzigen Weg zur Entität *Kunde* gibt, wird dieses Steuerelement nicht angezeigt.
-   1. Wählen **Fertig**, um Ihre Auswahl anzuwenden.
+   1. Wählen Sie **Fertig** aus.
 
-1. Wählen Sie aus **Neue Berechnung**, um weitere Berechnungen für die Kennzahl hinzuzufügen. Sie können nur Entitäten im selben Entitätspfad für neue Berechnungen verwenden. Weitere Berechnungen werden als neue Spalten in der Kennzahlausgabeeinheit angezeigt.
+1. Wählen Sie aus **Neue Berechnung**, um weitere Berechnungen für die Kennzahl hinzuzufügen. Sie können nur Entitäten im selben Entitätspfad für neue Berechnungen verwenden. Weitere Berechnungen werden als neue Spalten in der Kennzahlausgabeeinheit angezeigt. Wählen Sie optional aus **Namen bearbeiten** um einen Namen für die Berechnung zu erstellen.
 
-1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Berechnung aus, um **Duplikat**, **Umbenennen** oder **Entfernen** für eine Berechnung aus einer Kennzahl auszuführen.
+1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Berechnung aus, um **Duplikat** oder **Entfernen** für eine Berechnung aus einer Kennzahl auszuführen.
 
 1. Im Bereich **Vorschau** sehen Sie das Datenschema der Kennzahlausgabeentität, einschließlich Filter und Dimensionen. Die Vorschau reagiert dynamisch auf Änderungen in der Konfiguration.
 
-1. Wählen Sie **Details bearbeiten** neben Takt ohne Titel. Benennen Sie die Messung. Fügen Sie optional [Tags](work-with-tags-columns.md#manage-tags) zur Messung hinzu.
-
-   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialogfeld „Details bearbeiten“":::
-
-1. Wählen **Ausführen**, um die Ergebnisse für die konfigurierte Messung zu berechnen. Wählen Sie **Speichern und schließen** aus, wenn Sie die aktuelle Konfiguration beibehalten und die Kennzahlmessung später ausführen möchten.
-
-1. Gehen Sie zu **Kennzahlen**, um die neu erstellte Kennzahl in der Liste anzuzeigen.
+1. Wählen **Ausführen**, um die Ergebnisse für die konfigurierte Messung zu berechnen. Wählen Sie **Speichern und schließen** aus, wenn Sie die aktuelle Konfiguration beibehalten und die Kennzahlmessung später ausführen möchten. Die Seite **Kennzahlen** wird angezeigt.
 
 # <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
-Sie können Kennzahlen auf der Ebene einzelner Konten (Kundenkennzahl) oder auf der Ebene aller Konten (Geschäftskennzahl) erstellen.
+Erstellen Sie Kennzahlen auf der Ebene einzelner Konten (Kundenkennzahl) oder auf der Ebene aller Konten (Geschäftskennzahl).
 
 - Kundenkennzahl: Erzeugt die Ausgabe als eigene Entität. Kundenkennzahlen werden nicht auf der Kundenprofilkarte angezeigt.
 
@@ -114,6 +112,11 @@ Sie können Kennzahlen auf der Ebene einzelner Konten (Kundenkennzahl) oder auf 
 
    :::image type="content" source="media/measure-b2b.png" alt-text="Leerer Konfigurationsbildschirm für eine B2B-Kennzahl.":::
 
+1. Wählen Sie **Details bearbeiten** neben Takt ohne Titel. Benennen Sie die Messung. Fügen Sie optional [Tags](work-with-tags-columns.md#manage-tags) zur Messung hinzu. 
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialogfeld „Details bearbeiten“":::
+
+1. Wählen Sie **Fertig** aus.
+
 1. Wählen Sie im Konfigurationsbereich die Aggregationsfunktion aus dem Dropdown-Menü **Funktion auswählen** aus. Zu den Aggregationsfunktionen gehören:
    - **Sum**
    - **Durchschnitt**
@@ -124,12 +127,12 @@ Sie können Kennzahlen auf der Ebene einzelner Konten (Kundenkennzahl) oder auf 
    - **Zuerst** – verwendet den ersten Wert des Datensatzes
    - **Letzte**: Nimmt den letzten Wert, der dem Datensatz hinzugefügt wurde
 
-1. WählenSie **Attribute hinzufügen**, um die Daten auszuwählen, die Sie zum Erstellen dieser Kennzahl benötigen.
+1. Wählen Sie **Attribute hinzufügen**, um die Daten auszuwählen, die Sie zum Erstellen dieser Kennzahl benötigen.
 
    1. Die **Attribute**-Registerkarte auswählen.
    1. Datenentität: Wählen Sie die Entität aus, die das Attribut enthält, das Sie messen möchten.
    1. Datenattribut: Wählen Sie das Attribut aus, das Sie in der Aggregationsfunktion zur Berechnung der Kennzahl verwenden möchten. Sie können jeweils nur ein Attribut auswählen.
-   1. Sie können auch ein Datenattribut aus einer vorhandenen Kennzahl auswählen, indem Sie die Registerkarte **Kennzahlen** auswählen oder Sie können auch nach einem Entitäts- oder Kennzahlnamen suchen.
+   1. Sie können auch optional ein Datenattribut aus einer vorhandenen Kennzahl auswählen, indem Sie die Registerkarte **Kennzahlen** auswählen oder Sie können auch nach einem Entitäts- oder Kennzahlnamen suchen.
    1. WählenSie **Hinzufügen**, um das ausgewählte Attribut zur Kennzahl hinzuzufügen.
 
 1. Um komplexere Kennzahlen zu erstellen, können Sie weitere Attribute hinzufügen oder mathematische Operatoren für Ihre Kennzahlfunktion verwenden.
@@ -144,12 +147,12 @@ Sie können Kennzahlen auf der Ebene einzelner Konten (Kundenkennzahl) oder auf 
 
    1. Wählen Sie **Dimensionen bearbeiten** aus, um Datenattribute hinzuzufügen, nach denen Sie die Kennzahlen gruppieren möchten. Zum Beispiel Stadt oder Geschlecht.
       > [!TIP]
-      > Wenn Sie **Kundenebene** als **Messungstyp** auswählen, ist das *CustomerId* Attribut bereits hinzugefügt. Wenn Sie das Attribut entfernen, wird **Messungstyp** auf **Geschäftsebene** geändert.
+      > Wenn Sie Kundenebene als Messungstyp auswählen, ist das *CustomerId* Attribut bereits hinzugefügt. Wenn Sie das Attribut entfernen, wird Messungstyp auf Geschäftsebene geändert.
    1. Wählen Sie **Fertig**, um die Dimensionen zur Kennzahl hinzuzufügen.
 
 1. Wenn Ihre Daten Werte enthalten, die Sie durch eine ganze Zahl ersetzen müssen, wählen Sie **Regeln**. Konfigurieren Sie die Regel und stellen Sie sicher, dass Sie nur ganze Zahlen als Ersatz auswählen. Ersetzen Sie beispielsweise *Null* mit *0*.
 
-1. Sie können die Umschaltung **Unterkonten aufrollen** verwenden, um [Konten mit Hierarchien zu verwenden](relationships.md#set-up-account-hierarchies).
+1. Sie können [Konten mit Hierarchien verwenden](relationships.md#set-up-account-hierarchies) verwenden, um **Unterkonten aufzurollen**.
    - Wenn auf **Aus** festgelegt, wird die Kennzahl für jedes Konto berechnet. Jedes Konto erhält ein eigenes Ergebnis.
    - Wenn auf **Ein** festgelegt, wählen Sie **Bearbeiten**, um die Kontenhierarchie gemäß den aufgenommenen Hierarchien auszuwählen. Die Kennzahl liefert nur ein Ergebnis, da sie mit Unterkonten aggregiert wird.
 
@@ -158,14 +161,16 @@ Sie können Kennzahlen auf der Ebene einzelner Konten (Kundenkennzahl) oder auf 
    1. Wählen Sie **Beziehungspfad** und wählen Sie den Entitätspfad aus, der zum Identifizieren Ihrer Kennzahl verwendet werden soll. Wenn es nur einen einzigen Weg zur Entität *Kunde* gibt, wird dieses Steuerelement nicht angezeigt.
    1. Wählen **Fertig**, um Ihre Auswahl anzuwenden.
 
-1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Berechnung aus, um **Duplikat**, **Umbenennen** oder **Entfernen** für eine Berechnung aus einer Kennzahl auszuführen.
+1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) in der Berechnung aus, um **Duplikat** oder **Entfernen** für eine Berechnung aus einer Kennzahl auszuführen.
 
 1. Im Bereich **Vorschau** sehen Sie das Datenschema der Kennzahlausgabeentität, einschließlich Filter und Dimensionen. Die Vorschau reagiert dynamisch auf Änderungen in der Konfiguration.
 
-1. Wählen Sie **Details bearbeiten** neben Takt ohne Titel. Benennen Sie die Messung. Fügen Sie optional [Tags](work-with-tags-columns.md#manage-tags) zur Messung hinzu.
+1. Wählen **Ausführen**, um die Ergebnisse für die konfigurierte Messung zu berechnen. Wählen Sie **Speichern und schließen** aus, wenn Sie die aktuelle Konfiguration beibehalten und die Kennzahlmessung später ausführen möchten. Die Seite **Kennzahlen** wird angezeigt.
 
-   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialogfeld „Details bearbeiten“":::
+---
 
-1. Wählen **Ausführen**, um die Ergebnisse für die konfigurierte Messung zu berechnen. Wählen Sie **Speichern und schließen** aus, wenn Sie die aktuelle Konfiguration beibehalten und die Kennzahlmessung später ausführen möchten.
+## <a name="next-step"></a>Nächster Schritt
 
-1. Gehen Sie zu **Kennzahlen**, um die neu erstellte Kennzahl in der Liste anzuzeigen.
+Verwenden Sie vorhandene Maßnahmen, um [ein Kundensegment](segments.md) zu erstellen.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081628"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139656"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Vereinheitlichen Sie Kundenfelder für die Datenvereinheitlichung
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Wählen Sie in diesem Schritt des Vereinigungsprozesses Attribute aus und schließen Sie sie aus, um die Entität des einheitlichen Profils zusammenzuführen. Wenn beispielsweise drei Entitäten über E-Mail-Daten verfügten, möchten Sie möglicherweise alle drei separaten E-Mail-Felder beibehalten oder sie in einem einzigen E-Mail-Feld für das einheitliche Profil zusammenführen. Einige Attribute werden vom System automatisch kombiniert. Sie können stabile und eindeutige Kunden-IDs erstellen und verwandte Profile in einem Cluster gruppieren.
 

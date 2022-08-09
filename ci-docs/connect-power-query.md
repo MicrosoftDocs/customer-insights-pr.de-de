@@ -1,7 +1,7 @@
 ---
 title: Mit einer Power Query-Datenquelle verbinden (enthält Video)
 description: Daten über einen Power Query-Konnektor erfassen (enthält Video).
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080992"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207044"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden mit einer Power Query-Datenquelle
 
@@ -41,22 +41,29 @@ Das Hinzufügen von Datenquellen basierend auf Power Query-Konnektoren folgt im 
 
 1. Geben Sie die erforderlichen Details für den ausgewählten Connector in das Feld **Verbindungseinstellungen** ein und wählen Sie **Weiter**, um eine Vorschau der Daten zu sehen.
 
-1. Wählen Sie **Daten transformieren** aus. In diesem Schritt fügen Sie Entitäten zu Ihrer Datenquelle hinzu. Entitäten sind Datasets. Wenn Sie eine Datenbank haben, die mehrere Datensätze enthält, ist jeder Datensatz eine eigene Entität.
+1. Wählen Sie **Daten transformieren** aus.
 
 1. Im Dialogfeld **Power Query – Abfragen bearbeiten** können Sie die Daten überprüfen und verfeinern. Die Entitäten, die die in Ihrer ausgewählten Datenquelle identifizierten Systeme aufweisen, erscheinen im linken Fensterbereich.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialogfeld „Abfragen bearbeiten“":::
 
-1. Sie können Ihre Daten auch transformieren. Wählen Sie eine Entität zum Bearbeiten oder Transformieren aus. Verwenden Sie die Optionen im Power Query-Fenster zum Anwenden von Transformationen. Jede Transformation ist unter **Angewandte Schritte** aufgeführt. Power Query bietet zahlreiche vorgefertigte Transformationsoptionen. Weitere Informationen finden Sie unter [Power Query-Transformationen](/power-query/power-query-what-is-power-query#transformations).
+1. Sie können Ihre Daten auch transformieren. Wählen Sie eine Entität zum Bearbeiten oder Transformieren aus. Verwenden Sie die Optionen im Power Query-Fenster zum Anwenden von Transformationen. Jede Transformation ist unter **Angewandte Schritte** aufgeführt. Power Query bietet zahlreiche [vorgefertigte Transformationsoptionen](/power-query/power-query-what-is-power-query#transformations).
 
    Wir empfehlen die Verwendung der folgenden Transformationen:
 
    - Wenn Sie Daten aus einer CSV-Datei erfassen, enthält die erste Zeile häufig Überschriften. Gehen Sie zu **Transformieren** und wählen Sie **Erste Zeile als Kopfzeilen verwnden**.
    - Stellen Sie sicher, dass der Datentyp richtig eingestellt ist. Wählen Sie beispielsweise für Datumsfelder einen Datumstyp aus.
 
-1. Um weitere Entitäten zu Ihrer Datenquelle im Dialog **Abfragen bearbeiten** hinzuzufügen, gehen Sie zur **Startseite** und wählen Sie **Daten abrufen**. Wiederholen Sie die Schritte 6-10, bis Sie alle Entitäten für dieses Datenquelle hinzugefügt haben.
+1. Um weitere Entitäten zu Ihrer Datenquelle im Dialog **Abfragen bearbeiten** hinzuzufügen, gehen Sie zur **Startseite** und wählen Sie **Daten abrufen**. Wiederholen Sie die Schritte 5-10, bis Sie alle Entitäten für dieses Datenquelle hinzugefügt haben. Wenn Sie eine Datenbank haben, die mehrere Datensätze enthält, ist jeder Datensatz eine eigene Entität.
 
 1. Wählen Sie **Save** (Speichern). Die Seite **Datenquellen** öffnet sich und zeigt die neue Datenquelle im Status **Wird aktualisiert** an.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite [**Entitäten**](entities.md) überprüft werden.
+
+> [!CAUTION]
+> Eine Datenquelle basierend auf Power Query erstellt einen [Dataflow in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ändern Sie nicht den Namen eines Datenflusses im Power Platform Admin Center, das in Customer Insights verwendet wird. Das Umbenennen eines Datenflusses verursacht Probleme mit den Verweisen zwischen Customer Insights Datenquelle und dem Dataverse-Datenfluss.
 
 ### <a name="available-power-query-data-sources"></a>Verfügbare Power Query-Datenquellen
 
@@ -74,11 +81,13 @@ Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtb
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass Ihre Gateways auf die neueste Version aktualisiert sind. Sie können ein Update installieren und ein Gateway über eine Eingabeaufforderung, die auf der Gateway-Anzeige angezeigt wird, direkt installieren oder neu konfigurieren oder [die neueste Version herunterladen](https://powerapps.microsoft.com/downloads/). Wenn Sie nicht die neueste Gateway-Version verwenden, schlägt die Datenflussaktualisierung mit Fehlermeldungen wie **Das Schlüsselwort wird nicht unterstützt: Konfigurationseigenschaften. Parametername: Schlüsselwort** fehl.
+>
+> Fehler mit lokal-Daten-Gateways in Customer Insights werden oft durch Konfigurationsprobleme verursacht. Weitere Informationen zur Problembehandlung bei Datengateways finden Sie unter [Problembehandlung für das lokale Datengateway](/data-integration/gateway/service-gateway-tshoot).
 
 ## <a name="edit-power-query-data-sources"></a>Power Query-Datenquellen bearbeiten
 
 > [!NOTE]
-> Es ist möglicherweise nicht möglich, Änderungen an Datenquellen vorzunehmen, die derzeit in einem der Prozesse der App verwendet werden (z. B. *Segmentierung*, *Abgleich* oder *Zusammenführung*).
+> Es ist möglicherweise nicht möglich, Änderungen an Datenquellen vorzunehmen, die derzeit in einem der Prozesse der App verwendet werden (z. B. Segmentierung oder Datenvereinheitlichung).
 >
 > Auf der Seite **Einstellungen** können Sie den Fortschritt jedes aktiven Prozesses verfolgen. Wenn ein Prozess abgeschlossen ist, können Sie zur Seite **Datenquellen** zurückkehren und Ihre Änderungen vornehmen.
 
@@ -86,8 +95,10 @@ Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtb
 
 1. Wählen Sie neben der Datenquelle, die Sie aktualisieren möchten, **Bearbeiten** aus.
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. Übernehmen Sie Ihre Änderungen und Transformationen im Dialogfeld **Power Query – Abfragen bearbeiten** wie in [Erstellen einer neuen Datenquelle](#create-a-new-data-source) beschrieben.
 
-1. Wählen Sie **Speichern** in Power Query, nachdem Sie Ihre Änderungen abgeschlossen haben, um Ihre Änderungen zu speichern.
+1. Klicken Sie auf **Speichern**, um Ihre Änderungen zu übernehmen und zur Seite **Datenquellen** zurückzukehren.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

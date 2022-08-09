@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051682"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170772"
 ---
 # <a name="create-measures-from-templates"></a>Kennzahlen aus Vorlagen erstellen
 
-Sie können vordefinierte Vorlagen häufig verwendeter [Kennzahlen](measures.md) verwenden, um sie zu erstellen. Detaillierte Beschreibungen der Vorlagen und eine geführte Erfahrung helfen Ihnen bei der effizienten Erstellung von Kennzahlen. Vorlagen bauen auf zugeordneten Daten aus der *Einheitliche Aktivität*-Entität auf. Stellen Sie also sicher, dass Sie [Kundenaktivitäten](activities.md) konfiguriert haben, bevor Sie eine Kennzahl aus einer Vorlage erstellen.
+Verwenden Sie vordefinierte Vorlagen häufig verwendeter [Kennzahlen](measures.md), um sie zu erstellen. Vorlagen bauen auf zugeordneten Daten aus der *Einheitliche Aktivität*-Entität auf. Stellen Sie also sicher, dass Sie [Kundenaktivitäten](activities.md) konfiguriert haben, bevor Sie eine Kennzahl aus einer Vorlage erstellen.
 
-Informationen zum Erstellen benutzerdefinierter Kennzahlen finden Sie unter [Kennzahlen-Builder verwenden, um Kennzahlen von Grund auf neu zu erstellen](measure-builder.md).
+Kennzahlenvorlagen werden nur in Umgebungen für **individuelle Kunden** unterstützt. Informationen zum Erstellen benutzerdefinierter Kennzahlen oder um Kennzahlen für B2B zu erstellen finden Sie unter [Kennzahlen-Builder verwenden](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Einzelne Verbraucher (B2C)](#tab/b2c)
-
-Verfügbare Kennzahlenvorlagen: 
+Verfügbare Kennzahlenvorlagen:
 - Durchschnittlicher Transaktionswert (ATV)
 - Transaktionswert insgesamt
 - Durchschnittlicher täglicher Umsatz
+- Durchschnittlicher monatlicher Umsatz
 - Durchschnittlicher Jahresumsatz
 - Transaktionsanzahl
 - Erhaltene Treuepunkte
@@ -63,15 +62,16 @@ Verfügbare Kennzahlenvorlagen:
 
 1. Wählen Sie im nächsten Abschnitt **Daten hinzufügen** aus, um die Aktivitäten auszuwählen und die entsprechenden Daten von Ihrer *Einheitliche Aktivität*-Entität zuzuordnen.
 
-    1. Schritt 1 von 2: Unter **Aktivitätstyp** wählen Sie den Typ der Entität, die Sie verwenden möchten. Für **Aktivitäten** wählen Sie die Objekte aus, die Sie zuordnen möchten.
-    1. Schritt 2 von 2: Wählen Sie das Attribut aus der *Einheitliche Aktivität*-Entität für die von der Formel geforderte Komponente aus. Für den durchschnittlichen Transaktionswert ist dies beispielsweise das Attribut, das den Transaktionswert darstellt. Für **Aktivitätszeitstempel** wählen Sie das Attribut aus der Entität „Einheitliche Aktivität“ aus, das Datum und Uhrzeit der Aktivität darstellt.
-   
-1. Sobald die Datenzuordnung erfolgt ist, können Sie den Status als **Abgeschlossen** und den Namen der zugeordneten Aktivitäten und Attribute anzeigen.
+    1. Schritt 1 von 2: Unter **Aktivitätstyp** wählen Sie den Typ der Entität, die Sie verwenden möchten. Für **Aktivitäten** wählen Sie die Objekte aus, die Sie zuordnen möchten, und klicken Sie auf **Weiter**.
+    1. Schritt 2 von 2: Wählen Sie das Attribut aus der *Einheitliche Aktivität*-Entität für die von der Formel geforderte Komponente aus. Für den durchschnittlichen Transaktionswert ist dies beispielsweise das Attribut, das den Transaktionswert darstellt. Für **Aktivitätszeitstempel** wählen Sie das Attribut aus der Entität *Einheitliche Aktivität* aus, das Datum und Uhrzeit der Aktivität darstellt.
+    1. Wählen Sie **Save** (Speichern).
 
-1. Sie können jetzt **Ausführen** auswählen, um die Ergebnisse der Messung zu berechnen. Um dies später zu verfeinern, wählen Sie **Entwurf speichern**.
+    Sobald die Datenzuordnung erfolgt ist, wird der Status als **Abgeschlossen** und der Name der zugeordneten Aktivitäten und Attribute angezeigt.
 
-# <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
+1. Wählen Sie **Ausführen** aus, um die Ergebnisse der Messung zu berechnen. Wählen Sie **Entwurf speichern** aus, wenn Sie die aktuelle Konfiguration beibehalten und die Kennzahlmessung später ausführen möchten. Die Seite **Kennzahlen** wird angezeigt.
 
-Diese Funktion ist nur für Maßnahmen verfügbar, die in Umgebungen mit einzelnen Kunden als primäres Zielgruppenpublikum erstellt wurden.
+## <a name="next-step"></a>Nächster Schritt
 
----
+Verwenden Sie vorhandene Maßnahmen, um [ein Kundensegment](segments.md) zu erstellen.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

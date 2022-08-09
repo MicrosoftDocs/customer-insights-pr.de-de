@@ -1,5 +1,5 @@
 ---
-title: Vorgeschlagene Segmente (Vorschauversion)
+title: Vorgeschlagene Segmente basierend auf Kennzahlen (Vorschauversion)
 description: Mit maschinellem Lernen können Sie neue und interessante Segmente anhand von Kundenattributen finden.
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3f504827029afa12c65ec6f065a62606aaa823f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081528"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170956"
 ---
-# <a name="suggested-segments-preview"></a>Vorgeschlagene Segmente (Vorschauversion)
+# <a name="suggested-segments-based-on-measures-preview"></a>Vorgeschlagene Segmente basierend auf Kennzahlen (Vorschauversion)
 
-Entdecken Sie mithilfe eines KI-Modells interessante Segmente Ihrer Kunden. Diese auf maschinellem Lernen basierende Funktion schlägt Segmente vor, die auf Kennzahlen oder Kundenattributen basieren. Dies kann dazu beitragen, Ihre KPIs zu verbessern oder den Einfluss von Attributen im Kontext anderer Attribute besser zu verstehen. 
+Entdecken Sie mithilfe eines KI-Modells interessante Segmente Ihrer Kunden. Diese auf maschinellem Lernen basierende Funktion schlägt Segmente vor, die auf Kennzahlen oder Kundenattributen basieren. Dies kann dazu beitragen, Ihre Key Performance Indicators (KPIs) zu verbessern oder den Einfluss von Attributen im Kontext anderer Attribute besser zu verstehen.
 
 > [!NOTE]
-> Die vorgeschlagene Segmentfunktion verwendet Automatisierung, um Daten auszuwerten und Vorhersagen auf Grundlage dieser Daten zu treffen, und kann daher als Methode zur Profilerstellung verwendet werden, wie dieser Begriff in der Datenschutz-Grundverordnung („DSGVO“) definiert ist. Ihre Verwendung dieser Funktion zur Verarbeitung von Daten unterliegt möglicherweise der DSGVO oder anderen Gesetzen oder Vorschriften. Sie sind dafür verantwortlich, dass Ihre Dynamics 365 Customer Insights-Nutzung, einschließlich dieser Funktion, allen geltenden Gesetzen und Vorschriften entspricht, einschließlich Gesetzen in Bezug auf Privatsphäre, personenbezogene Daten, biometrische Daten, Datenschutz und Vertraulichkeit der Kommunikation.
+> Diese vorgeschlagenen Segmentfunktionen verwenden automatisierte Mittel, um Daten auszuwerten und auf der Grundlage dieser Daten Vorhersagen zu treffen. Daher kann es als Methode zur Profilerstellung verwendet werden, wie dieser Begriff in der allgemeinen Datenschutzverordnung („DSGVO“) definiert ist. Ihre Verwendung dieser Funktion zur Verarbeitung von Daten unterliegt möglicherweise der DSGVO oder anderen Gesetzen oder Vorschriften. Sie sind dafür verantwortlich, dass Ihre Dynamics 365 Customer Insights-Nutzung, einschließlich dieser Funktion, allen geltenden Gesetzen und Vorschriften entspricht, einschließlich Gesetzen in Bezug auf Privatsphäre, personenbezogene Daten, biometrische Daten, Datenschutz und Vertraulichkeit der Kommunikation.
 
 :::image type="content" source="media/suggested-segments.png" alt-text="Seite „Vorgeschlagene Segmente“, die Details zu einem Vorschlag in einem Seitenbereich anzeigt.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Vorgeschlagene Segmente zur Verbesserung Ihrer KPIs
 
-Als Benutzer von Customer Insights haben Sie wahrscheinlich eine Reihe von [Messungen erstellt](measures.md), mit deren Hilfe Sie Ihre Key Performance Indicators (KPIs) verfolgen können. Es ist wichtig zu verstehen, wie bestimmte Attribute diesen KPI beeinflussen, um Segmente zu erstellen und eine zielgerichtete Kampagne durchzuführen.   
+Wenn Sie [Kennzahlen geschaffen](measures.md) verwenden, um Ihre KPIs zu verfolgen, erstellen Sie Segmente, um die Einflüsse auf die KPI anzuzeigen. Sie können diese Informationen verwenden, um eine sehr zielgerichtete Kampagne durchzuführen.
+
 Sie verfolgen beispielsweise eine Kennzahl mit dem Namen *TotalSpendPerCustomer*. Als Unternehmen möchten Sie, dass diese Zahl zunimmt. Wenn Sie eine Kennzahl als primäres Attribut auswählen, können Sie die Attribute auswählen, deren Einfluss Sie bewerten möchten. Gehen wir von *Mitgliedschaftsstufe*, *Mitgliedschaftszeitraum* und *Aufgabe* aus. Customer Insights kann dann ein Segment vorschlagen, das Ihnen sagt, wer den größten Einfluss auf diese Maßnahme hat. So sind zum Beispiel *Buchhalter*, die *Gold*-Mitglieder und seid *mindestens fünf Jahren* in Ihrem Unternehmen sind, die größten Einflussfaktoren von *TotalSpendPerCustomer*. Sie erhalten für jeden Vorschlag eine geschätzte Segmentgröße. Mit diesen Informationen können Sie Kampagnen für die Zielgruppen erstellen.
 
 ## <a name="understand-what-influences-a-customer-attribute"></a>Verstehen, was ein Kundenattribut beeinflusst
 
-Sie können ein Kundenattribut anstelle einer Kennzahl als primäres Attribut auswählen. Basierend auf Ihrer Auswahl der Einflussattribute erstellt das KI-Modell eine Reihe von Vorschlägen, die zeigen, wie die ausgewählten Attribute das primäre Attribut beeinflussen.   
-Zum Beispiel wählen Sie *Prämienmitglied (Ja/Nein)* als primäres Attribut. *Tenure*, *Beruf* und *Anzahl der Support-Tickets* werden als andere beeinflussende Attribute festgelegt. Das KI-Modell könnte Segmente vorschlagen, die darauf hinweisen, dass hauptsächlich IT-Experten mit einer Amtszeit von mehr als zwei Jahren Belohnungsmitglieder sind. Ein weiterer Vorschlag könnte hervorheben, dass Buchhalter mit einer Amtszeit von mehr als einem Jahr und weniger als drei Support-Tickets Belohnungsmitglieder sind. 
+Sie können ein Kundenattribut anstelle einer Kennzahl als primäres Attribut auswählen. Basierend auf Ihrer Auswahl der Einflussattribute erstellt das KI-Modell eine Reihe von Vorschlägen, die zeigen, wie die ausgewählten Attribute das primäre Attribut beeinflussen.
+
+Zum Beispiel wählen Sie *Prämienmitglied (Ja/Nein)* als primäres Attribut. *Tenure*, *Beruf* und *Anzahl der Support-Tickets* werden als andere beeinflussende Attribute festgelegt. Das KI-Modell könnte Segmente vorschlagen, die darauf hinweisen, dass hauptsächlich IT-Experten mit einer Amtszeit von mehr als zwei Jahren Belohnungsmitglieder sind. Ein weiterer Vorschlag könnte hervorheben, dass Buchhalter mit einer Amtszeit von mehr als einem Jahr und weniger als drei Support-Tickets Belohnungsmitglieder sind.
 
 ## <a name="artificial-intelligence-usage"></a>Künstliche Intelligenz nutzen
 
@@ -58,53 +60,36 @@ Ein kategoriales Attribut wie *Kundenzufriedenheit* als primäres Attribut führ
 
 ## <a name="generate-suggested-segments"></a>Generieren Sie vorgeschlagene Segmente
 
-1. Gehen Sie zu **Segmente**.
+1. Gehen Sie zu **Segmente** und wählen Sie die Registerkarte **Vorschläge (Vorschauversion)**.
 
-1. Wählen Sie die Registerkarte **Vorschläge (Vorschauversion)** aus.
+1. Wählen Sie **Neue Vorschläge finden** und **Verbessern Sie eine Kennzahl/Metrik** aus. Wählen Sie **Start** aus.
 
-1. Wählen Sie **Neue Vorschläge erhalten**, um die geführte Erfahrung zu beginnen.
+   :::image type="content" source="media/suggested-segments-measure.png" alt-text="Auswahl der Verbesserungsmaßnahme für die vorgeschlagenen Segmente.":::
 
 1. Wählen Sie eine Messung oder ein Kundenattribut anstelle einer Kennzahl als primäres Attribut aus und dann **Weiter**.
 
-   :::image type="content" source="media/suggested-segments-primary-attribute.png" alt-text="Auswählen des primären Attributs für Vorschläge zu den vorgeschlagenen Segmenten.":::
+1. Wählen Sie die Einflussattribute aus und wählen Sie **Ausführen**.
 
-1. Wählen Sie die Einflussattribute aus und wählen Sie **Speichern**.
-   
    > [!TIP]
    > Durch die Auswahl mehrerer Einflussattribute werden die Chancen verbessert, zu bewerten, wie sie das Primärattribut beeinflussen. Schließen Sie keine Attribute ein, die keinen Einfluss auf das primäre Attribut haben. Wenn beispielsweise alle Ihre Kunden aus einem bestimmten Land stammen, geben Sie nicht das *Land*-Attribut an, da es keine Auswirkungen auf die Ausgabe hat.
 
-1. Abhängig von der Anzahl der Kundenprofile und ausgewählten Attribute kann die Verarbeitung der ausgewählten Attribute einige Minuten dauern. 
+Abhängig von der Anzahl der Kundenprofile und ausgewählten Attribute kann die Verarbeitung der ausgewählten Attribute einige Minuten dauern.
 
-## <a name="view-details-of-a-suggested-segment"></a>Vorgeschlagene Segmentdetails anzeigen
+## <a name="manage-suggested-segments"></a>Vorgeschlagene Segmente verwalten
 
-Sobald das KI-Modell die Vorschläge generiert hat, finden Sie sie unter **Segmente** > **Vorschläge (Vorschauversion)**.
- 
-Wählen Sie ein vorgeschlagenes Segment aus, um die Details dieses Vorschlags zu überprüfen. Sie können auch die Attributwerte oder Regeln überprüfen, die das KI-Modell gelernt hat, um das ausgewählte Segment vorzuschlagen.
+Gehen Sie zu **Segmente** und wählen Sie die Registerkarte **Vorschläge (Vorschau)** aus. Wählen Sie im Abschnitt **Attributbasierte Segmentvorschläge** ein vorgeschlagenes Segment aus, um verfügbare Aktionen anzuzeigen.
 
-## <a name="save-a-suggestion-as-a-segment"></a>Speichern Sie einen Vorschlag als Segment
-
-1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschauversion)**.
-
-1. Wählen Sie das Segment aus, das Sie speichern möchten. 
-
-1. Wählen Sie im Seitenbereich **Als Segment speichern** aus. 
-
-1. Nach dem Speichern des Segments wird es in der Liste der Segmente auf der Registerkarte **Alle Segmente** angezeigt. Es kann jetzt [wie jedes andere Segment aktualisiert, bearbeitet oder gelöscht werden](segments.md).
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Aktualisieren oder bearbeiten Sie eine Reihe von Vorschlägen
-
-1. Gehe Sie zu **Segmente** > **Vorschläge (Vorschauversion)**.
-
-1. Wählen Sie **Vorschläge aktualisieren**, um die Vorschläge zu aktualisieren und gleichzeitig die konfigurierten Attribute beizubehalten. Oder wählen Sie **Attribute bearbeiten**, um die konfigurierten Attribute zu ändern. Das System führt das KI-Modell erneut aus, generiert Segmentvorschläge basierend auf den neuesten Daten und ersetzt die aktuellen Vorschläge.
+- **Anzeigen** des vorgeschlagenen Segmentdetails oder Attributwerte oder Regeln überprüfen, die das KI-Modell gelernt hat.
+- **Als Segment speichern**, um den Vorschlag als Segment zu speichern. Es wird auf der Registerkarte **Alle Segmente** angezeigt und kann [aktualisiert, bearbeitet oder gelöscht](segments.md) werden.
+- **Attribute bearbeiten** und die konfigurierten Attribute ändern, die die aktuellen Vorschläge ersetzen.
+- Wählen Sie **Vorschläge aktualisieren**, um die Vorschläge zu aktualisieren und gleichzeitig die konfigurierten Attribute beizubehalten.
 
 ## <a name="limitations"></a>Einschränkungen
 
 1. Nicht übereinstimmende geschätzte Segmentgröße: Wenn Sie ein primäres Attribut auswählen, das leere Werte enthält, kann dies die geschätzte Segmentgröße in den Segmentvorschlägen beeinflussen. Beim Speichern eines solchen Segments kann die tatsächliche Segmentgröße von der ursprünglichen Schätzung abweichen.
- 
+
 2. Primäre Attribute vom Booleschen Typ funktionieren nicht: Derzeit unterstützen wir nur Zeichenfolgentypen und numerische Datentypen als primäres Attribut.
 
 3. Vorgeschlagene Segmente sind nicht deutlich genug: Beachten Sie, dass die ausgewählten Attribute und die Verteilung der Werte dieser Attribute die Ergebnisse beeinflussen. Sie können Ihre Einflussattribute oder sogar Ihr primäres Attribut ändern, um unterschiedliche Ergebnisse zu erzielen.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

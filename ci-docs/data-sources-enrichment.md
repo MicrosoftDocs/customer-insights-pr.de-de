@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080981"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207182"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Anreicherung für Datenquellen (Vorschauversion)
 
@@ -21,9 +21,9 @@ Verwenden Sie Daten aus Quellen wie Microsoft und anderen Partnern, um Ihre Kund
 
 ## <a name="enrich-a-data-source"></a>Eine Datenquelle anreichern
 
-Sie müssen über Teilnehmer- oder Administrator-Berechtigungen verfügen, um Anreicherungen zu erstellen oder zu bearbeiten. Weitere Informationen finden Sie unter [Berechtigungen](permissions.md).  
+Sie müssen über Teilnehmer- oder Administrator-[Berechtigungen](permissions.md) verfügen, um Anreicherungen zu erstellen oder zu bearbeiten.  
 
-1. Gehen Sie zu **Daten** > **Vereinheitlichen**. Wählen Sie die Entität aus, die Sie anreichern möchten, und wählen Sie ein Attribut als Primärschlüssel für die Entität aus. Weitere Informationen finden Sie unter [Primärschlüssel auswählen](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Gehen Sie zu **Daten** > **Vereinheitlichen**. Wählen Sie die Entität aus, die Sie anreichern möchten, und wählen Sie ein Attribut als [Primärschlüssel](map-entities.md#select-primary-key-and-semantic-type-for-attributes) für die Entität aus.
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
@@ -47,8 +47,8 @@ Die folgenden Anreicherungen sind aktuell für Datenquellen verfügbar. Sehen Si
 
 ## <a name="manage-existing-data-source-enrichments"></a>Verwalten Sie vorhandene Datenquelle-Anreicherungen
 
-Gehen Sie zur Registerkarte **Meine Anreicherungen**, um alle konfigurierten Anreicherungen anzuzeigen.
+Gehen Sie zu **Daten** > **Anreicherung**. Auf der Registerkarte **Meine Anreicherungen** werden konfigurierte Anreicherungen, deren Status, die Anzahl der angereicherten Kunden und den Zeitpunkt der letzten Aktualisierung der Daten angezeigt. Sie können die Liste der Anreicherungen nach einer beliebigen Spalte sortieren oder das Suchfeld verwenden, um die Anreicherung zu finden, die Sie verwalten möchten.
 
-Wählen Sie die Anreicherung aus, um die verfügbaren Optionen anzuzeigen. Sie können auch die vertikalen Auslassungspunkte (&vellip;) auf einem Listenelement auswählen, um die Optionen anzuzeigen. Wenn Sie mehrere Anreicherungen konfiguriert haben, finden Sie diese schnell über das Suchfeld.
+Wählen Sie die Anreicherung aus, um die verfügbaren Optionen anzuzeigen. Sie können auch die vertikalen Auslassungspunkte (&vellip;) auf einem Listenelement auswählen, um die Optionen anzuzeigen.
 
-Sie können eine Datenquelle-Anreicherung anzeigen, bearbeiten, ausführen oder löschen. Weitere Informationen finden Sie unter [Verwaltung der vorhandenen Anreicherungen](enrichment-hub.md).
+Sie können eine Datenquelle-Anreicherung anzeigen, bearbeiten, ausführen oder löschen. Weitere Informationen finden Sie unter [Verwaltung der vorhandenen Anreicherungen](enrichment-hub.md#manage-existing-enrichments).

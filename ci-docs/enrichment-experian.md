@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053020"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195935"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Anreichern von Kundenprofilen mit demografischen Daten von Experian (Vorschauversion)
 
@@ -59,7 +59,7 @@ Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten zu übermitteln an 
 
 1. Prüfen Sie die Übersicht und wählen Sie dann **Weiter** aus.
 
-1. Wählen Sie die Verbindung aus. Wenden Sie sich an einen Administrator, falls keiner verfügbar ist.
+1. Wählen Sie die Verbindung aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
 
 1. Wählen Sie **Weiter** aus.
 

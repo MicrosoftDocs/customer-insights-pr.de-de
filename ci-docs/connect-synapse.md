@@ -1,7 +1,7 @@
 ---
 title: Eine Azure Synapse-Datenquelle verbinden (Vorschauversion)
 description: Verwenden Sie eine Datenbank in Azure Synapse als Datenquelle in Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052698"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206906"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Eine Azure Synapse Analytics-Datenquelle verbinden (Vorschauversion)
 
@@ -66,3 +66,9 @@ Weitere Informationen finden Sie unter [Azure Synapse-Überblick](/azure/synapse
 1. Wählen Sie optional die Datenentitäten aus, für die die Datenprofilerstellung zugelassen werden soll.
 
 1. Wählen Sie **Speichern**, um Ihre Auswahl zu übernehmen und die Erfassung der Daten aus Ihrer neu erstellten Datenquelle zu starten, die mit den Lake-Datenbanktabellen in Azure Synapse Analytics verknüpft ist. Die Seite **Datenquellen** öffnet sich und zeigt die neue Datenquelle im Status **Wird aktualisiert** an.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite [**Entitäten**](entities.md) überprüft werden.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

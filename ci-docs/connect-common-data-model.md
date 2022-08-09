@@ -1,7 +1,7 @@
 ---
 title: Verbinden Sie den Ordner Common Data Model mithilfe einem Azure Data Lake-Konto
 description: Arbeiten Sie mit Common Data Model-Daten unter Verwendung von Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081012"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206998"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbindung mit Daten in Azure Data Lake Storage herstellen
 
@@ -82,7 +82,7 @@ Daten aufnehmen in Dynamics 365 Customer Insights mit Ihrem Azure Data Lake Stor
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialogfeld mit der Anzeige Erforderlich für Primärschlüssel":::
 
    > [!TIP]
-   > Um die Entitäten in einer JSON-Bearbeitungsschnittstelle zu bearbeiten, wählen Sie **Mehr anzeigen** > **Schemadatei bearbeiten**. Nehmen Sie Ihre Änderungen vor, und **speichern** Sie sie.
+   > Um die Entität in einer JSON-Bearbeitungsschnittstelle zu bearbeiten, wählen Sie die Entität und dann **Schemadatei bearbeiten** aus. Nehmen Sie Ihre Änderungen vor, und **speichern** Sie sie.
 
 1. Für ausgewählte Entitäten, die eine inkrementelle Aufnahme erfordern, wird **Erforderlich** unter **Inkrementelle Aktualisierung** angezeigt. Für jede dieser Entitäten siehe [Konfigurieren Sie eine inkrementelle Aktualisierung für Azure Data Lake-Datenquellen](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Daten aufnehmen in Dynamics 365 Customer Insights mit Ihrem Azure Data Lake Stor
    1. Wählen Sie **Fertig** aus.
 
 1. Wählen Sie **Save** (Speichern). Die Seite **Datenquellen** öffnet sich und zeigt die neue Datenquelle im Status **Wird aktualisiert** an.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite [**Entitäten**](entities.md) überprüft werden.
 
 ### <a name="create-a-new-schema-file"></a>Erstellen einer neuen Schema-Datei
 
@@ -148,6 +152,9 @@ Daten aufnehmen in Dynamics 365 Customer Insights mit Ihrem Azure Data Lake Stor
 
 1. Wählen Sie **Save** (Speichern). Die Seite **Datenquellen** öffnet sich und zeigt die neue Datenquelle im Status **Wird aktualisiert** an.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite [**Entitäten**](entities.md) überprüft werden.
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Eine Azure Data Lake Storage Datenquelle bearbeiten
 
@@ -180,7 +187,15 @@ Sie können die Option *Stellen Sie eine Verbindung mit dem Speicherkonto her* a
       > Wenn Abhängigkeiten von der vorhandenen model.json- oder manifest.json-Datei und der Gruppe von Entitäten bestehen, wird eine Fehlermeldung angezeigt und Sie können keine andere model.json- oder manifest.json-Datei auswählen. Entfernen Sie diese Abhängigkeiten, bevor Sie die model.json- oder manifest.json-Datei ändern, oder erstellen Sie eine neue Datenquelle mit der model.json- oder manifest.json-Datei, die Sie verwenden möchten, um das Entfernen der Abhängigkeiten zu vermeiden.
    - Um den Speicherort der Datendatei oder den Primärschlüssel zu ändern, wählen Sie **Bearbeiten** aus.
    - Informationen zum Ändern der inkrementellen Aufnahmedaten finden Sie unter [Konfigurieren Sie eine inkrementelle Aktualisierung für Azure Data Lake-Datenquellen](incremental-refresh-data-sources.md)
+   - Ändern Sie nur den Entitätsnamen so, dass er mit dem Entitätsnamen in der JSON-Datei übereinstimmt.
+
+     > [!NOTE]
+     > Lassen Sie den Entitätsnamen in Customer Insights nach der Aufnahme immer mit dem Entitätsnamen in der Datei „model.json“ oder „Manifest.json“ identisch. Customer Insights validiert bei jeder Systemaktualisierung alle Entitätsnamen mit model.json oder Manifest.json. Wenn ein Entitätsname innerhalb oder außerhalb von Customer Insights geändert wird, tritt ein Fehler auf, da Customer Insights den neuen Entitätsnamen in der JSON-Datei nicht finden kann. Wenn ein aufgenommener Entitätsname versehentlich geändert wurde, bearbeiten Sie den Entitätsnamen in Customer Insights so, dass er mit dem Namen in der JSON-Datei übereinstimmt.
 
 1. Wählen Sie **Attribute** zum Hinzufügen oder Ändern von Attributen oder zum Aktivieren von Datenprofilen. Wählen Sie dann **Fertig**.
 
 1. Klicken Sie auf **Speichern**, um Ihre Änderungen zu übernehmen und zur Seite **Datenquellen** zurückzukehren.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

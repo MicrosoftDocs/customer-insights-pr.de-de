@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080982"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194922"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Kundenkarten-Add-In für Dynamics 365-Apps (Vorschauversion)
 
@@ -28,21 +28,25 @@ Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics
 
 ## <a name="prerequisites"></a>Anforderungen
 
-- Das Add-In funktioniert nur mit modellgetriebenen Dynamics 365-Apps wie Vertrieb oder Kundenservice, Version 9.0 und höher.
-- Damit Ihre Dynamics 365-Daten den Customer Insights-Kundenprofilen zugeordnet werden können, empfehlen wir, sie [über den Konnektor Microsoft Dataverse in die Dynamics 365 App einzubinden](connect-power-query.md). Wenn Sie eine andere Methode zum Erfassen von Dynamics 365-Kontakten (oder -Konten) verwenden, müssen Sie sicherstellen, dass das Feld `contactid` (oder`accountid`) [im Zuordnungsschritt des Datenvereinigungsprozesses als Primärschlüssel für diese Datenquelle](map-entities.md#select-primary-key-and-semantic-type-for-attributes) festgelegt ist.
+- Modellgetriebene Dynamics 365-Apps wie Vertrieb oder Kundenservice, Version 9.0 und höher.
+- Damit Ihre Dynamics 365-Daten den Customer Insights-Kundenprofilen zugeordnet werden können, empfehlen wir, sie [über den Konnektor Microsoft Dataverse in die Dynamics 365 App einzubinden](connect-power-query.md). Wenn Sie eine andere Methode zum Erfassen von Dynamics 365-Kontakten (oder -Konten) verwenden, müssen Sie sicherstellen, dass das Feld `contactid` (oder`accountid`) [Im Datenvereinigungsprozess als Primärschlüssel für diese Datenquelle](map-entities.md#select-primary-key-and-semantic-type-for-attributes) festgelegt ist.
 - Alle Dynamics 365 Benutzer des Kundenkarten-Add-Ins müssen [als Benutzer](permissions.md) in Customer Insights hinzugefügt werden, um die Daten zu sehen.
-- [Konfigurierte Such- und Filter Funktionalitäten](search-filter-index.md) in Customer Insights sind erforderlich, damit das Nachschlagefeld für die Daten funktioniert.
+- [Konfigurierte Such- und Filterfunktionen](search-filter-index.md) in Customer Insights.
 - Jedes Steuerelement des Add-Ins ist auf bestimmte Daten in Customer Insights angewiesen. Einige Daten und Steuerelemente sind nur in Umgebungen bestimmter Typen verfügbar. Die Add-In-Konfiguration informiert Sie, wenn ein Steuerelement aufgrund des ausgewählten Umgebungstyps nicht verfügbar ist. Erhalten Sie weitere Informationen zu [Umgebungen, die Fälle verwenden](work-with-business-accounts.md).
-  - **Measure-Steuerelement**: Erfordert [konfigurierte Measures](measures.md) vom Typ Kundenattribute.
-  - **Intelligenzsteuerung**: Erfordert Daten, die mit [Vorhersagen oder kundenspezifischen Modellen](predictions-overview.md) generiert wurden.
-  - **Kundendetail-Steuerelement**: Alle Felder aus dem Profil sind im vereinheitlichtes Kund*innenprofil verfügbar.
-  - **Anreicherungs-Steuerelement**: Erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt die folgenden Anreicherungen: Von Microsoft bereitgestellte [Marken](enrichment-microsoft.md), [Interessen](enrichment-microsoft.md) und [Office-Bindungsdaten](enrichment-office.md).
-  - **Kontakt-Steuerelement**: Erfordert die Definition einer semantischen Entität des Typs Kontakte.
-  - **Zeitskala-Steuerelement**: Erfordert [Konfigurierte Aktivitäten](activities.md).
+  - **Measure-Steuerelement** erfordert [konfigurierte Kundenattribute Measures](measures.md).
+  - **Intelligenzsteuerung** erfordert Daten, die mit [Vorhersagen oder kundenspezifischen Modellen](predictions-overview.md) generiert wurden.
+  - **Kundendetail-Steuerelement** zeigt alle Felder aus dem Profil sind im vereinheitlichtes Kund*innenprofil verfügbar.
+  - **Anreicherungs-Steuerelement** erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt die folgenden Anreicherungen: Von Microsoft bereitgestellte [Marken](enrichment-microsoft.md), [Interessen](enrichment-microsoft.md) und [Office-Bindungsdaten](enrichment-office.md).
+  - **Kontakt-Steuerelement** erfordert einen semantischen Entität des Typs Kontakte.
+  - **Zeitskala-Steuerelement** erfordert [Konfigurierte Aktivitäten](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Installieren Sie das Kundenkarten-Add-in
 
-Das Kundenkarten-Add-In ist eine Lösung für Customer Engagement Apps in Dynamics 365. Um die Lösung zu installieren, gehen Sie zu AppSource und suchen Sie nach **Dynamics-Kundenkarte**. Wählen Sie das [Kundenkarten-Add-in in AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) und dann **Jetzt abrufen** aus.
+Das Kundenkarten-Add-In ist eine Lösung für Customer Engagement Apps in Dynamics 365. Zum Installieren der Lösung:
+
+1. Wechseln Sie zu AppSource, und suchen Sie **Dynamics-Kundenkarte**.
+
+1. Wählen Sie das [Kundenkarten-Add-in in AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) und dann **Jetzt abrufen** aus.
 
 Möglicherweise müssen Sie sich mit Ihren Administratoranmeldeinformationen anmelden, damit die Dynamics 365-App die Lösung installiert. Es kann einige Zeit dauern, bis die Lösung in Ihrer Umgebung installiert ist.
 

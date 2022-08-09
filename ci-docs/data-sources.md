@@ -1,7 +1,7 @@
 ---
 title: Übersicht über Datenquellen
 description: Erfahren Sie, wie Sie Daten aus verschiedenen Quellen importieren oder aufnehmen.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051452"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207090"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
 Dynamics 365 Customer Insights stellt eine Verbindung zu Daten aus einer breiten Palette von Quellen her. Das Herstellen einer Verbindung zu einem Datenquelle wird häufig als Prozess von *Datenerfassung* bezeichnet. Nachdem Sie die Daten aufgenommen haben, können Sie die Daten [vereinheitlichen](data-unification.md), Erkenntnisse generieren und die Daten für den Aufbau personalisierter Erlebnisse aktivieren.
 
-## <a name="add-data-sources"></a>Datenquellen hinzufügen
+## <a name="add-or-edit-data-sources"></a>Datenquellen hinzufügen oder bearbeiten
 
-Sie können Datenquellen in Customer Insights anhängen oder importieren. Die folgenden Links enthalten Anweisungen zum Hinzufügen von Datenquellen.
+Sie können Datenquellen in Customer Insights anhängen oder importieren. Die folgenden Links enthalten Anweisungen zum Hinzufügen und Bearbeiten von Datenquellen.
 
 **Eine Datenquelle einblenden**
 
@@ -50,13 +50,18 @@ Wenn Ihre Umgebung für die Verwendung von Customer Insights-Speicher konfigurie
 
 Wenn Ihre Umgebung keine Power Platform Dataflows verwendet, enthält die Seite **Datenquellen** nur eine Liste aller Datenquellen. Keine Abschnitte angezeigt.
 
-Gehen Sie zu **Daten** > **Datenquellen**, um den Namen für jede aufgenommene Datenquelle, den Status und das letzte Mal, dass die Daten für diese Datenquelle aktualisiert wurden, anzuzeigen. Sie können die Liste der Datenquellen nach jeder Spalte sortieren.
+## <a name="manage-existing-data-sources"></a>Vorhandene Datenquellen verwalten
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Datenquelle hinzugefügt":::
+Gehen Sie zu **Daten** > **Datenquellen**, um den Namen für jede aufgenommene Datenquelle, den Status und das letzte Mal, dass die Daten für diese Datenquelle aktualisiert wurden, anzuzeigen. Sie können die Liste der Datenquellen nach einer beliebigen Spalte sortieren oder das Suchfeld verwenden, um die Datenquellen zu finden, die Sie verwalten möchten.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Wählen Sie die Datenquellen aus, um verfügbare Aktionen anzuzeigen.
 
-Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite **Entitäten** überprüft werden. Weitere Informationen finden Sie unter [Entitäten](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Datenquelle hinzugefügt":::
+
+- [**Bearbeiten**](#add-or-edit-data-sources) der Datenquelle, um seine Eigenschaften zu ändern.
+- [**Aktualisieren**](#refresh-data-sources) der Datenquelle, um die neuesten Daten einzuschließen.
+- [**Reichern**](data-sources-enrichment.md) Sie Datenquellen vor der Vereinheitlichung an.
+- **Löschen** der Datenquelle. Ein Datenquelle kann nur gelöscht werden, wenn die Daten in keiner Verarbeitung wie Vereinheitlichung, Einblicke, Aktivierungen oder Exporte verwendet werden.
 
 ## <a name="refresh-data-sources"></a>Datenquellen aktualisieren
 
@@ -64,23 +69,12 @@ Datenquellen können nach einem automatischen Zeitplan oder manuell bei Bedarf a
 
 Gehen Sie zu **Administrator** > **System** > [**Zeitplan**](system.md#schedule-tab), um vom System geplante Aktualisierungen Ihrer aufgenommenen Datenquellen zu konfigurieren.
 
-Um eine Datenquelle bei Bedarf zu aktualisieren, folgen Sie diesen Schritten:
+Aktualisieren einer Datenquelle bei Bedarf:
 
 1. Wechseln Sie zu **Daten** > **Datenquellen**.
 
-1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben dem Datenquelle, die Sie ändern möchten, und wählen Sie **Aktualisieren** aus dem Dropdown-Menü. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
+1. Wählen Sie die Datenquelle aus, die Sie aktualisieren möchten, und wählen Sie sie aus **Aktualisierung**. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
 
-1. Wählen Sie **Auffrischung stoppen**, wenn Sie eine bestehende Auffrischung abbrechen wollen und die Datenquelle in ihren letzten Auffrischungsstatus zurückkehren soll.
-
-## <a name="delete-a-data-source"></a>Löschen einer Datenquelle
-
-Ein Datenquelle kann nur gelöscht werden, wenn die Daten in keiner Verarbeitung wie Vereinheitlichung, Einblicke, Aktivierungen oder Exporte verwendet werden.
-
-1. Wechseln Sie zu **Daten** > **Datenquellen**.
-
-2. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) neben dem Datenquelle, die Sie entfernen möchten, und wählen Sie **Löschen** aus dem Dropdown-Menü.
-
-3. Bestätigen Sie den Löschvorgang.
-
+1. Wählen Sie den Status aus, um den Bereich **Fortschrittsdetails** zu öffnen und den Fortschritt des Prozesses anzuzeigen. Um den Auftrag abzubrechen, wählen Sie **Auftrag abbrechen** am unteren Rand des Bereichs.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

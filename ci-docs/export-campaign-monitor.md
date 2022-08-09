@@ -1,19 +1,19 @@
 ---
 title: Exportieren von Segmenten nach Campaign Monitor (Vorschauversion)
 description: Erfahren Sie, wie Sie die Verbindung konfigurieren und zum Campaign Monitor exportieren.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ea7431d4df5143724b5ecf2a2d747ed164fe2c29
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081589"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196301"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Exportieren von Segmenten nach Campaign Monitor (Vorschauversion)
 
@@ -21,28 +21,30 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in Campaign Monitor und ver
 
 ## <a name="prerequisites"></a>Anforderungen
 
--   Sie haben ein [Campaign Monitor-Konto](https://www.campaignmonitor.com/) und entsprechende Administrator-Anmeldeinformationen.
--   Sie haben [Konfigurierte Segmente](segments.md) in Customer Insights.
--   Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
+- Ein [Campaign Monitor-Konto](https://www.campaignmonitor.com/) und entsprechende Administrator-Anmeldeinformationen.
+- Eine [Campaign Monitor-Listen-ID](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
+- Ein [Generierter API-Schlüssel](https://www.campaignmonitor.com/api/getting-started/) über die **Kontoeinstellungen** in Campaign Monitor zuerst, um die API-Listen-ID zu erhalten.
+- [Konfigurierte Segmente](segments.md) in Customer Insights.
+- Unified-Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse darstellt.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Sie können bis zu 1 Million Kundenprofile pro Export nach Campaign Monitor exportieren.
-- Der Export nach Campaign Monitor ist auf Segmente beschränkt.
-- Der Export von Segmenten mit bis zu 1 Millionen Kundenprofilen nach Campaign Monitor kann bis zu 20 Minuten dauern. 
-- Die Anzahl der Kundenprofile, die Sie nach Campaign Monitor exportieren können, hängt von Ihrem Vertrag mit Campaign Monitor ab.
+- Export von Segmenten mit bis zu 1 Millionen Kundenprofilen pro Export nach Campaign Monitor kann bis zu 20 Minuten dauern. Die Anzahl der Kundenprofile, die Sie nach Campaign Monitor exportieren können, hängt von Ihrem Vertrag mit Campaign Monitor ab.
+- Nur Segmente.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Verbindung mit Campaign Monitor einrichten
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Gehen Sie zu **Administrator** > **Verbindungen**.
 
-1. Wählen Sie **Verbindung hinzufügen** und dann **Campaign Monitor** aus, um die Verbindung zu konfigurieren.
+1. Wählen Sie **Verbindung hinzufügen** und wählen Sie **Campaign Monitor**.
 
 1. Geben Sie Ihrer Verbindung einen erkennbaren Namen im Feld **Anzeigename**. Der Name und der Typ der Verbindung beschreiben die Verbindung. Wir empfehlen, einen Namen zu wählen, der den Zweck und das Ziel der Verbindung erklärt.
 
-1. Wählen Sie aus, wer diese Verbindung verwenden kann. Wenn Sie keine Aktion ausführen, ist die Standardeinstellung Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Wählen Sie aus, wer diese Verbindung verwenden kann. Standardmäßig sind es nur Administratoren. Weitere Informationen finden Sie unter [Ermöglichen Sie Mitwirkenden, eine Verbindung für den Export zu verwenden](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Wählen Sie **einverstanden**, um **Datenschutz und Compliance** zu bestätigen.
+1. Überprüfen Sie [Datenschutz und Konformität](connections.md#data-privacy-and-compliance) und wählen **Ich stimme zu** aus.
 
 1. Wählen Sie **Verbinden** aus, um die Verbindung zu Campaign Monitor zu initialisieren.
 
@@ -54,28 +56,24 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in Campaign Monitor und ver
 
 ## <a name="configure-an-export"></a>Konfigurieren Sie einen Export
 
-Sie können diesen Export konfigurieren, wenn Sie Zugriff auf eine Verbindung dieses Typs haben. Weitere Informationen finden Sie unter [Zum Konfigurieren eines Exports erforderliche Berechtigungen](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Gehen Sie zu **Daten** > **Exporte**.
 
-1. Wählen Sie **Ziel hinzufügen**, um einen neuen Export zu erstellen.
+1. Um einen neuen Export zu erstellen, wählen Sie **Export hinzufügen** aus.
 
-1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Campaign Monitor-Abschnitt aus. Wenn Sie diesen Abschnittsnamen nicht sehen, stehen Ihnen keine Verbindungen dieses Typs zur Verfügung.
+1. Wählen Sie unter **Verbindung für den Export** eine Verbindung aus dem Campaign Monitor-Abschnitt aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
 
-1. Geben Sie Ihre [**Campaign Monitor-Listen-ID**](https://www.campaignmonitor.com/api/getting-started/#your-list-id) ein.    
-   [Generieren Sie den API-Schlüssel](https://www.campaignmonitor.com/api/getting-started/) über die **Kontoeinstellungen** in Campaign Monitor zuerst, um die API-Listen-ID anzuzeigen.  
+1. Geben Sie einen Namen für den Export ein.
+
+1. Geben Sie Ihre **Campaign Monitor-Listen-ID** ein.
 
 1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt. Der Export nach Campaign Monitor ist auf Segmente beschränkt.
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie die Segemente aus, die Sie exportieren möchten.
 
-Beim Speichern eines Exports wird der Export nicht sofort ausgeführt.
+1. Wählen Sie **Save** (Speichern).
 
-Der Export wird mit jeder [geplanten Aktualisierung](system.md#schedule-tab) ausgeführt. Sie können auch [Daten bei Bedarf exportieren](export-destinations.md#run-exports-on-demand). 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-
-## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
-
-Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an Campaign Monitor zu übertragen, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft überträgt diese Daten auf Ihre Anweisung. Sie sind jedoch dafür verantwortlich, dass Campaign Monitor alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Ihr Dynamics 365 Customer Insights-Administrator kann dieses Exportziel jederzeit entfernen, um die Verwendung dieser Funktionalität einzustellen.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

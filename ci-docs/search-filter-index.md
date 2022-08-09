@@ -1,7 +1,7 @@
 ---
-title: 'Kundenprofile: Such- und Filterindex'
+title: Verwalten Sie den Such- und Filterindex für Kundenprofile
 description: Schnelles Auffinden von Informationen über einheitliche Kundenprofile und Filter für bestimmte Attribute.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050808"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187908"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Kundenprofile: Such- und Filterindex
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Verwalten Sie den Such- und Filterindex für Kundenprofile
 
-Das Ergebnis der Vereinheitlichung Ihrer Kundendaten ist eine Kundenprofileinheit, die eine einheitliche Sicht auf Ihren gesamten Kundenstamm bietet. Um schnell [Informationen über einen bestimmten Kunden oder eine bestimmte Kundengruppe zu finden](customer-profiles.md), können Sie die Funktionen **Suchen** und **Filter** auf der Seite **Kunden** konfigurieren. Lesen Sie weiter, um zu erfahren, wie Admins die Attribute auf der Seite **Such- und Filterindex** bearbeiten können, die den Benutzern zum Suchen und Filtern zur Verfügung stehen.
+Das Ergebnis der Vereinheitlichung Ihrer Kundendaten ist eine *Kunde* Entität, die eine einheitliche Sicht auf Ihren gesamten Kundenstamm bietet. Um schnell [Informationen über einen bestimmten Kunden oder eine bestimmte Kundengruppe zu finden](customer-profiles.md) für Benutzer, können Adminstratoren die Funktionen **Suchen** und **Filter** auf der Seite **Kunden** konfigurieren.
 
    :::image type="content" source="media/search-filter.png" alt-text="Suchfilter":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Definieren Sie durchsuchbare Attribute und indizierte Felder
 
-## <a name="add-fields-and-specify-attributes"></a>Felder hinzufügen und Attribute angeben
+Wenn Sie als Administrator zum ersten Mal durchsuchbare Attribute definieren, müssen Sie zunächst indizierte Felder definieren. Wir empfehlen Ihnen, alle Attribute auszuwählen, nach denen Benutzer Kunden auf der Seite **Kunden** suchen und filtern können. Geben Sie nur Attribute an, die in der Entität *Kunde* vorhanden sind, die Sie während des Datenvereinheitlichungsprozesses angelegt haben.
 
-Wenn Sie als Administrator zum ersten Mal durchsuchbare Attribute definieren, müssen Sie zunächst indizierte Felder definieren. Wir empfehlen Ihnen, alle Attribute auszuwählen, nach denen Benutzer Kunden auf der Seite **Kunden** suchen und filtern können. Sie können nur Attribute angeben, die in der Entität Kundenprofil vorhanden sind, die Sie während des Datenvereinheitlichungsprozesses angelegt haben.
+1. Wechseln Sie zu **Kunden** und wählen Sie **Such- & Filterindex**.
 
-1. Öffnen Sie die Seite **Kunden** und wählen Sie **Such- & Filterindex**.
+1. Wählen Sie **+Hinzufügen** aus.
 
-2. Wählen Sie **+ Hinzufügen**, um die indizierten Felder anzugeben.
+1. Wählen Sie die Attribute in der Liste aus, die Sie als indizierte Felder hinzufügen möchten und klicken Sie auf **Anwenden**.
 
-3. Wählen Sie die Attribute in der Liste aus, die Sie als indizierte Felder hinzufügen möchten. Sie können jederzeit weitere Attribute hinzufügen, indem Sie **Hinzufügen** auswählen. Sie können auch alle ausgewählten Attribute entfernen, indem Sie das Symbol **Entfernen** wählen.
+1. Wählen Sie **Hinzufügen** aus, um weitere Attribute hinzuzufügen. Um ein Attribut zu entfernen, wählen Sie das Attribut im Raster aus und wählen Sie **Entfernen**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Durchsuchen Sie die Tabelle Indizierte Kundenfelder
+   :::image type="content" source="media/search-filter-index.png" alt-text="Seite Index suchen & filtern":::
 
-Die folgenden Informationen werden in der Tabelle dargestellt.
+1. Wählen Sie **Ausführen**, sobald Sie bereit sind, Ihre Einstellungen für Suche und Filter anzuwenden. Nachdem die Änderungen verarbeitet wurden, sehen Sie sie in [Kundenkarten auf der Kundenseite](customer-profiles.md).
 
-- **Name**: Stellt den Namen des Attributs so dar, wie er in der Entität Kundenprofil erscheint.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Definieren von Filteroptionen für ein bestimmtes Attribut
+
+Richten Sie die Felder ein, die auf der Seite **Kunden** zum Durchsuchen und Filtern verwendet werden sollen.
+
+1. Wechseln Sie zu **Kunden** und wählen Sie **Such- & Filterindex**.
+
+1. Wählen Sie ein Attribut und **Filter hinzufügen** aus. Definieren Sie die Anzahl der Ergebnisse und die Reihenfolge, in der sie organisiert werden. Abhängig vom Datentyp des Attributs erscheint einer der folgenden Bereiche.
+
+   - Zeichenfolgentypattribute: Geben Sie die Anzahl der gewünschten Ergebnisse auf dem **Zeichenfolgenfilteroptionen** Bereich und die Bestellrichtlinie an, nach der sie organisiert werden.
+
+   - Numerische Zeichenfolgenattribute: Geben Sie die Intervalle auf dem **Nummernfilteroptionen** Bereich und die Bestellrichtlinie an, nach der sie organisiert werden.
+
+   - Datenattribute: Geben Sie die Intervalle auf dem **Datenfilteroptionen** Bereich und die Bestellrichtlinie an, nach der sie organisiert werden.
+
+1. Klicken Sie auf **OK**. Wiederholen Sie dies für alle Attribute, nach denen Sie filtern möchten.
+
+1. Wählen Sie **Ausführen**, sobald Sie bereit sind, Ihre Einstellungen für Suche und Filter anzuwenden. Nachdem die Änderungen verarbeitet wurden, sehen Sie sie in [Kundenkarten auf der Kundenseite](customer-profiles.md).
+
+## <a name="view-indexed-customer-fields"></a>Indizierte Kundenfelder anzeigen
+
+Die Seite **Such- und Filterindex** zeigt die folgenden Informationen:
+
+- **Name**: Stellt den Namen des Attributs so dar, wie er in der Entität *Kunde* erscheint.
 - **Datentyp**: Gibt an, ob der Datentyp eine Zeichenfolge, eine Zahl oder ein Datum ist.
 - **In die Suche einbeziehen**: Gibt an, ob dieses Attribut für die Suche nach Kunden auf der Seite **Kunden** über das Feld **Suche** verwendet werden kann.
 - **Filter hinzufügen**: Steuerelement, um festzulegen, wie dieses Attribut für die Filterung auf der Seite **Kunden** verwendet werden kann.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Bearbeitung von Filteroptionen für ein bestimmtes Attribut
-
-Das Menü **Filter** auf der Seite **Kunden** kann eine unterschiedliche Anzahl von Attribut-Ebenen enthalten (z. B. verschiedene Altersgruppen, nach denen Kunden gefiltert werden können).
-
-1. Wählen Sie **Filter hinzufügen** für ein bestimmtes Attribut auf der Seite **Such- und Filterindex**. Sie können die Anzahl der Ergebnisse und die Reihenfolge, in der sie organisiert werden, definieren. Abhängig vom Datentyp des Attributs erscheint einer der folgenden Bereiche.
-
-- Zeichenfolgentypattribute: Geben Sie die Anzahl der gewünschten Ergebnisse auf dem **Zeichenfolgenfilteroptionen** Bereich und die Bestellrichtlinie an, nach der sie organisiert werden.
-
-- Numerische Zeichenfolgenattribute: Geben Sie die Intervalle auf dem **Nummernfilteroptionen** Bereich und die Bestellrichtlinie an, nach der sie organisiert werden.
-
-- Datenattribute: Geben Sie die Intervalle auf dem **Datenfilteroptionen** Bereich und die Bestellrichtlinie an, nach der sie organisiert werden.
-
-2. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
-
-3. Wählen Sie **Ausführen**, sobald Sie bereit sind, Ihre Einstellungen anzuwenden. Nachdem die Änderungen verarbeitet wurden, finden Sie sie in [Kundenkarten auf der Kundenseite](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Nächste Schritte,
 
 Überprüfen Sie die [einheitliche Profilseite](customer-profiles.md), um nach Profilen zu suchen oder die indizierten Felder zu verwenden, um eine Teilmenge aller einheitlichen Profile anzuzeigen.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

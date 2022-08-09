@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081031"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195795"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Kundenprofile mit SFTP-Kundenimport anreichern (Vorschauversion)
 
@@ -104,7 +104,7 @@ Ihr Dynamics 365 Customer Insights Administrator kann diese Anreicherung jederze
 
 1. Prüfen Sie die Übersicht und wählen Sie dann **Weiter** aus.
 
-1. Wählen Sie die Verbindung aus. Wenden Sie sich an einen Administrator, falls keiner verfügbar ist.
+1. Wählen Sie die Verbindung aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
 
 1. Wählen Sie das **Kunden Dataset** und wählen Sie das Profil oder Segment aus, das Sie anreichern möchten. Die Entität *Kunde* reichert alle Ihre Kundenprofile an, währen ein Segment nur Kundenprofile anreichert, die in diesem Segment enthalten sind.
 

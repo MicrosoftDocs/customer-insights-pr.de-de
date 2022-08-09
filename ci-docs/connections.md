@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080972"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195173"
 ---
 # <a name="connections-preview-overview"></a>Verbindungsübersicht (Vorschauversion)
 
@@ -27,6 +27,12 @@ Gehen Sie zu **Administrator** > **Verbindungen**, um Verbindungen zu erstellen 
 Die Registerkarte **Verbindungen** zeigt Ihnen alle aktiven Verbindungen. Die Liste zeigt eine Zeile für jede Verbindung.
 
 Verschaffen Sie sich einen schnellen Überblick, erhalten Sie eine Beschreibung, und finden Sie heraus, was Sie mit den einzelnen Erweiterungsoptionen auf der Registerkarte **Entdecken** tun können.
+
+## <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
+
+Wenn Sie Dynamics 365 Customer Insights aktivieren, um Daten an Drittparteien oder andere Microsoft-Produkte zu übertragen, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird solche Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass die Drittpartei alle Datenschutz- oder Sicherheitsverpflichtungen erfüllt, die Sie möglicherweise haben. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Ihr Dynamics 365 Customer Insights Administrator kann diese Verbindung jederzeit entfernen, um die Nutzung der Funktionalität einzustellen.
 
 ## <a name="exports"></a>Exporte
 
@@ -41,8 +47,6 @@ Nur Administratoren können neue Verbindungen konfigurieren, aber die erstellten
 Um Verbindungen hinzuzufügen, müssen Sie [Administratorberechtigungen](permissions.md) haben. Wenn Sie eine Verbindung zu anderen Microsoft-Diensten herstellen, gehen wir davon aus, dass sich beide Dienste in derselben Organisation befinden.
 
 1. Gehen Sie zu **Administrator** > **Verbindungen (Vorschauversion)**.
-
-1. Zur Registerkarte **Verbindungen** wechseln.
 
 1. Wählen Sie zu **Verbindung hinzufügen**, um eine neue Verbindung zu erstellen. Wählen Sie aus dem Dropdown-Menü aus, welche Art von Verbindung Sie erstellen möchten.
 
@@ -99,3 +103,5 @@ Abgelöste Anreicherungen und Exporte werden inaktiv. Sie reaktivieren sie, inde
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Stellen Sie Verbindungen mit Geheimnissen her, die von Ihrem eigenen Key Vault verwaltet werden
 
 Einige Verbindungen benötigen Geheimnisse wie API-Schlüssel oder Passwörter. Einige Verbindungen unterstützen Geheimnisse, die in Ihrem eigenen Key Vault gespeichert sind. Erfahren Sie mehr über unterstützte Verbindungen und wie Sie [Ihren eigenen Key Vault für Customer Insights](use-azure-key-vault.md) festlegen.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

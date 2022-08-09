@@ -21,12 +21,12 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081448"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183557"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Beziehungen zwischen Entitäten und Entitätspfaden
 
@@ -34,7 +34,7 @@ Beziehungen verbinden Entitäten und definieren einen Graphen Ihrer Daten, wenn 
 
 Es gibt drei Arten von Beziehungen: 
 - Nicht bearbeitbare Systembeziehungen, die vom System im Rahmen der Datenvereinheitlichung erstellt werden
-- Nicht bearbeitbare, geerbte Beziehungen, die automatisch aus der Erfassung von Datenquellen erstellt werden 
+- Nicht bearbeitbare, geerbte Beziehungen, die automatisch aus der Erfassung von Datenquellen erstellt werden
 - Bearbeitbare benutzerdefinierte Beziehungen, die von Benutzern erstellt und konfiguriert werden
 
 ## <a name="non-editable-system-relationships"></a>Nicht bearbeitbare Systembeziehungen
@@ -67,69 +67,66 @@ Die Beziehung besteht aus einer *Quellentität* mit dem Fremdschlüssel und eine
    - **Beschreibung:**: Beschreibung der Beziehung.
    - **Quellentität**: Die Entität, die in der Beziehung als Quelle verwendet wird. Beispiel: SupportCase.
    - **Zielentität**: Die Entität, die in der Beziehung als Ziel verwendet wird. Beispiel: Customer.
-   - **Quellkardinalität**: Geben Sie die Kardinalität der Quellentität an. Die Kardinalität beschreibt die Anzahl der möglichen Elemente in einer Menge. Sie bezieht sich immer auf die Zielkardinalität. Sie können zwischen **Einer** und **Viele** wählen. Es werden nur Viele-zu-Eins und Eins-zu-Eins-Beziehungen unterstützt.  
+   - **Quellkardinalität**: Kardinalität der Quellentität an. Die Kardinalität beschreibt die Anzahl der möglichen Elemente in einer Menge. Sie bezieht sich immer auf die Zielkardinalität. Sie können zwischen **Einer** und **Viele** wählen. Es werden nur Viele-zu-Eins und Eins-zu-Eins-Beziehungen unterstützt.  
      - n:1: Mehrere Quelldatensätze können sich auf einen Zieldatensatz beziehen. Beispiel: Mehrere Supportfälle eines einzigen Kunden.
      - 1:1: Ein einzelner Quelldatensatz bezieht sich auf einen einzelnen Zieldatensatz. Beispiel: Eine Treue-ID für einen einzelnen Kunden.
 
      > [!NOTE]
      > m:n-Beziehungen können erstellt werden, indem Sie zwei n:1-Beziehungen verwenden und dann eine verknüpfende Entität erstellen, die die Quellentität und die Zielentität verbindet.
 
-   - **Zielkardinalität**: Wählen Sie die Kardinalität der Zielentitätsdatensätze aus. 
-   - **Quellschlüsselfeld**: Das Fremdschlüsselfeld in der Quellentität. Beispiel: SupportCase könnte CaseID als Fremdschlüsselfeld verwenden.
-   - **Zielschlüsselfeld**: Das Schlüsselfeld der Zielentität. Beispiel: Customer könnte das Schlüsselfeld **CustomerID** verwenden.
+   - **Zielkardinalität**: Kardinalität der Zielentitätsdatensätze.
+   - **Quellschlüsselfeld**: Fremdschlüsselfeld in der Quellentität Beispiel: SupportCase verwendet  **CaseID** als Fremdschlüsselfeld verwenden.
+   - **Zielschlüsselfeld**: Schlüsselfeld der Zielentität. Beispiel: Customer verwendet das Schlüsselfeld **CustomerID**.
 
 4. Wählen Sie **Speichern** aus, um die benutzerdefinierte Beziehung zu erstellen.
 
 ## <a name="set-up-account-hierarchies"></a>Kontohierarchien einrichten
 
-Umgebungen, die für die Verwendung von Geschäftskonten als primäre Zielgruppe konfiguriert sind, können Kontohierarchien für zugehörige Geschäftskonten konfigurieren. Beispiel: ein Unternehmen mit separaten Geschäftsbereichen. 
+Umgebungen, die für die Verwendung von Geschäftskonten als primäre Zielgruppe konfiguriert sind, können Kontohierarchien für zugehörige Geschäftskonten konfigurieren. Beispiel: ein Unternehmen mit separaten Geschäftsbereichen.
 
 Organisationen erstellen Kontohierarchien, um Konten und ihre Beziehungen untereinander besser zu verwalten. Customer Insights unterstützt untergeordnete Kontenhierarchien, die bereits in den eingebundenen Kundendaten vorhanden sind. Zum Beispiel Konten von Dynamics 365 Sales. Diese Hierarchien können auf der Seite **Beziehungen** konfiguriert werden.
 
 1. Gehen Sie zu **Daten** > **Beziehungen**.
 1. Wählen Sie die Registerkarte **Kontohierarchie** aus.
-1. **Neue Kontohierarchie** auswählen. 
-1. In dem Bereich **Kontohierarchie** geben Sie einen Namen für die Hierarchie ein. Das System erstellt einen Namen für die Ausgabeentität. Sie können den Namen der Ausgabeentitäte ändern.
+1. **Neue Kontohierarchie** auswählen.
+1. In dem Bereich **Kontohierarchie** geben Sie einen Namen für die Hierarchie ein. Das System erstellt einen Namen für die Ausgabeentität, aber Sie können ihn ändern.
 1. Wählen Sie die Entität aus, die Ihre Kontohierarchie enthält. Es befindet sich normalerweise in derselben Entität, die die Konten enthält.
-1. Wählen Sie **Konto-ID** und **Übergeordnete Konto-ID** von der ausgewählten Entität aus 
-1. Wählen Sie **Speichern**, um die Einstellungen zu übernehmen und die Kontenhierarchie abzuschließen.
+1. Wählen Sie **Konto-UID** und **Übergeordnete UID** von der ausgewählten Entität aus
+1. Wählen Sie **Speichern**, um die Kontohierarchie abzuschließen.
 
-## <a name="view-relationships"></a>Anzeigen von Beziehungen
+## <a name="manage-existing-relationships"></a>Verwalten bestehender Beziehungen
 
-Die Seite „Beziehungen“ listet alle erstellten Beziehungen auf. Jede Zeile steht für eine Beziehung, die auch Details zur Quellentität, Zielentität und Kardinalität enthält. 
+Gehen Sie zur Seite **Beziehungen**, um alle erstellten Beziehungen, ihre Quellentität, die Zielentität und die Kardinalität anzuzeigen.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Liste von Beziehungen und Optionen in der Aktionsleiste der Seite „Beziehungen“.":::
 
-Diese Seite bietet eine Reihe von Optionen für bestehende und neue Beziehungen: 
-- **Neue Beziehung**: [Erstellen Sie eine neue Beziehung](#create-a-custom-relationship).
-- **Visualisierer**: [Entdecken Sie den Beziehungsvisualisierer](#explore-the-relationship-visualizer), um ein Netzwerkdiagramm der bestehenden Beziehungen und ihrer Kardinalität anzuzeigen.
-- **Filtern nach**: Wählen Sie den Typ von Beziehungen aus, der in der Liste angezeigt werden soll.
-- **Beziehungen durchsuchen**: Verwenden Sie eine textbasierte Suche nach Eigenschaften von Beziehungen.
+Verwenden Sie die Optionen **Filtern nach** oder **Beziehungen suchen** aus, um eine bestimmte Beziehung zu finden. Wählen Sie [**Visualizer**](#explore-the-relationship-visualizer) aus, um ein Netzwerkdiagramm der bestehenden Beziehungen und ihrer Kardinalität anzuzeigen.
+
+Wählen Sie eine Beziehung aus, um verfügbare Aktionen anzuzeigen:
+- **Bearbeiten**: Aktualisieren Sie die Eigenschaften von benutzerdefinierten Beziehungen im Bearbeitungsbereich und speichern Sie die Änderungen.
+- **Löschen**: Löschen Sie benutzerdefinierte Beziehungen.
+- **Anzeigen**: Zeigen Sie vom System erstellte und geerbte Beziehungen an.
 
 ### <a name="explore-the-relationship-visualizer"></a>Der Beziehungsvisualisierer
 
 Der Beziehungsvisualisierer zeigt ein Netzwerkdiagramm der bestehenden Beziehungen zwischen verbundenen Entitäten und ihrer Kardinalität an. Es visualisiert auch den Beziehungspfad.
 
-Um die Ansicht anzupassen, können Sie die Position der Felder ändern, indem Sie sie auf das Canvas ziehen.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Screenshot des Netzwerkdiagramms des Beziehungsvisualisierers mit Verbindungen zwischen verwandten Entitäten.":::
 
-Verfügbare Optionen: 
+Um die Ansicht anzupassen, können Sie die Position der Felder ändern, indem Sie sie auf das Canvas ziehen. Folgende weitere Optionen stehen zur Verfügung: 
 - **Als Bild exportieren**: Speichern Sie die aktuelle Ansicht als Bilddatei.
 - **Zum horizontalen/vertikalen Layout wechseln**: Ändern Sie die Ausrichtung der Entitäten und Beziehungen.
 - **Bearbeiten**: Aktualisieren Sie die Eigenschaften von benutzerdefinierten Beziehungen im Bearbeitungsbereich und speichern Sie die Änderungen.
 
 ## <a name="relationship-paths"></a>Beziehungspfade
 
-Ein Beziehungspfad beschreibt die Entitäten, die mit Beziehungen zwischen einer Quell-Entität und einer Ziel-Entität verbunden sind. Es wird verwendet, wenn ein Segment oder eine Kennzahl erstellt wird, die andere Entitäten als die einheitliche Profilentität enthält, und es gibt mehrere Optionen, um die einheitliche Profilentität zu erreichen. 
-
-Ein Beziehungspfad teilt dem System mit, über welche Beziehungen auf die vereinheitlichte Profilentität zugegriffen werden soll. Unterschiedliche Beziehungspfade können zu unterschiedlichen Ergebnissen führen.
+Ein Beziehungspfad beschreibt die Entitäten, die mit Beziehungen zwischen einer Quell-Entität und einer Ziel-Entität verbunden sind. Es wird verwendet, wenn ein Segment oder eine Kennzahl erstellt wird, die andere Entitäten als die einheitliche Profilentität enthält, und es gibt mehrere Optionen, um die einheitliche Profilentität zu erreichen. Unterschiedliche Beziehungspfade können zu unterschiedlichen Ergebnissen führen.
 
 Zum Beispiel hat die Entität *eCommerce_eCommerceEinkäufe* die folgenden Beziehungen zum einheitlichen Profil *benutzerdefinierte* Entität:
 
 - eCommerce_eCommercePurchases > Kunde
 - eCommerce_eCommercePurchases > eCommerce_eCommerceKontakte > POS_posPurchases > Kunde
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Kunde 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Kunde
 
 Ein Beziehungspfad bestimmt, welche Entitäten Sie beim Erstellen von Regeln für Kennzahlen oder Segmente verwenden können. Die Auswahl der Option mit dem längsten Beziehungspfad führt wahrscheinlich zu weniger Ergebnissen, da die übereinstimmenden Datensätze Teil aller Entitäten sein müssen. In diesem Beispiel muss ein Kunde Waren über E-Commerce (eCommerce_eCommercePurchases) an einer Verkaufsstelle (POS_posPurchases) gekauft haben und an unserem Treueprogramm (loyaltyScheme_loyCustomers) teilnehmen. Wenn Sie sich für die erste Option entscheiden, erhalten Sie wahrscheinlich mehr Ergebnisse, da Kunden nur in einer weiteren Entität vorhanden sein müssen.
 
@@ -155,7 +152,7 @@ Eine Beziehung wird als eine **indirekte Beziehung** klassifiziert, wenn sich ei
 
 #### <a name="multi-hop-relationship"></a>Multi-Hop-Beziehung
 
-Eine *Multi-Hop-Beziehung* ist eine *indirekte Beziehung*, die es Ihnen ermöglicht, eine Quell-Entität mit einer Ziel-Entität über eine oder mehrere andere zwischengeschaltete Entitäten zu verbinden.
+Eine **Multi-Hop-Beziehung** ist eine *indirekte Beziehung*, die es Ihnen ermöglicht, eine Quell-Entität mit einer Ziel-Entität über eine oder mehrere andere zwischengeschaltete Entitäten zu verbinden.
 
 Wenn sich beispielsweise eine Aktivitätsentität namens *eCommerce_eCommercePurchasesWest* mit einer Zwischenentität namens *eCommerce_eCommercePurchasesEast* verbindet und sich dann mit einer Zielentität namens *eCommerce_eCommerceContacts* verbindet, ist dies eine Multi-Hop-Beziehung.
 
@@ -168,16 +165,6 @@ Multi-Hop- und Multipfadbeziehungen können zusammen verwendet werden, um **Mult
 Wenn sich beispielsweise eine Aktivitätsentität namens *eCommerce_eCommercePurchasesWest* mit einer Zwischenentität namens *eCommerce_eCommercePurchasesEast* verbindet und sich dann mit zwei Zielentitäten namens *eCommerce_eCommerceContacts* und *loyaltyScheme_loyCustomers* verbindet, ist dies eine Multi-Hop-Multipfadbeziehung.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Die Quellentität stellt eine direkte Verbindung zu einer Zielentität und über eine Zwischenentität eine Verbindung zu einer anderen Zielentität her.":::
-
-## <a name="manage-existing-relationships"></a>Verwalten bestehender Beziehungen 
-
-Auf der Seite „Beziehungen“ wird jede Beziehung durch eine Zeile dargestellt. 
-
-Wählen Sie eine Beziehung aus und wählen Sie dann eine der folgenden Optionen aus: 
- 
-- **Bearbeiten**: Aktualisieren Sie die Eigenschaften von benutzerdefinierten Beziehungen im Bearbeitungsbereich und speichern Sie die Änderungen.
-- **Löschen**: Löschen Sie benutzerdefinierte Beziehungen.
-- **Anzeigen**: Zeigen Sie vom System erstellte und geerbte Beziehungen an. 
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947367"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146694"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Daten-abhängige Rechteanforderungen unter DSGVO
 
@@ -31,18 +31,22 @@ Das "Recht auf Löschung" durch die Entfernung persönlicher Daten aus den Kunde
 
 Customer Insights bietet die folgenden produktinternen Möglichkeiten, um persönliche Daten für einen bestimmten Kunden oder Benutzer zu löschen:
 
-- **Löschanträge für Kundendaten verwalten**: Kundendaten in Customer Insights werden aus Originaldatenquellen außerhalb von Customer Insights aufgenommen. Alle DSGVO-Löschungsanfragen müssen in der ursprünglichen Datenquelle durchgeführt werden.
+- **Löschanträge für Kundendaten verwalten**: Kundendaten in Customer Insights werden aus Originaldatenquellen außerhalb von Customer Insights aufgenommen. Alle DSGVO-Löschungsanfragen zuerst in der ursprünglichen Datenquelle durchführen.
 - **Löschanfragen für Customer Insights-Benutzerdaten verwalten**: Daten für Benutzer werden von Customer Insights erstellt. Alle DSGVO-Löschungsanfragen müssen in Customer Insights durchgeführt werden.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Verwalten von Löschanforderungen für Kundendaten
 
-Ein Administrator von Customer Insights kann die folgenden Schritte ausführen, um Kundendaten zu entfernen, die in der Datenquelle gelöscht wurden:
+Ein Administrator von Customer Insights kann die folgenden Schritte ausführen, um Kundendaten zu entfernen, die in der Datenquelle gelöscht wurden. Stellen Sie sicher, dass die Löschanforderung in Ihrem Datenquelle ausgeführt wurde, bevor Sie mit den unten aufgeführten Schritten fortfahren. 
 
 1. Melden Sie sich bei Dynamics 365 Customer Insights an.
-2. Gehen Sie zu **Daten** > **Datenquellen**
-3. Für jede Datenquelle in der Liste, die gelöschte Kundendaten enthält:
+1. Gehen Sie zu **Daten** > **Datenquellen**
+1. Für jede Datenquelle in der Liste, die gelöschte Kundendaten enthält:
    1. Wählen Sie die vertikalen Auslassungspunkte (&vellip;) und dann **Aktualisieren** aus.
-   2. Überprüfen Sie den Status der Datenquelle unter **Status**. Ein Häkchen bedeutet, dass die Aktualisierung erfolgreich war. Ein Warndreieck bedeutet, dass etwas schief gelaufen ist. Wenn ein Warndreieck angezeigt wird, wenden Sie sich an D365CI@microsoft.com.
+   1. Überprüfen Sie den Status der Datenquelle unter **Status**. Ein Häkchen bedeutet, dass die Aktualisierung erfolgreich war. Ein Warndreieck bedeutet, dass etwas schief gelaufen ist. Wenn ein Warndreieck angezeigt wird, wenden Sie sich an D365CI@microsoft.com.
+1. Führen Sie nach einer erfolgreichen Datenquellenaktualisierung auch die Downstream-Aktualisierungen aus. Vor allem, wenn Sie keine wiederkehrende vollständige Aktualisierung von Customer Insights geplant haben. 
+
+> [!IMPORTANT]
+> Statische Segmente sind nicht in einer vollständigen Aktualisierung oder in nachgelagerten Aktualisierungen nach einer Löschanforderung enthalten. Um sicherzustellen, dass Kundendaten auch aus statischen Segmenten entfernt werden, erstellen Sie die statischen Segmente mit den aktualisierten Quelldaten neu.
 
 > [!div class="mx-imgBorder"]
 > ![Umgang mit DSGVO-Löschanträgen für Kundendaten.](media/gdpr-data-sources.png "Behandlung von DSGVO-Löschungsanträgen für Kundendaten")
@@ -77,5 +81,10 @@ Ein Mandanten-Administrator kann diese Schritte befolgen, um Daten zu exportiere
 1. Senden Sie eine E-Mail an D365CI@microsoft.com, wobei Sie die E-Mail-Adresse des Benutzers in der Anfrage angeben. Das Customer Insights-Team sendet eine E-Mail an die registrierte Admin-E-Mail-Adresse des Mandanten und bittet um eine Bestätigung für den Datenexport.
 2. Bestätigen Sie die Meldung, um die Daten für den angeforderten Benutzer zu exportieren.
 3. Erhalten Sie die exportierten Daten über die E-Mail-Adresse des Mandantenverwalters.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Umgang mit Datenlöschung in Dynamics 365 Customer Insights
+
+1. Daten werden gelöscht (Datenpartitionen und Daten-Snapshots), wenn die Datenpartitionen und Daten-Snapshots länger als 30 Tage inaktiv sind, d. h. sie durch eine neue Datenpartition und einen neuen Snapshot durch eine Aktualisierung der Datenquellen ersetzt wurden.
+2. Nicht alle Daten und Snapshots werden gelöscht. Die aktuellste Datenpartition und Datenmomentaufnahme sind per Definition aktiv, da sie in Customer Insights verwendet werden. Für die neuesten Daten spielt es keine Rolle, ob die Datenquellen nicht innerhalb der letzten 30 Tage aktualisiert wurden.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

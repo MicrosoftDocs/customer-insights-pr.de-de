@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081708"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183630"
 ---
 # <a name="semantic-mappings-preview"></a>Semantische Zuordnungen (Vorschauversion)
 
@@ -33,12 +33,12 @@ Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinier
 1. In dem **Entitätsdaten** Schritt legen Sie die Werte für die folgenden Felder fest:
 
    - **Name der semantischen Entitätszuordnung**: Geben Sie einen Namen für Ihre semantische Entitätszuordnung an.
-   - **Quell-Entität**: Wählen Sie eine Entität aus, die Kontaktdaten enthält.
-   - **Primärschlüssel**: Wählen Sie das Feld aus, mit dem ein Kontaktdatensatz eindeutig identifiziert wird. Sie sollte keine doppelten Werte, leere Werte oder fehlende Werte enthalten.
+   - **Quell-Entität**: Eine Entität, die Kontaktdaten enthält.
+   - **Primärschlüssel**: Feld, mit dem ein Kontaktdatensatz eindeutig identifiziert wird. Sie sollte keine doppelten Werte, leere Werte oder fehlende Werte enthalten.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard1.png" alt-text="Richten Sie die semantische Entitätszuordnung mit Name, Quellentität und Primärschlüssel ein.":::
 
-1. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
+1. Wählen Sie **Weiter** aus.
 
 1. Konfigurieren Sie im Schritt **Beziehung** die Details, die zum Verbinden Ihrer Kontaktdaten mit den entsprechenden Kundendaten verwendet werden. Dieser Schritt visualisiert die Verbindung zwischen Entitäten.  
 
@@ -46,7 +46,7 @@ Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinier
 
    1. Wählen Sie **Beziehung hinzufügen** und konfigurieren Sie die Beziehung.
    1. Wählen Sie das Attribut aus Ihrer Quellentität aus, das Ihre Kontaktentität mit einer anderen Entität verbindet.
-   1. Wählen Sie die Entität aus, mit der Sie Ihre Kontaktentität verbinden möchten. Sie können eine Entität aus dem Bereich **Kontoentitäten** oder **Zwischenentität** wählen. Wenn Sie eine Zwischenentität auswählen, müssen Sie eine zweite Beziehung definieren, um eine Verbindung zu Ihrer Zielkontoentität herzustellen.
+   1. Wählen Sie die Entität aus, mit der Sie Ihre Kontaktentität verbinden möchten. Wählen Sie eine Entität aus dem Bereich **Kontoentitäten** oder **Zwischenentität** aus. Wenn Sie eine Zwischenentität auswählen, definieren Sie eine zweite Beziehung, um eine Verbindung zu Ihrer Zielkontoentität herzustellen.
 
       :::image type="content" source="media/Semantic_Mapping_Wizard2.png" alt-text="Wählen Sie entweder eine Kontoentität oder eine Zwischenentität aus.":::
 
@@ -55,43 +55,38 @@ Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinier
 
    > [!NOTE]
    > Sie können mehr Beziehungen zwischen der Kontaktentität und anderen Kontoentitäten mit Zwischenentitäten konfigurieren.
-   >  :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Visualisierung verschiedener Beziehungen, die Kontaktentitäten mit Kontoentitäten verbinden.":::
+   
+     :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Visualisierung verschiedener Beziehungen, die Kontaktentitäten mit Kontoentitäten verbinden.":::
 
-1. Wählen Sie **Weiter**, wenn Sie mit der Beziehungskonfiguration fertig sind.
+1. Wählen Sie **Weiter** aus.
 
 1. In dem Schritt **Semantiktyp einstellen** wählen Sie einen **Semantischen Typ**. Aktuell gibt es einen **Semantischen Typ** namens *KontaktProfil*.
 
-1. Ordnen Sie Ihre Daten jetzt den angezeigten Feldern *KontaktProfil* **Semantischer Typ** zu.
-   - Erforderliches Feld: Kontakt-ID
-   - Optionale Felder: Vorname, Nachname, Geburtsdatum, Geschlecht, primäre E-Mail-Adresse und primäre Telefonnummer
+1. Ordnen Sie Ihre Kontakt-ID dem zu *ContactProfile* semantischer Typ **Kontakt-ID**. Ordnen Sie optional andere Felder wie Vorname, Nachname, Gender oder E-Mail zu.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard5.png" alt-text="Ordnen Sie Ihre Kontaktdatenattribute den bereitgestellten erforderlichen und optionalen Feldern zu.":::
 
-1. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
+1. Wählen Sie **Weiter** aus.
 
-1. In dem Schritt **Überprüfen** werfen Sie einen Blick auf die Konfiguration der semantischen Zuordnung. Wählen Sie **Bearbeiten** für den entsprechenden Abschnitt, um Änderungen vorzunehmen.
+1. In dem Schritt **Überprüfen** überprüfen Sie die Konfiguration der semantischen Zuordnung. Wählen Sie **Bearbeiten** für den entsprechenden Abschnitt, um Änderungen vorzunehmen.
 
-1. Wählen Sie **Speichern**, um Ihre neue **Semantische Zuordnung** zu speichern.
+1. Wählen Sie **Save** (Speichern).
 
-1. Nach dem Speichern können Sie den Prozess **Ausführen** auswählen, um die semantische Zuordnung zu verarbeiten oder **Schließen** wählen, um Ihre semantische Zuordnung zu speichern, ohne sie zu verarbeiten.
-
-1. Um eine semantische Zuordnung zu einem späteren Zeitpunkt auszuführen, wählen Sie die semantische Zuordnung aus und wählen Sie **Aktualisierung**.
+1. Wählen Sie **Ausführen** aus, um die semantische Zuordnung zu verarbeiten. Oder wählen Sie **Schließen** aus, um Ihre semantische Zuordnung zu speichern, ohne sie zu verarbeiten. Für die spätere Ausführung wählen Sie die semantische Zuordnung aus und wählen Sie **Aktualisierung**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Verwalten Sie vorhandene semantische Zuordnungen
 
-Unter **Daten** > **Semantische Zuordnungen (Vorschauversion)**, können Sie alle Ihre gespeicherten semantischen Zuordnungen anzeigen und verwalten. Jede semantische Zuordnung wird durch eine separate Zeile dargestellt. Sie finden Details über die Quellentität, den semantischen Typ, den Zuordnungs-Typ und seinen Status.
+Gehen Sie zu **Daten** > **Semantische Zuordnungen (Vorschau)**, um Ihre gespeicherten semantischen Zuordnungen, deren Quellentität, Semantiktyp, Zuordnungstyp und Status anzuzeigen.
 
 :::image type="content" source="media/semantic-mapping-options.png" alt-text="Optionen zum Verwalten von semantischen Zuordnungen.":::
 
-- **Bearbeiten**: Öffnet die Konfiguration der semantischen Zuordnungseinrichtung für den Schritt Überprüfung. Sie können die aktuelle Konfiguration ändern. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten.
-
-- **Aktualisierung**: Aktualisiert die ausgewählte semantische Zuordnung mit den aktuellsten Daten der Entitäten, die Teil ihrer Konfiguration sind. Das Aktualisieren einer bestimmten semantischen Zuordnung aktualisiert alle semantischen Zuordnungen desselben Typs.
-
-- **Umbenennen**: Öffnet einen Dialog, in dem Sie einen anderen Namen für die ausgewählte semantische Zuordnung eingeben können. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
-
-- **Löschen**: Öffnet einen Dialog, um das Löschen der ausgewählten semantischen Zuordnung zu bestätigen. Sie können auch mehrere semantische Zuordnungen gleichzeitig löschen, indem Sie die semantischen Zuordnungen und das Löschsymbol auswählen. Um den Löschvorgang zu bestätigen, wählen Sie **Löschen**.
+Wählen Sie die semantische Zuordnung aus, um verfügbare Aktionen anzuzeigen.
+- **Bearbeiten** Sie die aktuelle Konfiguration. Klicken Sie auf **Speichern** und **Ausführen**, um die Änderungen zu verarbeiten.
+- **Aktualisieren** Sie die semantische Zuordnung, um die neuesten Daten einzuschließen. Das Aktualisieren einer bestimmten semantischen Zuordnung aktualisiert alle semantischen Zuordnungen desselben Typs.
+- **Umbenennen** Sie die semantische Zuordnung. Wählen Sie **Save** (Speichern).
+- **Löschen** Sie die semantische Zuordnung. Sie können auch mehrere semantische Zuordnungen gleichzeitig löschen, indem Sie die semantischen Zuordnungen und das Löschsymbol auswählen. Um den Löschvorgang zu bestätigen, wählen Sie **Löschen**.
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Eine semantische Entitätszuordnung von ContactProfile zum Erstellen von Aktivitäten auf Kontaktebene verwenden
 
@@ -100,7 +95,7 @@ Nach dem Erstellen einer semantischen Entitätszuordnung von *ContactProfile* k�
    > [!NOTE]
    > Damit Aktivitäten auf Kontaktebene funktionieren, müssen sowohl das Attribut **AccountID** als auch das Attribut **ContactID** in Ihren Aktivitätsdaten enthalten sein.
 
-1. [Eine semantische Entitätszuordnung von *ContactProfile* definieren](#define-a-contactprofile-semantic-entity-mapping) Führen Sie außerdem die semantische Zuordnung aus.
+1. [Definieren Sie ein *ContactProfile* Semantische Entitätszuordnung](#define-a-contactprofile-semantic-entity-mapping) und führen Sie die semantische Zuordnung aus.
 
 1. Gehen Sie zu **Daten** > **Aktivitäten**.
 
@@ -119,14 +114,14 @@ Nach dem Erstellen einer semantischen Entitätszuordnung von *ContactProfile* k�
 
 1. Führen Sie Ihre Aktivitätszuordnungen aus.
 
-1. Ihre Aktivitäten auf Kontaktebene werden jetzt auf Ihrer Kundenzeitskala angezeigt.
+1. Nachdem eine Aktivitätszuordnung auf Kontaktebene ausgeführt wurde, wählen Sie **Kunden** aus. Ihre Aktivitäten auf Kontaktebene werden auf Ihrer Kundenzeitskala angezeigt.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Endergebnis nach der Konfiguration der Kontaktaktivitäten":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Filterung der Aktivitätszeitskala auf Kontaktebene
 
-Nachdem Sie eine Aktivitätszuordnung auf Kontaktebene konfiguriert und ausgeführt haben, wird die Aktivitätszeitskala für Ihre Kunden aktualisiert. Je nach Ihrer *ContactProfile*-Konfiguration enthält sie die IDs oder Namen dieser Personen für die Aktivitäten, an denen sie beteiligt waren. Sie können Aktivitäten in der Zeitskala nach Kontakten filtern, um bestimmte Kontakte anzuzeigen, die Sie interessieren. Darüber hinaus können Sie alle Aktivitäten anzeigen, die keinem bestimmten Kontakt zugeordnet sind, indem Sie **Aktivitäten, die keinem Kontakt zugeordnet sind** auswählen.
+Je nach Ihrer *ContactProfile*-Konfiguration enthält die Aktivitätszeitleiste für Kunden die IDs oder Namen dieser Personen für die Aktivitäten, an denen sie beteiligt waren. Filtern Sie Aktivitäten in der Zeitskala nach Kontakten, um bestimmte Kontakte anzuzeigen, die Sie interessieren. Sie können alle Aktivitäten anzeigen, die keinem bestimmten Kontakt zugeordnet sind, indem Sie **Aktivitäten, die keinem Kontakt zugeordnet sind** auswählen.
 
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Filteroptionen, die für Aktivitäten auf Kontaktebene verfügbar sind":::
+:::image type="content" source="media/Contact_Activities3.png" alt-text="Filteroptionen, die für Aktivitäten auf Kontaktebene verfügbar sind":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
