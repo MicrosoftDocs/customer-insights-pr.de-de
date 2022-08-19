@@ -1,19 +1,19 @@
 ---
 title: Kundenprofile mit Daten aus HERE Technologies anreichern (Vorschauversion)
 description: Allgemeine Informationen über die Drittanbieter-Anreicherung von HERE Technologies.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196255"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237857"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Kundenprofile mit Daten aus HERE Technologies anreichern (Vorschauversion)
 
@@ -33,16 +33,11 @@ Sie müssen [Administrator](permissions.md#admin) in Customer Insights sein und 
 
 1. Geben Sie einen Namen für die Verbindung und einen gültigen API-Schlüssel von HERE Technologies ein.
 
-1. Überprüfen Sie und geben Sie Ihre Zustimmung für [Datenschutz und Einhaltung](#data-privacy-and-compliance) durch die Auswahl von **Ich stimme zu**.
+1. Überprüfen Sie [Datenschutz und Konformität](connections.md#data-privacy-and-compliance) und wählen **Ich stimme zu** aus.
 
 1. Wählen Sie **Verifizieren**, um die Konfiguration zu bestätigen, und wählen Sie dann **Speichern**.
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="Verbindungskonfigurationsseite für HERE Technologies.":::
-
-### <a name="data-privacy-and-compliance"></a>Datenschutz und Konformität
-
-Wenn Sie Dynamics 365 Customer Insights für die Übertragung von Daten an HERE Technologies aktivieren, erlauben Sie die Übertragung von Daten außerhalb der Compliance-Grenze für Dynamics 365 Customer Insights, einschließlich potenziell sensibler Daten wie personenbezogener Daten. Microsoft wird solche Daten auf Ihre Anweisung hin übertragen, aber Sie sind dafür verantwortlich, dass HERE Technologies alle Datenschutz- oder Sicherheitsverpflichtungen einhält, die Sie haben können. Weitere Informationen finden Sie unter [Microsoft-Datenschutzerklärung](https://go.microsoft.com/fwlink/?linkid=396732).
-Ihr Dynamics 365 Customer Insights Administrator kann diese Anreicherung jederzeit entfernen, um die Nutzung dieser Funktionalität einzustellen.
 
 ## <a name="configure-the-enrichment"></a>Anreicherungskonfiguration
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139656"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213581"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Vereinheitlichen Sie Kundenfelder für die Datenvereinheitlichung
 
@@ -58,6 +58,9 @@ Wählen Sie in diesem Schritt des Vereinigungsprozesses Attribute aus und schlie
 
 1. Geben Sie mit einer der drei Optionen an, wie die Felder kombiniert oder zusammengeführt werden sollen:
     - **Relevanz**: Identifiziert den Gewinnerwert basierend auf dem für die teilnehmenden Felder angegebenen Relevanzrang. Dies ist die standardmäßige Zusammenführungsoption. Wählen Sie **Nach oben/unten** aus, um die Wichtigkeitseinstufungen festzulegen.
+
+      > [!NOTE]
+      > Customer Insights verwendet den ersten Nicht-Null-Wert. Wenn zum Beispiel bei gegebenen Entitäten A, B und C, die in dieser Reihenfolge angeordnet sind, A.Name und B.Name null sind, dann wird der Wert von C.Name verwendet.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Relevanz-Option im Dialogfeld zum Zusammenführen von Feldern.":::
 

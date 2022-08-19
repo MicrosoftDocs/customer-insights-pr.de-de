@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194967"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245326"
 ---
 # <a name="exports-preview-overview"></a>Exporte (Vorschauversion) – Übersicht
 
@@ -79,7 +79,7 @@ Wählen Sie einen Export aus, um verfügbare Aktionen anzuzeigen.
 
 ## <a name="schedule-and-run-exports"></a>Planen und Ausführen von Exporten
 
-Jeder von Ihnen konfigurierte Export verfügt über einen Aktualisierungszeitplan. Während einer Aktualisierung sucht das System nach neuen oder aktualisierten Daten, die in einen Export aufgenommen werden sollen. Standardmäßig werden Exporte als Teil einer jeden [geplanten Systemaktualisierung](system.md#schedule-tab) ausgeführt. Sie können den Aktualisierungszeitplan anpassen oder deaktivieren, um Exporte manuell auszuführen.
+Jeder von Ihnen konfigurierte Export verfügt über einen Aktualisierungszeitplan. Während einer Aktualisierung sucht das System nach neuen oder aktualisierten Daten, die in einen Export aufgenommen werden sollen. Standardmäßig werden Exporte als Teil einer jeden [geplanten Systemaktualisierung](schedule-refresh.md) ausgeführt. Sie können den Aktualisierungszeitplan anpassen oder deaktivieren, um Exporte manuell auszuführen.
 
 Exportzeitpläne hängen vom Status Ihrer Umgebung ab. Wenn Aktualisierungen in Bearbeitung von [Abhängigkeiten](system.md#refresh-processes) sind, wenn ein geplanter Export gestartet werden soll, führt das System zuerst die Aktualisierungen durch und führt dann den Export aus. In der Spalte **Aktualisiert** wird angezeigt, wann ein Export letztmalig aktualisiert wurde.
 

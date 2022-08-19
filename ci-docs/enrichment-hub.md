@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053868"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245878"
 ---
 # <a name="data-enrichment-preview-overview"></a>Datenanreicherung (Vorschauversion): Übersicht
 
@@ -76,7 +76,7 @@ Wählen Sie die Anreicherung aus, um verfügbare Aktionen anzuzeigen.
 - **Anzeige** von Anreicherungsdetails mit der Anzahl der angereicherten Kundenprofile.
 - **Bearbeiten** der Anreicherungskonfiguration.
 - [**Ausführen**](#run-or-refresh-enrichments) der Anreicherung, um Kundenprofile mit den neuesten Daten zu aktualisieren. Sie können mehrere Anreicherungen gleichzeitig ausführen, indem Sie sie in der Liste auswählen.
-- Eine Berechtigung **aktivieren** oder **deaktivieren**. Inaktive Anreicherungen werden während einer [geplanten Aktualisierung](system.md#schedule-tab) nicht aktualisiert.
+- Eine Berechtigung **aktivieren** oder **deaktivieren**. Inaktive Anreicherungen werden während einer [geplanten Aktualisierung](schedule-refresh.md) nicht aktualisiert.
 - **Löschen** Sie die Anreicherung.
 
 Sie können auch [Segmente](segments.md) oder [Maße](measures.md) aus Anreicherungen erstellen.
@@ -85,7 +85,7 @@ Sie können auch [Segmente](segments.md) oder [Maße](measures.md) aus Anreicher
 
 Nach der Ausführung können Anreicherungen nach einem automatischen Zeitplan oder bei Bedarf manuell aktualisiert werden.
 
-1. Um eine oder mehrere Anreicherungen manuell zu aktualisieren, wählen Sie sie aus und wählen Sie **Ausführen**. Zum [Planen einer automatischen Aktualisierung](system.md#schedule-tab) wechseln Sie zu **Administrator** > **System** > **Zeitplan**. Die Bearbeitungszeit hängt von der Größe Ihrer Kundendaten ab.
+1. Um eine oder mehrere Anreicherungen manuell zu aktualisieren, wählen Sie sie aus und wählen Sie **Ausführen**. Zum [Planen einer automatischen Aktualisierung](schedule-refresh.md) wechseln Sie zu **Administrator** > **System** > **Zeitplan**. Die Bearbeitungszeit hängt von der Größe Ihrer Kundendaten ab.
 
 1. [Sehen Sie sich den Fortschritt des Anreicherungsprozesses an](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Sie finden Details zur Verarbeitung einer Anreicherung, einschließlich ihres St
 1. Erweitern Sie im Bereich **Fortschrittsdetails** den Abschnitt **Anreicherungen**.
 1. Wählen Sie unter der Bereicherung, deren Fortschritt Sie sehen möchten, **Details anzeigen**.
 1. Im Bereich **Aufgabendetails** wählen Sie **Details anzeigen**, um die Prozesse anzuzeigen, die an der Aktualisierung der Anreicherung beteiligt sind, und deren Status.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Anreicherungsergebnisse anzeigen
 

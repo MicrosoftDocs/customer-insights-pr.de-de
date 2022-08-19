@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081569"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245464"
 ---
 # <a name="manage-predictions"></a>Verwalten von Vorhersagen
 
@@ -58,7 +58,7 @@ Die folgenden Spalten im Bericht enthalten hilfreiche Informationen zur Verbesse
 
 ## <a name="refresh-a-prediction"></a>Aktualisieren einer Vorhersage
 
-Vorhersagen werden automatisch zum gleichen [Zeitpunkt aktualisiert, zu dem Ihre Daten aktualisiert werden](system.md#schedule-tab), wie in den Einstellungen konfiguriert. Sie können sie auch manuell aktualisieren.
+Vorhersagen werden automatisch zum gleichen [Zeitpunkt aktualisiert, zu dem Ihre Daten aktualisiert werden](schedule-refresh.md), wie in den Einstellungen konfiguriert. Sie können sie auch manuell aktualisieren.
 
 1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
 

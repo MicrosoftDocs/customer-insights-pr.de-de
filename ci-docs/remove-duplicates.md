@@ -2,7 +2,7 @@
 title: Entfernen von Duplikaten, bevor Sie Daten vereinheitlichen
 description: Der zweite Schritt im Vereinheitlichungsprozess ist die Auswahl, welcher Datensatz aufbewahrt werden soll, wenn Duplikate gefunden werden.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,18 +13,27 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139428"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213626"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Entfernen von Duplikaten, bevor Sie Daten vereinheitlichen
 
-Dieser Schritt der Vereinheitlichung ermöglicht es Ihnen optional, Regeln für den Umgang mit doppelten Datensätzen innerhalb einer Entität einzurichten. *Deduplikation* identifiziert doppelte Datensätze und führt sie zu einem Datensatz zusammen. Quelldatensätze werden mit alternativen IDs mit dem zusammengeführten Datensatz verknüpft. Wenn keine Regeln konfiguriert sind, werden die systemdefinierten Regeln angewendet.
+Diese optionale Schritt der Vereinheitlichung ermöglicht es Ihnen optional, Regeln für das Löschen doppelter Datensätze **innerhalb** einer Entität einzurichten. Die Deduplizierung identifiziert mehrere Datensätze für einen Kunden und wählt den besten aufzubewahrenden Datensatz aus (basierend auf grundlegenden Zusammenführungspräferenzen) oder führt die Datensätze zu einem zusammen (basierend auf erweiterten Zusammenführungspräferenzen). Quelldatensätze werden mit alternativen IDs mit dem zusammengeführten Datensatz verknüpft. Wenn keine Regeln konfiguriert sind, werden die systemdefinierten Regeln angewendet.
 
-## <a name="include-enriched-entities-preview"></a>Angereicherte Entitäten einschließen (Vorschau)
+## <a name="default-deduplication"></a>Standarddeduplizierung
+
+Wenn keine Deduplizierungsregeln konfiguriert sind, werden die systemdefinierten Regeln angewendet.
+
+- Der Primärschlüssel ist dedupliziert.
+  Für alle Datensätze mit demselben Primärschlüssel ist der Datensatz **Am häufigsten** (derjenige mit den wenigsten Nullwerten) der Gewinner.
+- Alle entitätsübergreifenden Abgleichsregeln werden auf die Entität angewendet.
+  Zum Beispiel: Im Abgleichsschritt, wenn Entität A mit Entität B *Vollständiger Name* und *Geburtsdatum* abgeglichen wird, dann wird Entität A auch nach *Vollständiger Name* und *Geburtsdatum* dedupliziert. Da *Vollständiger Name* und *Geburtsdatum* gültige Schlüssel zum Identifizieren eines Kunden in Entität A sind, sind diese Schlüssel auch gültig zum Identifizieren doppelter Kunden in Entität A.
+
+## <a name="include-enriched-entities-preview"></a>Angereicherte Entitäten einschließen (Vorschauversion)
 
 Wenn Sie Entitäten auf der Ebene der Datenquelle angereichert haben, um Ihre Vereinigungsergebnisse zu verbessern, wählen Sie sie aus. Weitere Informationen finden Sie unter [Anreicherungen für Datenquellen](data-sources-enrichment.md).
 

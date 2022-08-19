@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206998"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245832"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbindung mit Daten in Azure Data Lake Storage herstellen
 
@@ -56,8 +56,8 @@ Daten aufnehmen in Dynamics 365 Customer Insights mit Ihrem Azure Data Lake Stor
 
 1. Wählen Sie eine der folgenden Optionen für **Verbinden Sie Ihren Speicher**. Weitere Informationen finden Sie unter [Verbinden Sie Customer Insights mit einem Azure Data Lake Storage Gen2 Konto mit einem Azure Dienstprinzipal](connect-service-principal.md).
 
-   - **Azure-Ressource**: Geben Sie die **Ressourcen-ID** ein. Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren**. Weitere Informationen finden Sie unter [Private Links](security-overview.md#private-links-tab).
-   - **Azure-Abonnement**: Wählen Sie das **Abonnement** und dann die **Ressourcengruppe** und das **Speicherkonto** aus. Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren**. Weitere Informationen finden Sie unter [Private Links](security-overview.md#private-links-tab).
+   - **Azure-Ressource**: Geben Sie die **Ressourcen-ID** ein. Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren**. Weitere Informationen finden Sie unter [Private Links](security-overview.md#set-up-an-azure-private-link).
+   - **Azure-Abonnement**: Wählen Sie das **Abonnement** und dann die **Ressourcengruppe** und das **Speicherkonto** aus. Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren**. Weitere Informationen finden Sie unter [Private Links](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Sie benötigen entweder eine der folgenden Rollen für den Container oder das Speicherkonto, um die Datenquelle zu erstellen:
@@ -176,7 +176,7 @@ Sie können die Option *Stellen Sie eine Verbindung mit dem Speicherkonto her* a
         > - Speicher-Blob-Datenbesitzer
         > - Storage-Blob-Daten-Mitwirkender
 
-   - Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren** aus. Weitere Informationen finden Sie unter [Private Links](security-overview.md#private-links-tab).
+   - Wählen Sie optional aus, wenn Sie Daten aus einem Speicherkonto über einen privaten Azure-Link erfassen möchten und wählen Sie **Privaten Link aktivieren** aus. Weitere Informationen finden Sie unter [Private Links](security-overview.md#set-up-an-azure-private-link).
 
 1. Wählen Sie **Weiter** aus.
 1. Ändern Sie eine der folgenden Informationen:

@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170680"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246292"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
@@ -58,7 +58,7 @@ Wählen Sie das Segment aus, um verfügbare Aktionen anzuzeigen.
 - **Bearbeiten** des Segments, um seine Eigenschaften zu ändern.
 - **Duplikat erstellen** eines Segments. Sie können die Eigenschaften sofort bearbeiten oder das Duplikat speichern.
 - [**Aktualisieren**](#refresh-segments) des Segments, um die neuesten Daten einzuschließen.
-- **Aktivieren** oder **Deaktivieren** des Segments. Bei einer [geplanten Aktualisierung](system.md#schedule-tab) werden inaktive Segmente nicht aktualisiert und sie haben den **Status** aufgelistet als **Übersprungen**. Dies zeigt an, dass nicht einmal eine Aktualisierung versucht wurde. Aktive Segmente werden basierend auf ihrem Typ aktualisiert: statisch oder dynamisch.
+- **Aktivieren** oder **Deaktivieren** des Segments. Bei einer [geplanten Aktualisierung](schedule-refresh.md) werden inaktive Segmente nicht aktualisiert und sie haben den **Status** aufgelistet als **Übersprungen**. Dies zeigt an, dass nicht einmal eine Aktualisierung versucht wurde. Aktive Segmente werden basierend auf ihrem Typ aktualisiert: statisch oder dynamisch.
 - **Statisch machen** oder **Dynamisch machen** den Segmenttyp. Statische Segmente müssen manuell aktualisiert werden. Dynamische Segmente werden während einer Systemaktualisierung automatisch aktualisiert.
 - [**Finden Sie ähnliche Kunden**](find-similar-customer-segments.md) aus dem Segment.
 - **Umbenennen** des Segments.
@@ -88,7 +88,7 @@ Der untere Teil enthält eine Liste der Segmentmitglieder.
 
 Segmente können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. Um eine oder mehrere Segmente manuell zu aktualisieren, wählen Sie sie aus und wählen Sie **Aktualisieren**.
 
-Zum [Planen einer automatischen Aktualisierung](system.md#schedule-tab) wechseln Sie zu **Administrator** > **System** > **Zeitplan**. Es gelten die folgenden Regeln:
+Zum [Planen einer automatischen Aktualisierung](schedule-refresh.md) wechseln Sie zu **Administrator** > **System** > **Zeitplan**. Es gelten die folgenden Regeln:
 
 - Alle Segmente mit dem Typ **Dynamisch** oder **Erweiterung** werden automatisch mit der eingestellten Kadenz aktualisiert. Sobald die Aktualisierung abgeschlossen ist, zeigt der **Status** an, ob beim Aktualisieren des Segments Probleme aufgetreten sind. **Zuletzt aktualisiert** zeigt einen Zeitstempel der letzten erfolgreichen Aktualisierung an. Wenn ein Fehler auftritt, wählen Sie den Fehler aus, um die Details dazu anzuzeigen.
 - Segmente mit dem Typ **Statisch** werden *nicht* automatisch aktualisiert werden. **Zuletzt aktualisiert** zeigt einen Zeitstempel der letzten Ausführung oder manuellen Aktualisierung der statischen Segmente an.

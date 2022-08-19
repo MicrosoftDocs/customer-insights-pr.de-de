@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170819"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245372"
 ---
 # <a name="measures-overview"></a>Kennzahlenübersicht
 
@@ -53,7 +53,7 @@ Wählen Weiter für eine Kennzahl aus, um verfügbare Aktionen anzuzeigen. Wähl
 - **Bearbeiten** der Kennzahl, um seine Eigenschaften zu ändern.
 - **Aktualisieren** der Kennzahl, um die neuesten Daten einzuschließen.
 - **Umbenennen** der Kennzahl.
-- **Aktivieren** oder **Deaktivieren** der Kennzahl. Bei einer [geplanten Aktualisierung](system.md#schedule-tab) werden inaktive Kennzahlen nicht aktualisiert und sie haben den **Status** aufgelistet als **Übersprungen**. Dies zeigt an, dass nicht einmal eine Aktualisierung versucht wurde.
+- **Aktivieren** oder **Deaktivieren** der Kennzahl. Bei einer [geplanten Aktualisierung](schedule-refresh.md) werden inaktive Kennzahlen nicht aktualisiert und sie haben den **Status** aufgelistet als **Übersprungen**. Dies zeigt an, dass nicht einmal eine Aktualisierung versucht wurde.
 - **Tag** zu [Tags verwalten](work-with-tags-columns.md#manage-tags) für die Kennzahl.
 - **Löschen** der Kennzahl.
 - **Spalten** zu [Passen Sie die Spalten an](work-with-tags-columns.md#customize-columns) diese Anzeige.
@@ -62,7 +62,7 @@ Wählen Weiter für eine Kennzahl aus, um verfügbare Aktionen anzuzeigen. Wähl
 
 ## <a name="refresh-measures"></a>Kennzahlen aktualisieren
 
-Kennzahlen können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. Um eine oder mehrere Kennzahlen manuell zu aktualisieren, wählen Sie sie aus und wählen Sie **Aktualisieren**. Zum [Planen einer automatischen Aktualisierung](system.md#schedule-tab) wechseln Sie zu **Administrator** > **System** > **Zeitplan**.
+Kennzahlen können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. Um eine oder mehrere Kennzahlen manuell zu aktualisieren, wählen Sie sie aus und wählen Sie **Aktualisieren**. Zum [Planen einer automatischen Aktualisierung](schedule-refresh.md) wechseln Sie zu **Administrator** > **System** > **Zeitplan**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

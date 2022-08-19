@@ -1,19 +1,19 @@
 ---
 title: Neuerungen in Dynamics 365 Customer Insights
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114245"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246010"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Neuerungen in Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Updates Juli 2022
+
+Die Updates im Juli 2022 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="export-to-moengage"></a>Exportieren nach MoEngage
+
+Exportieren Sie Segmente einheitlicher Kundenprofile in MoEngage und verwenden Sie sie für E-Mail-Marketing in MoEngage.
+
+Weitere Informationen finden Sie unter [Exportieren von Segmenten nach MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>SSH-Unterstützung für SFTP-basierte Exporte
+
+Wählen Sie aus, ob Sie sich über SSH oder Benutzername/Passwort für Verbindungen zu SFTP-Exportzielen authentifizieren möchten.
+
+Weitere Informationen finden Sie unter [Exportieren von Daten an SFTP-Hosts](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalisieren Sie Erfahrungen mit Daten über bekannte und unbekannte Benutzer
+
+Die Verwaltung von Kundendaten ist keine neue Herausforderung, aber es wird immer schwieriger, wenn Benutzer durch die verschiedenen digitalen Kanäle navigieren, die Marken anbieten. Ein Benutzer, der in einem Kanal bekannt (authentifiziert) ist, wird in einem anderen unbekannt (nicht authentifiziert), wenn er nicht angemeldet ist. Das Problem besteht häufig darin, dass nicht authentifizierte (unbekannte) Benutzer keine gemeinsame ID haben. Es kann verwendet werden, um aussagekräftige Profilattribute zuzuordnen und einheitliche Kundenprofile zu generieren. Customer Insights hilft bei der Lösung dieses Problems, indem Daten aus Tracking-Methoden auf Ihren Quellsystemen aufgenommen werden.
+
+Weitere Informationen finden Sie unter [Personalisieren Sie Ihre Erfahrungen mit Daten über bekannte und unbekannte Benutzer](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Updates Juni 2022
 
@@ -50,7 +72,7 @@ Weitere Informationen unter [Sicherer Zugriff auf Kunddaten mit Kunden-Lockbox (
 
 Mit Azure Private Link können Sie uns Customer Insights mit Ihrem Azure Data Lake Storage Konto über ein privates Endpunkt in Ihrem virtuellen Netzwerk verbinden. Für Daten in einem Speicherkonto, das nicht dem öffentlichen Internet ausgesetzt ist, ermöglicht Private Link die Verbindung mit diesem eingeschränkten Netzwerk.
 
-Weitere Informationen finden Sie unter [Private Link in Customer Insights verwenden](security-overview.md#private-links-tab).
+Weitere Informationen finden Sie unter [Private Link in Customer Insights verwenden](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Update Mai 2022
 

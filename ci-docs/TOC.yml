@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Verabreichung
   items:
-    - name: Systemkonfiguration einstellen
-      href: system.md
-    - name: Konfigurieren von Sicherheitseinstellungen
-      href: security-overview.md
     - name: Zuweisung von Benutzerrechten
       href: permissions.md
     - name: Bring Your Own Key Vault
       href: use-azure-key-vault.md
+    - name: Konfigurieren von Sicherheitseinstellungen
+      href: security-overview.md
     - name: Diagnoseprotokolle exportieren
       href: diagnostics.md
-    - name: Verbindungsübersicht
+    - name: Verbindungen verwalten
       href: connections.md
+    - name: Systemaktualisierung planen
+      href: schedule-refresh.md
+    - name: Systemkonfiguration anzeigen
+      href: system.md
 - name: APIs
   items:
     - name: Mit APIs arbeiten

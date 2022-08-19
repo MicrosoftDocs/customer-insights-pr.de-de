@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139579"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245593"
 ---
 # <a name="update-the-unification-settings"></a>Aktualisieren der Vereinigungseinstellungen
 
@@ -42,7 +42,7 @@ Führen Sie die folgenden Schritte aus, um die Vereinigungseinstellungen zu übe
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Screenshot der Seite zur Vereinheitlichung von Daten mit hervorgehobenen Optionen zur Vereinheitlichung.":::
 
    - Informationen zum schnellen Bewerten der Qualität Ihrer Abgleich-Bedingungen ohne Aktualisieren des einheitlichen Profils (Nichtduplizierungs- und Übereinstimmungsregel) finden Sie unter [Ausführen von Abgleich-Bedingungen](#run-matching-conditions). Die Option **Nur übereinstimmende Bedingungen ausführen** wird nicht für eine einzelne Entität angezeigt.
-   - [Kundenprofile vereinheitlichen](#run-updates-to-the-unified-customer-profile), um übereinstimmende Bedingungen auszuführen und die Unified customer profile-Entität ohne Auswirkungen auf Abhängigkeiten (wie Anreicherungen, Segmente oder Kennzahlen) auszuführen. Abhängige Prozesse werden nicht ausgeführt, aber [gemäß Definition im Aktualisierungszeitplan](system.md#schedule-tab) aktualisiert.
+   - [Kundenprofile vereinheitlichen](#run-updates-to-the-unified-customer-profile), um übereinstimmende Bedingungen auszuführen und die Unified customer profile-Entität ohne Auswirkungen auf Abhängigkeiten (wie Anreicherungen, Segmente oder Kennzahlen) auszuführen. Abhängige Prozesse werden nicht ausgeführt, aber [gemäß Definition im Aktualisierungszeitplan](schedule-refresh.md) aktualisiert.
    - [Kundenprofile und Abhängigkeiten vereinheitlichen](#run-updates-to-the-unified-customer-profile), um übereinstimmende Bedingungen auszuführen und die Unified customer profile-Entität und alle Abhängigkeiten (wie Anreicherungen, Segmente oder Kennzahlen) auszuführen. Alle Prozesse werden automatisch wiederholt.
 
 ## <a name="edit-source-fields"></a>Bearbeiten von Quellfeldern
@@ -154,7 +154,7 @@ Matching-Bedingungen ausführen führt nur die Deduplizierung und Abgleichregeln
 
 1. Auf der Seite **Daten** > **Vereinheitlichen** wählen Sie:
 
-   - **Kundenprofile vereinheitlichen**: Führt übereinstimmende Bedingungen aus und aktualisiert die Unified customer profile-Entität ohne Auswirkungen auf Abhängigkeiten (wie Anreicherungen, Segmente oder Kennzahlen). Abhängige Prozesse werden nicht ausgeführt, aber [gemäß Definition im Aktualisierungszeitplan](system.md#schedule-tab) aktualisiert.
+   - **Kundenprofile vereinheitlichen**: Führt übereinstimmende Bedingungen aus und aktualisiert die Unified customer profile-Entität ohne Auswirkungen auf Abhängigkeiten (wie Anreicherungen, Segmente oder Kennzahlen). Abhängige Prozesse werden nicht ausgeführt, aber [gemäß Definition im Aktualisierungszeitplan](schedule-refresh.md) aktualisiert.
 
    - **Kundenprofile und Abhängigkeiten zusammenführen**: Führt übereinstimmende Bedingungen aus und aktualisiert das einheitliche Profil und alle Abhängigkeiten. Alle Prozesse werden automatisch wiederholt. Nachdem alle nachgelagerten Prozesse abgeschlossen sind, spiegelt das Kundenprofil die aktualisierten Daten wider.
 

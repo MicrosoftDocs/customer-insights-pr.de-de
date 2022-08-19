@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142818"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245556"
 ---
 # <a name="how-to-create-a-new-environment"></a>Vorgehensweise: Neue Umgebung erstellen
 
@@ -48,7 +48,7 @@ In dem Schritt **Grundinformation** wählen Sie aus, ob Sie eine Umgebung von Gr
 
 Geben Sie die folgenden Informationen an:
 
-- **Name**: Der Name für diese Umgebung. Dieses Feld ist bereits ausgefüllt, wenn Sie eine bestehende Umgebung kopiert haben, aber Sie können es ändern.
+- **Name**: Der Name für diese Umgebung. Dieses Feld ist bereits ausgefüllt, wenn Sie eine bestehende Umgebung kopiert haben, aber Sie können es ändern. Wenn Sie mehr als eine Arbeitsumgebung haben, sollten Sie jeder einen leicht identifizierbaren Namen geben.
 - **Wählen Sie Ihr Unternehmen**: Wählen Sie die primäre Zielgruppe für die neue Umgebung. Sie können mit einzelnen Verbrauchern (B2C) oder mit [Geschäftskonten](work-with-business-accounts.md) (B2B) arbeiten. Wenn Ihre Organisation hauptsächlich mit Einzelpersonen Geschäfte macht, wie z. B. ein Einzelhändler oder ein Café, wählen Sie einzelne Verbraucher aus. Falls Ihre wichtigste Zielgruppe andere Unternehmen sind, wie z. B. ein Autohersteller oder eine Papierfirma, wählen Sie Geschäftskonten.
 - **Typ**: Wählen Sie, ob Sie eine Produktions- oder eine Sandbox-Umgebung erstellen möchten. Sandbox-Umgebungen lassen keine geplante Datenaktualisierung zu und sind für die Vorimplementierung und das Testen gedacht. Sandbox-Umgebungen verwenden dieselbe primäre Zielgruppe wie die aktuell ausgewählte Produktionsumgebung.
 - **Region**: Die Region, in der der Dienst bereitgestellt und gehostet wird. Um [Ihr eigenes Azure Data Lake Storage-Konto zu verwenden](own-data-lake-storage.md) oder [mit einer bestehenden Microsoft Dataverse-Organisation zu verbinden](customer-insights-dataverse.md), muss sich die Customer Insights-Umgebung in derselben Region befinden.

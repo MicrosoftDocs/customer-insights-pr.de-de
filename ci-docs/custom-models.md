@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800419"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245802"
 ---
 # <a name="custom-machine-learning-models"></a>Benutzerdefinierte Maschinelles Lernen Modelle
 
@@ -112,7 +112,7 @@ Vorhersagen bieten Funktionalitäten, um bessere Kundenerlebnisse zu erstellen, 
 
 1. **Ausführen** auswählen.
 
-Ihr Workflow läuft auch automatisch bei jeder geplanten Aktualisierung. Mehr erfahren zum [Einrichten geplanter Aktualisierungen](system.md#schedule-tab).
+Ihr Workflow läuft auch automatisch bei jeder geplanten Aktualisierung. Mehr erfahren zum [Einrichten geplanter Aktualisierungen](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Löschen eines Workflows
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207090"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245648"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
@@ -67,7 +67,7 @@ Wählen Sie die Datenquellen aus, um verfügbare Aktionen anzuzeigen.
 
 Datenquellen können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. [Lokale Datenquellen](connect-power-query.md#add-data-from-on-premises-data-sources) Aktualisierung nach ihren eigenen Zeitplänen, die während der Datenaufnahme eingerichtet werden. Für angehängte Datenquellen verbraucht die Datenaufnahme die neuesten Daten, die von diesem Datenquelle verfügbar sind.
 
-Gehen Sie zu **Administrator** > **System** > [**Zeitplan**](system.md#schedule-tab), um vom System geplante Aktualisierungen Ihrer aufgenommenen Datenquellen zu konfigurieren.
+Gehen Sie zu **Administrator** > **System** > [**Zeitplan**](schedule-refresh.md), um vom System geplante Aktualisierungen Ihrer aufgenommenen Datenquellen zu konfigurieren.
 
 Aktualisieren einer Datenquelle bei Bedarf:
 

@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195657"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246107"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Datenerfassung in Echtzeit (Vorschauversion)
 
 Mit der Echtzeitfunktion können Sie innerhalb von Sekunden die aktuellen Interaktionen anzeigen, die Ihre Kunden mit Ihren Produkten oder Dienstleistungen durchgeführt haben.
 
-[Geplante Aktualisierungen](system.md#schedule-tab) umfassen eine große Anzahl von Datensätzen und mehrere komplexe Operationen. Zunächst werden die Daten aus der Datenquelle gezogen. Dann werden die Daten vereinheitlicht und mit zusätzlichen Informationen angereichert. Jeder Durchlauf dieses Vorgangs kann Minuten bis Stunden dauern.
+[Geplante Aktualisierungen](schedule-refresh.md) umfassen eine große Anzahl von Datensätzen und mehrere komplexe Operationen. Zunächst werden die Daten aus der Datenquelle gezogen. Dann werden die Daten vereinheitlicht und mit zusätzlichen Informationen angereichert. Jeder Durchlauf dieses Vorgangs kann Minuten bis Stunden dauern.
 
 Die Echtzeit-Funktionalität stellt die Daten sofort zum Verbrauch bereit, bis die nachfolgende geplante Aktualisierung diese Daten aus der Datenquelle zieht.
 
@@ -85,7 +85,7 @@ Details zu dieser API, einschließlich Parameter und Antworten, finden Sie im Ab
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Verstehen Sie Ihre Echtzeit-Nutzung mit Telemetrie
 
-Erhalten Sie einen Überblick über das Volumen der Anfragen an die Echtzeit-API und Informationen über mögliche Probleme des Systems. Sie können [auf die Echtzeit-Telemetrie zugreifen](system.md#api-usage-tab). 
+Erhalten Sie einen Überblick über das Volumen der Anfragen an die Echtzeit-API und Informationen über mögliche Probleme des Systems. Sie können [auf die Echtzeit-Telemetrie zugreifen](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

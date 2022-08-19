@@ -1,7 +1,7 @@
 ---
-title: Protokollweiterleitung in Dynamics 365 Customer Insights mit Azure Monitor (Vorschauversion)
+title: Diagnoseprotokolle exportieren (Vorschauversion)
 description: Erfahren Sie, wie Sie Protokolle an Microsoft Azure Monitor senden.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,87 +11,56 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052652"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245924"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Protokollweiterleitung in Dynamics 365 Customer Insights mit Azure Monitor (Vorschauversion)
+# <a name="export-diagnostic-logs-preview"></a>Diagnoseprotokolle exportieren (Vorschauversion)
 
-Dynamics 365 Customer Insights bietet eine direkte Integration in Azure Monitor. Mit Azure Monitor-Ressourcenprotokollen können Sie Protokolle überwachen und an [Azure Storage](https://azure.microsoft.com/services/storage/) bzw. [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) senden oder zu [Azur Event Hubs](https://azure.microsoft.com/services/event-hubs/) streamen.
+Protokolle aus Customer Insights an Azure Monitor weiterleiten. Mit Azure Monitor-Ressourcenprotokollen können Sie Protokolle überwachen und an [Azure Storage](https://azure.microsoft.com/services/storage/) bzw. [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) senden oder zu [Azur Event Hubs](https://azure.microsoft.com/services/event-hubs/) streamen.
 
 Customer Insights sendet die folgenden Ereignisprotokolle:
 
 - **Überwachungsereignisse**
   - **APIEvent** – ermöglicht Änderungsnachverfolgung über die Dynamics 365 Customer Insights-Benutzeroberfläche.
 - **Betriebliche Ereignisse**
-  - **WorkflowEvent** – Der Workflow ermöglicht die Einrichtung von [Datenquellen](data-sources.md), die [Vereinheitlichung](data-unification.md), die [Anreicherung](enrichment-hub.md) und schließlich den [Export](export-destinations.md) von Daten in andere Systeme. Alle diese Schritte können einzeln ausgeführt werden (z. B. einen einzelnen Export auslösen). Dies kann auch orchestriert ausgeführt werden (z. B. Datenaktualisierung aus Datenquellen, die den Vereinheitlichungsprozess auslöst, der Anreicherungen abruft und die Daten nach Abschluss in ein anderes System exportiert). Weitere Informationen finden Sie im [WorkflowEvent-Schema](#workflow-event-schema).
-  - **APIEvent** – alle API-Aufrufe an die Kundeninstanz an Dynamics 365 Customer Insights. Weitere Informationen finden Sie im [APIEvent-Schema](#api-event-schema).
+  - **WorkflowEvent** – Der Workflow ermöglicht die Einrichtung von [Datenquellen](data-sources.md), die [Vereinheitlichung](data-unification.md), die [Anreicherung](enrichment-hub.md) und  den [Export](export-destinations.md) von Daten in andere Systeme. Diese Schritte können einzeln ausgeführt werden (z. B. einen einzelnen Export auslösen). Dies kann auch orchestriert ausgeführt werden (z. B. Datenaktualisierung aus Datenquellen, die den Vereinheitlichungsprozess auslösen, der Anreicherungen abruft und die Daten in ein anderes System exportiert). Weitere Informationen finden Sie im [WorkflowEvent-Schema](#workflow-event-schema).
+  - **APIEvent** – sendet alle API-Aufrufe der Kundeninstanz an Dynamics 365 Customer Insights. Weitere Informationen finden Sie im [APIEvent-Schema](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Diagnoseeinstellungen einrichten
 
 ### <a name="prerequisites"></a>Anforderungen
 
-Zum Konfigurieren der Diagnose in Customer Insights müssen die folgenden Voraussetzungen erfüllt sein:
-
-- Sie verfügen über ein aktives [Azure-Abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Sie verfügen über [Administrator](permissions.md#admin)-Berechtigungen in Customer Insights.
-- Sie verfügen über die Rollen **Mitwirkender** und **Benutzerzugriffsadministrator** für die Zielressource in Azure. Die Ressource kann ein Azure Data Lake Storage-Konto, ein Azure-Ereignishub oder ein Azure Log Analytics-Arbeitsbereich sein. Weitere Informationen finden Sie unter [Azure-Rollenzuweisungen über das Azure-Portal hinzufügen oder entfernen](/azure/role-based-access-control/role-assignments-portal). Diese Berechtigung ist beim Konfigurieren von Diagnoseeinstellungen in Customer Insights erforderlich und kann nach erfolgreicher Einrichtung geändert werden.
+- Ein aktives [Azure-Abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- [Administrator](permissions.md#admin)-Berechtigungen in Customer Insights.
+- [Mitwirkender und Benutzerzugriffsadministrator](/azure/role-based-access-control/role-assignments-portal) für die Zielressource in Azure. Die Ressource kann ein Azure Data Lake Storage-Konto, ein Azure-Ereignishub oder ein Azure Log Analytics-Arbeitsbereich sein. Diese Berechtigung ist beim Konfigurieren von Diagnoseeinstellungen in Customer Insights erforderlich, kann aber nach erfolgreicher Einrichtung geändert werden.
 - Die [Zielanforderungen](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) für Azure Storage, Azure Event Hub oder Azure Log Analytics sind erfüllt.
-- Sie verfügen mindestens über die Rolle **Leser** in der Ressourcengruppe, zu der die Ressource gehört.
+- Mindestens die Rolle **Leser** in der Ressourcengruppe, zu der die Ressource gehört.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnose mit Azure Monitor einrichten
 
-1. Wählen Sie in Customer Insights **System** > **Diagnose** aus, um die für diese Instanz konfigurierten Diagnoseziele anzuzeigen.
+1. Gehen Sie in Customer Insights zu **Admin** > **System** und wählen Sie das Register **Diagnose**.
 
 1. Wählen Sie **Ziel hinzufügen** aus.
 
-   > [!div class="mx-imgBorder"]
-   > ![Diagnoseverbindung](media/diagnostics-pane.png "Diagnoseverbindung")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Diagnoseverbindung":::
 
 1. Geben Sie im Feld **Name für Diagnoseziel** einen Namen ein.
 
-1. Wählen Sie den **Mandanten** des Azure-Abonnements mit der Zielressource und dann **Anmelden** aus.
-
 1. Wählen Sie den **Ressourcentyp** (Speicherkonto, Event Hub oder Protokollanalyse) aus.
 
-1. Wählen Sie das **Abonnement** für die Zielressource aus.
+1. Wählen Sie **Abonnement**, **Ressourcengruppe** und **Ressource** für die Zielressource. Weitere Informationen unter [Konfiguration auf der Zielressource](#configuration-on-the-destination-resource) für Berechtigungs- und Protokollinformationen.
 
-1. Wählen Sie die **Ressourcengruppe** für die Zielressource aus.
-
-1. Wählen Sie die **Ressource** aus.
-
-1. Bestätigen Sie die **Datenschutz und Compliance**-Anweisung.
+1. Überprüfen Sie [Datenschutz und Konformität](connections.md#data-privacy-and-compliance) und wählen **Ich stimme zu** aus.
 
 1. Wählen Sie **Mit System verbinden** aus, um eine Verbindung zur Zielressource herzustellen. Die Protokolle werden nach 15 Minuten im Ziel angezeigt, wenn die API verwendet wird und Ereignisse generiert.
 
-### <a name="remove-a-destination"></a>Ziel entfernen
-
-1. Wechseln Sie zu **System** > **Diagnose**.
-
-1. Wählen Sie das Diagnoseziel aus der Liste aus.
-
-1. Wählen Sie in der Spalte **Aktionen** das Symbol **Löschen** aus.
-
-1. Bestätigen Sie den Löschvorgang, um die Protokollweiterleitung zu beenden. Die Ressource im Azure-Abonnement wird nicht gelöscht. Sie können den Link in der Spalte **Aktionen** auswählen, um das Azure-Portal für die ausgewählte Ressource zu öffnen und dort zu löschen.
-
-## <a name="log-categories-and-event-schemas"></a>Protokollkategorien und Ereignisschemas
-
-Derzeit werden [API-Ereignisse](apis.md) und Workflow-Ereignisse unterstützt, und es gelten die folgenden Kategorien und Schemas.
-Das Protokollschema folgt dem [allgemeinen Schema von Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
-
-### <a name="categories"></a>Kategorien
-
-Customer Insights bietet zwei Kategorien:
-
-- **Überwachungsereignisse**: [API-Ereignisse](#api-event-schema) zum Nachverfolgen der Konfigurationsänderungen für den Dienst. `POST|PUT|DELETE|PATCH`-Vorgänge fallen in diese Kategorie.
-- **Betriebsereignisse**: [API-Ereignisse](#api-event-schema) oder [Workflow-Ereignisse](#workflow-event-schema), die während der Nutzung des Dienstes generiert werden.  Beispielsweise `GET`-Anforderungen oder die Ausführungsereignisse eines Workflows.
-
 ## <a name="configuration-on-the-destination-resource"></a>Konfiguration für die Zielressource
 
-Die folgenden Schritte werden basierend auf Ihrer Auswahl des Ressourcentyps automatisch angewendet:
+Die folgenden Änderungen werden basierend auf Ihrer Auswahl des Ressourcentyps automatisch angewendet:
 
 ### <a name="storage-account"></a>Storage account
 
@@ -116,9 +85,34 @@ Der Customer Insights-Dienstprinzipal erhält die Berechtigung **Log Analytics-M
 
 Erweitern Sie unter dem Fenster **Abfragen** die Lösung **Überwachung**, und suchen Sie die bereitgestellten Beispielabfragen, indem Sie nach `CIEvents`.
 
+## <a name="remove-a-diagnostics-destination"></a>Diagnoseziel entfernen
+
+1. Gehen Sie zu **Admin** > **System** und wählen Sie die Registerkarte **Diagnose**.
+
+1. Wählen Sie das Diagnoseziel aus der Liste aus.
+
+   > [!TIP]
+   > Durch das Entfernen des Ziels wird die Protokollweiterleitung beendet, die Ressource im Azure-Abonnement wird jedoch nicht gelöscht. Sie können den Link in der Spalte **Aktionen** auswählen, um das Azure-Portal für die ausgewählte Ressource zu öffnen und dort zu löschen. Löschen Sie das Diagnoseziel.
+
+1. Wählen Sie in der Spalte **Aktionen** das Symbol **Löschen** aus.
+
+1. Bestätigen Sie den Löschvorgang, um das Ziel zu entfernen und die Protokollweiterleitung zu stoppen.
+
+## <a name="log-categories-and-event-schemas"></a>Protokollkategorien und Ereignisschemas
+
+Derzeit werden [API-Ereignisse](apis.md) und Workflow-Ereignisse unterstützt, und es gelten die folgenden Kategorien und Schemas.
+Das Protokollschema folgt dem [allgemeinen Schema von Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
+
+### <a name="categories"></a>Kategorien
+
+Customer Insights bietet zwei Kategorien:
+
+- **Überwachungsereignisse**: [API-Ereignisse](#api-event-schema) zum Nachverfolgen der Konfigurationsänderungen für den Dienst. `POST|PUT|DELETE|PATCH`-Vorgänge fallen in diese Kategorie.
+- **Betriebsereignisse**: [API-Ereignisse](#api-event-schema) oder [Workflow-Ereignisse](#workflow-event-schema), die während der Nutzung des Dienstes generiert werden.  Beispielsweise `GET`-Anforderungen oder die Ausführungsereignisse eines Workflows.
+
 ## <a name="event-schemas"></a>Ereignisschemas
 
-API-Ereignisse und Workflow-Ereignisse haben eine gemeinsame Struktur und unterschiedliche Details. Weitere Informationen finden Sie unter [API-Ereignisschema](#api-event-schema) oder [Workflow-Ereignisschema](#workflow-event-schema).
+API-Ereignisse und Workflow-Ereignisse haben eine gemeinsame Struktur, jedoch mit einigen Unterschieden. Weitere Informationen finden Sie im [API-Ereignisschema](#api-event-schema) oder [Workflowereignissschema](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>API-Ereignisschema
 
@@ -220,7 +214,6 @@ Der Workflow enthält mehrere Schritte. [Datenquellen einbinden](data-sources.md
 | `durationMs`    | Lang      | Optional          | Dauer des Vorgangs in Millisekunden                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Optional          | JSON-Objekt mit mehr Eigenschaften für die jeweilige Ereigniskategorie.                                                                                        | Weitere Informationen finden Sie im Unterabschnitt [Workflow-Eigenschaften](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Erforderlich          | Schweregrad des Ereignisses                                                                                                                                  | `Informational`, `Warning` oder `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Eigenschaftenschema für Workflows
 
@@ -247,3 +240,5 @@ Workflow-Ereignisse haben die folgenden Eigenschaften.
 | `properties.additionalInfo.AffectedEntities` | Nr.       | Ja  | Optional. Nur für den OperationType `Export` Enthält eine Liste der konfigurierten Entitäten im Export                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | Nr.       | Ja  | Optional. Nur für den OperationType `Export` Detaillierte Meldung für den Export                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | Nr.       | Ja  | Optional. Nur für den OperationType `Segmentation` Gibt die Gesamtzahl der Mitglieder des Segments an.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
