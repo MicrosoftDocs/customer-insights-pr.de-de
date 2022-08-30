@@ -1,9 +1,9 @@
 ---
-title: Kundenaktivitäten
-description: Definieren Sie Kundenaktivitäten, und zeigen Sie diese in einer Zeitskala auf Kundenprofilen an.
-ms.date: 07/22/2022
+title: Kunden- oder Geschäftskontaktaktivitäten
+description: Definieren Sie Kunden- oder Geschäftsaktivitäten, und zeigen Sie diese in einer Zeitskala auf Kundenprofilen an.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188138"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304104"
 ---
-# <a name="customer-activities"></a>Kundenaktivitäten
+# <a name="customer-or-business-contact-activities"></a>Kunden- oder Geschäftskontaktaktivitäten
 
-Kundenaktivitäten sind Aktionen oder Ereignisse, die von Kunden durchgeführt werden. Zum Beispiel Transaktionen, Support-Anrufdauer, Website-Bewertungen, Käufe oder Rückgaben. Diese Aktivitäten sind in einer oder mehreren Datenquellen enthalten. Konsolidieren Sie mit Customers Insights Ihre Kundenaktivitäten aus diesen [Datenquellen](data-sources.md) und verknüpfen Sie sie mit Kundenprofilen. Diese Aktivitäten werden chronologisch in einer Zeitleiste auf dem Kundenprofil angezeigt. Schließen Sie die Zeitskala in Dynamics 365-Apps mit der Lösung [Kundenkarten-Add-In](customer-card-add-in.md).
+Kundenaktivitäten sind Aktionen oder Ereignisse, die von Kunden oder Geschäftskontakten durchgeführt werden. Zum Beispiel Transaktionen, Support-Anrufdauer, Website-Bewertungen, Käufe oder Rückgaben. Diese Aktivitäten sind in einer oder mehreren Datenquellen enthalten. Konsolidieren Sie mit Customers Insights Ihre Kundenaktivitäten aus diesen [Datenquellen](data-sources.md) und verknüpfen Sie sie mit Kundenprofilen. Diese Aktivitäten werden chronologisch in einer Zeitleiste auf dem Kundenprofil angezeigt. Schließen Sie die Zeitskala in Dynamics 365-Apps mit der Lösung [Kundenkarten-Add-In](customer-card-add-in.md).
 
-## <a name="define-an-activity"></a>Definieren Sie eine Aktivität
+## <a name="define-a-customer-activity"></a>Eine Kundenaktivität definieren
 
 Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine Kundenzeitachse aufgenommen zu werden. Die Kontrolle **Aktivität hinzufügen** ist deaktiviert, wenn keine solche Entität gefunden wird.
 
@@ -38,9 +38,9 @@ Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine K
 
 1. Geben Sie im Schritt **Aktivitätsdaten** die folgenden Informationen ein:
 
-   - **Aktivitätsname**: Name für Ihre Aktivität.
-   - **Aktivitätsentität**: Entität, die Transaktions- oder Aktivitätsdaten enthält.
-   - **Primärschlüssel** – Das Feld, mit dem ein Datensatz eindeutig identifiziert wird. Sie sollte keine doppelten Werte, leere Werte oder fehlende Werte enthalten.
+   - **Aktivitätsname**: Wählen Sie einen Namen für Ihre Aktivität.
+   - **Aktivitätsname**: Wählen Sie eine Entität aus, die Transaktions- oder Aktivitätsdaten enthält.
+   - **Primärschlüssel**: Wählen Sie das Feld, das einen Datensatz eindeutig identifiziert. Sie sollte keine doppelten Werte, leere Werte oder fehlende Werte enthalten.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Richten Sie die Aktivitätsdaten mit Name, Entität und Primärschlüssel ein.":::
 
@@ -48,9 +48,9 @@ Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine K
 
 1. Wählen Sie im Schritt **Beziehung** die Option **Beziehung hinzufügen** aus, um Ihre Aktivitätsdaten mit dem entsprechenden Kundendatensätzen zu verwenden. Dieser Schritt visualisiert die Verbindung zwischen Entitäten.  
 
-   - **Fremdschlüssel aus Entität**: Feld in Ihrer Aktivitätsentität, das zum Herstellen einer Beziehung mit einer anderen Entität verwendet werden soll.
+   - **Fremdschlüssel**: Fremdfeld in Ihrer Aktivitätsentität, das zum Herstellen einer Beziehung mit einer anderen Entität verwendet werden soll.
    - **Zu Entitätsname**: Entsprechende Quellkundenentität, mit der die Aktivitätsentität zur Beziehung hinzugefügt wird. Sie können sich nur auf Quellkundenentitäten beziehen, die im Datenvereinigungsprozess verwendet werden.
-   - **Beziehungsname**: Name, der die Beziehung zwischen Entitäten identifiziert. Wenn bereits eine Beziehung zwischen dieser Aktivitätsentität und der ausgewählten Quellkundenentität besteht, ist der Beziehungsname schreibgeschützt.
+   - **Beziehungsnme**: Wenn bereits eine Beziehung zwischen dieser Aktivitätsentität und der ausgewählten Quellkundenentität besteht, ist der Beziehungsname schreibgeschützt. Wenn keine solche Beziehung besteht, wird eine neue Beziehung mit dem Namen erstellt, den Sie in diesem Feld angeben.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definieren der Entitätsbeziehung.":::
 
@@ -90,7 +90,7 @@ Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine K
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Vorhandene Aktivitäten verwalten
+## <a name="manage-existing-customer-activities"></a>Vorhandene Kundenaktivitäte verwaltem
 
 Gehen Sie zu **Daten** > **Aktivitäten**, um Ihre gespeicherten Aktivitäten, ihre Quellentität, den Aktivitätstyp und ob sie in der Kundenchronik enthalten sind, anzuzeigen. Sie können die Liste der Aktivitäten nach einer beliebigen Spalte sortieren oder das Suchfeld verwenden, um die Aktivität zu finden, die Sie verwalten möchten.
 
@@ -116,9 +116,43 @@ Wählen Sie eine Aktivität aus, um verfügbare Aktionen anzuzeigen.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Verwenden Sie das Filterbedienfeld, um Filterbedingungen zu konfigurieren.":::
 
-1. Um Filter zu entfernen, wählen Sie aus **Filter löschen** oder **Filter** und deaktivieren Sie das Kontrollkästchen Filter.
-
 > [!NOTE]
 > Aktivitätsfilter werden entfernt, wenn Sie ein Kundenprofil verlassen. Sie müssen sie jedes Mal anwenden, wenn Sie ein Kundenprofil öffnen.
+
+## <a name="define-a-contact-activity"></a>Eine Kontaktaktivität definieren
+
+Verwenden Sie für Geschäftskonten (B-to-B) eine *ContactProfile* Entität, um Aktivitäten von Kontakten zu erfassen. Dadurch können Sie in der Aktivitätszeitleiste für ein Konto anzeigen, welcher Kontakt für jede Aktivität verantwortlich war. Die meisten Schritte folgen der typischen Kunden-Aktivitätszuordnungskonfiguration.
+
+   > [!NOTE]
+   > So definieren Sie eine Aktivität auf Kontaktebene: eine *ContactProfile* Entität muss erstellt werden, entweder als [einheitliches Kontaktprofil](data-unification-contacts.md) oder durch [semantische Zuordnung](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Sie müssen sowohl die **AccountID** als auch das Attribut **ContactID** für jeden Datensatz in Ihren Aktivitätsdaten haben.
+  
+1. Gehen Sie zu **Daten** > **Aktivitäten**.
+
+1. Wählen Sie **Aktivität hinzufügen**.
+
+1. Benennen Sie die Aktivität, wählen Sie die Quellaktivitätsentität und dann den Primärschlüssel der Aktivitätsentität aus.
+
+1. Erstellen Sie im Schritt **Beziehungen** eine indirekte Beziehung zwischen Ihren Aktivitätsquellendaten und Konten, indem Sie Ihre Kontaktdaten als vermittelnde Entität verwenden. Weitere Informationen finden Sie unter [direkte und indirekte Beziehungspfade](relationships.md#relationship-paths).
+   - Beispielbeziehung für eine Aktivität namens *Einkäufe*:
+      - **Aktivitätsdaten der Einkaufsquelle** > **Kontaktdaten** auf das Attribut **ContactID**
+      - **Kontaktdaten** > **Kontodaten** im Attribut **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Beispiel für die Einrichtung einer Beziehung":::
+
+1. Wählen Sie nach dem Einrichten der Beziehung(en) **Weiter** aus, und vervollständigen Sie Ihre Aktivitätszuordnungskonfiguration. Detaillierte Schritte zum Erstellen von Aktivitäten finden Sie unter [Eine Kundenaktivität definieren](#define-a-customer-activity).
+
+1. Führen Sie Ihre Aktivitätszuordnungen aus.
+
+1. Ihre Aktivitäten auf Kontaktebene werden jetzt auf Ihrer Kundenzeitskala angezeigt.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Endergebnis nach der Konfiguration der Kontaktaktivitäten":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filterung der Aktivitätszeitskala auf Kontaktebene
+
+Nachdem Sie eine Aktivitätszuordnung auf Kontaktebene konfiguriert und ausgeführt haben, wird die Aktivitätszeitskala für Ihre Kunden aktualisiert. Je nach Ihrer *ContactProfile*-Konfiguration enthält sie die IDs oder Namen dieser Personen für die Aktivitäten, an denen sie beteiligt waren. Sie können Aktivitäten in der Zeitskala nach Kontakten filtern, um bestimmte Kontakte anzuzeigen, die Sie interessieren. Darüber hinaus können Sie alle Aktivitäten anzeigen, die keinem bestimmten Kontakt zugeordnet sind, indem Sie **Aktivitäten, die keinem Kontakt zugeordnet sind** auswählen.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Filteroptionen, die für Aktivitäten auf Kontaktebene verfügbar sind":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

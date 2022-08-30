@@ -1,9 +1,9 @@
 ---
 title: Semantische Zuordnungen (Vorschauversion)
 description: Überblick über semantische Zuordnungen und deren Verwendung.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183630"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303875"
 ---
 # <a name="semantic-mappings-preview"></a>Semantische Zuordnungen (Vorschauversion)
 
-Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinierten Schemata zuordnen. Diese Schemata helfen Customer Insights, Ihre Datenattribute besser zu verstehen. Semantische Zuordnungen und die bereitgestellten Daten ermöglichen neue Einblicke und Funktionen in Customer Insights. Um Ihre Aktivitätsdaten den Schemata zuzuordnen, lesen Sie die [Aktivitäten](activities.md) Dokumentation.
+> [!NOTE]
+> Die Seite **Semantische Abbildungen** ist nur für Geschäftsumgebungen (B-to-B) verfügbar, in denen Kontaktprofile bereits mit dieser Seite erstellt wurden. Die einzelnen Kontaktprofile können Sie weiterhin über die Seite **Semantische Abbildungen** verwalten und erstellen. Oder [Vereinheitlichen Sie Ihre Kontaktdaten](data-unification-contacts.md),  um Duplikate zu entfernen, Übereinstimmungen zwischen Entitäten zu identifizieren und ein einheitliches Kontaktprofil zu erstellen. Sie können dann die einheitlichen Kontaktprofile verwenden, um Aktivitäten auf Kontaktebene zu erstellen.
 
-**Semantische Zuordnungen sind derzeit für Umgebungen aktiviert, die auf Geschäftskonten basieren**. *ContactProfile* ist die einzige Art der semantischen Zuordnung, die derzeit in Customer Insights verfügbar ist.
+Mit semantischen Zuordnungen können Sie Ihre Nicht-Aktivitätsdaten vordefinierten Schemata zuordnen. Diese Schemata helfen Customer Insights, Ihre Datenattribute besser zu verstehen. Semantische Zuordnungen und die bereitgestellten Daten ermöglichen neue Einblicke und Funktionen in Customer Insights. Um Ihre Aktivitätsdaten den Schemata zuzuordnen, lesen Sie die [Aktivitäten](activities.md) Dokumentation.
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definieren Sie eine semantische Entitätszuordnung von ContactProfile
 
@@ -87,41 +88,5 @@ Wählen Sie die semantische Zuordnung aus, um verfügbare Aktionen anzuzeigen.
 - **Aktualisieren** Sie die semantische Zuordnung, um die neuesten Daten einzuschließen. Das Aktualisieren einer bestimmten semantischen Zuordnung aktualisiert alle semantischen Zuordnungen desselben Typs.
 - **Umbenennen** Sie die semantische Zuordnung. Wählen Sie **Save** (Speichern).
 - **Löschen** Sie die semantische Zuordnung. Sie können auch mehrere semantische Zuordnungen gleichzeitig löschen, indem Sie die semantischen Zuordnungen und das Löschsymbol auswählen. Um den Löschvorgang zu bestätigen, wählen Sie **Löschen**.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Eine semantische Entitätszuordnung von ContactProfile zum Erstellen von Aktivitäten auf Kontaktebene verwenden
-
-Nach dem Erstellen einer semantischen Entitätszuordnung von *ContactProfile* können Sie Aktivitäten von Kontakten erfassen. Dadurch können Sie in der Aktivitätszeitleiste für ein Konto anzeigen, welcher Kontakt für jede Aktivität verantwortlich war. Die meisten Schritte folgen der typischen Aktivitätszuordnungskonfiguration.
-
-   > [!NOTE]
-   > Damit Aktivitäten auf Kontaktebene funktionieren, müssen sowohl das Attribut **AccountID** als auch das Attribut **ContactID** in Ihren Aktivitätsdaten enthalten sein.
-
-1. [Definieren Sie ein *ContactProfile* Semantische Entitätszuordnung](#define-a-contactprofile-semantic-entity-mapping) und führen Sie die semantische Zuordnung aus.
-
-1. Gehen Sie zu **Daten** > **Aktivitäten**.
-
-1. Wählen Sie **Aktivität hinzufügen** aus, um eine neue Aktivität zu erstellen.
-
-1. Benennen Sie die Aktivität, wählen Sie die Quellaktivitätsentität und dann den Primärschlüssel der Aktivitätsentität aus.
-
-1. Erstellen Sie im Schritt **Beziehungen** eine indirekte Beziehung zwischen Ihren Aktivitätsquellendaten und Konten, indem Sie Ihre Kontaktdaten als vermittelnde Entität verwenden. Weitere Informationen finden Sie unter [direkte und indirekte Beziehungspfade](relationships.md#relationship-paths).
-   - Beispielbeziehung für eine Aktivität namens *Einkäufe*:
-      - **Aktivitätsdaten der Einkaufsquelle** > **Kontaktdaten** auf das Attribut **ContactID**
-      - **Kontaktdaten** > **Kontodaten** im Attribut **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Beispiel für die Einrichtung einer Beziehung":::
-
-1. Wählen Sie nach dem Einrichten der Beziehung(en) **Weiter** aus, und vervollständigen Sie Ihre Aktivitätszuordnungskonfiguration. Detaillierte Schritte zum Erstellen von Aktivitäten finden Sie unter [Eine Aktivität definieren](activities.md).
-
-1. Führen Sie Ihre Aktivitätszuordnungen aus.
-
-1. Nachdem eine Aktivitätszuordnung auf Kontaktebene ausgeführt wurde, wählen Sie **Kunden** aus. Ihre Aktivitäten auf Kontaktebene werden auf Ihrer Kundenzeitskala angezeigt.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Endergebnis nach der Konfiguration der Kontaktaktivitäten":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filterung der Aktivitätszeitskala auf Kontaktebene
-
-Je nach Ihrer *ContactProfile*-Konfiguration enthält die Aktivitätszeitleiste für Kunden die IDs oder Namen dieser Personen für die Aktivitäten, an denen sie beteiligt waren. Filtern Sie Aktivitäten in der Zeitskala nach Kontakten, um bestimmte Kontakte anzuzeigen, die Sie interessieren. Sie können alle Aktivitäten anzeigen, die keinem bestimmten Kontakt zugeordnet sind, indem Sie **Aktivitäten, die keinem Kontakt zugeordnet sind** auswählen.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Filteroptionen, die für Aktivitäten auf Kontaktebene verfügbar sind":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

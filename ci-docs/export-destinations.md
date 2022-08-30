@@ -1,7 +1,7 @@
 ---
 title: Exporte (Vorschauversion) – Übersicht
 description: Verwalten Sie Datenexporte, um Daten freizugeben.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245326"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304058"
 ---
 # <a name="exports-preview-overview"></a>Exporte (Vorschauversion) – Übersicht
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245326"
 
 Es gibt zwei Haupttypen für Exporte:  
 
-- **Mit Datenexporten**: Sie können jede Art von Entität exportieren, die in Customer Insights verfügbar ist. Die für den Export ausgewählten Entitäten werden mit allen Datenfeldern, Metadaten, Schemas und Zuordnungsdetails exportiert.
-- **Segmentexporte**: ermöglichen es Ihnen, Entitäten aus Customer Insights zu exportieren. Segmente stellen eine Liste von Kundenprofilen dar. Bei der Konfiguration des Exports wählen Sie je nach Zielsystem, in das Sie Daten exportieren, die enthaltenen Datenfelder aus.
+- **Mit Datenexporten** können Sie jede Art von Entität exportieren, die in Customer Insights verfügbar ist. Die für den Export ausgewählten Entitäten werden mit allen Datenfeldern, Metadaten, Schemas und Zuordnungsdetails exportiert.
+- **Segmentexporte** ermöglichen es Ihnen, Entitäten aus Customer Insights zu exportieren. Für einzelne Verbraucher (B-to-C) stellen Segmente eine Liste von Kundenprofilen dar. Für Unternehmen (B-to-B) können [Segmente eine Liste von Firmen oder Kontakten darstellen](segment-builder.md#create-a-new-segment-with-segment-builder). Bei der Konfiguration des Exports wählen Sie je nach Zielsystem, in das Sie Daten exportieren, die enthaltenen Datenfelder aus.
 
 ### <a name="export-segments"></a>Segmente exportieren
 
@@ -38,14 +38,15 @@ Die meisten Exportoptionen unterstützen beide Arten von Umgebungen. Der Export 
 **Segmentexporte in Umgebungen für Verbraucher (B2C)**  
 - Segmente im Kontext von Umgebungen für individuelle Kunden bauen auf der Entität *Vereinheitlichtes Kund*innenprofil* auf. Jedes Segment, das die Anforderungen der Zielsysteme erfüllt (z.B. eine E-Mail-Adresse), kann exportiert werden.
 
-**Segmentexportumgebungen für Geschäftskonten (B2B)**  
-- Segmente im Kontext von Umgebungen für Geschäftskonten bauen auf dem *Konto* juristische Person auf. Um Kontensegmente unverändert zu exportieren, muss das Zielsystem reine Kontensegmente unterstützen. Dies ist der Fall für [LinkedIn](export-linkedin-ads.md) wenn Sie die Option **Unternehmen** wählen, wenn Sie den Export definieren.
-- Alle anderen Zielsysteme benötigen Felder aus der Kontaktentität. Um sicherzustellen, dass Firmensegmente Daten von verwandten Kontakten abrufen können, muss Ihre Segmentdefinition Attribute der Kontaktentität projizieren. Erfahren Sie mehr darüber, wie es geht, [Segmente und Projektattribute zu konfigurieren](segment-builder.md).
+**Segmentexporte in Umgebungen für Geschäftskonten (B-to-B)**  
+- Segmente im Kontext von Umgebungen für Geschäftskonten bauen auf der Entität *Konto* oder *Kontakt* auf. Um Kontensegmente unverändert zu exportieren, muss das Zielsystem reine Kontensegmente unterstützen. Dies ist der Fall für [LinkedIn](export-linkedin-ads.md) wenn Sie die Option **Unternehmen** wählen, wenn Sie den Export definieren.
+- Alle anderen Zielsysteme benötigen Felder aus der Kontaktentität.
+- Bei zwei Segmenttypen (Kontakte und Konten) erkennt Customer Insights automatisch, welche Segmenttypen basierend auf dem Zielsystem exportiert werden können. Für ein kontaktorientiertes Zielsystem wie MailChimp können Sie in Customer Insights beispielsweise nur Kontaktsegmente für den Export auswählen.
 
 **Beschränkungen für Segmentexporte**  
 - Zielsysteme von Drittanbietern können die Anzahl der Kundenprofile, die Sie exportieren können, einschränken. 
 - Bei einzelnen Kunden sehen Sie die tatsächliche Anzahl der Segmentmitglieder, wenn Sie ein Segment für den Export auswählen. Sie erhalten eine Warnung, wenn ein Segment zu groß ist. 
-- Bei Geschäftskonten sehen Sie die Anzahl der Konten in einem Segment. die Anzahl der Kontakte, die projiziert werden können, wird jedoch nicht angezeigt. In manchen Fällen kann dies dazu führen, dass das exportierte Segment tatsächlich mehr Kundenprofile enthält, als das Zielsystem akzeptiert. Bei Überschreitung der Grenzwerte der Zielsystemergebnisse wird der Export übersprungen.
+- Bei Geschäftskonten sehen Sie die Anzahl der Konten oder Kontakte je nach Segment. Sie erhalten eine Warnung, wenn das Segment zu groß ist. Bei Überschreitung der Grenzwerte der Zielsystemergebnisse wird der Export übersprungen.
 
 ## <a name="set-up-a-new-export"></a>Einen neuen Export einrichten
 
@@ -110,6 +111,20 @@ Um Daten zu exportieren, ohne auf eine geplante Aktualisierung zu warten, gehen 
 
 - Um alle Exporte auszuführen, wählen Sie **Alle ausführen** in der Befehlsleiste aus. Nur Exporte werden ausgeführt, die über einen aktiven Zeitplan verfügen. Um einen nicht aktiven Export auszuführen, führen Sie einen einzelnen Export aus.
 - Um einen einzelnen Export auszuführen, wählen Sie ihn in der Liste aus und wählen Sie dann in der Befehlsleiste **Ausführen** aus.
+
+## <a name="troubleshooting"></a>Problembehandlung
+
+### <a name="segment-not-eligible-for-export"></a>Segment kann nicht exportiert werden
+
+**Problem** In einer Umgebung mit Geschäftskonten schlagen Ihre Exporte mit der Fehlermeldung fehl: Folgendes Segment ist für dieses Exportziel nicht geeignet: {Name des Segments}. Bitte wählen Sie nur Segmente vom Typ ContactProfile aus und versuchen Sie es erneut.
+
+**Auflösung** Customer Insights-Umgebungen für Geschäftskonten wurden aktualisiert, um Kontaktsegmente zusätzlich zu Kontosegmenten zu unterstützen. Aufgrund dieser Änderung funktionieren Exporte, die Kontaktdaten benötigen, nur mit Segmenten, die auf Kontakten basieren.
+
+1. [Erstellen Sie ein Segment basierend auf Kontakten](segment-builder.md) das mit Ihrem zuvor verwendeten Segment übereinstimmt.
+
+1. Sobald dieses Kontaktsegment ausgeführt wurde, bearbeiten Sie den entsprechenden Export und wählen Sie das neue Segment aus.
+
+1. Wählen Sie **Speichern**, um die Konfiguration zu speichern bzw **Speichern und ausführen**, um diesen Export gleich zu testen.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

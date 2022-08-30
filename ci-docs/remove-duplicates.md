@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213626"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304472"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Entfernen von Duplikaten, bevor Sie Daten vereinheitlichen
 
@@ -47,7 +47,7 @@ Wenn Sie Entitäten auf der Ebene der Datenquelle angereichert haben, um Ihre Ve
 
 1. Wählen Sie auf der Seite **Doppelte Datensätze** eine Entität aus und wählen Sie **Regel hinzufügen**, um die Deduplizierungsregeln zu definieren.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Screenshot der Seiten mit doppelten Datensätzen, wobei „Mehr anzeigen“ hervorgehoben ist":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Screenshot der Seite Doppelte Datensätze mit hervorgehobener Entität und angezeigter Regel hinzufügen"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. Geben Sie im Bereich **Regel hinzufügen** die folgenden Informationen ein:
       - **Feld auswählen**: Wählen Sie aus der Liste der verfügbaren Felder der Entität aus, die Sie auf Duplikate prüfen möchten. Wählen Sie Felder aus, die wahrscheinlich für jeden einzelnen Kunden eindeutig sind. Zum Beispiel eine E-Mail-Adresse oder die Kombination aus Name, Stadt und Telefonnummer.
@@ -80,9 +80,9 @@ Wenn Sie Entitäten auf der Ebene der Datenquelle angereichert haben, um Ihre Ve
       - **Am häufigsten**: Identifiziert den Datensatz mit den meisten ausgefüllten Attributfeldern als Gewinner-Datensatz. Dies ist die standardmäßige Zusammenführungsoption.
       - **Aktuell**: Identifiziert den Gewinner-Datensatz auf der Basis der größten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
       - **Letzer**: Identifiziert den Gewinner-Datensatz basierend auf der besten Aktualität. Erfordert ein Datum oder ein numerisches Feld, um die Aktualität zu definieren.
-      
+
       Im Falle eines Unentschiedens ist der Gewinnerdatensatz derjenige mit dem MAX(PK)-Wert oder dem größeren Primärschlüsselwert.
-      
+
    1. Um optional Zusammenführungspräferenzen für einzelne Attribute einer Entität zu definieren, wählen Sie **Erweitert** am unteren Rand des Bereichs. Sie können beispielsweise wählen, ob Sie die neueste E-Mail UND die vollständigste Adresse aus verschiedenen Datensätzen behalten möchten. Erweitern Sie die Entität, um alle ihre Attribute anzuzeigen, und definieren Sie, welche Option für einzelne Attribute verwendet werden soll. Wenn Sie eine auf Aktualität basierende Option wählen, müssen Sie auch ein Datums-/Uhrzeitfeld angeben, das die Aktualität definiert.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Bereich „Voreinstellungen für die erweiterte Zusammenführung“ mit der neuesten E-Mail und der vollständigen Adresse":::
@@ -96,18 +96,5 @@ Wenn Sie Entitäten auf der Ebene der Datenquelle angereichert haben, um Ihre Ve
 
 > [!div class="nextstepaction"]
 > [Nächster Schritt für mehrere Entitäten: Abgleich-Bedingungen](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Deduplizierungsausgabe als Entität
-
-Der Deduplizierungsprozess erstellt eine neue deduplizierte Entität für jede der Quellentitäten. Diese Entitäten können zusammen mit **ConflationMatchPairs: CustomerInsights** gefunden werden im **System**-Abschnitt auf der **Entitäten**-Seite mit dem Namen **Deduplication_DataSource_Entity** gefunden werden.
-
-Eine Deduplizierungsausgabeentität enthält die folgenden Informationen:
-
-- IDs/Schlüssel
-  - Felder „Primärschlüssel“ und „Alternative ID“. Das Feld „Alternative ID“ besteht aus allen alternativen IDs, die für einen Datensatz identifiziert wurden.
-  - Das Feld „Deduplication_GroupId“ zeigt die Gruppe oder den Cluster an, die bzw. der innerhalb einer Entität identifiziert wurde, die alle ähnlichen Datensätze basierend auf den angegebenen Deduplizierungsfeldern gruppiert. Dies wird für Systemverarbeitungszwecke verwendet. Wenn keine manuellen Deduplizierungsregeln angegeben sind und systemdefinierte Deduplizierungsregeln gelten, finden Sie dieses Feld möglicherweise nicht in der Deduplizierungsausgabeentität.
-  - Deduplication_WinnerId: Dieses Feld enthält die Gewinner-ID der identifizierten Gruppen oder Cluster. Wenn „Deduplication_WinnerId“ mit dem Primärschlüsselwert für einen Datensatz identisch ist, bedeutet dies, dass der Datensatz der Gewinnerdatensatz ist.
-- Felder zum Definieren der Deduplizierungsregeln.
-- Regel- und Bewertungsfelder geben an, welche der Deduplizierungsregeln angewendet und welche Bewertung vom Übereinstimmungsalgorithmus zurückgegeben wurde.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

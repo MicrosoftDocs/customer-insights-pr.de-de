@@ -1,7 +1,7 @@
 ---
 title: Erstellen von komplexen Segmenten mithilfe des Segment-Builders
 description: Erstellen Sie Kundensegmente, um sie basierend auf verschiedenen Attributen zu gruppieren, indem Sie den Segment-Builder oder Schnellsegmente verwenden.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170634"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304748"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Erstellen von komplexen Segmenten mithilfe des Segment-Builders
 
-Sie können komplexe Filter mit Bezug zur einheitlichen Kundenentität und den verwandten Entitäten festlegen. Jedes Segment erstellt nach der Verarbeitung eine Reihe von Kundendatensätzen, die Sie exportieren und für die Sie Maßnahmen ergreifen können.
+Sie können komplexe Filter mit Bezug zur einheitlichen Kundenentität oder für einen einheitlichen Kontakt und den verwandten Entitäten festlegen. Jedes Segment erstellt nach der Verarbeitung einen Satz von Kunden- oder Kontaktentitätsdatensätzen, die Sie exportieren und bearbeiten können.
 
 > [!TIP]
-> Segmente basierend auf **individuelle Kunden** schließen automatisch verfügbare Kontaktinformationen für Segmentmitglieder ein. In Umgebungen für **Geschäftskonten** basieren Seg,emte auf Konten (Gesellschaften oder Tochtergesellschaften). Um Kontaktinformationen in ein Segment aufzunehmen, verwenden Sie die **Projektattribute** Funktionalität im Segmentersteller. Stellen Sie sicher, dass die Kontaktdatenquellen [semantisch der ContactProfile-Entität zugeordnet](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) werden.
+> Segmente basierend auf **individuelle Kunden** schließen automatisch verfügbare Kontaktinformationen für Segmentmitglieder ein. Unter **Geschäftskonten** wählen Sie, sofern Sie beide Konten und Kontakte [vereinheitlicht](data-unification.md) haben, aus, ob das Segment auf Konten oder Geschäftskontakten basiert. Um an ein Ziel zu exportieren, das Kontaktinformationen erwartet, verwenden Sie ein Kontaktsegment. Um an ein Ziel zu exportieren, das Kontoinformationen erwartet, verwenden Sie ein Kontosegment.
 
 ## <a name="segment-builder"></a>Segmentgenerator
 
@@ -57,6 +57,11 @@ Das obige Beispiel veranschaulicht die Segmentierungsfunktion. Wir haben ein Seg
 
 1. Wählen Sie **Neu** > **Eigene erstellen**. Auf der Segment-Ersteller-Seite definieren oder erstellen Sie Regeln. Eine Regel besteht aus einer oder mehreren Bedingungen, die eine Menge von Kunden definieren.
 
+   > [!NOTE]
+   > Wählen Sie für Umgebungen, die auf Geschäftskonten basieren, **Neu** > **Segment der Konten** oder **Kontaktsegment (Vorschau)** basierend auf dem Segmenttyp, den Sie erstellen möchten. Wenn eine [Kontohierarchie](relationships.md#set-up-account-hierarchies) definiert wurde und Sie Regeln zum Herausfiltern von Daten basierend auf der Beziehung zwischen untergeordneten und übergeordneten Elementen erstellen möchten, wählen Sie **Hierarchie verwenden? (Vorschauversion)** und wählen Sie die Hierarchie aus und dann **anwenden**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Segment ausgewählter Kontenhierarchiebereich.":::
+
 1. Wählen Sie **Details bearbeiten** neben Segment ohne Titel. Geben Sie einen Namen für Ihr Segment ein, und aktualisieren Sie den vorgeschlagenen **Ausgabeentitätsnamen** für das Segment. Fügen Sie optional eine Beschreibung und [Tags](work-with-tags-columns.md#manage-tags) zum Segment hinzu.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Dialogfeld „Details bearbeiten“":::
@@ -65,11 +70,11 @@ Das obige Beispiel veranschaulicht die Segmentierungsfunktion. Wir haben ein Seg
    - Überprüfen Sie die Liste der verfügbaren Entitäten und Attribute im Bereich **Zu Regel hinzufügen**, und wählen Sie das Symbol **+** neben dem hinzuzufügenden Attribut aus. Wählen Sie aus, ob Sie das Attribut zu einer vorhandenen Regel hinzufügen oder zum Erstellen einer neuen Regel verwenden möchten.
    - Geben Sie den Namen des Attributs in den Regelabschnitt ein, um passende Vorschläge anzuzeigen.
 
-1. Wählen Sie die Operatoren aus, um die übereinstimmenden Werte der Bedingung anzugeben. Ein Attribut kann einen von vier Datentypen als Wert haben: numerisch, Zeichenfolge, Datum oder boolesch. Je nach Datentyp des Attributs stehen unterschiedliche Operatoren zur Angabe der Bedingung zur Verfügung. Für Segmente mit Geschäftskonten stehen zwei spezielle Operatoren zur Verfügung, um potenzielle Hierarchien zwischen den aufgenommenen Konten einzubeziehen. Verwenden Sie die Operatoren *Untergeordnet von* und *Übergeordnet von*, um zugehörige Konten einzubeziehen.
+1. Wählen Sie die Operatoren aus, um die übereinstimmenden Werte der Bedingung anzugeben. Ein Attribut kann einen von vier Datentypen als Wert haben: numerisch, Zeichenfolge, Datum oder boolesch. Je nach Datentyp des Attributs stehen unterschiedliche Operatoren zur Angabe der Bedingung zur Verfügung.
 
 1. Wählen Sie **Bedingung hinzufügen**, um einer Regel weitere Bedingungen hinzuzufügen. Um eine Regel unter der aktuellen Regel zu erstellen, wählen Sie **Unterregel hinzufügen**.
 
-1. Wenn eine Regel andere Entitäten als die Entität *Kunde* verwendet, auswählen **Beziehungspfad festlegen**, um die ausgewählte Entität der einheitlichen Kundenentität zuzuordnen. Wenn nur ein möglicher Beziehungspfad vorhanden ist, wählt das System diesen automatisch aus. Unterschiedliche [Beziehungspfade](relationships.md#relationship-paths) können zu unterschiedlichen Ergebnissen führen. Jede Regel kann einen eigenen Beziehungspfad haben.
+1. Wenn eine Regel andere Entitäten als die *Kunden*-Entität (bzw. *ContactProfile* Entität für B-to-B) verwendet, wählen Sie **Beziehungspfad festlegen**, um die ausgewählte Entität der einheitlichen Kundenentität zuzuordnen. Wenn nur ein möglicher Beziehungspfad vorhanden ist, wählt das System diesen automatisch aus. Unterschiedliche [Beziehungspfade](relationships.md#relationship-paths) können zu unterschiedlichen Ergebnissen führen. Jede Regel kann einen eigenen Beziehungspfad haben.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potenzieller Beziehungspfad beim Erstellen einer Regel basierend auf einer Entität, die der vereinheitlichten Kundenentität zugeordnet ist.":::
 
@@ -92,24 +97,22 @@ Das obige Beispiel veranschaulicht die Segmentierungsfunktion. Wir haben ein Seg
       - **Überschneiden** überschneidet die beiden Gruppen. Nur Daten, die beiden Gruppen *angehören*, verbleiben in der vereinheitlichten Gruppe.
       - **Außer** kombiniert die beiden Gruppen. Nur Daten in Gruppe A, die *nicht* Daten in Gruppe B angehören, werden beibehalten.
 
-1. Standardmäßig umfasst die Ausgabeentität alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. Wenn ein Segment auf anderen Entitäten als der Entität *Kunde* basiert, können Sie **Projektattribute** auswählen, um weiter Attribute dieser Entitäten hinzuzufügen.
-
-   > [!IMPORTANT]
-   > Bei Segmenten, die auf Geschäftskonten basieren, müssen Details zu einem oder mehreren Kontakten jedes Kontos aus der *ContactProfile*-Entität in das Segment aufgenommen werden, damit dieses Segment aktiviert oder an Ziele exportiert werden kann, für die Kontaktinformationen erforderlich sind. Weitere Informationen über die *ContactProfile*-Entität finden Sie unter [Semantische Zuordnungen](semantic-mappings.md).
-   > Eine Beispielausgabe für ein Segment basierend auf Geschäftskonten mit projizierten Attributen von Kontakten könnte wie folgt aussehen:
-   >
-   > |Kennung  |Firmenname  |Einnahmen  |Kontaktname  | Rolle des Kontakts|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, Beschaffungsmanagement]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Beispiel für im Seitenbereich ausgewählte projizierte Attribute, die der Ausgabeentität hinzugefügt werden sollen.":::
-  
+1. Standardmäßig umfasst die Ausgabeentität alle Attribute von Kundenprofilen enthält, die den definierten Filtern entsprechen. In B-to-B bei Verwendung der *ContactProfile*-Entität ist die Konto-ID automatisch enthalten. Wenn ein Segment auf anderen Einheiten als der *Kunde*-Entität basiert oder weitere Attribute aus *ContactProfile* einschließen will, wählen Sie **Projektattribute**, um der Ausgabeentität weitere Attribute dieser Entitäten hinzuzufügen.
+ 
    Beispiel: Ein Segment basiert auf einer Entität, die Kaufdaten enthält, die sich auf die *Kunde* Entität bezieht. Das Segment sucht nach allen Kunden aus Spanien, die im laufenden Jahr Waren gekauft haben. Sie können Attribute wie den Preis der Ware oder das Kaufdatum an alle übereinstimmenden Kundendatensätze in der Ausgabeentität anhängen. Diese Informationen können nützlich sein, um saisonale Korrelationen zu den Gesamtausgaben zu analysieren.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Beispiel für im Seitenbereich ausgewählte projizierte Attribute, die der Ausgabeentität hinzugefügt werden sollen.":::
+ 
+   Eine Beispielausgabe für ein Segment basierend auf Geschäftskonten mit projizierten Attributen von Kontakten könnte wie folgt aussehen:
+
+   |Kennung  |Firmenname  |Einnahmen  |Kontaktname  | Rolle des Kontakts|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, Beschaffungsmanagement]
+
    > [!NOTE]
-   > - **Projektattribute** funktioniert nur für Entitäten, die eine 1:n-Beziehung mit der Kundenentität haben. Beispielsweise kann ein Kunde mehrere Abonnements haben.
-   > - Wenn das Attribut, das Sie projizieren möchten, mehr als einen Hop von der Entität *Kunde* entfernt ist, wie durch die Beziehung definiert, sollte dieses Attribut in jeder Regel der Segmentabfrage verwendet werden, die Sie erstellen.
-   > - Wenn das Attribut, das Sie projizieren möchten, nur einen Hop von der Entität *Kunde* entfernt ist, muss dieses Attribut nicht in jeder Regel der Segmentabfrage vorhanden sein, die Sie erstellen.
+   > - **Projektattribute** funktioniert nur für Entitäten, die eine 1:n-Beziehung mit der *Kundenentität* oder *ContactProfile* Entität haben. Beispielsweise kann ein Kunde mehrere Abonnements haben.
+   > - Wenn das Attribut, das Sie projizieren möchten, mehr als einen Hop von der Entität *Kunde* oder *ContactProfile* entfernt ist, wie durch die Beziehung definiert, sollte dieses Attribut in jeder Regel der Segmentabfrage verwendet werden, die Sie erstellen.
+   > - Wenn das Attribut, das Sie projizieren möchten, nur einen Hop von der Entität *Kunde* oder *ContactProfile* entfernt ist, muss dieses Attribut nicht in jeder Regel der Segmentabfrage vorhanden sein, die Sie erstellen.
    > - **Projizierte Attribute** werden bei Verwendung von festgelegten Operatoren berücksichtigt.
 
 1. Wählen Sie **Ausführen**, um Ihr Segment zu erstellen. Wählen Sie **Speichern** aus, wenn Sie die aktuelle Konfiguration beibehalten und das Segment später ausführen möchten. Die Seite **Segmente** wird angezeigt.

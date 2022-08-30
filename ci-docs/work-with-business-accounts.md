@@ -4,21 +4,21 @@ description: Mehr über Geschäftskonten als primäre Zielgruppe in Dynamics 365
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053112"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303915"
 ---
 # <a name="work-with-business-accounts"></a>Mit Geschäftskonten arbeiten
 
@@ -30,7 +30,7 @@ Administratoren können [eine Umgebung in einer bestehenden Organisation erstell
 
 Sie können dann für Geschäftskonten und zugehörige Kontakte als Datenquellen aus allen unterstützten Quellen [Daten erfassen](data-sources.md).
 
-Nach der Vereinheitlichung der Daten, geben Sie [Kontohierarchien](relationships.md#set-up-account-hierarchies) als Teil der Beziehungskonfiguration an. Sie können auch [semantische Zuordnungen konfigurieren](semantic-mappings.md), um Kontakt- und Kontoentitäten zu verbinden. 
+ [Vereinheitlichung](data-unification.md)  Ihrer Kontodaten, gefolgt von Ihren Kontaktdaten, um Kontakt- und Kontoeinheiten zu verbinden.
 
 ## <a name="switch-between-primary-target-audience"></a>Zwischen primärem Zielgruppen wechseln
 
@@ -43,11 +43,12 @@ Wenn Ihre Organisation Umgebungen für einzelne Kunden und Geschäftskonten unte
 - [Aktivitäten](activities.md): Unterstützung für Konten und zugehörige Kontakte, um Aktivitäten zu erstellen und in einer Zeitskala anzuzeigen.
 - [Beziehungen](relationships.md): Der Aktivitätsassistent hilft beim Erstellen von Beziehungen zwischen den Entitäten, damit die Kontoansicht alle Aktivitäten von Kontakten anzeigen kann. Kontakte können einen Drillup durchführen, um die Kontaktansicht anzuzeigen, und Hierarchien können für die Aggregation von Kontoaktivitäten verwendet werden.
 - [Measures](measures.md): Unterstützt Measure, die vom Measure-Builder mit einer Berechnung erstellt wurden. Eine optionale Einstellung ermöglicht das Hochrollen für Unterkonten beim Anlegen von Kennzahlen.
-- [Segmente](segments.md) : Unterstützt Segmente, die mit dem Segment-Builder von Grund auf neu erstellt wurden. Neue Operatoren ermöglichen die Einbeziehung der Kontenhierarchie beim Erstellen von Segmenten.
+- [Segmente](segments.md) : Unterstützt Segmente, die mit dem Segment-Builder von Grund auf neu erstellt wurden. Segmente können auf Konten oder Kontakten basieren.
 - [Datenerfassung](data-sources.md): Alle Funktionen in diesem Bereich sind für Geschäftskonten und Privatkunden gleich.
-- [Datenvereinheitlichung](data-unification.md): Alle Funktionen in diesem Bereich sind für Geschäftskonten und Privatkunden gleich.
+- Die B-to-B-Datenvereinheitlichung ist der B-to-C-Datenvereinheitlichung sehr ähnlich, verfügt jedoch über einen zusätzlichen Schritt zur Vereinheitlichung von Kontakten nach der Kontovereinheitlichung. Siehe [Unternehmenskonten (B-to-B)](data-unification.md).
 - [Anreicherung](enrichment-hub.md): Einige Anreicherungsarten stehen nur für einzelne Kundenszenarien zur Verfügung, während andere ausschließlich für Geschäftskonten verfügbar sind.
 - [Vorhersagen und Standard-Modelle](predictions-overview.md): Transaktionsabwanderungs-Vorhersage enthält zusätzliche Schritte für Geschäftskonten. Andere Vorhersagen sind nur für einzelne Kunden verfügbar.
 - [Aktivierung und Export](export-destinations.md) : Exporte sind für Geschäftskonten und Privatkunden verfügbar. Einige Exporte erfordern zusätzliche Konfigurations- und Kontaktinformationen, die in den zugrunde liegenden Segmenten projiziert werden, um für Geschäftskonten gültig zu sein.
 - [Systemeinstellungen](system.md) und [Benutzerverwaltung](permissions.md): Alle Funktionen in diesem Bereich sind für Geschäftskonten und Privatkunden gleich.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]

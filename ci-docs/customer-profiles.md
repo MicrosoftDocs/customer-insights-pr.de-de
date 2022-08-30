@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188092"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303782"
 ---
 # <a name="view-customer-profiles"></a>Anzeigen von Kundenprofilen
 
@@ -78,7 +78,7 @@ Kundendetails enthalten:
 **Kachel Kundenprofil**: Zeigt die verschiedenen Werte aus der vereinheitlichten Entität *Kunde* an. Wenn ein Feld keinen Wert für das ausgewählte Kundenprofil hat, wird es nicht angezeigt, ausgenommen für das Adressfeld. Die Kachel ist in Abschnitte gegliedert:
 
 - Der erste Abschnitt zeigt einen vordefinierten Satz von Feldern, gefolgt von allen Feldern, die Teil des Such- und Filterindex sind. Alle adressbezogenen Felder werden in einer Zeile zusammengefasst, wenn das Profil solche Felder enthält, selbst wenn das Profil keine Adressinformationen enthält.
-- **Kontakte für diesen Kunden** Anzeige in Umgebungen für Geschäftskonten. Jeder Kontakt wird mit seinen Feldern angezeigt. Leere Felder werden ausgeblendet.
+- **Kontakte für diesen Kunden** anzeige in Umgebungen für Geschäftskonten (B-to-B). Jeder Kontakt wird mit seinen Feldern angezeigt. Leere Felder werden ausgeblendet.
 - **Weitere Felder** zeigt die restlichen Felder des ausgewählten Kunden an, außer IDs.
 - **IDs** listet alle IDs unter ihrem entsprechenden Entitätsnamen auf. Felder werden anhand ihrer Semantik als IDs identifiziert.
 

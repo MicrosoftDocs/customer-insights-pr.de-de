@@ -1,7 +1,7 @@
 ---
 title: Übersicht über Segmente
 description: Übersicht über Segmente und wie man sie erstellt und verwaltet.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246292"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304794"
 ---
 # <a name="segments-overview"></a>Übersicht über Segmente
 
 Mit Segmenten können Sie Ihre Kunden anhand von demografischen, transaktionalen oder verhaltensbezogenen Attributen gruppieren. Sie können Segmente verwenden, um Werbekampagnen, Vertriebsaktivitäten und Kundensupportaktionen gezielt auf die Erreichung Ihrer Geschäftsziele auszurichten.
 
-Kundenprofile, die den Filtern einer Segmentdefinition entsprechen, werden als *Mitglieder* eines Segments bezeichnet. Es gelten einige [Serviceeinschränkungen](/dynamics365/customer-insights/service-limits).
+Kunden- oder Kontaktprofile, die den Filtern einer Segmentdefinition entsprechen, werden als *Mitglieder* eines Segments bezeichnet. Es gelten einige [Serviceeinschränkungen](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Segment erstellen
 
@@ -41,13 +41,19 @@ Wählen Sie aus, wie ein Segment basierend auf Ihrem Ziel Publikum erstellt werd
 
 # <a name="business-accounts-b-to-b"></a>[Unternehmenskonten (B2B)](#tab/b2b)
 
-- Simple oder komplexe Segmente mit Segmentbuilder: [Ihre eigenen erstellen](segment-builder.md)
+Kontensegment oder Kontaktsegment (Vorschauversion) mit Segment Builder: [Eigene bauen](segment-builder.md)
+
+> [!NOTE]
+> Die meisten Exportziele benötigen Kontaktinformationen für Marketingzwecke. Erstellen Sie daher Segmente von Kontakten, die Sie für diese Exporte verwenden können.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Vorhandene Segmente verwalten
 
-Gehen Sie zur **Segmente** Seite, um die von Ihnen erstellten Segmente, deren Status und Status, die Anzahl der Mitglieder und den Zeitpunkt der letzten Aktualisierung der Daten anzuzeigen. Sie können die Liste der Segmente nach einer beliebigen Spalte sortieren oder das Suchfeld verwenden, um das Segment zu finden, das Sie verwalten möchten.
+Gehen Sie zur Seite **Segmente**, um die von Ihnen erstellten Segmente, deren Status und Zustand sowie den Zeitpunkt der letzten Aktualisierung der Daten anzuzeigen. Sie können die Liste der Segmente nach einer beliebigen Spalte sortieren oder das Suchfeld verwenden, um das Segment zu finden, das Sie verwalten möchten.
+
+> [!TIP]
+> In B-to-B-Umgebungen gibt die Spalte **Zielgruppentyp** an, ob ein Segment auf Konten oder Kontakten basiert.
 
 Wählen Sie das Segment aus, um verfügbare Aktionen anzuzeigen.
 
@@ -82,7 +88,7 @@ Der untere Teil enthält eine Liste der Segmentmitglieder.
 > [!NOTE]
 > Felder, die in dieser Liste erscheinen, basieren auf den Attributen der Entitäten Ihres Segments.
 >
->Die Liste ist eine Vorschau der passenden Segmentmitglieder und zeigt die ersten 100 Datensätze Ihres Segments an, so dass Sie es schnell auswerten und seine Definitionen bei Bedarf überprüfen können. Um alle übereinstimmenden Datensätze zu sehen, müssen Sie [Segment](export-destinations.md) exportieren.
+> Die Liste ist eine Vorschau der passenden Segmentmitglieder und zeigt die ersten 100 Datensätze Ihres Segments an, so dass Sie es schnell auswerten und seine Definitionen bei Bedarf überprüfen können. Um alle übereinstimmenden Datensätze anzuzeigen wälen Sie **Mehr sehen**, um die Seite [**Entitäten**](entities.md) bzw. [Exportieren Sie das Segment](export-destinations.md) zu öffnen.
 
 ## <a name="refresh-segments"></a>Aktualisieren von Segmenten
 

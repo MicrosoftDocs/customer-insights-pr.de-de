@@ -2,7 +2,7 @@
 title: Vereinheitlichen Sie Kundenfelder für die Datenvereinheitlichung
 description: Führen Sie Entitäten zusammen, um vereinheitlichte Kundenprofile zu erstellen.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,16 +14,16 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213581"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304012"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Vereinheitlichen Sie Kundenfelder für die Datenvereinheitlichung
+# <a name="unify-customer-fields"></a>Vereinheitlichen von Kundenfeldern
 
-Wählen Sie in diesem Schritt des Vereinigungsprozesses Attribute aus und schließen Sie sie aus, um die Entität des einheitlichen Profils zusammenzuführen. Wenn beispielsweise drei Entitäten über E-Mail-Daten verfügten, möchten Sie möglicherweise alle drei separaten E-Mail-Felder beibehalten oder sie in einem einzigen E-Mail-Feld für das einheitliche Profil zusammenführen. Einige Attribute werden vom System automatisch kombiniert. Sie können stabile und eindeutige Kunden-IDs erstellen und verwandte Profile in einem Cluster gruppieren.
+Wählen Sie in diesem Schritt des Vereinigungsprozesses Attribute aus und schließen Sie sie aus, um die Entität des einheitlichen Profils zusammenzuführen. Wenn beispielsweise drei Entitäten über E-Mail-Daten verfügten, möchten Sie möglicherweise alle drei separaten E-Mail-Felder beibehalten oder sie in einem einzigen E-Mail-Feld für das einheitliche Profil zusammenführen. Einige Attribute werden vom System automatisch kombiniert. Sie können stabile und eindeutige Kunden-IDs erstellen. Sie können für individuelle Kunden Regeln definieren, um verwandte Profile in einem Cluster zu gruppieren.
 
 :::image type="content" source="media/m3_unify.png" alt-text="Zusammenführungsseite im Datenvereinigungsprozess mit Tabelle mit zusammengeführten Feldern, die das einheitliche Kundenprofil definieren.":::
 
@@ -47,7 +47,7 @@ Wählen Sie in diesem Schritt des Vereinigungsprozesses Attribute aus und schlie
 
 1. Optional [können Sie die Kunden-ID-Konfiguration generieren](#configure-customer-id-generation).
 
-1. Optional [können Sie Profile in Haushalte oder Cluster gruppieren](#group-profiles-into-households-or-clusters).
+1. Optional für B-to-C [können Sie Profile in Haushalte oder Cluster gruppieren](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Nächster Schritt: Überprüfung der Vereinheitlichung](review-unification.md)
@@ -161,7 +161,7 @@ Durch die Konfiguration einer stabilen Kunden-ID können Sie dieses Verhalten ve
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Profile in Haushalte oder Cluster gruppieren
 
-Sie können Regeln definieren, um verwandte Profile in einem Cluster zu gruppieren. Derzeit sind zwei Arten von Cluster verfügbar – Haushalts- und benutzerdefinierte Cluster. Das System wählt automatisch einen Haushalt mit vordefinierten Regeln aus, wenn die *Kunde* Entität die semantischen Felder *Person.Nachname* und *Standort-Adresse* enthält. Sie können auch einen Cluster mit Ihren eigenen Regeln und Bedingungen erstellen, ähnlich wie bei [Abstimmungsregeln](match-entities.md#define-rules-for-match-pairs).
+Für individuelle Kunden können Regeln definieren, um verwandte Profile in einem Cluster zu gruppieren. Derzeit sind zwei Arten von Cluster verfügbar – Haushalts- und benutzerdefinierte Cluster. Das System wählt automatisch einen Haushalt mit vordefinierten Regeln aus, wenn die *Kunde* Entität die semantischen Felder *Person.Nachname* und *Standort-Adresse* enthält. Sie können auch einen Cluster mit Ihren eigenen Regeln und Bedingungen erstellen, ähnlich wie bei [Abstimmungsregeln](match-entities.md#define-rules-for-match-pairs).
 
 1. Wählen Sie **Erweitert** > **Cluster erstellen**.
 

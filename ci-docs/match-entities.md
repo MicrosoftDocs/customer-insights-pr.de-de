@@ -2,7 +2,7 @@
 title: Übereinstimmungsbedingungen für die Datenvereinheitlichung
 description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139702"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304656"
 ---
 # <a name="match-conditions-for-data-unification"></a>Übereinstimmungsbedingungen für die Datenvereinheitlichung
 
@@ -27,6 +27,8 @@ Dieser Schritt der Vereinheitlichung definiert die Abgleichreihenfolge und -rege
 
 > [!NOTE]
 > Sobald Sie Ihre Vergleichsbedingungen erstellt und **Weiter** ausgewählt haben, können Sie eine ausgewählte Entität oder ein ausgewähltes Attribut nicht entfernen. Wählen Sie bei Bedarf **Zurück**, um die ausgewählten Entitäten und Attribute zu überprüfen, bevor Sie fortfahren.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Angereicherte Entitäten einschließen (Vorschauversion)
 
@@ -43,14 +45,14 @@ Wenn Sie Entitäten auf der Ebene der Datenquelle angereichert haben, um Ihre Ve
 Jede Übereinstimmung vereint zwei oder mehr Entitäten zu einer einzigen konsolidierten Entität. Gleichzeitig werden die eindeutigen Kundendatensätze geführt. Die Übereinstimmungsreihenfolge gibt die Reihenfolge an, in der das System versucht, die Datensätze abzugleichen.
 
 > [!IMPORTANT]
-> Die erste Entität in der Liste ist der Primärschlüssel. Die primäre Entität dient als Grundlage für Ihr DataSet der vereinheitlichten Profile. Weitere ausgewählte Entitäten werden dieser Entität hinzugefügt.
+> Die erste Entität, die Sie als Ihre primäre Entität wählen, dient als Grundlage für Ihren einheitlichen Profildatensatz. Weitere ausgewählte Entitäten werden dieser Entität hinzugefügt.
 >
 > Wichtige Überlegungen:
 >
 > - Wählen Sie die Entität mit den vollständigsten und zuverlässigsten Profildaten über Ihre Kunden als primäre Entität aus.
 > - Wählen Sie die Entität, die mehrere Attribute mit anderen Entitäten gemeinsam hat (z. B. Name, Telefonnummer oder E-Mail-Adresse) als primäre Entität.
 
-1. Auf der Seite **Abgleich-Bedingungen** verwenden Sie die Aufwärts- und Abwärtspfeile, um die Entitäten in der gewünschten Reihenfolge zu verschieben, oder ziehen Sie sie per Drag-and-Drop. Wählen Sie zum Beispiel **Contacts:eCommerce** als primäre Entität und **CustomerLoyalty:Loyalty** als zweite Entität.
+1. Auf der Seite **Abgleich-Bedingungen** verwenden Sie die Aufwärts- und Abwärtspfeile, um die Entitäten in der gewünschten Reihenfolge zu verschieben, oder ziehen Sie sie per Drag-and-Drop. Wählen Sie zum Beispiel **eCommerceCustomers** als primäre Entität und **loyCustomers** als zweite Instanz.
 
 1. Um alle Datensätze in der Entität als eindeutigen Kunden zu führen, unabhängig davon, ob eine Übereinstimmung gefunden wird, wählen Sie **Alle Datensätze berücksichtigen**. Alle Datensätze in dieser Entität, die nicht mit Datensätzen in anderen Entitäten übereinstimmen, werden in das einheitliche Profil aufgenommen. Datensätze ohne Übereinstimmung werden Singletons genannt.
   
@@ -70,7 +72,7 @@ Die Warnung neben einem Entitätsnamen bedeutet, dass für ein Zuordnungspaar ke
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Screenshot des Bereichs „Regel hinzufügen“.":::
 
-   - **Entität/Feld auswählen (erste Zeile)**: Wählen Sie eine zugehörige Entität und ein Attribut aus, um eine Datensatzeigenschaft anzugeben, die für einen Kunden wahrscheinlich eindeutig ist. Zum Beispiel eine Telefonnummer oder eine E-Mail-Adresse. Vermeiden Sie Übereinstimmungen nach Attributen des Aktivitätstyps. Beispielsweise findet eine Kauf-ID wahrscheinlich keine Übereinstimmung in anderen Datensatztypen.
+   - **Entität/Feld auswählen (erste Zeile)**: Wählen Sie eine Entität und ein Attribut aus, um eine Datensatzeigenschaft anzugeben, die für einen Kunden wahrscheinlich eindeutig ist. Zum Beispiel eine Telefonnummer oder eine E-Mail-Adresse. Vermeiden Sie Übereinstimmungen nach Attributen des Aktivitätstyps. Beispielsweise findet eine Kauf-ID wahrscheinlich keine Übereinstimmung in anderen Datensatztypen.
 
    - **Entität/Feld auswählen (zweite Zeile)**: Wählen Sie ein Attribut aus, das sich auf das Attribut der in der ersten Zeile angegebenen Entität bezieht.
 
@@ -134,7 +136,7 @@ Sie können Bedingungen angeben, die die standardmäßige Vergleichslogik übers
 |---------|---------|---------|
 |Immer übereinstimmen     | Definiert Werte, die immer übereinstimmen.         |  *Mike* und *MikeR* immer übereinstimmen.       |
 |Nicht übereinstimmen     | Definiert Werte, die niemals übereinstimmen.        | *John* und *Jonathan* nie übereinstimmen.        |
-|Benutzerdefinierte Umgehung     | Definiert Werte, die das System in der Übereinstimmungsphase immer ignorieren soll. |  Werte *11111* und *Unbekannt* während der Übereinstimmung ignorieren.        |
+|Umgehen            | Definiert Werte, die das System in der Übereinstimmungsphase immer ignorieren soll. |  Werte *11111* und *Unbekannt* während der Übereinstimmung ignorieren.        |
 |Alias-Zuordnung    | Definieren von Werten, die das System als denselben Wert betrachten soll.         | *Joe* als gleich zu *Joseph* betrachten.        |
 
 1. Wählen Sie **Benutzerdefiniert** aus.
