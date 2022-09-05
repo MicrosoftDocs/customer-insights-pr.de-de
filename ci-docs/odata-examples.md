@@ -1,19 +1,19 @@
 ---
 title: OData-Abfragebeispiele für Customer Insights-APIs
 description: Häufig verwendete Beispiele für das Open Data Protocol (OData) zum Abfragen der Customer Insights-APIs zum Überprüfen von Daten.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121561"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387201"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>OData-Abfragebeispiele für Customer Insights-APIs
 
@@ -21,7 +21,7 @@ Das Open Data Protocol (OData) ist ein Datenzugriffsprotokoll, das auf Kernproto
 
 Dieser Artikel listet einige häufig angeforderte Beispielabfragen auf, die Ihnen beim Erstellen Ihrer eigenen Implementierungen auf der Grundlage von [Customer Insights-APIs](apis.md) helfen sollen.
 
-Sie müssen die Abfragebeispiele ändern, damit sie in den Zielumgebungen funktionieren: 
+Sie müssen die Abfragebeispiele ändern, damit sie in den Zielumgebungen funktionieren:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data`, wobei {instanceId} die GUID der Customer Insights-Umgebung ist, die Sie abfragen möchten. Der [ListAllInstances-Vorgang](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) lässt Sie die {InstanceId} finden, auf die Sie Zugriff haben.
 - {CID}: GUID eines einheitlichen Kundendatensatzes. Beispiel: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Sie müssen die Abfragebeispiele ändern, damit sie in den Zielumgebungen funkti
 
 ## <a name="customer"></a>Kundin/Kunde
 
-Die folgende Tabelle enthält eine Reihe von Beispielabfragen für die Entität *Kunde*.
+Beispielabfragen für die *Kundenentität*.
 
 |Abfragetyp |Beispiel  | Notiz  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Die folgende Tabelle enthält eine Reihe von Beispielabfragen für die Entität 
 
 ## <a name="unified-activity"></a>Vereinheitlichte Aktivität
 
-Die folgende Tabelle enthält eine Reihe von Beispielabfragen für die Entität *UnifiedActivity*.
+Beispielabfragen für die *UnifiedActivity*-Entität.
 
 |Abfragetyp |Beispiel  | Notiz  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Die folgende Tabelle enthält eine Reihe von Beispielabfragen für die Entität 
 
 ## <a name="other-examples"></a>Weitere Beispiele
 
-Die folgende Tabelle enthält eine Reihe von Beispielabfragen für andere Entitäten.
+Beispielabfragen für andere Entitäten.
 
 |Abfragetyp |Beispiel  | Notiz  |
 |---------|---------|---------|

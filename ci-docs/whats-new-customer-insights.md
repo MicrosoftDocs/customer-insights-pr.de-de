@@ -1,19 +1,19 @@
 ---
 title: Neuerungen in Dynamics 365 Customer Insights
 description: Informationen über neue Funktionen, Verbesserungen und Fehlerbehebungen.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246010"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387293"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Neuerungen in Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Aktualisierungen August 2022
+
+Die Updates im August 2022 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Kontaktvereinheitlichung in B-to-B-Umgebungen
+
+B-to-B-Umgebungen in Customer Insights unterstützen jetzt eine verbesserte Datenvereinheitlichung.
+
+Sie können jetzt neben Konten auch Kontakte vereinheitlichen, um einen vollständigen Überblick über Ihre Geschäftskontakte zu erhalten. Einheitliche Kontakte sind mit einheitlichen Konten verknüpft und werden nun auf den Kundenkarten aufgeführt. 
+
+Weitere Informationen finden Sie unter [Einheitliches Kontaktprofil erstellen](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Erstellen und exportieren Sie Segmente basierend auf einheitlichen Kontakten
+
+Dank der neuen Kontaktvereinheitlichung können Sie Kontaktsegmente anhand von Kriterien aus Kontakten, Konten oder beiden erstellen. Diese Segmente können zur Aktivierung in anderen Diensten exportiert werden.
+
+Weitere Informationen finden Sie in [Überblick zu Exporte](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Updates Juli 2022
 

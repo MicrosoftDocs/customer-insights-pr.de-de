@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246061"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387248"
 ---
 # <a name="configure-security-settings"></a>Konfigurieren von Sicherheitseinstellungen
 
@@ -23,7 +23,7 @@ Verwalten Sie API-Schlüssel, greifen Sie auf Kundendaten zu und richten Sie ein
 
 Hier können Sie die Schlüssel zur Verwendung der [Customer Insights APIs](apis.md) mit den Daten in Ihrer Umgebung anzeigen und verwalten.
 
-1. Gehen Sie zu **System** > **Sicherheit** und wählen Sie die Registerkarte **APIs**.
+1. Gehen Sie zu **Admin** > **Sicherheit** und wählen Sie die Registerkarte **APIs**.
 
 1. Wenn kein API-Zugriff auf die Umgebung eingerichtet wurde, wählen Sie **Aktivieren**. Oder, um den API-Zugriff auf die Umgebung zu blockieren, wählen Sie **Deaktivieren** und bestätigen Sie.
 
