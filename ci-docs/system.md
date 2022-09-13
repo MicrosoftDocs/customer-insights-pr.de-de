@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246246"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396000"
 ---
 # <a name="view-system-configuration"></a>Systemkonfiguration anzeigen
 
@@ -38,12 +38,6 @@ Zeigen Sie Details zur Echtzeit-API-Verwendung an und sehen Sie, welche Ereignis
    - **API-Aufrufe** – Ein Diagramm, das die aggregierte Anzahl der Aufrufe der API im ausgewählten Zeitrahmen anzeigt.
    - **Datentransfer** – Ein Diagramm, das die Datenmenge zeigt, die über die API im ausgewählten Zeitrahmen übertragen wurde.
    - **Operationen** – eine Tabelle mit Zeilen für jede verfügbare API-Operation und Details zur Verwendung der Operationen. Wählen Sie einen Operationsnamen aus, um zur [API-Referenz](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) zu wechseln.
-
-   Vorgänge, die [Echtzeit-Datenerfassung](real-time-data-ingestion.md) verwenden, enthalten ein Fernglassymbol, um die API-Nutzung in Echtzeit anzuzeigen.
-
-   1. Wählen Sie das Fernglassymbol aus, um den Bereich mit Nutzungsdetails für die **Echtzeit-API-Nutzung** in der aktuellen Umgebung zu öffnen.
-   1. Einen **Zeitrahmen auswählen** zum Anzeigen.
-   1. Verwenden Sie das Feld **Gruppieren nach**, in dem Sie auswählen können, wie Sie Ihre Echtzeitinteraktionen am besten präsentieren möchten. Sie können die Daten nach API-**Methode**, **Qualifizierter Name der Entität** (aufgenommene Entität), **Erstellt von** (Quelle des Ereignisses), **Ergebnis** (Erfolg oder Misserfolg) oder **Fehlercodes** gruppieren. Die Daten stehen als Historiendiagramm und als Tabelle zur Verfügung.
 
 ## <a name="view-system-information"></a>Systeminformationen anzeigen
 

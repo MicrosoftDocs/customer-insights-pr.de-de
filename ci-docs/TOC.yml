@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Verwenden von benutzerdefinierten Modellen aus Azure Machine Learning
           href: custom-models.md
-        - name: Teilweise fehlende Daten vervollständigen
-          href: predictions.md
     - name: Beispielanleitungen
       items:
         - name: Beispielanleitung für CLV-Vorhersage

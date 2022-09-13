@@ -1,7 +1,7 @@
 ---
 title: Aktualisieren Sie die Einstellungen für die Zusammenführung von Kunden, Konten oder Kontakten
 description: Aktualisieren Sie Duplikatsregeln, Vergleichsregeln oder einheitliche Felder in den Vereinigungseinstellungen vom Kunden oder Konto.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304334"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392470"
 ---
 # <a name="update-unification-settings"></a>Aktualisieren der Vereinigungseinstellungen
 
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte aus, um die Vereinigungseinstellungen zu übe
    > Die Kachel **Abgleich-Bedingungen** wird nur angezeigt, wenn mehrere Entitäten ausgewählt wurden.
 
 1. Wählen Sie aus, was Sie aktualisieren möchten:
-   - [Quellfelder](#edit-source-fields), um Entitäten oder Attribute hinzuzufügen oder Attributtypen zu ändern.
+   - [Quellfelder](#edit-source-fields), um Entitäten oder Attribute hinzuzufügen oder Attributtypen zu ändern. Informationen zum Entfernen eines Attributs finden Sie unter [Entfernen Sie ein einheitliches Feld](#remove-a-unified-field). Informationen zum Entfernen einer Entität finden Sie unter [Entfernen Sie eine einheitliche Entität](#remove-a-unified-entity).
    - [Doppelte Datensätze](#manage-deduplication-rules), um Deduplizierungsregeln zu verwalten oder Einstellungen zusammenzuführen.
    - [Abgleich-Bedingungen](#manage-match-rules) zum Aktualisieren von Abgleichsregeln für zwei oder mehr Entitäten.
    - [Einheitliche Kundenfelder](#manage-unified-fields), um Felder zu kombinieren oder auszuschließen. Sie können verwandte Profile auch in Clustern gruppieren.
@@ -53,8 +53,6 @@ Führen Sie die folgenden Schritte aus, um die Vereinigungseinstellungen zu übe
 
 ## <a name="edit-source-fields"></a>Bearbeiten von Quellfeldern
 
-Sie können ein Attribut oder eine Entität nicht entfernen, wenn sie bereits vereinheitlicht wurde.
-
 1. Wählen Sie **Bearbeiten** auf der Kachel **Quellfelder** aus.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Screenshot der Seite „Quellfelder“ mit der Anzahl der Primärschlüssel, zugeordneten und nicht zugeordneten Felder":::
@@ -66,6 +64,80 @@ Sie können ein Attribut oder eine Entität nicht entfernen, wenn sie bereits ve
 1. Optional können Sie den Primärschlüssel für eine Entität und die Attributtypen ändern und **Intelligente Zuordnung** an- oder ausschalten. Weitere Informationen finden Sie unter [Quellfelder auswählen](map-entities.md).
 
 1. Wählen Sie **Weiter** aus, um Änderungen an den Deduplizierungsregeln vorzunehmen, oder wählen Sie **Speichern und schließen**, um zu [Aktualisieren der Vereinigungseinstellungen](#update-unification-settings) zurückzukehren.
+
+### <a name="remove-a-unified-field"></a>Ein einheitliches Feld entfernen
+
+Um ein vereinheitlichtes Feld zu entfernen, muss das Feld aus allen Abhängigkeiten wie Segmenten, Kennzahlen, Anreicherungen oder Beziehungen entfernt werden.
+
+1. Sobald alle Abhängigkeiten für das Feld entfernt wurden, gehen Sie zu **Daten** > **Vereinheitlichen**.
+
+1. Wählen Sie **Bearbeiten** auf der Kachel **Vereinheitlichte Kundenfelder** aus.
+
+1. Wählen Sie alle Vorkommen des Felds aus und wählen Sie dann **Ausschließen**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Screenshot der Seite Einheitliche Felder mit ausgewählten Feldern und der Schaltfläche Ausschließen.":::
+
+1. Wählen Sie **Fertig** zum Bestätigen und dann **Speichern und Schließen** aus.
+
+   > [!TIP]
+   > Wenn Sie die Meldung Unify konnte nicht gespeichert werden sehen Die angegebene Ressource kann aufgrund nachgelagerter Abhängigkeiten nicht geändert oder gelöscht werden, denn das Feld wird immer noch in einer nachgelagerten Abhängigkeit verwendet.
+
+1. Wenn das Feld in einer Regel für doppelte Datensätze oder Übereinstimmungsbedingungen verwendet wird, führen Sie die folgenden Schritte aus. Andernfalls fahren Sie mit dem nächsten Schritt fort.
+   1. Wählen Sie **Bearbeiten** auf der Kachel **Doppelte Datensätze** aus.
+   1. Entfernen Sie das Feld aus allen Regeln, in denen es verwendet wird, falls vorhanden, und wählen Sie dann **Weiter** aus.
+   1. Auf der Seite **Passende Bedingungen** entfernen Sie das Feld aus allen Regeln, in denen es verwendet wird, falls vorhanden, und wählen Sie dan **Speichern und schließen**.
+   1. Wählen Sie **Zusammenführen** > **Kundenprofile und Abhängigkeiten zusammenführen** aus. Warten Sie, bis das Zusammenführen abgeschlossen ist, bevor Sie mit dem nächsten Schritt fortfahren.
+
+1. Wählen Sie **Bearbeiten** auf der Kachel **Quellfelder** aus.
+
+1. Wählen Sie **Wählen Sie Entitäten und Felder aus** und deaktivieren Sie das Kontrollkästchen neben jedem Vorkommen des Felds.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Screenshot des Dialogfelds Entitäten und Felder auswählen mit deaktivierten Kontrollkästchen":::
+
+1. Wählen Sie **Übernehmen** aus.
+
+1. Wählen Sie **Speichern und schließen** aus.
+
+1. Wählen Sie **Zuammenführen** > **Kundenprofile und Abhängigkeiten zusammenführen**, um das zusammengeführte Profil zu aktualisieren.
+
+### <a name="remove-a-unified-entity"></a>Eine einheitliche Entität entfernen
+
+Um eine vereinheitlichte Entitä zu entfernen, muss die Entität aus allen Abhängigkeiten wie Segmenten, Kennzahlen, Anreicherungen oder Beziehungen entfernt werden.
+
+1. Sobald alle Abhängigkeiten für die Entität entfernt wurden, gehen Sie zu **Daten** > **Vereinheitlichen**.
+
+1. Wählen Sie **Bearbeiten** auf der Kachel **Vereinheitlichte Kundenfelder** aus.
+
+1. Wählen Sie alle Felder für die Entität und wählen Sie **Ausschließen**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Screenshot von Einheitliche Felder mit allen Felder für eine ausgewählte Entität und die Schaltfläche Ausschließen":::
+
+1. Wählen Sie **Fertig** zum Bestätigen und dann **Speichern und Schließen** aus.
+
+   > [!TIP]
+   > Wenn Sie die Meldung Unify konnte nicht gespeichert werden sehen Die angegebene Ressource kann aufgrund nachgelagerter Abhängigkeiten nicht geändert oder gelöscht werden, denn die Entität wird immer noch in einer nachgelagerten Abhängigkeit verwendet.
+
+1. Wählen Sie **Bearbeiten** auf der Kachel **Doppelte Datensätze** aus.
+
+1. Entfernen Sie alle Regeln aus der Entität, falls vorhanden, und wählen Sie dann **Weiter**.
+
+1. Auf der Seite **Übereinstimmende Bedingungen** wählen Sie die Entität und dann **Löschen** aus.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Screenshot der Übereinstimmungsbedingungen mit ausgewählter Entität und der Schaltfläche Löschen":::
+
+1. Wählen Sie **Speichern und schließen** aus.
+
+1. Wählen Sie **Bearbeiten** auf der Kachel **Quellfelder** aus.
+
+1. Wählen Sie **Wählen Sie Entitäten und Felder aus** und deaktivieren Sie das Kontrollkästchen neben der Entität.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Screenshot des Dialogfelds Entitäten und Felder auswählen mit deaktivierten Kontrollkästchen":::
+
+1. Wählen Sie **Übernehmen** aus.
+
+1. Wählen Sie **Speichern und schließen** aus.
+
+1. Wählen Sie **Zuammenführen** > **Kundenprofile und Abhängigkeiten zusammenführen**, um das zusammengeführte Profil zu aktualisieren.
 
 ## <a name="manage-deduplication-rules"></a>Verwalten von Deduplizierungsregeln
 

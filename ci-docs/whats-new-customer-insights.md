@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387293"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409356"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Neuerungen in Dynamics 365 Customer Insights
 
@@ -41,6 +41,14 @@ Weitere Informationen finden Sie unter [Einheitliches Kontaktprofil erstellen](d
 Dank der neuen Kontaktvereinheitlichung können Sie Kontaktsegmente anhand von Kriterien aus Kontakten, Konten oder beiden erstellen. Diese Segmente können zur Aktivierung in anderen Diensten exportiert werden.
 
 Weitere Informationen finden Sie in [Überblick zu Exporte](export-destinations.md).
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Einsatzregionen ausgerichtet mit Microsoft Dataverse bereitstellen
+
+Beim Erstellen einer neuen Customer Insights-Umgebung können Sie die Region auswählen, in der der Service bereitgestellt und gehostet werden soll. Wir haben die Regionsauswahl aktualisiert, um sie mit Microsoft Dataverse und der Power Platform auszurichten.
+
+Sie können jetzt ganz einfach dieselbe Region wie Ihre vorhandene Microsoft Dataverse Umgebung oder Ihr Azure Data Lake Storage Konto auswählen (falls Sie diese Option wählen), vorbehaltlich der Verfügbarkeit von Customer Insights in dieser Region.
+
+Weitere Informationen finden Sie unter [Erstellen Sie eine neue Umgebung](create-environment.md) und [Produktverfügbarkeit nach Region](https://dynamics.microsoft.com/availability-reports/).
 
 ## <a name="july-2022-updates"></a>Updates Juli 2022
 

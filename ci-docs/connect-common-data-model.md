@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245832"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396079"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbindung mit Daten in Azure Data Lake Storage herstellen
 
@@ -39,6 +39,8 @@ Daten aufnehmen in Dynamics 365 Customer Insights mit Ihrem Azure Data Lake Stor
   - Speicher-Blob-Datenleser
   - Speicher-Blob-Datenbesitzer
   - Storage-Blob-Daten-Mitwirkender
+
+- Der Benutzer, der die Datenquellen-Verbindung einrichtet, benötigt die wenigsten Teilnehmer-Berechtigungen für Speicherblobdaten für das Speicherkonto.
 
 - Daten in Ihrem Data Lake Storage sollten dem Common Data Model-Standard für die Speicherung Ihrer Daten folgen und über das Common Data Model-Manifest verfügen, um das Schema der Datendateien (*.csv oder *.parquet) darzustellen. Das Manifest muss die Details der Entitäten wie Entitätsspalten und Datentypen sowie den Speicherort und den Dateityp der Datendatei enthalten. Weitere Informationen unter [Common Data Model-Manifest](/common-data-model/sdk/manifest). Wenn das Manifest nicht vorhanden ist, können Admin-Benutzer mit Zugriff auf Storage Blob Data Owner oder Storage Blob Data Teilnehmer das Schema beim Erfassen der Daten definieren.
 
@@ -62,7 +64,7 @@ Daten aufnehmen in Dynamics 365 Customer Insights mit Ihrem Azure Data Lake Stor
    > [!NOTE]
    > Sie benötigen entweder eine der folgenden Rollen für den Container oder das Speicherkonto, um die Datenquelle zu erstellen:
    >
-   >  - Datenleser des Speicher-Blobs reicht aus, um von einem Speicherkonto zu lesen und die Daten in Customer Insights zu übernehmen. 
+   >  - Datenleser des Speicher-Blobs reicht aus, um von einem Speicherkonto zu lesen und die Daten in Customer Insights zu übernehmen.
    >  - Storage Blob-Datenmitwirkender oder Besitzer ist erforderlich, wenn Sie die Manifestdateien direkt in Customer Insights bearbeiten möchten.  
   
 1. Wählen Sie den Namen des **Containers**, der die Daten und das Schema (model.json- oder Manifest.json-Datei) enthält, aus denen Daten importiert werden sollen, und wählen Sie **Weiter**.
