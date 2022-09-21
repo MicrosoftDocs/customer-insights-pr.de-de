@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304058"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460189"
 ---
 # <a name="exports-preview-overview"></a>Exporte (Vorschauversion) – Übersicht
 
@@ -36,7 +36,7 @@ Es gibt zwei Haupttypen für Exporte:
 Die meisten Exportoptionen unterstützen beide Arten von Umgebungen. Der Export von Segmenten in verschiedene Zielsysteme stellt besondere Anforderungen. 
 
 **Segmentexporte in Umgebungen für Verbraucher (B2C)**  
-- Segmente im Kontext von Umgebungen für individuelle Kunden bauen auf der Entität *Vereinheitlichtes Kund*innenprofil* auf. Jedes Segment, das die Anforderungen der Zielsysteme erfüllt (z.B. eine E-Mail-Adresse), kann exportiert werden.
+- Segmente im Kontext von Umgebungen für individuelle Kunden bauen auf der Entität *Vereinheitlichtes Kundenprofil* auf. Jedes Segment, das die Anforderungen der Zielsysteme erfüllt (z.B. eine E-Mail-Adresse), kann exportiert werden.
 
 **Segmentexporte in Umgebungen für Geschäftskonten (B-to-B)**  
 - Segmente im Kontext von Umgebungen für Geschäftskonten bauen auf der Entität *Konto* oder *Kontakt* auf. Um Kontensegmente unverändert zu exportieren, muss das Zielsystem reine Kontensegmente unterstützen. Dies ist der Fall für [LinkedIn](export-linkedin-ads.md) wenn Sie die Option **Unternehmen** wählen, wenn Sie den Export definieren.
@@ -81,6 +81,11 @@ Wählen Sie einen Export aus, um verfügbare Aktionen anzuzeigen.
 ## <a name="schedule-and-run-exports"></a>Planen und Ausführen von Exporten
 
 Jeder von Ihnen konfigurierte Export verfügt über einen Aktualisierungszeitplan. Während einer Aktualisierung sucht das System nach neuen oder aktualisierten Daten, die in einen Export aufgenommen werden sollen. Standardmäßig werden Exporte als Teil einer jeden [geplanten Systemaktualisierung](schedule-refresh.md) ausgeführt. Sie können den Aktualisierungszeitplan anpassen oder deaktivieren, um Exporte manuell auszuführen.
+
+> [!TIP]
+> Minimieren Sie die Verarbeitungszeit von Segmentexporten mit den folgenden Best Practices:
+> - Verteilen Sie Segmententitäten auf mehrere Exporte.
+> - Vermeiden Sie es, alle Exporte gleichzeitig zu planen. Lassen Sie 30 Minuten oder eine Stunde zwischen der geplanten Zeit jedes Exports liegen.
 
 Exportzeitpläne hängen vom Status Ihrer Umgebung ab. Wenn Aktualisierungen in Bearbeitung von [Abhängigkeiten](system.md#refresh-processes) sind, wenn ein geplanter Export gestartet werden soll, führt das System zuerst die Aktualisierungen durch und führt dann den Export aus. In der Spalte **Aktualisiert** wird angezeigt, wann ein Export letztmalig aktualisiert wurde.
 

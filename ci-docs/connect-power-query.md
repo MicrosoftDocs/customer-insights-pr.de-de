@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207044"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463264"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden mit einer Power Query-Datenquelle
 
@@ -63,7 +63,9 @@ Das Hinzufügen von Datenquellen basierend auf Power Query-Konnektoren folgt im 
 Das Laden von Daten kann einige Zeit in Anspruch nehmen. Nach einer erfolgreichen Aktualisierung können die aufgenommenen Daten von der Seite [**Entitäten**](entities.md) überprüft werden.
 
 > [!CAUTION]
-> Eine Datenquelle basierend auf Power Query erstellt einen [Dataflow in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ändern Sie nicht den Namen eines Datenflusses im Power Platform Admin Center, das in Customer Insights verwendet wird. Das Umbenennen eines Datenflusses verursacht Probleme mit den Verweisen zwischen Customer Insights Datenquelle und dem Dataverse-Datenfluss.
+>
+> - Eine Datenquelle basierend auf Power Query erstellt einen [Dataflow in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ändern Sie nicht den Namen eines Datenflusses im Power Platform Admin Center, das in Customer Insights verwendet wird. Das Umbenennen eines Datenflusses verursacht Probleme mit den Verweisen zwischen Customer Insights Datenquelle und dem Dataverse-Datenfluss.
+> - Begleitende Auswertungen für Power Query Datenquellen in Customer Insights haben die gleichen [Aktualisierungsgrenzwerte wie Dataflows in PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Wenn eine Datenaktualisierung fehlschlägt, weil sie die Auswertungsgrenze erreicht hat, empfehlen wir Ihnen, den Aktualisierungszeitplan für jeden Datenfluss anzupassen, um sicherzustellen, dass die Datenquellen nicht gleichzeitig verarbeitet werden.
 
 ### <a name="available-power-query-data-sources"></a>Verfügbare Power Query-Datenquellen
 
@@ -77,7 +79,7 @@ Das Einbinden von Daten aus lokalen Datenquellen wird auf der Grundlage von Micr
 
 Datenquellen, die nach dem Verknüpfen einer Dataverse-Umgebung mit Customer Insights erstellt wurden, verwenden standardmäßig [Power Platform-Dataflows](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dataflows unterstützen die lokale Konnektivität mithilfe des Datengateways. Sie können Datenquellen, die vor der Verknüpfung einer Dataverse-Umgebung vorhanden waren, durch [Verwenden von lokalen Datengateways](/data-integration/gateway/service-gateway-app) entfernen und neu erstellen.
 
-Datengateways einer vorhandenen Power BI- oder Power Apps-Umgebung werden sichtbar und Sie können sie in Customer Insights wiederverwenden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
+Daten-Gateways von einer bestehenden Power BI oder Power Apps Umgebung sind sichtbar und Sie können sie in Customer Insights wiederverwenden, wenn sich das Datengateway und die Customer Insights-Umgebung in derselben Azure-Region befinden. Die Seite mit den Datenquellen enthält Links zu der Microsoft Power Platform Umgebung, in der Sie lokale Datengateways anzeigen und konfigurieren können.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass Ihre Gateways auf die neueste Version aktualisiert sind. Sie können ein Update installieren und ein Gateway über eine Eingabeaufforderung, die auf der Gateway-Anzeige angezeigt wird, direkt installieren oder neu konfigurieren oder [die neueste Version herunterladen](https://powerapps.microsoft.com/downloads/). Wenn Sie nicht die neueste Gateway-Version verwenden, schlägt die Datenflussaktualisierung mit Fehlermeldungen wie **Das Schlüsselwort wird nicht unterstützt: Konfigurationseigenschaften. Parametername: Schlüsselwort** fehl.

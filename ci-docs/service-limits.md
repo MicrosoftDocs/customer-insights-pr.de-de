@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411739"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463218"
 ---
 # <a name="service-limits-in-customer-insights"></a>Service-Grenzwerte in Customer Insights
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411739"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmente, Kennzahlen und Vorhersagen | 300  | Die volle Anzahl an [Segmenten](segments.md), [Kennzahlen](measures.md) und [Vorhersagen](predictions-overview.md) zusammen darf 300 nicht überschreiten.  |
 | Beziehungen | 20 Tiefenstufen für Beziehungen in Entitätspfaden. | Beim Erstellen von [Segmenten](segments.md) oder [Kennzahlen](measures.md) mit der Builder-Schnittstelle können Entitätspfade bis zu 20 Beziehungs-Hops zwischen der Startentität und der Zielentität aufweisen.  |
+|Dateneinbindung| Begleitende Auswertungen für Power Query Datenquellen sind begrenzt. | Customer Insights hat die gleichen [Aktualisierungsgrenzwertes wie Dataflows in PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Faire Auftragsplanung
 

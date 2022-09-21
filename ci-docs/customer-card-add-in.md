@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194922"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473641"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Kundenkarten-Add-In für Dynamics 365-Apps (Vorschauversion)
 
@@ -32,10 +32,11 @@ Erhalten Sie eine 360-Grad-Sicht auf Ihre Kunden direkt in den Apps von Dynamics
 - Damit Ihre Dynamics 365-Daten den Customer Insights-Kundenprofilen zugeordnet werden können, empfehlen wir, sie [über den Konnektor Microsoft Dataverse in die Dynamics 365 App einzubinden](connect-power-query.md). Wenn Sie eine andere Methode zum Erfassen von Dynamics 365-Kontakten (oder -Konten) verwenden, müssen Sie sicherstellen, dass das Feld `contactid` (oder`accountid`) [Im Datenvereinigungsprozess als Primärschlüssel für diese Datenquelle](map-entities.md#select-primary-key-and-semantic-type-for-attributes) festgelegt ist.
 - Alle Dynamics 365 Benutzer des Kundenkarten-Add-Ins müssen [als Benutzer](permissions.md) in Customer Insights hinzugefügt werden, um die Daten zu sehen.
 - [Konfigurierte Such- und Filterfunktionen](search-filter-index.md) in Customer Insights.
-- Jedes Steuerelement des Add-Ins ist auf bestimmte Daten in Customer Insights angewiesen. Einige Daten und Steuerelemente sind nur in Umgebungen bestimmter Typen verfügbar. Die Add-In-Konfiguration informiert Sie, wenn ein Steuerelement aufgrund des ausgewählten Umgebungstyps nicht verfügbar ist. Erhalten Sie weitere Informationen zu [Umgebungen, die Fälle verwenden](work-with-business-accounts.md).
+- Einige Daten und Steuerelemente sind nur in Umgebungen bestimmter Typen verfügbar. Die Add-In-Konfiguration informiert Sie, wenn ein Steuerelement aufgrund des ausgewählten Umgebungstyps nicht verfügbar ist. Dieser Fehler wird beim Rendern im Steuerelement angezeigt. Erhalten Sie weitere Informationen zu [Umgebungen, die Fälle verwenden](work-with-business-accounts.md).
+- Jedes Steuerelement des Add-Ins ist auf bestimmte Daten in Customer Insights angewiesen.
   - **Measure-Steuerelement** erfordert [konfigurierte Kundenattribute Measures](measures.md).
   - **Intelligenzsteuerung** erfordert Daten, die mit [Vorhersagen oder kundenspezifischen Modellen](predictions-overview.md) generiert wurden.
-  - **Kundendetail-Steuerelement** zeigt alle Felder aus dem Profil sind im vereinheitlichtes Kund*innenprofil verfügbar.
+  - **Kundendetail-Steuerelement** zeigt alle Felder aus dem Profil sind im vereinheitlichten Kundenprofil verfügbar.
   - **Anreicherungs-Steuerelement** erfordert aktive [Anreicherungen](enrichment-hub.md) auf Kundenprofile angewendet. Das Karten-Add-In unterstützt die folgenden Anreicherungen: Von Microsoft bereitgestellte [Marken](enrichment-microsoft.md), [Interessen](enrichment-microsoft.md) und [Office-Bindungsdaten](enrichment-office.md).
   - **Kontakt-Steuerelement** erfordert einen semantischen Entität des Typs Kontakte.
   - **Zeitskala-Steuerelement** erfordert [Konfigurierte Aktivitäten](activities.md).
