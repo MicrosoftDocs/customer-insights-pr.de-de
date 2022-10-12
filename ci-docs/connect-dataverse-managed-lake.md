@@ -1,7 +1,7 @@
 ---
 title: Verbindung zu Daten in einem Microsoft Dataverse verwalteten Data Lake
 description: Importieren Sie Daten aus einem verwalteten Microsoft Dataverse-Data Lake.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206952"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609794"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Verbindung zu Daten in einem Microsoft Dataverse verwalteten Data Lake
 
@@ -70,5 +70,93 @@ Um eine Verbindung zu einem anderen Dataverse Data Lake herzustellen, [erstelle 
 1. Klicken Sie auf **Speichern**, um Ihre Änderungen zu übernehmen und zur Seite **Datenquellen** zurückzukehren.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Häufige Gründe für Erfassungsfehler oder beschädigte Daten
+
+Die folgenden Prüfungen werden für die erfassten Daten ausgeführt, um beschädigte Datensätze zu erkennen:
+
+- Der Wert eines Felds stimmt nicht mit dem Datentyp seiner Spalte überein.
+- Felder enthalten Zeichen, die dazu führen, dass die Spalten nicht dem erwarteten Schema entsprechen. Beispiel: falsch formatierte Anführungszeichen, nicht in Escape-Zeichen gesetzte Anführungszeichen oder Zeilenumbruchzeichen.
+- Wenn datetime/date/datetimeoffset-Spalten vorhanden sind, muss deren Format im Modell angegeben werden, wenn es nicht dem Standard-ISO-Format entspricht.
+
+### <a name="schema-or-data-type-mismatch"></a>Schema- oder Datentypkonflikt
+
+Wenn die Daten nicht dem Schema entsprechen, werden die Datensätze als beschädigt eingestuft. Korrigieren Sie entweder die Quelldaten oder das Schema und erfassen Sie die Daten erneut.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>DateTime-Felder im falschen Format
+
+Die DateTime-Felder in der Entität sind nicht im ISO- oder im en-US-Format. Das standardmäßige DateTime-Format in Customer Insights ist das en-US-Format. Alle DateTime-Felder in einer Entität sollten dasselbe Format haben. Customer Insights unterstützt andere Formate, sofern Anmerkungen oder Merkmale auf Quell- oder Entitätsebene in der model- oder manifest.json-Datei vorgenommen werden. Zum Beispiel:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  In einer manifest.json-Datei kann das DateTime-Format auf Entitätsebene oder auf Attributebene angegeben werden. Verwenden Sie auf der Entitätsebene „exhibitsTraits“ in der Entität in der *.manifest.cdm.json, um das DateTime-Format zu definieren. Verwenden Sie auf Attributebene „appliedTraits“ im Attribut in der Datei entityname.cdm.json.
+
+**Manifest.json auf Entitätsebene**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json auf Attributebene**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

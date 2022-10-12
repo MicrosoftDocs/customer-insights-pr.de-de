@@ -1,7 +1,7 @@
 ---
 title: Mit einer Power Query-Datenquelle verbinden (enthält Video)
 description: Daten über einen Power Query-Konnektor erfassen (enthält Video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463264"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609889"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden mit einer Power Query-Datenquelle
 
@@ -43,16 +43,17 @@ Das Hinzufügen von Datenquellen basierend auf Power Query-Konnektoren folgt im 
 
 1. Wählen Sie **Daten transformieren** aus.
 
-1. Im Dialogfeld **Power Query – Abfragen bearbeiten** können Sie die Daten überprüfen und verfeinern. Die Entitäten, die die in Ihrer ausgewählten Datenquelle identifizierten Systeme aufweisen, erscheinen im linken Fensterbereich.
+1. Überprüfen und verfeinern Sie Ihre Daten auf der Seite **Power Query – Abfragen bearbeiten**. Die Entitäten, die die in Ihrer ausgewählten Datenquelle identifizierten Systeme aufweisen, erscheinen im linken Fensterbereich.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialogfeld „Abfragen bearbeiten“":::
 
-1. Sie können Ihre Daten auch transformieren. Wählen Sie eine Entität zum Bearbeiten oder Transformieren aus. Verwenden Sie die Optionen im Power Query-Fenster zum Anwenden von Transformationen. Jede Transformation ist unter **Angewandte Schritte** aufgeführt. Power Query bietet zahlreiche [vorgefertigte Transformationsoptionen](/power-query/power-query-what-is-power-query#transformations).
+1. Transformieren Sie Ihre Daten. Wählen Sie eine Entität zum Bearbeiten oder Transformieren aus. Verwenden Sie die Optionen im Power Query-Fenster zum Anwenden von Transformationen. Jede Transformation ist unter **Angewandte Schritte** aufgeführt. Power Query bietet zahlreiche [vorgefertigte Transformationsoptionen](/power-query/power-query-what-is-power-query#transformations).
 
-   Wir empfehlen die Verwendung der folgenden Transformationen:
-
-   - Wenn Sie Daten aus einer CSV-Datei erfassen, enthält die erste Zeile häufig Überschriften. Gehen Sie zu **Transformieren** und wählen Sie **Erste Zeile als Kopfzeilen verwnden**.
-   - Stellen Sie sicher, dass der Datentyp richtig eingestellt ist. Wählen Sie beispielsweise für Datumsfelder einen Datumstyp aus.
+   > [!IMPORTANT]
+   > Wir empfehlen die Verwendung der folgenden Transformationen:
+   >
+   > - Wenn Sie Daten aus einer CSV-Datei erfassen, enthält die erste Zeile häufig Überschriften. Gehen Sie zu **Transformieren** und wählen Sie **Erste Zeile als Kopfzeilen verwnden**.
+   > - Stellen Sie sicher, dass der Datentyp richtig eingestellt ist und ihren Daten entspricht. Wählen Sie beispielsweise für Datumsfelder einen Datumstyp aus.
 
 1. Um weitere Entitäten zu Ihrer Datenquelle im Dialog **Abfragen bearbeiten** hinzuzufügen, gehen Sie zur **Startseite** und wählen Sie **Daten abrufen**. Wiederholen Sie die Schritte 5-10, bis Sie alle Entitäten für dieses Datenquelle hinzugefügt haben. Wenn Sie eine Datenbank haben, die mehrere Datensätze enthält, ist jeder Datensatz eine eigene Entität.
 
@@ -102,5 +103,51 @@ Daten-Gateways von einer bestehenden Power BI oder Power Apps Umgebung sind sich
 1. Klicken Sie auf **Speichern**, um Ihre Änderungen zu übernehmen und zur Seite **Datenquellen** zurückzukehren.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Häufige Gründe für Erfassungsfehler oder beschädigte Daten
+
+### <a name="data-type-does-not-match-data"></a>Datentyp stimmt nicht mit Daten überein
+
+Der häufigste Datentypkonflikt tritt auf, wenn ein Datumsfeld nicht auf das richtige Datumsformat eingestellt ist.
+
+Die Daten können an der Quelle repariert und erneut erfasst werden. Oder reparieren Sie die Transformation in Customer Insights. Reparieren Sie die Transformation wie folgt:
+
+1. Wechseln Sie zu **Daten** > **Datenquellen**.
+
+1. Wählen Sie neben der Datenquelle mit dem beschädigten Daten **Bearbeiten** aus.
+
+1. Wählen Sie **Weiter** aus.
+
+1. Wählen Sie jede der Abfragen aus und suchen Sie nach Transformationen, die in „Angewandte Schritte“ angewendet wurden und falsch sind, oder nach Datumsspalten, die nicht mit einem Datumsformat transformiert wurden.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query – Bearbeiten zeigt falsches Datumsformat":::
+
+1. Ändern Sie den Datentyp so, dass er den korrekten Daten entspricht.
+
+1. Wählen Sie **Save** (Speichern). Die Datenquelle wurde aktualisiert.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Problembehandlung Aktualisierungsprobleme PPDF Power Query-basierte Datenquelle
+
+Wenn die Daten veraltet sind oder Sie nach einer Datenquelleaktualisierung eine Fehlermeldung erhalten, führen Sie die folgenden Schritte aus:
+
+1. Navigieren zu [Power Platform](https://make.powerapps.com).
+
+1. Wählen Sie die **Umgebung** für Ihre Customer Insights-Instanz.
+
+1. Gehen Sie zu **Dataflows**.
+
+1. Wählen Sie für den Dataflow, welcher der Datenquelle in Customer Insights entspricht, die vertikalen Auslassungspunkte (&vellip;) und dann **Aktualisierungsverlauf anzeigen**.
+
+1. Wenn der **Status** des Dataflows auf **Erfolg** steht, hat sich eventuell der Besitz an der Power Query-basierten Datenquelle geändert:
+
+   1. Überprüfen Sie den Aktualisierungszeitplan aus dem Aktualisierungsverlauf.
+   1. Legen Sie den Zeitplan des neuen Besitzers fest und speichern Sie die Einstellungen.
+
+1. Wenn der **Status** des Dataflows auf **Fehlgeschlagen** steht:
+
+   1. Laden Sie die Aktualisierungsverlaufsdatei herunter.
+   1. Gehen Sie die heruntergeladene Datei nach dem Grund für den Fehler durch.
+   1. Wenn der Fehler nicht behoben werden kann, wählen Sie **?** aus, um ein Supportticket zu öffnen. Fügen Sie die heruntergeladene Aktualisierungsverlaufsdatei.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

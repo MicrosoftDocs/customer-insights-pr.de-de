@@ -1,23 +1,23 @@
 ---
 title: Erstellen von Segmenten auf Basis von Vorhersagenmodellen
 description: Erstellen Sie Segmente basierend auf der Ausgabeentität eines Vorhersage-Modells.
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081052"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610419"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Erstellen Sie ein Segment basierend auf einem Vorhersage-Modell (Vorschauversion)
 
-Die Ergebnisse von Vorhersagen gelten manchmal nur für eine Teilmenge Ihrer Kunden. Erhöhen Sie die Personalisierung von Empfehlungen, indem Sie Segmente aus Ergebnissen von Vorhersage-Modellen erstellen. Beispielsweise möchten Sie Kunden, die eine bestimmte Art von Service bevorzugen, möglicherweise spezifische Empfehlungen geben. 
+Die Ergebnisse von Vorhersagen gelten manchmal nur für eine Teilmenge Ihrer Kunden. Erhöhen Sie die Personalisierung von Empfehlungen, indem Sie Segmente aus Ergebnissen von Vorhersage-Modellen erstellen. Beispielsweise möchten Sie Kunden, die eine bestimmte Art von Service bevorzugen, möglicherweise spezifische Empfehlungen geben.
 
 ## <a name="prerequisites"></a>Anforderungen
 
@@ -34,10 +34,15 @@ Die Ergebnisse von Vorhersagen gelten manchmal nur für eine Teilmenge Ihrer Kun
 
 1. Gehen Sie zu **Intelligenz** > **Vorhersagen** und wählen Sie die Registerkarte **Meine Vorhersagen**.
 
-1. Wählen Sie die vertikalen Ellipsen neben dem Modell aus, das Sie überprüfen möchten, und wählen Sie **Ansicht** aus.
+1. Wählen Sie das Modell aus, das Sie bewerten möchten, und wählen Sie **Anzeigen** aus.
 
 1. Wählen Sie auf der Ergebnisseite **Segment erstellen** aus. Weitere Informationen zur Ergebnisseite finden Sie im Artikel zum Modell.
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="Screenshot der Vorhersage-Ergebnisseite mit Hervorhebung der Aktion „Segment erstellen“.":::
 
-1. Erstellen Sie ein neues Segment basierend auf der Ausgabeentität des gewählten Modells. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
+1. Erstellen Sie ein neues Segment mithilfe der Attribute aus der Ausgabeentität des gewählten Modells. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Segmenten](segments.md).
+
+> [!TIP]
+> Sie können auch ein Segment für ein Vorhersagemodell aus der Seite **Segmente** erstellen, indem Sie **Neu** und dann **Erstellen aus** > **Intelligenz** auswählen. Weitere Informationen finden Sie unter [Ein neues Segment mit Schnellsegmenten erstellen](segment-quick.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Verwenden Sie auf Azure Machine Learning basierende Modelle
 description: Verwenden Sie auf Azure Machine Learning basierende Modelle in Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081021"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609824"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Verwenden Sie auf Azure Machine Learning basierende Modelle
 
@@ -35,7 +35,7 @@ Die vereinheitlichten Daten in Dynamics 365 Customer Insights sind eine Quelle f
 ## <a name="work-with-azure-machine-learning-designer"></a>Arbeiten Sie mit dem Azure Machine Learning Designer
 
 Der Azure Machine Learning-Designer stellt eine visuelle Canvas bereit, in die Sie Datasets und Module ziehen und ablegen können. Eine mit dem Designer erstellte Batch-Pipeline kann in Customer Insights integriert werden, wenn sie entsprechend konfiguriert ist. 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Arbeiten mit dem Azure Machine Learning SDK
 
 Datenwissenschaftler und KI-Entwickler verwenden das [Azure Machine Learning SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py), um Machine Learning Workflows zu erstellen. Zurzeit können Modelle, die mit dem SDK trainiert wurden, nicht direkt in Customer Insights integriert werden. Für die Integration mit Customer Insights ist eine Batch-Inferenz-Pipeline erforderlich, die dieses Modell verwertet.
@@ -44,17 +44,16 @@ Datenwissenschaftler und KI-Entwickler verwenden das [Azure Machine Learning SDK
 
 ### <a name="dataset-configuration"></a>Dataset-Konfiguration
 
-Sie müssen Datasets erstellen, um Entitätsdaten aus Customer Insights für Ihre Batch-Inferenz-Pipeline zu verwenden. Diese Datasets müssen im Arbeitsbereich registriert werden. Zurzeit werden nur [tabellarische Datasets](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) im .csv-Format unterstützt. Die Datasets, die den Daten der Entitäten entsprechen, müssen als Pipeline-Parameter parametrisiert werden.
-   
-* Dataset-Parameter im Designer
-   
-     Öffnen Sie im Designer **Spalten in Dataset auswählen** und wählen Sie **Als Pipeline-Parameter festlegen**, wo Sie einen Namen für den Parameter angeben.
+Erstellen Sie Datasets, um Entitätsdaten aus Customer Insights für Ihre Batch-Inferenz-Pipeline zu verwenden. Registrieren Sie diese Datasets im Arbeitsbereich. Zurzeit werden nur [tabellarische Datasets](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) im .csv-Format unterstützt. Parameterisieren Sie die Datasets, die den Daten der Entitäten entsprechen als Pipeline-Parameter.
 
-     > [!div class="mx-imgBorder"]
-     > ![Dataset-Parametrisierung im Designer.](media/intelligence-designer-dataset-parameters.png "Dataset-Parametrisierung im Designer")
-   
-* Dataset-Parameter im SDK (Python)
-   
+- Dataset-Parameter im Designer
+
+  Öffnen Sie im Designer **Spalten in Dataset auswählen** und wählen Sie **Als Pipeline-Parameter festlegen**, wo Sie einen Namen für den Parameter angeben.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Dataset-Parametrisierung im Designer.":::
+
+- Dataset-Parameter im SDK (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Sie müssen Datasets erstellen, um Entitätsdaten aus Customer Insights für Ihr
 
 ### <a name="batch-inference-pipeline"></a>Batch-Inferenz-Pipeline
   
-* Im Designer kann eine Trainings-Pipeline verwendet werden, um eine Inferenz-Pipeline zu erstellen oder zu aktualisieren. Zurzeit werden nur Batch-Inferenz-Pipelines unterstützt.
+- Verwenden Sie im Designer eine Trainings-Pipeline, um eine Inferenz-Pipeline zu erstellen oder zu aktualisieren. Zurzeit werden nur Batch-Inferenz-Pipelines unterstützt.
 
-* Mit dem SDK können Sie die Pipeline an einen Endpunkt veröffentlichen. Derzeit integriert sich Customer Insights mit der Standard-Pipeline in einem Batch-Pipeline-Endpunkt im Arbeitsbereich für maschinelles Lernen.
-   
+- Veröffentlichen Sie mit dem SDK die Pipeline an einen Endpunkt. Derzeit integriert sich Customer Insights mit der Standard-Pipeline in einem Batch-Pipeline-Endpunkt im Arbeitsbereich für maschinelles Lernen.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Sie müssen Datasets erstellen, um Entitätsdaten aus Customer Insights für Ihr
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Pipeline-Daten in Customer Insights importieren
 
-* Der Designer bietet das Modul [Daten exportieren](/azure/machine-learning/algorithm-module-reference/export-data), mit dem die Ausgabe einer Pipeline in den Azure-Speicher exportiert werden kann. Derzeit muss das Modul den Datenspeichertyp **Azure Blob Storage** verwenden und den **Datastore** und den relativen **Pfad** parametrisieren. Customer Insights überschreibt diese beiden Parameter während der Pipeline-Ausführung mit einem Datenspeicher und Pfad, auf den das Produkt Zugriff hat.
-   > [!div class="mx-imgBorder"]
-   > ![Datenmodul-Konfiguration exportieren.](media/intelligence-designer-importdata.png "Daten exportieren Modul-Konfiguration")
-   
-* Wenn Sie die Inferenzausgabe mit Code schreiben, können Sie die Ausgabe in den Pfad innerhalb eines *registrierten Datenspeichers* im Arbeitsbereich hochladen. Wenn der Pfad und der Datenspeicher in der Pipeline parametrisiert sind, kann Customer Insights die Inferenzausgabe lesen und importieren. Derzeit wird eine einfache tabellarische Ausgabe im csv-Format unterstützt. Der Pfad muss das Verzeichnis und den Dateinamen enthalten.
+- Der Designer bietet das Modul [Daten exportieren](/azure/machine-learning/algorithm-module-reference/export-data), mit dem die Ausgabe einer Pipeline in den Azure-Speicher exportiert werden kann. Derzeit muss das Modul den Datenspeichertyp **Azure Blob Storage** verwenden und den **Datastore** und den relativen **Pfad** parametrisieren. Customer Insights überschreibt diese beiden Parameter während der Pipeline-Ausführung mit einem Datenspeicher und Pfad, auf den das Produkt Zugriff hat.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Datenmodul-Konfiguration exportieren.":::
+
+- Wenn Sie die Inferenzausgabe mit Code schreiben, laden Sie die Ausgabe in den Pfad innerhalb eines *registrierten Datenspeichers* im Arbeitsbereich hoch. Wenn der Pfad und der Datenspeicher in der Pipeline parametrisiert sind, kann Customer Insights die Inferenzausgabe lesen und importieren. Derzeit wird eine einfache tabellarische Ausgabe im csv-Format unterstützt. Der Pfad muss das Verzeichnis und den Dateinamen enthalten.
 
    ```python
    # In Pipeline setup script

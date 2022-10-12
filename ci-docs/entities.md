@@ -1,7 +1,7 @@
 ---
 title: Entitäten in Customer Insights
 description: Zeigen Sie Daten auf der Seite Entitäten an.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183552"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610097"
 ---
 # <a name="entities-in-customer-insights"></a>Entitäten in Customer Insights
 
@@ -61,27 +61,5 @@ Gehe zu **Daten** > **Entitäten**, um eine Liste der Entitäten anzuzeigen. Die
   - **Erstellt**: Datum und Uhrzeit der Entitätserstellung.
   - **Bearbeitet von**: Name der Person, die die Entität geändert hat.
   - **Bearbeitet**: Datum und Uhrzeit der Entitätänderung.
-
-## <a name="entity-specific-information"></a>Entitätsspezifische Informationen
-
-Der folgende Abschnitt enthält Informationen zu einigen vom System erstellten Entitäten.
-
-### <a name="corrupted-data-sources"></a>Beschädigte Datenquellen
-
-Felder aus einer erfassten Datenquelle können beschädigte Daten enthalten. Datensätze mit beschädigten Feldern werden in vom System erstellten Entitäten verfügbar gemacht. Wenn Sie über beschädigte Datensätze Bescheid wissen, können Sie erkennen, welche Daten auf dem Quellsystem überprüft und aktualisiert werden müssen. Nach der nächsten Aktualisierung des Datenquelle werden die korrigierten Datensätze in Customer Insights aufgenommen und an Downstream-Prozesse weitergegeben. 
-
-Beispielsweise hat eine Spalte „Geburtstag“ den Datentyp „Datum“. Der Geburtstag eines Kundendatensatzes ist als „01.01.19777“ eingetragen. Das System kennzeichnet diesen Datensatz als beschädigt. Jemand kann jetzt den Geburtstag im Quellsystem auf „1977“ ändern. Nach einer automatisierten Aktualisierung der Datenquellen hat das Feld jetzt ein gültiges Format und der Datensatz wird aus der beschädigten Entität entfernt.
-
-Gehen Sie zu **Daten** > **Entitäten** und suchen Sie nach den korrumpierten Entitäten im Abschnitt **System**. Benennungsschema beschädigter Entitäten: „DataSourceName_EntityName_corrupt“. Wählen Sie eine beschädigte Entität aus, um alle beschädigten Felder und den Grund auf individueller Datensatzebene zu identifizieren.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Beschädigungsgrund.":::
-
-Customer Insights verarbeitet beschädigte Datensätze weiterhin. Sie können jedoch Probleme beim Arbeiten mit den vereinheitlichten Daten verursachen.
-
-Die folgenden Prüfungen werden für die erfassten Daten ausgeführt, um beschädigte Datensätze zu erkennen:
-
-- Der Wert eines Felds stimmt nicht mit dem Datentyp seiner Spalte überein.
-- Felder enthalten Zeichen, die dazu führen, dass die Spalten nicht dem erwarteten Schema entsprechen. Beispiel: falsch formatierte Anführungszeichen, nicht in Escape-Zeichen gesetzte Anführungszeichen oder Zeilenumbruchzeichen.
-- Wenn datetime/date/datetimeoffset-Spalten vorhanden sind, muss deren Format im Modell angegeben werden, wenn es nicht dem Standard-ISO-Format entspricht.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Übersicht über Datenquellen
 description: Erfahren Sie, wie Sie Daten aus verschiedenen Quellen importieren oder aufnehmen.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245648"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610051"
 ---
 # <a name="data-sources-overview"></a>Übersicht über Datenquellen
 
@@ -65,7 +65,9 @@ Wählen Sie die Datenquellen aus, um verfügbare Aktionen anzuzeigen.
 
 ## <a name="refresh-data-sources"></a>Datenquellen aktualisieren
 
-Datenquellen können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. [Lokale Datenquellen](connect-power-query.md#add-data-from-on-premises-data-sources) Aktualisierung nach ihren eigenen Zeitplänen, die während der Datenaufnahme eingerichtet werden. Für angehängte Datenquellen verbraucht die Datenaufnahme die neuesten Daten, die von diesem Datenquelle verfügbar sind.
+Datenquellen können nach einem automatischen Zeitplan oder manuell bei Bedarf aufgefrischt werden. [Lokale Datenquellen](connect-power-query.md#add-data-from-on-premises-data-sources) Aktualisierung nach ihren eigenen Zeitplänen, die während der Datenaufnahme eingerichtet werden. Tipps zur Fehlerbehebung finden Sie unter [Problembehandlung Aktualisierungsprobleme PPDF Power Query-basierte Datenquelle](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Für angehängte Datenquellen verbraucht die Datenaufnahme die neuesten Daten, die von diesem Datenquelle verfügbar sind.
 
 Gehen Sie zu **Administrator** > **System** > [**Zeitplan**](schedule-refresh.md), um vom System geplante Aktualisierungen Ihrer aufgenommenen Datenquellen zu konfigurieren.
 
@@ -76,5 +78,37 @@ Aktualisieren einer Datenquelle bei Bedarf:
 1. Wählen Sie die Datenquelle aus, die Sie aktualisieren möchten, und wählen Sie sie aus **Aktualisierung**. Die Datenquelle wird jetzt für eine manuelle Aktualisierung ausgelöst. Durch das Aktualisieren eines Datenquelle werden sowohl das Entitätsschema als auch die Daten für alle im Datenquelle angegebenen Entitäten aktualisiert.
 
 1. Wählen Sie den Status aus, um den Bereich **Fortschrittsdetails** zu öffnen und den Fortschritt des Prozesses anzuzeigen. Um den Auftrag abzubrechen, wählen Sie **Auftrag abbrechen** am unteren Rand des Bereichs.
+
+## <a name="corrupt-data-sources"></a>Beschädigte Datenquellen
+
+Die erfassten Daten können beschädigte Datensätze aufweisen, die dazu führen können, dass nach dem Datenerfassungsprozess Fehler oder Warnungen angezeigt werden.
+
+> [!NOTE]
+> Wenn nach der Datenerfassung Fehler auftreten, wird die nachfolgende Verarbeitung (z. B. Vereinheitlichung oder Aktivitätserstellung), die diese Datenquelle nutzt, übersprungen. Wenn nach der Erfassung Warnungen auftreten, wird die nachfolgende Verarbeitung fortgesetzt, aber einige der Datensätze sind möglicherweise nicht enthalten.
+
+Diese Fehler werden in den Aufgabendetails angezeigt.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Aufgabendetail mit Fehler wegen beschädigten Daten.":::
+
+Beschädigte Datensätze werden in vom System erstellten Entitäten angezeigt.
+
+### <a name="fix-corrupt-data"></a>Beschädigte Daten reparieren
+
+1. Um die beschädigten Daten zu erstellen, gehen Sie zu **Daten** > **Entitäten** und suchen Sie nach den beschädigten Entitäten im Abschnitt **System**. Das Benennungsschema beschädigter Entitäten: „DataSourceName_EntityName_corrupt“.
+
+1. Wählen Sie eine beschädigte Entität und dann die Registerkarte **Daten** aus.
+
+1. Identifizieren Sie die beschädigten Felder in einem Datensatz und den Grund.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Beschädigungsgrund." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Daten** > **Entitäten** zeigen nur einen Teil der beschädigten Datensätze. Um alle beschädigten Datensätze anzuzeigen, exportieren Sie die Dateien in einen Container im Speicherkonto mithilfe des [Exportprozesses von Customer Insights](export-destinations.md). Wenn Sie Ihr eigenes Speicherkonto verwendet haben, können Sie sich auch den Ordner „Customer Insights“ in Ihrem Speicherkonto ansehen.
+
+1. Reparieren Sie die beschädigten Daten. Bei Datenquellen in Azure Data Lake [reparieren Sie die Daten im Data Lake Storage oder aktualisieren Sie die Datentypen in der Datei „manifest/model.json“](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Bei Power Query Datenquellen korrigieren Sie die Daten in der Quelldatei und [korrigieren Sie den Datentyp im Transformationsschritt](connect-power-query.md#data-type-does-not-match-data) auf der Seite **Power Query – Abfragen bearbeiten**.
+
+Nach der nächsten Aktualisierung des Datenquelle werden die korrigierten Datensätze in Customer Insights aufgenommen und an Downstream-Prozesse weitergegeben.
+
+Beispielsweise hat eine Spalte „Geburtstag“ den Datentyp „Datum“. Der Geburtstag eines Kundendatensatzes ist als „01.01.19777“ eingetragen. Das System kennzeichnet diesen Datensatz als beschädigt. Ändern Sie den Geburtstag im Quellsystem auf „1977“. Nach einer automatisierten Aktualisierung der Datenquellen hat das Feld jetzt ein gültiges Format und der Datensatz wird aus der beschädigten Entität entfernt.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

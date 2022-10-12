@@ -1,156 +1,141 @@
 ---
 title: Abonnementabwanderung vorhersagen (enthält Video)
 description: Sagen Sie voraus, ob für einen Kunden das Risiko besteht, dass er die Abonnementprodukte oder -dienste Ihres Unternehmens nicht mehr nutzt.
-ms.date: 08/19/2020
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7464707864c418bfcc625ddfd245622131434b33
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9171048"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610235"
 ---
-# <a name="subscription-churn-prediction"></a>Vorhersage von Abonnementabwanderung
+# <a name="predict-subscription-churn"></a>Abonnementabwanderung vorhersagen
 
-Die Vorhersage der Abwanderung von Abonnenten hilft bei der Vorhersage, ob ein Kunde möglicherweise die Abonnementprodukte oder -dienste Ihres Unternehmens nicht mehr nutzt. Sie können auf der Seite **Intelligenz** > **Vorhersagen** neue Abonnement-Wechselprognosen erstellen. Wählen Sie **Meine Vorhersagen**, um andere Vorhersagen anzuzeigen, die Sie erstellt haben.
+Sagen Sie voraus, ob für einen Kunden das Risiko besteht, dass er die Abonnementprodukte oder -dienste Ihres Unternehmens nicht mehr nutzt. Abonnementdaten enthalten aktive und inaktive Abonnements für jeden Kunden, sodass pro Kunden-ID mehrere Einträge vorhanden sind.
+
+Sie benötigen Geschäftswissen, um zu verstehen, was Abwanderung für Ihr Unternehmen bedeutet. Wir unterstützen zeitbasierte Abwanderungsbedingungen, d. h. ein Kunde gilt eine gewisse Zeit nach Ablauf seines Abonnements als abgewandert.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
-> Versuchen Sie die Anleitung für eine Abo-Abwanderungsvorhersage mit Beispieldaten: [Beispielanleitung für die Vorhersage der Abonnement-Abwanderung](sample-guide-predict-subscription-churn.md).
+> Probieren Sie die Vorhersage der Abonnementabwanderung mit Beispieldaten aus: [Beispielanleitung für die Vorhersage der Abonnementabwanderung](sample-guide-predict-subscription-churn.md).
 
 ## <a name="prerequisites"></a>Anforderungen
 
 - Mindestens [Beteiligungsberechtigungen](permissions.md).
-- Geschäftswissen, um zu verstehen, was Abwanderung für Ihr Unternehmen bedeutet. Wir unterstützen zeitbasierte Abwanderungsdefinitionen, d. h. ein Kunde gilt eine Zeit lang nach Ablauf seines Abonnements als abgewandert.
-- Daten über Ihre Abonnements und deren Geschichte:
-    - Abonnementkennungen zur Unterscheidung der Abonnements.
-    - Kundenidentifikatoren zur Zuordnung von Abonnements zu Ihren Kunden.
-    - Abonnement-Ereignisdaten, die Anfangs- und Enddaten sowie die Daten definieren, an denen die Abonnement-Ereignisse aufgetreten sind.
-    - Abonnementinformationen, um festzulegen, ob es sich um ein wiederkehrendes Abonnement handelt und wie oft es sich erneuert.
-    - Das semantische Datenschema für Abonnements erfordert die folgenden Informationen:
-        - **Abonnement-ID:** Eine eindeutige Kennung eines Abonnements.
-        - **Abonnement-Enddatum:** Das Datum, an dem das Abonnement für den Kunden abläuft.
-        - **Abonnement-Startdatum:** Das Datum, an dem das Abonnement für den Kunden beginnt.
-        - **Transaktionsdatum:** Das Datum, an dem eine Abonnementänderung stattgefunden hat. Zum Beispiel ein Kunde, der ein Abonnement kauft oder kündigt.
-        - **Ist es ein wiederkehrendes Abonnement:** Ein boolesches Wahr/Falsch-Feld, das festlegt, ob das Abonnement ohne Eingreifen des Kunden mit derselben Abonnement-ID erneuert wird.
-        - **Häufigkeit der Serie (in Monaten):** Bei wiederkehrenden Abonnements ist dies der Zeitraum, für den das Abonnement erneuert wird. Sie wird in Monaten angegeben. Zum Beispiel hat ein Jahresabonnement, das sich für einen Kunden jedes Jahr automatisch um ein weiteres Jahr verlängert, den Wert 12.
-        - (Optional) **Abonnementbetrag:** Der Währungsbetrag, den ein Kunde für die Abonnementverlängerung bezahlt. Sie kann helfen, Muster für verschiedene Abonnementstufen zu erkennen.
-- Daten über Kundenaktivitäten:
-    - Aktivitätskennungen zur Unterscheidung von Aktivitäten desselben Typs.
-    - Kundenidentifikatoren zur Zuordnung von Aktivitäten zu Ihren Kunden.
-    - Aktivitätsinformationen, die den Namen und das Datum der Aktivität enthalten.
-    - Das semantische Datenschema für Kundenaktivitäten umfasst
-        - **Primärschlüssel:** Ein eindeutiger Identifikator für eine Aktivität. Zum Beispiel ein Website-Besuch oder ein Datensatz, der zeigt, dass der Kunde eine TV-Show-Episode angesehen hat.
-        - **Zeitstempel:** Das Datum und die Uhrzeit des durch den Primärschlüssel identifizierten Ereignisses.
-        - **Ereignis:** Der Name des Ereignisses, das Sie verwenden möchten. Beispielsweise könnte ein Feld mit dem Namen "UserAction" in einem Streaming-Video-Dienst den Wert "Viewed" haben.
-        - **Details:** Detaillierte Informationen über das Ereignis. Beispielsweise könnte ein Feld namens "ShowTitle" in einem Streaming-Video-Dienst den Wert eines Videos haben, das ein Kunde angesehen hat.
-- Vorgeschlagene Datencharakteristik:
-    - Ausreichende historische Daten: Abonnementdaten für mindestens das Doppelte des ausgewählten Zeitfensters. Vorzugsweise zwei bis drei Jahre Abonnementdaten.
-    - Abonnementstatus: Die Daten enthalten aktive und inaktive Abonnements für jeden Kunden, sodass pro Kunden-ID mehrere Einträge vorhanden sind.
-    - Anzahl der Kunden: Mindestens 10 Kundenprofilen, vorzugsweise mehr als 1.000 eindeutigen Kunden. Das Modell schlägt mit weniger als 10 Kunden und unzureichenden historischen Daten fehl.
-    - Vollständigkeit der Daten: Weniger als 20 % der fehlenden Werte im Datenfeld der angegebenen Entität.
-   
-   > [!NOTE]
-   > Sie benötigen mindestens zwei Aktivitätsdatensätze für 50 % der Kunden, für die Sie die Abwanderung berechnen möchten.
+- Mindestens 10 Kundenprofile, vorzugsweise mehr als 1.000 eindeutigen Kunden.
+- Kundenbezeichner, ein eindeutiger Bezeichner zur Zuordnung von Abonnements zu Ihren Kunden.
+- Abonnementdaten für mindestens das Doppelte des ausgewählten Zeitfensters. Vorzugsweise zwei bis drei Jahre Abonnementdaten. Der Abonnementverlauf muss Folgendes enthalten:
+  - **Abonnement-ID:** Eindeutiger Bezeichner eines Abonnements.
+  - **Abonnement-Enddatum:** Datum, an dem das Abonnement für den Kunden abläuft.
+  - **Abonnement-Startdatum:** Datum, an dem das Abonnement für den Kunden beginnt.
+  - **Transaktionsdatum:** Datum, an dem eine Abonnementänderung stattgefunden hat. Zum Beispiel ein Kunde, der ein Abonnement kauft oder kündigt.
+  - **Ist es ein wiederkehrendes Abonnement:** Boolesches Wahr-/Falsch-Feld, das festlegt, ob das Abonnement ohne Eingreifen des Kunden mit derselben Abonnement-ID erneuert wird.
+  - **Häufigkeit der Serie (in Monaten):** Bei wiederkehrenden Abonnements ist dies der Monat, in dem das Abonnement erneuert wird. Zum Beispiel hat ein Jahresabonnement, das sich für einen Kunden jedes Jahr automatisch um ein weiteres Jahr verlängert, den Wert 12.
+  - **Abonnementbetrag:** Währungsbetrag, den ein Kunde für die Abonnementverlängerung bezahlt. Sie kann helfen, Muster für verschiedene Abonnementstufen zu erkennen.
+- Mindestens zwei Aktivitätsdatensätze für 50 % der Kunden, für die Sie die Abwanderung berechnen möchten. Kundenaktivitäten müssen Folgendes miteinbeziehen:
+  - **Primärschlüssel:** Eindeutiger Bezeichner für eine Aktivität. Zum Beispiel ein Website-Besuch oder ein Datensatz, der zeigt, dass der Kunde eine TV-Show-Episode angesehen hat.
+  - **Zeitstempel:** Datum und die Uhrzeit des Ereignisses, identifiziert durch den Primärschlüssel.
+  - **Ereignis:** Name des Ereignisses, das Sie verwenden möchten. Beispielsweise könnte ein Feld mit dem Namen "UserAction" in einem Streaming-Video-Dienst den Wert "Viewed" haben.
+  - **Details:** Detaillierte Informationen über das Ereignis. Beispielsweise könnte ein Feld namens "ShowTitle" in einem Streaming-Video-Dienst den Wert eines Videos haben, das ein Kunde angesehen hat.
+- Weniger als 20 % der fehlenden Werte im Datenfeld der angegebenen Entität.
 
 ## <a name="create-a-subscription-churn-prediction"></a>Erstellen Sie eine Vorhersage zur Abonnementabwanderung.
 
+Wählen Sie **Entwurf speichern** aus, um die Vorhersage als Entwurf zu speichern. Die Entwurfsvorhersage wird in der Registerkarte **Meine Vorhersagen** angezeigt.
+
 1. Gehen Sie zu **Intelligenz** > **Vorhersagen**.
-1. Wählen Sie die Kachel **Modell für Abonnementabwanderung** und **Dieses Modell verwenden**.
-   > [!div class="mx-imgBorder"]
-   > ![Abonnement-Abwanderungsmodell-Kachel mit der Schaltfläche „Dieses Modell verwenden“.](media/subscription-churn-usethismodel.PNG "Abonnement Abwanderungsmodell-Kachel mit Schaltfläche Dieses Modell verwenden")
 
-### <a name="name-model"></a>Modell benennen
+1. Wählen Sie auf der Registerkarte **Erstellen** auf der Kachel **Kundenabwanderungsmodell** **Modell verwenden** aus.
 
-1. Geben Sie einen Namen für das Modell an, um es von anderen Modellen zu unterscheiden.
-1. Geben Sie einen Namen für die Ausgabe-Entität an, der nur Buchstaben und Zahlen ohne Leerzeichen enthält. Das ist der Name, den die Modell-Entität verwenden wird. Klicken Sie anschließend auf **Weiter**.
+1. Wählen Sie **Abonnement** für die Art der Abwanderung und dann **Erste Schritte** aus.
+
+1. **Dieses Modell benennen** und **Ausgabeentitätsname**, um sie von anderen Modellen oder Entitäten zu unterscheiden.
+
+1. Wählen Sie **Weiter** aus.
 
 ### <a name="define-customer-churn"></a>Kundenabwanderung definieren
 
-1. Geben Sie die Anzahl von **Tagen seit Ende des Abonnements** ein, die Ihr Unternehmen einen Kunden in einem abgewanderten Zustand betrachtet. Dieser Zeitraum wird in der Regel gern für Geschäftsaktivitäten wie Angebote oder andere Marketingmaßnahmen genutzt, um den Verlust des Kunden zu verhindern.
-1. Geben Sie die Anzahl von **Tagen ein, um die Zukunft zu prognostizieren und die Abwanderung vorherzusagen** und ein Fenster für die Vorhersage der Abwanderung festzulegen. Zum Beispiel, um das Risiko einer Abwanderung für Ihre Kunden in den nächsten 90 Tagen vorherzusagen und sich an Ihren Bemühungen zur Marketingbindung auszurichten. Die Vorhersage des Abwanderungsrisikos für längere oder kürzere Zeiträume könnte es schwieriger machen, die Faktoren in Ihrem Abwanderungsrisikoprofil zu berücksichtigen, je nach spezifischen Unternehmensanforderungen. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen
-   >[!TIP]
-   > Sie können jederzeit **Entwurf speichern** auswählen, um die Vorhersage als Entwurf zu speichern. Sie finden den Entwurf der Vorhersage im Register **Meine Vorhersagen**, um fortzufahren.
+1. Geben Sie die Anzahl von **Tagen seit Ende des Abonnements** ein, die Ihr Unternehmen einen Kunden in einem abgewanderten Zustand betrachtet. Dieser Zeitraum wird in der Regel für Geschäftsaktivitäten wie Angebote oder andere Marketingmaßnahmen genutzt, um den Verlust des Kunden zu verhindern.
+
+1. Geben Sie die Anzahl der **Tage in der Zukunft für die Abwanderungsvorhersage** an. Sagen Sie z. B. das Abwanderungsrisiko für Ihre Kunden in den nächsten 90 Tagen voraus, um Ihre Marketing-Bindungsmaßnahmen darauf abzustimmen. Die Vorhersage des Abwanderungsrisikos für längere oder kürzere Zeiträume könnte es schwieriger machen, die Faktoren in Ihrem Abwanderungsrisikoprofil zu berücksichtigen, je nach spezifischen Unternehmensanforderungen.
+
+1. Wählen Sie **Weiter** aus.
 
 ### <a name="add-required-data"></a>Erforderliche Daten hinzufügen
 
-1. Wählen Sie **Daten hinzufügen** für **Abonnementshistorie** und wählen Sie die Entität, die die Informationen zur Abonnementshistorie bereitstellt, wie unter [Voraussetzungen](#prerequisites) beschrieben.
-1. Wenn die folgenden Felder nicht ausgefüllt sind, konfigurieren Sie die Beziehung von Ihrer Abonnementshistorie-Entität zur Entität Kunde.
-    1. Wählen Sie die Entität **Abonnementhistorie**.
-    1. Wählen Sie das Feld **Feld**, das den Kunden in der Entität Abonnementshistorie identifiziert. Es muss sich auf die primäre Kunden-ID Ihrer Entität Kunde beziehen.
-    1. Wählen Sie das Feld **Kundenentität**, das sich auf Ihre primäre Kundenentität bezieht.
-    1. Geben Sie einen Namen ein, der die Beziehung beschreibt.
-       > [!div class="mx-imgBorder"]
-       > ![Abonnementhistorie-Seite, die die Erstellung einer Beziehung zum Kunden zeigt.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Seite der Abonnementshistorie, die den Aufbau einer Beziehung zum Kunden zeigt")
-1. Klicken Sie auf **Weiter**.
-1. Ordnen Sie die semantischen Felder den Attributen innerhalb Ihrer Abonnementshistorien-Entität zu und wählen Sie **Speichern**. Beschreibungen der Felder finden Sie unter [Voraussetzungen](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Die Seite Abonnementshistorie zeigt semantische Attribute, die Feldern in der ausgewählten Entität der Abonnementhistorie zugeordnet sind.](media/subscription-churn-subscriptionhistorymapping.PNG "Die Seite Abonnementshistorie zeigt semantische Attribute, die Feldern in der ausgewählten Entität der Abonnementshistorie zugeordnet sind.")
-1. Wählen Sie **Daten hinzufügen** für **Kundenaktivitäten** und wählen Sie die Entität, die die Informationen zu den Kundenaktivitäten liefert, wie in den Voraussetzungen beschrieben.
-1. Wählen Sie eine Aktivitätsart, die mit der Art der Kundenaktivität übereinstimmt, die Sie konfigurieren.  Wählen Sie **Neu anlegen** und geben Sie einen Namen an, wenn Sie keine Option sehen, die der von Ihnen benötigten Aktivitätsart entspricht.
-1. Sie müssen die Beziehung von Ihrer Entität Kundenaktivität zu der Entität Kunde konfigurieren.
-    1. Wählen Sie das Feld, das den Kunden in der Kundenaktivitätstabelle identifiziert, die direkt mit der primären Kunden-ID Ihrer Entität Kunde verknüpft werden kann.
-    1. Wählen Sie die Entität Kunde, die Ihrer primären Entität Kunde entspricht.
-    1. Geben Sie einen Namen ein, der die Beziehung beschreibt.
-1. Klicken Sie auf **Weiter**.
-1. Ordnen Sie die semantischen Felder den Attributen innerhalb Ihrer Entität Kundenaktivität zu und wählen Sie **Speichern**. Beschreibungen der Felder finden Sie unter [Voraussetzungen](#prerequisites).
-1. (Optional) Wenn Sie weitere Kundenaktivitäten einbeziehen möchten, wiederholen Sie die obigen Schritte.
-   > [!div class="mx-imgBorder"]
-   > ![Definieren der Entitätsbeziehung.](media/subscription-churn-customeractivitiesmapping.PNG "Kundenaktivitäten-Seite mit semantischen Attributen, die Feldern in der ausgewählten Entität der Kundenaktivität zugeordnet sind")
-1. Klicken Sie auf **Weiter**.
+1. Wählen Sie **Daten hinzufügen** für **Abonnementverlauf** aus.
 
-### <a name="set-schedule-and-review-configuration"></a>Zeitplan festlegen und Konfiguration überprüfen
+1. Wählen Sie den semantischen Aktivitätstyp **Abonnement** aus, der die erforderlichen Abonnementverlaufsinformationen enthält. Wenn die Aktivität nicht eingerichtet wurde, wählen Sie sie **hier** aus und erstellen Sie sie.
 
-1. Legen Sie eine Häufigkeit fest, um Ihr Modell neu zu trainieren. Diese Einstellung ist wichtig, um die Genauigkeit der Vorhersagen zu aktualisieren, wenn neue Daten in Customer Insights eingebunden werden. Die meisten Unternehmen können einmal pro Monat eine Umschulung durchführen und erhalten eine gute Genauigkeit für ihre Vorhersagen.
-1. Klicken Sie auf **Weiter**.
-1. Überprüfen Sie die Konfiguration. Sie können zu jedem Teil der Vorhersagekonfiguration zurückkehren, indem Sie unter dem angezeigten Wert **Bearbeiten** wählen. Oder Sie können einen Konfigurationsschritt aus der Fortschrittsanzeige auswählen.
-1. Wenn alle Werte korrekt konfiguriert sind, wählen Sie **Speichern und ausführen**, um den Vorhersageprozess zu beginnen. Auf der Registerkarte **Meine Vorhersagen** können Sie den Status Ihrer Vorhersagen sehen. Der Prozess kann je nach der Menge der in der Vorhersage verwendeten Daten mehrere Stunden dauern.
+1. Wählen Sie unter **Aktivitäten**, wenn die Aktivitätsattribute der Aktivität semantisch zugeordnet wurden, die spezifischen Attribute oder Entitäten aus, auf die sich die Berechnung konzentrieren soll. Wenn keine semantische Zuordnung erfolgt ist, wählen Sie **Bearbeiten** aus und ordnen Sie Ihre Daten aus.
+  
+   :::image type="content" source="media/subscription-churn-required.png" alt-text="Erforderliche Daten für das Abonnementabwanderungsmodell hinzufügen":::
 
-## <a name="review-a-prediction-status-and-results"></a>Überprüfen eines Vorhersage-Status und der Ergebnisse
+1. Wählen Sie **Nächste** und überprüfen Sie die für dieses Modell erforderlichen Attribute.
 
-1. Gehen Sie zur Registerkarte **Meine Vorhersagen** auf **Intelligenz** > **Vorhersagen**.
-   > [!div class="mx-imgBorder"]
-   > ![Ansicht der Seite „Meine Vorhersagen“.](media/subscription-churn-mypredictions.PNG "Ansicht der Seite Meine Vorhersagen")
-1. Wählen Sie die Vorhersage aus, die Sie überprüfen möchten.
-   - **Name der Vorhersage:** Der Name der Vorhersage, der bei ihrer Erstellung angegeben wurde.
-   - **Art der Vorhersage:** Typ des für die Vorhersage verwendeten Modells
-   - **Ausgabe-Entität:** Name der Entität, die die Ausgabe der Vorhersage speichern soll. Eine Entität mit diesem Namen finden Sie unter **Daten** > **Entitäten**.    
-     In der Ausgabeentität ist *ChurnScore* die vorhergesagte Abwanderungswahrscheinlichkeit und *IsChurn* eine binäre Bezeichnung basierend auf *ChurnScore* mit Grenzwert 0,5. Der Standardschwellenwert funktioniert möglicherweise nicht für Ihr Szenario. [Erstellen Sie ein neues Segment](segments.md#create-a-segment) mit Ihrem bevorzugten Grenzwert.
-   - **Vorhergesagtes Feld:** Dieses Feld wird nur für einige Arten von Vorhersagen ausgefüllt und wird nicht für die Vorhersage der Abonnentenabwanderung verwendet.
-   - **Status:** Der aktuelle Status des Ausführung der Vorhersage.
-        - **Warteschleife:** Die Vorhersage wartet derzeit auf die Ausführung anderer Prozesse.
-        - **Aktualisierung:** Die Vorhersage durchläuft derzeit die "Bewertung"-Verarbeitungsphase, um Ergebnisse zu erzeugen, die in die Ausgabe-Entität fließen werden.
-        - **Fehlgeschlagen:** Die Vorhersage ist fehlgeschlagen. Wählen Sie **Protokolle** für weitere Einzelheiten.
-        - **Erfolgreich:** die Vorhersage war erfolgreich. Wählen Sie **Ansicht** unter den vertikalen Auslassungspunkten, um die Vorhersage zu überprüfen.
-   - **Bearbeitet:** Das Datum, an dem die Konfiguration für die Vorhersage geändert wurde.
-   - **Zuletzt aktualisiert:** Das Datum, an dem die Vorhersage in der Ausgabe-Entität aktualisiert wurde.
-1. Markieren Sie die vertikalen Auslassungspunkte neben der Vorhersage, deren Ergebnisse Sie überprüfen möchten, und wählen Sie **Ansicht**.
-   > [!div class="mx-imgBorder"]
-   > ![Anzeige der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen.](media/subscription-churn-verticalellipses.PNG "Ansicht der Optionen im Menü der vertikalen Auslassungspunkte für eine Vorhersage einschließlich Bearbeiten, Aktualisieren, Anzeigen, Protokolle und Löschen")
-1. Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite:
-    1. **Leistung des Trainingsmodells:** A, B oder C sind mögliche Bewertungen. Diese Bewertung zeigt die Leistung der Vorhersage an und kann Ihnen bei der Entscheidung helfen, die in der Ausgabe-Entität gespeicherten Ergebnisse zu verwenden.
-        - Bewertungen werden auf der Grundlage der folgenden Regeln ermittelt:
-            - **EIN** wenn das Modell mindestens 50% der Gesamtvorhersagen genau vorhergesagt hat und wenn der Prozentsatz der genauen Vorhersagen für Kunden, die Abwanderung betrieben haben, um mindestens 10% der historischen Abwanderungsrate über der historischen durchschnittlichen Abwanderungsrate liegt.
-            - **B** wenn das Modell mindestens 50% der Gesamtvorhersagen genau vorhergesagt hat und wenn der Prozentsatz der genauen Vorhersagen für Kunden, die Abwanderung betrieben haben, um mindestens 10% der historischen Abwanderungsrate über der historischen durchschnittlichen Abwanderungsrate liegt.
-            - **C** wenn das Modell weniger als 50% der Gesamtvorhersagen genau vorhergesagt hat oder wenn der Prozentsatz der genauen Vorhersagen für Kunden, die Abwanderung betrieben haben, geringer ist als die historische durchschnittliche Abwanderungsrate.
-               > [!div class="mx-imgBorder"]
-               > ![Ansicht der Modellleistungsergebnisse.](media/subscription-churn-modelperformance.PNG "Ansicht des Leistungsergebnisses des Modells")
-    1. **Wahrscheinlichkeit der Abwanderung (Anzahl der Kunden):** Kundengruppen auf der Grundlage ihres vorhergesagten Abwanderungsrisikos. Diese Daten können Ihnen später helfen, wenn Sie ein Kundensegment mit hohem Abwanderungsrisiko erstellen möchten. Solche Segmente helfen Ihnen zu verstehen, wo Ihr Grenzwert für die Segmentmitgliedschaft liegen sollte.
-       > [!div class="mx-imgBorder"]
-       > ![Grafik zur Verteilung der Abwanderungsergebnisse, unterteilt in Bereiche von 0–100 %.](media/subscription-churn-resultdistribution.PNG "Grafik zur Verteilung der Abwanderungsergebnisse, unterteilt in Bereiche von 0 bis 100 %.")
-    1. **Die wichtigsten Einflussfaktoren:** Es gibt viele Faktoren, die bei der Erstellung Ihrer Vorhersage berücksichtigt werden. Für jeden dieser Faktoren wird ihre Bedeutung für die aggregierten Vorhersagen, die ein Modell erstellt, berechnet. Sie können diese Faktoren verwenden, um Ihre Vorhersageergebnisse zu validieren. Oder Sie können diese Informationen später verwenden, um [Segmente](segments.md) zu erstellen, die dazu beitragen könnten, das Abwanderungsrisiko für Kunden zu beeinflussen.
-       > [!div class="mx-imgBorder"]
-       > ![Liste, die die Einflussfaktoren und ihre Bedeutung bei der Vorhersage des Abwanderungsergebnisses zeigt.](media/subscription-churn-influentialfactors.PNG "Liste mit Einflussfaktoren und deren Bedeutung für die Vorhersage des Abwanderungsergebnisses")
+1. Wählen Sie **Save** (Speichern).
 
-## <a name="manage-predictions"></a>Verwalten von Vorhersagen
+1. Wählen Sie **Daten hinzufügen** für **Kundenaktivitäten** aus.
 
-Es ist möglich, Vorhersagen zu optimieren, zu korrigieren, zu aktualisieren oder zu löschen. Sehen Sie sich einen Eingabedaten-Nutzungsberichts an, um herauszufinden, wie Sie Vorhersagen schneller und zuverlässiger machen. Weitere Informationen finden Sie unter [Verwalten von Vorhersagen](manage-predictions.md).
+1. Wählen Sie den semantischen Aktivitätstyp aus, der die Kundenaktivitätsinformationen bereitstellt. Wenn die Aktivität nicht eingerichtet wurde, wählen Sie sie **hier** aus und erstellen Sie sie.
 
+1. Wählen Sie unter **Aktivitäten**, wenn die Aktivitätsattribute der Aktivität semantisch zugeordnet wurden, die spezifischen Attribute oder Entitäten aus, auf die sich die Berechnung konzentrieren soll. Wenn keine semantische Zuordnung erfolgt ist, wählen Sie **Bearbeiten** aus und ordnen Sie Ihre Daten aus.
+
+1. Wählen Sie **Nächste** und überprüfen Sie die für dieses Modell erforderlichen Attribute.
+
+1. Wählen Sie **Save** (Speichern).
+
+1. Fügen Sie weitere Aktivitäten hinzu oder wählen Sie **Weiter** aus.
+
+### <a name="set-update-schedule"></a>Zeitplanaktualisierung festlegen
+
+1. Wählen Sie die Häufigkeit aus, um Ihr Modell erneut zu trainieren. Diese Einstellung ist wichtig, um die Genauigkeit der Vorhersagen zu aktualisieren, wenn neue Daten in Customer Insights eingebunden werden. Die meisten Unternehmen können einmal pro Monat eine Umschulung durchführen und erhalten eine gute Genauigkeit für ihre Vorhersagen.
+
+1. Wählen Sie **Weiter** aus.
+
+### <a name="review-and-run-the-model-configuration"></a>Überprüfen Sie die Modellkonfiguration und führen Sie sie aus
+
+Der Schritt **Überprüfen und ausführen** zeigt eine Zusammenfassung der Konfiguration und bietet die Möglichkeit, Änderungen vorzunehmen, bevor Sie die Datei Vorhersage erstellen.
+
+1. Wählen Sie **Bearbeiten** bei einem der Schritte, um sie zu überprüfen und Änderungen vorzunehmen.
+
+1. Wenn Sie mit Ihrer Auswahl zufrieden sind, wählen Sie **Speichern und ausführen** aus, um das Modell ausführen zu lassen. Wählen Sie **Fertig** aus. Die Registerkarte **Meine Vorhersagen** wird angezeigt, während Vorhersage erstellt wird. Der Prozess kann je nach der Menge der in der Vorhersage verwendeten Daten mehrere Stunden dauern.
+
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
+
+## <a name="view-prediction-results"></a>Vorhersageergebnisse anzeigen
+
+1. Gehen Sie zu **Intelligenz** > **Vorhersagen**.
+
+1. Wählen Sie in der Registerkarte **Meine Vorhersagen** die Vorhersage aus, die Sie ansehen möchten.
+
+Es gibt drei primäre Datenabschnitte innerhalb der Ergebnisseite:
+
+- **Leistung des Trainingsmodells**: Die Stufen A, B oder C geben die Leistung der Vorhersage an und können Ihnen bei der Entscheidung helfen, die in der Ausgabeentität gespeicherten Ergebnisse zu verwenden.
+  
+  :::image type="content" source="media/subscription-churn-modelperformance.PNG" alt-text="Bild des Informationsfelds für die Modellbewertung mit der Stufe A.":::
+
+  Die Stufen werden nach den folgenden Regeln ermittelt:
+  - **A**, wenn das Modell mindestens 50 % der gesamten Vorhersagen richtig vorhergesagt hat und wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, um mindestens 10 % größer ist als die historische durchschnittliche Abwanderung.
+  - **B**, wenn das Modell mindestens 50 % der gesamten Vorhersagen richtig vorhergesagt hat und wenn der Prozentsatz der richtigen Vorhersagen für Kunden, die abgewandert sind, um bis zu 10 % größer ist als die historische durchschnittliche Abwanderung.
+  - **C** wenn das Modell weniger als 50% der Gesamtvorhersagen genau vorhergesagt hat oder wenn der Prozentsatz der genauen Vorhersagen für abgewanderte Kunden, geringer ist als die historische durchschnittliche Abwanderungsrate.
+  
+- **Wahrscheinlichkeit der Abwanderung (Anzahl der Kunden)**: Kundengruppen auf der Grundlage ihres vorhergesagten Abwanderungsrisikos. Optional können Sie [Kundensegmente erstellen](prediction-based-segment.md), bei denen ein hohes Abwanderungsrisiko besteht. Solche Segmente helfen Ihnen zu verstehen, wo Ihr Grenzwert für die Segmentmitgliedschaft liegen sollte.  
+
+  :::image type="content" source="media/subscription-churn-resultdistribution.PNG" alt-text="Grafik zur Verteilung der Abwanderungsergebnisse, unterteilt in Bereiche von 0-100%":::
+
+- **Die wichtigsten Einflussfaktoren:** Es gibt viele Faktoren, die bei der Erstellung Ihrer Vorhersage berücksichtigt werden. Für jeden der Faktoren wird seine Wichtigkeit für die aggregierten Vorhersagen, die ein Modell erstellt, berechnet. Verwenden Sie diese Faktoren, um Ihre Vorhersageergebnisse zu validieren. Oder verwenden Sie diese Informationen später, um [Segmente](.//prediction-based-segment.md) zu erstellen, die dazu beitragen könnten, das Abwanderungsrisiko für Kunden zu beeinflussen.
+
+  :::image type="content" source="media/subscription-churn-influentialfactors.PNG" alt-text="Liste, die die Einflussfaktoren und ihre Bedeutung bei der Vorhersage des Abwanderungsergebnisses zeigt.":::
+
+> [!NOTE]
+> In der Ausgabeentität für dieses Modell ist *ChurnScore* die vorhergesagte Abwanderungswahrscheinlichkeit und *IsChurn* eine binäre Bezeichnung basierend auf *ChurnScore* mit Grenzwert 0,5. Wenn dieser Standardgrenzwert für Ihr Szenario nicht funktioniert, [erstellen Sie ein neues Segment](segments.md) mit Ihrem bevorzugten Grenzwert. Um das Abwanderungsergebnis anzuzeigen, gehen Sie zu **Daten** > **Entitäten** und zeigen Sie die Registerkarte „Daten“ für die Ausgabeentität an, die Sie für dieses Modell festgelegt haben.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
