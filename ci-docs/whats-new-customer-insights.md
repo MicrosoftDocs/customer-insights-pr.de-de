@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609591"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638350"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Neuerungen in Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Wir führen Updates nach Region durch. So können bestimmte Regionen Merkmale vo
 
 > [!TIP]
 > Zum Senden und Abstimmen zu gewünschten Funktionen und Vorschläge zum Produkt, navigieren Sie zu [Dynamics 365 Anwendungs-Ideen Portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Aktualisierungen September 2022
+
+Die Updates im September 2022 beinhalten neue Funktionen, Leistungssteigerungen und Fehlerbehebungen.
+
+### <a name="export-data-to-hubspot"></a>Daten nach HubSpot exportieren
+
+Exportieren Sie Segmente von Vereinheitlichtem Kundenprofil zu HubSpot und verwenden Sie sie für Marketingaktivitäten.
+
+Weitere Informationen finden Sie unter [Exportieren von Segmenten nach HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Entfernen Sie ein vereinheitlichtes Feld oder eine Entität aus der Datenvereinheitlichung
+
+Sie können Felder und Entitäten aus dem Datenvereinigungsprozess entfernen.
+
+Weitere Informationen finden Sie unter [Einheitliches Feld entfernen](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Verwalten Sie unbekannte Kundenprofile
+
+Eine einprägsame Personalisierung hängt von der Reichhaltigkeit und Vollständigkeit Ihrer Kundendaten ab, und Customer Insights hilft Ihnen, diese Ziele zu erreichen. Sie können Kundenprofile für Benutzer verwalten, für die Sie keine anderen Informationen als eine ID haben.
+
+Weitere Informationen finden Sie unter [Unbekannte Profile mit Customer Insights verwalten](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Aktualisierungen August 2022
 

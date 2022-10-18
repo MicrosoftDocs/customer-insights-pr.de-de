@@ -1,19 +1,19 @@
 ---
 title: Segmente nach Braze exportieren (Vorschauversion)
 description: Weitere Informationen zum Konfigurieren der Verbindung und zum Exportieren nach Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195106"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655273"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmente nach Braze exportieren (Vorschauversion)
 
@@ -23,6 +23,7 @@ Exportieren Sie Segmente von Unified customer Profiles nach Braze und verwenden 
 
 - Ein [Braze-Konto](https://www.braze.com/) und die entsprechenden Administrator-Anmeldeinformationen.
 - Ein [Braze-API-Schlüssel](https://www.braze.com/docs/api/basics/)
+- Ihr [Braze REST Endpunkt](https://www.braze.com/docs/api/basics/#api-definitions) 
 - [Konfigurierte Segmente](segments.md) in Customer Insights.
 - Einheitliche Kundenprofile in den exportierten Segmenten enthalten ein Feld, das eine E-Mail-Adresse und eine Braze-Kunden-ID darstellt.
 
@@ -30,6 +31,7 @@ Exportieren Sie Segmente von Unified customer Profiles nach Braze und verwenden 
 
 - Export von Segmenten mit bis zu 1 Millionen Kundenprofilen nach Braze kann bis zu 40 Minuten dauern. Die Anzahl der Kundenprofile, die Sie nach Braze exportieren können, hängt von Ihrem Vertrag mit Braze ab.
 - Nur Segmente.
+- Azure Private Link wird für den Braze-Export nicht unterstützt.
 
 ## <a name="set-up-connection-to-braze"></a>Richten Sie die Verbindung mit Braze ein
 
@@ -62,6 +64,8 @@ Exportieren Sie Segmente von Unified customer Profiles nach Braze und verwenden 
 1. Wählen Sie **Export hinzufügen**.
 
 1. Wählen Sie im Feld **Verbindung für Export** eine Verbindung aus dem Braze-Abschnitt aus. Wenden Sie sich an einen Administrator, wenn keine Verbindung verfügbar ist.
+
+1. Geben Sie Ihren REST Endpunkt in das Feld **Hostname** im folgenden Format ein: `rest.iad-03.braze.com`.
 
 1. Geben Sie einen Namen für den Export ein.
 
