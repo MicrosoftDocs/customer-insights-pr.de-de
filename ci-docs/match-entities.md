@@ -2,7 +2,7 @@
 title: Übereinstimmungsbedingungen für die Datenvereinheitlichung
 description: Gleichen Sie Entitäten ab, um vereinheitlichte Kundenprofile zu erstellen.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304656"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721520"
 ---
 # <a name="match-conditions-for-data-unification"></a>Übereinstimmungsbedingungen für die Datenvereinheitlichung
 
@@ -126,16 +126,16 @@ Wenn Ihre Vergleichsregel beispielsweise Nachname, Stadt und Geburtsdatum kombin
 
 1. Geben Sie die Ausnahmekriterien an.
 
-1. Wählen Sie **Abgeschlossen** und speichern Sie die Regel.
+1. Wählen Sie **Abgeschlossen**, um die Regel zu speichern.
 
 ### <a name="specify-custom-match-conditions"></a>Benutzerdefinierte Vergleichsbedingungen angeben
 
-Sie können Bedingungen angeben, die die standardmäßige Vergleichslogik überschreiben. Die folgenden vier Optionen sind verfügbar:
+Geben Sie Bedingungen an, die die Standardabgleichslogik außer Kraft setzen. Die folgenden vier Optionen sind verfügbar:
 
 |Option  |Beschreibung des Dataflows |Beispiel  |
 |---------|---------|---------|
-|Immer übereinstimmen     | Definiert Werte, die immer übereinstimmen.         |  *Mike* und *MikeR* immer übereinstimmen.       |
-|Nicht übereinstimmen     | Definiert Werte, die niemals übereinstimmen.        | *John* und *Jonathan* nie übereinstimmen.        |
+|Immer übereinstimmen     | Definiert Werte für die Primärschlüssel, die immer abgeglichen werden.         |  Passe die Zeile mit dem Primärschlüssel *12345* immer mit der Zeile mit dem Primärschlüssel *54321* ab.       |
+|Nicht übereinstimmen     | Definiert Werte für die Primärschlüssel, die nie übereinstimmen.        | Niemals die Zeile mit dem Primärschlüssel *12345* mit der Zeile mit dem Primärschlüssel *54321* abgleichen.        |
 |Umgehen            | Definiert Werte, die das System in der Übereinstimmungsphase immer ignorieren soll. |  Werte *11111* und *Unbekannt* während der Übereinstimmung ignorieren.        |
 |Alias-Zuordnung    | Definieren von Werten, die das System als denselben Wert betrachten soll.         | *Joe* als gleich zu *Joseph* betrachten.        |
 
@@ -143,17 +143,18 @@ Sie können Bedingungen angeben, die die standardmäßige Vergleichslogik übers
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Schaltfläche „Benutzerdefiniert“":::
 
-1. Wählen Sie **Benutzerdefinierter Typ** und **Vorlage herunterladen**. Sie benötigen für jede Vergleichsoption eine separate Vorlage.
+1. Wählen Sie **Benutzerdefinierter Typ** und **Vorlage herunterladen**. Benennen Sie die Vorlage ohne Leerzeichen um. Verwenden Sie für jede Abgleichsoption eine eigene Vorlage.
 
-1. Öffnen Sie die heruntergeladene Vorlagendatei und geben Sie die Details ein. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die beim benutzerdefinierten Vergleich verwendet werden sollen. Wenn Sie bespielsweise einen Primärschlüssel *12345* von der Entität *Vertrieb* möchten, die immer mit dem Primärschlüssel *34567* der Entität *Kontakt* übereinstimmt, füllen Sie die Vorlage aus:
-    - Entität1: Verkauf
-    - Entity1Key: 12345
-    - Entität2: Kontakt
-    - Entity2Key: 34567
+1. Öffnen Sie die heruntergeladene Vorlagendatei und geben Sie die Details ein. Die Vorlage enthält Felder zur Angabe der Entität und der Primärschlüsselwerte der Entität, die beim benutzerdefinierten Vergleich verwendet werden sollen. Bei den Namen der Entitäten wird zwischen Groß- und Kleinschreibung unterschieden. Wenn Sie bespielsweise einen Primärschlüssel *12345* von der Entität *Vertrieb* möchten, die immer mit dem Primärschlüssel *34567* der Entität *Kontakt* übereinstimmt, füllen Sie die Vorlage aus:
+   - Entität1: Verkauf
+   - Entity1Key: 12345
+   - Entität2: Kontakt
+   - Entity2Key: 34567
 
    Dieselbe Vorlagendatei kann benutzerdefinierte Match-Datensätze von mehreren Entitäten angeben.
 
-   Wenn Sie eine benutzerdefinierte Übereinstimmung für die Deduplizierung einer Entität angeben möchten, geben Sie dieselbe Entität wie Entität1 und Entität2 an und legen Sie die verschiedenen Primärschlüsselwerte fest.
+   > [!NOTE]
+   > Wenn Sie eine benutzerdefinierte Übereinstimmung für die Deduplizierung einer Entität angeben möchten, geben Sie dieselbe Entität wie Entität1 und Entität2 an und legen Sie die verschiedenen Primärschlüsselwerte fest. Sie müssen mindestens eine Deduplizierungsregel für die Entität definieren, um den angepassten Abgleich zu verwenden.
 
 1. Nachdem Sie alle Überschreibungen hinzugefügt haben, speichern Sie die Vorlagendatei.
 
@@ -169,6 +170,8 @@ Sie können Bedingungen angeben, die die standardmäßige Vergleichslogik übers
    - Für **Umgehen** oder **Alias-Zuordnung** wählen Sie **Bearbeiten** in einer vorhandenen Übereinstimmungsregel aus oder erstellen Sie eine neue Regel. Wählen Sie im Normalisierungen-Dropdownmenü die Option **Benutzerdefinierte Umgehung** oder **Alias-Zuordnung** und dann **Fertig** aus.
 
 1. Wählen Sie **Fertig** im Bereich **Benutzerdefiniert**, um die benutzerdefinierte Übereinstimmungskonfiguration anzuwenden.
+
+   Jede eingebundene Vorlagendatei ist eine eigene Datenquelle. Wenn Datensätze entdeckt werden, die eine besondere Abgleichbehandlung benötigen, aktualisieren Sie die entsprechende Datenquelle. Die Aktualisierung wird beim nächsten Vereinheitlichungsprozess verwendet. Sie identifizieren zum Beispiel Zwillinge mit fast demselben Namen, die an derselben Adresse leben und als eine Person zusammengeführt wurden. Aktualisieren Sie die Datenquelle, um die Zwillinge als separate, eindeutige Datensätze zu identifizieren.
 
 > [!div class="nextstepaction"]
 > [Nächster Schritt: Felder vereinheitlichen](merge-entities.md)
