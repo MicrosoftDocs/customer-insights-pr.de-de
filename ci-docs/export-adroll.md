@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195749"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724677"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportieren von Segmenten nach AdRoll (Vorschauversion)
 
@@ -28,6 +28,7 @@ Exportieren Sie Segmente einheitlicher Kundenprofile nach AdRoll und verwenden S
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- Private Link in Kombination mit Bring Your Own Storage (BYOS) wird nicht unterstützt.
 - Export von Segmenten mit bis zu 250.000 Kundenprofilen nach AdRoll kann bis zu 10 Minuten dauern. Die Anzahl der Kundenprofile, die Sie nach AdRoll exportieren können, hängt von Ihrem Vertrag mit AdRoll ab.
 - Nur Segmente. Ein Segment muss mindestens 100 Kundenprofile enthalten.
 

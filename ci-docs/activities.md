@@ -1,12 +1,12 @@
 ---
 title: Kunden- oder Geschäftskontaktaktivitäten
 description: Definieren Sie Kunden- oder Geschäftsaktivitäten, und zeigen Sie diese in einer Zeitskala auf Kundenprofilen an.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304104"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723780"
 ---
 # <a name="customer-or-business-contact-activities"></a>Kunden- oder Geschäftskontaktaktivitäten
 
@@ -41,6 +41,9 @@ Eine Entität muss mindestens ein Attribut vom Typ **Datum** haben, um in eine K
    - **Aktivitätsname**: Wählen Sie einen Namen für Ihre Aktivität.
    - **Aktivitätsname**: Wählen Sie eine Entität aus, die Transaktions- oder Aktivitätsdaten enthält.
    - **Primärschlüssel**: Wählen Sie das Feld, das einen Datensatz eindeutig identifiziert. Sie sollte keine doppelten Werte, leere Werte oder fehlende Werte enthalten.
+
+     > [!NOTE]
+     > Der Primärschlüssel für jede Zeile muss über Datenquelle-Aktualisierungen hinweg konsistent bleiben. Wenn der Primärschlüssel für eine Zeile in einer Datenquelle-Aktualisierung aktualisiert wird, werden Duplikate in der Ausgabeaktivitätsentität erstellt. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Richten Sie die Aktivitätsdaten mit Name, Entität und Primärschlüssel ein.":::
 
@@ -132,7 +135,15 @@ Verwenden Sie für Geschäftskonten (B-to-B) eine *ContactProfile* Entität, um 
 
 1. Wählen Sie **Aktivität hinzufügen**.
 
-1. Benennen Sie die Aktivität, wählen Sie die Quellaktivitätsentität und dann den Primärschlüssel der Aktivitätsentität aus.
+1. Geben Sie im Schritt **Aktivitätsdaten** die folgenden Informationen ein:
+
+   - **Aktivitätsname**: Wählen Sie einen Namen für Ihre Aktivität.
+   - **Aktivitätsname**: Wählen Sie eine Entität aus, die Transaktions- oder Aktivitätsdaten enthält.
+   - **Primärschlüssel**: Wählen Sie das Feld, das einen Datensatz eindeutig identifiziert. Sie sollte keine doppelten Werte, leere Werte oder fehlende Werte enthalten.
+
+     > [!NOTE]
+     > Der Primärschlüssel für jede Zeile muss über Datenquelle-Aktualisierungen hinweg konsistent bleiben. Wenn der Primärschlüssel für eine Zeile in einer Datenquelle-Aktualisierung aktualisiert wird, werden Duplikate in der Ausgabeaktivitätsentität erstellt. 
+
 
 1. Erstellen Sie im Schritt **Beziehungen** eine indirekte Beziehung zwischen Ihren Aktivitätsquellendaten und Konten, indem Sie Ihre Kontaktdaten als vermittelnde Entität verwenden. Weitere Informationen finden Sie unter [direkte und indirekte Beziehungspfade](relationships.md#relationship-paths).
    - Beispielbeziehung für eine Aktivität namens *Einkäufe*:

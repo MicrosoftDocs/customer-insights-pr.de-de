@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195335"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724788"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Segmente nach Criteo exportieren (Vorschauversion)
 
@@ -27,6 +27,7 @@ Exportieren Sie Segmente von Unified Customer Profiles, um Kampagnen zu erstelle
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- Private Link in Kombination mit Bring Your Own Storage (BYOS) wird nicht unterstützt.
 - Bis zu 1 Million Kundenprofile pro Export zu Criteo exportieren und die Fertigstellung kann bis zu 30 Stunden dauern. Die Anzahl der Kundenprofile, die Sie nach Criteo exportieren können, hängt von Ihrem Vertrag mit Criteo ab.
 - Nur Segmente.
 
@@ -65,8 +66,6 @@ Exportieren Sie Segmente von Unified Customer Profiles, um Kampagnen zu erstelle
 1. Geben Sie einen Namen für den Export ein.
 
 1. In dem Bereich **Datenabgleich** im Feld **E-Mail** wählen Sie das Feld, das eine Mail-Adresse eines Kunden darstellt.
-
-1. Optional können Sie die **Werbetreibenden-ID** und den **Name** exportieren.
 
 1. Wählen Sie die Segemente aus, die Sie exportieren möchten.
 

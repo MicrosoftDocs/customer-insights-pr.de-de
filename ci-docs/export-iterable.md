@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195428"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724481"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Segmente nach Iterable exportieren (Vorschauversion)
 
@@ -28,6 +28,7 @@ Exportieren Sie Segmente von Unified customer Profiles nach Iterable und verwend
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- Private Link in Kombination mit Bring Your Own Storage (BYOS) wird nicht unterstützt.
 - Export von Segmenten mit bis zu 1 Millionen Kundenprofilen nach Itrable kann bis zu 30 Minuten dauern. Die Anzahl der Kundenprofile, die Sie nach Iterable exportieren können, hängt von Ihrem Vertrag mit Iterable ab.
 - Nur Segmente.
 

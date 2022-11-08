@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304702"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725307"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportieren von Segmenten nach LinkedIn Ads (Vorschauversion)
 
@@ -28,6 +28,7 @@ Exportieren Sie Segmente einheitlicher Kundenprofilen nach LinkedIn Ads, um pass
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- Private Link in Kombination mit Bring Your Own Storage (BYOS) wird nicht unterstützt.
 - Bis zu 100.000 Kundenprofile pro Export zu LinkedIn Ads exportieren und die Fertigstellung kann bis zu 10 Stunden dauern.
 - Nur Segmente. Ein Segment muss mindestens 300 einzigartige Profile enthalten.
 

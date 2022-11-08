@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195013"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724592"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportieren von Segmenten zu Facebook-Werbeanzeigenmanager (Vorschauversion)
 
@@ -25,11 +25,13 @@ Exportieren Sie Segmente einheitlicher Kundenprofile in den Facebook Anzeigenman
 
 - Ein [Facebook Ads Konto](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), das einen [Facebook Business-Konto](https://business.facebook.com/) umfasst.
 - Administratorrechte für [Facebook Ads-Konto](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Benutzerdefinierte Zielgruppenbedingungen müssen vom Benutzer akzeptiert werden, der die Verbindung in Customer Insights einrichtet.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
 - Bis zu 10 Million Kundenprofile pro Export zu Facebook Ads Manager exportieren und die Fertigstellung kann bis zu 90 Minuten dauern.
 - Nur Segmente.
+- Facebook Anzeigenintegration unterstützt keine Benutzer mit mehr als 25 Anzeigenkonten.
 - Facebook *Kundenliste* geben Sie nur [benutzerdefinierte Zielgruppen](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) ein.
   > [!NOTE]
   > In einigen Fällen sehen Sie möglicherweise benutzerdefinierte Zielgruppen verschiedener Typen in der Dropdown-Liste. Auswahl eines anderen Typs als *Kundenliste* führt zu einem fehlgeschlagenen Export.

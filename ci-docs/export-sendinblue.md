@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196945"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724893"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmente nach Sendinblue exportieren (Vorschauversion)
 
@@ -29,6 +29,7 @@ Segmente von einheitlichen Kundenprofilen exportieren, um Kampagnen zu generiere
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- Private Link in Kombination mit Bring Your Own Storage (BYOS) wird nicht unterstützt.
 - Bis zu 1 Million Kundenprofile pro Export zu Sendinblue exportieren und die Fertigstellung kann bis zu 90 Minuten dauern. Die Anzahl der Kundenprofile, die Sie nach Sendinblue exportieren können, hängt von Ihrem Vertrag mit Sendinblue ab.
 - Nur Segmente.
 

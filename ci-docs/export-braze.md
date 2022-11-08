@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655273"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725215"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmente nach Braze exportieren (Vorschauversion)
 
@@ -29,6 +29,7 @@ Exportieren Sie Segmente von Unified customer Profiles nach Braze und verwenden 
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- Private Link in Kombination mit Bring Your Own Storage (BYOS) wird nicht unterstützt.
 - Export von Segmenten mit bis zu 1 Millionen Kundenprofilen nach Braze kann bis zu 40 Minuten dauern. Die Anzahl der Kundenprofile, die Sie nach Braze exportieren können, hängt von Ihrem Vertrag mit Braze ab.
 - Nur Segmente.
 - Azure Private Link wird für den Braze-Export nicht unterstützt.

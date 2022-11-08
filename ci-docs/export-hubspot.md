@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588905"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725353"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Segmente nach HubSpot exportieren (Vorschauversion)
 
@@ -27,6 +27,7 @@ Exportieren Sie Segmente von Vereinheitlichtem Kundenprofil zu HubSpot und verwe
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
+- Private Link in Kombination mit Bring Your Own Storage (BYOS) wird nicht unterstützt.
 - Bis zu 100.000 Kundenprofile pro Export nach HubSpot, was bis zu 15 Minuten dauern kann. Die Anzahl der Kundenprofile, die Sie nach HubSpot exportieren können, hängt von Ihrem Vertrag mit HubSpot ab.
 - Nur Segmente.
 
