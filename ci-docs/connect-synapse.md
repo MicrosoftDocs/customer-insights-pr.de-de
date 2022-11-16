@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259797"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738155"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Eine Azure Synapse Analytics-Datenquelle verbinden (Vorschauversion)
 
@@ -45,7 +45,7 @@ Weitere Informationen finden Sie unter [Azure Synapse-Überblick](/azure/synapse
 
 - Die *[Azure Synapse vom Arbeitsbereich verwaltete Identität](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* benötigt die Berechtigung **Speicher-Blob Datenmitwirkender** im Azure Data Lake Storage Gen2-Konto, in dem sich die Daten befinden und die mit dem Azure Synapse Arbeitsplatz verknüpft sind. Erfahren Sie mehr zur [Verwendung des Azure Portals zum Zuweisen einer Azure Rolle für den Zugriff auf Blob- und Warteschlangendaten](/azure/storage/common/storage-auth-aad-rbac-portal) und [Speichern von Blob-Daten Mitwirkender-Berechtigungen](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Im Azure Synapse workspace, braucht der *Dienstprinzipal für Customer Insights*, der Dynamics 365 AI für Customer Insights ist, die Zuweisung einer **Synapse Administrator** Rolle. Weitere Informationen finden Sie unter [So richten Sie die Zugriffssteuerung für Ihren Synapse-Arbeitsbereich ein](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Im Azure Synapse workspace, braucht der *Dienstprinzipal für Customer Insights*, der Dynamics 365 AI für Customer Insights ist, die Zuweisung einer **Synapse Administrator** Rolle. Der **Benutzer** braucht mindestens eine **Synapse Mitwirkender**-Rolle, die dem Arbeitsbereich zugewiesen ist. Weitere Informationen finden Sie unter [So richten Sie die Zugriffssteuerung für Ihren Synapse-Arbeitsbereich ein](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 - Wenn Ihre Customer Insights-Umgebung Daten in Ihrem [eigenen Azure Data Lake Storage](own-data-lake-storage.md) speichert, muss der Benutzer, der die Verbindung zu Azure Synapse Analytics aufbaut, mindestens die integrierte **Leser** Rolle für das Data Lake Storage-Konto haben. Weitere Informationen finden Sie unter [Weisen Sie Azure-Rollen über das Azure-Portal zu](/azure/role-based-access-control/role-assignments-portal).
 
